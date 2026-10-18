@@ -45,6 +45,11 @@
    "version": "v0.2.6",
    "date": "2026-10-18",
    "what": "Paths and learning, in Dinis's words. A co-written article, connect the dots backwards: a path only makes sense looking back (Steve Jobs at Stanford, 12 June 2005, whose calligraphy class became the Mac's typography); the edge is now multidisciplinary, so the humanities and mathematics matter, though maths and music are taught as if to make people hate them (Paul Lockhart's A Mathematician's Lament; Dinis's memo had the first name wrong and the checking corrected it); generative AI lets the reader explore and communicate again, as the storyboards on this site show; learning is a lifelong skill that geography no longer decides, and the future is local and sovereign; reading this already puts the reader in a small minority; read it on paper, with a pen; and search gave answers where generative AI lets you ask for the evidence. A 14-panel storyboard, quote-checked by the build against the article, and a brief for the editor."
+  },
+  {
+   "version": "v0.2.7",
+   "date": "2026-10-18",
+   "what": "The influences, read for the book. A co-written article, where the thinking came from: Dinis's register at influences.sgit.ai, 25 people, works, communities and practices written as claims you can check, gone through entry by entry with where each lands in the book (Bret Victor and immediate connection in the opening; Csikszentmihalyi's flow and Ericsson's deliberate practice for the zone and learning; Wardley and Kevin Kelly for the frame; Popper and Schneier for questioning; Luhmann, Vannevar Bush and the semantic web for graphs and the future self; Torvalds, The Cathedral and the Bazaar, open source and OWASP for working and getting hired in the open; design, the design canon and Christopher Alexander for the villager's and town planner's craft; Sinek for why; David Rice, Neil Peart and playing in a band as interview material). It also records six things the 2018 book already wrote down that the register lists as unknown, and proposes a keep-your-own-register exercise for the reader. A 10-panel storyboard, quote-checked by the build; a brief for the editor; and the journalist's own blocked issue to brief the register, waiting on Dinis."
   }
  ]
 }
