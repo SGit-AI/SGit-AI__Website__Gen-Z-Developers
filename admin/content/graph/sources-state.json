@@ -33,7 +33,8 @@
   "art:generative-ai-not-ai": "processed",
   "agent:the-book-as-a-graph": "processed",
   "art:follow-the-rabbit-holes": "processed",
-  "art:everything-is-connected": "processed"
+  "art:everything-is-connected": "processed",
+  "art:lenses-roles-and-loops": "processed"
  },
  "rule": "A newsroom 'bring' article becomes 'processed' automatically when an idea cites it; a 'content' article becomes 'mined' the same way. The librarian adds an override only to say something the citations cannot: that an article was read and has nothing more to give (background), or that Dinis has placed everything from it (placed)."
 }

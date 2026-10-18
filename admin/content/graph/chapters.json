@@ -105,6 +105,22 @@
      ]
     },
     {
+     "id": "lenses-roles-and-loops",
+     "title": "Lenses, roles and loops",
+     "punchline": "The second half of the explanation: a prompt is a lens, a role is a model with a description, an agent is a loop with a goal, tools are requests the model sends back, the model remembers nothing, long chats are compressed, so work in focused threads.",
+     "topics": [
+      "working-with-agents",
+      "everyone-is-a-developer"
+     ],
+     "gravity": "all",
+     "character": "zara",
+     "state": "storyboarded",
+     "answers_2018": [
+      "3.technologies/content/ml-ai.md"
+     ],
+     "note": "Placed right after What generative AI is, as the article asks (task 1)."
+    },
+    {
      "id": "everyone-is-a-developer",
      "title": "Everyone who can brief an agent is a developer",
      "punchline": "The definition widened, and so did the door; here is what the briefing-only developer still cannot do.",
@@ -440,6 +456,30 @@
      "punchline": "Nodes, edges as verbs, and a first graph of something you know, after chapter 15 of Fractal Semantic Graphs.",
      "topics": [
       "graphs-memory"
+     ],
+     "gravity": "explorer",
+     "character": "zara",
+     "state": "proposed",
+     "answers_2018": []
+    },
+    {
+     "id": "five-lenses",
+     "title": "One idea, five lenses",
+     "punchline": "Explain one idea of your own choice for a teenager, a musician, a doctor, a football fan and in another language; see the lens, not the magic.",
+     "topics": [
+      "everyone-is-a-developer"
+     ],
+     "gravity": "explorer",
+     "character": "zara",
+     "state": "proposed",
+     "answers_2018": []
+    },
+    {
+     "id": "a-tiny-agent-loop",
+     "title": "A tiny agent loop",
+     "punchline": "A page of code, or a no-code version, that shows the loop and one tool call: do the task, are we done, go round again.",
+     "topics": [
+      "working-with-agents"
      ],
      "gravity": "explorer",
      "character": "zara",

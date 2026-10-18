@@ -128,7 +128,7 @@ def load():
     agent_articles = read_articles("admin/content/agent-articles", "agent")
     decisions = read_decisions()
     storyboards = OrderedDict()
-    for f in sorted((ROOT / "admin/content/storyboards").glob("0*.json")):
+    for f in sorted((ROOT / "admin/content/storyboards").glob("[0-9]*.json")):
         s = json.loads(f.read_text(encoding="utf-8"))
         storyboards["sb:" + s["slug"]] = {"id": "sb:" + s["slug"], "slug": s["slug"], "title": s["title"], "url": f"storyboards/{s['slug']}.html",
                                          "quote_source": s.get("quote_source"), "panels": len(s.get("scenes", []))}

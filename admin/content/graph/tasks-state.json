@@ -285,7 +285,7 @@
   },
   "everything-is-connected:editor:1": {
    "state": "in-progress",
-   "evidence": "chapters.json places everything-is-connected just before where-do-you-land in Before you start, with the reason in its note (site v0.2.14); the order is Dinis's question and the editor's map decides"
+   "evidence": "chapters.json places everything-is-connected just before where-do-you-land in Before you start, with the reason in its note (site v0.2.15); the order is Dinis's question and the editor's map decides"
   },
   "everything-is-connected:editor:2": {
    "state": "open",
@@ -297,11 +297,27 @@
   },
   "everything-is-connected:editor:4": {
    "state": "done",
-   "evidence": "chapters.json lists your-first-graph in the hands-on 2026 part (site v0.2.14)"
+   "evidence": "chapters.json lists your-first-graph in the hands-on 2026 part (site v0.2.15)"
   },
   "everything-is-connected:editor:5": {
    "state": "open",
    "evidence": "no interview script on graphs in team/editor/briefs/"
+  },
+  "lenses-roles-and-loops:editor:1": {
+   "state": "in-progress",
+   "evidence": "chapters.json places lenses-roles-and-loops right after what-generative-ai-is in The frame (site v0.2.15); the editor's map decides"
+  },
+  "lenses-roles-and-loops:editor:2": {
+   "state": "done",
+   "evidence": "chapters.json lists five-lenses in the hands-on 2026 part (site v0.2.15)"
+  },
+  "lenses-roles-and-loops:editor:3": {
+   "state": "in-progress",
+   "evidence": "chapters.json lists a-tiny-agent-loop in the hands-on 2026 part; the newsroom article it builds on is not named yet"
+  },
+  "lenses-roles-and-loops:editor:4": {
+   "state": "open",
+   "evidence": "no interview script on this in team/editor/briefs/"
   }
  }
 }

@@ -2738,6 +2738,131 @@
    "state": "candidate",
    "decided_by": null,
    "gravity": "all"
+  },
+  {
+   "id": "a-prompt-is-a-lens",
+   "title": "A prompt is a lens: translating into another language is, to a model, the same as explaining for a teenager or a doctor",
+   "kind": "frame",
+   "statement": "A model holds the frames of reference of many audiences, and the prompt puts the right lens in front of the idea; the analogy is the reason someone understands something. People who say they are bad at maths do maths all day: it was the lens that was wrong, which is why the book shows multiple lenses.",
+   "sources": [
+    {
+     "ref": "art:lenses-roles-and-loops",
+     "where": "A prompt is a lens"
+    },
+    {
+     "ref": "sb:lenses-roles-and-loops",
+     "where": "the lenses panels"
+    }
+   ],
+   "answers": [],
+   "topic": "everyone-is-a-developer",
+   "chapter": "lenses-roles-and-loops",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Lenses, roles and loops; the editor records it in the vault",
+   "gravity": "all",
+   "notes": "The hands-on part gets the lenses exercise (editor's task 2): one idea through five lenses, the reader's own choice."
+  },
+  {
+   "id": "a-role-is-a-model-with-a-description",
+   "title": "A role is a model with a description and a question; an agent is that role on a loop with a goal",
+   "kind": "frame",
+   "statement": "The editor, the publisher, the journalist, the librarian on this site are each almost a raw model plus a role file (who you are, what you care about, what you refuse, how you work) and a question. An agent is the role on a loop with an objective: do the task, ask whether it is done, go round again; planning, checks and limits are added on that skeleton.",
+   "sources": [
+    {
+     "ref": "art:lenses-roles-and-loops",
+     "where": "A role is a model with a description; An agent is a loop with a goal"
+    },
+    {
+     "ref": "news:how-i-work-with-claude",
+     "where": "an agent as a focused session with a role file"
+    },
+    {
+     "ref": "art:lenses-roles-and-loops",
+     "where": "Precisely: a model plus instructions, tools, a loop and a rule for stopping"
+    }
+   ],
+   "answers": [],
+   "topic": "working-with-agents",
+   "chapter": "lenses-roles-and-loops",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Lenses, roles and loops; the editor records it in the vault",
+   "gravity": "all",
+   "notes": "Sits next to an-agent-is-a-session-with-a-focus; the hands-on part gets a tiny agent loop (editor's task 3)."
+  },
+  {
+   "id": "tools-changed-everything",
+   "title": "Tools changed everything: the model answers with a request, the program runs it, and the result goes into the next request",
+   "kind": "claim",
+   "statement": "The first ChatGPT and Claude had only their training, a compression of the world that stopped at a date. Now a model can return a tool call instead of an answer (search the web, call a service, read a file); the harness decides whether to run it, runs it, adds the result to the conversation and sends it all back. The model never runs a tool, which is where the control lives. From no tools in November 2022 to an open standard for them in November 2024.",
+   "sources": [
+    {
+     "ref": "art:lenses-roles-and-loops",
+     "where": "Tools changed everything; Precisely: the model never runs a tool"
+    }
+   ],
+   "answers": [
+    "3.technologies/content/ml-ai.md"
+   ],
+   "topic": "working-with-agents",
+   "chapter": "lenses-roles-and-loops",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Lenses, roles and loops; the editor records it in the vault",
+   "gravity": "all",
+   "notes": "Dates as commonly recorded; 'training as compression' is a metaphor, the article says so."
+  },
+  {
+   "id": "the-model-remembers-nothing",
+   "title": "The model remembers nothing between requests: every request carries the whole conversation, which is why there is a context window",
+   "kind": "claim",
+   "statement": "There is no memory, only a cache that saves work; the model starts from the prompt it receives, so it has to receive all of it, and a long chat costs more every turn. When an assistant 'remembers' you, it is saved notes put back into the prompt.",
+   "sources": [
+    {
+     "ref": "art:lenses-roles-and-loops",
+     "where": "It remembers nothing; Precisely: every request is independent"
+    },
+    {
+     "ref": "news:memory-is-not-a-spectator-sport",
+     "where": "'Nothing is remembered by the model between sessions. Everything is remembered by the files.'"
+    }
+   ],
+   "answers": [],
+   "topic": "working-with-agents",
+   "chapter": "lenses-roles-and-loops",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Lenses, roles and loops; the editor records it in the vault",
+   "gravity": "all"
+  },
+  {
+   "id": "long-chats-are-compressed",
+   "title": "Long chats are compressed into a lower-resolution summary, so details drop out: work in many focused threads with named agents",
+   "kind": "advice",
+   "statement": "When a conversation gets too long it is replaced by a summary, and what the summary leaves out is gone unless it is in a file; the newsroom's session was summarised eighteen times in a month, keeping 1.7% each time. So keep the rules in a file printed back after every summary, and work in lots of separate mini agents, each with a name and one job, which is how the agentic inbox runs.",
+   "sources": [
+    {
+     "ref": "art:lenses-roles-and-loops",
+     "where": "Long chats are compressed; Many focused threads"
+    },
+    {
+     "ref": "news:re-anchoring-agent-behaviour-policies",
+     "where": "eighteen summaries at 1.7%: 'The rules are restored, not remembered'"
+    },
+    {
+     "ref": "news:replicating-the-agentic-inbox",
+     "where": "one session per role, every message a file"
+    }
+   ],
+   "answers": [],
+   "topic": "working-with-agents",
+   "chapter": "lenses-roles-and-loops",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Lenses, roles and loops; the editor records it in the vault",
+   "gravity": "villager",
+   "notes": "The 1.7% is one session's measurement; how each product compresses differs."
   }
  ]
 }

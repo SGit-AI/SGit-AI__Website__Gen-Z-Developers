@@ -1,24 +1,24 @@
 # Debrief: the second pass of the register
 
-*From the librarian, 18 October 2026. Book version reviewed: v1.0.0. Site version that published it: v0.2.14. The counts are the hub's (`graph/index.html`) at this build; they move on every build.*
+*From the librarian, 18 October 2026. Book version reviewed: v1.0.0. Site version that published it: v0.2.15. The counts are the hub's (`graph/index.html`) at this build; they move on every build.*
 
 ## What was processed
 
 - **The four newsroom bring articles the first pass left**, read in full from their markdown twins: *No server, by design* (4 ideas), *How the voice works* (3), *Memory is not a spectator sport* (3), *Code review as a fractal semantic graph* (3). The bring class is at zero.
-- **The journalist's thirteenth co-written article**, *Everything is connected* (7 ideas), and before it, in v0.2.12, *Follow the rabbit holes* (8 ideas).
-- **Two chapters proposed**: *Everything is connected: graphs*, placed just before *Where do you land* because a map is a graph with positions, with *Dot Language* and *AST* as examples inside it; and *Your first graph, built by hand*, in the hands-on 2026 part. The part itself (four workflow chapters) came with the rabbit-holes pass.
+- **The journalist's thirteenth co-written article**, *Everything is connected* (7 ideas) and fourteenth, *Lenses, roles and loops* (5 ideas, and a chapter right after *What generative AI is* plus two hands-on chapters), and before them, in v0.2.12, *Follow the rabbit holes* (8 ideas).
+- **Chapters proposed**: *Everything is connected: graphs*, placed just before *Where do you land* because a map is a graph with positions, with *Dot Language* and *AST* as examples inside it; and *Your first graph, built by hand*, in the hands-on 2026 part. The part itself (four workflow chapters) came with the rabbit-holes pass.
 
 ## The counts
 
 | What | State |
 |---|---|
-| Ideas | 101: 45 accepted (said by Dinis in his own articles, pending the editor's record in the vault), 55 candidates, 1 deferred |
-| Destinations | 92 this edition, 6 the process, 1 next version, 2 undecided (the edition's name; the hands-on part inside or a companion) |
+| Ideas | 106: 50 accepted (said by Dinis in his own articles, pending the editor's record in the vault), 55 candidates, 1 deferred |
+| Destinations | 97 this edition, 6 the process, 1 next version, 2 undecided (the edition's name; the hands-on part inside or a companion) |
 | Newsroom articles | 49 processed, 0 to process; 36 mined, 37 to mine; 38 background; 44 skipped |
-| Co-written and agent articles | 22 processed, 1 background |
+| Co-written and agent articles | 23 processed, 1 background |
 | 2018 files | 90 answered by an article or an idea, 36 unanswered by an article; 23 with neither an article nor an idea (issue 002) |
-| Chapters | 27 in 9 parts, all proposed; 76 of the 2018 files placed under one |
-| Tasks from the briefs | 74: 4 done, 13 in progress, 4 blocked, 53 open |
+| Chapters | 30 in 9 parts, all proposed; 76 of the 2018 files placed under one |
+| Tasks from the briefs | 78: 5 done, 15 in progress, 4 blocked, 54 open |
 
 ## What waits on Dinis
 
