@@ -40,6 +40,11 @@
    "version": "v0.2.5",
    "date": "2026-10-18",
    "what": "Wardley maps, and the reader's centre of gravity. A co-written article, where do you land?: maps run through the whole book and are shown before they are named; the four stages of evolution are not only for activities (Dinis's table from his Open Security Summit talk 'Why Wardley Maps changed how I think', Wardley's four rows and Dinis's ten more, transcribed); explorers, villagers and town planners described as personalities, each with a centre of gravity that can move over a career and its own skills and learning path; a black-and-white badge for each through the book. The storyboard renderer learns two things: a map panel kind that draws a Wardley map from data (anchor, value chain, evolution, movement arrows), with plain or named axes; and badges (compass, house, grid) shown by a character's name and on spectrum stops. The cast gets centres of gravity (Zara explorer, Priya villager, Tomás town planner, re-read from Dinis's descriptions), and storyboards 02 and 03 follow. A 14-panel storyboard, where do you land, quote-checked by the build against the article. A brief for the editor."
+  },
+  {
+   "version": "v0.2.6",
+   "date": "2026-10-18",
+   "what": "Paths and learning, in Dinis's words. A co-written article, connect the dots backwards: a path only makes sense looking back (Steve Jobs at Stanford, 12 June 2005, whose calligraphy class became the Mac's typography); the edge is now multidisciplinary, so the humanities and mathematics matter, though maths and music are taught as if to make people hate them (Paul Lockhart's A Mathematician's Lament; Dinis's memo had the first name wrong and the checking corrected it); generative AI lets the reader explore and communicate again, as the storyboards on this site show; learning is a lifelong skill that geography no longer decides, and the future is local and sovereign; reading this already puts the reader in a small minority; read it on paper, with a pen; and search gave answers where generative AI lets you ask for the evidence. A 14-panel storyboard, quote-checked by the build against the article, and a brief for the editor."
   }
  ]
 }
