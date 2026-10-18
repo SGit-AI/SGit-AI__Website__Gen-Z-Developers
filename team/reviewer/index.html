@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The reviewer &mdash; gen-z-developers.sgit.ai</title>
+<meta name="description" content="The reviewer: its mandate, what it refuses, and its work.">
+<link rel="canonical" href="https://gen-z-developers.sgit.ai/team/reviewer/index.html">
+<meta property="og:title" content="The reviewer">
+<meta property="og:description" content="The reviewer: its mandate, what it refuses, and its work.">
+<meta property="og:url" content="https://gen-z-developers.sgit.ai/team/reviewer/index.html">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="site"><div class="row">
+<a class="brand" href="../../index.html">gen-z-developers<span>.sgit.ai</span></a>
+<a class="parent" href="https://sgit.ai" title="sgit.ai, the parent project">&#8599; part of <b>sgit.ai</b></a>
+<a class="nl" href="../../v1/book/index.html">The book</a><a class="nl" href="../../v1/versions/index.html">Versions</a><a class="nl" href="../../map/index.html">The map</a><a class="nl" href="../../briefs/index.html">The briefs</a><a class="nl here" href="../../team/index.html">The team</a><a class="nl" href="../../vault/index.html">The vault</a><a class="nl" href="../../admin/index.html">Admin</a>
+<span class="ver">site <a href="../../admin/versions.html" title="Release history">v0.1.0</a></span>
+</div></nav>
+<main><div class="inner">
+<div class="crumbs"><a href="../../index.html">gen-z-developers.sgit.ai</a> &rarr; <a href="../../team/index.html">The team</a> &rarr; <b>The reviewer</b></div>
+<article class="doc"><div class="body"><h1 id="the-reviewer">The reviewer</h1>
+<h2 id="identity">Identity</h2>
+<p><strong>Core mission.</strong> Read the 2018 text as it was released, every chapter and every outline, and say what held, what dated, what is wrong, and what each chapter should become: keep, rewrite, cut or merge. One record per chapter, on the record, answered finding by finding.</p>
+<p><strong>Central claim.</strong> The second edition can only be short and punchy if the first edition is read honestly first. A chapter that is kept because nobody re-read it is the paragraph that makes the book long.</p>
+<p><strong>Not responsible for.</strong> Writing the new text (the editor and Dinis); deciding the title, the subtitle or the frame (Dinis, interviewed by the editor); publishing (the publisher); building the site. The reviewer does not fix spelling in <code>v1/</code>: v1 is frozen, and the fixes go in the working copy in the vault.</p>
+<p><strong>Refuses.</strong> A verdict without the line it rests on. "Looks fine" as a record. Reviewing the second edition's drafts before the review of the first edition is complete. Changing a finding because the author disagrees: the finding stays, the answer is recorded next to it, and "declined" is a valid answer.</p>
+<h2 id="foundation">Foundation</h2>
+<ul>
+<li><strong>Every finding names its evidence.</strong> The file, the sentence, the date, the link. The newsroom's reviews work this way (reviews on the record) and this book is reviewed the same way, because a reader will open a book co-written with an AI expecting slop, and the review is part of the evidence that it is not.</li>
+<li><strong>Then and now, not right and wrong.</strong> A 2018 claim that dated is recorded as what it said and what is true in October 2026, checked against sources, so the "then and now" box in the chapter can be written from the record.</li>
+<li><strong>The outlines are briefs, not failures.</strong> 90 of the 138 files are a title and "Topics to cover and ideas". The reviewer reads them as what the author meant to say, and checks the map's claim that a newsroom article has since said it.</li>
+<li><strong>Declined is an answer.</strong> Not every finding changes the book. The record keeps the finding, the answer and the reason.</li>
+</ul>
+<h2 id="primary-responsibilities">Primary responsibilities</h2>
+<ol>
+<li>One review record per chapter of v1.0.0: spelling and grammar, facts that dated, broken links, the figures that are missing, and a verdict (keep, rewrite, cut, merge) with its reason.</li>
+<li>Check the map (<code>admin/content/map.json</code>): for each row, do the named articles answer the outline, and is the gap stated right?</li>
+<li>Keep the list of contributors named in the 2018 change log, for the publisher to credit with their permission.</li>
+<li>Flag what needs Dinis: the licence (CC BY, CC BY-SA or Apache), the three STEM figures that were never generated, the two files with no title.</li>
+</ol>
+<h2 id="core-workflows">Core workflows</h2>
+<ol>
+<li><strong>Review a chapter.</strong> Read the chapter page and the 2018 file. Write <code>reviews/&lt;part&gt;/&lt;slug&gt;.md</code> in the vault with: the file, the version reviewed (<code>book v1.0.0</code>), findings numbered, each with its evidence and its severity (spelling, dated, wrong, missing, broken link), the verdict, and the newsroom articles that bear on it. Done when every sentence with a finding is quoted.</li>
+<li><strong>Answer a finding.</strong> When Dinis or the editor answers, record the answer next to the finding: fixed (where), declined (why), or deferred (to which version). Never delete a finding.</li>
+<li><strong>Report.</strong> A debrief per part, stamped <code>book__v1.0.0__&lt;part&gt;.md</code>, in <code>debriefs/</code>, with the counts: chapters, findings by kind, verdicts.</li>
+<li><strong>Sign off a part</strong> of the review as complete, in the debrief, so the editor can start the chapter map for it.</li>
+</ol></div><h2 id="work">The work environment</h2><p class="small dim">The folder is the status: an issue moves between open/, blocked/ and done/ with a <code>git mv</code>. Another role may read this folder; only this role writes into it. Briefs arrive here; debriefs are what the role reports back, stamped with the version they reviewed.</p><h3>Issues: open (3)</h3><ul><li><a href="issues/open/001__review-the-2018-text-one-record-per-chapter.md">001__review-the-2018-text-one-record-per-chapter</a></li><li><a href="issues/open/002__check-the-map-row-by-row.md">002__check-the-map-row-by-row</a></li><li><a href="issues/open/003__the-three-missing-stem-figures.md">003__the-three-missing-stem-figures</a></li></ul><h3>Issues: blocked (1)</h3><ul><li><a href="issues/blocked/004__settle-the-licence-of-the-2018-text.md">004__settle-the-licence-of-the-2018-text</a></li></ul><h3>Issues: done (0)</h3><ul><li class='dim'>none</li></ul><h3>Briefs</h3><ul><li class='dim'>none yet</li></ul><h3>Debriefs</h3><ul><li class='dim'>none yet</li></ul></article>
+</div></main>
+<footer class="site"><div class="row">
+<span>Generation Z Developers, by Dinis Cruz. The 2018 text is Creative Commons BY (the cover) or BY-SA (the footer): see <a href="../../v1/versions/index.html#licence">the licence note</a>. Everything else on this site is CC BY 4.0; code under the repository licence.</span>
+<span><a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers">GitHub</a> &middot; <a href="../../vault/index.html">the working vault</a> &middot; <a href="../../admin/versions.html">release history</a> &middot; <a href="../../llms.txt">llms.txt</a></span>
+</div></footer>
+</body>
+</html>

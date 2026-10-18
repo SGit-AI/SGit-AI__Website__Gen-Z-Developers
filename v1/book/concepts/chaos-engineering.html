@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chaos Engineering &mdash; gen-z-developers.sgit.ai</title>
+<meta name="description" content="Chaos Engineering, a chapter of Generation Z Developers (2018), as released.">
+<link rel="canonical" href="https://gen-z-developers.sgit.ai/v1/book/concepts/chaos-engineering.html">
+<meta property="og:title" content="Chaos Engineering">
+<meta property="og:description" content="Chaos Engineering, a chapter of Generation Z Developers (2018), as released.">
+<meta property="og:url" content="https://gen-z-developers.sgit.ai/v1/book/concepts/chaos-engineering.html">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site"><div class="row">
+<a class="brand" href="../../../index.html">gen-z-developers<span>.sgit.ai</span></a>
+<a class="parent" href="https://sgit.ai" title="sgit.ai, the parent project">&#8599; part of <b>sgit.ai</b></a>
+<a class="nl here" href="../../../v1/book/index.html">The book</a><a class="nl here" href="../../../v1/versions/index.html">Versions</a><a class="nl" href="../../../map/index.html">The map</a><a class="nl" href="../../../briefs/index.html">The briefs</a><a class="nl" href="../../../team/index.html">The team</a><a class="nl" href="../../../vault/index.html">The vault</a><a class="nl" href="../../../admin/index.html">Admin</a>
+<span class="ver">site <a href="../../../admin/versions.html" title="Release history">v0.1.0</a></span>
+</div></nav>
+<main><div class="inner">
+<div class="crumbs"><a href="../../../index.html">gen-z-developers.sgit.ai</a> &rarr; <a href="../../../v1/book/index.html">The book</a> &rarr; <a href="../../../v1/book/index.html#concepts">Concepts</a> &rarr; <b>Chaos Engineering</b></div>
+<article class="chapter"><p class="small dim">Concepts &middot; chapter 50 of 123 &middot; <span class="badge outline">outline</span> <span class="badge frozen">v1.0.0, 2018, frozen</span> &middot; 645 words &middot; <a href="https://github.com/DinisCruz/Book_Generation_Z_Developer/blob/61886444fe5ab118ab18726147826ab05f794edc/content/5.concepts/chaos-engineering.md">the 2018 file</a></p><h1>Chaos Engineering</h1><div class="outline-note">In the 2018 edition this chapter was an outline: a title and "Topics to cover and ideas". It is shown exactly as released. The second edition fills it from the articles the map names.</div><div class="body"><p><strong>Topics to cover and ideas</strong></p>
+<ul>
+<li>Great concept (from 2017)</li>
+<li>Security has been doing this for ages</li>
+<li>Add references to site and best posts</li>
+<li>focus on resilient systems</li>
+<li>need to understand and visualize what is going on<ul>
+<li>a massive problem with micro-services (and any services/monolith) based application is vibility into what is going on (and even just getting good graphs is the first step, just ask anybody who has deployed AppDynamics)</li>
+</ul>
+</li>
+<li>integrate this concept with the SRE's 'Error Budget'</li>
+<li>expand on the concept of 'Steady state' (and write tests for it)<ul>
+<li>how we want tests to replicate it</li>
+</ul>
+</li>
+</ul>
+<p>(from Miles)</p>
+<ul>
+<li><strong>Chaos Engineering is Experimentation and Testing</strong> : In part of the definition of chaos engineering it is useful to state that the technique is made up of experimentation, to explore and discover weaknesses, and testing, to validate that a known weakness is in fact overcome.</li>
+<li><strong>Chaos Engineering and Resilience Engineering</strong> - People practicing Chaos Engineering are part of the Resilience Engineering capability of an organisation. Chaos Engineering is a key discipline for learning and validating a system's robustness in the face of turbulent conditions, and it provides a pre-emptive motivation to learn and improve as part of the overall sociotechnical system's resiliency.</li>
+<li><strong>Make sure to reference the Principles of Chaos</strong> - For me, this is the authoritative definition for Chaos Engineering: http://principlesofchaos.org/ I'd also argue any sufficiently complex system, distributed or not, can gain from pre-emptively exploring and discovering sociotechnical system weaknesses.</li>
+<li><strong>Game Days and Automated Chaos Experiments part of a Chaos Engineers toolbox</strong> - Game Days are manually executed chaos experiments. Automated Chaos Experiments and Tests are where you'd like to execute your experiments and tests continuously (Continuous Chaos) and so automation enables that without distracting everyone from their other valuable work.</li>
+<li><strong>Chaos Engineering and the overall Software Development Lifecycle</strong> - Chaos experimentation can begin even before anything has arrived in production by exploring the potential for system weaknesses in a solution, mentally or actually running Game Day experiments. It is a great architecture, design and organisational exploration technique to find weaknesses early.</li>
+<li><strong>Continuous Chaos (Engineering)</strong> - Chaos experimentation and testing is often executed as frequently as possible as the turbulent conditions of the target (production) system are often sufficiently dynamic that weaknesses can surface and be discovered by a chaos experiment at any time. This also informs the relationship between CI/CD and continuous chaos. While there is value in adding chaos testing and experimentation into the CI/CD pipeline, "delivery" is only one cause of conditions that you might want to trigger chaos experiments to explore. Traffic changes, infrastructure failure, platform conditions; the system is under the stress of transient turbulent conditions between releases and so often it is desirable to execute chaos on an entirely different cadence to delivery, often more frequently, to explore these interim conditions as well.</li>
+<li><strong>Chaos Engineering and Observability</strong> - Chaos Engineering frequently encourages better system observability, and takes advantage of that greater observability, so the two techniques are mutual forcing-factors for improvement.</li>
+</ul>
+<p><strong>references</strong>:</p>
+<ul>
+<li><a href="https://medium.com/chaos-toolkit/the-language-of-chaos-experiments-in-chaos-toolkit-bd55a5c04057">The Language of Chaos Experiments in Chaos Toolkit</a></li>
+<li>https://github.com/chaostoolkit , http://chaostoolkit.org/ , http://chaostoolkit.org/faq/</li>
+<li>http://www.oreilly.com/webops-perf/free/chaos-engineering.csp book</li>
+<li><a href="https://medium.com/russmiles/chaos-engineering-why-the-label-matters-35ddbb974fa5">Chaos Engineering: Why the Label Matters</a></li>
+<li><a href="https://medium.com/russmiles/chaos-engineering-for-the-business-17b723f26361">Chaos Engineering for the Business</a> introduces great concept "Limited scope, continuous, disaster recovery"</li>
+<li><a href="https://medium.com/russmiles/are-you-ready-for-chaos-engineering-59b859091281">Are you ready for Chaos Engineering?</a></li>
+<li><a href="https://www.codibly.com/2017/05/chaos-engineering-paradigm/">Chaos engineering paradigm</a></li>
+<li>https://github.com/Netflix/chaosmonkey</li>
+<li><a href="https://www.slideshare.net/sbodiu/from-resilient-to-antifragile-chaos-engineering-primer-devseccon">From resilient to antifragile - Chaos Engineering Primer DevSecCon</a></li>
+</ul></div><p class="small dim">Answered since, on the newsroom: <a href="https://newsroom.sgit.ai/articles/connector-twin-before-you-deploy-an-agent.html">Before you give an agent a connector, give the connector a twin</a>, <a href="https://newsroom.sgit.ai/articles/footprint-and-blast-radius.html">Footprint and blast radius</a>. <a href="../../../map/index.html#5-concepts-chaos-engineering-md">The map row</a>.</p><div class="prevnext"><a href="../concepts/changes.html">&larr; Changes</a><a href="../concepts/ci-testing.html">CI Testing &rarr;</a></div></article>
+</div></main>
+<footer class="site"><div class="row">
+<span>Generation Z Developers, by Dinis Cruz. The 2018 text is Creative Commons BY (the cover) or BY-SA (the footer): see <a href="../../../v1/versions/index.html#licence">the licence note</a>. Everything else on this site is CC BY 4.0; code under the repository licence.</span>
+<span><a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers">GitHub</a> &middot; <a href="../../../vault/index.html">the working vault</a> &middot; <a href="../../../admin/versions.html">release history</a> &middot; <a href="../../../llms.txt">llms.txt</a></span>
+</div></footer>
+</body>
+</html>

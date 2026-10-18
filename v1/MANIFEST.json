@@ -1,0 +1,28 @@
+{
+ "what": "v1 is the first edition of Generation Z Developers as released in 2018, frozen. Nothing under v1/content/ or v1/images/ changes except to fix a copy error; v1/book/ and v1/versions/ are generated from them.",
+ "version": "v1.0.0",
+ "released": "2018-09",
+ "last_content_change": "2018-10-08",
+ "frozen_on": "2026-10-18",
+ "source": {
+  "repository": "https://github.com/DinisCruz/Book_Generation_Z_Developer",
+  "commit": "61886444fe5ab118ab18726147826ab05f794edc",
+  "paths": [
+   "content/",
+   "static/images/",
+   "LICENSE"
+  ]
+ },
+ "leanpub": {
+  "url": "https://leanpub.com/generation-z",
+  "complete": "60%",
+  "pages": 136,
+  "words": 30695,
+  "readers": 465,
+  "read_on": "2026-10-18"
+ },
+ "counts": {
+  "markdown_files": 138,
+  "outlines": 90
+ }
+}

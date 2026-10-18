@@ -1,0 +1,2324 @@
+{
+ "what": "One row per markdown file of the 2018 book (v1/content/), the newsroom articles that answer it, and the gap. A first reading, from the article Generation Z Developers, again and the build brief of 18 October 2026, extended file by file; the reviewer's records and the editor's interviews decide. kind: written (a chapter with text), outline (a chapter that is a title and 'Topics to cover and ideas'), apparatus (the part indexes and the Hugo files, not chapters; the outline template is one of them). gap: '' means the articles answer it; 'none' means no article yet; otherwise what is missing or what to do.",
+ "source": "https://github.com/DinisCruz/Book_Generation_Z_Developer at 61886444fe5ab118ab18726147826ab05f794edc (2024-03-01), content/",
+ "newsroom": "https://newsroom.sgit.ai/articles",
+ "counts": {
+  "files": 138,
+  "written": 34,
+  "outline": 89,
+  "apparatus": 15,
+  "answered_by_articles": 89,
+  "articles_cited": 79
+ },
+ "rows": [
+  {
+   "file": "1.introduction/_index.md",
+   "part": "Introduction",
+   "title": "Introduction",
+   "status_2018": "content",
+   "kind": "apparatus",
+   "words": 673,
+   "articles": [],
+   "gap": "Keep. Rewrite the frame: everyone who can brief an agent is a developer now; the seven lines on the cover stay (Generation Z Developers, again)."
+  },
+  {
+   "file": "1.introduction/generation-z.md",
+   "part": "Introduction",
+   "title": "Generation Z",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 671,
+   "articles": [
+    {
+     "slug": "generation-z-developers-again",
+     "title": "Generation Z Developers, again",
+     "url": "https://newsroom.sgit.ai/articles/generation-z-developers-again.html"
+    },
+    {
+     "slug": "hired-for-the-workflow",
+     "title": "Hired for the workflow",
+     "url": "https://newsroom.sgit.ai/articles/hired-for-the-workflow.html"
+    }
+   ],
+   "gap": "then-now: the oldest are 30 now, not 22; the worry about curiosity becomes the worry about fear of AI among young Europeans."
+  },
+  {
+   "file": "1.introduction/how-this -book-was-created.md",
+   "part": "Introduction",
+   "title": "How this book is being created",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 146,
+   "articles": [
+    {
+     "slug": "short-punchy-and-co-written",
+     "title": "Short, punchy, and co-written with Claude",
+     "url": "https://newsroom.sgit.ai/articles/short-punchy-and-co-written.html"
+    },
+    {
+     "slug": "a-website-to-finish-the-book",
+     "title": "A website to finish the book",
+     "url": "https://newsroom.sgit.ai/articles/a-website-to-finish-the-book.html"
+    },
+    {
+     "slug": "books-from-articles",
+     "title": "Books from articles",
+     "url": "https://newsroom.sgit.ai/articles/books-from-articles.html"
+    },
+    {
+     "slug": "how-much-of-this-did-i-write",
+     "title": "How much of this did I write?",
+     "url": "https://newsroom.sgit.ai/articles/how-much-of-this-did-i-write.html"
+    }
+   ],
+   "gap": "Rewrite as the last part of the book: how the second edition was made, co-written with Claude, with the memo-to-word ratio."
+  },
+  {
+   "file": "1.introduction/how-to-get-a-job.md",
+   "part": "Introduction",
+   "title": "How to get a job",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 732,
+   "articles": [
+    {
+     "slug": "act-as-the-job-you-want",
+     "title": "Act as the job you want",
+     "url": "https://newsroom.sgit.ai/articles/act-as-the-job-you-want.html"
+    },
+    {
+     "slug": "hired-for-the-workflow",
+     "title": "Hired for the workflow",
+     "url": "https://newsroom.sgit.ai/articles/hired-for-the-workflow.html"
+    }
+   ],
+   "gap": "then-now: the list of competitive advantages (Jira, WallabyJs, AWS) dates; the one advantage now is running agentic workflows."
+  },
+  {
+   "file": "1.introduction/stem-tech-stack.md",
+   "part": "Introduction",
+   "title": "STEM Tech Stack",
+   "status_2018": "draft",
+   "kind": "written",
+   "words": 312,
+   "articles": [
+    {
+     "slug": "the-citizen-developer",
+     "title": "The citizen developer is good news",
+     "url": "https://newsroom.sgit.ai/articles/the-citizen-developer.html"
+    },
+    {
+     "slug": "explorer-coding",
+     "title": "Explorer coding",
+     "url": "https://newsroom.sgit.ai/articles/explorer-coding.html"
+    }
+   ],
+   "gap": "The three PlantUML figures it references were never generated; redraw as infographics. Add the agent layer to the stack."
+  },
+  {
+   "file": "10.misc/_index.md",
+   "part": "Misc",
+   "title": "Misc",
+   "status_2018": "unset",
+   "kind": "apparatus",
+   "words": 10,
+   "articles": [],
+   "gap": "A holding part; its files move into chapters or are cut."
+  },
+  {
+   "file": "10.misc/books-to-read.md",
+   "part": "Misc",
+   "title": "Books to read",
+   "status_2018": "draft",
+   "kind": "written",
+   "words": 46,
+   "articles": [],
+   "gap": "Merge into Books."
+  },
+  {
+   "file": "10.misc/diagrams-to-add.md",
+   "part": "Misc",
+   "title": "Diagrams to add",
+   "status_2018": "unset",
+   "kind": "written",
+   "words": 15,
+   "articles": [
+    {
+     "slug": "the-infographic-bake-off",
+     "title": "The infographic bake-off",
+     "url": "https://newsroom.sgit.ai/articles/the-infographic-bake-off.html"
+    }
+   ],
+   "gap": "Becomes the figures list for the edition."
+  },
+  {
+   "file": "10.misc/gen-z-digital-env.md",
+   "part": "Misc",
+   "title": "Gen Z digital environment",
+   "status_2018": "unset",
+   "kind": "outline",
+   "words": 54,
+   "articles": [],
+   "gap": "none; merge into Generation Z."
+  },
+  {
+   "file": "10.misc/gen-z-research.md",
+   "part": "Misc",
+   "title": "Generation Z Research",
+   "status_2018": "draft",
+   "kind": "written",
+   "words": 76,
+   "articles": [
+    {
+     "slug": "generation-z-developers-again",
+     "title": "Generation Z Developers, again",
+     "url": "https://newsroom.sgit.ai/articles/generation-z-developers-again.html"
+    }
+   ],
+   "gap": "A research task for the researcher role: who the reader is in 2026."
+  },
+  {
+   "file": "10.misc/o2-platform.md",
+   "part": "Misc",
+   "title": "O2 Platform",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 43,
+   "articles": [
+    {
+     "slug": "bringing-my-past-work-back",
+     "title": "Bringing my past work back",
+     "url": "https://newsroom.sgit.ai/articles/bringing-my-past-work-back.html"
+    }
+   ],
+   "gap": "Dinis's own history; the back-catalogue worker covers it."
+  },
+  {
+   "file": "10.misc/stories-to-tell.md",
+   "part": "Misc",
+   "title": "Stories to tell",
+   "status_2018": "unset",
+   "kind": "outline",
+   "words": 91,
+   "articles": [
+    {
+     "slug": "portugal-2016-hacking-portugal",
+     "title": "Hacking Portugal, 2016",
+     "url": "https://newsroom.sgit.ai/articles/portugal-2016-hacking-portugal.html"
+    },
+    {
+     "slug": "portugal-2010-a-challenge",
+     "title": "A web application security challenge to Portugal, 2010",
+     "url": "https://newsroom.sgit.ai/articles/portugal-2010-a-challenge.html"
+    }
+   ],
+   "gap": "Some stories are now articles."
+  },
+  {
+   "file": "10.misc/technium.md",
+   "part": "Misc",
+   "title": "Technium",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 51,
+   "articles": [],
+   "gap": "none"
+  },
+  {
+   "file": "10.misc/wait-but-why.md",
+   "part": "Misc",
+   "title": "Wait but why",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 27,
+   "articles": [],
+   "gap": "none; likely cut."
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/_index.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "MVP for Gen Z Dev",
+   "status_2018": "unset",
+   "kind": "apparatus",
+   "words": 209,
+   "articles": [
+    {
+     "slug": "hired-for-the-workflow",
+     "title": "Hired for the workflow",
+     "url": "https://newsroom.sgit.ai/articles/hired-for-the-workflow.html"
+    },
+    {
+     "slug": "your-own-newsroom",
+     "title": "Your own newsroom",
+     "url": "https://newsroom.sgit.ai/articles/your-own-newsroom.html"
+    }
+   ],
+   "gap": "Rewrite the MVP around the agentic workflow: a GitHub account, an agent, a site, a vault; keep the TASK device."
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/content/creative-commons.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "Creative Commons",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 1636,
+   "articles": [],
+   "gap": "Keep, corrected. then-now: the repository licence (Apache) and the book's licence (CC BY) disagree; settle it."
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/content/docker.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "Docker",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 1112,
+   "articles": [
+    {
+     "slug": "the-minimum-code-below",
+     "title": "The minimum code below: container security from the top down",
+     "url": "https://newsroom.sgit.ai/articles/the-minimum-code-below.html"
+    },
+    {
+     "slug": "move-the-cloud-not-the-code",
+     "title": "Move the cloud, not the code",
+     "url": "https://newsroom.sgit.ai/articles/move-the-cloud-not-the-code.html"
+    }
+   ],
+   "gap": "then-now: containers are where agents run now; the chapter's install walk-through dates."
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/content/dot-language.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "Dot Language",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 2993,
+   "articles": [
+    {
+     "slug": "introducing-fractal-semantic-graphs",
+     "title": "Fractal Semantic Graphs",
+     "url": "https://newsroom.sgit.ai/articles/introducing-fractal-semantic-graphs.html"
+    },
+    {
+     "slug": "the-graphs-books",
+     "title": "The graphs books",
+     "url": "https://newsroom.sgit.ai/articles/the-graphs-books.html"
+    }
+   ],
+   "gap": "Keep the hands-on part; connect to graphs as the way of thinking, not only a drawing tool."
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/content/google-search-gdd-sre.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "Google Search, GDD and SRE",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 1933,
+   "articles": [
+    {
+     "slug": "search-as-navigation",
+     "title": "Search as navigation",
+     "url": "https://newsroom.sgit.ai/articles/search-as-navigation.html"
+    }
+   ],
+   "gap": "then-now: search as a navigation of a graph you own, and agents as the searcher."
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/content/hugo.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "Hugo",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 795,
+   "articles": [
+    {
+     "slug": "your-own-newsroom",
+     "title": "Your own newsroom",
+     "url": "https://newsroom.sgit.ai/articles/your-own-newsroom.html"
+    },
+    {
+     "slug": "nineteen-sites",
+     "title": "Twenty sites in fifteen days",
+     "url": "https://newsroom.sgit.ai/articles/nineteen-sites.html"
+    },
+    {
+     "slug": "no-server-by-design",
+     "title": "No server, by design",
+     "url": "https://newsroom.sgit.ai/articles/no-server-by-design.html"
+    }
+   ],
+   "gap": "then-now: static sites built by an agent from a voice memo; Hugo itself is one option among several."
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/content/jira.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "Jira",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 1144,
+   "articles": [
+    {
+     "slug": "the-agent-team-as-it-runs",
+     "title": "The agent team as it runs",
+     "url": "https://newsroom.sgit.ai/articles/the-agent-team-as-it-runs.html"
+    }
+   ],
+   "gap": "then-now: issues as files in folders, the board the agents run; Jira as the thing it replaced."
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/content/open-source.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "Open Source",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 2299,
+   "articles": [
+    {
+     "slug": "the-fork-next-door",
+     "title": "The fork next door",
+     "url": "https://newsroom.sgit.ai/articles/the-fork-next-door.html"
+    },
+    {
+     "slug": "what-open-source-is-and-is-not",
+     "title": "What open source is, and what it is not",
+     "url": "https://newsroom.sgit.ai/articles/what-open-source-is-and-is-not.html"
+    },
+    {
+     "slug": "open-source-is-not-free",
+     "title": "Open source is not free",
+     "url": "https://newsroom.sgit.ai/articles/open-source-is-not-free.html"
+    },
+    {
+     "slug": "the-eyeballs-get-cheap",
+     "title": "The eyeballs get cheap",
+     "url": "https://newsroom.sgit.ai/articles/the-eyeballs-get-cheap.html"
+    }
+   ],
+   "gap": "Keep; add the fork as protection and who pays for the long tail."
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/content/owasp.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "OWASP",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 519,
+   "articles": [
+    {
+     "slug": "hired-for-the-workflow",
+     "title": "Hired for the workflow",
+     "url": "https://newsroom.sgit.ai/articles/hired-for-the-workflow.html"
+    },
+    {
+     "slug": "portugal-2010-a-challenge",
+     "title": "A web application security challenge to Portugal, 2010",
+     "url": "https://newsroom.sgit.ai/articles/portugal-2010-a-challenge.html"
+    }
+   ],
+   "gap": "Keep; the OWASP work is the worked example of act as the job you want."
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/content/python.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "Python",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 571,
+   "articles": [
+    {
+     "slug": "explorer-coding",
+     "title": "Explorer coding",
+     "url": "https://newsroom.sgit.ai/articles/explorer-coding.html"
+    }
+   ],
+   "gap": "then-now: Python is still the language of the agent era; the reader may write less of it by hand."
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/content/slack-and-chatops.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "Slack and ChatOps",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 2311,
+   "articles": [
+    {
+     "slug": "replicating-the-agentic-inbox",
+     "title": "Replicating the agentic inbox",
+     "url": "https://newsroom.sgit.ai/articles/replicating-the-agentic-inbox.html"
+    },
+    {
+     "slug": "omnichannel-programming",
+     "title": "Omnichannel programming",
+     "url": "https://newsroom.sgit.ai/articles/omnichannel-programming.html"
+    }
+   ],
+   "gap": "then-now: from ChatOps to agents in the inbox, briefs by voice, previews on the phone."
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/content/xcode-and-swift.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "Xcode and Swift",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 731,
+   "articles": [
+    {
+     "slug": "a-minimal-viable-browser",
+     "title": "A minimal viable browser",
+     "url": "https://newsroom.sgit.ai/articles/a-minimal-viable-browser.html"
+    }
+   ],
+   "gap": "then-now: an app built by an agent for one person (a browser for one); Xcode still the door to iOS."
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/aws.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "AWS",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 320,
+   "articles": [
+    {
+     "slug": "cloudflare-as-lego-blocks",
+     "title": "Cloudflare as Lego blocks",
+     "url": "https://newsroom.sgit.ai/articles/cloudflare-as-lego-blocks.html"
+    },
+    {
+     "slug": "move-the-cloud-not-the-code",
+     "title": "Move the cloud, not the code",
+     "url": "https://newsroom.sgit.ai/articles/move-the-cloud-not-the-code.html"
+    },
+    {
+     "slug": "ephemeral-town-planner-services",
+     "title": "Ephemeral town planner services",
+     "url": "https://newsroom.sgit.ai/articles/ephemeral-town-planner-services.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/continuous-integration.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "Continuous Integration",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 79,
+   "articles": [
+    {
+     "slug": "green-does-not-mean-live",
+     "title": "Green does not mean live",
+     "url": "https://newsroom.sgit.ai/articles/green-does-not-mean-live.html"
+    },
+    {
+     "slug": "sgit-in-a-ci-pipeline",
+     "title": "sgit in a CI pipeline",
+     "url": "https://newsroom.sgit.ai/articles/sgit-in-a-ci-pipeline.html"
+    },
+    {
+     "slug": "sgit-actions-side-by-side",
+     "title": "sgit in GitHub Actions, side by side",
+     "url": "https://newsroom.sgit.ai/articles/sgit-actions-side-by-side.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/electron.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "Electron",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 37,
+   "articles": [],
+   "gap": "none"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/github-flow.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "GitHub Flow",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 30,
+   "articles": [
+    {
+     "slug": "act-as-the-job-you-want",
+     "title": "Act as the job you want",
+     "url": "https://newsroom.sgit.ai/articles/act-as-the-job-you-want.html"
+    }
+   ],
+   "gap": "GitHub flow as the way an agent and a person share a repository; no article on the flow itself."
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/iot.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "IOT (Internet of Things)",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 228,
+   "articles": [],
+   "gap": "none"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/linux.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "linux",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 138,
+   "articles": [
+    {
+     "slug": "the-minimum-code-below",
+     "title": "The minimum code below: container security from the top down",
+     "url": "https://newsroom.sgit.ai/articles/the-minimum-code-below.html"
+    }
+   ],
+   "gap": "The container chapter touches it; no article on Linux as a thing to learn."
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/minecraft.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "Minecraft",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 13,
+   "articles": [],
+   "gap": "none; consider cutting or merging into Learning."
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/raspberry-pi.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "raspberry-pi",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 112,
+   "articles": [],
+   "gap": "none"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/stack-overflow.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "StackOverflow",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 59,
+   "articles": [
+    {
+     "slug": "search-as-navigation",
+     "title": "Search as navigation",
+     "url": "https://newsroom.sgit.ai/articles/search-as-navigation.html"
+    }
+   ],
+   "gap": "Where answers come from now: the agent, with the source behind it; no article on Stack Overflow itself."
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/tdd.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "TDD (Test-Driven Development)",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 318,
+   "articles": [
+    {
+     "slug": "code-review-as-a-fractal-semantic-graph",
+     "title": "Code review as a fractal semantic graph",
+     "url": "https://newsroom.sgit.ai/articles/code-review-as-a-fractal-semantic-graph.html"
+    },
+    {
+     "slug": "the-code-you-do-not-ship",
+     "title": "The code you do not ship",
+     "url": "https://newsroom.sgit.ai/articles/the-code-you-do-not-ship.html"
+    }
+   ],
+   "gap": "Tests as the thing that lets an agent change code safely; no article on TDD as such."
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/wallaby-and-ncrunch.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "Wallaby and NCrunch",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 3699,
+   "articles": [],
+   "gap": "Written in 2018 (it is the longest chapter) but filed under draft. then-now: live test runners dated; the idea, instant feedback, is what agents give now."
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/wikipedia.md",
+   "part": "MVP for Gen Z Dev",
+   "title": "Wikipedia",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 70,
+   "articles": [],
+   "gap": "none"
+  },
+  {
+   "file": "3.technologies/_index.md",
+   "part": "Technologies",
+   "title": "Technologies",
+   "status_2018": "unset",
+   "kind": "apparatus",
+   "words": 5,
+   "articles": [],
+   "gap": "Reframe: the technologies a Gen Z developer needs to understand (not operate) in 2026."
+  },
+  {
+   "file": "3.technologies/content/AST.md",
+   "part": "Technologies",
+   "title": "AST (Abstract Syntax Tree)",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 1682,
+   "articles": [
+    {
+     "slug": "code-review-as-a-fractal-semantic-graph",
+     "title": "Code review as a fractal semantic graph",
+     "url": "https://newsroom.sgit.ai/articles/code-review-as-a-fractal-semantic-graph.html"
+    }
+   ],
+   "gap": "Keep; code is already a graph, which is where the AST chapter was heading."
+  },
+  {
+   "file": "3.technologies/content/assembly-and-bytecode.md",
+   "part": "Technologies",
+   "title": "Assembly and Bytecode",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 530,
+   "articles": [],
+   "gap": "Keep as history; no article."
+  },
+  {
+   "file": "3.technologies/content/books.md",
+   "part": "Technologies",
+   "title": "Books",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 755,
+   "articles": [],
+   "gap": "Keep; refresh the list. Add the graphs books and this one."
+  },
+  {
+   "file": "3.technologies/content/brain.md",
+   "part": "Technologies",
+   "title": "Brain",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 748,
+   "articles": [
+    {
+     "slug": "knowing-when-to-stop",
+     "title": "Knowing when to stop",
+     "url": "https://newsroom.sgit.ai/articles/knowing-when-to-stop.html"
+    },
+    {
+     "slug": "how-cheap-is-it-to-undo",
+     "title": "The human in the loop is a spectrum: how cheap it is to undo",
+     "url": "https://newsroom.sgit.ai/articles/how-cheap-is-it-to-undo.html"
+    }
+   ],
+   "gap": "Keep; connect to what experience gives people and what has to be designed into agents."
+  },
+  {
+   "file": "3.technologies/content/ide.md",
+   "part": "Technologies",
+   "title": "IDE",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 349,
+   "articles": [
+    {
+     "slug": "explorer-coding",
+     "title": "Explorer coding",
+     "url": "https://newsroom.sgit.ai/articles/explorer-coding.html"
+    },
+    {
+     "slug": "how-i-work-with-claude",
+     "title": "How I work with Claude",
+     "url": "https://newsroom.sgit.ai/articles/how-i-work-with-claude.html"
+    }
+   ],
+   "gap": "then-now: the IDE is now a conversation with an agent and a terminal; keep the history."
+  },
+  {
+   "file": "3.technologies/content/ml-ai.md",
+   "part": "Technologies",
+   "title": "Machine Learning and AI",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 391,
+   "articles": [
+    {
+     "slug": "hired-for-the-workflow",
+     "title": "Hired for the workflow",
+     "url": "https://newsroom.sgit.ai/articles/hired-for-the-workflow.html"
+    },
+    {
+     "slug": "authority-outside-the-model",
+     "title": "Authority outside the model",
+     "url": "https://newsroom.sgit.ai/articles/authority-outside-the-model.html"
+    }
+   ],
+   "gap": "then-now: the 2018 chapter pointed at cloud ML services to program; the shift was learning to use it and direct agents. The chapter that changed most."
+  },
+  {
+   "file": "3.technologies/content/pen-and-paper.md",
+   "part": "Technologies",
+   "title": "Pen and Paper",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 382,
+   "articles": [
+    {
+     "slug": "why-i-love-wardley-maps",
+     "title": "Why I love Wardley maps",
+     "url": "https://newsroom.sgit.ai/articles/why-i-love-wardley-maps.html"
+    }
+   ],
+   "gap": "Keep; add the handwritten notes from the printed copy as figures."
+  },
+  {
+   "file": "3.technologies/draft/blockchain.md",
+   "part": "Technologies",
+   "title": "Blockchain",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 53,
+   "articles": [],
+   "gap": "none; the editor decides whether it stays."
+  },
+  {
+   "file": "3.technologies/draft/browser-automation.md",
+   "part": "Technologies",
+   "title": "Browser Automation",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 82,
+   "articles": [
+    {
+     "slug": "a-minimal-viable-browser",
+     "title": "A minimal viable browser",
+     "url": "https://newsroom.sgit.ai/articles/a-minimal-viable-browser.html"
+    },
+    {
+     "slug": "how-to-run-synthetic-users",
+     "title": "How to run synthetic users on your own site",
+     "url": "https://newsroom.sgit.ai/articles/how-to-run-synthetic-users.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "3.technologies/draft/dopamine.md",
+   "part": "Technologies",
+   "title": "Dopamine",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 184,
+   "articles": [],
+   "gap": "none"
+  },
+  {
+   "file": "3.technologies/draft/dsl.md",
+   "part": "Technologies",
+   "title": "DSL",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 73,
+   "articles": [
+    {
+     "slug": "introducing-fractal-semantic-graphs",
+     "title": "Fractal Semantic Graphs",
+     "url": "https://newsroom.sgit.ai/articles/introducing-fractal-semantic-graphs.html"
+    }
+   ],
+   "gap": "Graphs as the DSL; no article on DSLs as such."
+  },
+  {
+   "file": "3.technologies/draft/ngrok.md",
+   "part": "Technologies",
+   "title": "Ngrok",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 75,
+   "articles": [],
+   "gap": "none; likely cut."
+  },
+  {
+   "file": "3.technologies/draft/node-js.md",
+   "part": "Technologies",
+   "title": "Node JS",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 62,
+   "articles": [],
+   "gap": "none"
+  },
+  {
+   "file": "3.technologies/draft/r-language.md",
+   "part": "Technologies",
+   "title": "R (language)",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 26,
+   "articles": [],
+   "gap": "none; likely cut."
+  },
+  {
+   "file": "3.technologies/draft/scratch.md",
+   "part": "Technologies",
+   "title": "Scratch",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 29,
+   "articles": [
+    {
+     "slug": "the-citizen-developer",
+     "title": "The citizen developer is good news",
+     "url": "https://newsroom.sgit.ai/articles/the-citizen-developer.html"
+    }
+   ],
+   "gap": "Scratch as the first door; the citizen developer is the grown-up version."
+  },
+  {
+   "file": "3.technologies/draft/streams.md",
+   "part": "Technologies",
+   "title": "Streams",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 50,
+   "articles": [],
+   "gap": "none"
+  },
+  {
+   "file": "3.technologies/draft/web-proxies.md",
+   "part": "Technologies",
+   "title": "Web Proxies",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 25,
+   "articles": [
+    {
+     "slug": "a-minimal-viable-browser",
+     "title": "A minimal viable browser",
+     "url": "https://newsroom.sgit.ai/articles/a-minimal-viable-browser.html"
+    }
+   ],
+   "gap": "The browser chapter touches it; no article on proxies as such."
+  },
+  {
+   "file": "4.life-patterns/BBS-and-modems.md",
+   "part": "Life Patterns",
+   "title": "BBS and Modems",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 167,
+   "articles": [],
+   "gap": "none; keep as history (Dinis's own story), short."
+  },
+  {
+   "file": "4.life-patterns/_index.md",
+   "part": "Life Patterns",
+   "title": "Life Patterns",
+   "status_2018": "unset",
+   "kind": "apparatus",
+   "words": 0,
+   "articles": [],
+   "gap": "Keep the part; it is where most outlines were."
+  },
+  {
+   "file": "4.life-patterns/automate-your-workflows.md",
+   "part": "Life Patterns",
+   "title": "Automate your Workflows",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 48,
+   "articles": [
+    {
+     "slug": "your-own-newsroom",
+     "title": "Your own newsroom",
+     "url": "https://newsroom.sgit.ai/articles/your-own-newsroom.html"
+    },
+    {
+     "slug": "replicating-the-agentic-inbox",
+     "title": "Replicating the agentic inbox",
+     "url": "https://newsroom.sgit.ai/articles/replicating-the-agentic-inbox.html"
+    },
+    {
+     "slug": "omnichannel-programming",
+     "title": "Omnichannel programming",
+     "url": "https://newsroom.sgit.ai/articles/omnichannel-programming.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "4.life-patterns/civic-responsibility.md",
+   "part": "Life Patterns",
+   "title": "Civic Responsibility",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 89,
+   "articles": [
+    {
+     "slug": "judo-for-small-countries",
+     "title": "Judo for small countries",
+     "url": "https://newsroom.sgit.ai/articles/judo-for-small-countries.html"
+    },
+    {
+     "slug": "portugal-and-europe-2025",
+     "title": "Portugal and Europe, 2025",
+     "url": "https://newsroom.sgit.ai/articles/portugal-and-europe-2025.html"
+    }
+   ],
+   "gap": "The Portugal articles carry it; no article on civic responsibility as such."
+  },
+  {
+   "file": "4.life-patterns/content/backup-your-life.md",
+   "part": "Life Patterns",
+   "title": "Backup your life",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 1007,
+   "articles": [
+    {
+     "slug": "what-sgit-is",
+     "title": "Git for things you cannot put on GitHub",
+     "url": "https://newsroom.sgit.ai/articles/what-sgit-is.html"
+    },
+    {
+     "slug": "encrypted-memory-for-isolated-agents",
+     "title": "Encrypted memory for agents that run somewhere else",
+     "url": "https://newsroom.sgit.ai/articles/encrypted-memory-for-isolated-agents.html"
+    },
+    {
+     "slug": "the-vault-is-live",
+     "title": "The vault is live",
+     "url": "https://newsroom.sgit.ai/articles/the-vault-is-live.html"
+    }
+   ],
+   "gap": "then-now: back up into a vault you hold the key to."
+  },
+  {
+   "file": "4.life-patterns/content/be-a-founder.md",
+   "part": "Life Patterns",
+   "title": "Be a founder",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 272,
+   "articles": [
+    {
+     "slug": "the-controllable-founder",
+     "title": "The controllable founder",
+     "url": "https://newsroom.sgit.ai/articles/the-controllable-founder.html"
+    },
+    {
+     "slug": "the-expert-founders",
+     "title": "The expert founders",
+     "url": "https://newsroom.sgit.ai/articles/the-expert-founders.html"
+    },
+    {
+     "slug": "sell-dont-issue",
+     "title": "Sell, don't issue",
+     "url": "https://newsroom.sgit.ai/articles/sell-dont-issue.html"
+    },
+    {
+     "slug": "not-a-straight-line",
+     "title": "Not a straight line",
+     "url": "https://newsroom.sgit.ai/articles/not-a-straight-line.html"
+    }
+   ],
+   "gap": "Keep; add what investors pick, and the expert founder."
+  },
+  {
+   "file": "4.life-patterns/content/being-criticized-is-a-privilege.md",
+   "part": "Life Patterns",
+   "title": "Being criticized is an privilege",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 2196,
+   "articles": [
+    {
+     "slug": "reviews-on-the-record",
+     "title": "Reviews on the record",
+     "url": "https://newsroom.sgit.ai/articles/reviews-on-the-record.html"
+    },
+    {
+     "slug": "riskmandate-ten-questions",
+     "title": "Ten hard questions for RiskMandate",
+     "url": "https://newsroom.sgit.ai/articles/riskmandate-ten-questions.html"
+    }
+   ],
+   "gap": "Keep; the book itself is now reviewed on the record, finding by finding, declined allowed."
+  },
+  {
+   "file": "4.life-patterns/content/future-needs-you.md",
+   "part": "Life Patterns",
+   "title": "The future needs you",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 621,
+   "articles": [
+    {
+     "slug": "hired-for-the-workflow",
+     "title": "Hired for the workflow",
+     "url": "https://newsroom.sgit.ai/articles/hired-for-the-workflow.html"
+    },
+    {
+     "slug": "the-code-you-do-not-ship",
+     "title": "The code you do not ship",
+     "url": "https://newsroom.sgit.ai/articles/the-code-you-do-not-ship.html"
+    }
+   ],
+   "gap": "Keep; then-now on what the future turned out to need."
+  },
+  {
+   "file": "4.life-patterns/content/learning.md",
+   "part": "Life Patterns",
+   "title": "Learning",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 938,
+   "articles": [
+    {
+     "slug": "hired-for-the-workflow",
+     "title": "Hired for the workflow",
+     "url": "https://newsroom.sgit.ai/articles/hired-for-the-workflow.html"
+    }
+   ],
+   "gap": "Keep: learn how to learn is on the cover. Add: you have to do it to see it."
+  },
+  {
+   "file": "4.life-patterns/content/talking-to-yourself.md",
+   "part": "Life Patterns",
+   "title": "Talking to yourself digitally",
+   "status_2018": "content",
+   "kind": "written",
+   "words": 592,
+   "articles": [
+    {
+     "slug": "my-memory-checked",
+     "title": "My memory, checked",
+     "url": "https://newsroom.sgit.ai/articles/my-memory-checked.html"
+    },
+    {
+     "slug": "the-librarians-daily-brief",
+     "title": "The Librarian's daily brief",
+     "url": "https://newsroom.sgit.ai/articles/the-librarians-daily-brief.html"
+    }
+   ],
+   "gap": "then-now: talking to yourself by voice memo, and an agent that checks what you said."
+  },
+  {
+   "file": "4.life-patterns/curse-of-knowledge.md",
+   "part": "Life Patterns",
+   "title": "Curse of Knowledge",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 48,
+   "articles": [
+    {
+     "slug": "how-the-voice-works",
+     "title": "How the voice works",
+     "url": "https://newsroom.sgit.ai/articles/how-the-voice-works.html"
+    },
+    {
+     "slug": "one-article-five-readers",
+     "title": "One article, five readers",
+     "url": "https://newsroom.sgit.ai/articles/one-article-five-readers.html"
+    }
+   ],
+   "gap": "Readers at several altitudes; no article on the curse of knowledge as such."
+  },
+  {
+   "file": "4.life-patterns/ideas.md",
+   "part": "Life Patterns",
+   "title": "Ideas",
+   "status_2018": "unset",
+   "kind": "outline",
+   "words": 99,
+   "articles": [
+    {
+     "slug": "bringing-my-past-work-back",
+     "title": "Bringing my past work back",
+     "url": "https://newsroom.sgit.ai/articles/bringing-my-past-work-back.html"
+    },
+    {
+     "slug": "books-from-articles",
+     "title": "Books from articles",
+     "url": "https://newsroom.sgit.ai/articles/books-from-articles.html"
+    }
+   ],
+   "gap": "Ideas as briefs, kept and acted on later."
+  },
+  {
+   "file": "4.life-patterns/impostor-syndrome.md",
+   "part": "Life Patterns",
+   "title": "Impostor Syndrome",
+   "status_2018": "unset",
+   "kind": "outline",
+   "words": 144,
+   "articles": [
+    {
+     "slug": "hired-for-the-workflow",
+     "title": "Hired for the workflow",
+     "url": "https://newsroom.sgit.ai/articles/hired-for-the-workflow.html"
+    }
+   ],
+   "gap": "You are more technical than you think; no article on impostor syndrome as such."
+  },
+  {
+   "file": "4.life-patterns/king-is-naked.md",
+   "part": "Life Patterns",
+   "title": "Kind is naked",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 105,
+   "articles": [
+    {
+     "slug": "firing-journalists",
+     "title": "Firing journalists is the worst thing a publication can do",
+     "url": "https://newsroom.sgit.ai/articles/firing-journalists.html"
+    },
+    {
+     "slug": "stop-the-bleeding-then-ask-for-it-back",
+     "title": "Stop the bleeding, then ask for it back",
+     "url": "https://newsroom.sgit.ai/articles/stop-the-bleeding-then-ask-for-it-back.html"
+    }
+   ],
+   "gap": "Saying the thing nobody says; no article on the fable itself."
+  },
+  {
+   "file": "4.life-patterns/learn-to-hack.md",
+   "part": "Life Patterns",
+   "title": "Learn to Hack",
+   "status_2018": "unset",
+   "kind": "outline",
+   "words": 55,
+   "articles": [
+    {
+     "slug": "who-are-you-protecting-against",
+     "title": "Who are you protecting against?",
+     "url": "https://newsroom.sgit.ai/articles/who-are-you-protecting-against.html"
+    },
+    {
+     "slug": "fix-the-page-yourself",
+     "title": "Fix the page yourself: the bookmarklet trick",
+     "url": "https://newsroom.sgit.ai/articles/fix-the-page-yourself.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "4.life-patterns/love-maths.md",
+   "part": "Life Patterns",
+   "title": "Love Maths",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 47,
+   "articles": [],
+   "gap": "none"
+  },
+  {
+   "file": "4.life-patterns/mentors.md",
+   "part": "Life Patterns",
+   "title": "Mentors",
+   "status_2018": "unset",
+   "kind": "outline",
+   "words": 114,
+   "articles": [
+    {
+     "slug": "act-as-the-job-you-want",
+     "title": "Act as the job you want",
+     "url": "https://newsroom.sgit.ai/articles/act-as-the-job-you-want.html"
+    }
+   ],
+   "gap": "Let the people who want to help you, help you; no article on mentors as such."
+  },
+  {
+   "file": "4.life-patterns/nudge.md",
+   "part": "Life Patterns",
+   "title": "status: draft",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 33,
+   "articles": [],
+   "gap": "none; the file has no title."
+  },
+  {
+   "file": "4.life-patterns/one-way-two-way-doors.md",
+   "part": "Life Patterns",
+   "title": "One way and two way doors",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 148,
+   "articles": [
+    {
+     "slug": "how-cheap-is-it-to-undo",
+     "title": "The human in the loop is a spectrum: how cheap it is to undo",
+     "url": "https://newsroom.sgit.ai/articles/how-cheap-is-it-to-undo.html"
+    },
+    {
+     "slug": "the-human-in-the-loop",
+     "title": "The human in the loop, safety net or bottleneck",
+     "url": "https://newsroom.sgit.ai/articles/the-human-in-the-loop.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "4.life-patterns/pionners-settlers-town-planners.md",
+   "part": "Life Patterns",
+   "title": "Are you a pionner, Settlers or Town Planners",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 22,
+   "articles": [
+    {
+     "slug": "software-vendors-as-villagers",
+     "title": "Software vendors should become villagers and town planners",
+     "url": "https://newsroom.sgit.ai/articles/software-vendors-as-villagers.html"
+    },
+    {
+     "slug": "explorer-coding",
+     "title": "Explorer coding",
+     "url": "https://newsroom.sgit.ai/articles/explorer-coding.html"
+    },
+    {
+     "slug": "why-i-love-wardley-maps",
+     "title": "Why I love Wardley maps",
+     "url": "https://newsroom.sgit.ai/articles/why-i-love-wardley-maps.html"
+    },
+    {
+     "slug": "explorer-to-villager-newsroom",
+     "title": "Go slow to go fast: from an explorer project to a villager one",
+     "url": "https://newsroom.sgit.ai/articles/explorer-to-villager-newsroom.html"
+    }
+   ],
+   "gap": "Becomes the frame of the whole edition: explorers, villagers and town planners, and Wardley maps explained."
+  },
+  {
+   "file": "4.life-patterns/power-of-habits.md",
+   "part": "Life Patterns",
+   "title": "Power of Habits",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 203,
+   "articles": [],
+   "gap": "none"
+  },
+  {
+   "file": "4.life-patterns/publish-publish-publish.md",
+   "part": "Life Patterns",
+   "title": "Publish, Publish Publish",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 59,
+   "articles": [
+    {
+     "slug": "your-own-newsroom",
+     "title": "Your own newsroom",
+     "url": "https://newsroom.sgit.ai/articles/your-own-newsroom.html"
+    },
+    {
+     "slug": "act-as-the-job-you-want",
+     "title": "Act as the job you want",
+     "url": "https://newsroom.sgit.ai/articles/act-as-the-job-you-want.html"
+    },
+    {
+     "slug": "nineteen-sites",
+     "title": "Twenty sites in fifteen days",
+     "url": "https://newsroom.sgit.ai/articles/nineteen-sites.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "4.life-patterns/refactoring.md",
+   "part": "Life Patterns",
+   "title": "Refactoring",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 14,
+   "articles": [
+    {
+     "slug": "the-code-you-do-not-ship",
+     "title": "The code you do not ship",
+     "url": "https://newsroom.sgit.ai/articles/the-code-you-do-not-ship.html"
+    },
+    {
+     "slug": "short-punchy-and-co-written",
+     "title": "Short, punchy, and co-written with Claude",
+     "url": "https://newsroom.sgit.ai/articles/short-punchy-and-co-written.html"
+    }
+   ],
+   "gap": "Refactoring code, and refactoring a book that is a graph."
+  },
+  {
+   "file": "4.life-patterns/start-with-why.md",
+   "part": "Life Patterns",
+   "title": "Start with Why",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 33,
+   "articles": [],
+   "gap": "none"
+  },
+  {
+   "file": "4.life-patterns/the-zone.md",
+   "part": "Life Patterns",
+   "title": "The Zone",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 139,
+   "articles": [],
+   "gap": "none; the Introduction already describes it."
+  },
+  {
+   "file": "4.life-patterns/thinking-as-programmer.md",
+   "part": "Life Patterns",
+   "title": "Thinking as programmer",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 12,
+   "articles": [
+    {
+     "slug": "the-citizen-developer",
+     "title": "The citizen developer is good news",
+     "url": "https://newsroom.sgit.ai/articles/the-citizen-developer.html"
+    },
+    {
+     "slug": "explorer-coding",
+     "title": "Explorer coding",
+     "url": "https://newsroom.sgit.ai/articles/explorer-coding.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "4.life-patterns/why-diversity-matters.md",
+   "part": "Life Patterns",
+   "title": "Why diversity matters",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 280,
+   "articles": [
+    {
+     "slug": "one-article-five-readers",
+     "title": "One article, five readers",
+     "url": "https://newsroom.sgit.ai/articles/one-article-five-readers.html"
+    }
+   ],
+   "gap": "Several readers, several altitudes; no article on diversity as such."
+  },
+  {
+   "file": "4.life-patterns/workflows.md",
+   "part": "Life Patterns",
+   "title": "Workflows",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 69,
+   "articles": [
+    {
+     "slug": "your-own-newsroom",
+     "title": "Your own newsroom",
+     "url": "https://newsroom.sgit.ai/articles/your-own-newsroom.html"
+    },
+    {
+     "slug": "how-i-work-with-claude",
+     "title": "How I work with Claude",
+     "url": "https://newsroom.sgit.ai/articles/how-i-work-with-claude.html"
+    },
+    {
+     "slug": "the-mandate-stack",
+     "title": "The Mandate Stack",
+     "url": "https://newsroom.sgit.ai/articles/the-mandate-stack.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "5.concepts/CI-Testing.md",
+   "part": "Concepts",
+   "title": "CI Testing",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 97,
+   "articles": [
+    {
+     "slug": "green-does-not-mean-live",
+     "title": "Green does not mean live",
+     "url": "https://newsroom.sgit.ai/articles/green-does-not-mean-live.html"
+    },
+    {
+     "slug": "sgit-in-a-ci-pipeline",
+     "title": "sgit in a CI pipeline",
+     "url": "https://newsroom.sgit.ai/articles/sgit-in-a-ci-pipeline.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "5.concepts/_index.md",
+   "part": "Concepts",
+   "title": "Concepts",
+   "status_2018": "unset",
+   "kind": "apparatus",
+   "words": 0,
+   "articles": [],
+   "gap": "Keep the part; 26 of its 27 files are outlines."
+  },
+  {
+   "file": "5.concepts/agile-and-kanban.md",
+   "part": "Concepts",
+   "title": "Agile and Kanban",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 159,
+   "articles": [
+    {
+     "slug": "the-agent-team-as-it-runs",
+     "title": "The agent team as it runs",
+     "url": "https://newsroom.sgit.ai/articles/the-agent-team-as-it-runs.html"
+    }
+   ],
+   "gap": "The board as folders; no article on agile as such."
+  },
+  {
+   "file": "5.concepts/amazon-press-releases.md",
+   "part": "Concepts",
+   "title": "Amazon Press Release",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 26,
+   "articles": [
+    {
+     "slug": "three-linkedin-pages",
+     "title": "Three companies, three LinkedIn pages",
+     "url": "https://newsroom.sgit.ai/articles/three-linkedin-pages.html"
+    }
+   ],
+   "gap": "Writing the announcement first; no article on the press-release method."
+  },
+  {
+   "file": "5.concepts/change-engineering.md",
+   "part": "Concepts",
+   "title": "Change Engineering",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 12,
+   "articles": [],
+   "gap": "none"
+  },
+  {
+   "file": "5.concepts/changes.md",
+   "part": "Concepts",
+   "title": "Changes",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 120,
+   "articles": [
+    {
+     "slug": "every-mistake-added-a-rule",
+     "title": "Every mistake added a rule",
+     "url": "https://newsroom.sgit.ai/articles/every-mistake-added-a-rule.html"
+    },
+    {
+     "slug": "how-cheap-is-it-to-undo",
+     "title": "The human in the loop is a spectrum: how cheap it is to undo",
+     "url": "https://newsroom.sgit.ai/articles/how-cheap-is-it-to-undo.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "5.concepts/chaos-engineering.md",
+   "part": "Concepts",
+   "title": "Chaos Engineering",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 645,
+   "articles": [
+    {
+     "slug": "connector-twin-before-you-deploy-an-agent",
+     "title": "Before you give an agent a connector, give the connector a twin",
+     "url": "https://newsroom.sgit.ai/articles/connector-twin-before-you-deploy-an-agent.html"
+    },
+    {
+     "slug": "footprint-and-blast-radius",
+     "title": "Footprint and blast radius",
+     "url": "https://newsroom.sgit.ai/articles/footprint-and-blast-radius.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "5.concepts/deadlines.md",
+   "part": "Concepts",
+   "title": "Deadlines",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 243,
+   "articles": [
+    {
+     "slug": "i-miss-it",
+     "title": "I miss it, so it is working",
+     "url": "https://newsroom.sgit.ai/articles/i-miss-it.html"
+    },
+    {
+     "slug": "the-question-is-whether-they-miss-it",
+     "title": "The most important question is whether they miss it",
+     "url": "https://newsroom.sgit.ai/articles/the-question-is-whether-they-miss-it.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "5.concepts/design.md",
+   "part": "Concepts",
+   "title": "Design",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 153,
+   "articles": [
+    {
+     "slug": "the-infographic-bake-off",
+     "title": "The infographic bake-off",
+     "url": "https://newsroom.sgit.ai/articles/the-infographic-bake-off.html"
+    }
+   ],
+   "gap": "Infographics for every chapter; no article on design as a concept."
+  },
+  {
+   "file": "5.concepts/devops.md",
+   "part": "Concepts",
+   "title": "DevOps",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 47,
+   "articles": [
+    {
+     "slug": "green-does-not-mean-live",
+     "title": "Green does not mean live",
+     "url": "https://newsroom.sgit.ai/articles/green-does-not-mean-live.html"
+    },
+    {
+     "slug": "no-server-by-design",
+     "title": "No server, by design",
+     "url": "https://newsroom.sgit.ai/articles/no-server-by-design.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "5.concepts/draft/spotify-model.md",
+   "part": "Concepts",
+   "title": "Spotify Model",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 46,
+   "articles": [],
+   "gap": "none; likely cut."
+  },
+  {
+   "file": "5.concepts/facts.md",
+   "part": "Concepts",
+   "title": "Facts",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 134,
+   "articles": [
+    {
+     "slug": "my-memory-checked",
+     "title": "My memory, checked",
+     "url": "https://newsroom.sgit.ai/articles/my-memory-checked.html"
+    },
+    {
+     "slug": "reviews-on-the-record",
+     "title": "Reviews on the record",
+     "url": "https://newsroom.sgit.ai/articles/reviews-on-the-record.html"
+    }
+   ],
+   "gap": "Make fact based decisions is on the cover; the newsroom's method of checking is the answer."
+  },
+  {
+   "file": "5.concepts/feedback-loops.md",
+   "part": "Concepts",
+   "title": "Feedback loops",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 130,
+   "articles": [
+    {
+     "slug": "reviews-on-the-record",
+     "title": "Reviews on the record",
+     "url": "https://newsroom.sgit.ai/articles/reviews-on-the-record.html"
+    },
+    {
+     "slug": "how-to-run-synthetic-users",
+     "title": "How to run synthetic users on your own site",
+     "url": "https://newsroom.sgit.ai/articles/how-to-run-synthetic-users.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "5.concepts/funtional-programming.md",
+   "part": "Concepts",
+   "title": "Functional Programming",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 150,
+   "articles": [],
+   "gap": "none"
+  },
+  {
+   "file": "5.concepts/gamification.md",
+   "part": "Concepts",
+   "title": "Gamification",
+   "status_2018": "draft",
+   "kind": "written",
+   "words": 127,
+   "articles": [],
+   "gap": "none"
+  },
+  {
+   "file": "5.concepts/gdpr.md",
+   "part": "Concepts",
+   "title": "GDPR",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 38,
+   "articles": [
+    {
+     "slug": "ai-baseline-control-framework",
+     "title": "An open AI governance framework",
+     "url": "https://newsroom.sgit.ai/articles/ai-baseline-control-framework.html"
+    }
+   ],
+   "gap": "The governance articles touch it; no article on GDPR for developers."
+  },
+  {
+   "file": "5.concepts/graphs.md",
+   "part": "Concepts",
+   "title": "graphs",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 36,
+   "articles": [
+    {
+     "slug": "the-graphs-books",
+     "title": "The graphs books",
+     "url": "https://newsroom.sgit.ai/articles/the-graphs-books.html"
+    },
+    {
+     "slug": "search-as-navigation",
+     "title": "Search as navigation",
+     "url": "https://newsroom.sgit.ai/articles/search-as-navigation.html"
+    },
+    {
+     "slug": "introducing-fractal-semantic-graphs",
+     "title": "Fractal Semantic Graphs",
+     "url": "https://newsroom.sgit.ai/articles/introducing-fractal-semantic-graphs.html"
+    },
+    {
+     "slug": "memory-is-not-a-spectator-sport",
+     "title": "Memory is not a spectator sport",
+     "url": "https://newsroom.sgit.ai/articles/memory-is-not-a-spectator-sport.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "5.concepts/inventing-on-principle.md",
+   "part": "Concepts",
+   "title": "Inventing on Principle",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 38,
+   "articles": [
+    {
+     "slug": "explorer-coding",
+     "title": "Explorer coding",
+     "url": "https://newsroom.sgit.ai/articles/explorer-coding.html"
+    }
+   ],
+   "gap": "Instant feedback while making; no article on Bret Victor's talk."
+  },
+  {
+   "file": "5.concepts/karma-points.md",
+   "part": "Concepts",
+   "title": "Karma Points",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 38,
+   "articles": [],
+   "gap": "none"
+  },
+  {
+   "file": "5.concepts/legacy-applications.md",
+   "part": "Concepts",
+   "title": "Legacy Applications",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 68,
+   "articles": [
+    {
+     "slug": "the-code-you-do-not-ship",
+     "title": "The code you do not ship",
+     "url": "https://newsroom.sgit.ai/articles/the-code-you-do-not-ship.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "5.concepts/micro-services.md",
+   "part": "Concepts",
+   "title": "Micro-Services",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 65,
+   "articles": [
+    {
+     "slug": "ephemeral-town-planner-services",
+     "title": "Ephemeral town planner services",
+     "url": "https://newsroom.sgit.ai/articles/ephemeral-town-planner-services.html"
+    },
+    {
+     "slug": "no-server-by-design",
+     "title": "No server, by design",
+     "url": "https://newsroom.sgit.ai/articles/no-server-by-design.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "5.concepts/netflix-culture.md",
+   "part": "Concepts",
+   "title": "Netflix Culture",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 69,
+   "articles": [],
+   "gap": "none"
+  },
+  {
+   "file": "5.concepts/pair-programming.md",
+   "part": "Concepts",
+   "title": "Pair Programming",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 136,
+   "articles": [
+    {
+     "slug": "how-i-work-with-claude",
+     "title": "How I work with Claude",
+     "url": "https://newsroom.sgit.ai/articles/how-i-work-with-claude.html"
+    },
+    {
+     "slug": "explorer-coding",
+     "title": "Explorer coding",
+     "url": "https://newsroom.sgit.ai/articles/explorer-coding.html"
+    }
+   ],
+   "gap": "Pairing with an agent."
+  },
+  {
+   "file": "5.concepts/recursive-functions.md",
+   "part": "Concepts",
+   "title": "Recursive Functions",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 31,
+   "articles": [
+    {
+     "slug": "introducing-fractal-semantic-graphs",
+     "title": "Fractal Semantic Graphs",
+     "url": "https://newsroom.sgit.ai/articles/introducing-fractal-semantic-graphs.html"
+    }
+   ],
+   "gap": "Fractal graphs are the recursive idea; no article on recursion as such."
+  },
+  {
+   "file": "5.concepts/repl.md",
+   "part": "Concepts",
+   "title": "REPL",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 38,
+   "articles": [
+    {
+     "slug": "explorer-coding",
+     "title": "Explorer coding",
+     "url": "https://newsroom.sgit.ai/articles/explorer-coding.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "5.concepts/serverless.md",
+   "part": "Concepts",
+   "title": "Serverless",
+   "status_2018": "unset",
+   "kind": "outline",
+   "words": 219,
+   "articles": [
+    {
+     "slug": "ephemeral-town-planner-services",
+     "title": "Ephemeral town planner services",
+     "url": "https://newsroom.sgit.ai/articles/ephemeral-town-planner-services.html"
+    },
+    {
+     "slug": "no-server-by-design",
+     "title": "No server, by design",
+     "url": "https://newsroom.sgit.ai/articles/no-server-by-design.html"
+    },
+    {
+     "slug": "cloudflare-as-lego-blocks",
+     "title": "Cloudflare as Lego blocks",
+     "url": "https://newsroom.sgit.ai/articles/cloudflare-as-lego-blocks.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "5.concepts/sre.md",
+   "part": "Concepts",
+   "title": "SRE (Site Reliability Engineering )",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 44,
+   "articles": [
+    {
+     "slug": "green-does-not-mean-live",
+     "title": "Green does not mean live",
+     "url": "https://newsroom.sgit.ai/articles/green-does-not-mean-live.html"
+    }
+   ],
+   "gap": "Thin; no article on SRE as such."
+  },
+  {
+   "file": "5.concepts/strong-vs-weak-types.md",
+   "part": "Concepts",
+   "title": "strong-vs-weak-types",
+   "status_2018": "unset",
+   "kind": "outline",
+   "words": 34,
+   "articles": [],
+   "gap": "none; the file has no title."
+  },
+  {
+   "file": "6.security/3rd-party-modules.md",
+   "part": "Security",
+   "title": "3rd-party-modules",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 392,
+   "articles": [
+    {
+     "slug": "attacks-rewritten-as-mandates",
+     "title": "Attacks rewritten as mandates: 28 supply-chain incidents",
+     "url": "https://newsroom.sgit.ai/articles/attacks-rewritten-as-mandates.html"
+    },
+    {
+     "slug": "the-eyeballs-get-cheap",
+     "title": "The eyeballs get cheap",
+     "url": "https://newsroom.sgit.ai/articles/the-eyeballs-get-cheap.html"
+    },
+    {
+     "slug": "open-source-is-not-free",
+     "title": "Open source is not free",
+     "url": "https://newsroom.sgit.ai/articles/open-source-is-not-free.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "6.security/_index.md",
+   "part": "Security",
+   "title": "Security",
+   "status_2018": "unset",
+   "kind": "apparatus",
+   "words": 0,
+   "articles": [],
+   "gap": "All eight files are outlines; the newsroom has the material for most."
+  },
+  {
+   "file": "6.security/bug-bounties.md",
+   "part": "Security",
+   "title": "Bug Bounties",
+   "status_2018": "unset",
+   "kind": "outline",
+   "words": 14,
+   "articles": [
+    {
+     "slug": "act-as-the-job-you-want",
+     "title": "Act as the job you want",
+     "url": "https://newsroom.sgit.ai/articles/act-as-the-job-you-want.html"
+    }
+   ],
+   "gap": "Find vulnerabilities in open-source projects and report them properly; no article on bounties as such."
+  },
+  {
+   "file": "6.security/defcon.md",
+   "part": "Security",
+   "title": "Defcon",
+   "status_2018": "unset",
+   "kind": "outline",
+   "words": 60,
+   "articles": [],
+   "gap": "none"
+  },
+  {
+   "file": "6.security/dont-touch-production.md",
+   "part": "Security",
+   "title": "Don't touch production",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 296,
+   "articles": [
+    {
+     "slug": "footprint-and-blast-radius",
+     "title": "Footprint and blast radius",
+     "url": "https://newsroom.sgit.ai/articles/footprint-and-blast-radius.html"
+    },
+    {
+     "slug": "connector-twin-before-you-deploy-an-agent",
+     "title": "Before you give an agent a connector, give the connector a twin",
+     "url": "https://newsroom.sgit.ai/articles/connector-twin-before-you-deploy-an-agent.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "6.security/pointers.md",
+   "part": "Security",
+   "title": "Pointers",
+   "status_2018": "unset",
+   "kind": "outline",
+   "words": 81,
+   "articles": [],
+   "gap": "none"
+  },
+  {
+   "file": "6.security/security-better-developers.md",
+   "part": "Security",
+   "title": "Security creates better developers",
+   "status_2018": "unset",
+   "kind": "outline",
+   "words": 30,
+   "articles": [
+    {
+     "slug": "who-are-you-protecting-against",
+     "title": "Who are you protecting against?",
+     "url": "https://newsroom.sgit.ai/articles/who-are-you-protecting-against.html"
+    },
+    {
+     "slug": "if-somebody-built-a-company-on-code-review",
+     "title": "If somebody built a company on code review",
+     "url": "https://newsroom.sgit.ai/articles/if-somebody-built-a-company-on-code-review.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "6.security/strings-should-be-banned.md",
+   "part": "Security",
+   "title": "Strings should be banned",
+   "status_2018": "unset",
+   "kind": "outline",
+   "words": 66,
+   "articles": [],
+   "gap": "none"
+  },
+  {
+   "file": "6.security/threat-modeling.md",
+   "part": "Security",
+   "title": "Threat Modeling",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 110,
+   "articles": [
+    {
+     "slug": "every-risk-is-already-accepted",
+     "title": "Every risk is already accepted",
+     "url": "https://newsroom.sgit.ai/articles/every-risk-is-already-accepted.html"
+    },
+    {
+     "slug": "who-are-you-protecting-against",
+     "title": "Who are you protecting against?",
+     "url": "https://newsroom.sgit.ai/articles/who-are-you-protecting-against.html"
+    },
+    {
+     "slug": "footprint-and-blast-radius",
+     "title": "Footprint and blast radius",
+     "url": "https://newsroom.sgit.ai/articles/footprint-and-blast-radius.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "7.your-cv/_index.md",
+   "part": "Your CV",
+   "title": "Your CV",
+   "status_2018": "unset",
+   "kind": "apparatus",
+   "words": 0,
+   "articles": [
+    {
+     "slug": "act-as-the-job-you-want",
+     "title": "Act as the job you want",
+     "url": "https://newsroom.sgit.ai/articles/act-as-the-job-you-want.html"
+    }
+   ],
+   "gap": "Keep the part; your CV should be online, with links to the work."
+  },
+  {
+   "file": "7.your-cv/blogs.md",
+   "part": "Your CV",
+   "title": "Blogs",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 202,
+   "articles": [
+    {
+     "slug": "your-own-newsroom",
+     "title": "Your own newsroom",
+     "url": "https://newsroom.sgit.ai/articles/your-own-newsroom.html"
+    },
+    {
+     "slug": "act-as-the-job-you-want",
+     "title": "Act as the job you want",
+     "url": "https://newsroom.sgit.ai/articles/act-as-the-job-you-want.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "7.your-cv/future-self.md",
+   "part": "Your CV",
+   "title": "Future Self",
+   "status_2018": "draft",
+   "kind": "outline",
+   "words": 82,
+   "articles": [
+    {
+     "slug": "bringing-my-past-work-back",
+     "title": "Bringing my past work back",
+     "url": "https://newsroom.sgit.ai/articles/bringing-my-past-work-back.html"
+    },
+    {
+     "slug": "memory-is-not-a-spectator-sport",
+     "title": "Memory is not a spectator sport",
+     "url": "https://newsroom.sgit.ai/articles/memory-is-not-a-spectator-sport.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "7.your-cv/git.md",
+   "part": "Your CV",
+   "title": "Git",
+   "status_2018": "unset",
+   "kind": "outline",
+   "words": 361,
+   "articles": [
+    {
+     "slug": "what-sgit-is",
+     "title": "Git for things you cannot put on GitHub",
+     "url": "https://newsroom.sgit.ai/articles/what-sgit-is.html"
+    },
+    {
+     "slug": "sgit-is-a-standard",
+     "title": "sgit is a standard, not a server",
+     "url": "https://newsroom.sgit.ai/articles/sgit-is-a-standard.html"
+    }
+   ],
+   "gap": "Git, and git for things you cannot put on GitHub."
+  },
+  {
+   "file": "7.your-cv/github.md",
+   "part": "Your CV",
+   "title": "Github",
+   "status_2018": "unset",
+   "kind": "outline",
+   "words": 229,
+   "articles": [
+    {
+     "slug": "act-as-the-job-you-want",
+     "title": "Act as the job you want",
+     "url": "https://newsroom.sgit.ai/articles/act-as-the-job-you-want.html"
+    },
+    {
+     "slug": "the-fork-next-door",
+     "title": "The fork next door",
+     "url": "https://newsroom.sgit.ai/articles/the-fork-next-door.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "7.your-cv/leanpub.md",
+   "part": "Your CV",
+   "title": "leanpub",
+   "status_2018": "unset",
+   "kind": "written",
+   "words": 103,
+   "articles": [
+    {
+     "slug": "books-from-articles",
+     "title": "Books from articles",
+     "url": "https://newsroom.sgit.ai/articles/books-from-articles.html"
+    },
+    {
+     "slug": "generation-z-developers-again",
+     "title": "Generation Z Developers, again",
+     "url": "https://newsroom.sgit.ai/articles/generation-z-developers-again.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "7.your-cv/linkedin.md",
+   "part": "Your CV",
+   "title": "LinkedIn",
+   "status_2018": "unset",
+   "kind": "outline",
+   "words": 39,
+   "articles": [
+    {
+     "slug": "three-linkedin-pages",
+     "title": "Three companies, three LinkedIn pages",
+     "url": "https://newsroom.sgit.ai/articles/three-linkedin-pages.html"
+    },
+    {
+     "slug": "act-as-the-job-you-want",
+     "title": "Act as the job you want",
+     "url": "https://newsroom.sgit.ai/articles/act-as-the-job-you-want.html"
+    }
+   ],
+   "gap": ""
+  },
+  {
+   "file": "7.your-cv/personal-brand.md",
+   "part": "Your CV",
+   "title": "personal-brand",
+   "status_2018": "unset",
+   "kind": "outline",
+   "words": 92,
+   "articles": [
+    {
+     "slug": "who-is-speaking",
+     "title": "Who is speaking",
+     "url": "https://newsroom.sgit.ai/articles/who-is-speaking.html"
+    },
+    {
+     "slug": "how-the-voice-works",
+     "title": "How the voice works",
+     "url": "https://newsroom.sgit.ai/articles/how-the-voice-works.html"
+    },
+    {
+     "slug": "the-man-behind-the-curtain",
+     "title": "The man behind the curtain",
+     "url": "https://newsroom.sgit.ai/articles/the-man-behind-the-curtain.html"
+    }
+   ],
+   "gap": "The file has no title; the voice articles answer it."
+  },
+  {
+   "file": "7.your-cv/twitter.md",
+   "part": "Your CV",
+   "title": "twitter",
+   "status_2018": "unset",
+   "kind": "outline",
+   "words": 55,
+   "articles": [],
+   "gap": "none; then-now: the platform changed, the practice (your public notebook) moved to your own site."
+  },
+  {
+   "file": "7.your-cv/upwork.md",
+   "part": "Your CV",
+   "title": "Upwork",
+   "status_2018": "unset",
+   "kind": "outline",
+   "words": 87,
+   "articles": [],
+   "gap": "none"
+  },
+  {
+   "file": "_footer.md",
+   "part": "Apparatus",
+   "title": "footer",
+   "status_2018": "unset",
+   "kind": "apparatus",
+   "words": 25,
+   "articles": [],
+   "gap": "The licence line (CC BY-SA 4.0 here; CC BY on the cover): settle which."
+  },
+  {
+   "file": "_index.md",
+   "part": "Apparatus",
+   "title": "Home",
+   "status_2018": "unset",
+   "kind": "apparatus",
+   "words": 9,
+   "articles": [],
+   "gap": "Site home of the Hugo build; not a chapter."
+  },
+  {
+   "file": "_manuscript/book.md",
+   "part": "Manuscript apparatus",
+   "title": "book",
+   "status_2018": "unset",
+   "kind": "apparatus",
+   "words": 0,
+   "articles": [],
+   "gap": "Hugo Leanpub layout; not a chapter."
+  },
+  {
+   "file": "_manuscript/change-log.md",
+   "part": "Manuscript apparatus",
+   "title": "Change log",
+   "status_2018": "unset",
+   "kind": "apparatus",
+   "words": 205,
+   "articles": [],
+   "gap": "Keep as the record of v0.30 to v0.60 and the contributors to credit."
+  },
+  {
+   "file": "_manuscript/github-issues.md",
+   "part": "Manuscript apparatus",
+   "title": "GitHub Issues",
+   "status_2018": "unset",
+   "kind": "apparatus",
+   "words": 117,
+   "articles": [
+    {
+     "slug": "reviews-on-the-record",
+     "title": "Reviews on the record",
+     "url": "https://newsroom.sgit.ai/articles/reviews-on-the-record.html"
+    }
+   ],
+   "gap": "Feedback by GitHub issues then; reviews and a board in the vault now."
+  },
+  {
+   "file": "_template.md",
+   "part": "Apparatus",
+   "title": "status: draft",
+   "status_2018": "draft",
+   "kind": "apparatus",
+   "words": 5,
+   "articles": [],
+   "gap": "The outline template; not a chapter."
+  },
+  {
+   "file": "for-print.md",
+   "part": "Apparatus",
+   "title": "Book for print",
+   "status_2018": "unset",
+   "kind": "apparatus",
+   "words": 0,
+   "articles": [],
+   "gap": "Hugo print layout; not a chapter."
+  }
+ ]
+}

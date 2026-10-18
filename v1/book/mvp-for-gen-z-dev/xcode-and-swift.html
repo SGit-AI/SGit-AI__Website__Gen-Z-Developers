@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xcode and Swift &mdash; gen-z-developers.sgit.ai</title>
+<meta name="description" content="Xcode and Swift, a chapter of Generation Z Developers (2018), as released.">
+<link rel="canonical" href="https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/xcode-and-swift.html">
+<meta property="og:title" content="Xcode and Swift">
+<meta property="og:description" content="Xcode and Swift, a chapter of Generation Z Developers (2018), as released.">
+<meta property="og:url" content="https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/xcode-and-swift.html">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site"><div class="row">
+<a class="brand" href="../../../index.html">gen-z-developers<span>.sgit.ai</span></a>
+<a class="parent" href="https://sgit.ai" title="sgit.ai, the parent project">&#8599; part of <b>sgit.ai</b></a>
+<a class="nl here" href="../../../v1/book/index.html">The book</a><a class="nl here" href="../../../v1/versions/index.html">Versions</a><a class="nl" href="../../../map/index.html">The map</a><a class="nl" href="../../../briefs/index.html">The briefs</a><a class="nl" href="../../../team/index.html">The team</a><a class="nl" href="../../../vault/index.html">The vault</a><a class="nl" href="../../../admin/index.html">Admin</a>
+<span class="ver">site <a href="../../../admin/versions.html" title="Release history">v0.1.0</a></span>
+</div></nav>
+<main><div class="inner">
+<div class="crumbs"><a href="../../../index.html">gen-z-developers.sgit.ai</a> &rarr; <a href="../../../v1/book/index.html">The book</a> &rarr; <a href="../../../v1/book/index.html#mvp-for-gen-z-dev">MVP for Gen Z Dev</a> &rarr; <b>Xcode and Swift</b></div>
+<article class="chapter"><p class="small dim">MVP for Gen Z Dev &middot; chapter 14 of 123 &middot; <span class="badge written">written</span> <span class="badge frozen">v1.0.0, 2018, frozen</span> &middot; 731 words &middot; <a href="https://github.com/DinisCruz/Book_Generation_Z_Developer/blob/61886444fe5ab118ab18726147826ab05f794edc/content/2.mvp-for-gen-z-dev/content/xcode-and-swift.md">the 2018 file</a></p><h1>Xcode and Swift</h1><dl class="kv"><dt>What</dt><dd>Development environment to create iPhone of Mac applications</dd><dt>Task</dt><dd>Install Xcode and create your first Mac Application</dd><dt>Price</dt><dd>Xcode requires a Mac (bought or rented)</dd></dl><div class="body"><p>If don't have a Mac computer you can ignore this chapter (or use <a href="https://www.macincloud.com">MacinCloud</a> to rent one). </p>
+<p>With a Mac there is nothing stopping you from being hours away from your first Mac or iPhone application.</p>
+<p><a href="https://en.wikipedia.org/wiki/Xcode">Xcode</a> is Apple's main development environment, and you can download it for free from the Apple store. Xcode contains everything you need you develop an Mac or iPhone application, namely an IDE, an Debugger and an execution Simulator (iOS, iPad and MacBooks)</p>
+<p><a href="https://developer.apple.com/swift/">Swift</a> is the modern Open Source language developed by Apple that I highly recommend that you use. Swift dramatically simplifies the creation of applications for macOS, iOS, watchOS and tvOS.</p>
+<p>Creating your own application is a major milestone in your programming career. You should do it even if you don't want to become an mobile developer. Not only you will learn a large number of key concepts, you will also gain an understanding of how relatively easy it is to go from an idea in your head into a deployed application.</p>
+<h3 id="first-application">First application</h3>
+<p>To kickstart your development and experiments, start with step-by-step tutorials like the <em><a href="https://www.appcoda.com/learnswift/build-your-first-app.html">Hello World! Build Your First App in Swift</a></em> which will guide you through the code and technologies required to make it happen.</p>
+<p>After building your first application, your next objective is to think of an use-case that will help you to do something better in your life. This is an <strong>App for you</strong> and the only thing that matters is that it is useful enough that you use it regularly. </p>
+<p>One of the key reasons why it is important at this stage that this application is only used by you (or a couple of your friends) is because that way, you can use the Xcode simulators to execute it (i.e. you don't have to release it to the AppStore). </p>
+<p>By using the application everyday, you will get direct feedback from what works, what doesn't what and what need improvement. Initially, try to release a new version at least once a week (or once a day). It is important to create a process for this release (ideally with as much automation as possible).</p>
+<p>Make sure you release your application under an Open Source license like Apache 2.0 and that you share it on a GitHub repository. This will allow you to expand your user base and gain more users.</p>
+<h3 id="write-tests-and-create-a-ci-pipeline">Write tests and create a CI pipeline</h3>
+<p>Other key workflows that you need to adopt is writing tests and executing them in a CI (Continuous Integration) environment.</p>
+<p>See <a href="https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/04-writing_tests.html">Writing Test Classes and Methods</a> for an integration on how to write tests in Swift. </p>
+<p>Once you have a number of tests written, it is time to start looking at cloud/SaaS based build solutions. <a href="https://docs.travis-ci.com/user/languages/objective-c/">Travis</a> is one of my favorites, but also check out <a href="https://www.buddybuild.com/">BuddyBuild</a>, <a href="https://aws.amazon.com/device-farm/">AWS Device Farm</a>, <a href="https://www.browserstack.com/ios-testing">BrowserStack</a> or <a href="https://saucelabs.com/resources/articles/ios-app-testing">SauceLabs</a>.</p>
+<h3 id="experiment-with-machine-learning">Experiment with Machine Learning</h3>
+<p>Apple has released <em>Core ML 2</em> which is <a href="https://developer.apple.com/machine-learning/">described in Apple's site</a>) as an <em>'machine learning framework used across Apple products, including Siri, Camera, and QuickType. Core ML 2 delivers blazingly fast performance with easy integration of machine learning models, enabling you to build apps with intelligent features using just a few lines of code'</em>.</p>
+<p>This means that you can easily add features like <em>Vision</em> or <em>Natural Language</em> to your application. If you do this, make sure to write blog posts about your experiments, since I'm sure any potential employer would be very interested in reading them.</p>
+<h3 id="publish-to-appstore">Publish to AppStore</h3>
+<p>If you want to take this up a level, you should try to get your application published in the AppStore. This will have some costs, but they will be worth it for the learnings that you will get. </p>
+<p>This would also be highly impressive for any potential employer, since it will show that you were able to meet Apple's quality bar.</p></div><p class="small dim">Answered since, on the newsroom: <a href="https://newsroom.sgit.ai/articles/a-minimal-viable-browser.html">A minimal viable browser</a>. <a href="../../../map/index.html#2-mvp-for-gen-z-dev-content-xcode-and-swift-md">The map row</a>.</p><div class="prevnext"><a href="../mvp-for-gen-z-dev/google-search-gdd-sre.html">&larr; Google Search, GDD and SRE</a><a href="../mvp-for-gen-z-dev/dot-language.html">Dot Language &rarr;</a></div></article>
+</div></main>
+<footer class="site"><div class="row">
+<span>Generation Z Developers, by Dinis Cruz. The 2018 text is Creative Commons BY (the cover) or BY-SA (the footer): see <a href="../../../v1/versions/index.html#licence">the licence note</a>. Everything else on this site is CC BY 4.0; code under the repository licence.</span>
+<span><a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers">GitHub</a> &middot; <a href="../../../vault/index.html">the working vault</a> &middot; <a href="../../../admin/versions.html">release history</a> &middot; <a href="../../../llms.txt">llms.txt</a></span>
+</div></footer>
+</body>
+</html>

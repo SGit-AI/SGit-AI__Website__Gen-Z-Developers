@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A website to finish the book &mdash; gen-z-developers.sgit.ai</title>
+<meta name="description" content="A website to finish the book: a brief for this site, captured from the newsroom.">
+<link rel="canonical" href="https://gen-z-developers.sgit.ai/briefs/08__note-a-website-to-finish-the-book.html">
+<meta property="og:title" content="A website to finish the book">
+<meta property="og:description" content="A website to finish the book: a brief for this site, captured from the newsroom.">
+<meta property="og:url" content="https://gen-z-developers.sgit.ai/briefs/08__note-a-website-to-finish-the-book.html">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<nav class="site"><div class="row">
+<a class="brand" href="../index.html">gen-z-developers<span>.sgit.ai</span></a>
+<a class="parent" href="https://sgit.ai" title="sgit.ai, the parent project">&#8599; part of <b>sgit.ai</b></a>
+<a class="nl" href="../v1/book/index.html">The book</a><a class="nl" href="../v1/versions/index.html">Versions</a><a class="nl" href="../map/index.html">The map</a><a class="nl here" href="../briefs/index.html">The briefs</a><a class="nl" href="../team/index.html">The team</a><a class="nl" href="../vault/index.html">The vault</a><a class="nl" href="../admin/index.html">Admin</a>
+<span class="ver">site <a href="../admin/versions.html" title="Release history">v0.1.0</a></span>
+</div></nav>
+<main><div class="inner">
+<div class="crumbs"><a href="../index.html">gen-z-developers.sgit.ai</a> &rarr; <a href="../briefs/index.html">The briefs</a> &rarr; <b>A website to finish the book</b></div>
+<article class="doc"><h1>A website to finish the book: a build brief for gen-z-developers.sgit.ai</h1><div class="body"><p><em>Source: <a href="https://newsroom.sgit.ai/admin/notes/2026-10-18__a-website-to-finish-the-book.md">newsroom.sgit.ai/admin/notes/2026-10-18__a-website-to-finish-the-book.md</a>, a build brief written by newsroom.writer on 2026-10-18. Captured verbatim on 2026-10-18 for this repository.</em></p>
+<p><em>18 October 2026, written by newsroom.writer for the agent that builds the book's website. Status: a brief; nothing in it is built. The articles are <a href="https://newsroom.sgit.ai/articles/a-website-to-finish-the-book.html">a website to finish the book</a> and <a href="https://newsroom.sgit.ai/articles/a-book-for-one-reader.html">a book for one reader</a>; the book's plan is <a href="https://newsroom.sgit.ai/articles/generation-z-developers-again.html">Generation Z Developers, again</a> and its note <a href="https://newsroom.sgit.ai/admin/notes/2026-10-18__generation-z-developers-second-edition.md">Generation Z Developers, second edition</a>.</em></p>
+<h2 id="the-ask">The ask</h2>
+<p>The most productive environment Dinis can have to review and finish the second edition of <em>Generation Z Developers</em>, consolidating the best of what the project's repositories have built. Address: gen-z-developers.sgit.ai (to confirm), matching the printed cover's <em>Gen Z Developers</em>. Repository: <code>SGit-AI/SGit-AI__Website__Gen-Z-Developers</code>, following the pattern of <code>SGit-AI__Website__PKI</code>, <code>SGit-AI__Website__Graphs</code> and <code>SGit-AI__Website__Newsroom__API</code> (recommended to Dinis on 18 October; he creates it).</p>
+<h2 id="the-rule">The rule</h2>
+<p><strong>The repository holds the official versions; the vault holds the working versions.</strong></p>
+<ul>
+<li>v1 is the book as released (September 2018, Leanpub 60%, source in <code>DinisCruz/Book_Generation_Z_Developer</code>). It goes into the new repository as it is, dated, and the site's first version shows exactly that book.</li>
+<li>All work after v1 happens in a public vault (its read key published, so anyone can read along): drafts, comments, graphs, reviews, the board.</li>
+<li>A version moves from the vault to the repository when it is signed off, on top of the one before. Each move publishes a delta against the previous version, block by block and word by word, reusing <code>admin/build/page_versions.py</code> from the newsroom (v0.12.113) rather than writing a new differ.</li>
+</ul>
+<h2 id="keys">Keys</h2>
+<ul>
+<li><strong>The OpenRouter key never goes in the public vault.</strong> Anything in a vault whose read key is published is readable by everyone. Put it in a separate private vault opened only by Dinis's passkey (the newsroom's reader-vault pattern), and set a credit limit on the key at OpenRouter.</li>
+<li>The public vault's write key is never published; only the read key is.</li>
+</ul>
+<h2 id="what-to-reuse-first">What to reuse first</h2>
+<p>Read graphs.sgit.ai before building anything: its shelf with versions, the seven roles with a folder each (librarian, researcher, writer, editor, developer, QA, publisher), the book as a graph down to the word, and the altitude ladder (the same book at five altitudes). Many of this site's concepts first appeared there. From the newsroom: the passkey vault, the reading meter, section summaries, reviews on the record, the briefs map, figures and graphs per article.</p>
+<h2 id="the-site-in-order">The site, in order</h2>
+<ol>
+<li><strong>v1 in the repository and on the site</strong>, as released.</li>
+<li><strong>The vault</strong>, public read, with the working copy of v1.</li>
+<li><strong>The graph</strong>: ontology and taxonomy for the book's concepts; chapters, sections and paragraphs as nodes; links to the newsroom articles that answer each outline.</li>
+<li><strong>Altitudes</strong>: the book at every level, from one page to the full text, with an infographic at each: the whole book, per part, per chapter, per area of the graph. A narrative path through it.</li>
+<li><strong>Review tools</strong>: voice comments while reading, attached to a section; comments; a board; issues.</li>
+<li><strong>Roles</strong>: editor, copywriter, publisher at least; each reads, gives feedback, challenges, and writes interview scripts for Dinis; sign-off per part.</li>
+<li><strong>Research tasks</strong>: market research, validation, evidence and maps per section, later per paragraph.</li>
+<li><strong>Personal editions and the meter</strong> (from <em>a book for one reader</em>): an agent assembles an edition for one reader from the graph and a private brief; delivered as a PDF or in the browser, not published; metered from five pounds of credit, more read, more paid; kept locally, with the reader's vault as an option.</li>
+<li><strong>Quality</strong>: every paragraph, group of paragraphs and chapter carries its evidence, facts, hypotheses and purpose in the graph; a repetition check across the graph; synthetic readers of several types; every finding answered, with declined as a valid answer; a measured ratio of memo and review words to book words (see <em>short, punchy, and co-written with Claude</em>).</li>
+<li><strong>The last part of the book</strong>: how all of this was built.</li>
+</ol>
+<h2 id="privacy-for-personal-editions">Privacy, for personal editions</h2>
+<p>The brief for a personal edition may come from the private CRM of the correspondence agents. That data is read, never copied into the edition or any public place. The edition carries choices (chapters, altitude, examples), not notes about the person. Send it only to that person; encrypt it to their key once the people directory on pki.sgit.ai exists.</p>
+<h2 id="questions-for-dinis">Questions for Dinis</h2>
+<ul>
+<li>The address: gen-z-developers.sgit.ai?</li>
+<li>The first reader for a personal edition, and in which language?</li>
+<li>The price shape: five pounds of credit, then what per chapter?</li>
+</ul></div></article>
+</div></main>
+<footer class="site"><div class="row">
+<span>Generation Z Developers, by Dinis Cruz. The 2018 text is Creative Commons BY (the cover) or BY-SA (the footer): see <a href="../v1/versions/index.html#licence">the licence note</a>. Everything else on this site is CC BY 4.0; code under the repository licence.</span>
+<span><a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers">GitHub</a> &middot; <a href="../vault/index.html">the working vault</a> &middot; <a href="../admin/versions.html">release history</a> &middot; <a href="../llms.txt">llms.txt</a></span>
+</div></footer>
+</body>
+</html>

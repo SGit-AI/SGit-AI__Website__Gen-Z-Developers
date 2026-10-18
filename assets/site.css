@@ -1,0 +1,134 @@
+/* gen-z-developers.sgit.ai — shared stylesheet. The same design language as sgit.ai,
+   graphs.sgit.ai and pki.sgit.ai (light theme), reduced to what this site uses. */
+:root{
+  --bg:#faf9f5; --panel:#ffffff; --panel2:#f2f0e9; --line:#e5e1d5; --line2:#d5d0c2;
+  --fg:#1c1d21; --dim:#5c5f66; --dim2:#8a8d94;
+  --accent:#0f766e; --accent-dk:#115e59; --yellow:#a16207; --warm:#b45309; --red:#b91c1c;
+  --ins:#dcfce7; --del:#fee2e2;
+  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --serif:ui-serif,Georgia,"Times New Roman",serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+  --measure:860px; --wide:1280px;
+  --shadow:0 1px 2px rgba(28,29,33,.05),0 4px 14px rgba(28,29,33,.04);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.65}
+a{color:var(--accent-dk);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{line-height:1.2;letter-spacing:-.015em}
+h1{font-size:2rem;margin:.2rem 0 .6rem}
+h2{font-size:1.4rem;margin:2rem 0 .6rem}
+h3{font-size:1.1rem;margin:1.4rem 0 .4rem}
+code,pre,kbd{font-family:var(--mono)}
+p code,li code,td code{overflow-wrap:anywhere;background:var(--panel2);border:1px solid var(--line);border-radius:4px;padding:.08em .35em;font-size:.84em;color:#24343f}
+pre{background:#0d1117;color:#e6edf3;padding:.9rem 1rem;border-radius:8px;overflow:auto;font-size:.84rem;line-height:1.5}
+blockquote{margin:1rem 0;padding:.4rem 1rem;border-left:3px solid var(--accent);background:var(--panel);color:#2b2e35}
+img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:6px}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+.inner{max-width:var(--measure);margin:0 auto;padding:0 1.1rem}
+.wide{max-width:var(--wide)}
+.dim{color:var(--dim)} .small{font-size:.85rem}
+main{padding:1.6rem 0 3rem}
+
+/* ---------- top nav ---------- */
+nav.site{position:sticky;top:0;z-index:50;background:rgba(250,249,245,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.site .row{max-width:var(--wide);margin:0 auto;display:flex;align-items:center;gap:1rem;padding:.65rem 1.1rem;flex-wrap:wrap}
+nav.site .brand{font-weight:800;font-size:1.02rem;color:var(--fg);letter-spacing:-.02em;white-space:nowrap}
+nav.site .brand span{color:var(--accent)}
+nav.site a.nl{color:var(--dim);font-size:.85rem}
+nav.site a.nl.here{color:var(--fg);font-weight:600}
+nav.site a.nl:hover{color:var(--fg);text-decoration:none}
+nav.site .parent{border:1px solid var(--accent);border-radius:6px;padding:.26rem .65rem;color:var(--accent-dk);font-size:.76rem;white-space:nowrap;background:var(--panel);font-weight:500}
+nav.site .parent b{font-weight:800}
+nav.site .parent:hover{background:var(--accent);color:#fff;text-decoration:none}
+nav.site .ver{margin-left:auto;font-family:var(--mono);font-size:.74rem;color:var(--dim2)}
+nav.site .ver a{color:var(--dim)}
+
+/* ---------- crumbs, badges ---------- */
+.crumbs{font-size:.85rem;color:var(--dim);margin:.2rem 0 1rem}
+.crumbs a{color:var(--dim)}
+.crumbs b{color:var(--fg);font-weight:600}
+.badge{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.02em;text-transform:uppercase;border-radius:4px;padding:.1rem .45rem;border:1px solid var(--line2);color:var(--dim);background:var(--panel);vertical-align:middle}
+.badge.written{color:var(--accent-dk);border-color:#99d6ce;background:#eefbf8}
+.badge.outline{color:var(--warm);border-color:#f0c9a0;background:#fff7ed}
+.badge.frozen{color:#1d4ed8;border-color:#bfd3f8;background:#eff6ff}
+.badge.working{color:var(--yellow);border-color:#e9d48a;background:#fefce8}
+.lede{font-size:1.12rem;color:#34373d;max-width:var(--measure)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:.8rem 1rem;margin:1.2rem 0}
+.note.warn{border-left-color:var(--warm)}
+.kv{display:grid;grid-template-columns:max-content 1fr;gap:.25rem 1rem;font-size:.92rem}
+.kv dt{color:var(--dim)} .kv dd{margin:0;overflow-wrap:anywhere;min-width:0}
+.kv{grid-template-columns:max-content minmax(0,1fr)}
+
+/* ---------- cards ---------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:.9rem;margin:1.2rem 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:.95rem 1.05rem;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:.35rem}
+.card h3{margin:0;font-size:1.02rem}
+.card p{margin:0;font-size:.9rem;color:var(--dim)}
+.card .k{font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--dim2);font-weight:600}
+.card a.more{margin-top:auto;font-size:.85rem;font-weight:600}
+
+/* ---------- tables ---------- */
+.tablewrap{overflow-x:auto;margin:1rem 0}
+table{border-collapse:collapse;width:100%;font-size:.9rem;background:var(--panel)}
+th,td{border:1px solid var(--line);padding:.45rem .6rem;text-align:left;vertical-align:top}
+th{background:var(--panel2);font-weight:600;font-size:.8rem;letter-spacing:.02em;text-transform:uppercase;color:var(--dim)}
+tbody tr:nth-child(even){background:#fcfbf8}
+
+/* ---------- the book ---------- */
+.toc{list-style:none;padding:0;margin:0}
+.toc > li{margin:0 0 1.6rem}
+.toc .part{font-size:1.15rem;font-weight:700;margin:0 0 .4rem}
+.toc .part .n{color:var(--dim2);font-weight:500;margin-right:.4rem}
+.toc ol{margin:0;padding-left:1.4rem}
+.toc ol li{margin:.18rem 0;font-size:.95rem}
+.toc .w{color:var(--dim2);font-size:.8rem;margin-left:.4rem}
+.chapter{max-width:var(--measure)}
+.chapter .body{font-family:var(--serif);font-size:1.07rem;line-height:1.72}
+.chapter .body h1,.chapter .body h2,.chapter .body h3{font-family:var(--sans)}
+.chapter .body ul,.chapter .body ol{padding-left:1.4rem}
+.chapter .body img{display:block;margin:1rem auto}
+.prevnext{display:flex;justify-content:space-between;gap:1rem;margin:2.4rem 0 0;padding-top:1rem;border-top:1px solid var(--line);font-size:.9rem}
+.prevnext a{max-width:48%}
+.outline-note{background:#fff7ed;border:1px solid #f0c9a0;border-radius:8px;padding:.7rem 1rem;font-size:.9rem;color:#7c3a0b;margin:0 0 1.2rem}
+.single h2.part{margin-top:3rem;padding-top:1.4rem;border-top:2px solid var(--line2);font-size:1.6rem}
+.single h3.ch{margin-top:2.2rem;font-size:1.25rem}
+.single .meta{font-size:.8rem;color:var(--dim2);margin:-.3rem 0 .8rem}
+
+/* ---------- the map ---------- */
+.map th:nth-child(1),.map td:nth-child(1){white-space:nowrap}
+.map .gap{color:var(--dim);font-size:.85rem}
+.legend{display:flex;gap:1rem;flex-wrap:wrap;font-size:.85rem;color:var(--dim);margin:.6rem 0 1rem}
+.stat{display:inline-block;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.5rem .8rem;margin:.2rem .4rem .2rem 0}
+.stat b{font-size:1.25rem;display:block;line-height:1.1}
+.stat span{font-size:.75rem;color:var(--dim);text-transform:uppercase;letter-spacing:.03em}
+
+/* ---------- versions (page_versions.py output) ---------- */
+.pv-blk{padding:.45rem .6rem;border-bottom:1px solid var(--line);font-size:.92rem}
+.pv-k{font-size:.7rem;text-transform:uppercase;letter-spacing:.04em;color:var(--dim2);margin-right:.4rem}
+ins{background:var(--ins);text-decoration:none}
+del{background:var(--del)}
+details summary{cursor:pointer;color:var(--accent-dk);font-weight:600;margin:.6rem 0}
+
+/* ---------- the record pages (briefs, team) ---------- */
+.doc{max-width:var(--measure)}
+.doc .body{font-size:1rem}
+.doc .body h2{font-size:1.25rem}
+.doc .src{font-size:.85rem;color:var(--dim);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.6rem .9rem;margin:0 0 1.4rem}
+.role-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.9rem}
+
+/* ---------- footer ---------- */
+footer.site{border-top:1px solid var(--line);margin-top:2rem;padding:1.4rem 0 2.4rem;font-size:.84rem;color:var(--dim)}
+footer.site .row{max-width:var(--wide);margin:0 auto;padding:0 1.1rem;display:flex;gap:1.4rem;flex-wrap:wrap;justify-content:space-between}
+footer.site a{color:var(--dim)}
+@media (max-width:640px){
+  h1{font-size:1.55rem}
+  nav.site .ver{display:none}
+  .prevnext{flex-direction:column}
+  .prevnext a{max-width:100%}
+}
+@media print{
+  nav.site,footer.site,.prevnext,.crumbs{display:none}
+  body{background:#fff}
+}

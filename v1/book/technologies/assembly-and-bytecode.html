@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assembly and Bytecode &mdash; gen-z-developers.sgit.ai</title>
+<meta name="description" content="Assembly and Bytecode, a chapter of Generation Z Developers (2018), as released.">
+<link rel="canonical" href="https://gen-z-developers.sgit.ai/v1/book/technologies/assembly-and-bytecode.html">
+<meta property="og:title" content="Assembly and Bytecode">
+<meta property="og:description" content="Assembly and Bytecode, a chapter of Generation Z Developers (2018), as released.">
+<meta property="og:url" content="https://gen-z-developers.sgit.ai/v1/book/technologies/assembly-and-bytecode.html">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site"><div class="row">
+<a class="brand" href="../../../index.html">gen-z-developers<span>.sgit.ai</span></a>
+<a class="parent" href="https://sgit.ai" title="sgit.ai, the parent project">&#8599; part of <b>sgit.ai</b></a>
+<a class="nl here" href="../../../v1/book/index.html">The book</a><a class="nl here" href="../../../v1/versions/index.html">Versions</a><a class="nl" href="../../../map/index.html">The map</a><a class="nl" href="../../../briefs/index.html">The briefs</a><a class="nl" href="../../../team/index.html">The team</a><a class="nl" href="../../../vault/index.html">The vault</a><a class="nl" href="../../../admin/index.html">Admin</a>
+<span class="ver">site <a href="../../../admin/versions.html" title="Release history">v0.1.0</a></span>
+</div></nav>
+<main><div class="inner">
+<div class="crumbs"><a href="../../../index.html">gen-z-developers.sgit.ai</a> &rarr; <a href="../../../v1/book/index.html">The book</a> &rarr; <a href="../../../v1/book/index.html#technologies">Technologies</a> &rarr; <b>Assembly and Bytecode</b></div>
+<article class="chapter"><p class="small dim">Technologies &middot; chapter 30 of 123 &middot; <span class="badge written">written</span> <span class="badge frozen">v1.0.0, 2018, frozen</span> &middot; 530 words &middot; <a href="https://github.com/DinisCruz/Book_Generation_Z_Developer/blob/61886444fe5ab118ab18726147826ab05f794edc/content/3.technologies/content/assembly-and-bytecode.md">the 2018 file</a></p><h1>Assembly and Bytecode</h1><div class="body"><p>Assembly code is a representation of what the machine code that the CPUs actually execute. It is the lowest level of abstraction that you can program.</p>
+<p>The moment I fell in love with programming was when (as a teenager) I executed the POKE assembly command in my ZX Spectrum, which changed a pixel on my TV screen. That was such a magical moment because I had direct control over what was happening inside the computer and screen.</p>
+<p><a href="https://en.wikipedia.org/wiki/PEEK_and_POKE">PEEK and POKE</a> were <a href="https://en.wikipedia.org/wiki/BASIC">BASIC</a> commands that allow direct memory access and manipulation (PEEK reads and POKE writes). What I was doing was to write directly to the memory location that was used to control the screen (i.e. each byte in that memory address represented a small section of the screen).</p>
+<p>A while later I started learning how to go deeper and explored writing assembly code. In those 'pre internet' days there was very little information around and with only one book available, I actually remember manually translating assembly code into binary by hand (I didn't started with an assembler compiler). Eventually I got an assembler and did many experiments in the ZX Spectrum, the <a href="https://en.wikipedia.org/wiki/Amiga_500">Amiga 500</a> and the x86 PCs (which when compared with the Amiga's Motorola 68000 microprocessor had a much more complex memory layout).</p>
+<p>In fact my first 'security hacks' were based around memory and disk manipulations written in assembly. They were designed to manipulate and change the behavior of the games I was playing (I think there was some cool way to get more money in SimCity)</p>
+<p>Looking back, what I can see is that when I was writing assembly language, what I was doing was learning (in a very efficient way) about: computer architecture, memory layout, systems design, programming and much more. For example learning about hardware interrupts, TSR (Terminate and Stay Resident), and Kernel vs User-land memory, did wonders for my understanding of computer science.</p>
+<p>These days you are more likely to code in Python, Java or .Net than assembly. But if you look under the hood, these languages are compiled into <a href="https://en.wikipedia.org/wiki/Bytecode">bytecode</a> which is a normalized version of assembly. </p>
+<p>For example here is what <code>print("Hello, World!")</code> looks like in <a href="https://opensource.com/article/18/4/introduction-python-bytecode">python's bytecode</a></p>
+<pre><code>0 LOAD_NAME                0 (print)
+2 LOAD_CONST               0 ('Hello, World!')
+4 CALL_FUNCTION            1
+</code></pre>
+<p>Python (as with .Net and Java) is a <a href="https://en.wikipedia.org/wiki/Stack_machine">stack-based virtual machine</a> which is provides a translation layer between the language and the CPU specific machine code</p>
+<h3 id="decompiling-code">Decompiling code</h3>
+<p>Bytecode is the reason why .Net and Java can be easily decompiled from an .dll or .class file. </p>
+<p>In .Net this can be quite spectacular since tools like <a href="https://github.com/icsharpcode/ILSpy">ILSpy</a> allow the easy decompilation of non-obfuscated .Net assembly (including the ones from the Microsoft .Net Framework).</p>
+<p>For viewing C++ and other compiled code, two great tools on windows are <a href="http://www.ollydbg.de">ollydbg</a> and <a href="https://www.hex-rays.com/products/ida/">Ida Pro</a></p></div><p class="small dim">No newsroom article answers it yet. <a href="../../../map/index.html#3-technologies-content-assembly-and-bytecode-md">The map row</a>.</p><div class="prevnext"><a href="../technologies/pen-and-paper.html">&larr; Pen and Paper</a><a href="../technologies/brain.html">Brain &rarr;</a></div></article>
+</div></main>
+<footer class="site"><div class="row">
+<span>Generation Z Developers, by Dinis Cruz. The 2018 text is Creative Commons BY (the cover) or BY-SA (the footer): see <a href="../../../v1/versions/index.html#licence">the licence note</a>. Everything else on this site is CC BY 4.0; code under the repository licence.</span>
+<span><a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers">GitHub</a> &middot; <a href="../../../vault/index.html">the working vault</a> &middot; <a href="../../../admin/versions.html">release history</a> &middot; <a href="../../../llms.txt">llms.txt</a></span>
+</div></footer>
+</body>
+</html>

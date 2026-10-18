@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The working vault &mdash; gen-z-developers.sgit.ai</title>
+<meta name="description" content="The public vault where the book is worked on, and how to open it read-only.">
+<link rel="canonical" href="https://gen-z-developers.sgit.ai/vault/index.html">
+<meta property="og:title" content="The working vault">
+<meta property="og:description" content="The public vault where the book is worked on, and how to open it read-only.">
+<meta property="og:url" content="https://gen-z-developers.sgit.ai/vault/index.html">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<nav class="site"><div class="row">
+<a class="brand" href="../index.html">gen-z-developers<span>.sgit.ai</span></a>
+<a class="parent" href="https://sgit.ai" title="sgit.ai, the parent project">&#8599; part of <b>sgit.ai</b></a>
+<a class="nl" href="../v1/book/index.html">The book</a><a class="nl" href="../v1/versions/index.html">Versions</a><a class="nl" href="../map/index.html">The map</a><a class="nl" href="../briefs/index.html">The briefs</a><a class="nl" href="../team/index.html">The team</a><a class="nl here" href="../vault/index.html">The vault</a><a class="nl" href="../admin/index.html">Admin</a>
+<span class="ver">site <a href="../admin/versions.html" title="Release history">v0.1.0</a></span>
+</div></nav>
+<main><div class="inner">
+<div class="crumbs"><a href="../index.html">gen-z-developers.sgit.ai</a> &rarr; <b>The vault</b></div>
+<h1>The working vault</h1>
+<p class="lede">All work after v1 happens in a public, zero-knowledge encrypted vault, with its <b>read</b> key published here so that anyone can read along: drafts, comments, reviews, the board. Its write key is never published. When a version is signed off it moves from the vault into the repository, on top of the one before, and <a href="../v1/versions/index.html">the versions page</a> shows the delta.</p>
+<h2>Open it</h2>
+<dl class="kv">
+<dt>In the browser</dt><dd><a href="https://dev.vault.sgraph.ai/#sgit_public_read_fd8863c5827775f5e2fe66ba9f0bb4eb80d0357b120f43fa38091ded95975cda%3Ac14khrb8">https://dev.vault.sgraph.ai/#sgit_public_read_fd8863c5827775f5e2fe66ba9f0bb4eb80d0357b120f43fa38091ded95975cda%3Ac14khrb8</a></dd>
+<dt>With sgit</dt><dd><code>pip3 install sgit-ai</code> then <code>sgit clone sgit_public_read_fd8863c5827775f5e2fe66ba9f0bb4eb80d0357b120f43fa38091ded95975cda:c14khrb8</code> (read-only)</dd>
+<dt>Vault id</dt><dd><code>c14khrb8</code> on <code>https://dev.send.sgraph.ai</code></dd>
+<dt>Read key</dt><dd><code style="overflow-wrap:anywhere">sgit_public_read_fd8863c5827775f5e2fe66ba9f0bb4eb80d0357b120f43fa38091ded95975cda:c14khrb8</code> <span class="small dim">(deliberately public; it opens the vault read-only)</span></dd>
+<dt>Created</dt><dd>2026-10-18, by the session that built this site, from the build brief</dd>
+</dl>
+<h2>What is in it</h2>
+<ul>
+<li><code>README.md</code>: what the vault is, the rule, and how to work in it</li><li><code>_page.json</code>: the vault&#x27;s own front page, rendered by the vault browser</li><li><code>book/</code>: the working copy of the book: v1/content/ and v1/images/ as imported, the text the second edition starts from</li><li><code>map/map.json</code>: the chapter-to-article map, copied from the repository at each release</li><li><code>reviews/</code>: one record per chapter of the 2018 text (spelling, dated facts, broken links, verdict), the reviewer&#x27;s work in progress</li><li><code>interviews/</code>: the editor&#x27;s interview scripts and the transcripts, verbatim</li><li><code>board/</code>: BOARD.md and issues/open|blocked|done/: what is open, in progress and done</li><li><code>team/</code>: the roles&#x27; working copies of their role.md, briefs and debriefs</li><li><code>graph/</code>: the book as a graph, when it exists: ontology, taxonomy, nodes per chapter, section and paragraph</li><li><code>comments/</code>: comments and voice comments attached to a section, as files</li>
+</ul>
+<p class="small dim">The vault opens on its own page (<code>_page.json</code>), with the same sections. Every file in it is encrypted on the device before it leaves; the server never sees plaintext, and the read key published above is what decrypts it in your browser.</p>
+<h2 id="private">The private vault</h2>
+<p>The OpenRouter key the agents use to reach a model <b>never goes in the public vault</b>: anything in a vault whose read key is published is readable by everyone. It goes in a second vault, <code>z292ze46</code>, whose key is held only by Dinis and is not in this repository or on this site; the key itself carries a credit limit set at OpenRouter, so a mistake costs a little. The vault holds a <code>README.md</code> and an <code>openrouter.env.example</code> and nothing else until Dinis puts the key in. The newsroom's reader-vault pattern, a passkey opening the vault, is the intended door; see <a href="https://newsroom.sgit.ai/articles/the-passkey-opens-the-vault.html">the passkey opens the vault</a>.</p>
+<h2>The rule, and the gate</h2>
+<p>The repository's release gate (<code>admin/build/validate.js</code>) refuses any file carrying a private sgit key (any string with sgit's private-key prefix), the same rule sgit's own scanner uses; the public read key passes because public and private differ by a word, not a character. The vault's write key and the private vault's key were delivered to Dinis in the session that created them and exist nowhere in this tree.</p>
+
+</div></main>
+<footer class="site"><div class="row">
+<span>Generation Z Developers, by Dinis Cruz. The 2018 text is Creative Commons BY (the cover) or BY-SA (the footer): see <a href="../v1/versions/index.html#licence">the licence note</a>. Everything else on this site is CC BY 4.0; code under the repository licence.</span>
+<span><a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers">GitHub</a> &middot; <a href="../vault/index.html">the working vault</a> &middot; <a href="../admin/versions.html">release history</a> &middot; <a href="../llms.txt">llms.txt</a></span>
+</div></footer>
+</body>
+</html>

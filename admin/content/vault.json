@@ -1,0 +1,29 @@
+{
+ "what": "The vaults this site uses. Only the PUBLIC vault's READ key is here, by design; its write key and the private vault's key are held by Dinis and exist nowhere in this repository. validate.js refuses any string carrying sgit's private-key prefix anywhere in the tree.",
+ "public": {
+  "name": "gen-z-developers",
+  "id": "c14khrb8",
+  "remote": "https://dev.send.sgraph.ai",
+  "read_key": "sgit_public_read_fd8863c5827775f5e2fe66ba9f0bb4eb80d0357b120f43fa38091ded95975cda:c14khrb8",
+  "web": "https://dev.vault.sgraph.ai/#sgit_public_read_fd8863c5827775f5e2fe66ba9f0bb4eb80d0357b120f43fa38091ded95975cda%3Ac14khrb8",
+  "created": "2026-10-18",
+  "layout": {
+   "README.md": "what the vault is, the rule, and how to work in it",
+   "_page.json": "the vault's own front page, rendered by the vault browser",
+   "book/": "the working copy of the book: v1/content/ and v1/images/ as imported, the text the second edition starts from",
+   "map/map.json": "the chapter-to-article map, copied from the repository at each release",
+   "reviews/": "one record per chapter of the 2018 text (spelling, dated facts, broken links, verdict), the reviewer's work in progress",
+   "interviews/": "the editor's interview scripts and the transcripts, verbatim",
+   "board/": "BOARD.md and issues/open|blocked|done/: what is open, in progress and done",
+   "team/": "the roles' working copies of their role.md, briefs and debriefs",
+   "graph/": "the book as a graph, when it exists: ontology, taxonomy, nodes per chapter, section and paragraph",
+   "comments/": "comments and voice comments attached to a section, as files"
+  }
+ },
+ "private": {
+  "name": "gen-z-developers-private",
+  "id": "z292ze46",
+  "remote": "https://dev.send.sgraph.ai",
+  "holds": "the OpenRouter key with a credit limit, when Dinis puts it in; until then a README and openrouter.env.example"
+ }
+}

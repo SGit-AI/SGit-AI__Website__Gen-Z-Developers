@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Python &mdash; gen-z-developers.sgit.ai</title>
+<meta name="description" content="Python, a chapter of Generation Z Developers (2018), as released.">
+<link rel="canonical" href="https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/python.html">
+<meta property="og:title" content="Python">
+<meta property="og:description" content="Python, a chapter of Generation Z Developers (2018), as released.">
+<meta property="og:url" content="https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/python.html">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site"><div class="row">
+<a class="brand" href="../../../index.html">gen-z-developers<span>.sgit.ai</span></a>
+<a class="parent" href="https://sgit.ai" title="sgit.ai, the parent project">&#8599; part of <b>sgit.ai</b></a>
+<a class="nl here" href="../../../v1/book/index.html">The book</a><a class="nl here" href="../../../v1/versions/index.html">Versions</a><a class="nl" href="../../../map/index.html">The map</a><a class="nl" href="../../../briefs/index.html">The briefs</a><a class="nl" href="../../../team/index.html">The team</a><a class="nl" href="../../../vault/index.html">The vault</a><a class="nl" href="../../../admin/index.html">Admin</a>
+<span class="ver">site <a href="../../../admin/versions.html" title="Release history">v0.1.0</a></span>
+</div></nav>
+<main><div class="inner">
+<div class="crumbs"><a href="../../../index.html">gen-z-developers.sgit.ai</a> &rarr; <a href="../../../v1/book/index.html">The book</a> &rarr; <a href="../../../v1/book/index.html#mvp-for-gen-z-dev">MVP for Gen Z Dev</a> &rarr; <b>Python</b></div>
+<article class="chapter"><p class="small dim">MVP for Gen Z Dev &middot; chapter 10 of 123 &middot; <span class="badge written">written</span> <span class="badge frozen">v1.0.0, 2018, frozen</span> &middot; 571 words &middot; <a href="https://github.com/DinisCruz/Book_Generation_Z_Developer/blob/61886444fe5ab118ab18726147826ab05f794edc/content/2.mvp-for-gen-z-dev/content/python.md">the 2018 file</a></p><h1>Python</h1><dl class="kv"><dt>What</dt><dd>Programming language that all developers should master</dd><dt>Task</dt><dd>Create and publish an Python tool</dd><dt>Price</dt><dd>free</dd></dl><div class="body"><p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a> is great language to master since it contains a large number of the key development paradigms that you need to know, while being easy to learn and read. </p>
+<p>Python started in 1991 by <a href="https://twitter.com/gvanrossum/">Guido van Rossum</a> when he was 35 and the key focus was in making a simple but powerful language. </p>
+<p>A great feature added early on was the REPL (Read Eval Print Loop) environment. This is what you see when you run <code>python</code> from the command line and get an interactive shell that allows the execution of Python code. That said, I don't use the Python command line very often, since I have a similar (and more powerful) REPL environment using Python tests (and TDD)</p>
+<h3 id="use-python-for-aws-automation">Use Python for AWS automation</h3>
+<p>Even if you are not using Python as your main development language, due to it massive adoption and powerful ability to write small apps/function, you should use it often (for all sorts of automation tasks).</p>
+<p>A perfect example of the power of Python is in the development of Serverless functions (executed as an <a href="https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model-handler-types.html">AWS Lambda function</a>) or in advanced customizations of event-driven workflows (like the one provided by <a href="https://zapier.com/help/code-python/">Zapier Python support</a>)</p>
+<p>The <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html">AWS SDK for python (boto3)</a> is something you should spend quite a lot of time with and really explore its capabilities (while learning to take python into another level). </p>
+<p>This API gives you access to just about everything you can do in AWS, and as a developer you need to really start thinking of AWS as an 'app' that you code your application on top of its capabilities. You need to get into the practice of writing code (driven by tests) vs clicking on things.</p>
+<p>For example here is a code snippet that starts a virtual machine in AWS:</p>
+<pre><code>import boto3
+ec2         = boto3.client('ec2')
+instance_id = sys.argv[2]
+response    = ec2.start_instances(InstanceIds=[instance_id])
+print(response)
+</code></pre>
+<h3 id="dont-click-on-things">Don't click on things</h3>
+<p>Clicking on an UI with your mouse, is a non-repeatable, non-automated and non-scalable way to perform a specific task. What you want to do is to write tools, APIs and DSLs that allow the easy and automated execution of those tasks.</p>
+<p>For example here is a python script that tests the execution of an Lambda function</p>
+<pre><code>    def test_hello_world(self):
+        handler         = 'lambdas.s3.hello_world.run'
+        payload         = {&quot;name&quot;: &quot;lambda-runner&quot;}
+        expected_result = 'hello {0}'.format(payload.get('name'))
+
+        self.aws.lambda_create_function(self.name, self.role, handler, self.s3_bucket, self.s3_key)
+        result = self.aws.lambda_invoke_function(self.name, payload)
+        assert result == expected_result
+</code></pre>
+<h3 id="python-for-data-parsing-and-analysis">Python for data parsing and analysis</h3>
+<p>Another really powerful use of Python is to perform all sorts of data parsing, modeling and analysis.</p>
+<p>As a very practical real world scenario, if somebody sends me multiple excel documents with data to analyse, the first thing I do is to:</p>
+<ul>
+<li>export it to csv, </li>
+<li>use python to normalize the raw data into json file(s)</li>
+<li>use an data visualizing tool or API (for example ELK, Neo4J or <a href="http://visjs.org/">visjs</a>). </li>
+</ul>
+<p>This is not very hard to do, and is faster then trying to make sense of the excel documents (namely when needing to do data correlation between different excel sheets or files)</p></div><p class="small dim">Answered since, on the newsroom: <a href="https://newsroom.sgit.ai/articles/explorer-coding.html">Explorer coding</a>. <a href="../../../map/index.html#2-mvp-for-gen-z-dev-content-python-md">The map row</a>.</p><div class="prevnext"><a href="../mvp-for-gen-z-dev/owasp.html">&larr; OWASP</a><a href="../mvp-for-gen-z-dev/slack-and-chatops.html">Slack and ChatOps &rarr;</a></div></article>
+</div></main>
+<footer class="site"><div class="row">
+<span>Generation Z Developers, by Dinis Cruz. The 2018 text is Creative Commons BY (the cover) or BY-SA (the footer): see <a href="../../../v1/versions/index.html#licence">the licence note</a>. Everything else on this site is CC BY 4.0; code under the repository licence.</span>
+<span><a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers">GitHub</a> &middot; <a href="../../../vault/index.html">the working vault</a> &middot; <a href="../../../admin/versions.html">release history</a> &middot; <a href="../../../llms.txt">llms.txt</a></span>
+</div></footer>
+</body>
+</html>

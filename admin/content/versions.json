@@ -1,0 +1,10 @@
+{
+ "what": "Every release of gen-z-developers.sgit.ai, narrated, oldest first. The newest row must be the version in admin/build/version.txt; build.py refuses otherwise.",
+ "releases": [
+  {
+   "version": "v0.1.0",
+   "date": "2026-10-18",
+   "what": "The first release, built from the newsroom's six gen-z-book articles and the two build briefs of 18 October 2026. v1.0.0 of the book (the 2018 first edition) imported verbatim from DinisCruz/Book_Generation_Z_Developer and shown chapter by chapter and on one page, outlines included; the versions page, reusing the newsroom's page_versions.py, with v1.0.0 frozen as markdown; the map, one row per 2018 file with the newsroom articles that answer it; the briefs captured; three roles (reviewer, editor, publisher) with their first issues and the editor's first interview script; the public working vault created and pushed with the working copy of v1, its read key published on the vault page; a private vault for the OpenRouter key, empty; the gate (validate.js) and the deploy pipeline, the same as the sibling sites."
+  }
+ ]
+}

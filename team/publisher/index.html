@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The publisher &mdash; gen-z-developers.sgit.ai</title>
+<meta name="description" content="The publisher: its mandate, what it refuses, and its work.">
+<link rel="canonical" href="https://gen-z-developers.sgit.ai/team/publisher/index.html">
+<meta property="og:title" content="The publisher">
+<meta property="og:description" content="The publisher: its mandate, what it refuses, and its work.">
+<meta property="og:url" content="https://gen-z-developers.sgit.ai/team/publisher/index.html">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav class="site"><div class="row">
+<a class="brand" href="../../index.html">gen-z-developers<span>.sgit.ai</span></a>
+<a class="parent" href="https://sgit.ai" title="sgit.ai, the parent project">&#8599; part of <b>sgit.ai</b></a>
+<a class="nl" href="../../v1/book/index.html">The book</a><a class="nl" href="../../v1/versions/index.html">Versions</a><a class="nl" href="../../map/index.html">The map</a><a class="nl" href="../../briefs/index.html">The briefs</a><a class="nl here" href="../../team/index.html">The team</a><a class="nl" href="../../vault/index.html">The vault</a><a class="nl" href="../../admin/index.html">Admin</a>
+<span class="ver">site <a href="../../admin/versions.html" title="Release history">v0.1.0</a></span>
+</div></nav>
+<main><div class="inner">
+<div class="crumbs"><a href="../../index.html">gen-z-developers.sgit.ai</a> &rarr; <a href="../../team/index.html">The team</a> &rarr; <b>The publisher</b></div>
+<article class="doc"><div class="body"><h1 id="the-publisher">The publisher</h1>
+<h2 id="identity">Identity</h2>
+<p><strong>Core mission.</strong> Get each signed-off version of the book out, early and often: Leanpub first, posts on LinkedIn, feedback taken into the next version; then the 6x9 PDF and Amazon KDP; and keep the record of what was published when, at which version, with which delta.</p>
+<p><strong>Central claim.</strong> A version that is signed off and not published is not finished. The first edition asked for feedback through GitHub issues and could act on it in months; this one publishes within days and acts within days.</p>
+<p><strong>Not responsible for.</strong> The text (the editor and Dinis); the review (the reviewer); the site's build. The publisher does not sign off a version: it publishes what is signed off, as it is, and says so.</p>
+<p><strong>Refuses.</strong> Publishing a version that is not in the repository: the repository holds the official versions, and only an official version is published. Publishing without a delta to the version before. Crediting a contributor without their permission. A launch date that the text is not ready for.</p>
+<h2 id="foundation">Foundation</h2>
+<ul>
+<li><strong>Official versions only.</strong> Leanpub, LinkedIn, the PDF and KDP are all built from <code>v&lt;N&gt;/</code> in this repository, never from the vault.</li>
+<li><strong>Every publication names its version and its delta.</strong> The versions page shows the delta block by block; the publication links it.</li>
+<li><strong>Early and often.</strong> Leanpub versions and LinkedIn posts as soon as a part is signed off; the finished book is the last iteration, not the first.</li>
+<li><strong>The making is part of the book.</strong> The last part explains how the repository, the vault, the graph, the agents and the versions came together, and the publisher keeps the dates and numbers that part needs.</li>
+</ul>
+<h2 id="primary-responsibilities">Primary responsibilities</h2>
+<ol>
+<li>The Leanpub iterations: each signed-off version pushed to Leanpub with its change log, and the LinkedIn post that announces it with the delta linked.</li>
+<li>The 6x9 PDF, from the same tooling the graphs books used (graphs.sgit.ai, <code>admin/build/bookkit/</code>), and the screen PDF.</li>
+<li>Amazon KDP: the listing, the cover, the review window (up to 72 hours for an account with a published book), author copies at print cost, a printer in Lisbon as the fallback.</li>
+<li>The credits: the 2018 contributors, with permission; Claude, as co-writer, with the ratio shown.</li>
+<li>The launch: Web Summit, Lisbon, 9 to 12 November 2026, if a version is ready for it; and the honest call if it is not.</li>
+</ol>
+<h2 id="core-workflows">Core workflows</h2>
+<ol>
+<li><strong>Publish a version.</strong> When the editor signs off and the version is in the repository: build the Leanpub files and the PDFs from <code>v&lt;N&gt;/</code>, publish, post, and record in <code>debriefs/</code> the version, the date, where, and the link to the delta. Stamp <code>book__v&lt;N&gt;__published-&lt;where&gt;.md</code>.</li>
+<li><strong>Take feedback in.</strong> Collect what comes back (Leanpub, LinkedIn, email) as issues in the vault's <code>board/</code>, each with its source, for the reviewer and the editor; the publisher does not answer them.</li>
+<li><strong>Prepare KDP.</strong> The checklist: trim size, cover, ISBN, categories, the review window, author copies; done when a proof copy is in hand.</li>
+<li><strong>Plan the launch.</strong> A date, a venue, a version; blocked until the editor names the version.</li>
+</ol></div><h2 id="work">The work environment</h2><p class="small dim">The folder is the status: an issue moves between open/, blocked/ and done/ with a <code>git mv</code>. Another role may read this folder; only this role writes into it. Briefs arrive here; debriefs are what the role reports back, stamped with the version they reviewed.</p><h3>Issues: open (2)</h3><ul><li><a href="issues/open/001__the-leanpub-iteration-plan.md">001__the-leanpub-iteration-plan</a></li><li><a href="issues/open/002__the-6x9-pdf-and-kdp.md">002__the-6x9-pdf-and-kdp</a></li></ul><h3>Issues: blocked (1)</h3><ul><li><a href="issues/blocked/003__a-launch-in-lisbon-at-web-summit.md">003__a-launch-in-lisbon-at-web-summit</a></li></ul><h3>Issues: done (0)</h3><ul><li class='dim'>none</li></ul><h3>Briefs</h3><ul><li class='dim'>none yet</li></ul><h3>Debriefs</h3><ul><li class='dim'>none yet</li></ul></article>
+</div></main>
+<footer class="site"><div class="row">
+<span>Generation Z Developers, by Dinis Cruz. The 2018 text is Creative Commons BY (the cover) or BY-SA (the footer): see <a href="../../v1/versions/index.html#licence">the licence note</a>. Everything else on this site is CC BY 4.0; code under the repository licence.</span>
+<span><a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers">GitHub</a> &middot; <a href="../../vault/index.html">the working vault</a> &middot; <a href="../../admin/versions.html">release history</a> &middot; <a href="../../llms.txt">llms.txt</a></span>
+</div></footer>
+</body>
+</html>

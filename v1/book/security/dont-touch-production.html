@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Don&#x27;t touch production &mdash; gen-z-developers.sgit.ai</title>
+<meta name="description" content="Don&#x27;t touch production, a chapter of Generation Z Developers (2018), as released.">
+<link rel="canonical" href="https://gen-z-developers.sgit.ai/v1/book/security/dont-touch-production.html">
+<meta property="og:title" content="Don&#x27;t touch production">
+<meta property="og:description" content="Don&#x27;t touch production, a chapter of Generation Z Developers (2018), as released.">
+<meta property="og:url" content="https://gen-z-developers.sgit.ai/v1/book/security/dont-touch-production.html">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+<nav class="site"><div class="row">
+<a class="brand" href="../../../index.html">gen-z-developers<span>.sgit.ai</span></a>
+<a class="parent" href="https://sgit.ai" title="sgit.ai, the parent project">&#8599; part of <b>sgit.ai</b></a>
+<a class="nl here" href="../../../v1/book/index.html">The book</a><a class="nl here" href="../../../v1/versions/index.html">Versions</a><a class="nl" href="../../../map/index.html">The map</a><a class="nl" href="../../../briefs/index.html">The briefs</a><a class="nl" href="../../../team/index.html">The team</a><a class="nl" href="../../../vault/index.html">The vault</a><a class="nl" href="../../../admin/index.html">Admin</a>
+<span class="ver">site <a href="../../../admin/versions.html" title="Release history">v0.1.0</a></span>
+</div></nav>
+<main><div class="inner">
+<div class="crumbs"><a href="../../../index.html">gen-z-developers.sgit.ai</a> &rarr; <a href="../../../v1/book/index.html">The book</a> &rarr; <a href="../../../v1/book/index.html#security">Security</a> &rarr; <b>Don&#x27;t touch production</b></div>
+<article class="chapter"><p class="small dim">Security &middot; chapter 84 of 123 &middot; <span class="badge outline">outline</span> <span class="badge frozen">v1.0.0, 2018, frozen</span> &middot; 296 words &middot; <a href="https://github.com/DinisCruz/Book_Generation_Z_Developer/blob/61886444fe5ab118ab18726147826ab05f794edc/content/6.security/dont-touch-production.md">the 2018 file</a></p><h1>Don&#x27;t touch production</h1><div class="outline-note">In the 2018 edition this chapter was an outline: a title and "Topics to cover and ideas". It is shown exactly as released. The second edition fills it from the articles the map names.</div><div class="body"><p>...</p>
+<p><strong>Topics to cover and ideas</strong></p>
+<ul>
+<li>requiring access to production systems (to debug an issue or even worse, to make deployment changes) represents a failure at multiple levels<ul>
+<li>deployment workflow</li>
+<li>logging and visualization of what is going on in the servers (and live environment)</li>
+<li>ability to quickly push changes (or revert recent deployments/changes)</li>
+<li>QA and test environments (that don't match production)</li>
+</ul>
+</li>
+<li>it is very important that there is an air-gap between the development workflow and the deployment/production workflow</li>
+<li>having access to production systems introduces massive security risks and makes massive assets the devices uses to access that data (imagine for example that the developer's laptop had some malware which provided remote access to a malicious agent)</li>
+<li>it is a sign of maturity when issues can be debugged and resolved without the developers (and security professionals) requiring access to production systems</li>
+<li>same concept for having access to production data. We once had an incident where some S3 keys where compromised (S3 keys allow access to data in AWS), which belonged to an BI (Business Intelligence) team that was working on some business analysis. Upon investigation we found that that key allowed access to highly sensitive data which the BI team did not actually needed for their analysis. This is why teams (and individuals) need to be allergic to being given access to data and systems (the more you have access to, the more responsibility you have, and the more damaging a compromise of your system will be)</li>
+<li>this is also related to the concept of 'Infrastructure as Code' where everything in the deployment/production environments is 'scripted' (i.e. code). <ul>
+<li>'code' in this case needs to be managed correctly (with version control, change management, code reviews, testing, etc...)</li>
+<li>related to the DevOps movement</li>
+</ul>
+</li>
+</ul></div><p class="small dim">Answered since, on the newsroom: <a href="https://newsroom.sgit.ai/articles/footprint-and-blast-radius.html">Footprint and blast radius</a>, <a href="https://newsroom.sgit.ai/articles/connector-twin-before-you-deploy-an-agent.html">Before you give an agent a connector, give the connector a twin</a>. <a href="../../../map/index.html#6-security-dont-touch-production-md">The map row</a>.</p><div class="prevnext"><a href="../security/defcon.html">&larr; Defcon</a><a href="../security/pointers.html">Pointers &rarr;</a></div></article>
+</div></main>
+<footer class="site"><div class="row">
+<span>Generation Z Developers, by Dinis Cruz. The 2018 text is Creative Commons BY (the cover) or BY-SA (the footer): see <a href="../../../v1/versions/index.html#licence">the licence note</a>. Everything else on this site is CC BY 4.0; code under the repository licence.</span>
+<span><a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers">GitHub</a> &middot; <a href="../../../vault/index.html">the working vault</a> &middot; <a href="../../../admin/versions.html">release history</a> &middot; <a href="../../../llms.txt">llms.txt</a></span>
+</div></footer>
+</body>
+</html>

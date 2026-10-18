@@ -1,0 +1,1241 @@
+{
+ "version": "v1.0.0",
+ "site": "v0.1.0",
+ "source": {
+  "repository": "https://github.com/DinisCruz/Book_Generation_Z_Developer",
+  "commit": "61886444fe5ab118ab18726147826ab05f794edc"
+ },
+ "what": "The hash of every chapter's markdown (v1/content/) and of the <main> it rendered; validate.js refuses a page that no longer matches its markdown, or markdown that was edited behind its page.",
+ "chapters": [
+  {
+   "file": "1.introduction/generation-z.md",
+   "page": "v1/book/introduction/generation-z.html",
+   "title": "Generation Z",
+   "part": "Introduction",
+   "kind": "written",
+   "words": 671,
+   "markdown_sha256": "1f1ace150bfab1f239c80a2db23dc75c17271436a59ebc95d3f8fa2f03e1fe6d",
+   "main_sha256": "d151433bfe0666716bdb191bc6923f28ffde202b0c8ab79438592bc97bea91bf"
+  },
+  {
+   "file": "1.introduction/how-to-get-a-job.md",
+   "page": "v1/book/introduction/how-to-get-a-job.html",
+   "title": "How to get a job",
+   "part": "Introduction",
+   "kind": "written",
+   "words": 732,
+   "markdown_sha256": "6e0b7631ed2abd2b12b83f43e525c2b8cb557e8f6bc3325fbb25962bae219299",
+   "main_sha256": "234339be008ec17e045675317f91f11a7f518f74e7270205ff9397a58e5e35a6"
+  },
+  {
+   "file": "1.introduction/how-this -book-was-created.md",
+   "page": "v1/book/introduction/how-this-book-was-created.html",
+   "title": "How this book is being created",
+   "part": "Introduction",
+   "kind": "written",
+   "words": 146,
+   "markdown_sha256": "47f883833bf247e136259618ba90d1c78e69500a3f8721ed565c47e71e49d94b",
+   "main_sha256": "344be8397c7eac210cb1908b69bbf44d210753e61fd5198e2efb267ae898fe82"
+  },
+  {
+   "file": "1.introduction/stem-tech-stack.md",
+   "page": "v1/book/introduction/stem-tech-stack.html",
+   "title": "STEM Tech Stack",
+   "part": "Introduction",
+   "kind": "written",
+   "words": 312,
+   "markdown_sha256": "e08ab3a408124947b72f513dd82f226ce48aeb76df3f80ae5404521ab6050b2e",
+   "main_sha256": "f10a0f32fcd2ba9b9cb4f75cd96790d8b2bad7307534786e184e27d3e2215f84"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/content/creative-commons.md",
+   "page": "v1/book/mvp-for-gen-z-dev/creative-commons.html",
+   "title": "Creative Commons",
+   "part": "MVP for Gen Z Dev",
+   "kind": "written",
+   "words": 1636,
+   "markdown_sha256": "d38f0f455030c7a8a01e20dd6ac66cd5f563e00aa117f852488d3b434372f12f",
+   "main_sha256": "2e2cde35d212986c149602703d3508c0cf0d8e38cf172259d800219a54f0fb42"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/content/open-source.md",
+   "page": "v1/book/mvp-for-gen-z-dev/open-source.html",
+   "title": "Open Source",
+   "part": "MVP for Gen Z Dev",
+   "kind": "written",
+   "words": 2299,
+   "markdown_sha256": "13290133a6f0a04823e31aecf134c22350428aa9395d7a13f9107de7f3670f4a",
+   "main_sha256": "305a072f4538bb2e96f22013fd87b8108af911f72a6069c3ddefb1c252792b19"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/content/docker.md",
+   "page": "v1/book/mvp-for-gen-z-dev/docker.html",
+   "title": "Docker",
+   "part": "MVP for Gen Z Dev",
+   "kind": "written",
+   "words": 1112,
+   "markdown_sha256": "e7ed1f4eaf2072adea181479d9b9bd3715e34cf00eeecf9480ef2bc57bde190d",
+   "main_sha256": "dcc2817945555c43332a85b3b0eafafe873a1bfc993f324e231fc3d14f928270"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/content/jira.md",
+   "page": "v1/book/mvp-for-gen-z-dev/jira.html",
+   "title": "Jira",
+   "part": "MVP for Gen Z Dev",
+   "kind": "written",
+   "words": 1144,
+   "markdown_sha256": "45b1c724150d4842dba598c365c4216bccc4b0fa0419fce205951bfcee63570d",
+   "main_sha256": "9cee323a73ff6ef27db01bece808f0d257b3fad6b498796cba6af88a7dadeb94"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/content/owasp.md",
+   "page": "v1/book/mvp-for-gen-z-dev/owasp.html",
+   "title": "OWASP",
+   "part": "MVP for Gen Z Dev",
+   "kind": "written",
+   "words": 519,
+   "markdown_sha256": "967c736636dd876e3083a1ec0676cad0227eb9c1809deff09314e6b95984f844",
+   "main_sha256": "0528a206fbe68beef5964bcda237498578b941704dcc636a30011dbf437fcf72"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/content/python.md",
+   "page": "v1/book/mvp-for-gen-z-dev/python.html",
+   "title": "Python",
+   "part": "MVP for Gen Z Dev",
+   "kind": "written",
+   "words": 571,
+   "markdown_sha256": "144d4df03a9a8f7cc2dd5f68ff43b7ba97cfa69df7bde4a264272d1e623d0141",
+   "main_sha256": "4bc63548b10ecc818707e0a6e21268d8b5b0308a32b03e3b413b23bb138bad28"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/content/slack-and-chatops.md",
+   "page": "v1/book/mvp-for-gen-z-dev/slack-and-chatops.html",
+   "title": "Slack and ChatOps",
+   "part": "MVP for Gen Z Dev",
+   "kind": "written",
+   "words": 2311,
+   "markdown_sha256": "db1bfdb4fe1724b5f73da9f237e2c8f62fe8eece988b35b3a86ba330f16e885a",
+   "main_sha256": "e9e6452e10c6754a02e424f9dd80b06efc3b723c10264facd46d319aa58219c7"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/content/hugo.md",
+   "page": "v1/book/mvp-for-gen-z-dev/hugo.html",
+   "title": "Hugo",
+   "part": "MVP for Gen Z Dev",
+   "kind": "written",
+   "words": 795,
+   "markdown_sha256": "e0966d92514dfeccb23c23d408298e2f367dfc7095ef31e69bf1791b67cce203",
+   "main_sha256": "57e5b202bdfc38084ee71e5f757e0c59e0fff85a323b03dbbeac23294440b5f8"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/content/google-search-gdd-sre.md",
+   "page": "v1/book/mvp-for-gen-z-dev/google-search-gdd-sre.html",
+   "title": "Google Search, GDD and SRE",
+   "part": "MVP for Gen Z Dev",
+   "kind": "written",
+   "words": 1933,
+   "markdown_sha256": "052143271d6ca821080ad30e45f7069b8126016b07851a6ac10844b885cebaa6",
+   "main_sha256": "bfab684b3a7af7744f1186525cf8576c261abab3daefd21f52e8348a6042ffee"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/content/xcode-and-swift.md",
+   "page": "v1/book/mvp-for-gen-z-dev/xcode-and-swift.html",
+   "title": "Xcode and Swift",
+   "part": "MVP for Gen Z Dev",
+   "kind": "written",
+   "words": 731,
+   "markdown_sha256": "013aab521044a4654930d59bdcbea6937a735596b042b1c54c79242b8c62cee9",
+   "main_sha256": "a6277b6855cd74c5466c8f35767c1dc15d75549272110ef3e8d6cac05e7820dc"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/content/dot-language.md",
+   "page": "v1/book/mvp-for-gen-z-dev/dot-language.html",
+   "title": "Dot Language",
+   "part": "MVP for Gen Z Dev",
+   "kind": "written",
+   "words": 2993,
+   "markdown_sha256": "6111fc9a4e0f756716716baa657a12409c1f6346df7f997a1797d29358a95afa",
+   "main_sha256": "f3f476754c8bcf2200527f1ef0ba138c7414e76646e092d6e40b5923860b58f1"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/tdd.md",
+   "page": "v1/book/mvp-for-gen-z-dev/tdd.html",
+   "title": "TDD (Test-Driven Development)",
+   "part": "MVP for Gen Z Dev",
+   "kind": "outline",
+   "words": 318,
+   "markdown_sha256": "372da7873502c2a15e37f176b51512e9b39b17ae058a6a93f3049601079f69de",
+   "main_sha256": "e6c52a53cc03e0da0c91c97c3b9f0303a3a7537bb442d38ddf503b3780281249"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/aws.md",
+   "page": "v1/book/mvp-for-gen-z-dev/aws.html",
+   "title": "AWS",
+   "part": "MVP for Gen Z Dev",
+   "kind": "outline",
+   "words": 320,
+   "markdown_sha256": "b21ae0216b49377c7b55a6b3471cd32cf8666483ed7850491312e97ef6a58e0b",
+   "main_sha256": "37888701971e7afc88ab7cb161df44141eaeb9dfdd771fa3d32f25a2e5c5e71f"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/continuous-integration.md",
+   "page": "v1/book/mvp-for-gen-z-dev/continuous-integration.html",
+   "title": "Continuous Integration",
+   "part": "MVP for Gen Z Dev",
+   "kind": "outline",
+   "words": 79,
+   "markdown_sha256": "9abc87f62ab6c6235d517cf3d680c8322f149bc19a4afeff65a2c23c9cc2af22",
+   "main_sha256": "6da03ef98dd9313b63ef63d5a066cacd3b380574fdf7515cc2ac6602ea82fb93"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/electron.md",
+   "page": "v1/book/mvp-for-gen-z-dev/electron.html",
+   "title": "Electron",
+   "part": "MVP for Gen Z Dev",
+   "kind": "outline",
+   "words": 37,
+   "markdown_sha256": "c8b37036aac596b24ecefa0eda4d1a0330cbdbae24cc4a507d79ce98ca2d75bd",
+   "main_sha256": "47581d4b11432a5f917889492bed7978098b99e01b421973159bbba08fc10c48"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/github-flow.md",
+   "page": "v1/book/mvp-for-gen-z-dev/github-flow.html",
+   "title": "GitHub Flow",
+   "part": "MVP for Gen Z Dev",
+   "kind": "outline",
+   "words": 30,
+   "markdown_sha256": "46a4659ade89c49ee24650091e8a59a3d8f68dab79bb6fc8525669df29bb2179",
+   "main_sha256": "496c11afd827625696a77cd6385f5422476eabafa836651b37e3acde1c4e7f83"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/iot.md",
+   "page": "v1/book/mvp-for-gen-z-dev/iot.html",
+   "title": "IOT (Internet of Things)",
+   "part": "MVP for Gen Z Dev",
+   "kind": "outline",
+   "words": 228,
+   "markdown_sha256": "af9d99ce1b15ac9e39822d2216645f4bf8b6eef983b2756627dc3fe2826f8da3",
+   "main_sha256": "455d3459173a00d897ae789c81d63d4283d9f54f1751344c9c3aa1eaba1cdc3b"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/linux.md",
+   "page": "v1/book/mvp-for-gen-z-dev/linux.html",
+   "title": "linux",
+   "part": "MVP for Gen Z Dev",
+   "kind": "outline",
+   "words": 138,
+   "markdown_sha256": "017260ed4fe8b1081c93c970b5527820806fcc39377505f1e64aba996a4eac71",
+   "main_sha256": "494643fb653f9777c272eaa5c34fc1fa823ed5e79e635c2c8d079bf85bd5cc4c"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/minecraft.md",
+   "page": "v1/book/mvp-for-gen-z-dev/minecraft.html",
+   "title": "Minecraft",
+   "part": "MVP for Gen Z Dev",
+   "kind": "outline",
+   "words": 13,
+   "markdown_sha256": "d96e26caf9c924dc1d57a1244846d98e4df0e71086e0033e8800d0dce9cf29d9",
+   "main_sha256": "de651730f9e8125e813317f15b2c8dcd5711e0a3ce8705f6aa629e1c98c18f73"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/raspberry-pi.md",
+   "page": "v1/book/mvp-for-gen-z-dev/raspberry-pi.html",
+   "title": "raspberry-pi",
+   "part": "MVP for Gen Z Dev",
+   "kind": "outline",
+   "words": 112,
+   "markdown_sha256": "1bd9e1e3ba645dea26b7a545d3d1ab4354b13db4bdf74bda4628665b6bbb7f6b",
+   "main_sha256": "987f4c65a6f0d7bb1c7c37fc09ffb934393973cd6b00e3d22892a4aa0c62f604"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/stack-overflow.md",
+   "page": "v1/book/mvp-for-gen-z-dev/stack-overflow.html",
+   "title": "StackOverflow",
+   "part": "MVP for Gen Z Dev",
+   "kind": "outline",
+   "words": 59,
+   "markdown_sha256": "bc8ba335ea6ad590f0398e482593334f92227bb1da2c4d1c44198854d9d606a0",
+   "main_sha256": "76b481605b055b5f006d4cf8248e005fc313f42c1f2bac01b8c81d7c0f294ad3"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/wallaby-and-ncrunch.md",
+   "page": "v1/book/mvp-for-gen-z-dev/wallaby-and-ncrunch.html",
+   "title": "Wallaby and NCrunch",
+   "part": "MVP for Gen Z Dev",
+   "kind": "written",
+   "words": 3699,
+   "markdown_sha256": "cb1802170ab6b2e38333d2fc3429f8330602108d63a3c6c564e1ffcdfcc77239",
+   "main_sha256": "8fea7d56696b484240ece22ad42a8156a0dd27d23616e6da2c8ae15beb09baf1"
+  },
+  {
+   "file": "2.mvp-for-gen-z-dev/draft/wikipedia.md",
+   "page": "v1/book/mvp-for-gen-z-dev/wikipedia.html",
+   "title": "Wikipedia",
+   "part": "MVP for Gen Z Dev",
+   "kind": "outline",
+   "words": 70,
+   "markdown_sha256": "591c892d7ffac60ae59cf5900edcca9749ae69bd6bbc22f0f2158a412beeaf3e",
+   "main_sha256": "1ddce3fc75aa94aec61046ae9632fe25138f48c53f7f1f3dc1fa03a8ee20d3c0"
+  },
+  {
+   "file": "3.technologies/content/books.md",
+   "page": "v1/book/technologies/books.html",
+   "title": "Books",
+   "part": "Technologies",
+   "kind": "written",
+   "words": 755,
+   "markdown_sha256": "01d5220535518acd17c8933f9b31f9d6018bef3475d702a2d4e7e66361ad80c7",
+   "main_sha256": "13b036a8cf717f9760fda219e9b533c7b00846cd812c914630361bb7ada808f8"
+  },
+  {
+   "file": "3.technologies/content/pen-and-paper.md",
+   "page": "v1/book/technologies/pen-and-paper.html",
+   "title": "Pen and Paper",
+   "part": "Technologies",
+   "kind": "written",
+   "words": 382,
+   "markdown_sha256": "8b6dd807ca8c7577b37f1bd3fd37048972289cda921f84623705f0f3e0b423d0",
+   "main_sha256": "ea7130b45cff0441423be901fdcf242c8cc29bd571fb629e893e681b91f27aa9"
+  },
+  {
+   "file": "3.technologies/content/assembly-and-bytecode.md",
+   "page": "v1/book/technologies/assembly-and-bytecode.html",
+   "title": "Assembly and Bytecode",
+   "part": "Technologies",
+   "kind": "written",
+   "words": 530,
+   "markdown_sha256": "a925d2afd7a090eaab8a8a043ce3c8d80d4ee5521ef844a78acd1a38fba220cc",
+   "main_sha256": "d351c9a48c7285bf497526bd945e738c986e2ab65e60905c80ea2720c6bd9942"
+  },
+  {
+   "file": "3.technologies/content/brain.md",
+   "page": "v1/book/technologies/brain.html",
+   "title": "Brain",
+   "part": "Technologies",
+   "kind": "written",
+   "words": 748,
+   "markdown_sha256": "85402cc1bde2decbc0d724f573753bc142f1d7d49ee6dd79399e7e8885049f9d",
+   "main_sha256": "0a9c0215b54190206b0542414c075b1dcac9f9cb1453fcc06d1bf8a81a73eb59"
+  },
+  {
+   "file": "3.technologies/content/ide.md",
+   "page": "v1/book/technologies/ide.html",
+   "title": "IDE",
+   "part": "Technologies",
+   "kind": "written",
+   "words": 349,
+   "markdown_sha256": "0dd287f9ec3075664838f885210dc12c15b5737ce81b056faac5aab7513b23f0",
+   "main_sha256": "7ba4c8bbfdf19aa5a7137925c6d8a2086cdb807c5d352ccec35280c5167779a3"
+  },
+  {
+   "file": "3.technologies/content/ml-ai.md",
+   "page": "v1/book/technologies/ml-ai.html",
+   "title": "Machine Learning and AI",
+   "part": "Technologies",
+   "kind": "written",
+   "words": 391,
+   "markdown_sha256": "070c61086eebf1df8db2e12c5d25cbfcc68e7242f1215dca7d180f7a9ec2881b",
+   "main_sha256": "bb1c2cec823ccd7660272d822ecc712fab2a3a17b0a1034ada6fef60d0c2f2dd"
+  },
+  {
+   "file": "3.technologies/content/AST.md",
+   "page": "v1/book/technologies/ast.html",
+   "title": "AST (Abstract Syntax Tree)",
+   "part": "Technologies",
+   "kind": "written",
+   "words": 1682,
+   "markdown_sha256": "85077b6f4cb1ea4d0f3cdf8ad245b5d1e6216c1fe0e6d8693325e85730c31d1a",
+   "main_sha256": "031fbb372d92d89fe0b1861716f55cdf210e0377e65a65652c7bef24751c1b0b"
+  },
+  {
+   "file": "3.technologies/draft/blockchain.md",
+   "page": "v1/book/technologies/blockchain.html",
+   "title": "Blockchain",
+   "part": "Technologies",
+   "kind": "outline",
+   "words": 53,
+   "markdown_sha256": "988f8ba76c5f6a5a58ab1efa34429259e89bc65d5c25b3572abb5bb107452b63",
+   "main_sha256": "db07967e22cc4cff35737f6adb43a2e76cbc79a5a0bc1bfeddfa6d3103f7b400"
+  },
+  {
+   "file": "3.technologies/draft/browser-automation.md",
+   "page": "v1/book/technologies/browser-automation.html",
+   "title": "Browser Automation",
+   "part": "Technologies",
+   "kind": "outline",
+   "words": 82,
+   "markdown_sha256": "4234a6eb30068622f38c45c31b2dfb65953b7c8da7e8d2069eeb14fbf957f92d",
+   "main_sha256": "d1278665462a77dd6e2878478c55b8d1eb6f81ef57c3e371c3cd24a78bd8f117"
+  },
+  {
+   "file": "3.technologies/draft/dopamine.md",
+   "page": "v1/book/technologies/dopamine.html",
+   "title": "Dopamine",
+   "part": "Technologies",
+   "kind": "outline",
+   "words": 184,
+   "markdown_sha256": "53311360ca3ee7675d065694c35dd10caf8b6f4ef27f5fe961539efbcd30fce7",
+   "main_sha256": "489b2c0c599c4bea98bfb4fc18d1321fdc5a8a6569dcb369b82538b1cd6be368"
+  },
+  {
+   "file": "3.technologies/draft/dsl.md",
+   "page": "v1/book/technologies/dsl.html",
+   "title": "DSL",
+   "part": "Technologies",
+   "kind": "outline",
+   "words": 73,
+   "markdown_sha256": "d6f98014376a15b15955011a035dc782919cd56184d37c522fc47d841617321f",
+   "main_sha256": "61f0fd763f716916c5ad289db7933c55ab7109e3069940703b27bff8109b5034"
+  },
+  {
+   "file": "3.technologies/draft/ngrok.md",
+   "page": "v1/book/technologies/ngrok.html",
+   "title": "Ngrok",
+   "part": "Technologies",
+   "kind": "outline",
+   "words": 75,
+   "markdown_sha256": "b2485d9b2afdba1494444b2822b8582d487be9a665d2f60f9c8733bbdb9251fd",
+   "main_sha256": "fde59d2cd729c37f7253cf2d93543267b24a48ed03d3fa0ac5633633047348ed"
+  },
+  {
+   "file": "3.technologies/draft/node-js.md",
+   "page": "v1/book/technologies/node-js.html",
+   "title": "Node JS",
+   "part": "Technologies",
+   "kind": "outline",
+   "words": 62,
+   "markdown_sha256": "758a37494e7a6d337cd052a3e7c86aace6f3e55130cae939f5bb3793122991f5",
+   "main_sha256": "3203bceacdfadd908bf6fe69fd603afcc9300b3ea8d73695be37576f1a4efd22"
+  },
+  {
+   "file": "3.technologies/draft/r-language.md",
+   "page": "v1/book/technologies/r-language.html",
+   "title": "R (language)",
+   "part": "Technologies",
+   "kind": "outline",
+   "words": 26,
+   "markdown_sha256": "29a7552ea8268ea7db372d780d337c02fc610d4752c67ccef800cfbc829c48c1",
+   "main_sha256": "e0a6767247ac3cf794da997c4fde667bd77215526808bb268ae66ee2e709be64"
+  },
+  {
+   "file": "3.technologies/draft/scratch.md",
+   "page": "v1/book/technologies/scratch.html",
+   "title": "Scratch",
+   "part": "Technologies",
+   "kind": "outline",
+   "words": 29,
+   "markdown_sha256": "d2b765072c931d51f79460058831da417799a24311e5887e4176e26be1eb5778",
+   "main_sha256": "755c730c6422e8292be25d347e52b3061e0aaeef80debf915b6f440dda5421ad"
+  },
+  {
+   "file": "3.technologies/draft/streams.md",
+   "page": "v1/book/technologies/streams.html",
+   "title": "Streams",
+   "part": "Technologies",
+   "kind": "outline",
+   "words": 50,
+   "markdown_sha256": "1e2ad0ab766c570277cd137c37570906ad270308886bac37a0c07dd1d72740db",
+   "main_sha256": "74703b760b04fc8f58be9eb83ef896ca2bc019a255138236d57a0c7779fdff39"
+  },
+  {
+   "file": "3.technologies/draft/web-proxies.md",
+   "page": "v1/book/technologies/web-proxies.html",
+   "title": "Web Proxies",
+   "part": "Technologies",
+   "kind": "outline",
+   "words": 25,
+   "markdown_sha256": "6e942d8d255956acd3a3191a5f0f542dcfa686c2cc2e5a63f82b3d64ffd1a763",
+   "main_sha256": "dd8e9ca69ba54c21e931bbe7ad775bd301f9f5a8df39d3c3945b7a767e1d4809"
+  },
+  {
+   "file": "5.concepts/gamification.md",
+   "page": "v1/book/concepts/gamification.html",
+   "title": "Gamification",
+   "part": "Concepts",
+   "kind": "written",
+   "words": 127,
+   "markdown_sha256": "b39523bc503c0eeebd80da39fa2ca81e553a0551611494a150ead78e1967ecc7",
+   "main_sha256": "6407ee464844fe2f0d55582b7cec44dc57d9fc37d4df057571762e69fd534a93"
+  },
+  {
+   "file": "5.concepts/agile-and-kanban.md",
+   "page": "v1/book/concepts/agile-and-kanban.html",
+   "title": "Agile and Kanban",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 159,
+   "markdown_sha256": "08480e1c263e1ffc7af18355954821b42b097e62221966f16b4279c9ead50da0",
+   "main_sha256": "b92f7bc3c1534f9e5c698db77c6ccb2e92c1485f2a091d5f182b6006eef25759"
+  },
+  {
+   "file": "5.concepts/amazon-press-releases.md",
+   "page": "v1/book/concepts/amazon-press-releases.html",
+   "title": "Amazon Press Release",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 26,
+   "markdown_sha256": "f9a0735ed9612e4e5afbb98aaf8b9c63c902efb94ff75a81e14d48a2f4a77301",
+   "main_sha256": "5cd4ceaf1473a969486c6bf830821c91acc565126c7f9b6537dbbee0498349d2"
+  },
+  {
+   "file": "5.concepts/change-engineering.md",
+   "page": "v1/book/concepts/change-engineering.html",
+   "title": "Change Engineering",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 12,
+   "markdown_sha256": "2417ae6c8eed7455e92995a0a6e53182f1dc3a7bef21b873ec97d10cebcbcdd5",
+   "main_sha256": "137f20ad379d48a51d61774aef8d681266fc80df0eb0a24f4841d213de79db4b"
+  },
+  {
+   "file": "5.concepts/changes.md",
+   "page": "v1/book/concepts/changes.html",
+   "title": "Changes",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 120,
+   "markdown_sha256": "b76b6331f1a91835abf34e5b8aaa2f3928635bdb0dd16d60c33153036f5db79b",
+   "main_sha256": "2275c83c97ff75ae4ec6a49ba61fc564c19d4182a5b74e02bff1752afbbec6ee"
+  },
+  {
+   "file": "5.concepts/chaos-engineering.md",
+   "page": "v1/book/concepts/chaos-engineering.html",
+   "title": "Chaos Engineering",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 645,
+   "markdown_sha256": "80c5ed93d5a19e27933ae8498fdfe71e18117b9d1737e5c351a6f4e83454f580",
+   "main_sha256": "d519291eb5af9ed1bbd538b42655508063fe7a5be86e81a0e3d2ebd1be6596b8"
+  },
+  {
+   "file": "5.concepts/CI-Testing.md",
+   "page": "v1/book/concepts/ci-testing.html",
+   "title": "CI Testing",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 97,
+   "markdown_sha256": "f11ca8553ecb4b73597a445af86353c289630c71959da0c88b9339dee5fef14f",
+   "main_sha256": "0d990294316d6c0a02bf70ee965ecc99ba08e1437ed3c7bc87d8b191faef77cb"
+  },
+  {
+   "file": "5.concepts/deadlines.md",
+   "page": "v1/book/concepts/deadlines.html",
+   "title": "Deadlines",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 243,
+   "markdown_sha256": "03d316d9f8a9d2f79ed2bb2ad22efefba2da27f25a0a1f3bb2ce3f011ec10f79",
+   "main_sha256": "76dbf41846d1dc70aa01ed8368cd938b4706d99fb2eb7de46934192544034208"
+  },
+  {
+   "file": "5.concepts/design.md",
+   "page": "v1/book/concepts/design.html",
+   "title": "Design",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 153,
+   "markdown_sha256": "d5a89184c57905c29d07db6cccb9341a5915b925906963259bd1aa24d33eb5db",
+   "main_sha256": "1c92c0d5d8b1f780df3f1af75a8cdb6440edfea938a4038577d044fb300536ca"
+  },
+  {
+   "file": "5.concepts/devops.md",
+   "page": "v1/book/concepts/devops.html",
+   "title": "DevOps",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 47,
+   "markdown_sha256": "06456244b7f89d1e58796cb27c019128d5874831f9e706ac1f6e93c67f6f25db",
+   "main_sha256": "795326a990fc2b922da504b61d5afaffaf2c0751fe052918fc8d067cea515b3e"
+  },
+  {
+   "file": "5.concepts/facts.md",
+   "page": "v1/book/concepts/facts.html",
+   "title": "Facts",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 134,
+   "markdown_sha256": "d617815a4271e9d90787aa2f2c6ab38beb898f4e158db27ce89aa48fefd1e288",
+   "main_sha256": "56488b6a7269d1c780e3f3c1cf21b2423beeab299666e73d937e5c93250f746a"
+  },
+  {
+   "file": "5.concepts/feedback-loops.md",
+   "page": "v1/book/concepts/feedback-loops.html",
+   "title": "Feedback loops",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 130,
+   "markdown_sha256": "9db4e534b053d19e4fc4eb64b5e28bf7f7b86c1e32612eea22c418fc7cd99818",
+   "main_sha256": "e993eaac72d86030c5c54904fe6adceb240d27c3eef8841308a259054816916d"
+  },
+  {
+   "file": "5.concepts/funtional-programming.md",
+   "page": "v1/book/concepts/funtional-programming.html",
+   "title": "Functional Programming",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 150,
+   "markdown_sha256": "0326aca31f008ec52c56be686142113102fadc9dd0f94e5ffec6e65b6a5508aa",
+   "main_sha256": "9b9813234f4866d04052f51dfe79d3a18a5298cb5a57cd021f6fab76b351df0f"
+  },
+  {
+   "file": "5.concepts/gdpr.md",
+   "page": "v1/book/concepts/gdpr.html",
+   "title": "GDPR",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 38,
+   "markdown_sha256": "3d29f7ea5d210fa466d264d98b91dcb7e28ff1d1cd83921f3692ccb758e1d125",
+   "main_sha256": "38080947a5e886a2353e693892185e71b75076fbc4613abcc67f779f9b851b91"
+  },
+  {
+   "file": "5.concepts/graphs.md",
+   "page": "v1/book/concepts/graphs.html",
+   "title": "graphs",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 36,
+   "markdown_sha256": "0732df8e22199f931f7e446820010f1b832272f1cf2bd5d7be2b6442f7b7c965",
+   "main_sha256": "a9ae61c69e0c2f933f328033bd48d767e123476982f747ee795cab72d96b7b04"
+  },
+  {
+   "file": "5.concepts/inventing-on-principle.md",
+   "page": "v1/book/concepts/inventing-on-principle.html",
+   "title": "Inventing on Principle",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 38,
+   "markdown_sha256": "9ed9caa9573b4e8f6a85c98f11873cf8b017eed1f4fae689d1cc62887bc1a7f9",
+   "main_sha256": "b080eafe40596a250e88bd72caba923fe9ab8a4b4f4f57a8bed2423107be63e1"
+  },
+  {
+   "file": "5.concepts/karma-points.md",
+   "page": "v1/book/concepts/karma-points.html",
+   "title": "Karma Points",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 38,
+   "markdown_sha256": "18125d82fd02c55d750986e5be7f1e1831910d21d766be1aebfc0147ecc6f757",
+   "main_sha256": "8ed724f210193dad79e99bc88856432b5d4e727096cc5ecdd4db52d61dbeafe3"
+  },
+  {
+   "file": "5.concepts/legacy-applications.md",
+   "page": "v1/book/concepts/legacy-applications.html",
+   "title": "Legacy Applications",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 68,
+   "markdown_sha256": "4f3a9fcadc45213933219cd6b934546606d7345c64591d90255f92b873ea44d0",
+   "main_sha256": "17ece38a57de5e16dcf2c3be98be9c67336ca8337bd7dd43969dc7e4830c7ed7"
+  },
+  {
+   "file": "5.concepts/micro-services.md",
+   "page": "v1/book/concepts/micro-services.html",
+   "title": "Micro-Services",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 65,
+   "markdown_sha256": "f76f258ac169ac8f04d69c96a108067ef3a41fe90f0edddc2bf6fa99608b4245",
+   "main_sha256": "c32138a45a027aad0959255326464a79843c1e4787591463a54db3c1158e7f01"
+  },
+  {
+   "file": "5.concepts/netflix-culture.md",
+   "page": "v1/book/concepts/netflix-culture.html",
+   "title": "Netflix Culture",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 69,
+   "markdown_sha256": "7fcd730c99f9cf99b788f3027d1618c5de2d7c2ceae2af083690be38c5202048",
+   "main_sha256": "6e7081187b50eb0c160cb103ad2fbbc41637f5565e877aac62be3b9cb94b1fb7"
+  },
+  {
+   "file": "5.concepts/pair-programming.md",
+   "page": "v1/book/concepts/pair-programming.html",
+   "title": "Pair Programming",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 136,
+   "markdown_sha256": "a428e0bdaaf16c5a81051d473f401d726d3952d38f2d67735df4361319a8cbf7",
+   "main_sha256": "29460eb1310c849a41f5b08f72e648c47774348c0f3b7e5717c129ef3144321e"
+  },
+  {
+   "file": "5.concepts/recursive-functions.md",
+   "page": "v1/book/concepts/recursive-functions.html",
+   "title": "Recursive Functions",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 31,
+   "markdown_sha256": "9c7e1c67a8d6bd2d78e5d89aaeca3c8a0fef66bc3e474e1f7f2eb067ce37e015",
+   "main_sha256": "8f9c23a36216c48c7a9f3648f222728f25cf0057f433b1cca56477072787c9ca"
+  },
+  {
+   "file": "5.concepts/repl.md",
+   "page": "v1/book/concepts/repl.html",
+   "title": "REPL",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 38,
+   "markdown_sha256": "34a234acd6226e1d84c1a41b9dccb40c9c167a99b782fe11ca54f54bd1aaee90",
+   "main_sha256": "83b92721aeafa37c994cef771693926e51edb196abc62b6351c7096cec76119d"
+  },
+  {
+   "file": "5.concepts/serverless.md",
+   "page": "v1/book/concepts/serverless.html",
+   "title": "Serverless",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 219,
+   "markdown_sha256": "41319fb018d470fd17762c991ec34fbb21f4f53a447c67a8f80ad818cc18a413",
+   "main_sha256": "b193b7e7374a8a1d06f2158a4a706f026ee8d292c0f0212c792029ec0d410fb3"
+  },
+  {
+   "file": "5.concepts/draft/spotify-model.md",
+   "page": "v1/book/concepts/spotify-model.html",
+   "title": "Spotify Model",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 46,
+   "markdown_sha256": "d29affb7e5513495d0a2988d4560bbab47657ae180932376487d21ab513dc842",
+   "main_sha256": "0b8325bc9f092da2da4481168edf2773188424fe8f3d6949be336e8e63d72b96"
+  },
+  {
+   "file": "5.concepts/sre.md",
+   "page": "v1/book/concepts/sre.html",
+   "title": "SRE (Site Reliability Engineering )",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 44,
+   "markdown_sha256": "9a5b572869b01354cfa26db5c887ea1abb87194e50864424c3b25a9e9a8072fb",
+   "main_sha256": "2d98fb12de146c8fc1f0e7df2146168e2e21708d4e44ecf6bf047a2f6ca41234"
+  },
+  {
+   "file": "5.concepts/strong-vs-weak-types.md",
+   "page": "v1/book/concepts/strong-vs-weak-types.html",
+   "title": "Strong vs weak types",
+   "part": "Concepts",
+   "kind": "outline",
+   "words": 34,
+   "markdown_sha256": "93a14d8410d8d59b794c0d141cd37d1b8ab1bd3d6d48dbe074dc1a52647405c7",
+   "main_sha256": "44734276500b1359eab7bf2247576493fcf554089fc3297933c9aac4488539ad"
+  },
+  {
+   "file": "7.your-cv/leanpub.md",
+   "page": "v1/book/your-cv/leanpub.html",
+   "title": "leanpub",
+   "part": "Your CV",
+   "kind": "written",
+   "words": 103,
+   "markdown_sha256": "dccf630770b4ea375189bcee6392cd79a8129df88f54f16e264845d600f4c3c3",
+   "main_sha256": "4a5b98100b264ed25f92b0ad217052d0bea4e5788a81be2433cc8eb0757aa140"
+  },
+  {
+   "file": "7.your-cv/personal-brand.md",
+   "page": "v1/book/your-cv/personal-brand.html",
+   "title": "Personal Brand",
+   "part": "Your CV",
+   "kind": "outline",
+   "words": 92,
+   "markdown_sha256": "8852b8b614a859eebd502abb1b9240aa3aa0d751f1820656c66b670ebcdbbd7d",
+   "main_sha256": "724a8b93d97a08ce94224f59818156a5af4f4df75bcac1db7684d81589dcb32f"
+  },
+  {
+   "file": "7.your-cv/blogs.md",
+   "page": "v1/book/your-cv/blogs.html",
+   "title": "Blogs",
+   "part": "Your CV",
+   "kind": "outline",
+   "words": 202,
+   "markdown_sha256": "bdc3d17ae18e4d14aff47d83f3a39e827da59af6f873f0578798d3533f4a487b",
+   "main_sha256": "9f6cb1eaf0354564384c53c7ad3adaf40f437a2032ce16e8b16d8ff3ccaf9399"
+  },
+  {
+   "file": "7.your-cv/future-self.md",
+   "page": "v1/book/your-cv/future-self.html",
+   "title": "Future Self",
+   "part": "Your CV",
+   "kind": "outline",
+   "words": 82,
+   "markdown_sha256": "0ebafcc11ca4201874e91b55dc654f19b584689eee0b4f65499aef392262448f",
+   "main_sha256": "2f7e92df6e988468a29da5bfe89b2081ca4faef9e8c6e982133151277cdab8c3"
+  },
+  {
+   "file": "7.your-cv/git.md",
+   "page": "v1/book/your-cv/git.html",
+   "title": "Git",
+   "part": "Your CV",
+   "kind": "outline",
+   "words": 361,
+   "markdown_sha256": "fa7d0ae83aee73d0094c89a7d84726a67efc79a701b928eb8448eb932ff90758",
+   "main_sha256": "9df8c215ca7053b60c7842b58f463f778ed2a320f734c2f02b27baee0bb9267e"
+  },
+  {
+   "file": "7.your-cv/github.md",
+   "page": "v1/book/your-cv/github.html",
+   "title": "Github",
+   "part": "Your CV",
+   "kind": "outline",
+   "words": 229,
+   "markdown_sha256": "f042bc996fbe2998bb70941a345c155eb00250f13c602a21ea4c96c4dbfb5fdf",
+   "main_sha256": "1a3b815b36f728fdf9b6c648fee3add41e9fb194861d7f6254ec42fd2dbcd3ca"
+  },
+  {
+   "file": "7.your-cv/linkedin.md",
+   "page": "v1/book/your-cv/linkedin.html",
+   "title": "LinkedIn",
+   "part": "Your CV",
+   "kind": "outline",
+   "words": 39,
+   "markdown_sha256": "4893321f8201577887d7a6362f68145708657ab17f69d73bf8a2198a2f1b4e0a",
+   "main_sha256": "722e778d7ee32416da00f6d154e19d7e5dc9a408fac8a52b4928d7ec3bdf8f3a"
+  },
+  {
+   "file": "7.your-cv/twitter.md",
+   "page": "v1/book/your-cv/twitter.html",
+   "title": "twitter",
+   "part": "Your CV",
+   "kind": "outline",
+   "words": 55,
+   "markdown_sha256": "93426bad6397406a387bbbc833a4e01841bcb75fc522eca09f6536a04261ff66",
+   "main_sha256": "c86b2f8acdda9b12c080e7e77fe7a711ff0b0befb85e3bf9af82ec388b84afb3"
+  },
+  {
+   "file": "7.your-cv/upwork.md",
+   "page": "v1/book/your-cv/upwork.html",
+   "title": "Upwork",
+   "part": "Your CV",
+   "kind": "outline",
+   "words": 87,
+   "markdown_sha256": "69ad6bdb9465bc0debd7cf7f8ccbe8fb55e58efa0350cb03ddd45502d05e6bd0",
+   "main_sha256": "0d77f29198ceaae3c549bcc5bb35ecf98daf7014500c31532850ac50131bf7a2"
+  },
+  {
+   "file": "6.security/3rd-party-modules.md",
+   "page": "v1/book/security/3rd-party-modules.html",
+   "title": "3rd-party-modules",
+   "part": "Security",
+   "kind": "outline",
+   "words": 392,
+   "markdown_sha256": "8b9d54e873ff9c4e87332525db17a6c2a1dfed7a7cce3854ef617ee17b8b4f5d",
+   "main_sha256": "1d11f2697996e4556bda0fc73de9884f9378d8ed73ad07ffafd3e9a4d4ebb551"
+  },
+  {
+   "file": "6.security/bug-bounties.md",
+   "page": "v1/book/security/bug-bounties.html",
+   "title": "Bug Bounties",
+   "part": "Security",
+   "kind": "outline",
+   "words": 14,
+   "markdown_sha256": "c4e78dab11e398f31ee6a22de4850109e86c039067d7b8c2f72dec196929bce8",
+   "main_sha256": "426d48eec980f70028623c44a8dce767dd00d54e31454076c19e83ad871ecc8a"
+  },
+  {
+   "file": "6.security/defcon.md",
+   "page": "v1/book/security/defcon.html",
+   "title": "Defcon",
+   "part": "Security",
+   "kind": "outline",
+   "words": 60,
+   "markdown_sha256": "e426b1ec454adf6a0dcc9f736de0dfa4f7d22f6ef7a1fdb31811cd2fcab50d1a",
+   "main_sha256": "56a292bd231c014c1b2485add869d857918f628229d872e6595e79580fd70cd3"
+  },
+  {
+   "file": "6.security/dont-touch-production.md",
+   "page": "v1/book/security/dont-touch-production.html",
+   "title": "Don't touch production",
+   "part": "Security",
+   "kind": "outline",
+   "words": 296,
+   "markdown_sha256": "39c00e00053eada9cb8c0b1b2d75ca5687bc64c0d3ac6dd46ca201b21775ed71",
+   "main_sha256": "3282f60189a4fd3fe6ee971cb6c108cdee68b3c4946f45aafd16203c1a30af59"
+  },
+  {
+   "file": "6.security/pointers.md",
+   "page": "v1/book/security/pointers.html",
+   "title": "Pointers",
+   "part": "Security",
+   "kind": "outline",
+   "words": 81,
+   "markdown_sha256": "c5d29bae091c6ca0ca48419e8df19adc06389801235a710d8bf073972342c676",
+   "main_sha256": "cbbb577561b47207f6ee2c6158c9046d0db61fb9682a01203864fd4d0d414586"
+  },
+  {
+   "file": "6.security/security-better-developers.md",
+   "page": "v1/book/security/security-better-developers.html",
+   "title": "Security creates better developers",
+   "part": "Security",
+   "kind": "outline",
+   "words": 30,
+   "markdown_sha256": "30c9cc405c18fc6ace7ac60c0b893f409a9c2c71a4760c6a48221e17c65e8908",
+   "main_sha256": "2c4a298422ca88cf4ed58428bdec452253e8224e0bccd01b85685fc17c468165"
+  },
+  {
+   "file": "6.security/strings-should-be-banned.md",
+   "page": "v1/book/security/strings-should-be-banned.html",
+   "title": "Strings should be banned",
+   "part": "Security",
+   "kind": "outline",
+   "words": 66,
+   "markdown_sha256": "84d0ece7ca7f8ba68648f8de0c566282ac2a9a03596fee5628f158fe2a757fff",
+   "main_sha256": "6418541c1e00f186d346894aeba22a790aafa4c6683c08e2b09faa011cb831cd"
+  },
+  {
+   "file": "6.security/threat-modeling.md",
+   "page": "v1/book/security/threat-modeling.html",
+   "title": "Threat Modeling",
+   "part": "Security",
+   "kind": "outline",
+   "words": 110,
+   "markdown_sha256": "41d7e7deda2194ca86d7652c5db7e163a9d4e657b16d42d2ad36780bdce8596b",
+   "main_sha256": "d36511f5dbd412f86c420ccc842b125bdb9e4de91cdcbeaf566a48d1c4ea3a77"
+  },
+  {
+   "file": "4.life-patterns/content/learning.md",
+   "page": "v1/book/life-patterns/learning.html",
+   "title": "Learning",
+   "part": "Life Patterns",
+   "kind": "written",
+   "words": 938,
+   "markdown_sha256": "889fb983997789de4b920b8dd606c2885ede5c790a937525b88092ee9dd1f9a5",
+   "main_sha256": "06ff8e12975fedb3d2fbfeeff5160b78a0391278a1216ad0229d56cb58a5f078"
+  },
+  {
+   "file": "4.life-patterns/content/be-a-founder.md",
+   "page": "v1/book/life-patterns/be-a-founder.html",
+   "title": "Be a founder",
+   "part": "Life Patterns",
+   "kind": "written",
+   "words": 272,
+   "markdown_sha256": "f37a5fdf4a3e2aa7f7261e7b7b674996f06a2608b6a6d101ffed9032579b03ff",
+   "main_sha256": "d44311425b3e63b4a6648ec26a6570f6fefd1d2251cd4edb8eaaf31b9f304fbf"
+  },
+  {
+   "file": "4.life-patterns/content/being-criticized-is-a-privilege.md",
+   "page": "v1/book/life-patterns/being-criticized-is-a-privilege.html",
+   "title": "Being criticized is an privilege",
+   "part": "Life Patterns",
+   "kind": "written",
+   "words": 2196,
+   "markdown_sha256": "89e7b78b830216e3e2a7f97a92936cc1f9c567600d762c443f58d98964704cc8",
+   "main_sha256": "da6f39bbe6255f23085a9e88d24752585cb05da5d131b29556a6f6afd2956fe8"
+  },
+  {
+   "file": "4.life-patterns/content/backup-your-life.md",
+   "page": "v1/book/life-patterns/backup-your-life.html",
+   "title": "Backup your life",
+   "part": "Life Patterns",
+   "kind": "written",
+   "words": 1007,
+   "markdown_sha256": "8a25a34d6df45b6abf0b178803bf222e9f113db20a34ff0eeb28758f618a208d",
+   "main_sha256": "0e0e393013cb86e6c0e1262920b0257ca925b261685e1a97b0f501778e65355b"
+  },
+  {
+   "file": "4.life-patterns/content/talking-to-yourself.md",
+   "page": "v1/book/life-patterns/talking-to-yourself.html",
+   "title": "Talking to yourself digitally",
+   "part": "Life Patterns",
+   "kind": "written",
+   "words": 592,
+   "markdown_sha256": "af463d51973d387fab392111ddd9594c6863eee255e235f85d82be1f744a9f30",
+   "main_sha256": "a7bea38f90c9fd1b31392fe78668d1e8bfff1c39a6d6efa7a0b9c283099e309e"
+  },
+  {
+   "file": "4.life-patterns/content/future-needs-you.md",
+   "page": "v1/book/life-patterns/future-needs-you.html",
+   "title": "The future needs you",
+   "part": "Life Patterns",
+   "kind": "written",
+   "words": 621,
+   "markdown_sha256": "0f387336513bb631fcff608fa7bc67a87709d94eedb175b1a6cf500dcbbd254a",
+   "main_sha256": "2745b32ba1627262a777f4b72794613b3b50ff8922cf026d16c4d1b24aaf91ff"
+  },
+  {
+   "file": "4.life-patterns/pionners-settlers-town-planners.md",
+   "page": "v1/book/life-patterns/pionners-settlers-town-planners.html",
+   "title": "Are you a pionner, Settlers or Town Planners",
+   "part": "Life Patterns",
+   "kind": "outline",
+   "words": 22,
+   "markdown_sha256": "5b62b93366da6757aff51f2565deb9b9c1575dd02b1ffe93e53c9758f3899f45",
+   "main_sha256": "7ceee307600c9a643def2e26fd68a2ca1be5190b28f3e90698dcd3862d28218b"
+  },
+  {
+   "file": "4.life-patterns/automate-your-workflows.md",
+   "page": "v1/book/life-patterns/automate-your-workflows.html",
+   "title": "Automate your Workflows",
+   "part": "Life Patterns",
+   "kind": "outline",
+   "words": 48,
+   "markdown_sha256": "d31678bbabe4505245801bbaf415f615e04549df11fcb476dd87568a11b16e02",
+   "main_sha256": "c84893d44e940818398b6555b46240ad04fb5fc131db833b0288c33b3516f4e8"
+  },
+  {
+   "file": "4.life-patterns/BBS-and-modems.md",
+   "page": "v1/book/life-patterns/bbs-and-modems.html",
+   "title": "BBS and Modems",
+   "part": "Life Patterns",
+   "kind": "outline",
+   "words": 167,
+   "markdown_sha256": "81e0128e7e473101c6731f8ed42840f8d393081483b7db26187b8a62e92dba3f",
+   "main_sha256": "caebb078768188223fe6a6ba9a41b5b4dec593788e814403224e79c39df098cc"
+  },
+  {
+   "file": "4.life-patterns/civic-responsibility.md",
+   "page": "v1/book/life-patterns/civic-responsibility.html",
+   "title": "Civic Responsibility",
+   "part": "Life Patterns",
+   "kind": "outline",
+   "words": 89,
+   "markdown_sha256": "9236fd46cec30e7ecbaec9e299b3b32dc49675bed437da70d05c880544117025",
+   "main_sha256": "cb3114c84defcd5a7e78b4addd4eea2c82824387d0feaebbba391abc80ccf262"
+  },
+  {
+   "file": "4.life-patterns/curse-of-knowledge.md",
+   "page": "v1/book/life-patterns/curse-of-knowledge.html",
+   "title": "Curse of Knowledge",
+   "part": "Life Patterns",
+   "kind": "outline",
+   "words": 48,
+   "markdown_sha256": "09fc4881c6ee5701e110453f8b076d456e1746d80105dba7ff746028663c6db3",
+   "main_sha256": "d9968929025b388dafb400ec9512bb3834c95b978a42078d45d7e2697cf0b5d4"
+  },
+  {
+   "file": "4.life-patterns/ideas.md",
+   "page": "v1/book/life-patterns/ideas.html",
+   "title": "Ideas",
+   "part": "Life Patterns",
+   "kind": "outline",
+   "words": 99,
+   "markdown_sha256": "534692d919bf90dd2cb2cb9862dfd00f9dc0c8c9919c355427ba4574c2c86441",
+   "main_sha256": "3aa84eba0f24655a50d78dfcb0cf85bd4630c11b722b7b3ffb997be82f075fcc"
+  },
+  {
+   "file": "4.life-patterns/impostor-syndrome.md",
+   "page": "v1/book/life-patterns/impostor-syndrome.html",
+   "title": "Impostor Syndrome",
+   "part": "Life Patterns",
+   "kind": "outline",
+   "words": 144,
+   "markdown_sha256": "449c1ba5d04b798d5f100de80c9b581397e6d2f826a2c68c84535f3585f3019c",
+   "main_sha256": "c3a2a3e4c88133cfe873cb9eee88b9ea56af89b3d1165bc7aec05661a03f0b17"
+  },
+  {
+   "file": "4.life-patterns/king-is-naked.md",
+   "page": "v1/book/life-patterns/king-is-naked.html",
+   "title": "Kind is naked",
+   "part": "Life Patterns",
+   "kind": "outline",
+   "words": 105,
+   "markdown_sha256": "86ba4edba5900bfc2af1421b879de691efbea944ae9fa9bef47c4a577aa29251",
+   "main_sha256": "56b8498700a3b7c54a06164cf65048afedf230f823564f4ab467a8d326e31f88"
+  },
+  {
+   "file": "4.life-patterns/learn-to-hack.md",
+   "page": "v1/book/life-patterns/learn-to-hack.html",
+   "title": "Learn to Hack",
+   "part": "Life Patterns",
+   "kind": "outline",
+   "words": 55,
+   "markdown_sha256": "687dc71d0f229276f74dc4a079ec4483f2a64dcfe6126f658d71a4dcfb2b5068",
+   "main_sha256": "e917d5f1b65194746e148aebbb6ab87895727d005c39a833aa2e3d17006a08b8"
+  },
+  {
+   "file": "4.life-patterns/love-maths.md",
+   "page": "v1/book/life-patterns/love-maths.html",
+   "title": "Love Maths",
+   "part": "Life Patterns",
+   "kind": "outline",
+   "words": 47,
+   "markdown_sha256": "714a825fd130f6354dbb0b83f79fde4801b06368072a039cdeec04a7311f9603",
+   "main_sha256": "66415c9f1a9f1675eaaccacc623a90df3d697a0eba8cedbfffd7ab7c90882705"
+  },
+  {
+   "file": "4.life-patterns/mentors.md",
+   "page": "v1/book/life-patterns/mentors.html",
+   "title": "Mentors",
+   "part": "Life Patterns",
+   "kind": "outline",
+   "words": 114,
+   "markdown_sha256": "657199b6f461e5d0029aca83c98a2c64b04ad50ce3345cb865e78697eb2311a0",
+   "main_sha256": "401bf8f3250834dd68acdcfe2c757cf87ec0768657bc765390a479693c29fc7b"
+  },
+  {
+   "file": "4.life-patterns/nudge.md",
+   "page": "v1/book/life-patterns/nudge.html",
+   "title": "Nudge",
+   "part": "Life Patterns",
+   "kind": "outline",
+   "words": 33,
+   "markdown_sha256": "e961963a7dcb9bb14d20af6e7185182747c0b4b501c6bb59d1d5d7de59b6dca9",
+   "main_sha256": "f0c41e5c72fb114f48617e021a446e0f8befec3ef4bf6ca1828e002ac121d4af"
+  },
+  {
+   "file": "4.life-patterns/one-way-two-way-doors.md",
+   "page": "v1/book/life-patterns/one-way-two-way-doors.html",
+   "title": "One way and two way doors",
+   "part": "Life Patterns",
+   "kind": "outline",
+   "words": 148,
+   "markdown_sha256": "2d2a6274bba5ba3eb037f4c70f20b7084f81ffa3d7c40d018edb01429d045f1a",
+   "main_sha256": "020cafc054cad6f80c6f2970eaba1d81ccff77e36740f0ca567b27caf3274e92"
+  },
+  {
+   "file": "4.life-patterns/power-of-habits.md",
+   "page": "v1/book/life-patterns/power-of-habits.html",
+   "title": "Power of Habits",
+   "part": "Life Patterns",
+   "kind": "outline",
+   "words": 203,
+   "markdown_sha256": "7708379745f2dcf31e8786e2edc0e8df1c9d159537af06a70e9273022ae4d69f",
+   "main_sha256": "8e63f5f1b00f52fa2bcf358227f8fcaf7829572ea2a92bf2da5f8dea03918e9c"
+  },
+  {
+   "file": "4.life-patterns/publish-publish-publish.md",
+   "page": "v1/book/life-patterns/publish-publish-publish.html",
+   "title": "Publish, Publish Publish",
+   "part": "Life Patterns",
+   "kind": "outline",
+   "words": 59,
+   "markdown_sha256": "c8481bdcbdea0fb0d4f2c332aa830458d35e832b6ca0f7b59159445815694889",
+   "main_sha256": "b6b1989b94e9e9bf6398d732e9fdea3ebed61d2c3c1b77a42bc4053a923cda5a"
+  },
+  {
+   "file": "4.life-patterns/refactoring.md",
+   "page": "v1/book/life-patterns/refactoring.html",
+   "title": "Refactoring",
+   "part": "Life Patterns",
+   "kind": "outline",
+   "words": 14,
+   "markdown_sha256": "4fe5dac7ee6b54bf7927ee89e8030f3e96f8a2a43cc6a04385f7fab40dc3e2f5",
+   "main_sha256": "5e4dca6c0a7aba76acf98e0d2a25dee61404bb73bf72e681a37e5e3336c8587a"
+  },
+  {
+   "file": "4.life-patterns/start-with-why.md",
+   "page": "v1/book/life-patterns/start-with-why.html",
+   "title": "Start with Why",
+   "part": "Life Patterns",
+   "kind": "outline",
+   "words": 33,
+   "markdown_sha256": "04a9352a6f10ec2ecea35648b4e848b3c4ca28ed45a5bd83ee90ae8814cd434a",
+   "main_sha256": "bc58189792a343dda93106a978f59d927b9c69442023772755bf8fb79ee9fb44"
+  },
+  {
+   "file": "4.life-patterns/the-zone.md",
+   "page": "v1/book/life-patterns/the-zone.html",
+   "title": "The Zone",
+   "part": "Life Patterns",
+   "kind": "outline",
+   "words": 139,
+   "markdown_sha256": "fd906553cf37990d4fd032577b5dce839ad81482d504550f443b5f1b40ebef55",
+   "main_sha256": "7369f70e4b9f3eb7293405a19a26ce5f35108615452b2340523202f6587ed369"
+  },
+  {
+   "file": "4.life-patterns/thinking-as-programmer.md",
+   "page": "v1/book/life-patterns/thinking-as-programmer.html",
+   "title": "Thinking as programmer",
+   "part": "Life Patterns",
+   "kind": "outline",
+   "words": 12,
+   "markdown_sha256": "a37e1b9a7f7df6552274e9d951c7d9fbe528124bf2800ef6476a626b7cbd3cf4",
+   "main_sha256": "c3561fcba7846c82d0e7d13e5094d9eba6e8384e7cdc029e4deecbcf4fdf1451"
+  },
+  {
+   "file": "4.life-patterns/why-diversity-matters.md",
+   "page": "v1/book/life-patterns/why-diversity-matters.html",
+   "title": "Why diversity matters",
+   "part": "Life Patterns",
+   "kind": "outline",
+   "words": 280,
+   "markdown_sha256": "8d667a440b406e77faa351d9fc7292520e72ccb97694450c8b43cf27b2438494",
+   "main_sha256": "68a082dac6157e762ade4c4f3d4ebb9eb860e949c26fa36ecaf2d9bbd5e46a11"
+  },
+  {
+   "file": "4.life-patterns/workflows.md",
+   "page": "v1/book/life-patterns/workflows.html",
+   "title": "Workflows",
+   "part": "Life Patterns",
+   "kind": "outline",
+   "words": 69,
+   "markdown_sha256": "a42d8834f4bd18729f4f6523b67d4598de5df45e3d1cff3adb9bdd56ca7ef1b3",
+   "main_sha256": "f5535c6d949f74927dfe3d2d0c34eef97dcfeac4dd097ca07a1e1b3ce0700259"
+  },
+  {
+   "file": "10.misc/books-to-read.md",
+   "page": "v1/book/misc/books-to-read.html",
+   "title": "Books to read",
+   "part": "Misc",
+   "kind": "written",
+   "words": 46,
+   "markdown_sha256": "d7a9e0379ac2bcba042088ed2d077085d259aa2d85f82a0f6024b9faf7f33a81",
+   "main_sha256": "4c1f7a6cc204be60f6e27f672bf541d652ec5229ab5dcb051535659887af1cc3"
+  },
+  {
+   "file": "10.misc/diagrams-to-add.md",
+   "page": "v1/book/misc/diagrams-to-add.html",
+   "title": "Diagrams to add",
+   "part": "Misc",
+   "kind": "written",
+   "words": 15,
+   "markdown_sha256": "558bf8aabfa89d0335028801107ee19a64fbfe56f5e6912e49ad6fef1b0ed495",
+   "main_sha256": "ffe241965c9707f139860639bc9afdf1e44d4bc5cc9d6eab593a268930e9592a"
+  },
+  {
+   "file": "10.misc/gen-z-research.md",
+   "page": "v1/book/misc/gen-z-research.html",
+   "title": "Generation Z Research",
+   "part": "Misc",
+   "kind": "written",
+   "words": 76,
+   "markdown_sha256": "e581408cad22c1f51792c7e10870f16ebd43b265c1ebb0a58155e59c41fd9deb",
+   "main_sha256": "edec2d513b083cf5865ac2092837c4b87a859fde48088c23c6f57597a356869d"
+  },
+  {
+   "file": "10.misc/gen-z-digital-env.md",
+   "page": "v1/book/misc/gen-z-digital-env.html",
+   "title": "Gen Z digital environment",
+   "part": "Misc",
+   "kind": "outline",
+   "words": 54,
+   "markdown_sha256": "94809bc44e3a847d1d9f68a95eda17f3c26c570354a243238dcc8122fbd86f6f",
+   "main_sha256": "99efac72cb354a31ed1a0659032cd3bc4b992db72698271c6b7966b0688dcf9a"
+  },
+  {
+   "file": "10.misc/o2-platform.md",
+   "page": "v1/book/misc/o2-platform.html",
+   "title": "O2 Platform",
+   "part": "Misc",
+   "kind": "outline",
+   "words": 43,
+   "markdown_sha256": "3619729faf54c031a11fe65b8eb497c5f56cf13a343aa4ab33dc4e1a328fd7ad",
+   "main_sha256": "822586a43b6b06942ac398e353d9835cf837d5eedde4a156dc2dd261a9d3102d"
+  },
+  {
+   "file": "10.misc/stories-to-tell.md",
+   "page": "v1/book/misc/stories-to-tell.html",
+   "title": "Stories to tell",
+   "part": "Misc",
+   "kind": "outline",
+   "words": 91,
+   "markdown_sha256": "fdfb72d4af2c20a203b66993b80d991d6632f110c3316f36041412bda32f4964",
+   "main_sha256": "39ae64fa536e50e53645b36f6501dbb20b91ca4a022a98c265fe49d3e50e1c92"
+  },
+  {
+   "file": "10.misc/technium.md",
+   "page": "v1/book/misc/technium.html",
+   "title": "Technium",
+   "part": "Misc",
+   "kind": "outline",
+   "words": 51,
+   "markdown_sha256": "25d4c9a0c057fc0fc2f3c0eca0627330921637297e364ecfae2723299663006a",
+   "main_sha256": "db5bfd452edd4ec0d2bdbe1c43b7c04bca18f55dc58f0029a964566ce482e260"
+  },
+  {
+   "file": "10.misc/wait-but-why.md",
+   "page": "v1/book/misc/wait-but-why.html",
+   "title": "Wait but why",
+   "part": "Misc",
+   "kind": "outline",
+   "words": 27,
+   "markdown_sha256": "10160c4ce20802515ec415867fae2d9d7106155769a582103e8d7aba5b8229bb",
+   "main_sha256": "208aa5ea67f7beee47b51bef1c033438b9afe7701d75f806c333b31b791d86df"
+  }
+ ]
+}
