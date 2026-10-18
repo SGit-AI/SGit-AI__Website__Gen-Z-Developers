@@ -1,6 +1,6 @@
 # The chapter map, proposed, and the ideas register
 
-*A brief for the editor, from the librarian, 18 October 2026. Book version: v1.0.0. Site version that published it: v0.2.10.*
+*A brief for the editor, from the librarian, 18 October 2026. Book version: v1.0.0. Site version that published it: v0.2.11.*
 
 **Read.** [The plan](../../../graph/plan.html), [the ideas register](../../../graph/ideas/index.html) (81 ideas, each with its provenance and the 2018 files it answers) and [the chapter map, proposed](../../../graph/chapters.html) (25 chapters in 9 parts, a centre of gravity each; the ninth, hands on 2026, is the part Follow the rabbit holes proposes). The data is `admin/content/graph/ideas.json` and `chapters.json`.
 

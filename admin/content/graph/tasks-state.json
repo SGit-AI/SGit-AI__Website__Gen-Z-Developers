@@ -161,7 +161,7 @@
   },
   "start-from-the-storyline:editor:4": {
    "state": "done",
-   "evidence": "gen_map.py names places-of-highest-leverage, from-a-spreadsheet-to-a-folder-per-person, why-my-agents-do-not-run-on-my-laptop and who-owns-the-words (site v0.2.10)"
+   "evidence": "gen_map.py names places-of-highest-leverage, from-a-spreadsheet-to-a-folder-per-person, why-my-agents-do-not-run-on-my-laptop and who-owns-the-words (site v0.2.11)"
   },
   "start-from-the-storyline:editor:5": {
    "state": "open",
@@ -264,12 +264,12 @@
    "evidence": "002__the-title-the-subtitle-and-the-language.md does not mention Gen AI yet"
   },
   "generative-ai-not-ai:editor:4": {
-   "state": "open",
-   "evidence": "no image slide found"
+   "state": "blocked",
+   "evidence": "the image is found (site v0.2.10: slide 70 of Deterministic GenAI Output With Provenance, Lisbon 2024, Lee Brimelow's Starry Night extended with Generative Fill); the task is now to ask for it or remake it, which waits on Dinis's decision"
   },
   "follow-the-rabbit-holes:editor:1": {
    "state": "in-progress",
-   "evidence": "chapters.json has facts-and-the-record under Direction and judgement, with the five ideas from the article placed in it (site v0.2.10); the editor's map decides"
+   "evidence": "chapters.json has facts-and-the-record under Direction and judgement, with the five ideas from the article placed in it (site v0.2.11); the editor's map decides"
   },
   "follow-the-rabbit-holes:editor:2": {
    "state": "in-progress",

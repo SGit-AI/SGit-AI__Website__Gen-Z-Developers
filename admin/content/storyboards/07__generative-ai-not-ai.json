@@ -220,10 +220,10 @@
      "x": 0.5,
      "y": 680,
      "lines": [
-      "a photo of mountains at sunset",
-      "  + extend it to the right",
-      "  = more mountains, the same light,",
-      "    shadows the right way"
+      "Van Gogh's The Starry Night,",
+      "  extended on every side",
+      "  = more swirls, more stars,",
+      "    the same brushwork"
      ]
     }
    ],
@@ -243,8 +243,8 @@
      "says": "So text works the same way?"
     }
    ],
-   "note": "Outpainting (DALL-E, August 2022) and Generative Fill (Photoshop, May 2023).",
-   "source": "Generative AI, not AI, The image that made it click"
+   "note": "Slide 70 of Dinis's Lisbon keynote (28 June 2024), 'The image that caused my GenAI Paradigm Shift': Lee Brimelow's post, using Generative Fill and Adobe Firefly to extend The Starry Night.",
+   "source": "Generative AI, not AI, The image that made it click; Deterministic GenAI Output With Provenance, slide 70"
   },
   {
    "kind": "scene",
