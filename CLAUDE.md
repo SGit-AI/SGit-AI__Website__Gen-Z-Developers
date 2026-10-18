@@ -53,6 +53,13 @@ their working copies in the public vault.
   (`/decisions/`), one per decision, never deleted. Decisions on the book's **text**, and the text issues
   themselves, live in the vault (`board/`), not here (decision 005).
 
+## Storyboards
+
+A storyboard is data (`admin/content/storyboards/NN__<slug>.json`, with the cast in `cast.json`), drawn in the browser
+by `assets/storyboard.js` with Rough.js; there is no image file to edit. The build refuses a character not in the cast,
+an unknown pose, mood or kind, and, when a storyboard names a `quote_source`, any Guide line or quote card that is not
+in it word for word (a panel that is not meant as a quote says so with `not_a_quote` and a note).
+
 ## Published and drafts
 
 What the 2018 build published is a rule, not a judgement: a file with `status: content` in its front matter

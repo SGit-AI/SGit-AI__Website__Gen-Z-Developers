@@ -51,6 +51,7 @@ read/                 generated shell + assets/reader.js, reader.css: the reader
 contributors/         generated: who contributed to the first edition, from git and GitHub (admin/content/contributors.json)
 map/                  generated: one row per 2018 file, the newsroom articles that answer it, the gap
 briefs/               generated: the articles and notes above, rendered
+storyboards/          generated: the cast sheet and a swipe deck per storyboard, drawn in the browser from admin/content/storyboards/*.json
 articles/             generated: this site's own articles (admin/content/articles/), each with its markdown twin; the briefs for the roles
 team/                 the roles: reviewer, editor, publisher, journalist
   ISSUES.md           how the roles keep issues (the folder is the status)
@@ -66,7 +67,7 @@ admin/
   build/build.py      writes every page, the manifests, the frozen markdown, book.json, llms.txt, the sitemap
   build/page_versions.py  the newsroom's version differ (newsroom v0.12.113), copied, not rewritten
   build/validate.js   the gate
-  content/            the authored data: map.json, briefs/, articles/, book/versions.json, book/print-toc.json (the print
+  content/            the authored data: map.json, briefs/, articles/, agent-articles/, decisions/, storyboards/, newsroom/survey.json, book/versions.json, book/print-toc.json (the print
                       PDF's table of contents, matched to the files), contributors.json, github/ (the raw record of
                       the 2018 repository), versions.json, vault.json
   index.html, versions.html   admin and the narrated release history

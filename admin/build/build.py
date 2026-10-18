@@ -88,6 +88,7 @@ NAV = [
     ("The map", "map/index.html"),
     ("Articles", "articles/index.html"),
     ("Decisions", "decisions/index.html"),
+    ("Storyboards", "storyboards/index.html"),
     ("The briefs", "briefs/index.html"),
     ("The team", "team/index.html"),
     ("The vault", "vault/index.html"),
@@ -848,6 +849,150 @@ def build_decisions():
     page("decisions/index.html", "Decisions", body, "Dinis's decisions on how the book is made, versioned and published.", crumbs=(("Decisions", "decisions/index.html"),))
 
 
+# ------------------------------------------------------------------ the newsroom, surveyed
+def build_newsroom_survey():
+    """admin/content/newsroom/survey.json: every newsroom article read and classified for the book (bring, content,
+    context, skip) with the reason, the topics the book should cover and the articles that feed each, the concepts with
+    the article that defines each, and the gaps. Written by the journalist's survey; rendered at map/newsroom.html for
+    Dinis to read and decide. A decision on an article is his; the class is a proposal."""
+    f = ROOT / "admin/content/newsroom/survey.json"
+    if not f.exists():
+        return None
+    d = json.loads(f.read_text(encoding="utf-8"))
+    arts = d["articles"]
+    by = {}
+    for a in arts:
+        by.setdefault(a["class"], []).append(a)
+    url = lambda slug: f"https://newsroom.sgit.ai/articles/{slug}.html"
+    title_of = {a["slug"]: a["title"].split(":")[0] for a in arts}
+    link = lambda slug: f'<a href="{url(slug)}">{esc(title_of.get(slug, slug))}</a>'
+    order = [("bring", "Bring: becomes, or seeds, material in the book"), ("content", "Content: a specific example, number, story or quote to take"),
+             ("context", "Context: background for the agents writing the book"), ("skip", "Skip: not for this reader")]
+    counts = " ".join(f'<span class="stat"><b>{len(by.get(k, []))}</b><span>{k}</span></span>' for k, _ in order)
+    topics = "".join(f'<tr><td><b>{esc(t["title"])}</b><br><span class="small dim">{esc(t.get("why", ""))}</span></td>'
+                     f'<td class="small">{", ".join(link(s) for s in t["articles"])}</td>'
+                     f'<td class="small">{esc("; ".join(t.get("answers_2018", [])))}</td></tr>' for t in d["topics"])
+    concepts = "".join(f'<tr><td><b>{esc(c["term"])}</b></td><td class="small">{esc(c["definition"])}</td><td class="small">{link(c["defined_in"])}</td></tr>' for c in d["concepts"])
+    gaps = "".join(f"<li>{esc(g)}</li>" for g in d["gaps"])
+    groups = ""
+    for k, label in order:
+        rows = "".join(f'<tr id="{esc(a["slug"])}"><td><a href="{url(a["slug"])}">{esc(a["title"].split(":")[0])}</a><br><span class="small dim">{esc(a.get("date", ""))}{" &middot; in the map" if a.get("in_map") else ""}</span></td>'
+                       f'<td class="small">{esc(a.get("serves", ""))}</td><td class="small">{esc(a.get("why", ""))}</td></tr>'
+                       for a in sorted(by.get(k, []), key=lambda a: a.get("rank", 999)))
+        groups += (f'<h3 id="{k}">{esc(label)} ({len(by.get(k, []))})</h3><div class="tablewrap"><table class="map"><thead><tr><th>Article</th><th>Serves</th><th>Why</th></tr></thead>'
+                   f'<tbody>{rows}</tbody></table></div>')
+    body = f"""<h1>The newsroom, surveyed</h1>
+<p class="lede">Every article on newsroom.sgit.ai, read for this book and given a proposed class, with the reason: what to bring, what content to take, what is background for the agents, and what to skip. Then the topics the second edition should cover, the concepts it should introduce, and the gaps no article covers yet. The classes are proposals; the decisions are Dinis's.</p>
+<p>{counts} <span class="stat"><b>{len(arts)}</b><span>articles</span></span></p>
+<p class="small dim">{esc(d.get("note", ""))} Counted on {esc(d.get("counted_on", ""))}. The data is <a href="../admin/content/newsroom/survey.json">admin/content/newsroom/survey.json</a>; the argument is in <a href="../articles/start-from-the-storyline.html">start from the storyline</a>.</p>
+<h2 id="topics">The topics ({len(d["topics"])})</h2>
+<div class="tablewrap"><table class="map"><thead><tr><th>Topic</th><th>Articles that feed it</th><th>2018 chapters it answers</th></tr></thead><tbody>{topics}</tbody></table></div>
+<h2 id="concepts">The concepts ({len(d["concepts"])})</h2>
+<div class="tablewrap"><table class="map"><thead><tr><th>Term</th><th>As the newsroom uses it</th><th>Defined in</th></tr></thead><tbody>{concepts}</tbody></table></div>
+<h2 id="gaps">The gaps ({len(d["gaps"])})</h2>
+<p class="small dim">What a newcomer needs that no article covers yet: each is a candidate for a new article first, then a chapter.</p>
+<ul>{gaps}</ul>
+<p class="small dim">What the second pass, over the articles imported from sgit.ai, found that fills some of them:</p>
+<ul class="small">{"".join(f"<li>{esc(g)}</li>" for g in d.get("gaps_filled_by_imported", []))}</ul>
+<h2 id="articles">Every article, by class</h2>
+{groups}
+"""
+    page("map/newsroom.html", "The newsroom, surveyed", body, "Every newsroom article read for the book: bring, content, context or skip, the topics, the concepts and the gaps.",
+         crumbs=(("The map", "map/index.html"), ("The newsroom, surveyed", "map/newsroom.html")), wide=True)
+    return d
+
+
+# ------------------------------------------------------------------ storyboards
+SB_KINDS = {"cover", "scene", "evidence", "punchline", "spectrum"}
+SB_POSES = {"stand", "point", "wave", "arms-up", "shrug", "think", "sit"}
+SB_MOODS = {"neutral", "happy", "worried", "surprised", "thinking", "determined"}
+SB_HEAD = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+           '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Patrick+Hand&display=swap">\n')
+
+
+def build_storyboards():
+    """Storyboards are data, drawn by assets/storyboard.js with Rough.js (vendored, MIT): admin/content/storyboards/cast.json
+    and NN__<slug>.json, one storyboard each. The build checks every scene against the cast and the vocabulary the renderer
+    knows, writes a swipe deck per storyboard and the cast sheet, and copies the JSON beside them for agents."""
+    src = ROOT / "admin/content/storyboards"
+    cast = json.loads((src / "cast.json").read_text(encoding="utf-8"))
+    ids = {c["id"] for c in cast["characters"]}
+    head = SB_HEAD + '<link rel="stylesheet" href="../assets/storyboard.css">\n'
+    scripts = '<script src="../assets/vendor/rough-4.6.6.js"></script><script src="../assets/storyboard.js"></script>'
+    boards = []
+    for f in sorted(src.glob("[0-9][0-9]__*.json")):
+        sb = json.loads(f.read_text(encoding="utf-8"))
+        for i, sc in enumerate(sb["scenes"], 1):
+            where = f"{f.name} scene {i}"
+            if sc.get("kind", "scene") not in SB_KINDS:
+                sys.exit(f"build: {where}: unknown kind {sc.get('kind')}")
+            for c in sc.get("cast", []):
+                if c["who"] not in ids:
+                    sys.exit(f"build: {where}: {c['who']} is not in the cast")
+                if c.get("pose", "stand") not in SB_POSES or c.get("mood", "neutral") not in SB_MOODS:
+                    sys.exit(f"build: {where}: unknown pose or mood for {c['who']}")
+            if sc.get("kind") == "evidence" and not (sc.get("evidence", {}).get("quote") or sc.get("evidence", {}).get("bars")):
+                sys.exit(f"build: {where}: evidence needs a quote or bars")
+            if sb.get("quote_source") and not sc.get("not_a_quote"):
+                # the Guide speaks the book's words: every quote card and Guide line must be in the source, word for word
+                norm = lambda t: re.sub(r"\s+", " ", t.replace("**", "").replace("\u2019", "'").replace("\u2018", "'")).strip()
+                text = norm((ROOT / sb["quote_source"]).read_text(encoding="utf-8"))
+                said = [sc.get("evidence", {}).get("quote")] + [c.get("says") for c in sc.get("cast", []) if c["who"] == "guide"]
+                for q in filter(None, said):
+                    if norm(q) not in text:
+                        sys.exit(f"build: {where}: \"{q[:60]}\" is not in {sb['quote_source']} word for word (mark the scene not_a_quote if it is not meant to be)")
+        slug = sb["slug"]
+        rel = f"storyboards/{slug}.html"
+        payload = json.dumps({"storyboard": sb, "cast": cast}, ensure_ascii=False).replace("</", "<\\/")
+        rows = "".join(f'<li><a href="#scene-{i}">{i}</a>. {esc(sc.get("caption") or sc.get("punchline") or sc.get("title") or "")}'
+                       f' <span class="small dim">({esc(sc.get("kind", "scene"))}; {esc(sc.get("source", ""))})</span></li>' for i, sc in enumerate(sb["scenes"], 1))
+        body = f"""<h1>{esc(sb["title"])}</h1>
+<p class="lede">{esc(sb["subtitle"])}</p>
+<p class="small dim">Status: {esc(sb["status"])} &middot; book {esc(sb["book_version"])} &middot; {esc(sb["by"])}. {esc(sb.get("rule", ""))} Swipe, use the arrow keys, or the buttons; <b>Notes</b> shows what each panel is for and its source; <b>Full screen</b> for an iPad.</p>
+<div class="sb-deck"><div class="sb-track"></div>
+<div class="sb-bar"><button type="button" class="sb-prev" aria-label="Previous panel">&larr;</button><span class="sb-count"></span><button type="button" class="sb-next" aria-label="Next panel">&rarr;</button><button type="button" class="sb-notes-toggle">Notes</button><button type="button" class="sb-full">Full screen</button></div>
+<div class="sb-notes"></div>
+<script type="application/json">{payload}</script></div>
+<h2 id="panels">The panels</h2>
+<ol class="small">{rows}</ol>
+<p class="small dim">The data is <a href="{slug}.json">{slug}.json</a> and <a href="cast.json">cast.json</a>; the panels are drawn in your browser from it, by <code>assets/storyboard.js</code> with Rough.js. Nothing is an image file: change the JSON, rebuild, and every panel is redrawn.</p>
+{scripts}
+"""
+        page(rel, sb["title"], body, sb["subtitle"], crumbs=(("Storyboards", "storyboards/index.html"), (sb["title"], rel)), extra_head=head, wide=True)
+        write(f"storyboards/{slug}.json", f.read_text(encoding="utf-8"))
+        boards.append((rel, sb))
+    write("storyboards/cast.json", (src / "cast.json").read_text(encoding="utf-8"))
+    payload = json.dumps({"cast": cast}, ensure_ascii=False).replace("</", "<\\/")
+    poses = {"agent": ("wave,point,think", "happy,happy,thinking")}
+    cards = "".join(
+        f'<div class="card"><svg data-who="{esc(c["id"])}" data-poses="{poses.get(c["id"], ("stand,point,think",))[0]}" '
+        f'data-moods="{poses.get(c["id"], ("", "happy,determined,thinking"))[1]}"></svg>'
+        f'<h3>{esc(c["name"])} <span class="small dim">{esc(c["pronouns"])}{", " + str(c["age"]) if c.get("age") else ""}</span></h3>'
+        f'<p class="small"><i>&ldquo;{esc(c["line"])}&rdquo;</i></p><dl><dt>Role</dt><dd>{esc(c["role"])}</dd><dt>Stands for</dt><dd>{esc(c["stands_for"])}</dd>'
+        f'<dt>Personality</dt><dd>{esc(c["personality"])}</dd><dt>Wants / fears</dt><dd>{esc(c["wants"])} / {esc(c["fears"])}</dd></dl></div>'
+        for c in cast["characters"])
+    items = "".join(f'<li><a href="{rel[12:]}"><b>{esc(sb["title"])}</b></a>: {esc(sb["subtitle"])} <span class="small dim">({len(sb["scenes"])} panels, {esc(sb["status"])})</span></li>' for rel, sb in boards)
+    body = f"""<h1>Storyboards</h1>
+<p class="lede">The book as a sequence of panels: the punchline, the concepts, the evidence and the people they are for, one panel at a time, to flick through on a tablet before a word of a chapter is written. A storyboard is data and the panels are drawn from it by code, so a panel is corrected by changing a line, not by redrawing a picture.</p>
+<h2>The storyboards</h2>
+<ol class="articles">{items}</ol>
+<h2 id="cast">The cast</h2>
+<p class="small dim">{esc(cast["what"])}</p>
+<div class="sb-cast sb-cast-grid"><script type="application/json">{payload}</script>{cards}</div>
+<h2 id="how">How it works</h2>
+<ul class="small">
+<li><b>The data.</b> <code>admin/content/storyboards/cast.json</code>, and one <code>NN__&lt;slug&gt;.json</code> per storyboard: scenes of kind cover, scene, evidence (a quote card or a bar chart), punchline or spectrum; each with a caption, the people in it (who, where, pose, mood, what they say or think), props, a note on what the panel is for, and its source.</li>
+<li><b>The drawing.</b> <code>assets/storyboard.js</code> draws people, bubbles, captions, props and charts as SVG with <a href="https://roughjs.com">Rough.js</a> (MIT, vendored in <code>assets/vendor/</code>), so everything looks sketched; a fixed seed per panel keeps the wobble the same on every load. In the deck the strokes draw themselves and the people and bubbles arrive in order.</li>
+<li><b>The checks.</b> The build refuses a scene whose character is not in the cast, an unknown pose, mood or kind, or an evidence panel with nothing in it.</li>
+<li><b>No generated images.</b> Nothing here is drawn by an image model; that keeps every panel correctable, versioned and free of licence questions. Image models can still be given a storyboard as a brief, the way riskmandate.ai's stories do.</li>
+</ul>
+<script src="../assets/vendor/rough-4.6.6.js"></script><script src="../assets/storyboard.js"></script>
+"""
+    page("storyboards/index.html", "Storyboards", body, "The book as storyboards, drawn from data: the cast, and a deck per part.",
+         crumbs=(("Storyboards", "storyboards/index.html"),), extra_head=SB_HEAD + '<link rel="stylesheet" href="../assets/storyboard.css">\n', wide=True)
+    return boards
+
+
 # ------------------------------------------------------------------ team
 def build_team():
     roles = []
@@ -1084,6 +1229,8 @@ def main():
     roles = build_team()
     vault = build_vault()
     articles = build_articles()
+    build_storyboards()
+    build_newsroom_survey()
     build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib, articles)
     print(f"build: {VERSION}, {len(flat)} chapters, {len([w for w in written if w.endswith('.html')])} pages, {len(written)} files written")
 
