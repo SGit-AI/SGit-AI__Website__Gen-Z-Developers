@@ -132,3 +132,47 @@ footer.site a{color:var(--dim)}
   nav.site,footer.site,.prevnext,.crumbs{display:none}
   body{background:#fff}
 }
+
+/* ---------- the home page: the cover and the first edition's record (v0.1.1) ---------- */
+.hero{background:#0c2a3d;color:#e6e9ec;border-radius:14px;padding:2.6rem 2.4rem 2.2rem;margin:.4rem 0 2.2rem;display:flex;flex-wrap:wrap;gap:2.6rem;align-items:flex-start}
+.hero a{color:#4ec2ea}
+.hero .cover{flex:0 0 300px;display:block}
+.hero .cover img{width:300px;height:auto;display:block;border:0;border-radius:4px;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.hero .hero-text{flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:.9rem}
+.hero .kicker{margin:0;font-size:.88rem;color:#a8b4bd;display:flex;align-items:center;gap:.4rem;flex-wrap:wrap}
+.hero .sw{display:inline-block;width:14px;height:14px;border-radius:2px}
+.hero .sw.g{background:#7bc08f}.hero .sw.y{background:#e8b64a}.hero .sw.t{background:#3b9fb0}.hero .sw.r{background:#e5625b}
+.hero h1{margin:0;font-size:3.2rem;line-height:1.02;color:#fff}
+.hero .sub{margin:0;font-size:1.3rem;color:#c9d3da}
+.hero p{margin:0;color:#c9d3da;max-width:640px}
+.cover-lines{list-style:none;margin:.3rem 0 0;padding:0;columns:2;column-gap:2rem;font-family:"Helvetica Neue Condensed","Arial Narrow","Roboto Condensed",var(--sans);font-stretch:condensed;font-weight:700;text-transform:uppercase;font-size:1.3rem;line-height:1.35;letter-spacing:.01em;color:#e6e9ec}
+.cover-lines li{break-inside:avoid}
+.ctas{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:.4rem}
+.btn{display:inline-block;border:1px solid #4ec2ea;color:#e6e9ec;font-weight:600;padding:.7rem 1.2rem;border-radius:6px;min-height:44px}
+.btn:hover{text-decoration:none;background:rgba(78,194,234,.12)}
+.btn.primary{background:#4ec2ea;color:#0c2a3d;font-weight:700}
+.btn.primary:hover{background:#8fdcf5}
+.cards.editions .card{border-top:4px solid var(--line2)}
+.cards.editions .card.amazon{border-top-color:#e5625b}.cards.editions .card.leanpub{border-top-color:#3b9fb0}.cards.editions .card.github{border-top-color:#7bc08f}
+a.card{color:var(--fg)} a.card:hover{text-decoration:none;border-color:var(--accent)} a.card .more{color:var(--accent-dk);font-weight:600;font-size:.88rem;margin-top:auto}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem;margin:0 0 .6rem}
+.quote{margin:0;padding:.9rem 1.1rem;border-left:3px solid #e8b64a;background:var(--panel);border-radius:0 10px 10px 0;font-style:italic;color:#2b2e35}
+.quote span{display:block;margin-top:.4rem;font-style:normal;font-size:.85rem;color:var(--dim)}
+.making{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1rem;margin:1.2rem 0}
+.making .card.big{grid-row:span 2;background:#0c2a3d;color:#e6e9ec;border-color:#0c2a3d;padding:1.4rem}
+.making .card.big h3{color:#fff;font-size:1.5rem;line-height:1.15}
+.making .card.big p{color:#c9d3da;font-size:.95rem}
+.making .card.big .k{color:#a8b4bd}
+.making .card.big .more,.making .card.big a{color:#4ec2ea}
+.making .card.big .stats{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:.4rem}
+.making .card.big .stat{background:transparent;border:0;padding:0;margin:0}
+.making .card.big .stat b{color:#4ec2ea;font-size:1.6rem}.making .card.big .stat span{color:#a8b4bd}
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem;margin-top:1rem}
+.twocol h2{margin-top:1rem;font-size:1.3rem}
+.twocol ul,.twocol ol{padding-left:1.3rem}
+.twocol li{margin:.3rem 0}
+.toc-head{display:flex;gap:1.6rem;align-items:flex-start;flex-wrap:wrap}
+.toc-head .thumb{width:150px;height:auto;border-radius:4px;box-shadow:0 10px 24px rgba(12,42,61,.25);flex:0 0 auto}
+.toc-head > div{flex:1 1 480px;min-width:0}
+@media (max-width:900px){.making{grid-template-columns:1fr 1fr}.making .card.big{grid-column:span 2;grid-row:auto}.twocol{grid-template-columns:1fr}}
+@media (max-width:640px){.hero{padding:1.6rem 1.2rem}.hero h1{font-size:2.2rem}.cover-lines{columns:1}.hero .cover{flex-basis:220px}.hero .cover img{width:220px}.making{grid-template-columns:1fr}.making .card.big{grid-column:auto}}

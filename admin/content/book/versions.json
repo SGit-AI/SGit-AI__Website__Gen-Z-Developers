@@ -3,9 +3,9 @@
  "versions": [
   {
    "version": "v1.0.0",
-   "date": "2018-10-08",
+   "date": "2018-09-30",
    "site": "v0.1.0",
-   "where": "Leanpub (60% complete, 136 pages, 30,695 words), Amazon (printed early release, September 2018), and DinisCruz/Book_Generation_Z_Developer at 61886444fe5ab118ab18726147826ab05f794edc",
+   "where": "Amazon paperback (139 pages, published 30 September 2018, ISBN-10 1724194607), Leanpub (60% complete, 136 pages, 30,695 words, last updated 8 October 2018), and DinisCruz/Book_Generation_Z_Developer at 61886444fe5ab118ab18726147826ab05f794edc",
    "by": "Dinis Cruz, with content fixes and contributions by Mike Eriksson, Michael Chadwick, Claudio Camerino, Mark Regensberg and Sarah Cruz (the 2018 change log)",
    "why": "The first edition as released: imported verbatim from the 2018 repository on 2026-10-18 and frozen. The Leanpub build left the 90 outlines out; this version keeps them, because the second edition starts from them.",
    "text_sha256": "601ac471f0943cfdcaf48c2ee73129b805ce6bf6ae13910364a4c288c5033d96"

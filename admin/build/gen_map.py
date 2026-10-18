@@ -130,7 +130,7 @@ ARTICLES = {
 # A gap of "" means the articles answer it; "none" means no article yet; anything else says what is missing.
 READING = {
     # introduction
-    "1.introduction/_index.md": ([], "Keep. Rewrite the frame: everyone who can brief an agent is a developer now; the seven lines on the cover stay (Generation Z Developers, again)."),
+    "1.introduction/_index.md": ([], "Keep. Rewrite the frame: everyone who can brief an agent is a developer now; the eight lines on the cover stay (Generation Z Developers, again, which counted seven; the cover has eight)."),
     "1.introduction/generation-z.md": (["generation-z-developers-again", "hired-for-the-workflow"], "then-now: the oldest are 30 now, not 22; the worry about curiosity becomes the worry about fear of AI among young Europeans."),
     "1.introduction/how-this -book-was-created.md": (["short-punchy-and-co-written", "a-website-to-finish-the-book", "books-from-articles", "how-much-of-this-did-i-write"], "Rewrite as the last part of the book: how the second edition was made, co-written with Claude, with the memo-to-word ratio."),
     "1.introduction/how-to-get-a-job.md": (["act-as-the-job-you-want", "hired-for-the-workflow"], "then-now: the list of competitive advantages (Jira, WallabyJs, AWS) dates; the one advantage now is running agentic workflows."),

@@ -1,6 +1,6 @@
 # gen-z-developers.sgit.ai
 
-> The website for finishing the second edition of Generation Z Developers (Dinis Cruz, 2018). The repository holds the official versions of the book; a public vault holds the working versions. Site v0.1.0.
+> The website for finishing the second edition of Generation Z Developers (Dinis Cruz, 2018). The repository holds the official versions of the book; a public vault holds the working versions. Site v0.1.1.
 
 ## The rule
 The repository holds the official versions; the vault holds the working versions. v1.0.0 is the 2018 first edition as released, frozen. A version moves from the vault to the repository when signed off, and the versions page shows the delta block by block.
@@ -148,6 +148,11 @@ The repository holds the official versions; the vault holds the working versions
 - [Stories to tell](https://gen-z-developers.sgit.ai/v1/book/misc/stories-to-tell.html): outline, 91 words, part Misc
 - [Technium](https://gen-z-developers.sgit.ai/v1/book/misc/technium.html): outline, 51 words, part Misc
 - [Wait but why](https://gen-z-developers.sgit.ai/v1/book/misc/wait-but-why.html): outline, 27 words, part Misc
+
+## The first edition, where it lives
+- Paperback on Amazon: https://www.amazon.co.uk/Gen-Developers-concepts-generation-developers/dp/1724194607 (139 pages, published 30 September 2018, ISBN-10 1724194607)
+- Leanpub, free to read online: https://leanpub.com/generation-z (60% complete, 465 readers, 30695 words)
+- The cover's eight lines: Question everything; Make fact based decisions; Understand the history of tech; Learn how to learn; Understand what game is being played; Develop intellectual curiosity; Look under the hood; Shake things up
 
 ## The source
 - 2018 repository: https://github.com/DinisCruz/Book_Generation_Z_Developer at 61886444fe5ab118ab18726147826ab05f794edc

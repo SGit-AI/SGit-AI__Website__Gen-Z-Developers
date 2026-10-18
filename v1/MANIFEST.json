@@ -1,7 +1,7 @@
 {
  "what": "v1 is the first edition of Generation Z Developers as released in 2018, frozen. Nothing under v1/content/ or v1/images/ changes except to fix a copy error; v1/book/ and v1/versions/ are generated from them.",
  "version": "v1.0.0",
- "released": "2018-09",
+ "released": "2018-09-30",
  "last_content_change": "2018-10-08",
  "frozen_on": "2026-10-18",
  "source": {

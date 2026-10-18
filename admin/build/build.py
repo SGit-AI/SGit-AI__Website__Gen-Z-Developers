@@ -48,6 +48,20 @@ TODAY = date.today().isoformat()
 CONTENT = ROOT / "v1/content"
 SOURCE_REPO = "https://github.com/DinisCruz/Book_Generation_Z_Developer"
 SOURCE_COMMIT = "61886444fe5ab118ab18726147826ab05f794edc"
+# The first edition's public record, read on 18 October 2026. The cover (v1/images/title_page.png) carries EIGHT
+# lines, not the seven the newsroom article counted: "Look under the hood" is the one it missed.
+FIRST_EDITION = {
+    "amazon": {"url": "https://www.amazon.co.uk/Gen-Developers-concepts-generation-developers/dp/1724194607",
+               "title": "Gen Z Developers", "pages": 139, "published": "30 September 2018", "isbn10": "1724194607",
+               "size": "15.24 × 22.86 cm", "rating": "one five-star review"},
+    "leanpub": {"url": "https://leanpub.com/generation-z", "title": "Generation Z Developers", "price": "free to read online, suggested price $10",
+                "complete": "60%", "updated": "8 October 2018", "readers": 465, "pages": 136, "words": 30695, "formats": "PDF and EPUB"},
+    "github": {"url": SOURCE_REPO, "files": 138, "outlines": 90},
+    "cover_lines": ["Question everything", "Make fact based decisions", "Understand the history of tech", "Learn how to learn",
+                    "Understand what game is being played", "Develop intellectual curiosity", "Look under the hood", "Shake things up"],
+    "quotes": [("Amazing read for anyone new to, or wanting to get into programming. Brilliant background primer, not just for Gen Z.", "Kevin Fielder, on the Amazon listing"),
+               ("This book teaches young developers how to become a developer. I wish I had this type of book when I started my career.", "Matt Parsons, on the Amazon listing")],
+}
 
 PARTS = [  # directory, slug, title, the Hugo weight that ordered it
     ("1.introduction", "introduction", "Introduction"),
@@ -287,10 +301,14 @@ def build_book(parts, map_rows):
         intro = f'<p class="small dim">{esc(plain[:220])}&hellip;</p>' if len(plain) > 40 else ""
         toc.append(f'<li id="{p["slug"]}"><div class="part"><span class="n">{pi + 1}</span>{esc(p["title"])} '
                    f'<span class="w">{len(p["chapters"])} chapters, {sum(1 for c in p["chapters"] if not c["outline"])} written</span></div>{intro}<ol>{items}</ol></li>')
-    body = f"""<h1>Generation Z Developers <span class="badge frozen">v1.0.0 &middot; 2018 &middot; frozen</span></h1>
+    fe = FIRST_EDITION
+    body = f"""<div class="toc-head"><a href="../images/title_page.png"><img class="thumb" src="../images/title_page.png" alt="The cover of Gen Z Developers, early release, September 2018" width="150" height="227"></a><div>
+<h1>Generation Z Developers <span class="badge frozen">v1.0.0 &middot; 2018 &middot; frozen</span></h1>
 <p class="lede">Key concepts and ideas for the next generation of developers. The first edition, as released: September 2018 on Leanpub at 60% complete, last updated 8 October 2018, and the same text on Amazon. This is the official version this repository holds; nothing in it changes. <a href="../versions/index.html">The versions page</a> records it, and will show the delta to the next one.</p>
 <p><span class="stat"><b>{len(flat)}</b><span>chapters</span></span> <span class="stat"><b>{n_written}</b><span>written</span></span> <span class="stat"><b>{n_outline}</b><span>outlines</span></span> <span class="stat"><b>{total_words:,}</b><span>words in the source</span></span> <span class="stat"><b>8</b><span>parts</span></span></p>
-<p><a href="single.html">Read it on one page</a> &middot; <a href="../versions/v1.0.0.md">the frozen markdown</a> &middot; <a href="../../map/index.html">the map to the newsroom articles</a> &middot; <a href="{SOURCE_REPO}">the 2018 repository</a> &middot; <a href="https://leanpub.com/generation-z">Leanpub</a></p>
+<p><a href="single.html">Read it on one page</a> &middot; <a href="../versions/v1.0.0.md">the frozen markdown</a> &middot; <a href="../../map/index.html">the map to the newsroom articles</a></p>
+<p class="small">Where the first edition lives: <a href="{fe["amazon"]["url"]}">the paperback on Amazon</a> ({fe["amazon"]["pages"]} pages, published {fe["amazon"]["published"]}, ISBN-10 {fe["amazon"]["isbn10"]}) &middot; <a href="{fe["leanpub"]["url"]}">Leanpub</a> ({fe["leanpub"]["price"]}; {fe["leanpub"]["complete"]} complete, {fe["leanpub"]["readers"]} readers, {fe["leanpub"]["words"]:,} words) &middot; <a href="{SOURCE_REPO}">the source on GitHub</a>.</p>
+</div></div>
 <div class="note">The 2018 site showed, in each part, the chapters with text first and the outlines after, and this table keeps that order. An <span class="badge outline">outline</span> is a title and "Topics to cover and ideas": {n_outline} of the {len(flat)} chapters, and with the outline template itself, 90 of the 138 files. The second edition fills them from the newsroom's articles; <a href="../../map/index.html">the map</a> says which.</div>
 <ul class="toc">{"".join(toc)}</ul>
 """
@@ -345,7 +363,7 @@ def build_versions(frozen_md, parts):
 <ul>
 <li>The repository <a href="{SOURCE_REPO}">DinisCruz/Book_Generation_Z_Developer</a> at commit <code>{SOURCE_COMMIT[:12]}</code> (1 March 2024, a README change; the content was last changed in October 2018). Its <code>content/</code> folder is copied verbatim to <a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers/tree/dev/v1/content">v1/content/</a> and its <code>static/images/</code> to <a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers/tree/dev/v1/images">v1/images/</a>: 138 markdown files, 90 of them outlines.</li>
 <li><a href="https://leanpub.com/generation-z">Leanpub</a>: "Key concepts and ideas for the next generation of developers", 60% complete, 136 pages, 30,695 words, last updated 8 October 2018, 465 readers (read 18 October 2026). The Leanpub build left the outlines out; this site shows them, because the second edition starts from them.</li>
-<li>Amazon: <a href="https://www.amazon.co.uk/Gen-Developers-concepts-generation-developers/dp/1724194607">Gen Z Developers</a>, the printed early release of September 2018.</li>
+<li>Amazon: <a href="{FIRST_EDITION["amazon"]["url"]}">Gen Z Developers</a>, the paperback: {FIRST_EDITION["amazon"]["pages"]} pages, published {FIRST_EDITION["amazon"]["published"]}, ISBN-10 {FIRST_EDITION["amazon"]["isbn10"]}, the early-release cover of September 2018 with its eight lines. That publication date is the date of v1.0.0; 8 October 2018 is the last change to the text, on Leanpub and in the repository.</li>
 </ul>
 <h2 id="leanpub">The 2018 change log, v0.30 to v0.60</h2>
 <p class="small dim">As the book's own <code>_manuscript/change-log.md</code> records it. The contributors it names are to be credited in the second edition, with their permission.</p>
@@ -491,31 +509,56 @@ def build_vault():
 def build_home(parts, flat, map_doc, briefs, roles, vault):
     c = map_doc["counts"]
     six = [b for b in briefs if "__note-" not in b[0]]
-    body = f"""<h1>Generation Z Developers</h1>
-<p class="lede">The website for finishing the second edition of Dinis Cruz's 2018 book: <b>the repository holds the official versions, the vault holds the working versions.</b> The first edition is here exactly as released; everything after it is worked on in a public vault and moves here when signed off, with a delta between every two versions.</p>
-<div class="cards">
-<div class="card"><span class="k">the book</span><h3><a href="v1/book/index.html">v1.0.0, 2018, as released</a></h3><p>{len(flat)} chapters in 8 parts, {c["written"]} written and {c["outline"]} outlines, browsable chapter by chapter or <a href="v1/book/single.html">on one page</a>.</p><a class="more" href="v1/book/index.html">Read it &rarr;</a></div>
-<div class="card"><span class="k">versions</span><h3><a href="v1/versions/index.html">One version so far</a></h3><p>Where v1.0.0 comes from, the 2018 change log, and the page that will carry the block-by-block delta to v2.</p><a class="more" href="v1/versions/index.html">The versions &rarr;</a></div>
-<div class="card"><span class="k">the map</span><h3><a href="map/index.html">{c["files"]} files, {c["answered_by_articles"]} answered</a></h3><p>Every 2018 chapter and outline, the newsroom articles that have since answered it, and the gap. The second edition's first deliverable.</p><a class="more" href="map/index.html">The map &rarr;</a></div>
-<div class="card"><span class="k">the briefs</span><h3><a href="briefs/index.html">Six articles, two notes</a></h3><p>The newsroom series tagged gen-z-book and the two build briefs, captured verbatim.</p><a class="more" href="briefs/index.html">The briefs &rarr;</a></div>
-<div class="card"><span class="k">the team</span><h3><a href="team/index.html">{len(roles)} roles</a></h3><p>{", ".join(t.split(":")[0].replace("The ", "").lower() for _, t, _, _, _ in roles)}: each reads, challenges, interviews Dinis and signs off. The first interview script is written.</p><a class="more" href="team/index.html">The team &rarr;</a></div>
-<div class="card"><span class="k">the vault</span><h3><a href="vault/index.html">Read along</a></h3><p>The public working vault, its read key published, with the working copy of v1, the board, the reviews and the roles.</p><a class="more" href="vault/index.html">Open it &rarr;</a></div>
+    fe = FIRST_EDITION
+    lines = "".join(f"<li>{esc(l)}</li>" for l in fe["cover_lines"])
+    quotes = "".join(f'<blockquote class="quote">&ldquo;{esc(q)}&rdquo;<span>{esc(w)}</span></blockquote>' for q, w in fe["quotes"])
+    body = f"""<section class="hero">
+<a class="cover" href="v1/book/index.html"><img src="v1/images/title_page.png" alt="The cover of Gen Z Developers, early release, September 2018: navy, four colour blocks spelling GEN Z, and eight lines from Question everything to Shake things up" width="300" height="454"></a>
+<div class="hero-text">
+<p class="kicker"><span class="sw g"></span><span class="sw y"></span><span class="sw t"></span><span class="sw r"></span> a book by Dinis Cruz &middot; first edition September 2018 &middot; second edition in the making, dated October 2026</p>
+<h1>Generation Z Developers</h1>
+<p class="sub">Key concepts and ideas for the next generation of developers.</p>
+<ul class="cover-lines">{lines}</ul>
+<p>The eight lines on the cover are what the book was for. They read more urgently now than in 2018, and the second edition keeps all eight: the manual for getting into development, and getting a job, now that everyone who can brief an agent is a developer.</p>
+<p class="ctas"><a class="btn primary" href="v1/book/index.html">Read the first edition here</a> <a class="btn" href="{fe["amazon"]["url"]}">Paperback on Amazon</a> <a class="btn" href="{fe["leanpub"]["url"]}">Free to read on Leanpub</a></p>
 </div>
-<h2>The articles behind it</h2>
+</section>
+<h2 id="first-edition">The first edition, where it lives</h2>
+<p class="lede">Released early and in public, the way the book told its readers to work: on Leanpub at 60% complete, as a paperback, and as Markdown in a Git repository. Those three are the record of v1.0.0, and this site shows that text exactly as released.</p>
+<div class="cards editions">
+<a class="card amazon" href="{fe["amazon"]["url"]}"><span class="k">Paperback &middot; Amazon</span><h3>{esc(fe["amazon"]["title"])}</h3><p>{fe["amazon"]["pages"]} pages &middot; published {fe["amazon"]["published"]} &middot; ISBN-10 {fe["amazon"]["isbn10"]} &middot; {fe["amazon"]["size"]} &middot; {fe["amazon"]["rating"]}</p><span class="more">amazon.co.uk &rarr;</span></a>
+<a class="card leanpub" href="{fe["leanpub"]["url"]}"><span class="k">{fe["leanpub"]["formats"]} &middot; Leanpub</span><h3>{esc(fe["leanpub"]["title"])}</h3><p>{fe["leanpub"]["price"]} &middot; {fe["leanpub"]["complete"]} complete, last updated {fe["leanpub"]["updated"]} &middot; {fe["leanpub"]["readers"]} readers &middot; {fe["leanpub"]["pages"]} pages, {fe["leanpub"]["words"]:,} words</p><span class="more">leanpub.com/generation-z &rarr;</span></a>
+<a class="card github" href="{fe["github"]["url"]}"><span class="k">The source &middot; GitHub</span><h3>Book_Generation_Z_Developer</h3><p>{fe["github"]["files"]} Markdown files, {fe["github"]["outlines"]} of them outlines &middot; Creative Commons BY on the cover &middot; feedback by GitHub issues &middot; imported here as v1.0.0, frozen</p><span class="more">github.com/DinisCruz &rarr;</span></a>
+</div>
+<div class="quotes">{quotes}</div>
+<h2 id="second-edition">The second edition, in the making</h2>
+<p class="lede"><b>The repository holds the official versions; the vault holds the working versions.</b> The first edition is here exactly as released. Everything after it is worked on in a public vault and moves here when signed off, with a delta between every two versions.</p>
+<div class="making">
+<div class="card big"><span class="k">The book &middot; v1.0.0 &middot; 2018 &middot; frozen</span><h3><a href="v1/book/index.html">Read it chapter by chapter, outlines included</a></h3><p>{len(flat)} chapters in 8 parts: {c["written"]} written, {c["outline"]} outlines. The Leanpub build left the outlines out; this site shows them, because the second edition starts from them.</p>
+<p class="stats"><span class="stat"><b>{len(flat)}</b><span>chapters</span></span><span class="stat"><b>{c["written"]}</b><span>written</span></span><span class="stat"><b>{c["outline"]}</b><span>outlines</span></span><span class="stat"><b>{sum(ch["words"] for _, ch in flat):,}</b><span>words in the source</span></span></p>
+<span class="more"><a href="v1/book/index.html">The table of contents &rarr;</a> &nbsp; <a href="v1/book/single.html">On one page &rarr;</a></span></div>
+<a class="card" href="v1/versions/index.html"><span class="k">Versions</span><h3>One version so far</h3><p>Where v1.0.0 comes from, the 2018 change log, and the page that will carry the block-by-block delta to v2.</p></a>
+<a class="card" href="map/index.html"><span class="k">The map</span><h3>{c["files"]} files, {c["answered_by_articles"]} answered</h3><p>Every 2018 chapter and outline, the newsroom articles that have since answered it, and the gap.</p></a>
+<a class="card" href="team/index.html"><span class="k">The team</span><h3>Reviewer, editor, publisher</h3><p>Each reads, challenges, interviews Dinis and signs off. The first interview script is written.</p></a>
+<a class="card" href="vault/index.html"><span class="k">The vault</span><h3>Read along</h3><p>The public working vault, its read key published: the working copy of v1, the board, the reviews, the roles.</p></a>
+</div>
+<div class="twocol">
+<div><h2>The articles behind it</h2><p class="small dim">The newsroom series tagged gen-z-book, in the order published, and <a href="briefs/index.html">the two build briefs</a>: captured verbatim.</p>
 <ol>
 {"".join(f'<li><a href="{rel}">{esc(t)}</a></li>' for rel, t in six)}
-</ol>
-<h2>What this site does not claim</h2>
+</ol></div>
+<div><h2>What this site does not claim</h2>
 <ul>
-<li><b>The second edition is not written.</b> This release has the first edition, the map, the roles, the vault and the versions machinery. The review of the 2018 text and the editor's interviews come next.</li>
+<li><b>The second edition is not written.</b> This release has the first edition, the map, the roles, the vault and the versions machinery.</li>
 <li><b>The map is a first reading.</b> Not every outline has an article, and not every article fits; the reviewer and the editor decide.</li>
-<li><b>The address is the one proposed.</b> gen-z-developers.sgit.ai, matching the printed cover's <i>Gen Z Developers</i>; to confirm.</li>
+<li><b>The address is the one proposed</b>, matching the printed cover's <i>Gen Z Developers</i>; to confirm.</li>
 <li><b>The licence of the 2018 text is to confirm</b> with Dinis: CC BY on the cover, CC BY-SA in the footer, Apache 2.0 on the repository.</li>
-</ul>
+</ul></div>
+</div>
 <p class="small dim">Built as the build brief <a href="briefs/08__note-a-website-to-finish-the-book.html">a website to finish the book</a> asked: the new repository with v1 imported as released, a static site showing it chapter by chapter, and a versions page reusing the newsroom's <code>page_versions.py</code>. The agent surface is <a href="llms.txt">llms.txt</a>.</p>
 """
     page("index.html", "Generation Z Developers, the second edition", body,
-         "The website for finishing the second edition of Generation Z Developers: the 2018 book as released, the map to the newsroom's articles, the roles, and the working vault.")
+         "The website for finishing the second edition of Generation Z Developers: the 2018 book as released, the map to the newsroom's articles, the roles, and the working vault.", wide=True)
 
     # admin
     vs = json.loads((ROOT / "admin/content/versions.json").read_text(encoding="utf-8"))
@@ -578,6 +621,11 @@ The repository holds the official versions; the vault holds the working versions
 ## The chapters of v1.0.0
 {chapters}
 
+## The first edition, where it lives
+- Paperback on Amazon: {FIRST_EDITION["amazon"]["url"]} ({FIRST_EDITION["amazon"]["pages"]} pages, published {FIRST_EDITION["amazon"]["published"]}, ISBN-10 {FIRST_EDITION["amazon"]["isbn10"]})
+- Leanpub, free to read online: {FIRST_EDITION["leanpub"]["url"]} ({FIRST_EDITION["leanpub"]["complete"]} complete, {FIRST_EDITION["leanpub"]["readers"]} readers, {FIRST_EDITION["leanpub"]["words"]} words)
+- The cover's eight lines: {"; ".join(FIRST_EDITION["cover_lines"])}
+
 ## The source
 - 2018 repository: {SOURCE_REPO} at {SOURCE_COMMIT}
 - Leanpub: https://leanpub.com/generation-z (60% complete, last updated 2018-10-08)
@@ -589,7 +637,7 @@ The repository holds the official versions; the vault holds the working versions
 def main():
     (ROOT / "v1/MANIFEST.json").write_text(json.dumps({
         "what": "v1 is the first edition of Generation Z Developers as released in 2018, frozen. Nothing under v1/content/ or v1/images/ changes except to fix a copy error; v1/book/ and v1/versions/ are generated from them.",
-        "version": "v1.0.0", "released": "2018-09", "last_content_change": "2018-10-08", "frozen_on": "2026-10-18",
+        "version": "v1.0.0", "released": "2018-09-30", "last_content_change": "2018-10-08", "frozen_on": "2026-10-18",
         "source": {"repository": SOURCE_REPO, "commit": SOURCE_COMMIT, "paths": ["content/", "static/images/", "LICENSE"]},
         "leanpub": {"url": "https://leanpub.com/generation-z", "complete": "60%", "pages": 136, "words": 30695, "readers": 465, "read_on": "2026-10-18"},
         "counts": {"markdown_files": 138, "outlines": 90},

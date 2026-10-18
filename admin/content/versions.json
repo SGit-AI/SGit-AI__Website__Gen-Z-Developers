@@ -5,6 +5,11 @@
    "version": "v0.1.0",
    "date": "2026-10-18",
    "what": "The first release, built from the newsroom's six gen-z-book articles and the two build briefs of 18 October 2026. v1.0.0 of the book (the 2018 first edition) imported verbatim from DinisCruz/Book_Generation_Z_Developer and shown chapter by chapter and on one page, outlines included; the versions page, reusing the newsroom's page_versions.py, with v1.0.0 frozen as markdown; the map, one row per 2018 file with the newsroom articles that answer it; the briefs captured; three roles (reviewer, editor, publisher) with their first issues and the editor's first interview script; the public working vault created and pushed with the working copy of v1, its read key published on the vault page; a private vault for the OpenRouter key, empty; the gate (validate.js) and the deploy pipeline, the same as the sibling sites."
+  },
+  {
+   "version": "v0.1.1",
+   "date": "2026-10-18",
+   "what": "The home page reviewed against the book's own assets and rebuilt around them: the 2018 cover in the hero with its eight lines (the newsroom article counted seven; Look under the hood was missed), and the first edition's public record on the page, the paperback on Amazon (139 pages, 30 September 2018, ISBN-10 1724194607, the two reader quotes) and the Leanpub edition (free to read online, 60% complete, 465 readers, 30,695 words), with the source on GitHub; the book card now dominates and the machinery sits smaller. The cover and the same references on the book's table of contents, the versions page and llms.txt. v1.0.0's date corrected to the paperback's publication, 30 September 2018; 8 October 2018 stays as the last change to the text."
   }
  ]
 }
