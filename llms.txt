@@ -1,6 +1,6 @@
 # gen-z-developers.sgit.ai
 
-> The website for finishing the second edition of Generation Z Developers (Dinis Cruz, 2018). The repository holds the official versions of the book; a public vault holds the working versions. Site v0.2.6.
+> The website for finishing the second edition of Generation Z Developers (Dinis Cruz, 2018). The repository holds the official versions of the book; a public vault holds the working versions. Site v0.2.7.
 
 ## The rule
 The repository holds the official versions; the vault holds the working versions. v1.0.0 is the 2018 first edition as released, frozen. A version moves from the vault to the repository when signed off, and the versions page shows the delta block by block.
@@ -8,6 +8,7 @@ The repository holds the official versions; the vault holds the working versions
 ## Sections
 - [The book, v1.0.0](https://gen-z-developers.sgit.ai/v1/book/index.html): the 2018 first edition as published, 28 chapters in the print edition's order, then the drafts and outlines it left out; [on one page](https://gen-z-developers.sgit.ai/v1/book/single.html); [the drafts](https://gen-z-developers.sgit.ai/v1/book/drafts.html); [frozen markdown](https://gen-z-developers.sgit.ai/v1/versions/v1.0.0.md); [the print PDF, 139 pages](https://gen-z-developers.sgit.ai/v1/generation-z-print-ready.pdf)
 - [Read and review](https://gen-z-developers.sgit.ai/read/index.html): the reader with the graph beside it and the editor's desk (states, comments, folds, export); the book as data at [book.json](https://gen-z-developers.sgit.ai/v1/book/book.json)
+- [The graph](https://gen-z-developers.sgit.ai/graph/index.html): the admin area of the publishing process: [the ideas register](https://gen-z-developers.sgit.ai/graph/ideas/index.html), [the sources and their states](https://gen-z-developers.sgit.ai/graph/sources.html), [the chapter map, proposed](https://gen-z-developers.sgit.ai/graph/chapters.html), [the tasks](https://gen-z-developers.sgit.ai/graph/tasks.html), [the plan](https://gen-z-developers.sgit.ai/graph/plan.html), [the graph drawn](https://gen-z-developers.sgit.ai/graph/view.html); data at [graph.json](https://gen-z-developers.sgit.ai/graph/graph.json)
 - [The contributors](https://gen-z-developers.sgit.ai/contributors/index.html): who contributed to the first edition, from git and GitHub; data at [contributors.json](https://gen-z-developers.sgit.ai/admin/content/contributors.json)
 - [Versions](https://gen-z-developers.sgit.ai/v1/versions/index.html): the official versions and their deltas (page_versions.py from the newsroom)
 - [The map](https://gen-z-developers.sgit.ai/map/index.html): one row per 2018 file, the newsroom articles that answer it, the gap; data at [map.json](https://gen-z-developers.sgit.ai/admin/content/map.json)

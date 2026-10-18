@@ -7,8 +7,8 @@
   "written": 34,
   "outline": 89,
   "apparatus": 15,
-  "answered_by_articles": 89,
-  "articles_cited": 79
+  "answered_by_articles": 90,
+  "articles_cited": 83
  },
  "rows": [
   {
@@ -944,6 +944,11 @@
      "url": "https://newsroom.sgit.ai/articles/replicating-the-agentic-inbox.html"
     },
     {
+     "slug": "from-a-spreadsheet-to-a-folder-per-person",
+     "title": "From a spreadsheet to a folder per person",
+     "url": "https://newsroom.sgit.ai/articles/from-a-spreadsheet-to-a-folder-per-person.html"
+    },
+    {
      "slug": "omnichannel-programming",
      "title": "Omnichannel programming",
      "url": "https://newsroom.sgit.ai/articles/omnichannel-programming.html"
@@ -968,9 +973,14 @@
      "slug": "portugal-and-europe-2025",
      "title": "Portugal and Europe, 2025",
      "url": "https://newsroom.sgit.ai/articles/portugal-and-europe-2025.html"
+    },
+    {
+     "slug": "who-owns-the-words",
+     "title": "Who owns the words",
+     "url": "https://newsroom.sgit.ai/articles/who-owns-the-words.html"
     }
    ],
-   "gap": "The Portugal articles carry it; no article on civic responsibility as such."
+   "gap": "The Portugal articles carry it, and who owns the words carries the responsibility that stays with the person; no article on civic responsibility as such."
   },
   {
    "file": "4.life-patterns/content/backup-your-life.md",
@@ -1360,8 +1370,14 @@
    "status_2018": "draft",
    "kind": "outline",
    "words": 33,
-   "articles": [],
-   "gap": "none"
+   "articles": [
+    {
+     "slug": "places-of-highest-leverage",
+     "title": "Places of highest leverage",
+     "url": "https://newsroom.sgit.ai/articles/places-of-highest-leverage.html"
+    }
+   ],
+   "gap": "Start where the leverage is, without knowing the end; no article on Sinek's why as such."
   },
   {
    "file": "4.life-patterns/the-zone.md",
@@ -1568,6 +1584,11 @@
      "slug": "the-question-is-whether-they-miss-it",
      "title": "The most important question is whether they miss it",
      "url": "https://newsroom.sgit.ai/articles/the-question-is-whether-they-miss-it.html"
+    },
+    {
+     "slug": "places-of-highest-leverage",
+     "title": "Places of highest leverage",
+     "url": "https://newsroom.sgit.ai/articles/places-of-highest-leverage.html"
     }
    ],
    "gap": ""
@@ -1985,6 +2006,11 @@
      "slug": "connector-twin-before-you-deploy-an-agent",
      "title": "Before you give an agent a connector, give the connector a twin",
      "url": "https://newsroom.sgit.ai/articles/connector-twin-before-you-deploy-an-agent.html"
+    },
+    {
+     "slug": "why-my-agents-do-not-run-on-my-laptop",
+     "title": "Why my agents do not run on my laptop",
+     "url": "https://newsroom.sgit.ai/articles/why-my-agents-do-not-run-on-my-laptop.html"
     }
    ],
    "gap": ""

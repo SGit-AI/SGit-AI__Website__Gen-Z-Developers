@@ -1,6 +1,6 @@
 {
  "version": "v1.0.0",
- "site": "v0.2.6",
+ "site": "v0.2.7",
  "source": {
   "repository": "https://github.com/DinisCruz/Book_Generation_Z_Developer",
   "commit": "61886444fe5ab118ab18726147826ab05f794edc"
@@ -701,7 +701,7 @@
    "print_page": null,
    "words": 243,
    "markdown_sha256": "03d316d9f8a9d2f79ed2bb2ad22efefba2da27f25a0a1f3bb2ce3f011ec10f79",
-   "main_sha256": "10c4621fb29894c8257736b6116ef74b1c05b0aa3970523f7d31b7c2a9c0c551"
+   "main_sha256": "2dd9261c5deb1d797458ffd9176a8954846b22c3d6fc6c629e1dad1b17ce10a1"
   },
   {
    "file": "5.concepts/design.md",
@@ -1085,7 +1085,7 @@
    "print_page": null,
    "words": 296,
    "markdown_sha256": "39c00e00053eada9cb8c0b1b2d75ca5687bc64c0d3ac6dd46ca201b21775ed71",
-   "main_sha256": "c05b25b6392ee141c0f43915e5a90be6b5738fd4f9ea910824c9bd4a243973bd"
+   "main_sha256": "b4927d93cf1d25a0b60625b7cbc75dd289957e5ea7c6f0d876fbc2b68aa69b07"
   },
   {
    "file": "6.security/pointers.md",
@@ -1157,7 +1157,7 @@
    "print_page": null,
    "words": 48,
    "markdown_sha256": "d31678bbabe4505245801bbaf415f615e04549df11fcb476dd87568a11b16e02",
-   "main_sha256": "5fd280ce55c7249664fdc9583403c7c6eb13d1464a6fa0f64b5f95f6398a6f63"
+   "main_sha256": "9995867f1b7cb06fc5cc181f349366b47921950b647a44ac94776fa95b8ebc1f"
   },
   {
    "file": "4.life-patterns/BBS-and-modems.md",
@@ -1181,7 +1181,7 @@
    "print_page": null,
    "words": 89,
    "markdown_sha256": "9236fd46cec30e7ecbaec9e299b3b32dc49675bed437da70d05c880544117025",
-   "main_sha256": "96ff14c22508b52acaf64b9e91572903fccdd3697919fa8afad2054c2401aa44"
+   "main_sha256": "467027db86dfc527439199eb73d1a0d7cedce84a1b235c643721aef9d364858d"
   },
   {
    "file": "4.life-patterns/curse-of-knowledge.md",
@@ -1337,7 +1337,7 @@
    "print_page": null,
    "words": 33,
    "markdown_sha256": "04a9352a6f10ec2ecea35648b4e848b3c4ca28ed45a5bd83ee90ae8814cd434a",
-   "main_sha256": "4b902d8702278ca55c0dc01a9ad3036374e0ea717ea3dad9665d3f55f4fa1db8"
+   "main_sha256": "82d3c711ccaa02b982c5ee16c39a92c7cbf78b3844446754aa664c8f46cf8df8"
   },
   {
    "file": "4.life-patterns/the-zone.md",

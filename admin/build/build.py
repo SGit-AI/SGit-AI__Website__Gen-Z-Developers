@@ -43,6 +43,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import markdown  # noqa: E402
 from page_versions import Versions, blocks, sha, words  # noqa: E402
+from graph_pages import build_graph  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 VERSION = (ROOT / "admin/build/version.txt").read_text().strip()
@@ -86,6 +87,7 @@ NAV = [
     ("Versions", "v1/versions/index.html"),
     ("Contributors", "contributors/index.html"),
     ("The map", "map/index.html"),
+    ("The graph", "graph/index.html"),
     ("Articles", "articles/index.html"),
     ("Decisions", "decisions/index.html"),
     ("Storyboards", "storyboards/index.html"),
@@ -157,6 +159,7 @@ def page(rel, title, body, description, crumbs=(), extra_head="", wide=False):
 <meta property="og:type" content="article">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230c2a3d%27/%3E%3Crect x=%274%27 y=%276%27 width=%2711%27 height=%2720%27 fill=%27%237bc08f%27/%3E%3Crect x=%2717%27 y=%276%27 width=%2711%27 height=%2720%27 fill=%27%23e5625b%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Arial Black,Arial%27 font-weight=%27900%27 font-size=%2718%27 text-anchor=%27middle%27 fill=%27%230c2a3d%27%3EZ%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="{up}assets/site.css">
+<link rel="stylesheet" href="{up}assets/graph.css">
 {extra_head}</head>
 <body>
 <nav class="site"><div class="row">
@@ -1099,6 +1102,7 @@ def build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib,
 <a class="card" href="vault/index.html"><span class="k">The vault</span><h3>Read along</h3><p>The public working vault, its read key published: the working copy of v1, the board, the reviews, the roles.</p></a>
 <a class="card" href="read/index.html"><span class="k">Read &amp; review</span><h3>The reader, and the editor's desk</h3><p>The book with its graph beside it; mark, comment, fold and export a review; a reading meter after the newsroom's rules.</p></a>
 <a class="card" href="contributors/index.html"><span class="k">Contributors</span><h3>{contrib["totals"]["contributors"]} people, {contrib["totals"]["pull_requests_merged"]} pull requests</h3><p>Who fixed, asked and commented on the first edition, from its git history and GitHub issues: {contrib["totals"]["commits_by_contributors"]} commits by others, {contrib["totals"]["issues"]} issues.</p></a>
+<a class="card" href="graph/index.html"><span class="k">The graph</span><h3>The book as a graph: ideas, sources, chapters, tasks</h3><p>The admin area of the publishing process: which articles are processed, which ideas Dinis has accepted, where each goes, and what the briefs asked for.</p></a>
 </div>
 <h2 id="articles">This site's articles</h2>
 <p class="lede">How the work is briefed: each idea, task or review is written up as an article first, then a role is pointed at it.</p>
@@ -1135,6 +1139,7 @@ def build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib,
 <h2>The chain</h2>
 <pre>python3 admin/build/gen_map.py           # admin/content/map.json from v1/content/ and the authored reading
 python3 admin/build/gen_contributors.py  # admin/content/contributors.json from admin/content/github/
+python3 admin/build/graph_model.py       # checks the graph (ideas, chapters, sources, tasks) and prints its counts
 python3 admin/build/build.py       # every page, the manifest, the frozen markdown, llms.txt, the sitemap
 node admin/build/validate.js       # the gate: version, links, canonical, key leak, manifest, sitemap, map</pre>
 <h2>The rules</h2>
@@ -1173,6 +1178,7 @@ The repository holds the official versions; the vault holds the working versions
 ## Sections
 - [The book, v1.0.0]({BASE}v1/book/index.html): the 2018 first edition as published, 28 chapters in the print edition's order, then the drafts and outlines it left out; [on one page]({BASE}v1/book/single.html); [the drafts]({BASE}v1/book/drafts.html); [frozen markdown]({BASE}v1/versions/v1.0.0.md); [the print PDF, 139 pages]({BASE}v1/generation-z-print-ready.pdf)
 - [Read and review]({BASE}read/index.html): the reader with the graph beside it and the editor's desk (states, comments, folds, export); the book as data at [book.json]({BASE}v1/book/book.json)
+- [The graph]({BASE}graph/index.html): the admin area of the publishing process: [the ideas register]({BASE}graph/ideas/index.html), [the sources and their states]({BASE}graph/sources.html), [the chapter map, proposed]({BASE}graph/chapters.html), [the tasks]({BASE}graph/tasks.html), [the plan]({BASE}graph/plan.html), [the graph drawn]({BASE}graph/view.html); data at [graph.json]({BASE}graph/graph.json)
 - [The contributors]({BASE}contributors/index.html): who contributed to the first edition, from git and GitHub; data at [contributors.json]({BASE}admin/content/contributors.json)
 - [Versions]({BASE}v1/versions/index.html): the official versions and their deltas (page_versions.py from the newsroom)
 - [The map]({BASE}map/index.html): one row per 2018 file, the newsroom articles that answer it, the gap; data at [map.json]({BASE}admin/content/map.json)
@@ -1231,6 +1237,7 @@ def main():
     articles = build_articles()
     build_storyboards()
     build_newsroom_survey()
+    build_graph({"page": page, "write": write, "esc": esc, "md": md})
     build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib, articles)
     print(f"build: {VERSION}, {len(flat)} chapters, {len([w for w in written if w.endswith('.html')])} pages, {len(written)} files written")
 
