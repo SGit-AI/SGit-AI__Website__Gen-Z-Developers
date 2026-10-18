@@ -39,7 +39,7 @@ The build runs the same checks every time: an idea that cites a source that does
 
 ## The chapter map {#chapters}
 
-The ideas needed somewhere to go, and the editor's issue on the chapter map was blocked waiting for the review and the first interview. So I proposed one: eight parts, twenty-one chapters, from the survey's eighteen topics and Dinis's three storyline articles. The opening is his (wonder, where you land, connect the dots); the frame follows (what generative AI is, everyone is a developer, explorer coding and the handover); then getting the job, working with agents, direction and judgement, building safely, the long game, and how this book was made. Every chapter has a centre of gravity, the character it is written for first, and the 2018 files it answers. The editor owns the map; mine exists so the register is not a list.
+The ideas needed somewhere to go, and the editor's issue on the chapter map was blocked waiting for the review and the first interview. So I proposed one: nine parts, twenty-five chapters, from the survey's eighteen topics, Dinis's three storyline articles and, for the last part, the hands-on part that Follow the rabbit holes proposes for 2026. The opening is his (wonder, where you land, connect the dots); the frame follows (what generative AI is, everyone is a developer, explorer coding and the handover); then getting the job, working with agents, direction and judgement, building safely, the long game, hands on 2026 (inside the book or a companion, Dinis's open question), and how this book was made. Every chapter has a centre of gravity, the character it is written for first, and the 2018 files it answers. The editor owns the map; mine exists so the register is not a list.
 
 ## The tasks {#tasks}
 
