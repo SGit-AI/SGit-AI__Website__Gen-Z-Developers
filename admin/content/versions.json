@@ -65,6 +65,11 @@
    "version": "v0.2.10",
    "date": "2026-10-18",
    "what": "The image that made generative AI click, found. Dinis shared the PDF of his keynote Deterministic GenAI Output With Provenance (v1.0, OWASP Global AppSec EU, Lisbon, 28 June 2024, 117 slides): slide 70, 'The image that caused my GenAI Paradigm Shift', is Lee Brimelow's post extending Van Gogh's The Starry Night with Photoshop's Generative Fill and Adobe Firefly. The article generative AI, not AI now names it, and adds slides 79 to 81 of the same talk: 'Input', 'Intermediate Representation', 'Output', the picture of generative AI Dinis described again in this week's memo, and human verification and ownership as what matters about the black box. Its storyboard panel and the editor's brief follow; the open question is now whether to ask Lee Brimelow for the image or remake the demonstration on the public-domain painting."
+  },
+  {
+   "version": "v0.2.11",
+   "date": "2026-10-18",
+   "what": "David Rice's keynote confirmed. Dinis's post The Pollution Analogy (11 December 2016) links the full recording of Upon the Threshold of Opportunity, the OWASP AppSec USA 2010 keynote, on Vimeo: the register's title and the YouTube recording are the same talk. The influences article now has the full recording, the post and its argument, quoted word for word (security risk as pollution: accepted, then regulated, then designed out; security does not need to say no all the time); the rabbit-holes article and its storyboard end the trail at the post; the journalist's brief for the register carries the anchor."
   }
  ]
 }

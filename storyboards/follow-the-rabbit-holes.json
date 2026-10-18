@@ -182,25 +182,32 @@
      "colour": "#fed7aa"
     },
     {
-     "label": "AppSec USA",
-     "note": "keynote, 2010",
+     "label": "Summit 2011",
+     "note": "a session on presenting it",
      "colour": "#bbf7d0"
     },
     {
-     "label": "Summit 2011",
-     "note": "a session on presenting it",
+     "label": "Blog, 2016",
+     "note": "the full talk, its name",
      "colour": "#bfdbfe"
     }
    ],
    "cast": [
     {
      "who": "agent",
-     "x": 0.5,
+     "x": 0.35,
      "pose": "point",
      "mood": "happy"
+    },
+    {
+     "who": "guide",
+     "x": 0.7,
+     "pose": "stand",
+     "mood": "happy",
+     "flip": true
     }
    ],
-   "note": "Finding David Rice's keynote, as it happened while this article was written.",
+   "note": "Finding David Rice's keynote while the article was written: the agent followed the link to the video and the 2011 Summit session; Dinis's 2016 post, The Pollution Analogy, confirmed it is Upon the Threshold of Opportunity.",
    "source": "Follow the rabbit holes, Provenance, explainability and the rabbit holes"
   },
   {

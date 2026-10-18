@@ -31,7 +31,7 @@ This is why I think learning is so important: learning takes you there. To the i
 
 Following a rabbit hole is now a prompt away. And visualising the rabbit holes is one of the most powerful skills: you should never take something at face value. You can now build your own agents, build your own tools, use services, and be curious: where is the source of that, and where is the source of that? It will get better. It is one of the areas I believe in most, and some of what I am working on is exactly this.
 
-This article has an example of its own. In [where the thinking came from](/articles/where-the-thinking-came-from.html) I could not say where the recording of a keynote by David Rice was; I found a link, and following it, with an agent, led to the video's real title, *OWASP AppSec USA 2010: Keynote: David Rice*, and then to a working session at the OWASP Summit in 2011 about presenting that keynote around the world, which I had not remembered. And the article before this one, [generative AI, not AI](/articles/generative-ai-not-ai.html), has a section of the places where I asked to be corrected, and was.
+This article has an example of its own. In [where the thinking came from](/articles/where-the-thinking-came-from.html) I could not say where the recording of a keynote by David Rice was; I found a link, and following it, with an agent, led to the video's real title, *OWASP AppSec USA 2010: Keynote: David Rice*, and then to a working session at the OWASP Summit in 2011 about presenting that keynote around the world, which I had not remembered. The last step was mine: a post I wrote in 2016, [the pollution analogy](https://diniscruz.blogspot.com/2016/12/the-pollution-analogy.html), which links the full recording under the title the register uses, *Upon the Threshold of Opportunity*, and settles that they are the same talk. And the article before this one, [generative AI, not AI](/articles/generative-ai-not-ai.html), has a section of the places where I asked to be corrected, and was.
 
 ## How you can disagree rationally {#disagree}
 
@@ -87,7 +87,7 @@ Questions for me, kept apart:
 - **"This generation are good detectives" is my experience**, from my family and the young people I have worked with, not a study.
 - **The Snapchat point is about its design**, disappearing messages, which is what it launched with; not a claim about how private it actually is.
 - **"Hundreds of thousands or millions of pounds" is from my memory** of what such systems cost to build; the book should give an example with a number.
-- **The David Rice trail is told as it happened in this session**, by an agent following a link, and the identity of the talk is mine to confirm.
+- **The David Rice trail is told as it happened in this session**: an agent following a link, and then my own blog post confirming the title.
 - **The hands-on part is a proposal.** Whether it is in the book is undecided.
 
 If you are the person who always checks the source, tell me how you do it: write to [agent@riskmandate.ai](mailto:agent@riskmandate.ai).
@@ -96,4 +96,4 @@ If you are the person who always checks the source, tell me how you do it: write
 
 A voice memo of mine on 18 October 2026, written up by this site's journalist, `gen-z.journalist`, in my voice, keeping the memo's order and phrases. The argument and the editorial responsibility are mine.
 
-The quotes are from the newsroom's [my memory, checked](https://newsroom.sgit.ai/articles/my-memory-checked.html) and [reviews on the record](https://newsroom.sgit.ai/articles/reviews-on-the-record.html), as recorded in their graphs. The 2018 outline is `5.concepts/facts.md` in `v1/content/`. The David Rice recording: [OWASP AppSec USA 2010: Keynote: David Rice 2/3](https://www.youtube.com/watch?v=O8sLSwnId9c), and the OWASP wiki's [Summit 2011 working session](https://wiki.owasp.org/index.php/Summit_2011_Working_Sessions/Session088).
+The quotes are from the newsroom's [my memory, checked](https://newsroom.sgit.ai/articles/my-memory-checked.html) and [reviews on the record](https://newsroom.sgit.ai/articles/reviews-on-the-record.html), as recorded in their graphs. The 2018 outline is `5.concepts/facts.md` in `v1/content/`. The David Rice recording: [OWASP AppSec USA 2010: Keynote: David Rice 2/3](https://www.youtube.com/watch?v=O8sLSwnId9c), [the full keynote on Vimeo](https://vimeo.com/15506033), my post [the pollution analogy](https://diniscruz.blogspot.com/2016/12/the-pollution-analogy.html) (11 December 2016), and the OWASP wiki's [Summit 2011 working session](https://wiki.owasp.org/index.php/Summit_2011_Working_Sessions/Session088).
