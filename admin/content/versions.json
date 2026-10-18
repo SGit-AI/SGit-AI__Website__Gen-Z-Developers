@@ -80,6 +80,11 @@
    "version": "v0.2.13",
    "date": "2026-10-18",
    "what": "Graphs. A co-written article, everything is connected: a graph is a network of nodes and edges, not a diagram (as the graphs book Fractal Semantic Graphs defines it); the whodunit as the way in; a map is a graph with positions, and a Wardley map a graph with context; graphs of graphs, and nature as groups of groups forming abstraction layers; provenance as a graph; and start anywhere, because a graph has no front page. It shows the 2018 book was already there (the outline Graphs; the chapters Dot Language and AST) and lists what to bring from graphs.sgit.ai and the newsroom, chapters and figures. The storyboard renderer gains a graph panel kind: nodes and labelled edges with arrows, groups that nest, a highlighted path, and a detective style with a cork board, pinned notes and red string. A 12-panel storyboard uses all of it, quote-checked by the build. A brief for the editor. (Renumbered from v0.2.12 after another session released v0.2.10 to v0.2.12 in parallel.)"
+  },
+  {
+   "version": "v0.2.14",
+   "date": "2026-10-18",
+   "what": "Article 14, Lenses, roles and loops, from Dinis's memo on how LLMs and agents work, co-written in his voice: a prompt is a lens (translating into another language and for a teenager, a musician, a doctor or a football fan are the same act to a model; 'bad at maths' is often the wrong lens); a role is a model with a description and a question; an agent is a role on a loop with a goal; tools are requests the model sends back, which the harness runs and resends with the next request, with the dates from ChatGPT to the Model Context Protocol; the model remembers nothing, hence the context window; long chats are compressed into lower-resolution summaries (the newsroom's eighteen summaries at 1.7%); so many focused, named threads, as in the email workflow. A 'Precisely' section makes the technical points exact (every request is independent, the model never runs a tool, memory features are still the context window). Storyboard 10, thirteen panels: five lenses on one idea, a role as a graph, the agent loop with one tool call, what the next request carries, the timeline, the compression bars, the named threads; every Guide line and quote card checked against the article by the build. The editor's brief."
   }
  ]
 }
