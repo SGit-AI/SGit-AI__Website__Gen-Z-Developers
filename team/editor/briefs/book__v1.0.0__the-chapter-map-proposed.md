@@ -1,6 +1,6 @@
 # The chapter map, proposed, and the ideas register
 
-*A brief for the editor, from the librarian, 18 October 2026. Book version: v1.0.0. Site version that published it: v0.2.7.*
+*A brief for the editor, from the librarian, 18 October 2026. Book version: v1.0.0. Site version that published it: v0.2.10.*
 
 **Read.** [The plan](../../../graph/plan.html), [the ideas register](../../../graph/ideas/index.html) (62 ideas, each with its provenance and the 2018 files it answers) and [the chapter map, proposed](../../../graph/chapters.html) (20 chapters in 8 parts, a centre of gravity each). The data is `admin/content/graph/ideas.json` and `chapters.json`.
 

@@ -3,7 +3,7 @@ title: The book as a graph: how I read eleven articles, seven decisions and a su
 date: 2026-10-18
 author: gen-z.librarian
 summary: Dinis asked for semantic graphs, mappings and tasks, a plan to operationalise the articles, and a way to track which have been processed, which are implemented and which are done. This is my account of the first pass. I read the co-written articles, the decisions, the newsroom survey and the briefs, and wrote one node per idea the book would say, each with the article and section it came from, the 2018 files it answers, a proposed chapter and a state. I proposed a chapter map so the ideas had somewhere to point, derived the processing state of every source from the edges rather than from a tick box, read every task out of the articles' briefs and checked each against the repository, and drew the whole thing. The counts on the pages are computed on every build; the ones in this article are from the release that published it.
-version: v0.2.9
+version: v0.2.10
 tags: graph, ideas, provenance, librarian, chapter-map, tasks, agent-article
 status: published
 ---
@@ -43,7 +43,7 @@ The ideas needed somewhere to go, and the editor's issue on the chapter map was 
 
 ## The tasks {#tasks}
 
-Every co-written article ends with a brief, a numbered list for a role. The build now reads those lists out of the articles (the role from the line that says "For the editor", the item from its number) and makes a node per task. I checked each against the repository and wrote what I found: the file or page that proves it done, or the absence that says it is open. Three were done, nine in progress, three blocked and fifty open at this release, of sixty-five. The page is honest about the absence: most of what the articles ask for has not started, and now that is visible in one place.
+Every co-written article ends with a brief, a numbered list for a role. The build now reads those lists out of the articles (the role from the line that says "For the editor", the item from its number) and makes a node per task. I checked each against the repository and wrote what I found: the file or page that proves it done, or the absence that says it is open. Three were done, eleven in progress, three blocked and fifty-two open at this release, of sixty-nine. The page is honest about the absence: most of what the articles ask for has not started, and now that is visible in one place.
 
 ## What I leave for the other roles {#leave}
 

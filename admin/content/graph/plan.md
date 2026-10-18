@@ -1,6 +1,6 @@
 # The plan: how an article becomes a chapter, and how we know where everything is
 
-*By the librarian, 18 October 2026, from Dinis's message asking for the graph, the mappings and the tracking. Book version: v1.0.0. This is the operating plan for the second edition's material; the articles it operates on are [the briefs](../briefs/index.html), [this site's articles](../articles/index.html) and [the newsroom, surveyed](../map/newsroom.html). Nothing in it decides what goes in the book: that is Dinis's, through the loop.*
+*By the librarian, 18 October 2026, from Dinis's message asking for the graph, the mappings and the tracking; revised the same day for the three articles released since. Book version: v1.0.0. This is the operating plan for the second edition's material; the articles it operates on are [the briefs](../briefs/index.html), [this site's articles](../articles/index.html) and [the newsroom, surveyed](../map/newsroom.html). Nothing in it decides what goes in the book: that is Dinis's, through the loop.*
 
 ## In short
 
@@ -55,7 +55,7 @@ Until the loop runs, an idea is "accepted" only when Dinis said it as his own po
 
 ## The order of work from here
 
-1. **Dinis reads the register** (62 ideas, in the order of the chapter map) and decides the candidates, or tells the editor to run the first batch of the loop on them with the four Introduction chapters.
+1. **Dinis reads the register** (81 ideas, in the order of the chapter map) and decides the candidates, or tells the editor to run the first batch of the loop on them with the four Introduction chapters.
 2. **The editor records the accepted ideas** in the vault as decisions on the text (three briefs already ask for it), and takes the proposed chapter map as the start of its own, with Dinis's changes.
 3. **The librarian processes the four bring articles left**, mines the content articles as each chapter is drafted (the chapter page lists what to mine), and makes a pass over the 2018 files that have neither an article nor an idea: each becomes an idea marked "article first", or a proposal to cut.
 4. **The journalist writes the gap articles**, the fear and the job hunt in 2026 first, and each becomes ideas within a release.

@@ -1990,6 +1990,223 @@
    "state": "accepted",
    "decided_by": "Dinis, in Where the thinking came from; the Kevin Kelly anchor is his open question",
    "gravity": "all"
+  },
+  {
+   "id": "ask-for-the-evidence",
+   "title": "Questioning, and asking for the evidence, is one of the most important skills now",
+   "kind": "claim",
+   "statement": "Asking where a claim came from is one of the most important skills this generation needs, and in large part they already have it: they connect the dots, they find things, they are good detectives; people underestimate them.",
+   "sources": [
+    {
+     "ref": "art:follow-the-rabbit-holes",
+     "where": "They already have it"
+    },
+    {
+     "ref": "sb:follow-the-rabbit-holes",
+     "where": "the storyboard"
+    },
+    {
+     "ref": "book:5.concepts/facts.md",
+     "where": "the 2018 outline Facts, about data-driven decisions, never written"
+    }
+   ],
+   "answers": [
+    "5.concepts/facts.md"
+   ],
+   "topic": "facts-and-the-record",
+   "chapter": "facts-and-the-record",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Follow the rabbit holes: 'This is that chapter'; the editor records it in the vault (task 1)",
+   "gravity": "all",
+   "notes": "'Good detectives' is Dinis's experience, not a study; the article says so."
+  },
+  {
+   "id": "privacy-aware-generation",
+   "title": "They care about privacy; Snapchat's best feature was that images disappear",
+   "kind": "story",
+   "statement": "This generation cares about privacy and has been told so often not to post anything that it becomes a problem of its own; Snapchat's disappearing images were the feature they understood first. Where to draw the line is an interview question.",
+   "sources": [
+    {
+     "ref": "art:follow-the-rabbit-holes",
+     "where": "They already have it"
+    }
+   ],
+   "answers": [],
+   "topic": "facts-and-the-record",
+   "chapter": "facts-and-the-record",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all",
+   "notes": "The Snapchat point is about its design, not a claim about its actual privacy. Whether the book may mention Dinis's daughters is one of the article's questions for Dinis."
+  },
+  {
+   "id": "a-rabbit-hole-is-a-prompt-away",
+   "title": "Following a rabbit hole is now a prompt away; build the agents and tools that find where things come from",
+   "kind": "advice",
+   "statement": "Never take something at face value: provenance (where it came from) and explainability (why it is the way it is) are now a prompt away, and visualising the rabbit holes is a skill to build your own agents and tools for. The article's own example: the David Rice keynote found by an agent following a link.",
+   "sources": [
+    {
+     "ref": "art:follow-the-rabbit-holes",
+     "where": "Provenance, explainability and the rabbit holes"
+    },
+    {
+     "ref": "art:where-the-thinking-came-from",
+     "where": "the David Rice recording that could not be placed"
+    },
+    {
+     "ref": "art:generative-ai-not-ai",
+     "where": "the section of corrections"
+    }
+   ],
+   "answers": [
+    "5.concepts/facts.md"
+   ],
+   "topic": "facts-and-the-record",
+   "chapter": "facts-and-the-record",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Follow the rabbit holes ('one of the areas I believe in most'); the editor records it in the vault",
+   "gravity": "explorer",
+   "notes": "The identity of the David Rice talk is Dinis's to confirm."
+  },
+  {
+   "id": "disagree-rationally-with-provenance",
+   "title": "Provenance and explainability are how you disagree rationally",
+   "kind": "frame",
+   "statement": "Showing what is evidence and what is not, what we know and what we do not know (not knowing can be a fact), is how debate stays logical; the newsroom's rules 'not found is not false' and 'a finding with no answer is just a complaint' are the working form.",
+   "sources": [
+    {
+     "ref": "art:follow-the-rabbit-holes",
+     "where": "How you can disagree rationally"
+    },
+    {
+     "ref": "news:my-memory-checked",
+     "where": "every claim checked before publication; 'Not found is not false'"
+    },
+    {
+     "ref": "news:reviews-on-the-record",
+     "where": "'A finding with no answer is just a complaint'"
+    },
+    {
+     "ref": "art:where-the-thinking-came-from",
+     "where": "Popper, and the questioning"
+    }
+   ],
+   "answers": [
+    "5.concepts/facts.md",
+    "5.concepts/feedback-loops.md"
+   ],
+   "topic": "facts-and-the-record",
+   "chapter": "facts-and-the-record",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Follow the rabbit holes; sits next to a-claim-earns-its-status-by-being-refutable",
+   "gravity": "all"
+  },
+  {
+   "id": "managing-information-is-the-work",
+   "title": "Managing information so that decisions can be made is what work is",
+   "kind": "claim",
+   "statement": "In a company much of the work is knowing where the information is, who is doing what, what the status is and how a decision can be made; learning to follow the evidence is learning to do the job, and learning how to learn teaches it.",
+   "sources": [
+    {
+     "ref": "art:follow-the-rabbit-holes",
+     "where": "It is what work is"
+    }
+   ],
+   "answers": [
+    "5.concepts/facts.md"
+   ],
+   "topic": "facts-and-the-record",
+   "chapter": "facts-and-the-record",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager"
+  },
+  {
+   "id": "gen-ai-makes-the-checking-cheap",
+   "title": "What cost hundreds of thousands of pounds is now a brief and a feedback loop",
+   "kind": "claim",
+   "statement": "Systems that gathered and checked information used to cost hundreds of thousands or millions of pounds and took too long to be effective; generative AI makes the same checking a brief and a feedback loop, so being the person who has the facts is now a choice, not a budget.",
+   "sources": [
+    {
+     "ref": "art:follow-the-rabbit-holes",
+     "where": "Generative AI makes it cheap"
+    },
+    {
+     "ref": "news:the-briefs-so-far",
+     "where": "the brief and the feedback loop as the unit of work"
+    }
+   ],
+   "answers": [
+    "5.concepts/facts.md"
+   ],
+   "topic": "facts-and-the-record",
+   "chapter": "facts-and-the-record",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "The cost figure is from Dinis's memory; the article asks the book to give an example with a number."
+  },
+  {
+   "id": "best-prepared-person-in-the-room",
+   "title": "Be the best-prepared person in the room: briefings, pre-briefings, follow-ups",
+   "kind": "advice",
+   "statement": "There is no excuse now not to be the most prepared person in the room: a briefing for you, a briefing on the people you meet, a follow-up after; what used to be overhead for a rare kind of person now scales, like publishing and communication.",
+   "sources": [
+    {
+     "ref": "art:follow-the-rabbit-holes",
+     "where": "Be the best-prepared person in the room"
+    }
+   ],
+   "answers": [],
+   "topic": "working-with-agents",
+   "chapter": "facts-and-the-record",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "How Dinis prepares a meeting today, step by step, is an interview question (task 3); the meeting-brief workflow is the journalist's first hands-on article (task 4)."
+  },
+  {
+   "id": "a-hands-on-part-for-2026",
+   "title": "A hands-on part, dated 2026 and renewed each year",
+   "kind": "process",
+   "statement": "The practical workflows (an agentic workflow from zero, images, infographics and storyboards, presentations, meeting briefs and follow-ups, publishing) change too fast for the argument's chapters; they belong in a part dated 2026 and renewed yearly, inside the book or as a companion.",
+   "sources": [
+    {
+     "ref": "art:follow-the-rabbit-holes",
+     "where": "A hands-on part, for 2026"
+    },
+    {
+     "ref": "news:from-a-spreadsheet-to-a-folder-per-person",
+     "where": "one afternoon and five exercises"
+    },
+    {
+     "ref": "news:your-own-newsroom",
+     "where": "voice memo in, a checked site out"
+    },
+    {
+     "ref": "news:replicating-the-agentic-inbox",
+     "where": "the email workflow"
+    },
+    {
+     "ref": "agent:storyboards-drawn-by-code",
+     "where": "the infographics and presentations"
+    }
+   ],
+   "answers": [],
+   "topic": "your-first-workspace",
+   "chapter": null,
+   "destination": "undecided",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer",
+   "notes": "Dinis's question, kept apart in the article: inside the book, or a companion renewed every year? The chapter map gains the part as proposed (hands-on-2026) so the workflows have somewhere to point; the editor's task 2."
   }
  ]
 }

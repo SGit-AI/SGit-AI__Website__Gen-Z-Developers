@@ -161,7 +161,7 @@
   },
   "start-from-the-storyline:editor:4": {
    "state": "done",
-   "evidence": "gen_map.py names places-of-highest-leverage, from-a-spreadsheet-to-a-folder-per-person, why-my-agents-do-not-run-on-my-laptop and who-owns-the-words (site v0.2.7)"
+   "evidence": "gen_map.py names places-of-highest-leverage, from-a-spreadsheet-to-a-folder-per-person, why-my-agents-do-not-run-on-my-laptop and who-owns-the-words (site v0.2.10)"
   },
   "start-from-the-storyline:editor:5": {
    "state": "open",
@@ -266,6 +266,22 @@
   "generative-ai-not-ai:editor:4": {
    "state": "open",
    "evidence": "no image slide found"
+  },
+  "follow-the-rabbit-holes:editor:1": {
+   "state": "in-progress",
+   "evidence": "chapters.json has facts-and-the-record under Direction and judgement, with the five ideas from the article placed in it (site v0.2.10); the editor's map decides"
+  },
+  "follow-the-rabbit-holes:editor:2": {
+   "state": "in-progress",
+   "evidence": "chapters.json proposes the part hands-on-2026 with one chapter per workflow, each naming the newsroom article it starts from, marked dated 2026; whether it is in the book or a companion is Dinis's open question"
+  },
+  "follow-the-rabbit-holes:editor:3": {
+   "state": "open",
+   "evidence": "no interview script on this in team/editor/briefs/"
+  },
+  "follow-the-rabbit-holes:journalist:4": {
+   "state": "open",
+   "evidence": "no hands-on workflow article yet; meeting briefs and follow-ups first"
   }
  }
 }

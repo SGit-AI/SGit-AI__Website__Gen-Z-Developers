@@ -228,7 +228,7 @@
   {
    "id": "judgement",
    "title": "Direction and judgement",
-   "storyboard": null,
+   "storyboard": "follow-the-rabbit-holes",
    "chapters": [
     {
      "id": "direction-and-judgement",
@@ -397,6 +397,63 @@
      "answers_2018": [
       "4.life-patterns/civic-responsibility.md"
      ]
+    }
+   ]
+  },
+  {
+   "id": "hands-on-2026",
+   "title": "Hands on, 2026",
+   "storyboard": null,
+   "note": "Proposed from Follow the rabbit holes: the practical workflows, dated 2026 and renewed each year. Whether this part is inside the book or a companion is Dinis's open question; the editor's task 2 of that article.",
+   "chapters": [
+    {
+     "id": "an-agentic-workflow-from-zero",
+     "title": "An agentic workflow from zero",
+     "punchline": "One afternoon, five exercises: from a spreadsheet to a folder per person, and a first agent that works for you.",
+     "topics": [
+      "your-first-workspace"
+     ],
+     "gravity": "explorer",
+     "character": "zara",
+     "state": "proposed",
+     "answers_2018": []
+    },
+    {
+     "id": "images-infographics-and-storyboards",
+     "title": "Images, infographics and storyboards, drawn by code",
+     "punchline": "A storyboard is data; the picture is drawn in the browser; the quote is checked against its source.",
+     "topics": [
+      "publish-in-public"
+     ],
+     "gravity": "explorer",
+     "character": "zara",
+     "state": "proposed",
+     "answers_2018": []
+    },
+    {
+     "id": "meeting-briefs-and-follow-ups",
+     "title": "Meeting briefs and follow-ups",
+     "punchline": "A briefing for you, a briefing on who you meet, a follow-up after: the best-prepared person in the room, every time.",
+     "topics": [
+      "working-with-agents"
+     ],
+     "gravity": "villager",
+     "character": "sam",
+     "state": "proposed",
+     "answers_2018": []
+    },
+    {
+     "id": "your-own-publishing",
+     "title": "Your own newsroom and inbox",
+     "punchline": "Voice memo in, a checked site out; the email workflow replicated: publishing and communication that scale.",
+     "topics": [
+      "publish-in-public",
+      "your-first-workspace"
+     ],
+     "gravity": "villager",
+     "character": "priya",
+     "state": "proposed",
+     "answers_2018": []
     }
    ]
   },
