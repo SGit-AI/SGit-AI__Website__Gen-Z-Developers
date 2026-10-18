@@ -1,6 +1,6 @@
 # gen-z-developers.sgit.ai
 
-> The website for finishing the second edition of Generation Z Developers (Dinis Cruz, 2018). The repository holds the official versions of the book; a public vault holds the working versions. Site v0.2.0.
+> The website for finishing the second edition of Generation Z Developers (Dinis Cruz, 2018). The repository holds the official versions of the book; a public vault holds the working versions. Site v0.2.1.
 
 ## The rule
 The repository holds the official versions; the vault holds the working versions. v1.0.0 is the 2018 first edition as released, frozen. A version moves from the vault to the repository when signed off, and the versions page shows the delta block by block.
@@ -11,10 +11,18 @@ The repository holds the official versions; the vault holds the working versions
 - [The contributors](https://gen-z-developers.sgit.ai/contributors/index.html): who contributed to the first edition, from git and GitHub; data at [contributors.json](https://gen-z-developers.sgit.ai/admin/content/contributors.json)
 - [Versions](https://gen-z-developers.sgit.ai/v1/versions/index.html): the official versions and their deltas (page_versions.py from the newsroom)
 - [The map](https://gen-z-developers.sgit.ai/map/index.html): one row per 2018 file, the newsroom articles that answer it, the gap; data at [map.json](https://gen-z-developers.sgit.ai/admin/content/map.json)
+- [Articles](https://gen-z-developers.sgit.ai/articles/index.html): this site's own articles, the briefs for the roles; each has a markdown twin at articles/<slug>.md
 - [The briefs](https://gen-z-developers.sgit.ai/briefs/index.html): the six newsroom articles tagged gen-z-book and the two build briefs, verbatim
 - [The team](https://gen-z-developers.sgit.ai/team/index.html): reviewer, editor, publisher; role.md, issues, briefs, debriefs, the first interview script
 - [The vault](https://gen-z-developers.sgit.ai/vault/index.html): the public working vault, read key published; the private vault for the OpenRouter key
 - [Admin](https://gen-z-developers.sgit.ai/admin/index.html): the build chain and rules; [release history](https://gen-z-developers.sgit.ai/admin/versions.html)
+
+## The articles
+- [Write it as an article: how I brief the agents that finish this book, and why their first job is to ship the book we already shipped](https://gen-z-developers.sgit.ai/articles/write-it-as-an-article.md)
+- [Release the book we already released: v1.0.0 end to end, first with the 2018 print file and a new cover, then built from this repository, before a word of it changes](https://gen-z-developers.sgit.ai/articles/release-the-book-we-already-released.md)
+- [One board for the book: every issue a file, a Kanban page built from the files, and every content issue pinned to a version and a sentence](https://gen-z-developers.sgit.ai/articles/one-board-for-the-book.md)
+- [Everything unfinished in one place: the outlines, the drafts, the 2018 GitHub issues and my handwritten notes, as one inventory I can read through and decide on](https://gen-z-developers.sgit.ai/articles/everything-unfinished-in-one-place.md)
+- [Read, comment, decide: how I go through the pile, one item at a time, and how the editor turns my decisions into the next version of the book](https://gen-z-developers.sgit.ai/articles/read-comment-decide.md)
 
 ## The briefs
 - [Hired for the workflow](https://gen-z-developers.sgit.ai/briefs/01__hired-for-the-workflow.html)

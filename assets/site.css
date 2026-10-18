@@ -182,3 +182,8 @@ a.card{color:var(--fg)} a.card:hover{text-decoration:none;border-color:var(--acc
 .note.warn{border-left-color:var(--warm)}
 svg.tl{width:100%;height:auto;max-width:760px;display:block;margin:.6rem 0;background:var(--panel);border:1px solid var(--line);border-radius:8px}
 table.people td:first-child{white-space:nowrap}
+
+/* ---------- articles ---------- */
+.doc .kicker{font-size:.8rem;color:var(--dim);font-family:var(--mono);margin:0 0 .4rem}
+.doc .byline{font-size:.9rem;color:var(--dim);margin:.2rem 0 1rem}
+ol.articles li{margin:.5rem 0}

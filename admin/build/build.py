@@ -11,6 +11,7 @@ Sources (never edited by this script, except the two bootstraps noted):
   admin/content/book/versions.json       the book's official versions; text_sha256 is filled in ONCE by this build
   admin/content/map.json                 the chapter-to-article map (gen_map.py)
   admin/content/briefs/*.md              the newsroom articles and notes that brief this site, captured verbatim
+  admin/content/articles/NN__<slug>.md   this site's own articles, by its journalist: ideas, tasks and reviews for the roles
   admin/content/vault.json               the public working vault's read key and address (the write key is never here)
   admin/content/versions.json            the site's release history, narrated
   team/<role>/role.md, issues/, briefs/  the roles
@@ -83,6 +84,7 @@ NAV = [
     ("Versions", "v1/versions/index.html"),
     ("Contributors", "contributors/index.html"),
     ("The map", "map/index.html"),
+    ("Articles", "articles/index.html"),
     ("The briefs", "briefs/index.html"),
     ("The team", "team/index.html"),
     ("The vault", "vault/index.html"),
@@ -764,6 +766,40 @@ def build_briefs():
     return llms
 
 
+# ------------------------------------------------------------------ articles
+def build_articles():
+    """This site's own articles, written by its journalist in the newsroom's shape (admin/content/articles/README.md).
+    The file is NN__<slug>.md; NN is the reading order and never changes, the slug is the address. Each article is
+    rendered to articles/<slug>.html and copied as articles/<slug>.md, the twin an agent is pointed at."""
+    files = sorted((ROOT / "admin/content/articles").glob("[0-9][0-9]__*.md"))
+    out = []
+    for f in files:
+        fm, text = frontmatter(f.read_text(encoding="utf-8"))
+        slug = f.stem.split("__", 1)[1]
+        a = {k: fm_get(fm, k) for k in ("title", "date", "author", "summary", "version", "tags", "status")}
+        if a["status"] != "published":
+            continue
+        rel = f"articles/{slug}.html"
+        hook = a["title"].split(":")[0]
+        body = (f'<article class="doc"><p class="kicker">article &middot; {esc(a["date"])} &middot; site {esc(a["version"])} &middot; '
+                f'<a href="{slug}.md">markdown</a></p><h1>{esc(a["title"])}</h1>'
+                f'<p class="byline">By {esc(a["author"])}, written up by this site&rsquo;s journalist, <code>gen-z.journalist</code>; the editorial responsibility is {esc(a["author"])}&rsquo;s.</p>'
+                f'<div class="src"><b>Abstract.</b> {esc(a["summary"])}</div>'
+                f'<div class="body">{md(text)}</div></article>')
+        page(rel, hook, body, a["summary"][:300], crumbs=(("Articles", "articles/index.html"), (hook, rel)))
+        write(f"articles/{slug}.md", f.read_text(encoding="utf-8"))
+        out.append((rel, a))
+    items = "".join(f'<li><a href="{rel[9:]}"><b>{esc(a["title"].split(":")[0])}</b></a>: {esc(a["title"].split(":", 1)[1].strip())}'
+                    f' <span class="small dim">({esc(a["date"])}, site {esc(a["version"])})</span></li>' for rel, a in out)
+    body = f"""<h1>Articles</h1>
+<p class="lede">This site&rsquo;s own articles, in reading order. They are how Dinis briefs the roles that finish the book: an idea, a task or a review is researched, mapped and written up as an article, in Dinis&rsquo;s voice, before any role acts on it; a role is then pointed at the article and takes it from there. The shape and the voice are the newsroom&rsquo;s (<a href="https://newsroom.sgit.ai/articles/how-the-voice-works.html">how the voice works</a>).</p>
+<ol class="articles">{items}</ol>
+<p class="small dim">The sources are in <code>admin/content/articles/</code>; each page links its markdown twin, which is the file to hand to an agent. The journalist&rsquo;s mandate is <a href="../team/journalist/index.html">its role</a>.</p>
+"""
+    page("articles/index.html", "Articles", body, "This site's own articles: ideas, tasks and reviews for the roles that finish the book.", crumbs=(("Articles", "articles/index.html"),))
+    return out
+
+
 # ------------------------------------------------------------------ team
 def build_team():
     roles = []
@@ -832,7 +868,7 @@ def build_vault():
 
 
 # ------------------------------------------------------------------ home, admin, agent surface
-def build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib):
+def build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib, articles):
     c = map_doc["counts"]
     n_pub = len(pub); n_draft = sum(1 for _, ch in drafts if ch["kind"] == "draft"); n_outline = sum(1 for _, ch in drafts if ch["kind"] == "outline"); pub_words = sum(ch["words"] for _, ch in pub)
     six = [b for b in briefs if "__note-" not in b[0]]
@@ -871,6 +907,11 @@ def build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib)
 <a class="card" href="read/index.html"><span class="k">Read &amp; review</span><h3>The reader, and the editor's desk</h3><p>The book with its graph beside it; mark, comment, fold and export a review; a reading meter after the newsroom's rules.</p></a>
 <a class="card" href="contributors/index.html"><span class="k">Contributors</span><h3>{contrib["totals"]["contributors"]} people, {contrib["totals"]["pull_requests_merged"]} pull requests</h3><p>Who fixed, asked and commented on the first edition, from its git history and GitHub issues: {contrib["totals"]["commits_by_contributors"]} commits by others, {contrib["totals"]["issues"]} issues.</p></a>
 </div>
+<h2 id="articles">This site's articles</h2>
+<p class="lede">How the work is briefed: each idea, task or review is written up as an article first, then a role is pointed at it.</p>
+<ol>
+{"".join(f'<li><a href="{rel}">{esc(a["title"].split(":")[0])}</a>: {esc(a["title"].split(":", 1)[1].strip())}</li>' for rel, a in articles)}
+</ol>
 <div class="twocol">
 <div><h2>The articles behind it</h2><p class="small dim">The newsroom series tagged gen-z-book, in the order published, and <a href="briefs/index.html">the two build briefs</a>: captured verbatim.</p>
 <ol>
@@ -942,10 +983,14 @@ The repository holds the official versions; the vault holds the working versions
 - [The contributors]({BASE}contributors/index.html): who contributed to the first edition, from git and GitHub; data at [contributors.json]({BASE}admin/content/contributors.json)
 - [Versions]({BASE}v1/versions/index.html): the official versions and their deltas (page_versions.py from the newsroom)
 - [The map]({BASE}map/index.html): one row per 2018 file, the newsroom articles that answer it, the gap; data at [map.json]({BASE}admin/content/map.json)
+- [Articles]({BASE}articles/index.html): this site's own articles, the briefs for the roles; each has a markdown twin at articles/<slug>.md
 - [The briefs]({BASE}briefs/index.html): the six newsroom articles tagged gen-z-book and the two build briefs, verbatim
 - [The team]({BASE}team/index.html): reviewer, editor, publisher; role.md, issues, briefs, debriefs, the first interview script
 - [The vault]({BASE}vault/index.html): the public working vault, read key published; the private vault for the OpenRouter key
 - [Admin]({BASE}admin/index.html): the build chain and rules; [release history]({BASE}admin/versions.html)
+
+## The articles
+{chr(10).join(f"- [{a['title']}]({BASE}{rel[:-5]}.md)" for rel, a in articles)}
 
 ## The briefs
 {chr(10).join(f"- [{t}]({BASE}{rel})" for rel, t in briefs)}
@@ -990,7 +1035,8 @@ def main():
     briefs = build_briefs()
     roles = build_team()
     vault = build_vault()
-    build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib)
+    articles = build_articles()
+    build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib, articles)
     print(f"build: {VERSION}, {len(flat)} chapters, {len([w for w in written if w.endswith('.html')])} pages, {len(written)} files written")
 
 

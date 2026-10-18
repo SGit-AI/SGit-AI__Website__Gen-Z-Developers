@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://gen-z-developers.sgit.ai/admin/index.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/admin/versions.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/articles/everything-unfinished-in-one-place.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/articles/index.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/articles/one-board-for-the-book.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/articles/read-comment-decide.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/articles/release-the-book-we-already-released.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/articles/write-it-as-an-article.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/briefs/01__hired-for-the-workflow.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/briefs/02__act-as-the-job-you-want.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/briefs/03__generation-z-developers-again.html</loc></url>
@@ -17,6 +23,7 @@
   <url><loc>https://gen-z-developers.sgit.ai/read/index.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/team/editor/index.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/team/index.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/team/journalist/index.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/team/publisher/index.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/team/reviewer/index.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/v1/book/concepts/agile-and-kanban.html</loc></url>

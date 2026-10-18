@@ -8,7 +8,8 @@ describes the behaviour expected of you. Read both before touching anything.
 This repository is the website `gen-z-developers.sgit.ai` and the official versions of the book
 *Generation Z Developers*. **The repository holds the official versions; the vault holds the working
 versions.** `v1/` is the 2018 first edition, frozen. Every push to `dev` is a narrated, tagged,
-deployed release. The roles that finish the book (reviewer, editor, publisher) live in `team/`, and
+deployed release. The roles that finish the book (reviewer, editor, publisher) live in `team/`, with the journalist
+who briefs them in articles (`admin/content/articles/`, rendered at `/articles/`), and
 their working copies in the public vault.
 
 ## What you must not do
