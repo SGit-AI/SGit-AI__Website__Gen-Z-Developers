@@ -1,12 +1,14 @@
 # gen-z-developers.sgit.ai
 
-> The website for finishing the second edition of Generation Z Developers (Dinis Cruz, 2018). The repository holds the official versions of the book; a public vault holds the working versions. Site v0.1.1.
+> The website for finishing the second edition of Generation Z Developers (Dinis Cruz, 2018). The repository holds the official versions of the book; a public vault holds the working versions. Site v0.2.0.
 
 ## The rule
 The repository holds the official versions; the vault holds the working versions. v1.0.0 is the 2018 first edition as released, frozen. A version moves from the vault to the repository when signed off, and the versions page shows the delta block by block.
 
 ## Sections
-- [The book, v1.0.0](https://gen-z-developers.sgit.ai/v1/book/index.html): the 2018 first edition chapter by chapter; [on one page](https://gen-z-developers.sgit.ai/v1/book/single.html); [frozen markdown](https://gen-z-developers.sgit.ai/v1/versions/v1.0.0.md)
+- [The book, v1.0.0](https://gen-z-developers.sgit.ai/v1/book/index.html): the 2018 first edition as published, 28 chapters in the print edition's order, then the drafts and outlines it left out; [on one page](https://gen-z-developers.sgit.ai/v1/book/single.html); [the drafts](https://gen-z-developers.sgit.ai/v1/book/drafts.html); [frozen markdown](https://gen-z-developers.sgit.ai/v1/versions/v1.0.0.md); [the print PDF, 139 pages](https://gen-z-developers.sgit.ai/v1/generation-z-print-ready.pdf)
+- [Read and review](https://gen-z-developers.sgit.ai/read/index.html): the reader with the graph beside it and the editor's desk (states, comments, folds, export); the book as data at [book.json](https://gen-z-developers.sgit.ai/v1/book/book.json)
+- [The contributors](https://gen-z-developers.sgit.ai/contributors/index.html): who contributed to the first edition, from git and GitHub; data at [contributors.json](https://gen-z-developers.sgit.ai/admin/content/contributors.json)
 - [Versions](https://gen-z-developers.sgit.ai/v1/versions/index.html): the official versions and their deltas (page_versions.py from the newsroom)
 - [The map](https://gen-z-developers.sgit.ai/map/index.html): one row per 2018 file, the newsroom articles that answer it, the gap; data at [map.json](https://gen-z-developers.sgit.ai/admin/content/map.json)
 - [The briefs](https://gen-z-developers.sgit.ai/briefs/index.html): the six newsroom articles tagged gen-z-book and the two build briefs, verbatim
@@ -25,21 +27,22 @@ The repository holds the official versions; the vault holds the working versions
 - [A website to finish the book](https://gen-z-developers.sgit.ai/briefs/08__note-a-website-to-finish-the-book.html)
 
 ## The chapters of v1.0.0
-- [Generation Z](https://gen-z-developers.sgit.ai/v1/book/introduction/generation-z.html): written, 671 words, part Introduction
-- [How to get a job](https://gen-z-developers.sgit.ai/v1/book/introduction/how-to-get-a-job.html): written, 732 words, part Introduction
-- [How this book is being created](https://gen-z-developers.sgit.ai/v1/book/introduction/how-this-book-was-created.html): written, 146 words, part Introduction
-- [STEM Tech Stack](https://gen-z-developers.sgit.ai/v1/book/introduction/stem-tech-stack.html): written, 312 words, part Introduction
-- [Creative Commons](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/creative-commons.html): written, 1636 words, part MVP for Gen Z Dev
-- [Open Source](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/open-source.html): written, 2299 words, part MVP for Gen Z Dev
-- [Docker](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/docker.html): written, 1112 words, part MVP for Gen Z Dev
-- [Jira](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/jira.html): written, 1144 words, part MVP for Gen Z Dev
-- [OWASP](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/owasp.html): written, 519 words, part MVP for Gen Z Dev
-- [Python](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/python.html): written, 571 words, part MVP for Gen Z Dev
-- [Slack and ChatOps](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/slack-and-chatops.html): written, 2311 words, part MVP for Gen Z Dev
-- [Hugo](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/hugo.html): written, 795 words, part MVP for Gen Z Dev
-- [Google Search, GDD and SRE](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/google-search-gdd-sre.html): written, 1933 words, part MVP for Gen Z Dev
-- [Xcode and Swift](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/xcode-and-swift.html): written, 731 words, part MVP for Gen Z Dev
-- [Dot Language](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/dot-language.html): written, 2993 words, part MVP for Gen Z Dev
+- [Generation Z](https://gen-z-developers.sgit.ai/v1/book/introduction/generation-z.html): published, p. 7, 671 words, part Introduction
+- [How to get a job](https://gen-z-developers.sgit.ai/v1/book/introduction/how-to-get-a-job.html): published, p. 9, 732 words, part Introduction
+- [How this book is being created](https://gen-z-developers.sgit.ai/v1/book/introduction/how-this-book-was-created.html): published, p. 12, 146 words, part Introduction
+- [STEM Tech Stack](https://gen-z-developers.sgit.ai/v1/book/introduction/stem-tech-stack.html): draft, 312 words, part Introduction
+- [Creative Commons](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/creative-commons.html): published, p. 14, 1636 words, part MVP for Gen Z Dev
+- [Open Source](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/open-source.html): published, p. 20, 2299 words, part MVP for Gen Z Dev
+- [Docker](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/docker.html): published, p. 29, 1112 words, part MVP for Gen Z Dev
+- [Jira](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/jira.html): published, p. 33, 1144 words, part MVP for Gen Z Dev
+- [OWASP](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/owasp.html): published, p. 38, 519 words, part MVP for Gen Z Dev
+- [Python](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/python.html): published, p. 40, 571 words, part MVP for Gen Z Dev
+- [Slack and ChatOps](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/slack-and-chatops.html): published, p. 43, 2311 words, part MVP for Gen Z Dev
+- [Hugo](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/hugo.html): published, p. 52, 795 words, part MVP for Gen Z Dev
+- [Google Search, GDD and SRE](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/google-search-gdd-sre.html): published, p. 56, 1933 words, part MVP for Gen Z Dev
+- [Xcode and Swift](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/xcode-and-swift.html): published, p. 62, 731 words, part MVP for Gen Z Dev
+- [Dot Language](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/dot-language.html): published, p. 65, 2993 words, part MVP for Gen Z Dev
+- [Wallaby and NCrunch](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/wallaby-and-ncrunch.html): published, p. 79, 3699 words, part MVP for Gen Z Dev
 - [TDD (Test-Driven Development)](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/tdd.html): outline, 318 words, part MVP for Gen Z Dev
 - [AWS](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/aws.html): outline, 320 words, part MVP for Gen Z Dev
 - [Continuous Integration](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/continuous-integration.html): outline, 79 words, part MVP for Gen Z Dev
@@ -50,15 +53,14 @@ The repository holds the official versions; the vault holds the working versions
 - [Minecraft](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/minecraft.html): outline, 13 words, part MVP for Gen Z Dev
 - [raspberry-pi](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/raspberry-pi.html): outline, 112 words, part MVP for Gen Z Dev
 - [StackOverflow](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/stack-overflow.html): outline, 59 words, part MVP for Gen Z Dev
-- [Wallaby and NCrunch](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/wallaby-and-ncrunch.html): written, 3699 words, part MVP for Gen Z Dev
 - [Wikipedia](https://gen-z-developers.sgit.ai/v1/book/mvp-for-gen-z-dev/wikipedia.html): outline, 70 words, part MVP for Gen Z Dev
-- [Books](https://gen-z-developers.sgit.ai/v1/book/technologies/books.html): written, 755 words, part Technologies
-- [Pen and Paper](https://gen-z-developers.sgit.ai/v1/book/technologies/pen-and-paper.html): written, 382 words, part Technologies
-- [Assembly and Bytecode](https://gen-z-developers.sgit.ai/v1/book/technologies/assembly-and-bytecode.html): written, 530 words, part Technologies
-- [Brain](https://gen-z-developers.sgit.ai/v1/book/technologies/brain.html): written, 748 words, part Technologies
-- [IDE](https://gen-z-developers.sgit.ai/v1/book/technologies/ide.html): written, 349 words, part Technologies
-- [Machine Learning and AI](https://gen-z-developers.sgit.ai/v1/book/technologies/ml-ai.html): written, 391 words, part Technologies
-- [AST (Abstract Syntax Tree)](https://gen-z-developers.sgit.ai/v1/book/technologies/ast.html): written, 1682 words, part Technologies
+- [Books](https://gen-z-developers.sgit.ai/v1/book/technologies/books.html): published, p. 93, 755 words, part Technologies
+- [Pen and Paper](https://gen-z-developers.sgit.ai/v1/book/technologies/pen-and-paper.html): published, p. 95, 382 words, part Technologies
+- [Assembly and Bytecode](https://gen-z-developers.sgit.ai/v1/book/technologies/assembly-and-bytecode.html): published, p. 97, 530 words, part Technologies
+- [Brain](https://gen-z-developers.sgit.ai/v1/book/technologies/brain.html): published, p. 99, 748 words, part Technologies
+- [IDE](https://gen-z-developers.sgit.ai/v1/book/technologies/ide.html): published, p. 101, 349 words, part Technologies
+- [Machine Learning and AI](https://gen-z-developers.sgit.ai/v1/book/technologies/ml-ai.html): published, p. 102, 391 words, part Technologies
+- [AST (Abstract Syntax Tree)](https://gen-z-developers.sgit.ai/v1/book/technologies/ast.html): published, p. 104, 1682 words, part Technologies
 - [Blockchain](https://gen-z-developers.sgit.ai/v1/book/technologies/blockchain.html): outline, 53 words, part Technologies
 - [Browser Automation](https://gen-z-developers.sgit.ai/v1/book/technologies/browser-automation.html): outline, 82 words, part Technologies
 - [Dopamine](https://gen-z-developers.sgit.ai/v1/book/technologies/dopamine.html): outline, 184 words, part Technologies
@@ -69,7 +71,7 @@ The repository holds the official versions; the vault holds the working versions
 - [Scratch](https://gen-z-developers.sgit.ai/v1/book/technologies/scratch.html): outline, 29 words, part Technologies
 - [Streams](https://gen-z-developers.sgit.ai/v1/book/technologies/streams.html): outline, 50 words, part Technologies
 - [Web Proxies](https://gen-z-developers.sgit.ai/v1/book/technologies/web-proxies.html): outline, 25 words, part Technologies
-- [Gamification](https://gen-z-developers.sgit.ai/v1/book/concepts/gamification.html): written, 127 words, part Concepts
+- [Gamification](https://gen-z-developers.sgit.ai/v1/book/concepts/gamification.html): draft, 127 words, part Concepts
 - [Agile and Kanban](https://gen-z-developers.sgit.ai/v1/book/concepts/agile-and-kanban.html): outline, 159 words, part Concepts
 - [Amazon Press Release](https://gen-z-developers.sgit.ai/v1/book/concepts/amazon-press-releases.html): outline, 26 words, part Concepts
 - [Change Engineering](https://gen-z-developers.sgit.ai/v1/book/concepts/change-engineering.html): outline, 12 words, part Concepts
@@ -96,7 +98,7 @@ The repository holds the official versions; the vault holds the working versions
 - [Spotify Model](https://gen-z-developers.sgit.ai/v1/book/concepts/spotify-model.html): outline, 46 words, part Concepts
 - [SRE (Site Reliability Engineering )](https://gen-z-developers.sgit.ai/v1/book/concepts/sre.html): outline, 44 words, part Concepts
 - [Strong vs weak types](https://gen-z-developers.sgit.ai/v1/book/concepts/strong-vs-weak-types.html): outline, 34 words, part Concepts
-- [leanpub](https://gen-z-developers.sgit.ai/v1/book/your-cv/leanpub.html): written, 103 words, part Your CV
+- [leanpub](https://gen-z-developers.sgit.ai/v1/book/your-cv/leanpub.html): draft, 103 words, part Your CV
 - [Personal Brand](https://gen-z-developers.sgit.ai/v1/book/your-cv/personal-brand.html): outline, 92 words, part Your CV
 - [Blogs](https://gen-z-developers.sgit.ai/v1/book/your-cv/blogs.html): outline, 202 words, part Your CV
 - [Future Self](https://gen-z-developers.sgit.ai/v1/book/your-cv/future-self.html): outline, 82 words, part Your CV
@@ -113,12 +115,12 @@ The repository holds the official versions; the vault holds the working versions
 - [Security creates better developers](https://gen-z-developers.sgit.ai/v1/book/security/security-better-developers.html): outline, 30 words, part Security
 - [Strings should be banned](https://gen-z-developers.sgit.ai/v1/book/security/strings-should-be-banned.html): outline, 66 words, part Security
 - [Threat Modeling](https://gen-z-developers.sgit.ai/v1/book/security/threat-modeling.html): outline, 110 words, part Security
-- [Learning](https://gen-z-developers.sgit.ai/v1/book/life-patterns/learning.html): written, 938 words, part Life Patterns
-- [Be a founder](https://gen-z-developers.sgit.ai/v1/book/life-patterns/be-a-founder.html): written, 272 words, part Life Patterns
-- [Being criticized is an privilege](https://gen-z-developers.sgit.ai/v1/book/life-patterns/being-criticized-is-a-privilege.html): written, 2196 words, part Life Patterns
-- [Backup your life](https://gen-z-developers.sgit.ai/v1/book/life-patterns/backup-your-life.html): written, 1007 words, part Life Patterns
-- [Talking to yourself digitally](https://gen-z-developers.sgit.ai/v1/book/life-patterns/talking-to-yourself.html): written, 592 words, part Life Patterns
-- [The future needs you](https://gen-z-developers.sgit.ai/v1/book/life-patterns/future-needs-you.html): written, 621 words, part Life Patterns
+- [Learning](https://gen-z-developers.sgit.ai/v1/book/life-patterns/learning.html): published, p. 113, 938 words, part Life Patterns
+- [Be a founder](https://gen-z-developers.sgit.ai/v1/book/life-patterns/be-a-founder.html): published, p. 116, 272 words, part Life Patterns
+- [Being criticized is an privilege](https://gen-z-developers.sgit.ai/v1/book/life-patterns/being-criticized-is-a-privilege.html): published, p. 117, 2196 words, part Life Patterns
+- [Backup your life](https://gen-z-developers.sgit.ai/v1/book/life-patterns/backup-your-life.html): published, p. 128, 1007 words, part Life Patterns
+- [Talking to yourself digitally](https://gen-z-developers.sgit.ai/v1/book/life-patterns/talking-to-yourself.html): published, p. 131, 592 words, part Life Patterns
+- [The future needs you](https://gen-z-developers.sgit.ai/v1/book/life-patterns/future-needs-you.html): published, p. 133, 621 words, part Life Patterns
 - [Are you a pionner, Settlers or Town Planners](https://gen-z-developers.sgit.ai/v1/book/life-patterns/pionners-settlers-town-planners.html): outline, 22 words, part Life Patterns
 - [Automate your Workflows](https://gen-z-developers.sgit.ai/v1/book/life-patterns/automate-your-workflows.html): outline, 48 words, part Life Patterns
 - [BBS and Modems](https://gen-z-developers.sgit.ai/v1/book/life-patterns/bbs-and-modems.html): outline, 167 words, part Life Patterns
@@ -140,9 +142,9 @@ The repository holds the official versions; the vault holds the working versions
 - [Thinking as programmer](https://gen-z-developers.sgit.ai/v1/book/life-patterns/thinking-as-programmer.html): outline, 12 words, part Life Patterns
 - [Why diversity matters](https://gen-z-developers.sgit.ai/v1/book/life-patterns/why-diversity-matters.html): outline, 280 words, part Life Patterns
 - [Workflows](https://gen-z-developers.sgit.ai/v1/book/life-patterns/workflows.html): outline, 69 words, part Life Patterns
-- [Books to read](https://gen-z-developers.sgit.ai/v1/book/misc/books-to-read.html): written, 46 words, part Misc
-- [Diagrams to add](https://gen-z-developers.sgit.ai/v1/book/misc/diagrams-to-add.html): written, 15 words, part Misc
-- [Generation Z Research](https://gen-z-developers.sgit.ai/v1/book/misc/gen-z-research.html): written, 76 words, part Misc
+- [Books to read](https://gen-z-developers.sgit.ai/v1/book/misc/books-to-read.html): draft, 46 words, part Misc
+- [Diagrams to add](https://gen-z-developers.sgit.ai/v1/book/misc/diagrams-to-add.html): draft, 15 words, part Misc
+- [Generation Z Research](https://gen-z-developers.sgit.ai/v1/book/misc/gen-z-research.html): draft, 76 words, part Misc
 - [Gen Z digital environment](https://gen-z-developers.sgit.ai/v1/book/misc/gen-z-digital-env.html): outline, 54 words, part Misc
 - [O2 Platform](https://gen-z-developers.sgit.ai/v1/book/misc/o2-platform.html): outline, 43 words, part Misc
 - [Stories to tell](https://gen-z-developers.sgit.ai/v1/book/misc/stories-to-tell.html): outline, 91 words, part Misc

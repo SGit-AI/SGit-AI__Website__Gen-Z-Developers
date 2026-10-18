@@ -1,0 +1,1385 @@
+61886444fe5ab118ab18726147826ab05f794edc|Dinis Cruz|dinis.cruz@owasp.org|2024-03-01|Update README.md
+
+3	0	README.md
+65205a33e6dd4a7b83e1ade6836cc3b592a2a292|Dinis Cruz|dinis.cruz@owasp.org|2024-03-01|Merge pull request #67 from mobrien-gw/master
+ad9aa863b9f46f2989486e4f5e707fbc11d70724|Martin|59726302+mobrien-gw@users.noreply.github.com|2020-02-01|Typo corrections
+
+2	2	content/10.misc/stories-to-tell.md
+a778b3a5c971788f297bda737f81a19689607673|Martin|59726302+mobrien-gw@users.noreply.github.com|2020-02-01|Small typo corrections
+
+4	4	content/10.misc/gen-z-digital-env.md
+7a8d8a030c5319849a889db8849c549eca4c947f|Martin|59726302+mobrien-gw@users.noreply.github.com|2020-02-01|Annotated that page does not exist.
+
+1	1	content/10.misc/diagrams-to-add.md
+8fab1cfd56f5b9b2b2a62798f13f3adf69eccf5f|Martin|59726302+mobrien-gw@users.noreply.github.com|2020-02-01|Correct typo.
+
+2	2	content/10.misc/books-to-read.md
+88042bbc55b495ad5d5320e345f338523ad3c4f3|Dinis Cruz|dinis.cruz@owasp.org|2020-01-25|Merge pull request #66 from StevenJV/first_full_readthrough
+e205de0bec280cec4a32d71afcee0c38c01092f5|StevenJV|steven@vorefamily.net|2020-01-16|clarifies subject
+
+1	1	content/2.mvp-for-gen-z-dev/content/dot-language.md
+3a72afeab197305ac959c3dca33374217850bfd3|StevenJV|steven@vorefamily.net|2020-01-16|corrects spelling and spacing
+
+1	1	content/2.mvp-for-gen-z-dev/content/docker.md
+1	1	content/2.mvp-for-gen-z-dev/content/owasp.md
+1	1	content/2.mvp-for-gen-z-dev/content/python.md
+1	1	content/2.mvp-for-gen-z-dev/draft/wallaby-and-ncrunch.md
+2	2	content/3.technologies/content/books.md
+1	1	content/4.life-patterns/why-diversity-matters.md
+08088c0c45e42ef379ddbb3404ec42d136bb583c|Dinis Cruz|dinis.cruz@owasp.org|2020-01-15|Merge pull request #65 from StevenJV/potential_changes
+ae13997de44f97afce4133cd50aa64b7fabe0b85|StevenJV|steven@vorefamily.net|2020-01-15|corrects possible typo
+
+1	1	content/1.introduction/_index.md
+f3b6f5268fb15810b168962bee44275d9f2aff09|Martin|59726302+mobrien-gw@users.noreply.github.com|2020-01-11|Minor grammar changes.
+
+2	2	content/1.introduction/how-to-get-a-job.md
+55fab4c1dbc662502a3c820f7575e7c8bc9ee468|Martin|59726302+mobrien-gw@users.noreply.github.com|2020-01-11|Make minor changes to correct grammar.
+
+3	3	content/1.introduction/how-this -book-was-created.md
+01f6a2a5f498ac05f543f729ef508c87f34ff82a|Martin|59726302+mobrien-gw@users.noreply.github.com|2020-01-11|Correct minor typo.
+
+1	1	content/1.introduction/generation-z.md
+7e2ff829faff41b1ce2f1f2f9cb88d712ebbc9ee|Dinis Cruz|dinis.cruz@owasp.org|2019-06-23|Merge pull request #60 from didadida5555/patch-7
+ac6862ea3c3904ee2d14ae60c65b5927718bea1f|Dinis Cruz|dinis.cruz@owasp.org|2019-06-23|Merge pull request #59 from didadida5555/patch-6
+f0386781d039ab7c098c230234165ad99c0c885a|Dinis Cruz|dinis.cruz@owasp.org|2019-06-23|Merge pull request #58 from didadida5555/patch-5
+9452725eb24649a90f40836811ab79d7aca74278|Dinis Cruz|dinis.cruz@owasp.org|2019-06-23|Merge pull request #55 from didadida5555/patch-1
+e0139a024b4eb0b26e40c3e38248e6242349bb24|Dinis Cruz|dinis.cruz@owasp.org|2019-06-23|Update how-to-get-a-job.md
+
+0	1	content/1.introduction/how-to-get-a-job.md
+4eb4cbd25a9c5a083bec92bcee1ec9a7745f7a16|Dinis Cruz|dinis.cruz@owasp.org|2019-06-23|Merge branch 'master' into patch-1
+0f5deece6a517b2189906c438d2f82217d226428|Dinis Cruz|dinis.cruz@owasp.org|2019-06-22|Merge pull request #56 from didadida5555/patch-3
+03faf161a3308d1b81b6cbab655b98740ae1cb7d|Dinis Cruz|dinis.cruz@owasp.org|2019-06-22|Merge pull request #57 from didadida5555/patch-4
+0e4a5ccec0424e251f222b293d82d01e54fb9087|Dinis Cruz|dinis.cruz@owasp.org|2019-06-22|Minor fix
+
+2	2	content/2.mvp-for-gen-z-dev/content/google-search-gdd-sre.md
+ab108f2897a6ef21572b662bcc4d1257f2b9d24f|Dinis Cruz|dinis.cruz@owasp.org|2019-06-22|Merge branch 'master' of github.com:DinisCruz/Book_Generation_Z_Developer
+cb6b1c1ea093edc447881d2443d6ba61a5a9253a|Dinis Cruz|dinis.cruz@owasp.org|2019-06-22|Adding puml files created ages ago
+
+65	0	puml-graphs/diagrams/gen-z-life-patterns.puml
+18	9	puml-graphs/diagrams/stem/STEM-tech-stack-common.iuml
+-	-	puml-graphs/diagrams/stem/STEM-tech-stack.png
+125	73	puml-graphs/diagrams/stem/STEM-tech-stack.puml
+-	-	puml-graphs/diagrams/stem/STEM-tech-stack_001.png
+-	-	puml-graphs/diagrams/stem/STEM-tech-stack_002.png
+-	-	puml-graphs/diagrams/stem/STEM-tech-stack_003.png
+-	-	puml-graphs/img/genz-logo.png
+0	19	puml-graphs/puml/first-test.puml
+40	0	puml-graphs/puml/misc-test/swin-lanes.puml
+1dadce3f3f1913cbfd8df373f51715e2fed73a9a|Dinis Cruz|dinis.cruz@owasp.org|2019-06-22|Merge pull request #37 from clazba/master
+9eb7db184ebf61db0bccb627a02b8c47cf8219c9|Dinis Cruz|dinis.cruz@owasp.org|2019-06-22|Merge pull request #36 from samwillis4216/introduction-corrections
+658c4d46dcc3c426fff276d5468aac1ad1b5a420|Dinis Cruz|dinis.cruz@owasp.org|2019-06-22|Merge branch 'master' into introduction-corrections
+745edc8fd0bbc8833a815d55a7ed9c2e99740b9f|Dinis Cruz|dinis.cruz@owasp.org|2019-06-22|Merge pull request #34 from kennethjhim/patch-1
+8b6036f5bfae7a1164f674f5ab06598f043a2de6|didadida5555|49901989+didadida5555@users.noreply.github.com|2019-06-16|Update jira.md
+
+6	6	content/2.mvp-for-gen-z-dev/content/jira.md
+28e01f5f00ea19f3c0067f8cda48889af8c29117|didadida5555|49901989+didadida5555@users.noreply.github.com|2019-06-16|Update docker.md
+
+4	4	content/2.mvp-for-gen-z-dev/content/docker.md
+33a9acb96669e90d96fe657a0d92b70047b52b5c|didadida5555|49901989+didadida5555@users.noreply.github.com|2019-06-16|Update open-source.md
+
+13	13	content/2.mvp-for-gen-z-dev/content/open-source.md
+5987fef40807456a22984e33bb2222e587c46c1d|didadida5555|49901989+didadida5555@users.noreply.github.com|2019-06-16|Update how-this -book-was-created.md
+
+2	2	content/1.introduction/how-this -book-was-created.md
+76a8d752e11395e1a350e8ed66ac699a3de8360c|didadida5555|49901989+didadida5555@users.noreply.github.com|2019-06-16|Update creative-commons.md
+
+1	1	content/2.mvp-for-gen-z-dev/content/creative-commons.md
+fa9bb2a01b864de1e1606034a71ac7784591ba15|didadida5555|49901989+didadida5555@users.noreply.github.com|2019-06-16|Update how-to-get-a-job.md
+
+1	1	content/1.introduction/how-to-get-a-job.md
+335ef2ff30cb68b958650914e3aeb338077f3565|Dinis Cruz|dinis.cruz@owasp.org|2019-01-16|Merge pull request #47 from secureideas/master
+ebda4c9d84720dc52a298b67779c0d79d41c1ea2|Kevin Johnson|kevin@secureideas.com|2018-12-15|Fixed a minor misspelling
+
+1	1	content/1.introduction/_index.md
+fef953034255245d6d378caec85346f9a2f73979|Sarah Cruz|38696765+sarahallencruz@users.noreply.github.com|2018-11-24|Update open-source.md
+
+11	11	content/2.mvp-for-gen-z-dev/content/open-source.md
+d9f4be98f6eaeb5ff9d7c0388b77be79b864cc03|Dinis Cruz|dinis.cruz@owasp.org|2018-11-19|Merge branch 'master' into dudes-test
+a428b37703599e4e4f833aa0cfa2e16a25b044f6|Dinis Cruz|dinis.cruz@owasp.org|2018-11-19|Added Visio diagram
+
+1	1	content/3.technologies/content/ml-ai.md
+66	0	puml-graphs/diagrams/why-visio-doesnt-scale.puml
+f88080c01c17f531f72d43d951c13917be6750ba|Dinis Cruz|dinis.cruz@owasp.org|2018-11-18|Merge branch 'master' into dudes-test
+88e8af2f1a8a4ff0e059b4ba3c181b4d2fdbde9f|Dinis Cruz|dinis.cruz@owasp.org|2018-11-18|more puml files
+
+57	0	content/1.introduction/stem-tech-stack.md
+21	8	puml-graphs/diagrams/default-params.iuml
+60	0	puml-graphs/diagrams/gen-z-mpv.puml
+2	0	puml-graphs/diagrams/reader-sends-feedback.puml
+11	0	puml-graphs/diagrams/stem/STEM-tech-stack-common.iuml
+105	0	puml-graphs/diagrams/stem/STEM-tech-stack.puml
+3	8	puml-graphs/diagrams/use-content-from-book.puml
+0	4	puml-graphs/puml/dot-test.puml
+21	0	puml-graphs/puml/import-test.puml
+112	0	puml-graphs/puml/partition-test.puml
+5	0	puml-graphs/test/Test_Puml_dudes_experiments.py
+1146004758dd81f518db2fe9a8cc4d7c70033717|Dinis Cruz|dinis.cruz@owasp.org|2018-11-18|more pics
+
+-	-	STEM-tech-stack_001.png
+-	-	puml-graphs/diagrams/stem/STEM-tech-stack.png
+-	-	puml-graphs/diagrams/stem/STEM-tech-stack_001.png
+-	-	puml-graphs/diagrams/stem/STEM-tech-stack_002.png
+-	-	puml-graphs/diagrams/stem/STEM-tech-stack_003.png
+-	-	puml-graphs/img/dudes/dude-question-mark.png
+-	-	puml-graphs/img/dudes/dude-thumbs-up.png
+-	-	puml-graphs/img/dudes/dude-we-want-you.png
+-	-	puml-graphs/img/genz-logo-small.png
+-	-	puml-graphs/img/{others => }/genz-logo.png
+-	-	puml-graphs/img/others/3rd-party/stem-logo.png
+-	-	puml-graphs/img/others/cc-by-logo-small.png
+a79e8c9e2889393feb5de5a6973cd8c8a8581cc3|Dinis Cruz|dinis.cruz@owasp.org|2018-11-17|Merge branch 'master' into dudes-test
+ebc5edfcba693be2b3a4205bf53f06a66baec51f|Dinis Cruz|dinis.cruz@owasp.org|2018-11-17|started refactoring puml code into include files
+
+8	0	puml-graphs/diagrams/default-params.iuml
+0	8	puml-graphs/diagrams/reader-sends-feedback.puml
+06067af1d34b01b2e70a3a3f12db569762b4ffbd|Dinis Cruz|dinis.cruz@owasp.org|2018-11-16|other content fixes
+
+2	5	puml-graphs/diagrams/use-content-from-book.puml
+7	6	puml-graphs/test/Test_Puml_dudes_experiments.py
+b77736929e77492900395256719007e8ed66aae5|Dinis Cruz|dinis.cruz@owasp.org|2018-11-16|fixing issue reported by Rob Newby https://www.linkedin.com/feed/update/urn:li:activity:6469231690278543360?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A6469231690278543360%2C6469307831181987840%29
+
+1	1	puml-graphs/diagrams/reader-sends-feedback.puml
+574f0795ed95b3fd5477ca1121c8da834b0e5800|Dinis Cruz|dinis.cruz@owasp.org|2018-11-16|moved all images to parent folder
+
+-	-	puml-graphs/{dudes => }/img/dudes/dude-dinis.png
+-	-	puml-graphs/{dudes => }/img/dudes/dude-holding-something.png
+-	-	puml-graphs/{dudes => }/img/dudes/dude-not-sure.png
+-	-	puml-graphs/{dudes => }/img/dudes/dude-on-the-move.png
+-	-	puml-graphs/{dudes => }/img/dudes/dude-scratching-head.png
+-	-	puml-graphs/{dudes => }/img/dudes/dude.png
+-	-	puml-graphs/{dudes => }/img/dudes/dudes-group.png
+-	-	puml-graphs/{dudes => }/img/github/fork-repo.png
+-	-	puml-graphs/{dudes => }/img/github/logo.png
+-	-	puml-graphs/{dudes => }/img/github/new-issue.png
+-	-	puml-graphs/{dudes => }/img/github/pull-request.png
+-	-	puml-graphs/{dudes => }/img/github/repo-address.png
+-	-	puml-graphs/{dudes => }/img/others/amazon-logo.png
+-	-	puml-graphs/{dudes => }/img/others/amazon-store.png
+-	-	puml-graphs/{dudes => }/img/others/book-cover.jpg
+-	-	puml-graphs/{dudes => }/img/others/cc-by-details-1.png
+-	-	puml-graphs/{dudes => }/img/others/cc-by-details-2.png
+-	-	puml-graphs/{dudes => }/img/others/cc-by-link.png
+-	-	puml-graphs/{dudes => }/img/others/cc-by-logo.png
+-	-	puml-graphs/{dudes => }/img/others/cc-logo.png
+-	-	puml-graphs/{dudes => }/img/others/genz-logo.png
+-	-	puml-graphs/{dudes => }/img/others/leanpub-logo.png
+-	-	puml-graphs/{dudes => }/img/others/leanpub-store.png
+-	-	puml-graphs/{dudes => }/img/others/linkedin-logo.png
+-	-	puml-graphs/{dudes => }/img/others/twitter-logo.png
+-	-	puml-graphs/{dudes => }/img/workflows/done/workflow-give-feedback.png
+-	-	puml-graphs/{dudes => }/img/workflows/done/workflow-send-changes.png
+-	-	puml-graphs/{dudes => }/img/workflows/gen-z-developer-circle-with-text.png
+-	-	puml-graphs/{dudes => }/img/workflows/genz-empty-circle.png
+-	-	puml-graphs/{dudes => }/img/workflows/library-card.png
+-	-	puml-graphs/{dudes => }/img/workflows/mvp-with text.png
+-	-	puml-graphs/{dudes => }/img/workflows/workflow-where-do-i-get-this-book.png
+4dfbc6255c0cbd0f9b16ac171e6a8c2c9db98196|Dinis Cruz|dinis.cruz@owasp.org|2018-11-16|Merge branch 'master' into dudes-test
+5951e319748d47a3718be6e3795db1e0cf6ff9fb|Dinis Cruz|dinis.cruz@owasp.org|2018-11-16|moved puml files
+
+0	0	puml-graphs/{dudes => }/diagrams/reader-sends-feedback.puml
+0	0	puml-graphs/{dudes => }/diagrams/use-content-from-book.puml
+0	0	puml-graphs/{dudes => }/puml/all-dudes.puml
+0	0	puml-graphs/{dudes => }/puml/dot-test.puml
+0	0	puml-graphs/{dudes => }/puml/first-test.puml
+0	0	puml-graphs/{dudes => }/puml/send-changes-v2.puml
+0	0	puml-graphs/{dudes => }/puml/sequence-diagram-with-dudes.puml
+5c96bb7bd57cdd7f44e3f28c060f7fd00e59a137|Dinis Cruz|dinis.cruz@owasp.org|2018-11-16|updating Puml
+
+0	0	puml-graphs/{ => dudes}/diagrams/reader-sends-feedback.puml
+44	0	puml-graphs/dudes/diagrams/use-content-from-book.puml
+4	0	puml-graphs/dudes/puml/dot-test.puml
+12	2	puml-graphs/test/Test_Puml_dudes_experiments.py
+516bb0b2e973641a98d2603e915c8162d30a6f1a|Dinis Cruz|dinis.cruz@owasp.org|2018-11-16|updated pics
+
+-	-	puml-graphs/dudes/img/dudes/dude-not-sure.png
+-	-	puml-graphs/dudes/img/dudes/dude-scratching-head.png
+-	-	puml-graphs/dudes/img/others/cc-by-details-1.png
+-	-	puml-graphs/dudes/img/others/cc-by-details-2.png
+-	-	puml-graphs/dudes/img/others/cc-by-link.png
+-	-	puml-graphs/dudes/img/others/cc-by-logo.png
+-	-	puml-graphs/dudes/img/others/cc-logo.png
+-	-	puml-graphs/dudes/img/workflows/{ => done}/workflow-give-feedback.png
+-	-	puml-graphs/dudes/img/workflows/{ => done}/workflow-send-changes.png
+-	-	puml-graphs/dudes/img/{others => workflows}/gen-z-developer-circle-with-text.png
+-	-	puml-graphs/dudes/img/{others => workflows}/genz-empty-circle.png
+-	-	puml-graphs/dudes/img/{others => workflows}/library-card.png
+-	-	puml-graphs/dudes/img/{others => workflows}/mvp-with text.png
+-	-	puml-graphs/first-tests/dinis-dude.png
+-	-	puml-graphs/first-tests/dude-holding-something.png
+-	-	puml-graphs/first-tests/dude-not-sure.png
+-	-	puml-graphs/first-tests/dude-on-the-move.png
+-	-	puml-graphs/first-tests/dude-scratching-head.png
+-	-	puml-graphs/first-tests/dude.png
+2cef88c18478c36ecce4c78add1692b19124a6bb|Dinis Cruz|dinis.cruz@owasp.org|2018-11-16|Merge branch 'master' into dudes-test
+3c5ab306b68d8cdba433ea8ac2192b2a5fa870df|Dinis Cruz|dinis.cruz@owasp.org|2018-11-16|Adding puml files
+
+52	0	puml-graphs/diagrams/reader-sends-feedback.puml
+24	0	puml-graphs/dudes/puml/all-dudes.puml
+0	25	puml-graphs/dudes/puml/another-test.puml
+37	0	puml-graphs/dudes/puml/send-changes-v2.puml
+23	4	puml-graphs/test/Test_Puml_dudes_experiments.py
+04363305b03a8bd941a88234b7277e5a8af1c2ff|Dinis Cruz|dinis.cruz@owasp.org|2018-11-16|changed image size
+
+-	-	puml-graphs/dudes/img/others/amazon-store.png
+-	-	puml-graphs/dudes/img/others/leanpub-store.png
+60dbc7d2b3fe2543084d82f9bc9bd54ddac9a5b2|Dinis Cruz|dinis.cruz@owasp.org|2018-11-16|adding more images
+
+-	-	puml-graphs/dudes/img/dudes/dinis-dude.png
+-	-	puml-graphs/dudes/img/dudes/dude-dinis.png
+-	-	puml-graphs/dudes/img/{others/github-fork-repo.png => github/fork-repo.png}
+-	-	puml-graphs/dudes/img/{others/github-logo.png => github/logo.png}
+-	-	puml-graphs/dudes/img/github/new-issue.png
+-	-	puml-graphs/dudes/img/{others/github-pull-request.png => github/pull-request.png}
+-	-	puml-graphs/dudes/img/github/repo-address.png
+-	-	puml-graphs/dudes/img/others/amazon-logo.png
+-	-	puml-graphs/dudes/img/others/amazon-store.png
+-	-	puml-graphs/dudes/img/others/book-cover-small.jpg
+-	-	puml-graphs/dudes/img/others/{book-cover.jpeg => book-cover.jpg}
+-	-	puml-graphs/dudes/img/others/leanpub-logo.png
+-	-	puml-graphs/dudes/img/others/leanpub-store.png
+472cee9e6b1f78e9643f49b2e0c12ca351cd1cec|Dinis Cruz|dinis.cruz@owasp.org|2018-11-16|updating images
+
+-	-	puml-graphs/dudes/img/dudes/dinis-dude.png
+-	-	puml-graphs/dudes/img/dudes/dude-holding-something.png
+-	-	puml-graphs/dudes/img/dudes/dude-not-sure.png
+-	-	puml-graphs/dudes/img/dudes/dude-on-the-move.png
+-	-	puml-graphs/dudes/img/dudes/dude-scratching-head.png
+-	-	puml-graphs/dudes/img/dudes/dude.png
+-	-	puml-graphs/dudes/img/dudes/dudes-group.png
+-	-	puml-graphs/dudes/img/others/book-cover-small.jpg
+-	-	puml-graphs/dudes/img/others/book-cover.jpeg
+-	-	puml-graphs/dudes/img/others/github-fork-repo.png
+-	-	puml-graphs/dudes/img/others/github-logo.png
+-	-	puml-graphs/dudes/img/others/github-pull-request.png
+-	-	puml-graphs/dudes/img/others/linkedin-logo.png
+-	-	puml-graphs/dudes/img/others/twitter-logo.png
+7761b65781ad0ff3c041b0390df935c3fc8903b7|Dinis Cruz|dinis.cruz@owasp.org|2018-11-15|Merge branch 'master' into dudes-test
+ead72fff6adc785a7b52606edd07bd3a250fb58a|Dinis Cruz|dinis.cruz@owasp.org|2018-11-15|Adding images
+
+-	-	puml-graphs/dudes/img/dudes/dinis-dude.png
+-	-	puml-graphs/dudes/img/dudes/dude-holding-something.png
+-	-	puml-graphs/dudes/img/dudes/dude-not-sure.png
+-	-	puml-graphs/dudes/img/dudes/dude-on-the-move.png
+-	-	puml-graphs/dudes/img/dudes/dude-scratching-head.png
+-	-	puml-graphs/dudes/img/dudes/dude.png
+-	-	puml-graphs/dudes/img/dudes/dudes-group.png
+-	-	puml-graphs/dudes/img/others/gen-z-developer-circle-with-text.png
+-	-	puml-graphs/dudes/img/others/genz-empty-circle.png
+-	-	puml-graphs/dudes/img/others/genz-logo.png
+-	-	puml-graphs/dudes/img/others/library-card.png
+-	-	puml-graphs/dudes/img/others/mvp-with text.png
+-	-	puml-graphs/dudes/img/workflows/workflow-give-feedback.png
+-	-	puml-graphs/dudes/img/workflows/workflow-send-changes.png
+-	-	puml-graphs/dudes/img/workflows/workflow-where-do-i-get-this-book.png
+c409b76cf98597f3f6c08e7d89f35f3efb123720|Dinis Cruz|dinis.cruz@owasp.org|2018-11-15|Adding puml files
+
+25	0	puml-graphs/dudes/puml/another-test.puml
+19	0	puml-graphs/dudes/puml/first-test.puml
+20	0	puml-graphs/dudes/puml/sequence-diagram-with-dudes.puml
+d7348ddfaf854533b215eb549f7941aba5554fd0|Dinis Cruz|dinis.cruz@owasp.org|2018-11-15|Merge branch 'master' into dudes-test
+b6b56d591e3f24353e193b781e5734108a72d601|Dinis Cruz|dinis.cruz@owasp.org|2018-11-15|Merge commit '3687841c695a1ff239c0d5b4435dd3136d0a4951'
+bd2b759040fff5c7bae45b043814b2307088badc|Dinis Cruz|dinis.cruz@owasp.org|2018-11-15|Added submodule with python utils files
+
+1	0	.gitignore
+3	0	.gitmodules
+19	0	puml-graphs/test/Test_Puml_dudes_experiments.py
+a0b93a7aa5b149520293e0e4ca2f2fbfb9b8ff33|Dinis Cruz|dinis.cruz@owasp.org|2018-11-15|file rename
+
+-	-	puml-graphs/first-tests/{dude-not sure.png => dude-not-sure.png}
+739d165d2a163770d3633fd971b13a82c8098064|Dinis Cruz|dinis.cruz@owasp.org|2018-11-15|adding first dudes
+
+-	-	puml-graphs/first-tests/dinis-dude.png
+-	-	puml-graphs/first-tests/dude-holding-something.png
+-	-	puml-graphs/first-tests/dude-not sure.png
+-	-	puml-graphs/first-tests/dude-on-the-move.png
+-	-	puml-graphs/first-tests/dude-scratching-head.png
+-	-	puml-graphs/first-tests/dude.png
+aaa9d01288798611b184a35314294d9f0fabea5f|clazba|camerinorama@gmail.com|2018-10-13|pull from master, brough back in synch
+
+0	0	_gitignore => .gitignore
+0	0	_gitmodules => .gitmodules
+26	0	layouts/partials/flex/before-content/body-header.html
+19	0	layouts/partials/flex/before-content/menu.html
+7	0	layouts/partials/flex/before-content/navigation.html
+18	0	layouts/partials/flex/before-content/search.html
+029ad9aff094d9dd6cca50eea16cb11ff20ad35f|clazba|camerinorama@gmail.com|2018-10-13|Proofread Google GDD
+
+25	23	content/2.mvp-for-gen-z-dev/content/google-search-gdd-sre.md
+a7f241ef67aa52a50719a946807a2b98c34d9eaa|clazba|camerinorama@gmail.com|2018-10-13|Merge branch 'master' of https://github.com/clazba/Book_Generation_Z_Developer
+65819dc102b6da9ad8869013f67b6d26a83415e9|Sam Willis|samwilliswork@gmail.com|2018-10-12|Restructured sentence and fixed grammar
+
+1	1	content/1.introduction/how-to-get-a-job.md
+425baf247a33ff3be64e71f237081b429ad6dbe4|Sam Willis|samwilliswork@gmail.com|2018-10-12|Restructed the sentence
+
+1	1	content/1.introduction/how-to-get-a-job.md
+4f257bdb912e89be3c3543f72e2d1bc9c918c6ab|Sam Willis|samwilliswork@gmail.com|2018-10-12|changed happened to happen. Grammar
+
+1	1	content/1.introduction/how-to-get-a-job.md
+939c3097c026db396f6eff6222b82226d28d9598|Sam Willis|samwilliswork@gmail.com|2018-10-12|removed 'number' from a multitude number of technologies. Just grammar correction.
+
+4	4	content/1.introduction/_index.md
+959d9828224a379c602a518123cf9062759c2e93|Claudio Camerino|ccamerino@theworkshop.com|2018-10-10|new pull
+
+0	0	.gitignore => _gitignore
+0	0	.gitmodules => _gitmodules
+0	0	gh-push.sh
+0	26	layouts/partials/flex/before-content/body-header.html
+0	19	layouts/partials/flex/before-content/menu.html
+0	7	layouts/partials/flex/before-content/navigation.html
+0	18	layouts/partials/flex/before-content/search.html
+0	1	themes/docdock
+c6348a21fe99747f62a6be17fb75f844a514c483|Kenneth Jhim Infante|infantekennethjhim@gmail.com|2018-10-09|Update creative-commons.md
+
+1	1	content/2.mvp-for-gen-z-dev/content/creative-commons.md
+3687841c695a1ff239c0d5b4435dd3136d0a4951|Dinis Cruz|dinis.cruz@owasp.org|2018-10-08|Update README.md
+
+2	1	README.md
+be7614d4db731455d70934c1358b2d1ffa2ca3d6|Dinis Cruz|dinis.cruz@owasp.org|2018-10-08|Merge branch 'master' of github.com:DinisCruz/Book_Generation_Z_Developer
+518ebbd7eb4e262f02e5183f8ebba3925545cdbe|Dinis Cruz|dinis.cruz@owasp.org|2018-10-08|Merge pull request #31 from emtunc/patch-1
+128fbe876c12fa173ea020d2c5f57d4aadfe68f7|Dinis Cruz|dinis.cruz@owasp.org|2018-10-08|Update creative-commons.md
+
+1	1	content/2.mvp-for-gen-z-dev/content/creative-commons.md
+8986df0d6cb326b9d42e24f26ee515f3514cc493|Dinis Cruz|dinis.cruz@owasp.org|2018-10-08|Merge pull request #32 from emtunc/patch-2
+5e5449ab1df35a196ae31decef6181b41b184c2b|Dinis Cruz|dinis.cruz@owasp.org|2018-10-08|Update docker.md
+
+1	1	content/2.mvp-for-gen-z-dev/content/docker.md
+c7093cc72742d0f378ea2291c34f0e9b5191b837|Dinis Cruz|dinis.cruz@owasp.org|2018-10-08|Minor spell checking fixes
+
+2	2	content/1.introduction/generation-z.md
+1	1	content/2.mvp-for-gen-z-dev/content/creative-commons.md
+2	2	content/2.mvp-for-gen-z-dev/content/docker.md
+1	1	content/2.mvp-for-gen-z-dev/content/dot-language.md
+1	1	content/2.mvp-for-gen-z-dev/content/slack-and-chatops.md
+2	2	content/3.technologies/content/books.md
+1	1	content/3.technologies/content/brain.md
+1	1	content/3.technologies/content/ml-ai.md
+1	1	content/_manuscript/change-log.md
+9f65dd57cf0d235089db34e4e9ffbf2a3e6ff6a6|Mikail Tunç|github@emtunc.org|2018-10-08|Update docker.md
+
+17	17	content/2.mvp-for-gen-z-dev/content/docker.md
+5cd934c2e2a8010ae3d501e73647411c6e17b385|Mikail Tunç|github@emtunc.org|2018-10-08|Update creative-commons.md
+
+21	21	content/2.mvp-for-gen-z-dev/content/creative-commons.md
+264a648533dd2136d418d1ad0c252f14432ea0e7|Dinis Cruz|dinis.cruz@owasp.org|2018-10-07|Added images that were copy and pasted into GitHub
+
+1	1	README.md
+7	7	content/2.mvp-for-gen-z-dev/content/dot-language.md
+5	5	content/3.technologies/content/AST.md
+6	6	content/4.life-patterns/content/being-criticized-is-a-privilege.md
+-	-	static/images/36372107-f0fd05c0-155b-11e8-938b-ed6c7a67b7dc.png
+-	-	static/images/ast-abstract-syntax-tree/46580312-4c212080-ca1a-11e8-8426-26335bd7d9d9.png
+-	-	static/images/ast-abstract-syntax-tree/46583057-a933cb00-ca48-11e8-8525-122acf63bf81.png
+-	-	static/images/ast-abstract-syntax-tree/46583215-fc0e8200-ca4a-11e8-94b6-c7d3a59e6d9d.png
+-	-	static/images/{ => ast-abstract-syntax-tree}/800px-Abstract_syntax_tree_for_Euclidean_algorithm.svg.png
+-	-	static/images/being-criticized-is-a-privilege/46583619-b608ec80-ca51-11e8-997b-d55b10c6174d.png
+-	-	static/images/being-criticized-is-a-privilege/46584081-fd45ac00-ca56-11e8-980c-a5bd7c4e7639.png
+-	-	static/images/being-criticized-is-a-privilege/46584306-a5f50b00-ca59-11e8-8f6d-4e5cddabbf0c.png
+-	-	static/images/being-criticized-is-a-privilege/46584313-cae97e00-ca59-11e8-91ee-10e17fb81612.png
+-	-	static/images/being-criticized-is-a-privilege/46584346-e9e81000-ca59-11e8-9fd6-88acc7d8cfd3.png
+-	-	static/images/dot-language/46248785-ed561880-c415-11e8-8f07-6f5c83b4b03b.png
+-	-	static/images/dot-language/46255423-a22f1a80-c494-11e8-8eb3-5c9c992e162c.png
+-	-	static/images/dot-language/46255585-abb98200-c496-11e8-93a7-7ac3abeaf535.png
+-	-	static/images/dot-language/46255638-41551180-c497-11e8-88b8-26ab35aacedf.png
+a999857e3acf153a5d6bb5834966f2a8350034d8|Dinis Cruz|dinis.cruz@owasp.org|2018-10-07|Fixed content and update change log
+
+21	18	content/4.life-patterns/{ => content}/being-criticized-is-a-privilege.md
+3	2	content/_manuscript/change-log.md
+4995101d808598db764d8e8d69579803db9a144f|Dinis Cruz|dinis.cruz@owasp.org|2018-10-07|Added content to 'Being criticized is an privilege'
+
+159	19	content/4.life-patterns/being-criticized-is-a-privilege.md
+d6bfc56dd6b3f8647453af8b53aa6237a1ef5ef7|Dinis Cruz|dinis.cruz@owasp.org|2018-10-07|first pass at AST Chapter
+
+132	0	content/3.technologies/content/AST.md
+0	86	content/3.technologies/draft/AST.md
+3	1	content/_manuscript/change-log.md
+c4877132cd560b78d5a97af8c79427cc6b04545a|Dinis Cruz|dinis.cruz@owasp.org|2018-10-07|Started working on AST chapter
+
+53	7	content/3.technologies/draft/AST.md
+28aa08d048150114447b0960d9ec1a2657f49f98|Dinis Cruz|dinis.cruz@owasp.org|2018-10-06|improved change log
+
+1	1	content/2.mvp-for-gen-z-dev/content/dot-language.md
+7	3	content/_manuscript/change-log.md
+719879385df87b76cb6b9b51289a6324271ad61e|Dinis Cruz|dinis.cruz@owasp.org|2018-10-06|replaced cover
+
+-	-	static/images/title_page.png
+5ac4ee16e7a96dea81f9e5831f0f274ca907ba89|Dinis Cruz|dinis.cruz@owasp.org|2018-10-06|Merge branch 'master' of github.com:DinisCruz/Book_Generation_Z_Developer
+09ed16b2b5f1df11396889b5a107850feec6fdb1|Dinis Cruz|dinis.cruz@owasp.org|2018-10-06|finished dot language article
+
+51	31	content/2.mvp-for-gen-z-dev/{draft => content}/dot-language.md
+0	0	content/{ => 4.life-patterns}/love-maths.md
+babce57164b5e3d98dd81c70f870484a7149e3e4|Dinis Cruz|dinis.cruz@owasp.org|2018-10-06|Merge pull request #29 from clazba/master
+d1bd1e7548e1c8ab9b956371aa998ea3a2b33e49|Dinis Cruz|dinis.cruz@owasp.org|2018-10-06|Merge branch 'master' into master
+d331f970c8a751f9aa7600fc349c717555d33dd8|clazba|camerinorama@gmail.com|2018-10-06|Merge branch 'master' of https://github.com/clazba/Book_Generation_Z_Developer
+908914e4dc11c4a8f09fae35f6c508b69365a815|clazba|camerinorama@gmail.com|2018-10-06|Proofread #2
+
+5	5	content/1.introduction/how-to-get-a-job.md
+25	26	content/2.mvp-for-gen-z-dev/content/creative-commons.md
+22	22	content/2.mvp-for-gen-z-dev/content/docker.md
+317bb734289153b78de5befd3703b446a6a3e2ac|Dinis Cruz|dinis.cruz@owasp.org|2018-10-06|Merge branches 'master' and 'master' of github.com:DinisCruz/Book_Generation_Z_Developer
+020937c357fc76495b6330d8d97bb5f4a9ad3df3|Dinis Cruz|dinis.cruz@owasp.org|2018-10-06|added some more draft chapters
+
+1	0	content/2.mvp-for-gen-z-dev/draft/linux.md
+10	2	content/4.life-patterns/being-criticized-is-a-privilege.md
+12	0	content/4.life-patterns/pionners-settlers-town-planners.md
+43	0	content/4.life-patterns/why-diversity-matters.md
+14	0	content/love-maths.md
+-	-	static/images/linus-linux-post.png
+fca8fa61392f9107d04107bb4c389b01c2477c43|Dinis Cruz|dinis.cruz@owasp.org|2018-10-05|Merge pull request #26 from swedishmike/more_nitpicking
+3a543e1c83c0e735c96b34bb1b695e8a59ab5656|Dinis Cruz|dinis.cruz@owasp.org|2018-10-05|Merge branch 'master' of github.com:DinisCruz/Book_Generation_Z_Developer
+dd136eae8e25db596a18eee131cfaaf3b1302012|Dinis Cruz|dinis.cruz@owasp.org|2018-10-05|added 'Being Criticised is a privilege' chapter (first draft notes)
+
+14	0	content/4.life-patterns/being-criticized-is-a-privilege.md
+9c5c76cae3a13192b929ddda12b98adb2504c4f6|Dinis Cruz|dinis.cruz@owasp.org|2018-10-05|Merge branch 'master' into more_nitpicking
+f8ea668d01018e0d04231b99a994a6944ea369fb|Sarah Cruz|38696765+sarahallencruz@users.noreply.github.com|2018-10-05|Update jira.md
+
+14	14	content/2.mvp-for-gen-z-dev/content/jira.md
+5a5c01bdc5414228f54b079b12dd7fa1f65d33e0|Sarah Cruz|38696765+sarahallencruz@users.noreply.github.com|2018-10-05|Update hugo.md
+
+4	4	content/2.mvp-for-gen-z-dev/content/hugo.md
+2a7f7b8a21aa4640bf1db7175b937a6fa65e385a|Mike Eriksson|swedishmike@users.noreply.github.com|2018-10-04|Changed 'deference' to 'difference'
+
+1	1	content/4.life-patterns/content/future-needs-you.md
+9a241f7de99061f8771259e57cf9af1eea608928|Mike Eriksson|swedishmike@users.noreply.github.com|2018-10-04|Changed 'digital' to 'digitally' Added a comma Changed 'it is on that that' to 'it is in that'
+
+1	1	content/4.life-patterns/content/talking-to-yourself.md
+abb92362025298862979d491697f7e2068ff68ca|Mike Eriksson|swedishmike@users.noreply.github.com|2018-10-04|Changed 'Wow' to 'How'
+
+1	1	content/4.life-patterns/content/be-a-founder.md
+57457bb13b13bc48823a0801e8b5f45b41a6c977|Mike Eriksson|swedishmike@users.noreply.github.com|2018-10-04|Changed 'in is to 'it is'
+
+1	1	content/4.life-patterns/content/learning.md
+80da5afdafefceb932de42d1dea8fc36e9dc1ab8|Mike Eriksson|swedishmike@users.noreply.github.com|2018-10-04|Changed 'recomend' to 'recommend'
+
+1	1	content/3.technologies/content/ml-ai.md
+e679f296814afabbe7d8c3ff56f2f28f08a4eea5|Mike Eriksson|swedishmike@users.noreply.github.com|2018-10-04|Changed 'read is the' to 'read is' Changed 'taking to myself' to 'talking to myself'
+
+2	2	content/3.technologies/content/brain.md
+df2897986e05299f7418b36f78c677199cc2dc6d|Mike Eriksson|swedishmike@users.noreply.github.com|2018-10-04|Changed 'fallen in love' to 'fell in love' Changed 'manually translated' to 'manually translating'
+
+2	2	content/3.technologies/content/assembly-and-bytecode.md
+58f114a0e68f210205d5d7219db7ad516d31bf3f|Mike Eriksson|swedishmike@users.noreply.github.com|2018-10-04|Changed 'site effect' to 'side effect'.
+
+1	1	content/3.technologies/content/pen-and-paper.md
+dd97809612bb27b1cb1ed990239c2eee9abd0fd3|Sarah Cruz|38696765+sarahallencruz@users.noreply.github.com|2018-10-04|Update google-search-gdd-sre.md
+
+15	14	content/2.mvp-for-gen-z-dev/content/google-search-gdd-sre.md
+ab1a79abbf22f60ce9b27676ecd0f27eac5fd6ab|Sarah Cruz|38696765+sarahallencruz@users.noreply.github.com|2018-10-04|Update docker.md
+
+18	18	content/2.mvp-for-gen-z-dev/content/docker.md
+155bb0b34ea595d4656c90be1b1b9f5c30789ddf|Sarah Cruz|38696765+sarahallencruz@users.noreply.github.com|2018-10-04|Update creative-commons.md
+
+18	18	content/2.mvp-for-gen-z-dev/content/creative-commons.md
+aa707bca5f0c5ff4b255800853378d1eeb854fc1|Mike Eriksson|mike@swedishmike.org|2018-10-04|Changed 'You has a developer' to 'You as a developer'
+
+1	1	content/2.mvp-for-gen-z-dev/content/open-source.md
+ea847891237f1774c4bd199f1966bc71080470ab|Mike Eriksson|mike@swedishmike.org|2018-10-04|Changed 'effective do that' to 'effectively do that'
+
+1	1	content/2.mvp-for-gen-z-dev/content/google-search-gdd-sre.md
+da4b7045601cb329d8c50e85ac74eef2704726b6|Mike Eriksson|mike@swedishmike.org|2018-10-04|Changed AWS SDL to AWS SDK
+
+1	1	content/2.mvp-for-gen-z-dev/content/python.md
+073173bfaf9fcdf42fcf72d1d4631034943d642d|Dinis Cruz|dinis.cruz@owasp.org|2018-10-03|Added content from @russmiles opened issues
+
+8	0	content/5.concepts/chaos-engineering.md
+911bb87883781ad3a95753861c0d1e55575a1782|Dinis Cruz|dinis.cruz@owasp.org|2018-10-03|Merge pull request #23 from Chuddington/ChuddingtonProofReadIntroduction
+bc57a40d5de205a5ff41a2d6613509dd0fcdcff2|Dinis Cruz|dinis.cruz@owasp.org|2018-10-03|Update how-to-get-a-job.md
+
+1	3	content/1.introduction/how-to-get-a-job.md
+b9da465ef3291f59070ee2cfd20b819a57e10ec2|Dinis Cruz|dinis.cruz@owasp.org|2018-10-03|Merge branch 'master' into ChuddingtonProofReadIntroduction
+150e04077075648e911f80993ef1fc739e3b9671|Dinis Cruz|dinis.cruz@owasp.org|2018-10-03|Merge pull request #14 from clazba/master
+ab7c4bb05f5344d55ea36de61ec0c5bfbe513dfc|Dinis Cruz|dinis.cruz@owasp.org|2018-10-03|Update generation-z.md
+
+1	1	content/1.introduction/generation-z.md
+4b5615c9f3dcb58fd08e5e35f2ea755cab73fcbd|Dinis Cruz|dinis.cruz@owasp.org|2018-10-03|Update generation-z.md
+
+4	4	content/1.introduction/generation-z.md
+e3e59db4be5f113d9f2ff53719879912348a4fdd|Dinis Cruz|dinis.cruz@owasp.org|2018-10-03|Update _index.md
+
+3	3	content/1.introduction/_index.md
+84e248683077cc39841147434c446bfaa582e648|Michael Chadwick|Michael.Chadwick@thehutgroup.com|2018-10-03|Changed some wordings in the first chapter (Introduction)
+
+8	8	content/1.introduction/generation-z.md
+22	9	content/1.introduction/how-to-get-a-job.md
+3e5a075a2e92606cc2f2a5d1b802c9495bcf0292|Dinis Cruz|dinis.cruz@owasp.org|2018-10-02|started AST chapter
+
+1	0	content/2.mvp-for-gen-z-dev/content/google-search-gdd-sre.md
+11	1	content/2.mvp-for-gen-z-dev/draft/dot-language.md
+16	1	content/3.technologies/draft/AST.md
+-	-	static/images/800px-Abstract_syntax_tree_for_Euclidean_algorithm.svg.png
+e018b2e31168d6295163569b49116a894cb20bd8|Dinis Cruz|dinis.cruz@owasp.org|2018-10-01|more changes on dot
+
+72	25	content/2.mvp-for-gen-z-dev/draft/dot-language.md
+1f1a67851fc463c5778fd1827fb712ed02ed8590|Dinis Cruz|dinis.cruz@owasp.org|2018-10-01|improved DOT chapter
+
+2	2	content/2.mvp-for-gen-z-dev/content/hugo.md
+1	1	content/2.mvp-for-gen-z-dev/content/slack-and-chatops.md
+8	5	content/2.mvp-for-gen-z-dev/draft/dot-language.md
+a406d7a2495053eaf82f945ce90cc5a438275690|Dinis Cruz|dinis.cruz@owasp.org|2018-09-30|Added v0.50 content
+
+1	1	content/1.introduction/_index.md
+1	1	content/2.mvp-for-gen-z-dev/content/creative-commons.md
+1	1	content/2.mvp-for-gen-z-dev/content/xcode-and-swift.md
+39	2	content/2.mvp-for-gen-z-dev/draft/dot-language.md
+0	0	content/2.mvp-for-gen-z-dev/{mvp-table.md => mvp-table.md.txt}
+1	1	content/3.technologies/draft/dopamine.md
+4	3	content/_manuscript/change-log.md
+53	0	layouts/book/leanpub-with-draft-chapters.html
+1	25	layouts/book/leanpub.html
+-	-	static/images/title_page-old.png
+-	-	static/images/title_page.png
+25e357689131d41154c0c6cd7219e5bea83e48ac|Dinis Cruz|dinis.cruz@owasp.org|2018-09-30|started on DOT language article
+
+5	3	content/2.mvp-for-gen-z-dev/content/google-search-gdd-sre.md
+110	7	content/2.mvp-for-gen-z-dev/draft/dot-language.md
+1	0	content/2.mvp-for-gen-z-dev/draft/linux.md
+13	0	content/3.technologies/draft/r-language.md
+329149098bb75acc464165866f790ed8293e0dfb|clazba|camerinorama@gmail.com|2018-09-29|typo in index
+
+1	1	content/1.introduction/_index.md
+2c4044d747c2baa60967f0bded73efca2b3f78b3|clazba|camerinorama@gmail.com|2018-09-29|index and GZ revision
+
+11	11	content/1.introduction/_index.md
+11	11	content/1.introduction/generation-z.md
+f8e565f47f137a04ef551686c607e7b0521446ba|Dinis Cruz|dinis.cruz@owasp.org|2018-09-29|First pass at Google chapter
+
+67	0	content/2.mvp-for-gen-z-dev/content/google-search-gdd-sre.md
+0	85	content/2.mvp-for-gen-z-dev/draft/google.md
+1	0	content/_manuscript/change-log.md
+06f66542dddd9205d5e0bce77c52f391823a5ee5|Dinis Cruz|dinis.cruz@owasp.org|2018-09-29|couple more Google changes
+
+15	5	content/2.mvp-for-gen-z-dev/draft/google.md
+16	0	content/2.mvp-for-gen-z-dev/draft/wikipedia.md
+ac044900882715dd97cbe97b28dbc3edba8cf0e8|Dinis Cruz|dinis.cruz@owasp.org|2018-09-28|Improved Google's chapter
+
+23	3	content/2.mvp-for-gen-z-dev/draft/google.md
+0	0	content/{ => 2.mvp-for-gen-z-dev/draft}/minecraft.md
+13	0	content/3.technologies/draft/scratch.md
+5ed167b9a2cd0bae8aba0f5f926658fdec10c937|Dinis Cruz|dinis.cruz@owasp.org|2018-09-27|Added Minecraft chapter
+
+8	1	content/2.mvp-for-gen-z-dev/draft/google.md
+12	0	content/minecraft.md
+3917824e8f1ca37f9013eb9e8e242718c3021861|Dinis Cruz|dinis.cruz@owasp.org|2018-09-26|Merge branch 'master' of github.com:DinisCruz/Book_Generation_Z_Developer
+a5fcbb3ee17daf182dde4c5386e7b5f3d7282752|Dinis Cruz|dinis.cruz@owasp.org|2018-09-26|Some content for Google New chapter on Stack Overflow
+
+5	1	content/2.mvp-for-gen-z-dev/draft/google.md
+15	0	content/2.mvp-for-gen-z-dev/draft/stack-overflow.md
+da19fe6bb7663fef00caa0642203b413b400fe85|Dinis Cruz|dinis.cruz@owasp.org|2018-09-26|Update be-a-founder.md
+
+5	5	content/4.life-patterns/content/be-a-founder.md
+b3908c516569cab60ee08dfd804334fe674d9310|Dinis Cruz|dinis.cruz@owasp.org|2018-09-25|Minor changes to Google article
+
+8	2	content/2.mvp-for-gen-z-dev/draft/google.md
+2e8708462e92d773d6eeefd608c740ddbb3becd3|Dinis Cruz|dinis.cruz@owasp.org|2018-09-25|Merge branch 'master' of github.com:DinisCruz/Book_Generation_Z_Developer
+4d1121aa37989cc1652a7dba555d198b1229ab36|Dinis Cruz|dinis.cruz@owasp.org|2018-09-24|started editing the google chapter
+
+6	2	content/1.introduction/_index.md
+20	2	content/2.mvp-for-gen-z-dev/draft/google.md
+5	0	content/_manuscript/change-log.md
+2b661d3f045bac021074ebf2bee022875a304b1c|Dinis Cruz|dinis.cruz@owasp.org|2018-09-24|Merge pull request #11 from mregensberg/chapter_1_review
+64f8bc8eb5afb8cca5bab82d1948340ebebd968c|Mark Regensberg|markr@local|2018-09-24|fix typo in intro
+
+1	5	content/1.introduction/_index.md
+68659b540161e57d31227fb08c7d86631c0eda91|Mark Regensberg|markr@local|2018-09-24|merge incoming
+7b8bb7caadb49713da6d5ed1701227c274814b9e|Mark Regensberg|markr@local|2018-09-24|small type in intro, update flow in GenZ page
+
+1	1	content/1.introduction/_index.md
+11	13	content/1.introduction/generation-z.md
+9bb678368f6fc21742347d9a64922f6c2fcd81f7|Dinis Cruz|dinis.cruz@owasp.org|2018-09-24|Merge pull request #10 from mregensberg/chapter_1_review
+742f45d5376a350e201e8e5af8a9af278223022b|Sarah Cruz|38696765+sarahallencruz@users.noreply.github.com|2018-09-24|Update _index.md
+
+4	4	content/1.introduction/_index.md
+56d30385361b1d455b8fae18a233841e5ef5a769|Mark Regensberg|markr@local|2018-09-23|flow, layout, fixed some typos
+
+5	7	content/1.introduction/_index.md
+30fa108ac5f12160fe52ce554dc35264d22e24c1|Dinis Cruz|dinis.cruz@owasp.org|2018-09-23|Minor fix
+
+1	1	content/2.mvp-for-gen-z-dev/draft/wallaby-and-ncrunch.md
+4d7ff6b51ffeaa295e00b19eafa19bf9ac3f3c0e|Dinis Cruz|dinis.cruz@owasp.org|2018-09-23|final changes on Wallaby article
+
+76	58	content/2.mvp-for-gen-z-dev/draft/wallaby-and-ncrunch.md
+2	1	content/_manuscript/change-log.md
+51aa3ef6346d7e482432d8deb7db552ae82685ab|Dinis Cruz|dinis.cruz@owasp.org|2018-09-23|More context on wallabyJS
+
+19	6	content/2.mvp-for-gen-z-dev/draft/wallaby-and-ncrunch.md
+7ca2c6def7f57dcccf9bdd74c95ecbe2e238804a|Dinis Cruz|dinis.cruz@owasp.org|2018-09-23|Started adding content to wallaby chapter
+
+155	0	content/2.mvp-for-gen-z-dev/draft/wallaby-and-ncrunch.md
+0	25	content/2.mvp-for-gen-z-dev/draft/wallaby-js.md
+eaf33b7f6ecea1bf828b79e4c7d8ba6a3df0aaaa|Dinis Cruz|dinis.cruz@owasp.org|2018-09-22|Added chapter code for 'XCode and Swift' Set number of weights
+
+6	6	content/2.mvp-for-gen-z-dev/content/docker.md
+1	0	content/2.mvp-for-gen-z-dev/content/jira.md
+1	0	content/2.mvp-for-gen-z-dev/content/owasp.md
+1	0	content/2.mvp-for-gen-z-dev/content/python.md
+1	0	content/2.mvp-for-gen-z-dev/content/{slack.md => slack-and-chatops.md}
+50	0	content/2.mvp-for-gen-z-dev/content/xcode-and-swift.md
+0	10	content/2.mvp-for-gen-z-dev/draft/xcode.md
+1	0	content/3.technologies/content/assembly-and-bytecode.md
+1	0	content/3.technologies/content/ide.md
+2	1	content/_manuscript/change-log.md
+c2b5c60613ae8b94552f8a23b46c4e0b093df71c|Dinis Cruz|dinis.cruz@owasp.org|2018-09-22|Merge branch 'master' of github.com:DinisCruz/Book_Generation_Z_Developer
+a7e5dedde1cb305b3991dc612db09dfad649e75f|Dinis Cruz|dinis.cruz@owasp.org|2018-09-22|Minor fixes to Slack Chapter
+
+3	2	content/2.mvp-for-gen-z-dev/content/slack.md
+9a54b9712bb5ce32b5ca9302c35e45548f44a683|Sarah Cruz|38696765+sarahallencruz@users.noreply.github.com|2018-09-22|Update how-to-get-a-job.md
+
+1	1	content/1.introduction/how-to-get-a-job.md
+e6c33e247680193adef59409607cb306b12f5abc|Sarah Cruz|38696765+sarahallencruz@users.noreply.github.com|2018-09-22|Update how-to-get-a-job.md
+
+1	1	content/1.introduction/how-to-get-a-job.md
+f94ac8cc3d2129946b594bee5554d063e3547e86|Sarah Cruz|38696765+sarahallencruz@users.noreply.github.com|2018-09-22|Update how-to-get-a-job.md
+
+11	15	content/1.introduction/how-to-get-a-job.md
+8ca867ea91a919daa0f4fa55c3f2ca274319019c|Sarah Cruz|38696765+sarahallencruz@users.noreply.github.com|2018-09-22|Update generation-z.md
+
+10	12	content/1.introduction/generation-z.md
+3bb1008f195eb0c7573c4292f371bcb389fa94cf|Dinis Cruz|dinis.cruz@owasp.org|2018-09-22|Merge branch 'master' of github.com:DinisCruz/Book_Generation_Z_Developer
+155f354eca9cae0a5bd6a906d422dbfe96301069|Dinis Cruz|dinis.cruz@owasp.org|2018-09-22|Move Slack chapter to content
+
+41	19	content/2.mvp-for-gen-z-dev/{draft => content}/slack.md
+15	0	content/4.life-patterns/one-way-two-way-doors.md
+5	3	content/_manuscript/change-log.md
+2e62c5e6929f4f5dd4e94df47b2b58e875d2694f|Dinis Cruz|dinis.cruz@owasp.org|2018-09-22|more stack changes
+
+110	54	content/2.mvp-for-gen-z-dev/draft/slack.md
+89c70c345654f23a2218cef7d43ba2abaeacba2f|Dinis Cruz|dinis.cruz@owasp.org|2018-09-22|Update owasp.md
+
+2	2	content/2.mvp-for-gen-z-dev/content/owasp.md
+e4d075e12e115f98f0fa8de8131ccad760090c5a|Dinis Cruz|dinis.cruz@owasp.org|2018-09-22|Merge branch 'master' of github.com:DinisCruz/Book_Generation_Z_Developer
+2c1252c1156678147fa479012b208ecc6dc377b4|Dinis Cruz|dinis.cruz@owasp.org|2018-09-22|Improved Slack chapter
+
+50	19	content/2.mvp-for-gen-z-dev/draft/slack.md
+4	1	content/5.concepts/CI-Testing.md
+0e501b15f0ee08ef7dbd733bbc8d48d12baddaf5|Sarah Cruz|38696765+sarahallencruz@users.noreply.github.com|2018-09-21|Update dot-language.md
+
+2	1	content/2.mvp-for-gen-z-dev/draft/dot-language.md
+0ac14f30826ba2c8c957083f55b550dc2a5988e6|Sarah Cruz|38696765+sarahallencruz@users.noreply.github.com|2018-09-21|Update how-to-get-a-job.md
+
+1	1	content/1.introduction/how-to-get-a-job.md
+1101925465430cf75c0a943fa9bc3022832975cc|Sarah Cruz|38696765+sarahallencruz@users.noreply.github.com|2018-09-21|Update how-to-get-a-job.md
+
+2	2	content/1.introduction/how-to-get-a-job.md
+c27088ca84fe01014f01e212c0b010b19c942f81|Sarah Cruz|38696765+sarahallencruz@users.noreply.github.com|2018-09-21|Update generation-z.md
+
+1	1	content/1.introduction/generation-z.md
+0a5be2cfac55ea57f4440de8caee16da1c23bc12|Sarah Cruz|38696765+sarahallencruz@users.noreply.github.com|2018-09-21|Update generation-z.md
+
+1	1	content/1.introduction/generation-z.md
+3249129bc1c2c36f63c10f3b9144717a48ea4d33|Sarah Cruz|38696765+sarahallencruz@users.noreply.github.com|2018-09-21|Update generation-z.md
+
+2	2	content/1.introduction/generation-z.md
+8779c7cc4f029a98edc3f6220b23eaa65504fe88|Dinis Cruz|dinis.cruz@owasp.org|2018-09-16|added content on Slack and Chatops
+
+13	0	content/2.mvp-for-gen-z-dev/draft/electron.md
+64	4	content/2.mvp-for-gen-z-dev/draft/slack.md
+11	0	content/4.life-patterns/nudge.md
+21	0	content/5.concepts/design.md
+2	1	content/5.concepts/inventing-on-principle.md
+1fdd549d5647cb47e6a848553e40633c2974318c|Dinis Cruz|dinis.cruz@owasp.org|2018-09-15|added content for python
+
+62	0	content/2.mvp-for-gen-z-dev/content/python.md
+0	20	content/2.mvp-for-gen-z-dev/draft/python.md
+1	0	content/5.concepts/serverless.md
+1	0	content/_manuscript/change-log.md
+18781963359bbf36f0b1a046c2d36be3b825ebb1|Dinis Cruz|dinis.cruz@owasp.org|2018-09-15|updated OWASP chapter
+
+0	18	content/10.misc/eff.md
+0	0	content/2.mvp-for-gen-z-dev/{draft => content}/open-source.md
+30	0	content/2.mvp-for-gen-z-dev/content/owasp.md
+0	18	content/2.mvp-for-gen-z-dev/draft/free-sofware-foundation.md
+0	24	content/2.mvp-for-gen-z-dev/draft/owasp.md
+0	19	content/5.concepts/copyright.md
+1	0	content/_manuscript/change-log.md
+31df7ac969384a6b5a52dba07c5be359c622fb00|Dinis Cruz|dinis.cruz@owasp.org|2018-09-15|improved CPU article
+
+1	1	content/2.mvp-for-gen-z-dev/content/creative-commons.md
+3	1	content/2.mvp-for-gen-z-dev/draft/raspberry-pi.md
+35	0	content/3.technologies/content/assembly-and-bytecode.md
+0	25	content/5.concepts/cpu.md
+4	0	content/_manuscript/change-log.md
+6010e5cfbed3016cff5216808c73de2de98f46dd|Dinis Cruz|dinis.cruz@owasp.org|2018-09-10|Added improvements on Open Source chapter
+
+150	63	content/2.mvp-for-gen-z-dev/draft/open-source.md
+2	0	content/_manuscript/change-log.md
+-	-	static/images/logo-open-source.png
+-	-	static/images/open-source-tree.png
+5348d3b101e267e510180f126ea126bb32cc7603|Dinis Cruz|dinis.cruz@owasp.org|2018-09-08|Updated 'Learning'
+
+26	6	content/4.life-patterns/content/learning.md
+00193c4342cee6c76ab5c92da19b1116efcc69c4|Dinis Cruz|dinis.cruz@owasp.org|2018-09-08|Major content changes on Jira chapter
+
+1	0	content/2.mvp-for-gen-z-dev/content/hugo.md
+54	11	content/2.mvp-for-gen-z-dev/content/jira.md
+2	0	content/_manuscript/change-log.md
+63d93143f73d419c6a37700775df3f27bd414e64|Dinis Cruz|dinis.cruz@owasp.org|2018-09-05|Major improvements to HUGO chapter (with two extra images)
+
+49	13	content/2.mvp-for-gen-z-dev/content/hugo.md
+-	-	static/images/hugo-simple-example.jpg
+-	-	static/images/hugo-with-graphs.jpg
+b0570fffe839e0bbec0a406f9f15e0c026cde0c8|Dinis Cruz|dinis.cruz@owasp.org|2018-09-04|some fixes to brain chapter started change log for version 0.36
+
+1	1	content/2.mvp-for-gen-z-dev/content/docker.md
+7	3	content/3.technologies/content/brain.md
+5	0	content/_manuscript/change-log.md
+bc87a82d502237499f5633cac5c3d01398f5e74c|Dinis Cruz|dinis.cruz@owasp.org|2018-09-04|More fixes on the Docker article
+
+32	30	content/2.mvp-for-gen-z-dev/content/docker.md
+0bb75bdb410f1a7d0acfc31c85c42baa4adec3fa|Dinis Cruz|dinis.cruz@owasp.org|2018-09-03|Improved Docker chapter
+
+21	15	content/2.mvp-for-gen-z-dev/content/docker.md
+7	3	content/2.mvp-for-gen-z-dev/content/hugo.md
+-	-	static/images/logo-docker.png
+89bc41d56bbd5992320d8ffe4ed9a74b0634d1c8|Dinis Cruz|dinis.cruz@owasp.org|2018-09-02|Couple minor fixes
+
+1	6	content/3.technologies/content/ide.md
+1	0	content/4.life-patterns/content/talking-to-yourself.md
+2	5	content/_manuscript/change-log.md
+1eb2c9d95664159dc653e5cc96fcd90e3ab46efb|Dinis Cruz|dinis.cruz@owasp.org|2018-09-02|Final update on v0.35 change log entry
+
+1	0	content/_manuscript/change-log.md
+9c49ea15993ace370b51f22f25348de5d007d5f8|Dinis Cruz|dinis.cruz@owasp.org|2018-09-02|Content refactoring (moved multiple sections to MVP) Misc content fixes First working version of MVP table
+
+0	0	content/{2.mvp-for-gen-z-dev/draft => 10.misc}/eff.md
+1	0	content/10.misc/gen-z-research.md
+1	0	content/10.misc/stories-to-tell.md
+1	7	content/2.mvp-for-gen-z-dev/_index.md
+0	0	content/{3.technologies => 2.mvp-for-gen-z-dev}/content/hugo.md
+0	0	content/{3.technologies => 2.mvp-for-gen-z-dev}/draft/aws.md
+0	0	content/{5.concepts => 2.mvp-for-gen-z-dev/draft}/continuous-integration.md
+0	0	content/{3.technologies => 2.mvp-for-gen-z-dev}/draft/dot-language.md
+16	0	content/2.mvp-for-gen-z-dev/draft/github-flow.md
+0	0	content/{3.technologies => 2.mvp-for-gen-z-dev}/draft/iot.md
+60	0	content/2.mvp-for-gen-z-dev/draft/tdd.md
+0	2	content/2.mvp-for-gen-z-dev/mvp-table.md
+0	0	content/{2.mvp-for-gen-z-dev/draft => 5.concepts}/copyright.md
+0	0	content/{2.mvp-for-gen-z-dev/draft => 5.concepts}/cpu.md
+0	18	content/5.concepts/draft/bdd.md
+0	26	content/5.concepts/draft/fdd.md
+0	23	content/5.concepts/draft/tdd.md
+2	2	content/7.your-cv/future-self.md
+1	0	content/_manuscript/book.md
+2	3	layouts/book/leanpub.html
+11	7	layouts/partials/mvp-table.html
+0	5	layouts/shortcodes/mvp-table.html
+-	-	static/images/future-self-1.png
+-	-	static/images/future-self-2.png
+dff07bf7a174bb709f466d2ce0c398bc4f6614ae|Dinis Cruz|dinis.cruz@owasp.org|2018-09-02|Added MVP table (in a way that works in Leanpub (via Hugo)) Moved Jira to MVP section Moved main leanpub script to new leanpub.html Added CC logo (from wikipedia)
+
+6	2	content/2.mvp-for-gen-z-dev/content/creative-commons.md
+5	1	content/{3.technologies => 2.mvp-for-gen-z-dev}/content/jira.md
+7	0	content/2.mvp-for-gen-z-dev/mvp-table.md
+54	0	layouts/book/leanpub.html
+8	43	layouts/book/single.html
+11	0	layouts/partials/mvp-table.html
+5	0	layouts/shortcodes/mvp-table.html
+-	-	static/images/logo-creative-commons.png
+1acc57d77ecbc08e75260426d7554056a6555ab6|Dinis Cruz|dinis.cruz@owasp.org|2018-09-02|minor typo fixes
+
+3	3	content/1.introduction/generation-z.md
+2	2	content/3.technologies/draft/dopamine.md
+21	16	content/_manuscript/change-log.md
+d491733a24caeb6c6f65d09e138c0531a24be968|Dinis Cruz|dinis.cruz@owasp.org|2018-09-02|Renamed 'what is this' section
+
+27	0	content/2.mvp-for-gen-z-dev/_index.md
+0	0	content/{2.what-is-this => 2.mvp-for-gen-z-dev}/content/creative-commons.md
+0	0	content/{2.what-is-this => 2.mvp-for-gen-z-dev}/content/docker.md
+0	0	content/{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/copyright.md
+0	0	content/{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/cpu.md
+0	0	content/{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/eff.md
+0	0	content/{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/free-sofware-foundation.md
+0	0	content/{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/google.md
+0	0	content/{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/linux.md
+0	0	content/{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/open-source.md
+0	0	content/{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/owasp.md
+0	0	content/{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/python.md
+0	0	content/{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/raspberry-pi.md
+0	0	content/{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/slack.md
+0	0	content/{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/wallaby-js.md
+0	0	content/{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/xcode.md
+0	9	content/2.what-is-this/_index.md
+2970c7b57b4ad91ff8a8885bc35f8ffa2ceacb0f|Dinis Cruz|dinis.cruz@owasp.org|2018-09-02|Wrote content for 'Creative Commons License'
+
+110	0	content/2.what-is-this/content/creative-commons.md
+0	63	content/2.what-is-this/draft/creative-commons.md
+2	1	content/_manuscript/change-log.md
+faa21bd9c7872e7f8c6054fcf67f6e0792be1574|Dinis Cruz|dinis.cruz@owasp.org|2018-09-01|1/Sep - Added Amazon press-release , improved creative commons
+
+5	5	content/1.introduction/_index.md
+40	4	content/2.what-is-this/draft/creative-commons.md
+13	0	content/5.concepts/amazon-press-releases.md
+-	-	static/images/wikipedia-creative-commons-licenses.png
+3ef5398833cee81a9c9a5aee72409be2b3c0e5c9|Dinis Cruz|dinis.cruz@owasp.org|2018-08-29|added some misc topics
+
+1	0	.gitignore
+16	0	content/10.misc/books-to-read.md
+13	0	content/10.misc/technium.md
+13	0	content/10.misc/wait-but-why.md
+2	2	content/3.technologies/content/books.md
+2	1	content/3.technologies/content/ml-ai.md
+a890817cf5091a312cb5c6d009d70c8b93bc5ac3|Dinis Cruz|dinis.cruz@owasp.org|2018-08-27|new content: IDE Lots of content changes and refactoring
+
+1	0	content/1.introduction/generation-z.md
+1	0	content/1.introduction/how-this -book-was-created.md
+1	0	content/1.introduction/how-to-get-a-job.md
+0	0	content/2.what-is-this/{ => draft}/copyright.md
+1	0	content/2.what-is-this/{ => draft}/eff.md
+0	0	content/2.what-is-this/{ => draft}/free-sofware-foundation.md
+1	0	content/2.what-is-this/{ => draft}/google.md
+1	0	content/2.what-is-this/{ => draft}/linux.md
+0	0	content/2.what-is-this/{ => draft}/open-source.md
+1	0	content/2.what-is-this/{ => draft}/owasp.md
+1	0	content/2.what-is-this/{ => draft}/python.md
+1	0	content/2.what-is-this/{ => draft}/raspberry-pi.md
+1	0	content/2.what-is-this/{ => draft}/slack.md
+1	0	content/2.what-is-this/{ => draft}/wallaby-js.md
+0	0	content/2.what-is-this/{ => draft}/xcode.md
+34	0	content/3.technologies/content/ide.md
+0	0	content/{ => 3.technologies/draft}/ngrok.md
+0	0	content/4.life-patterns/{ => content}/backup-your-life.md
+0	0	content/4.life-patterns/{ => content}/future-needs-you.md
+26	0	content/4.life-patterns/power-of-habits.md
+1	0	content/4.life-patterns/publish-publish-publish.md
+2	2	content/4.life-patterns/refactoring.md
+2	0	content/4.life-patterns/the-zone.md
+1	0	content/4.life-patterns/thinking-as-programmer.md
+1	0	content/5.concepts/agile-and-kanban.md
+2	1	content/5.concepts/{change.md => changes.md}
+1	0	content/5.concepts/chaos-engineering.md
+1	0	content/5.concepts/continuous-integration.md
+0	1	content/5.concepts/deadlines.md
+13	0	content/5.concepts/devops.md
+0	0	content/{ => 5.concepts/draft}/spotify-model.md
+4	1	content/5.concepts/facts.md
+1	0	content/5.concepts/funtional-programming.md
+1	0	content/5.concepts/gamification.md
+1	0	content/5.concepts/gdpr.md
+5	1	content/5.concepts/graphs.md
+1	0	content/5.concepts/inventing-on-principle.md
+1	0	content/5.concepts/karma-points.md
+1	0	content/5.concepts/legacy-applications.md
+1	0	content/5.concepts/netflix-culture.md
+1	0	content/5.concepts/pair-programming.md
+1	0	content/5.concepts/recursive-functions.md
+21	0	content/6.security/dont-touch-production.md
+1	0	content/_manuscript/change-log.md
+ba62625fc64778313fa79e54f2ed93828bf86570|Dinis Cruz|dinis.cruz@owasp.org|2018-08-26|More draft concepts (and ideas to write about)
+
+4	4	content/1.introduction/how-to-get-a-job.md
+1	0	content/2.what-is-this/slack.md
+15	0	content/3.technologies/draft/blockchain.md
+17	0	content/3.technologies/draft/browser-automation.md
+14	0	content/3.technologies/draft/streams.md
+12	0	content/3.technologies/draft/web-proxies.md
+1	1	content/4.life-patterns/automate-your-workflows.md
+13	0	content/5.concepts/sre.md
+16	0	content/ngrok.md
+14	0	content/spotify-model.md
+61eb375cb5f13f6cb24beaaf4da2ec945b4005a0|Dinis Cruz|dinis.cruz@owasp.org|2018-08-26|more ideas and changes (from first page of print outs)
+
+15	0	content/1.introduction/how-this -book-was-created.md
+13	0	content/4.life-patterns/automate-your-workflows.md
+18	0	content/5.concepts/deadlines.md
+19	0	content/5.concepts/feedback-loops.md
+2	0	content/_manuscript/change-log.md
+780d0e0721478aa7f15062aaca7f4465375ccf9a|Dinis Cruz|dinis.cruz@owasp.org|2018-08-26|Added content for 'Talking to yourself digitally'
+
+2	1	.gitignore
+20	0	content/4.life-patterns/content/talking-to-yourself.md
+0	11	content/4.life-patterns/draft/talk-to-yourself.md
+0	16	content/4.life-patterns/talking-to-yourself.md
+1	1	content/_manuscript/change-log.md
+6792848a3ed24b836e20f6e812311fd132936488|Dinis Cruz|dinis.cruz@owasp.org|2018-08-26|Merge branch 'master' of github.com:DinisCruz/Book_Generation_Z_Developer
+54ff0203f540a52d2fe211ca341c8ea38004b325|Dinis Cruz|dinis.cruz@owasp.org|2018-08-26|misc fixes
+
+5	3	content/2.what-is-this/slack.md
+11	0	content/4.life-patterns/draft/talk-to-yourself.md
+2	1	content/4.life-patterns/the-zone.md
+2	1	content/civic-responsibility.md
+5a8505e1333dbf72f2f87f648cde69da43ef0c04|Dinis Cruz|dinis.cruz@owasp.org|2018-08-26|Merge branch 'master' of github.com:DinisCruz/Book_Generation_Z_Developer
+2d6c14f5f7b8b998b0328bedc1914623bd2ed416|Dinis Cruz|dinis.cruz@owasp.org|2018-08-26|First changes on v0.32
+
+1	1	README.md
+13	0	content/10.misc/gen-z-digital-env.md
+0	0	content/{ => 4.life-patterns}/civic-responsibility.md
+16	0	content/4.life-patterns/talking-to-yourself.md
+17	0	content/6.security/threat-modeling.md
+7	1	content/_manuscript/change-log.md
+f4de90ec5f89010d189da636bf858e7c336d98f7|Dinis Cruz|dinis.cruz@owasp.org|2018-03-06|commit for github push
+
+-	-	static/images/title_page.png
+23b51404de582f62a23da57a43a9130398c1687a|Dinis Cruz|dinis.cruz@owasp.org|2018-03-05|Update README.md
+
+1	1	README.md
+9284d07606e10ef61ae5f494f75f42ecefaf6e54|Dinis Cruz|dinis.cruz@owasp.org|2018-03-05|commit for github push
+
+3	2	content/_manuscript/change-log.md
+a52511ac9494c68644cc673478f89cfdd71d9d85|Dinis Cruz|dinis.cruz@owasp.org|2018-03-05|commit for github push
+
+1	0	content/7.your-cv/github.md
+c435811e561c878b6366799cf9d3bba6369b9450|Dinis Cruz|dinis.cruz@owasp.org|2018-03-04|commit for github push
+
+1	0	content/6.security/3rd-party-modules.md
+16	0	content/civic-responsibility.md
+9c87e76b42fa865debb3a8b13298cbc54405b31b|Dinis Cruz|dinis.cruz@owasp.org|2018-03-04|commit for github push
+
+11	11	content/4.life-patterns/backup-your-life.md
+4	0	gh-push.sh
+e3bc6dffc12b7c9548d90e8f766fdb5226e754d1|Dinis Cruz|dinis.cruz@owasp.org|2018-03-04|Added “Backup your life”
+
+34	0	content/4.life-patterns/backup-your-life.md
+0	0	content/{ => 5.concepts}/micro-services.md
+0	0	content/{ => 5.concepts}/repl.md
+1	1	content/_manuscript/change-log.md
+60536f2447e9ddfc4ea79070f4fb5f0184899797|Dinis Cruz|dinis.cruz@owasp.org|2018-03-04|Added Github issues support Added new chapter “The Future needs you”
+
+35	0	content/4.life-patterns/future-needs-you.md
+19	0	content/_manuscript/change-log.md
+19	0	content/_manuscript/github-issues.md
+2	0	layouts/book/single.html
+13	0	layouts/github/issues.html
+3e08df1f128a358d54531583f6caeb3ca9d8c1f0|Dinis Cruz|dinis.cruz@owasp.org|2018-03-03|Merge branch 'master' of github.com:DinisCruz/Book_Generation_Z_Developer
+de1fddb63c231a41f9af4f7c1e0146b34bd9556a|Dinis Cruz|dinis.cruz@owasp.org|2018-03-03|Added support for splitting draft content for print
+
+1	1	content/2.what-is-this/open-source.md
+3	3	content/3.technologies/content/hugo.md
+1	1	content/3.technologies/{draft => content}/jira.md
+30	5	layouts/book/single.html
+b89fd7a06176a6f3eec8f79b58b8814eb93c57af|Dinis Cruz|dinis.cruz@owasp.org|2018-02-26|Update books.md
+
+2	5	content/3.technologies/content/books.md
+ffc02da212f69c63ea5390c643d0ca809a494b3c|Dinis Cruz|dinis.cruz@owasp.org|2018-02-26|Final set of commits from analogue notes
+
+0	1	content/10.misc/gen-z-research.md
+3	1	content/2.what-is-this/google.md
+1	1	content/2.what-is-this/linux.md
+2	1	content/2.what-is-this/raspberry-pi.md
+24	0	content/2.what-is-this/wallaby-js.md
+0	25	content/2.what-is-this/wallabyjs-and-nodejs.md
+17	0	content/3.technologies/draft/node-js.md
+16	5	content/4.life-patterns/{ => content}/be-a-founder.md
+9	5	content/4.life-patterns/{ => content}/learning.md
+3	1	content/4.life-patterns/ideas.md
+10	2	content/4.life-patterns/impostor-syndrome.md
+6	3	content/4.life-patterns/mentors.md
+1	3	content/4.life-patterns/thinking-as-programmer.md
+18	0	content/5.concepts/draft/bdd.md
+3	1	content/5.concepts/{ => draft}/fdd.md
+2	1	content/5.concepts/{ => draft}/tdd.md
+9	3	content/5.concepts/funtional-programming.md
+11	4	content/5.concepts/gamification.md
+0	2	content/5.concepts/karma-points.md
+1	1	content/5.concepts/legacy-applications.md
+0	1	content/6.security/bug-bounties.md
+1	2	content/6.security/security-better-developers.md
+2	2	content/6.security/strings-should-be-banned.md
+8	4	content/7.your-cv/blogs.md
+5	1	content/7.your-cv/future-self.md
+4	6	content/7.your-cv/git.md
+1	0	content/7.your-cv/github.md
+2	5	content/7.your-cv/leanpub.md
+2	6	content/7.your-cv/linkedin.md
+3	5	content/7.your-cv/personal-brand.md
+2	6	content/7.your-cv/twitter.md
+2	5	content/7.your-cv/upwork.md
+15	0	content/micro-services.md
+13	0	content/repl.md
+190a88fca125d87ef33cc67f6fa7ddcd6c7b9928|Dinis Cruz|dinis.cruz@owasp.org|2018-02-25|more content from analogue (paper) based comments
+
+4	0	content/1.introduction/how-to-get-a-job.md
+22	12	content/2.what-is-this/{ => content}/docker.md
+0	12	content/2.what-is-this/creative-commons.md
+9	2	content/2.what-is-this/{ => draft}/cpu.md
+27	0	content/2.what-is-this/draft/creative-commons.md
+0	14	content/2.what-is-this/github.md
+25	0	content/2.what-is-this/open-source.md
+1	1	content/2.what-is-this/slack.md
+5	2	content/3.technologies/content/ml-ai.md
+4	2	content/3.technologies/content/pen-and-paper.md
+4	2	content/{2.what-is-this => 3.technologies/draft}/dopamine.md
+14	1	content/3.technologies/draft/jira.md
+11	3	content/5.concepts/serverless.md
+30	0	content/6.security/3rd-party-modules.md
+22	0	content/7.your-cv/github.md
+50a2c48f506e1708aff9e233ce7b92c9acc42b71|Dinis Cruz|dinis.cruz@owasp.org|2018-02-25|Merge branch 'master' of github.com:DinisCruz/Book_Generation_Z_Developer
+c00886febea734a597b03be99277f48bc515ca32|Dinis Cruz|dinis.cruz@owasp.org|2018-02-25|more analogue updates
+
+9	6	content/1.introduction/_index.md
+8	4	content/1.introduction/generation-z.md
+11	6	content/1.introduction/how-to-get-a-job.md
+1	1	content/2.what-is-this/_index.md
+29	5	content/2.what-is-this/open-source.md
+0	17	content/3.technologies/AST.md
+1	1	content/3.technologies/_index.md
+10	8	content/3.technologies/{ => content}/books.md
+4	2	content/3.technologies/{ => content}/brain.md
+10	4	content/3.technologies/{ => content}/hugo.md
+3	1	content/3.technologies/{ => content}/ml-ai.md
+3	1	content/3.technologies/{ => content}/pen-and-paper.md
+25	0	content/3.technologies/draft/AST.md
+8	4	content/3.technologies/{ => draft}/aws.md
+0	0	content/3.technologies/{ => draft}/dot-language.md
+18	0	content/3.technologies/draft/dsl.md
+32	0	content/3.technologies/draft/iot.md
+1	0	content/3.technologies/{ => draft}/jira.md
+0	17	content/3.technologies/iot.md
+0	0	content/{ => 4.life-patterns}/start-with-why.md
+0	0	content/{ => 4.life-patterns}/workflows.md
+0	0	content/{ => 5.concepts}/change-engineering.md
+0	0	content/{ => 7.your-cv}/future-self.md
+3	1	content/7.your-cv/git.md
+ffbae7d3ea605ffa2854cd933640dacd69c5b770|Dinis Cruz|dinis.cruz@owasp.org|2018-02-25|Update gen-z-research.md
+
+3	1	content/10.misc/gen-z-research.md
+64ac4b09cce2d12bf3d2c57a66627de564367c46|Dinis Cruz|dinis.cruz@owasp.org|2018-02-25|Update gen-z-research.md
+
+3	0	content/10.misc/gen-z-research.md
+224760100ffb9edb59486a8d4af77c248cb622ea|Dinis Cruz|dinis.cruz@owasp.org|2018-02-25|Create gen-z-research.md
+
+8	0	content/10.misc/gen-z-research.md
+ab34509855e9ebda941c260fed556855d248edee|Dinis Cruz|dinis.cruz@owasp.org|2018-02-25|Added content from analogue notes
+
+2	1	.gitignore
+1	1	content/1.introduction/how-to-get-a-job.md
+18	0	content/10.misc/o2-platform.md
+1	1	content/{3.what-is-this => 2.what-is-this}/_index.md
+19	0	content/2.what-is-this/copyright.md
+0	0	content/{3.what-is-this => 2.what-is-this}/cpu.md
+2	1	content/{3.what-is-this => 2.what-is-this}/creative-commons.md
+0	0	content/{3.what-is-this => 2.what-is-this}/docker.md
+0	0	content/{3.what-is-this => 2.what-is-this}/dopamine.md
+2	1	content/{3.what-is-this => 2.what-is-this}/eff.md
+18	0	content/2.what-is-this/free-sofware-foundation.md
+0	0	content/{3.what-is-this => 2.what-is-this}/github.md
+0	0	content/{3.what-is-this => 2.what-is-this}/google.md
+0	0	content/{3.what-is-this => 2.what-is-this}/linux.md
+1	0	content/{3.what-is-this => 2.what-is-this}/open-source.md
+0	0	content/{3.what-is-this => 2.what-is-this}/owasp.md
+0	0	content/{3.what-is-this => 2.what-is-this}/python.md
+0	0	content/{3.what-is-this => 2.what-is-this}/raspberry-pi.md
+0	0	content/{3.what-is-this => 2.what-is-this}/slack.md
+0	0	content/{3.what-is-this => 2.what-is-this}/wallabyjs-and-nodejs.md
+10	0	content/2.what-is-this/xcode.md
+0	0	content/{2.technologies => 3.technologies}/AST.md
+0	0	content/{2.technologies => 3.technologies}/_index.md
+0	0	content/{2.technologies => 3.technologies}/aws.md
+0	0	content/{2.technologies => 3.technologies}/books.md
+0	0	content/{2.technologies => 3.technologies}/brain.md
+13	0	content/3.technologies/dot-language.md
+0	0	content/{2.technologies => 3.technologies}/hugo.md
+0	0	content/{2.technologies => 3.technologies}/iot.md
+0	0	content/{2.technologies => 3.technologies}/jira.md
+0	0	content/{2.technologies => 3.technologies}/ml-ai.md
+0	0	content/{2.technologies => 3.technologies}/pen-and-paper.md
+20	0	content/4.life-patterns/BBS-and-modems.md
+15	0	content/4.life-patterns/curse-of-knowledge.md
+19	0	content/4.life-patterns/king-is-naked.md
+13	0	content/5.concepts/CI-Testing.md
+3	0	content/5.concepts/facts.md
+1	1	content/5.concepts/fdd.md
+10	0	content/5.concepts/graphs.md
+18	0	content/5.concepts/pair-programming.md
+7	1	content/5.concepts/tdd.md
+0	0	content/{ => 6.security}/pointers.md
+3	5	content/7.your-cv/blogs.md
+2	3	content/_template.md
+11	0	content/change-engineering.md
+14	0	content/future-self.md
+14	0	content/start-with-why.md
+20	0	content/workflows.md
+8a2f088aa73ce33d5762ff574152e60bea974f1f|Dinis Cruz|dinis.cruz@owasp.org|2018-02-22|Added content from analogue notes made made on paper
+
+5	0	content/10.misc/diagrams-to-add.md
+2	1	content/10.misc/stories-to-tell.md
+17	0	content/2.technologies/AST.md
+39	12	content/3.what-is-this/docker.md
+1	3	content/3.what-is-this/eff.md
+1	3	content/3.what-is-this/github.md
+17	0	content/3.what-is-this/google.md
+4	3	content/3.what-is-this/owasp.md
+2	3	content/3.what-is-this/slack.md
+13	0	content/5.concepts/funtional-programming.md
+15	0	content/5.concepts/recursive-functions.md
+14	0	content/5.concepts/strong-vs-weak-types.md
+7	0	content/7.your-cv/blogs.md
+18	1	content/7.your-cv/git.md
+8	0	content/7.your-cv/leanpub.md
+3	0	content/7.your-cv/linkedin.md
+7	0	content/7.your-cv/personal-brand.md
+6	0	content/7.your-cv/upwork.md
+21	0	content/pointers.md
+3f3c479f2117546d3fcbb20be770f3f373350791|Dinis Cruz|dinis.cruz@owasp.org|2018-02-20|Learning how to learn Misc content changes
+
+10	1	content/2.technologies/aws.md
+4	3	content/3.what-is-this/creative-commons.md
+17	5	content/4.life-patterns/be-a-founder.md
+3	6	content/4.life-patterns/impostor-syndrome.md
+15	9	content/4.life-patterns/learning.md
+14	0	content/5.concepts/legacy-applications.md
+0	0	content/{ => 6.security}/strings-should-be-banned.md
+4	1	content/7.your-cv/twitter.md
+c088f4e88211dcd11e51760fc6fa07d2a8f6198a|Dinis Cruz|dinis.cruz@owasp.org|2018-02-19|More ideas from analogue notes
+
+17	0	content/2.technologies/iot.md
+10	3	content/3.what-is-this/linux.md
+13	1	content/3.what-is-this/python.md
+5	3	content/3.what-is-this/raspberry-pi.md
+25	0	content/3.what-is-this/wallabyjs-and-nodejs.md
+18	3	content/5.concepts/agile-and-kanban.md
+3	3	content/5.concepts/change.md
+19	2	content/5.concepts/chaos-engineering.md
+2	4	content/5.concepts/continuous-integration.md
+6	9	content/5.concepts/fdd.md
+3	3	content/5.concepts/gdpr.md
+8	1	content/5.concepts/tdd.md
+15	0	content/strings-should-be-banned.md
+3f742a9a162b526b81fcaba763fb12235ef133e5|Dinis Cruz|dinis.cruz@owasp.org|2018-02-19|Merge branch 'master' of github.com:DinisCruz/Book_Generation_Z_Developer
+5f9f988ca2f0ed21f2879a0f18ce58050ef844f8|Dinis Cruz|dinis.cruz@owasp.org|2018-02-19|Added notes for content to cover Couple more topics
+
+4	2	content/10.misc/stories-to-tell.md
+1	1	content/2.technologies/aws.md
+5	0	content/2.technologies/books.md
+1	1	content/2.technologies/brain.md
+9	4	content/3.what-is-this/cpu.md
+0	11	content/3.what-is-this/defcon.md
+25	3	content/3.what-is-this/docker.md
+4	1	content/3.what-is-this/eff.md
+6	0	content/3.what-is-this/github.md
+10	3	content/3.what-is-this/open-source.md
+7	0	content/3.what-is-this/owasp.md
+14	0	content/4.life-patterns/learn-to-hack.md
+14	0	content/4.life-patterns/mentors.md
+13	0	content/4.life-patterns/publish-publish-publish.md
+6	0	content/4.life-patterns/the-zone.md
+2	0	content/5.concepts/agile-and-kanban.md
+16	0	content/5.concepts/serverless.md
+12	0	content/6.security/bug-bounties.md
+15	0	content/6.security/defcon.md
+5	0	content/7.your-cv/git.md
+52e6d911675a3420f9e818fd7264abfb84986fa5|Dinis Cruz|dinis.cruz@owasp.org|2018-02-19|Update README.md
+
+5	1	README.md
+7670f95991786de902bdb50afdac0dfc3607e2b6|Dinis Cruz|dinis.cruz@owasp.org|2018-02-19|Update books.md
+
+12	8	content/2.technologies/books.md
+2f0f30018e98517bade455e31bf72e8fab7f85f1|Dinis Cruz|dinis.cruz@owasp.org|2018-02-19|Re-added book.md file (required for leanpub file generation)
+
+2	4	content/2.technologies/aws.md
+4	0	content/_manuscript/book.md
+6b9bd9c73ea0aa9a551c301270eaab222866d978|Dinis Cruz|dinis.cruz@owasp.org|2018-02-18|Added content for the technologies section
+
+25	0	content/2.technologies/books.md
+37	6	content/2.technologies/brain.md
+14	4	content/2.technologies/hugo.md
+8	3	content/2.technologies/jira.md
+18	4	content/2.technologies/ml-ai.md
+18	1	content/2.technologies/pen-and-paper.md
+0	9	content/_manuscript/book.md
+76c317b245daa134f1b2b40e99d82903be06bf05|Dinis Cruz|dinis.cruz@owasp.org|2018-02-18|Added introduction text Refactored file’s location
+
+20	5	content/1.introduction/_index.md
+21	11	content/1.introduction/generation-z.md
+0	17	content/1.introduction/why-I-wrote-this-book.md
+0	0	content/{misc => 10.misc}/_index.md
+0	1	content/{misc => 10.misc}/stories-to-tell.md
+0	0	content/{technologies => 2.technologies}/_index.md
+0	0	content/{technologies => 2.technologies}/aws.md
+0	0	content/{technologies => 2.technologies}/books.md
+0	0	content/{technologies => 2.technologies}/brain.md
+0	0	content/{technologies => 2.technologies}/hugo.md
+0	0	content/{technologies => 2.technologies}/jira.md
+0	0	content/{technologies => 2.technologies}/ml-ai.md
+0	0	content/{technologies => 2.technologies}/pen-and-paper.md
+0	0	content/{what-is-this => 3.what-is-this}/_index.md
+0	0	content/{what-is-this => 3.what-is-this}/cpu.md
+0	0	content/{what-is-this => 3.what-is-this}/creative-commons.md
+0	0	content/{what-is-this => 3.what-is-this}/defcon.md
+0	0	content/{what-is-this => 3.what-is-this}/docker.md
+0	0	content/{what-is-this => 3.what-is-this}/dopamine.md
+0	0	content/{what-is-this => 3.what-is-this}/eff.md
+0	0	content/{what-is-this => 3.what-is-this}/github.md
+0	0	content/{what-is-this => 3.what-is-this}/linux.md
+0	0	content/{what-is-this => 3.what-is-this}/open-source.md
+0	0	content/{what-is-this => 3.what-is-this}/owasp.md
+0	0	content/{what-is-this => 3.what-is-this}/python.md
+0	0	content/{what-is-this => 3.what-is-this}/raspberry-pi.md
+0	0	content/{what-is-this => 3.what-is-this}/slack.md
+0	0	content/{life-patterns => 4.life-patterns}/_index.md
+0	0	content/{life-patterns => 4.life-patterns}/be-a-founder.md
+0	0	content/{life-patterns => 4.life-patterns}/ideas.md
+0	0	content/{life-patterns => 4.life-patterns}/impostor-syndrome.md
+0	0	content/{life-patterns => 4.life-patterns}/learning.md
+0	0	content/{life-patterns => 4.life-patterns}/refactoring.md
+0	0	content/{life-patterns => 4.life-patterns}/the-zone.md
+0	0	content/{life-patterns => 4.life-patterns}/thinking-as-programmer.md
+0	0	content/{concepts => 5.concepts}/_index.md
+0	0	content/{concepts => 5.concepts}/agile-and-kanban.md
+0	0	content/{concepts => 5.concepts}/change.md
+0	0	content/{concepts => 5.concepts}/chaos-engineering.md
+0	0	content/{concepts => 5.concepts}/continuous-integration.md
+0	0	content/{concepts => 5.concepts}/facts.md
+0	0	content/{concepts => 5.concepts}/fdd.md
+0	0	content/{concepts => 5.concepts}/gamification.md
+0	0	content/{concepts => 5.concepts}/gdpr.md
+12	0	content/5.concepts/inventing-on-principle.md
+0	0	content/{concepts => 5.concepts}/karma-points.md
+0	0	content/{concepts => 5.concepts}/netflix-culture.md
+0	0	content/{concepts => 5.concepts}/tdd.md
+0	0	content/{security => 6.security}/_index.md
+0	0	content/{security => 6.security}/security-better-developers.md
+0	0	content/{your-cv => 7.your-cv}/_index.md
+0	0	content/{your-cv => 7.your-cv}/blogs.md
+0	0	content/{your-cv => 7.your-cv}/git.md
+0	0	content/{your-cv => 7.your-cv}/leanpub.md
+0	0	content/{your-cv => 7.your-cv}/linkedin.md
+0	0	content/{your-cv => 7.your-cv}/personal-brand.md
+0	0	content/{your-cv => 7.your-cv}/twitter.md
+0	0	content/{your-cv => 7.your-cv}/upwork.md
+2ea7378beba10b0c648b3a4729056cc0d06f4f3d|Dinis Cruz|dinis.cruz@owasp.org|2018-02-18|Added content to ‘How to get a job’ (first couple  decent paragraphs :) )
+
+1	1	content/1.introduction/_index.md
+18	7	content/1.introduction/how-to-get-a-job.md
+21	0	content/concepts/netflix-culture.md
+12	0	content/life-patterns/impostor-syndrome.md
+-	-	static/images/title_page.png
+db93339947626045277944e58d1112c8cfed4cdd|Dinis Cruz|dinis.cruz@owasp.org|2018-02-18|More content and some new images
+
+1	1	content/1.introduction/_index.md
+5	1	content/1.introduction/generation-z.md
+7	3	content/1.introduction/how-to-get-a-job.md
+9	0	content/_manuscript/book.md
+4	3	content/_template.md
+16	0	content/concepts/facts.md
+1	1	content/concepts/fdd.md
+10	0	content/concepts/gamification.md
+12	0	content/concepts/karma-points.md
+3	4	content/concepts/tdd.md
+0	0	content/{what-is-this => }/for-print.md
+14	0	content/life-patterns/ideas.md
+3	2	content/life-patterns/the-zone.md
+2	0	content/misc/stories-to-tell.md
+5	0	content/security/_index.md
+14	0	content/technologies/brain.md
+25	0	content/what-is-this/dopamine.md
+0	0	content/{ => what-is-this}/eff.md
+1	1	content/what-is-this/github.md
+5	0	content/your-cv/_index.md
+1	0	content/your-cv/git.md
+21	0	layouts/book/single.html
+1	1	layouts/for-print/single.html
+-	-	static/images/dopamine.svg.png
+-	-	static/images/list-of-icons.png
+d1d81543de0e52f1fffe461d23717e2aa6e584d6|Dinis Cruz|dinis.cruz@owasp.org|2018-02-18|Added all notes and comments from notebook
+
+7	0	content/1.introduction/_index.md
+16	0	content/1.introduction/generation-z.md
+12	0	content/1.introduction/how-to-get-a-job.md
+17	0	content/1.introduction/why-I-wrote-this-book.md
+0	5	content/1.introduction/why-write-this-book.md
+15	0	content/concepts/change.md
+10	0	content/concepts/continuous-integration.md
+18	1	content/concepts/fdd.md
+10	0	content/concepts/gdpr.md
+15	0	content/eff.md
+12	0	content/life-patterns/be-a-founder.md
+17	0	content/life-patterns/learning.md
+3	0	content/life-patterns/the-zone.md
+10	0	content/life-patterns/thinking-as-programmer.md
+22	0	content/misc/stories-to-tell.md
+12	0	content/security/security-better-developers.md
+0	15	content/stories-to-tell.md
+8	0	content/technologies/aws.md
+2	1	content/what-is-this/cpu.md
+1	1	content/what-is-this/defcon.md
+3	1	content/what-is-this/open-source.md
+15	0	content/what-is-this/owasp.md
+2	0	content/your-cv/git.md
+0	13	content/your-cv/online-avatar.md
+16	0	content/your-cv/personal-brand.md
+13	0	content/your-cv/upwork.md
+2b1b54e3d2a63214115f207ccacc473f72ef377d|Dinis Cruz|dinis.cruz@owasp.org|2018-02-17|Made the Hugo theme work better for the development of the book Added better support for printed version Added placeholder pages for key technologies to cover
+
+0	6	archetypes/default.md
+1	1	config.toml
+13	0	content/1.introduction/_index.md
+5	0	content/1.introduction/why-write-this-book.md
+1	1	content/_footer.md
+5	0	content/concepts/_index.md
+12	0	content/concepts/agile-and-kanban.md
+13	0	content/concepts/chaos-engineering.md
+12	0	content/concepts/continuous-integration.md
+10	0	content/concepts/fdd.md
+10	0	content/concepts/tdd.md
+0	9	content/introduction/_index.md
+0	5	content/introduction/why-write-this-book.md
+11	0	content/life-patterns/the-zone.md
+9	0	content/misc/_index.md
+15	0	content/stories-to-tell.md
+10	0	content/technologies/jira.md
+11	0	content/technologies/ml-ai.md
+12	0	content/what-is-this/cpu.md
+10	0	content/what-is-this/creative-commons.md
+11	0	content/what-is-this/defcon.md
+10	0	content/what-is-this/docker.md
+0	0	content/{for-print.html => what-is-this/for-print.md}
+10	0	content/what-is-this/github.md
+11	0	content/what-is-this/linux.md
+10	0	content/what-is-this/open-source.md
+1	1	content/what-is-this/{git.md => python.md}
+10	0	content/what-is-this/raspberry-pi.md
+13	0	content/what-is-this/slack.md
+16	0	content/your-cv/blogs.md
+12	0	content/your-cv/git.md
+14	0	content/your-cv/leanpub.md
+14	0	content/your-cv/linkedin.md
+13	0	content/your-cv/online-avatar.md
+14	0	content/your-cv/twitter.md
+12	11	layouts/for-print/single.html
+9	0	layouts/partials/flex/before-content/body-header.html
+21	6	layouts/partials/flex/body-aftercontent.html
+0	3	layouts/partials/flex/body-beforecontent.html
+54	0	layouts/partials/next-prev-page.html
+fbf4830a852a7b8ed52543edc9d0244eda706ea5|Dinis Cruz|dinis.cruz@owasp.org|2018-02-17|Merge commit 'ac23143364fffab701e21fca44e8b0017cdacaa7'
+ac23143364fffab701e21fca44e8b0017cdacaa7|Dinis Cruz|dinis.cruz@owasp.org|2018-02-17|Initial commit
+
+201	0	LICENSE
+2	0	README.md
+1e5099789e04b738e0c2a55fa309cef96da76047|Dinis Cruz|dinis.cruz@owasp.org|2018-02-17|Added for-print support
+
+6	0	config.toml
+0	6	content/book-for-print.html
+4	0	content/for-print.html
+1	1	content/technologies/_index.md
+26	0	layouts/for-print/single.html
+7f65c14ac2e74d394eceac482a169dccb732a05c|Dinis Cruz|dinis.cruz@owasp.org|2018-02-17|Moved some of the theme files into the local layouts folder (and refactored it)
+
+17	0	layouts/partials/flex/before-content/body-header.html
+19	0	layouts/partials/flex/before-content/menu.html
+7	0	layouts/partials/flex/before-content/navigation.html
+18	0	layouts/partials/flex/before-content/search.html
+54	0	layouts/partials/flex/body-aftercontent.html
+9	0	layouts/partials/flex/body-beforecontent.html
+29ad0eea5a6d81e08ca6080d490ee82d12902efb|Dinis Cruz|dinis.cruz@owasp.org|2018-02-17|First book content :)
+
+1	0	.gitignore
+52	2	config.toml
+5	0	content/_footer.md
+9	0	content/_index.md
+10	0	content/_template.md
+6	0	content/book-for-print.html
+9	0	content/introduction/_index.md
+5	0	content/introduction/why-write-this-book.md
+9	0	content/life-patterns/_index.md
+11	0	content/life-patterns/refactoring.md
+9	0	content/technologies/_index.md
+18	0	content/technologies/aws.md
+4	0	content/technologies/books.md
+11	0	content/technologies/hugo.md
+7	0	content/technologies/pen-and-paper.md
+9	0	content/what-is-this/_index.md
+7	0	content/what-is-this/git.md
+1cf3c7b69d6cae4dcf2e3242dc9211295e018b6e|Dinis Cruz|dinis.cruz@owasp.org|2018-02-17|First commits with Hugo theme submodule
+
+3	0	.gitmodules
+6	0	archetypes/default.md
+3	0	config.toml
+1	0	themes/docdock

@@ -1,14 +1,14 @@
 {
- "what": "The official versions of the book Generation Z Developers, oldest first: the versions this repository holds. The working versions live in the public vault and move here when signed off. text_sha256 is the sha256 of the book's frozen markdown as the version was built (the whole book, parts and chapters in reading order, assembled by admin/build/build.py from v1/content/); the build stops when the assembled text no longer matches the newest entry, so the frozen text cannot change without a version. A change to the text is the next minor version; a new edition is the next major. Each version is frozen at v1/versions/<version>.md by the release that made it and never rewritten; the delta between consecutive versions is computed from the frozen files by page_versions.py, block by block and word by word.",
+ "what": "The official versions of the book Generation Z Developers, oldest first: the versions this repository holds. The working versions live in the public vault and move here when signed off. text_sha256 is the sha256 of the book's frozen markdown as the version was built (the book as published, the front matter and the published chapters in the print edition's order, assembled by admin/build/build.py from v1/content/); the build stops when the assembled text no longer matches the newest entry, so the frozen text cannot change without a version. A change to the text is the next minor version; a new edition is the next major. Each version is frozen at v1/versions/<version>.md by the release that made it and never rewritten; the delta between consecutive versions is computed from the frozen files by page_versions.py, block by block and word by word.",
  "versions": [
   {
    "version": "v1.0.0",
    "date": "2018-09-30",
-   "site": "v0.1.0",
+   "site": "v0.2.0",
    "where": "Amazon paperback (139 pages, published 30 September 2018, ISBN-10 1724194607), Leanpub (60% complete, 136 pages, 30,695 words, last updated 8 October 2018), and DinisCruz/Book_Generation_Z_Developer at 61886444fe5ab118ab18726147826ab05f794edc",
    "by": "Dinis Cruz, with content fixes and contributions by Mike Eriksson, Michael Chadwick, Claudio Camerino, Mark Regensberg and Sarah Cruz (the 2018 change log)",
-   "why": "The first edition as released: imported verbatim from the 2018 repository on 2026-10-18 and frozen. The Leanpub build left the 90 outlines out; this version keeps them, because the second edition starts from them.",
-   "text_sha256": "601ac471f0943cfdcaf48c2ee73129b805ce6bf6ae13910364a4c288c5033d96"
+   "why": "The first edition as published: the 28 chapters the 2018 build put in the Leanpub book and the print PDF (status: content, parts by weight, chapters by weight then title), with the front-matter page of GitHub issues; imported verbatim from the 2018 repository on 2026-10-18 and frozen. The drafts and outlines the build left out are not part of this version: they are kept beside it (v1/book/drafts.md) as the second edition's raw material. (Site v0.1.0 froze the whole repository, drafts included; v0.2.0 re-froze v1.0.0 as the published book, the day after, before any second version existed.)",
+   "text_sha256": "cc0b4ced52006deb8b9c71f5253dc9e4d7d21f32c91da434579a08ef242293ce"
   }
  ]
 }

@@ -28,6 +28,8 @@ not rewritten: a version of the book is frozen as markdown, and the delta betwee
 frozen files, block by block and word by word.
 """
 import hashlib
+from collections import Counter
+from html.parser import HTMLParser
 import html
 import json
 import re
@@ -48,6 +50,7 @@ TODAY = date.today().isoformat()
 CONTENT = ROOT / "v1/content"
 SOURCE_REPO = "https://github.com/DinisCruz/Book_Generation_Z_Developer"
 SOURCE_COMMIT = "61886444fe5ab118ab18726147826ab05f794edc"
+PDF_SHA = hashlib.sha256((ROOT / "v1/generation-z-print-ready.pdf").read_bytes()).hexdigest()
 # The first edition's public record, read on 18 October 2026. The cover (v1/images/title_page.png) carries EIGHT
 # lines, not the seven the newsroom article counted: "Look under the hood" is the one it missed.
 FIRST_EDITION = {
@@ -76,7 +79,9 @@ PARTS = [  # directory, slug, title, the Hugo weight that ordered it
 
 NAV = [
     ("The book", "v1/book/index.html"),
+    ("Read & review", "read/index.html"),
     ("Versions", "v1/versions/index.html"),
+    ("Contributors", "contributors/index.html"),
     ("The map", "map/index.html"),
     ("The briefs", "briefs/index.html"),
     ("The team", "team/index.html"),
@@ -144,6 +149,7 @@ def page(rel, title, body, description, crumbs=(), extra_head="", wide=False):
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:url" content="{canonical}">
 <meta property="og:type" content="article">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230c2a3d%27/%3E%3Crect x=%274%27 y=%276%27 width=%2711%27 height=%2720%27 fill=%27%237bc08f%27/%3E%3Crect x=%2717%27 y=%276%27 width=%2711%27 height=%2720%27 fill=%27%23e5625b%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Arial Black,Arial%27 font-weight=%27900%27 font-size=%2718%27 text-anchor=%27middle%27 fill=%27%230c2a3d%27%3EZ%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="{up}assets/site.css">
 {extra_head}</head>
 <body>
@@ -183,9 +189,13 @@ def slugify(stem):
 
 
 def load_book():
-    """The book as parts and chapters, in the order the 2018 Hugo site showed them: parts by their weight (the
-    directory number), written chapters before outlines (the 2018 site split them into content/ and draft/), then by
-    weight, then by title. Files under _manuscript/ and the Hugo apparatus are not chapters."""
+    """The book as parts and chapters. PUBLISHED chapters are the ones the 2018 Hugo layouts put in the Leanpub build
+    and the print PDF (layouts/book/leanpub.html: `where .Pages.ByWeight ".Params.status" "==" "content"`), in that
+    order: parts by weight, chapters by weight then title. Everything else is a DRAFT: a chapter with text that was
+    never published (status draft or unset) or an OUTLINE (a title and "Topics to cover and ideas"). The 2018 site's
+    draft/ folders and the leanpub-with-draft-chapters layout kept them apart the same way."""
+    print_toc = json.loads((ROOT / "admin/content/book/print-toc.json").read_text(encoding="utf-8"))
+    print_page = {e["file"]: e["page"] for e in print_toc["entries"] if e.get("file")}
     parts = []
     for d, pslug, ptitle in PARTS:
         pdir = CONTENT / d
@@ -206,20 +216,37 @@ def load_book():
                 title_note = ""
             outline = "Topics to cover" in body
             status = fm_get(fm, "status") or "unset"
+            published = status == "content"
             weight = fm_get(fm, "weight")
             weight = int(weight) if weight.isdigit() else 999
-            group = 1 if (outline or f.parent.name == "draft") else 0
+            kind = "published" if published else ("outline" if outline else "draft")
+            group = {"published": 0, "draft": 1, "outline": 2}[kind]
             chapters.append({
                 "file": rel, "slug": slugify(f.stem), "title": title, "title_note": title_note, "status": status,
-                "outline": outline, "weight": weight, "group": group, "body": body.strip(),
+                "outline": outline, "published": published, "kind": kind, "print_page": print_page.get(rel),
+                "weight": weight, "group": group, "body": body.strip(),
                 "words": len(re.findall(r"\w+", body)), "sha": sha(f.read_text(encoding="utf-8")),
                 "what": fm_get(fm, "what"), "task": fm_get(fm, "task"), "price": fm_get(fm, "price"),
             })
         chapters.sort(key=lambda c: (c["group"], c["weight"], c["title"].lower()))
         parts.append({"dir": d, "slug": pslug, "title": ptitle, "weight": pweight, "intro": pbody.strip(),
+                      "print_page": print_page.get(d + "/_index.md"),
                       "chapters": chapters, "sha": sha(idx.read_text(encoding="utf-8")) if idx.exists() else None})
     parts.sort(key=lambda p: p["weight"])
-    return parts
+    # the front matter page the print edition opened with: the GitHub issues page (content/_manuscript/github-issues.md)
+    gi = CONTENT / "_manuscript/github-issues.md"
+    gfm, gbody = frontmatter(gi.read_text(encoding="utf-8"))
+    front = {"file": "_manuscript/github-issues.md", "slug": "github-issues", "title": "GitHub Issues", "body": gbody.strip(),
+             "words": len(re.findall(r"\w+", gbody)), "sha": sha(gi.read_text(encoding="utf-8")), "print_page": print_page.get("_manuscript/github-issues.md")}
+    n = 0
+    for p in parts:
+        for c in p["chapters"]:
+            if c["published"]:
+                n += 1
+                c["number"] = n
+            else:
+                c["number"] = None
+    return parts, front
 
 
 def rebase_images(body, up):
@@ -240,104 +267,402 @@ def chapter_url(c, part):
 
 
 def badge(c):
-    return ('<span class="badge outline">outline</span>' if c["outline"] else '<span class="badge written">written</span>')
+    k = c["kind"]
+    if k == "published":
+        pg = f", p. {c['print_page']}" if c.get("print_page") else ""
+        return f'<span class="badge written" title="In the Leanpub build and the print PDF">published{esc(pg)}</span>'
+    if k == "draft":
+        return '<span class="badge draft" title="Text the 2018 build left out (status draft)">draft</span>'
+    return '<span class="badge outline" title="A title and &quot;Topics to cover and ideas&quot;">outline</span>'
 
 
-def build_book(parts, map_rows):
+# ---- the book as blocks, for the reader (read/) --------------------------------------------------------------
+class _TopLevel(HTMLParser):
+    """Splits rendered HTML into its top-level elements, each a block the reader can address, fold and comment on."""
+    def __init__(self):
+        super().__init__(convert_charrefs=False)
+        self.depth = 0
+        self.starts = []
+        self.blocks = []
+        self.src = ""
+    def _pos(self):
+        line, col = self.getpos()
+        return sum(len(l) + 1 for l in self.src.split("\n")[:line - 1]) + col
+    def handle_starttag(self, tag, attrs):
+        if tag in ("img", "br", "hr"):
+            if self.depth == 0:
+                self.starts.append(self._pos()); self._close_at(self._pos() + len(self.get_starttag_text()))
+            return
+        if self.depth == 0:
+            self.starts.append(self._pos())
+        self.depth += 1
+    def handle_startendtag(self, tag, attrs):
+        if self.depth == 0:
+            self.starts.append(self._pos()); self._close_at(self._pos() + len(self.get_starttag_text()))
+    def handle_endtag(self, tag):
+        if tag in ("img", "br", "hr"):
+            return
+        self.depth -= 1
+        if self.depth == 0:
+            self._close_at(self._pos() + len(tag) + 3)
+    def _close_at(self, end):
+        start = self.starts.pop()
+        self.blocks.append(self.src[start:end])
+    def split(self, html_text):
+        self.src = html_text
+        self.feed(html_text)
+        return [b for b in self.blocks if b.strip()]
+
+
+STOP = set("""the a an and or of to in on for with by from as at is are was were be been it its this that these those you your
+we our they their he she his her them us i my me not no yes if then than so but can will would should could may might
+have has had do does did done just also very more most some any all each every one two three about into over under out up
+down what which who whom when where why how here there now then again only even still too same other another such own
+into onto off per via like new old big small good bad great many much few lot lots way ways thing things make makes made
+use used using get got go going come see look need needs want time year years day days part parts first last next book
+chapter chapters code example examples""".split())
+
+
+CAP_FORMS, LOW_FORMS = Counter(), Counter()
+
+
+def _tokens(body):
+    text = re.sub(r"```.*?```", " ", body, flags=re.S)
+    text = re.sub(r"!\[.*?\]\(.*?\)|\(https?://[^)]*\)|`[^`]*`", " ", text)
+    return re.findall(r"\b[A-Za-z][A-Za-z0-9+#.-]{2,}\b", text)
+
+
+def terms_of(body):
+    """The proper nouns and technical names a chapter uses: the terms it shares with other chapters. A capitalised
+    word counts as a name when, across the whole book, it is written with a capital at least as often as without
+    (so "Docker" survives `docker run`, and "Although" at a sentence start does not); a name with an inner capital,
+    a digit or in all caps (GitHub, AWS, Web2) counts from one use, any other from two."""
+    caps = Counter(w for w in _tokens(body) if (w[0].isupper() or any(ch.isupper() for ch in w[1:])) and w.lower() not in STOP)
+    out = {}
+    for w, n in caps.items():
+        k = w.lower()
+        if LOW_FORMS[k] and CAP_FORMS[k] <= 2 * LOW_FORMS[k]:
+            continue  # written in lower case about as often: an ordinary word at a sentence start
+        special = any(ch.isupper() for ch in w[1:]) or any(ch.isdigit() for ch in w)
+        if n >= 2 or (special and len(w) >= 3):
+            out[k] = out.get(k, 0) + n
+    return out
+
+
+def relate(chapters):
+    """Chapters that share terms, as edges labelled with the terms shared; a term common to more than 40% of the
+    chapters says nothing and is dropped."""
+    for c in chapters:
+        for w in _tokens(c["body"]):
+            (CAP_FORMS if w[0].isupper() else LOW_FORMS)[w.lower()] += 1
+    terms = {c["slug"]: terms_of(c["body"]) for c in chapters}
+    df = Counter(t for ts in terms.values() for t in ts)
+    limit = max(3, int(0.4 * len(chapters)))
+    keep = {t for t, n in df.items() if n <= limit}
+    rel = {}
+    for a in chapters:
+        ta = set(terms[a["slug"]]) & keep
+        edges = []
+        for b in chapters:
+            if b is a:
+                continue
+            shared = ta & set(terms[b["slug"]])
+            if shared:
+                weight = sum(min(terms[a["slug"]][t], terms[b["slug"]][t]) for t in shared)
+                edges.append({"slug": b["slug"], "shared": sorted(shared, key=lambda t: -(terms[a["slug"]][t] + terms[b["slug"]][t]))[:6], "n": len(shared), "w": weight})
+        edges.sort(key=lambda e: (-e["n"], -e["w"]))
+        rel[a["slug"]] = edges[:6]
+    return rel, {s: sorted(set(t) & keep, key=lambda x: -t[x])[:12] for s, t in terms.items()}
+
+
+def build_book(parts, front, map_rows):
     manifest = {"version": "v1.0.0", "site": VERSION, "source": {"repository": SOURCE_REPO, "commit": SOURCE_COMMIT},
                 "what": "The hash of every chapter's markdown (v1/content/) and of the <main> it rendered; validate.js "
                         "refuses a page that no longer matches its markdown, or markdown that was edited behind its page.",
                 "chapters": []}
     flat = [(p, c) for p in parts for c in p["chapters"]]
+    pub = [(p, c) for p, c in flat if c["published"]]
+    drafts = [(p, c) for p, c in flat if not c["published"]]
     by_file = {r["file"]: r for r in map_rows}
-    n_written = sum(1 for _, c in flat if not c["outline"])
-    n_outline = len(flat) - n_written
-    total_words = sum(c["words"] for _, c in flat)
+    n_draft = sum(1 for _, c in drafts if c["kind"] == "draft")
+    n_outline = sum(1 for _, c in drafts if c["kind"] == "outline")
+    pub_words = sum(c["words"] for _, c in pub)
 
-    # one page per chapter
-    for i, (p, c) in enumerate(flat):
-        rel = chapter_url(c, p)
-        up = up_for(rel)
-        body_html = md(rebase_images(c["body"], "../../"))
-        prev = flat[i - 1] if i > 0 else None
-        nxt = flat[i + 1] if i + 1 < len(flat) else None
+    def nav_for(seq, i):
+        prev = seq[i - 1] if i > 0 else None
+        nxt = seq[i + 1] if i + 1 < len(seq) else None
         pn = '<div class="prevnext">'
         pn += (f'<a href="../{prev[0]["slug"]}/{prev[1]["slug"]}.html">&larr; {esc(prev[1]["title"])}</a>' if prev else "<span></span>")
         pn += (f'<a href="../{nxt[0]["slug"]}/{nxt[1]["slug"]}.html">{esc(nxt[1]["title"])} &rarr;</a>' if nxt else "<span></span>")
-        pn += "</div>"
-        row = by_file.get(c["file"])
-        answers = ""
-        if row and row["articles"]:
-            answers = ('<p class="small dim">Answered since, on the newsroom: ' + ", ".join(
-                f'<a href="{a["url"]}">{esc(a["title"])}</a>' for a in row["articles"]) + f'. <a href="{up}map/index.html#{slugify(c["file"])}">The map row</a>.</p>')
-        elif row:
-            answers = f'<p class="small dim">No newsroom article answers it yet. <a href="{up}map/index.html#{slugify(c["file"])}">The map row</a>.</p>'
-        note = ""
-        if c["outline"]:
-            note = ('<div class="outline-note">In the 2018 edition this chapter was an outline: a title and "Topics to cover and ideas". '
-                    'It is shown exactly as released. The second edition fills it from the articles the map names.</div>')
-        if c["title_note"]:
-            note += f'<p class="small dim">{esc(c["title_note"])}</p>'
-        mvp = ""
-        if c["what"] or c["task"]:
-            mvp = '<dl class="kv">' + "".join(f"<dt>{k}</dt><dd>{esc(v)}</dd>" for k, v in (("What", c["what"]), ("Task", c["task"]), ("Price", c["price"])) if v) + "</dl>"
-        main = (f'<article class="chapter"><p class="small dim">{esc(p["title"])} &middot; chapter {i + 1} of {len(flat)} &middot; {badge(c)} '
-                f'<span class="badge frozen">v1.0.0, 2018, frozen</span> &middot; {c["words"]:,} words &middot; '
-                f'<a href="{SOURCE_REPO}/blob/{SOURCE_COMMIT}/content/{c["file"]}">the 2018 file</a></p>'
-                f'<h1>{esc(c["title"])}</h1>{note}{mvp}<div class="body">{body_html}</div>{answers}{pn}</article>')
-        page(rel, c["title"], main, f"{c['title']}, a chapter of Generation Z Developers (2018), as released.",
-             crumbs=(("The book", "v1/book/index.html"), (p["title"], f"v1/book/index.html#{p['slug']}"), (c["title"], rel)))
-        manifest["chapters"].append({"file": c["file"], "page": rel, "title": c["title"], "part": p["title"],
-                                     "kind": "outline" if c["outline"] else "written", "words": c["words"],
-                                     "markdown_sha256": c["sha"], "main_sha256": sha(main)})
+        return pn + "</div>"
 
-    # the table of contents
-    toc = []
+    # one page per chapter: the published ones walk the published sequence, the drafts walk the drafts
+    for seq, label in ((pub, "published"), (drafts, "drafts")):
+        for i, (p, c) in enumerate(seq):
+            rel = chapter_url(c, p)
+            up = up_for(rel)
+            body_html = md(rebase_images(c["body"], "../../"))
+            row = by_file.get(c["file"])
+            answers = ""
+            if row and row["articles"]:
+                answers = ('<p class="small dim">Answered since, on the newsroom: ' + ", ".join(
+                    f'<a href="{a["url"]}">{esc(a["title"])}</a>' for a in row["articles"]) + f'. <a href="{up}map/index.html#{slugify(c["file"])}">The map row</a>.</p>')
+            elif row:
+                answers = f'<p class="small dim">No newsroom article answers it yet. <a href="{up}map/index.html#{slugify(c["file"])}">The map row</a>.</p>'
+            note = ""
+            if c["kind"] == "outline":
+                note = ('<div class="outline-note">In 2018 this was an outline: a title and "Topics to cover and ideas". It was never in the published book, '
+                        'and it is shown exactly as it was left. The second edition fills it from the articles the map names.</div>')
+            elif c["kind"] == "draft":
+                note = ('<div class="outline-note">A draft: text that was in the repository but not in the published book (the 2018 build took only '
+                        'chapters marked <code>status: content</code>). Shown exactly as it was left.</div>')
+            if c["title_note"]:
+                note += f'<p class="small dim">{esc(c["title_note"])}</p>'
+            mvp = ""
+            if c["what"] or c["task"]:
+                mvp = '<dl class="kv">' + "".join(f"<dt>{k}</dt><dd>{esc(v)}</dd>" for k, v in (("What", c["what"]), ("Task", c["task"]), ("Price", c["price"])) if v) + "</dl>"
+            where = (f'chapter {c["number"]} of {len(pub)} in the published book' if c["published"] else f'draft {i + 1} of {len(drafts)}, not in the published book')
+            main = (f'<article class="chapter"><p class="small dim">{esc(p["title"])} &middot; {where} &middot; {badge(c)} '
+                    f'<span class="badge frozen">v1.0.0, 2018, frozen</span> &middot; {c["words"]:,} words &middot; '
+                    f'<a href="{SOURCE_REPO}/blob/{SOURCE_COMMIT}/content/{c["file"]}">the 2018 file</a> &middot; <a href="{up}read/index.html#{c["slug"]}">read and review</a></p>'
+                    f'<h1>{esc(c["title"])}</h1>{note}{mvp}<div class="body">{body_html}</div>{answers}{nav_for(seq, i)}</article>')
+            page(rel, c["title"], main, f"{c['title']}, {'a chapter' if c['published'] else 'a draft'} of Generation Z Developers (2018), as released.",
+                 crumbs=(("The book", "v1/book/index.html"), (p["title"], f"v1/book/index.html#{p['slug']}"), (c["title"], rel)))
+            manifest["chapters"].append({"file": c["file"], "page": rel, "title": c["title"], "part": p["title"], "kind": c["kind"],
+                                         "number": c["number"], "print_page": c["print_page"], "words": c["words"],
+                                         "markdown_sha256": c["sha"], "main_sha256": sha(main)})
+
+    # the front matter page: GitHub Issues, as the print edition opened
+    fmain = (f'<article class="chapter"><p class="small dim">Front matter &middot; <span class="badge written">published, p. {front["print_page"]}</span> '
+             f'<span class="badge frozen">v1.0.0, 2018, frozen</span> &middot; {front["words"]} words &middot; <a href="{SOURCE_REPO}/blob/{SOURCE_COMMIT}/content/{front["file"]}">the 2018 file</a></p>'
+             f'<h1>{esc(front["title"])}</h1><div class="body">{md(front["body"])}</div>'
+             f'<p class="small dim">In the print edition this page listed the five issues labelled <code>show-in-book</code> as of 8 October 2018 (#2 to #6). '
+             f'<a href="../../contributors/index.html">The contributors page</a> has every issue, pull request and commit of the first edition.</p>'
+             f'<div class="prevnext"><span></span><a href="{pub[0][0]["slug"]}/{pub[0][1]["slug"]}.html">{esc(pub[0][1]["title"])} &rarr;</a></div></article>')
+    page("v1/book/github-issues.html", front["title"], fmain, "The front-matter page of the 2018 print edition: the GitHub issues a reader could help with.",
+         crumbs=(("The book", "v1/book/index.html"), (front["title"], "v1/book/github-issues.html")))
+    manifest["chapters"].append({"file": front["file"], "page": "v1/book/github-issues.html", "title": front["title"], "part": "Front matter", "kind": "published",
+                                 "number": 0, "print_page": front["print_page"], "words": front["words"], "markdown_sha256": front["sha"], "main_sha256": sha(fmain)})
+
+    # the table of contents: the book as published, then the drafts
+    toc_pub, toc_dr = [], []
     for pi, p in enumerate(parts):
-        items = "".join(
-            f'<li><a href="{p["slug"]}/{c["slug"]}.html">{esc(c["title"])}</a> {badge(c)}<span class="w">{c["words"]:,} words</span></li>'
-            for c in p["chapters"])
+        pc = [c for c in p["chapters"] if c["published"]]
+        dc = [c for c in p["chapters"] if not c["published"]]
         plain = re.sub(r"\s+", " ", re.sub(r"!\[.*?\]\(.*?\)", "", re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", p["intro"]))).strip()
         intro = f'<p class="small dim">{esc(plain[:220])}&hellip;</p>' if len(plain) > 40 else ""
-        toc.append(f'<li id="{p["slug"]}"><div class="part"><span class="n">{pi + 1}</span>{esc(p["title"])} '
-                   f'<span class="w">{len(p["chapters"])} chapters, {sum(1 for c in p["chapters"] if not c["outline"])} written</span></div>{intro}<ol>{items}</ol></li>')
+        if pc:
+            items = "".join(f'<li><a href="{p["slug"]}/{c["slug"]}.html">{esc(c["title"])}</a> <span class="w">p. {c["print_page"]} &middot; {c["words"]:,} words</span></li>' for c in pc)
+            toc_pub.append(f'<li id="{p["slug"]}"><div class="part"><span class="n">{pi + 1}</span>{esc(p["title"])} '
+                           f'<span class="w">{len(pc)} chapters{", from p. " + str(p["print_page"]) if p["print_page"] else ""}</span></div>{intro}<ol>{items}</ol></li>')
+        if dc:
+            items = "".join(f'<li><a href="{p["slug"]}/{c["slug"]}.html">{esc(c["title"])}</a> {badge(c)}<span class="w">{c["words"]:,} words</span></li>' for c in dc)
+            toc_dr.append(f'<li id="drafts-{p["slug"]}"><div class="part">{esc(p["title"])} <span class="w">{sum(1 for c in dc if c["kind"] == "draft")} drafts, {sum(1 for c in dc if c["kind"] == "outline")} outlines</span></div>'
+                          + (intro if not pc else "") + f'<ol>{items}</ol></li>')
     fe = FIRST_EDITION
-    body = f"""<div class="toc-head"><a href="../images/title_page.png"><img class="thumb" src="../images/title_page.png" alt="The cover of Gen Z Developers, early release, September 2018" width="150" height="227"></a><div>
+    body = f"""<div class="toc-head"><a href="../generation-z-print-ready.pdf"><img class="thumb" src="../images/title_page.png" alt="The cover of Gen Z Developers, early release, September 2018" width="150" height="227"></a><div>
 <h1>Generation Z Developers <span class="badge frozen">v1.0.0 &middot; 2018 &middot; frozen</span></h1>
-<p class="lede">Key concepts and ideas for the next generation of developers. The first edition, as released: September 2018 on Leanpub at 60% complete, last updated 8 October 2018, and the same text on Amazon. This is the official version this repository holds; nothing in it changes. <a href="../versions/index.html">The versions page</a> records it, and will show the delta to the next one.</p>
-<p><span class="stat"><b>{len(flat)}</b><span>chapters</span></span> <span class="stat"><b>{n_written}</b><span>written</span></span> <span class="stat"><b>{n_outline}</b><span>outlines</span></span> <span class="stat"><b>{total_words:,}</b><span>words in the source</span></span> <span class="stat"><b>8</b><span>parts</span></span></p>
-<p><a href="single.html">Read it on one page</a> &middot; <a href="../versions/v1.0.0.md">the frozen markdown</a> &middot; <a href="../../map/index.html">the map to the newsroom articles</a></p>
+<p class="lede">Key concepts and ideas for the next generation of developers. The first edition as published: the {len(pub)} chapters of the print edition (139 pages, 30 September 2018) and the Leanpub build of 8 October 2018. This is the official version this repository holds; nothing in it changes. <a href="../versions/index.html">The versions page</a> records it, and will show the delta to the next one.</p>
+<p><span class="stat"><b>{len(pub)}</b><span>published chapters</span></span> <span class="stat"><b>{pub_words:,}</b><span>words published</span></span> <span class="stat"><b>139</b><span>print pages</span></span> <span class="stat"><b>{n_draft}</b><span>drafts</span></span> <span class="stat"><b>{n_outline}</b><span>outlines</span></span></p>
+<p><a href="../../read/index.html">Read and review it</a> &middot; <a href="single.html">on one page</a> &middot; <a href="../generation-z-print-ready.pdf">the print PDF</a> &middot; <a href="../versions/v1.0.0.md">the frozen markdown</a> &middot; <a href="drafts.html">the drafts on one page</a> &middot; <a href="../../map/index.html">the map to the newsroom articles</a></p>
 <p class="small">Where the first edition lives: <a href="{fe["amazon"]["url"]}">the paperback on Amazon</a> ({fe["amazon"]["pages"]} pages, published {fe["amazon"]["published"]}, ISBN-10 {fe["amazon"]["isbn10"]}) &middot; <a href="{fe["leanpub"]["url"]}">Leanpub</a> ({fe["leanpub"]["price"]}; {fe["leanpub"]["complete"]} complete, {fe["leanpub"]["readers"]} readers, {fe["leanpub"]["words"]:,} words) &middot; <a href="{SOURCE_REPO}">the source on GitHub</a>.</p>
 </div></div>
-<div class="note">The 2018 site showed, in each part, the chapters with text first and the outlines after, and this table keeps that order. An <span class="badge outline">outline</span> is a title and "Topics to cover and ideas": {n_outline} of the {len(flat)} chapters, and with the outline template itself, 90 of the 138 files. The second edition fills them from the newsroom's articles; <a href="../../map/index.html">the map</a> says which.</div>
-<ul class="toc">{"".join(toc)}</ul>
+<h2 id="published">The book as published</h2>
+<div class="note">What the 2018 build published is a rule in the repository's Hugo layouts: a chapter went into the Leanpub book and the print PDF only if its front matter said <code>status: content</code>, parts by weight, chapters by weight then title. These {len(pub)} chapters, in this order, are the print edition's table of contents, with its page numbers. The front matter was <a href="github-issues.html">a page of GitHub issues to help with</a>.</div>
+<ul class="toc">{"".join(toc_pub)}</ul>
+<h2 id="drafts">The drafts: what was in the repository but not in the book</h2>
+<div class="note warn">{n_draft} draft chapters with text and {n_outline} outlines (a title and "Topics to cover and ideas") never reached the published book. They are kept exactly as they were left, because the second edition starts from them, and <a href="../../map/index.html">the map</a> says which newsroom article has since answered each. Nothing here is the author's finished word: it is the ideas he meant to come back to.</div>
+<ul class="toc">{"".join(toc_dr)}</ul>
 """
     page("v1/book/index.html", "The book, v1.0.0 (2018)", body,
-         "Generation Z Developers, the 2018 first edition as released, chapter by chapter.", crumbs=(("The book", "v1/book/index.html"),))
+         "Generation Z Developers, the 2018 first edition as published, chapter by chapter, and the drafts it left out.", crumbs=(("The book", "v1/book/index.html"),))
 
-    # the whole book on one page, and the frozen markdown it is a projection of
-    single, frozen = [], [f"# Generation Z Developers\n\n*Key concepts and ideas for the next generation of developers. Dinis Cruz, 2018. "
-                          f"Version v1.0.0: the first edition as released, frozen from {SOURCE_REPO} at {SOURCE_COMMIT[:9]}.*\n"]
-    single.append('<h1>Generation Z Developers <span class="badge frozen">v1.0.0 &middot; 2018 &middot; frozen</span></h1>'
-                  '<p class="lede">The whole first edition on one page, in reading order. <a href="index.html">The table of contents</a>.</p>')
-    for pi, p in enumerate(parts):
-        single.append(f'<h2 class="part" id="{p["slug"]}">Part {pi + 1}: {esc(p["title"])}</h2>')
-        frozen.append(f"\n# Part {pi + 1}: {p['title']}\n")
-        if p["intro"]:
-            single.append(f'<div class="body">{md(rebase_images(p["intro"], "../"))}</div>')
-            frozen.append(rebase_images(p["intro"], "") + "\n")
-        for c in p["chapters"]:
-            single.append(f'<h3 class="ch" id="{c["slug"]}">{esc(c["title"])}</h3><p class="meta">{badge(c)} {c["words"]:,} words &middot; '
-                          f'<a href="{p["slug"]}/{c["slug"]}.html">its own page</a></p><div class="body">{md(rebase_images(c["body"], "../"))}</div>')
-            frozen.append(f"\n## {c['title']}\n\n*{'Outline' if c['outline'] else 'Written'}, {c['words']} words, {c['file']}.*\n\n" + rebase_images(c["body"], "") + "\n")
+    # the published book on one page, and the frozen markdown it is a projection of; the drafts on their own page
+    frozen = [f"# Generation Z Developers\n\n*Key concepts and ideas for the next generation of developers. Dinis Cruz, 2018. "
+              f"Version v1.0.0: the first edition as published, the {len(pub)} chapters of the print edition and the Leanpub build, "
+              f"frozen from {SOURCE_REPO} at {SOURCE_COMMIT[:9]}. The drafts the build left out are not part of this version; they are in v1/book/drafts.md.*\n",
+              f"\n# Front matter\n\n## {front['title']}\n\n*Published, p. {front['print_page']}, {front['file']}.*\n\n" + front["body"] + "\n"]
+    single = ['<h1>Generation Z Developers <span class="badge frozen">v1.0.0 &middot; 2018 &middot; frozen</span></h1>'
+              f'<p class="lede">The book as published, on one page, in the print edition\'s order. <a href="index.html">The table of contents</a> &middot; <a href="drafts.html">the drafts</a>.</p>'
+              f'<h3 class="ch" id="github-issues">{esc(front["title"])}</h3><p class="meta">front matter, p. {front["print_page"]}</p><div class="body">{md(front["body"])}</div>']
+    draft_md = [f"# Generation Z Developers: the drafts\n\n*What the 2018 repository held but the published book left out: {n_draft} draft chapters and {n_outline} outlines, "
+                f"as they were left, from {SOURCE_REPO} at {SOURCE_COMMIT[:9]}. Not part of v1.0.0; the second edition's raw material.*\n"]
+    dsingle = [f'<h1>The drafts <span class="badge draft">not in the published book</span></h1><p class="lede">{n_draft} draft chapters and {n_outline} outlines, as they were left in the 2018 repository, part by part. <a href="index.html">The table of contents</a> &middot; <a href="single.html">the published book</a>.</p>']
+    pn = 0
+    for p in parts:
+        pc = [c for c in p["chapters"] if c["published"]]
+        dc = [c for c in p["chapters"] if not c["published"]]
+        if pc:
+            pn += 1
+            single.append(f'<h2 class="part" id="{p["slug"]}">Part {pn}: {esc(p["title"])}</h2>')
+            frozen.append(f"\n# Part {pn}: {p['title']}\n")
+            if p["intro"]:
+                single.append(f'<div class="body">{md(rebase_images(p["intro"], "../"))}</div>')
+                frozen.append(rebase_images(p["intro"], "") + "\n")
+            for c in pc:
+                single.append(f'<h3 class="ch" id="{c["slug"]}">{esc(c["title"])}</h3><p class="meta">chapter {c["number"]} &middot; p. {c["print_page"]} &middot; {c["words"]:,} words &middot; '
+                              f'<a href="{p["slug"]}/{c["slug"]}.html">its own page</a></p><div class="body">{md(rebase_images(c["body"], "../"))}</div>')
+                frozen.append(f"\n## {c['title']}\n\n*Chapter {c['number']}, p. {c['print_page']}, {c['words']} words, {c['file']}.*\n\n" + rebase_images(c["body"], "") + "\n")
+        if dc:
+            dsingle.append(f'<h2 class="part" id="{p["slug"]}">{esc(p["title"])}</h2>')
+            draft_md.append(f"\n# {p['title']}\n")
+            if not pc and p["intro"]:
+                dsingle.append(f'<div class="body">{md(rebase_images(p["intro"], "../"))}</div>')
+                draft_md.append(rebase_images(p["intro"], "") + "\n")
+            for c in dc:
+                dsingle.append(f'<h3 class="ch" id="{c["slug"]}">{esc(c["title"])}</h3><p class="meta">{badge(c)} {c["words"]:,} words &middot; '
+                               f'<a href="{p["slug"]}/{c["slug"]}.html">its own page</a></p><div class="body">{md(rebase_images(c["body"], "../"))}</div>')
+                draft_md.append(f"\n## {c['title']}\n\n*{c['kind'].capitalize()}, {c['words']} words, {c['file']}.*\n\n" + rebase_images(c["body"], "") + "\n")
     page("v1/book/single.html", "The book on one page, v1.0.0 (2018)", '<div class="single">' + "".join(single) + "</div>",
-         "Generation Z Developers (2018), the whole first edition on one page.", crumbs=(("The book", "v1/book/index.html"), ("On one page", "v1/book/single.html")))
+         "Generation Z Developers (2018), the first edition as published, on one page.", crumbs=(("The book", "v1/book/index.html"), ("On one page", "v1/book/single.html")))
+    page("v1/book/drafts.html", "The drafts, v1 (2018)", '<div class="single">' + "".join(dsingle) + "</div>",
+         "The drafts and outlines the 2018 build left out of Generation Z Developers, on one page.", crumbs=(("The book", "v1/book/index.html"), ("The drafts", "v1/book/drafts.html")))
+    write("v1/book/drafts.md", rebase_links_md("\n".join(draft_md)))
     write("v1/book/manifest.json", json.dumps(manifest, indent=1, ensure_ascii=False) + "\n")
-    return "\n".join(frozen), flat
+    return "\n".join(frozen), flat, pub, drafts
+
+
+def rebase_links_md(text):
+    """Image links in an assembled markdown file under v1/book/, one folder below v1/."""
+    return text.replace("](images/", "](../images/")
+
+
+def build_bookjson(parts, front, flat, map_rows):
+    """v1/book/book.json: the book as data for the reader (read/): parts, chapters, each chapter as blocks the reader
+    can fold and comment on, the newsroom articles that answer it, and the chapters it shares terms with."""
+    by_file = {r["file"]: r for r in map_rows}
+    chapters = []
+    allc = [c for _, c in flat]
+    rel, terms = relate(allc)
+    for p, c in flat:
+        html_text = md(rebase_images(c["body"], "../v1/"))
+        blocks_ = _TopLevel().split(html_text)
+        chapters.append({
+            "slug": c["slug"], "part": p["slug"], "title": c["title"], "kind": c["kind"], "published": c["published"], "number": c["number"],
+            "print_page": c["print_page"], "words": c["words"], "url": chapter_url(c, p), "file": c["file"],
+            "articles": [{"title": a["title"], "url": a["url"]} for a in (by_file.get(c["file"], {}).get("articles") or [])],
+            "gap": by_file.get(c["file"], {}).get("gap", ""),
+            "terms": terms.get(c["slug"], []), "related": rel.get(c["slug"], []),
+            "blocks": [{"id": f"{c['slug']}-{i + 1}", "html": b, "words": len(re.findall(r"\w+", re.sub(r"<[^>]+>", " ", b)))} for i, b in enumerate(blocks_)],
+        })
+    fb = _TopLevel().split(md(front["body"]))
+    doc = {
+        "what": "Generation Z Developers v1.0.0 as data for the reader at read/: parts, chapters (published, draft, outline) as blocks, "
+                "the newsroom articles that answer each (from the map) and the chapters that share terms (computed). Generated by build.py.",
+        "version": "v1.0.0", "site": VERSION, "title": "Generation Z Developers", "subtitle": "Key concepts and ideas for the next generation of developers",
+        "print_pdf": "../v1/generation-z-print-ready.pdf", "cover": "../v1/images/title_page.png",
+        "parts": [{"slug": p["slug"], "title": p["title"], "print_page": p["print_page"], "intro_html": md(rebase_images(p["intro"], "../v1/")) if p["intro"] else ""} for p in parts],
+        "front": {"slug": "github-issues", "title": front["title"], "print_page": front["print_page"], "words": front["words"], "url": "v1/book/github-issues.html",
+                  "blocks": [{"id": f"github-issues-{i + 1}", "html": b, "words": len(re.findall(r"\w+", re.sub(r"<[^>]+>", " ", b)))} for i, b in enumerate(fb)]},
+        "chapters": chapters,
+        "meter": {"start": 500, "symbol": "£", "pence_per_words": 250, "min_share": 0.1,
+                  "rule": "A penny per 250 words, charged for the share of the chapter read (never less than 10% once opened); credit starts at £5 and can go below zero; nothing leaves the browser."},
+    }
+    write("v1/book/book.json", json.dumps(doc, ensure_ascii=False) + "\n")
+    return doc
+
+
+def build_read(bookdoc):
+    """read/: the reader and the editor's review desk. Content on the left, the graph on the right, the state of every
+    chapter and comment kept in this browser, the reading meter after the newsroom's rules."""
+    n_pub = sum(1 for c in bookdoc["chapters"] if c["published"])
+    body = f"""<div id="reader" class="reader" data-book="../v1/book/book.json">
+<noscript><p class="note warn">The reader needs JavaScript. The book itself does not: <a href="../v1/book/index.html">the table of contents</a>, <a href="../v1/book/single.html">on one page</a>, <a href="../v1/generation-z-print-ready.pdf">the print PDF</a>.</p></noscript>
+<div class="rd-strip" id="rd-strip">
+  <div class="rd-strip-left">
+    <a class="rd-brand" href="../v1/book/index.html" title="The table of contents">Generation Z Developers <span class="badge frozen">v1.0.0</span></a>
+    <span class="rd-progress" id="rd-progress" title="Chapters read, of the published book"></span>
+  </div>
+  <div class="rd-strip-right">
+    <span class="rd-meter" id="rd-meter" title="The reading meter: a penny per 250 words read, from £5 of credit, kept in this browser"></span>
+    <button class="rd-btn" id="rd-mode" type="button" aria-pressed="false" title="Review mode: states, comments, folds and the export, for the editor">Review mode</button>
+    <button class="rd-btn" id="rd-help" type="button" aria-expanded="false" aria-controls="rd-helpbox">?</button>
+  </div>
+</div>
+<div class="rd-helpbox" id="rd-helpbox" hidden>
+  <p><b>Reading.</b> The {n_pub} published chapters in the print edition's order; the drafts and outlines after them, marked. Keys: <kbd>j</kbd>/<kbd>k</kbd> next and previous chapter, <kbd>g</kbd> the graph, <kbd>f</kbd> focus (folds everything but the open chapter).</p>
+  <p><b>The meter.</b> A penny per 250 words, charged for the share of a chapter you actually scrolled through, never less than a tenth once opened; £5 of credit to start, allowed below zero, nothing blocked, nothing sent anywhere. The newsroom's rules, kept in this browser (<code>genz.reader.v1</code>).</p>
+  <p><b>Review mode</b> (the editor's desk). Each chapter has a state: unread, reading, read, to review, continue, signed off. Comment on any paragraph. Filter the book to one state and fold the rest. Export your review as markdown or JSON for the vault's <code>reviews/</code> folder, or import one. Nothing here is sent anywhere unless you export it.</p>
+  <p><b>The graph.</b> The open chapter in the middle; its part, the chapters before and after, the chapters it shares terms with (the terms on the edge), and the newsroom articles that have since answered it. Your paragraphs run along the bottom, one bar each: comments and reading colour them. Click a node to go there; the whole-book view shows every chapter by part.</p>
+</div>
+<div class="rd-filters" id="rd-filters" hidden></div>
+<div class="rd-main">
+  <aside class="rd-toc" id="rd-toc" aria-label="Chapters"></aside>
+  <section class="rd-content" id="rd-content" aria-live="polite"></section>
+  <aside class="rd-graph" id="rd-graph" aria-label="The graph"></aside>
+</div>
+<div class="rd-export" id="rd-export" hidden></div>
+</div>
+"""
+    page("read/index.html", "Read and review", body,
+         "Read Generation Z Developers (2018) with the graph beside it; the editor's desk to mark, comment, fold and export a review.",
+         crumbs=(("Read and review", "read/index.html"),),
+         extra_head='<link rel="stylesheet" href="../assets/reader.css">\n<script defer src="../assets/reader.js"></script>\n', wide=True)
+
+
+def build_contributors():
+    d = json.loads((ROOT / "admin/content/contributors.json").read_text(encoding="utf-8"))
+    t = d["totals"]
+    rows = []
+    for p in d["people"]:
+        login = f'<a href="https://github.com/{esc(p["login"])}">@{esc(p["login"])}</a>' if p["login"] else ""
+        chapters = ", ".join(esc(ch.rsplit("/", 1)[-1][:-3]) for ch in p["chapters"][:8]) + (f" and {len(p['chapters']) - 8} more" if len(p["chapters"]) > 8 else "")
+        prs = "; ".join(f'<a href="{esc(x["url"])}">#{x["number"]}</a> {esc(x["title"])} ({x["state"]})' for x in p["pr_titles"]) or ""
+        credit = ", ".join(p["credited_in_changelog"])
+        rows.append(f'<tr><td><b>{esc(p["name"])}</b><br>{login}{" &middot; <span class=small>" + esc(p["role"]) + "</span>" if p["role"] == "author" else ""}</td>'
+                    f'<td>{p["commits"]}{" (+" + str(p["merges"]) + " merges)" if p["merges"] else ""}<br><span class="small dim">{p["first"] or ""}{" to " + p["last"] if p["last"] and p["last"] != p["first"] else ""}</span></td>'
+                    f'<td>+{p["lines_added"]:,} / &minus;{p["lines_deleted"]:,}<br><span class="small dim">{p["chapters_count"]} chapter files</span></td>'
+                    f'<td>{p["prs_merged"]} of {p["prs_opened"]}<br><span class="small dim">{prs}</span></td><td>{p["issues_opened"]}</td><td>{p["comments"]}</td>'
+                    f'<td class="small">{chapters}{"<br><span class=dim>credited in " + esc(credit) + "</span>" if credit else ""}</td></tr>')
+    # the timeline: one series (commits a month), one hue, thin bars, a table beside it
+    have = {m["month"]: m for m in d["timeline"]}
+    months = sorted(have)
+    y0, m0 = map(int, months[0].split("-")); y1, m1 = map(int, months[-1].split("-"))
+    tl = []
+    while (y0, m0) <= (y1, m1):
+        k = f"{y0:04d}-{m0:02d}"; tl.append(have.get(k, {"month": k, "commits": 0, "issues": 0, "prs": 0}))
+        m0 += 1
+        if m0 > 12: m0 = 1; y0 += 1
+    mx = max(m["commits"] for m in tl) or 1
+    W, H, bw = 760, 160, max(4, min(18, 740 // max(1, len(tl)) - 2))
+    every = max(1, -(-len(tl) // 9))
+    bars = "".join(
+        f'<rect x="{10 + i * (bw + 2)}" y="{H - 24 - round((H - 40) * m["commits"] / mx)}" width="{bw}" height="{round((H - 40) * m["commits"] / mx)}" rx="2" fill="#0f766e"><title>{m["month"]}: {m["commits"]} commits, {m["issues"]} issues, {m["prs"]} pull requests</title></rect>'
+        + (f'<text x="{10 + i * (bw + 2) + bw / 2}" y="{H - 8}" font-size="9" text-anchor="middle" fill="#5c5f66">{m["month"][2:]}</text>' if (i % every == 0) else "")
+        for i, m in enumerate(tl))
+    svg = (f'<svg class="tl" viewBox="0 0 {W} {H}" role="img" aria-label="Commits a month, {tl[0]["month"]} to {tl[-1]["month"]}"><text x="10" y="14" font-size="11" fill="#5c5f66">Commits a month (the tallest bar is {mx})</text>{bars}</svg>')
+    tl_rows = "".join(f'<tr><td>{m["month"]}</td><td>{m["commits"]}</td><td>{m["issues"]}</td><td>{m["prs"]}</td></tr>' for m in tl)
+    labels = ", ".join(f'<code>{esc(n)}</code> {k}' for n, k in d["labels"])
+    sib = "".join(f'<li><a href="{esc(i["url"])}">#{i["number"]}</a> {esc(i["title"])} <span class="small dim">({i["state"]})</span></li>' for i in d["show_in_book"])
+    prs = "".join(f'<tr><td><a href="{esc(p["url"])}">#{p["number"]}</a></td><td>{esc(p["title"])}</td><td>{esc(p["by"])}</td><td>{p["state"]}</td><td>{p["merged"] or p["date"]}</td></tr>' for p in d["pull_requests"])
+    iss = "".join(f'<tr><td><a href="{esc(i["url"])}">#{i["number"]}</a></td><td>{esc(i["title"])}</td><td>{esc(i["by"])}</td><td>{", ".join(esc(l) for l in i["labels"])}</td><td>{i["state"]}</td><td>{i["date"]}</td><td>{i["comments"]}</td></tr>' for i in d["issues"])
+    r = d["repository"]
+    body = f"""<h1>The contributors to the first edition</h1>
+<p class="lede">The first edition asked for help through GitHub issues and pull requests, and got it: before any second edition, {t["contributors"]} people besides the author had committed fixes, opened pull requests, raised issues or commented, on a repository that {r["stars"]} people starred and {r["forks"]} forked. This page is the record, from the repository's git history and its GitHub issues, read on 18 October 2026. The second edition credits them, with their permission.</p>
+<p><span class="stat"><b>{t["contributors"]}</b><span>contributors</span></span> <span class="stat"><b>{t["commits"]}</b><span>commits</span></span> <span class="stat"><b>{t["commits_by_contributors"]}</b><span>by contributors</span></span> <span class="stat"><b>{t["pull_requests_merged"]}</b><span>of {t["pull_requests"]} PRs merged</span></span> <span class="stat"><b>{t["issues"]}</b><span>issues ({t["issues_open"]} open)</span></span> <span class="stat"><b>{t["comments"]}</b><span>comments</span></span> <span class="stat"><b>{t["chapters_touched_by_contributors"]}</b><span>chapter files touched by others</span></span></p>
+<h2>When</h2>
+<p class="small dim">Commits from {t["first_commit"]} to {t["last_commit"]}; issues and pull requests from {t["first_issue"]} to {t["last_issue"]}. By year: {", ".join(f"{y}: {n}" for y, n in d["by_year"].items())}. The book was written in 2018; the contributions came in from September 2018, the month it was released early, through 2020.</p>
+{svg}
+<details><summary>The same, as a table</summary><div class="tablewrap"><table><thead><tr><th>Month</th><th>Commits</th><th>Issues opened</th><th>Pull requests opened</th></tr></thead><tbody>{tl_rows}</tbody></table></div></details>
+<h2>Who did what</h2>
+<div class="tablewrap"><table class="people"><thead><tr><th>Person</th><th>Commits</th><th>Lines</th><th>Pull requests merged</th><th>Issues</th><th>Comments</th><th>Chapter files touched</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div>
+<p class="small dim">Lines are git's count across every file, including the generated ones the author committed. A pull request's commits are counted under the person who made them, so a contributor's commits and merged pull requests are the same work seen twice. Git author names were joined to GitHub logins by hand (<code>admin/build/gen_contributors.py</code>); the raw data is under <code>admin/content/github/</code>.</p>
+<h2>What the issues asked for</h2>
+<p>Labels, as the author used them: {labels}. The print edition's front page listed the five labelled <code>show-in-book</code> as of 8 October 2018:</p>
+<ul>{sib}</ul>
+<h2>The pull requests</h2>
+<div class="tablewrap"><table><thead><tr><th>#</th><th>Title</th><th>By</th><th>State</th><th>Date</th></tr></thead><tbody>{prs}</tbody></table></div>
+<h2>The issues</h2>
+<div class="tablewrap"><table><thead><tr><th>#</th><th>Title</th><th>By</th><th>Labels</th><th>State</th><th>Opened</th><th>Comments</th></tr></thead><tbody>{iss}</tbody></table></div>
+<p class="small dim">The 2018 change log credits Mike Eriksson, Michael Chadwick and Claudio Camerino (v0.60) and Mark Regensberg and Sarah Cruz (v0.50) for content fixes and contributions. Repository: <a href="{esc(r["url"])}">{esc(r["url"].replace("https://github.com/", ""))}</a>, created {r["created"]}, last push {r["last_push"]}, licence file {esc(r["licence_file"] or "none")}.</p>
+"""
+    page("contributors/index.html", "The contributors", body, "Who contributed to the first edition of Generation Z Developers: commits, pull requests, issues and comments, from the 2018 repository.",
+         crumbs=(("The contributors", "contributors/index.html"),), wide=True)
+    return d
 
 
 # ------------------------------------------------------------------ versions
-def build_versions(frozen_md, parts):
+def build_versions(frozen_md, parts, pub):
     v = Versions("v1", "admin/content/book")
     e = v.entries[-1]
     got = sha(frozen_md)
@@ -355,14 +680,15 @@ def build_versions(frozen_md, parts):
     body = f"""<h1>The versions of the book</h1>
 <p class="lede">The rule this site is built on: <b>the repository holds the official versions; the vault holds the working versions.</b> A version moves from <a href="../../vault/index.html">the vault</a> into the repository when it is signed off, on top of the one before, and this page shows the delta between every two versions, block by block and word by word. There is one version so far.</p>
 {table}
-<p class="small dim">The table and the deltas are computed by the newsroom's <code>page_versions.py</code> (newsroom v0.12.113), copied into <code>admin/build/</code> as the brief asked rather than rewritten. Each version is frozen as one markdown file by the release that made it and never rewritten; the frozen file for v1.0.0 is <a href="v1.0.0.md">v1.0.0.md</a>, {words(chr(10).join(blocks(frozen_md))):,} words in {len(blocks(frozen_md)):,} blocks.</p>
+<p class="small dim">The table and the deltas are computed by the newsroom's <code>page_versions.py</code> (newsroom v0.12.113), copied into <code>admin/build/</code> as the brief asked rather than rewritten. Each version is frozen as one markdown file by the release that made it and never rewritten; the frozen file for v1.0.0 is <a href="v1.0.0.md">v1.0.0.md</a>, {words(chr(10).join(blocks(frozen_md))):,} words in {len(blocks(frozen_md)):,} blocks: the book as published, the {len(pub)} chapters of <a href="../generation-z-print-ready.pdf">the print PDF</a> (139 pages, sha256 {PDF_SHA[:12]}…) and the Leanpub build. The drafts the build left out are not part of any version; they are kept as <a href="../book/drafts.md">v1/book/drafts.md</a> and shown <a href="../book/drafts.html">on their own page</a>.</p>
 {diffs}
 <h2 id="record">The record</h2>
 <div class="tablewrap"><table><thead><tr><th>Version</th><th>Date</th><th>Where</th><th>What it is</th></tr></thead><tbody>{rows}</tbody></table></div>
 <h2 id="source">Where v1.0.0 comes from</h2>
 <ul>
-<li>The repository <a href="{SOURCE_REPO}">DinisCruz/Book_Generation_Z_Developer</a> at commit <code>{SOURCE_COMMIT[:12]}</code> (1 March 2024, a README change; the content was last changed in October 2018). Its <code>content/</code> folder is copied verbatim to <a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers/tree/dev/v1/content">v1/content/</a> and its <code>static/images/</code> to <a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers/tree/dev/v1/images">v1/images/</a>: 138 markdown files, 90 of them outlines.</li>
-<li><a href="https://leanpub.com/generation-z">Leanpub</a>: "Key concepts and ideas for the next generation of developers", 60% complete, 136 pages, 30,695 words, last updated 8 October 2018, 465 readers (read 18 October 2026). The Leanpub build left the outlines out; this site shows them, because the second edition starts from them.</li>
+<li>The repository <a href="{SOURCE_REPO}">DinisCruz/Book_Generation_Z_Developer</a> at commit <code>{SOURCE_COMMIT[:12]}</code> (1 March 2024, a README change; the content was last changed in October 2018). Its <code>content/</code> folder is copied verbatim to <a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers/tree/dev/v1/content">v1/content/</a> and its <code>static/images/</code> to <a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers/tree/dev/v1/images">v1/images/</a>: 138 markdown files, of which the Hugo layouts published the 28 marked <code>status: content</code>; 90 are outlines and the rest drafts.</li>
+<li>The print-ready PDF, <a href="../generation-z-print-ready.pdf">v1/generation-z-print-ready.pdf</a>: 139 pages, the Leanpub build of 8 October 2018 made print-ready for the paperback, supplied by Dinis on 18 October 2026. Its table of contents is the published book's, and is kept as data in <code>admin/content/book/print-toc.json</code>.</li>
+<li><a href="https://leanpub.com/generation-z">Leanpub</a>: "Key concepts and ideas for the next generation of developers", 60% complete, 136 pages, 30,695 words, last updated 8 October 2018, 465 readers (read 18 October 2026). The Leanpub build left the drafts and outlines out, as the print edition did; this site shows them apart from the book, because the second edition starts from them.</li>
 <li>Amazon: <a href="{FIRST_EDITION["amazon"]["url"]}">Gen Z Developers</a>, the paperback: {FIRST_EDITION["amazon"]["pages"]} pages, published {FIRST_EDITION["amazon"]["published"]}, ISBN-10 {FIRST_EDITION["amazon"]["isbn10"]}, the early-release cover of September 2018 with its eight lines. That publication date is the date of v1.0.0; 8 October 2018 is the last change to the text, on Leanpub and in the repository.</li>
 </ul>
 <h2 id="leanpub">The 2018 change log, v0.30 to v0.60</h2>
@@ -506,8 +832,9 @@ def build_vault():
 
 
 # ------------------------------------------------------------------ home, admin, agent surface
-def build_home(parts, flat, map_doc, briefs, roles, vault):
+def build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib):
     c = map_doc["counts"]
+    n_pub = len(pub); n_draft = sum(1 for _, ch in drafts if ch["kind"] == "draft"); n_outline = sum(1 for _, ch in drafts if ch["kind"] == "outline"); pub_words = sum(ch["words"] for _, ch in pub)
     six = [b for b in briefs if "__note-" not in b[0]]
     fe = FIRST_EDITION
     lines = "".join(f"<li>{esc(l)}</li>" for l in fe["cover_lines"])
@@ -534,13 +861,15 @@ def build_home(parts, flat, map_doc, briefs, roles, vault):
 <h2 id="second-edition">The second edition, in the making</h2>
 <p class="lede"><b>The repository holds the official versions; the vault holds the working versions.</b> The first edition is here exactly as released. Everything after it is worked on in a public vault and moves here when signed off, with a delta between every two versions.</p>
 <div class="making">
-<div class="card big"><span class="k">The book &middot; v1.0.0 &middot; 2018 &middot; frozen</span><h3><a href="v1/book/index.html">Read it chapter by chapter, outlines included</a></h3><p>{len(flat)} chapters in 8 parts: {c["written"]} written, {c["outline"]} outlines. The Leanpub build left the outlines out; this site shows them, because the second edition starts from them.</p>
-<p class="stats"><span class="stat"><b>{len(flat)}</b><span>chapters</span></span><span class="stat"><b>{c["written"]}</b><span>written</span></span><span class="stat"><b>{c["outline"]}</b><span>outlines</span></span><span class="stat"><b>{sum(ch["words"] for _, ch in flat):,}</b><span>words in the source</span></span></p>
-<span class="more"><a href="v1/book/index.html">The table of contents &rarr;</a> &nbsp; <a href="v1/book/single.html">On one page &rarr;</a></span></div>
+<div class="card big"><span class="k">The book &middot; v1.0.0 &middot; 2018 &middot; frozen</span><h3><a href="v1/book/index.html">The book as published, and the drafts kept apart</a></h3><p>The {n_pub} chapters the 2018 build published, in the print edition's order with its page numbers; and, kept apart, the {n_draft} drafts and {n_outline} outlines it left out, which the second edition starts from.</p>
+<p class="stats"><span class="stat"><b>{n_pub}</b><span>published chapters</span></span><span class="stat"><b>{pub_words:,}</b><span>words published</span></span><span class="stat"><b>139</b><span>print pages</span></span><span class="stat"><b>{n_draft + n_outline}</b><span>drafts and outlines</span></span></p>
+<span class="more"><a href="v1/book/index.html">The table of contents &rarr;</a> &nbsp; <a href="read/index.html">Read and review &rarr;</a> &nbsp; <a href="v1/generation-z-print-ready.pdf">The print PDF &rarr;</a></span></div>
 <a class="card" href="v1/versions/index.html"><span class="k">Versions</span><h3>One version so far</h3><p>Where v1.0.0 comes from, the 2018 change log, and the page that will carry the block-by-block delta to v2.</p></a>
 <a class="card" href="map/index.html"><span class="k">The map</span><h3>{c["files"]} files, {c["answered_by_articles"]} answered</h3><p>Every 2018 chapter and outline, the newsroom articles that have since answered it, and the gap.</p></a>
 <a class="card" href="team/index.html"><span class="k">The team</span><h3>Reviewer, editor, publisher</h3><p>Each reads, challenges, interviews Dinis and signs off. The first interview script is written.</p></a>
 <a class="card" href="vault/index.html"><span class="k">The vault</span><h3>Read along</h3><p>The public working vault, its read key published: the working copy of v1, the board, the reviews, the roles.</p></a>
+<a class="card" href="read/index.html"><span class="k">Read &amp; review</span><h3>The reader, and the editor's desk</h3><p>The book with its graph beside it; mark, comment, fold and export a review; a reading meter after the newsroom's rules.</p></a>
+<a class="card" href="contributors/index.html"><span class="k">Contributors</span><h3>{contrib["totals"]["contributors"]} people, {contrib["totals"]["pull_requests_merged"]} pull requests</h3><p>Who fixed, asked and commented on the first edition, from its git history and GitHub issues: {contrib["totals"]["commits_by_contributors"]} commits by others, {contrib["totals"]["issues"]} issues.</p></a>
 </div>
 <div class="twocol">
 <div><h2>The articles behind it</h2><p class="small dim">The newsroom series tagged gen-z-book, in the order published, and <a href="briefs/index.html">the two build briefs</a>: captured verbatim.</p>
@@ -570,7 +899,8 @@ def build_home(parts, flat, map_doc, briefs, roles, vault):
     page("admin/index.html", "Admin and engineering", f"""<h1>Admin and engineering</h1>
 <p class="lede">How this site is built, and the rules it keeps.</p>
 <h2>The chain</h2>
-<pre>python3 admin/build/gen_map.py     # admin/content/map.json from v1/content/ and the authored reading
+<pre>python3 admin/build/gen_map.py           # admin/content/map.json from v1/content/ and the authored reading
+python3 admin/build/gen_contributors.py  # admin/content/contributors.json from admin/content/github/
 python3 admin/build/build.py       # every page, the manifest, the frozen markdown, llms.txt, the sitemap
 node admin/build/validate.js       # the gate: version, links, canonical, key leak, manifest, sitemap, map</pre>
 <h2>The rules</h2>
@@ -598,7 +928,7 @@ node admin/build/validate.js       # the gate: version, links, canonical, key le
     pages = [w for w in written if w.endswith(".html") and w != "404.html"]
     write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
           + "".join(f"  <url><loc>{BASE}{'' if p == 'index.html' else p}</loc></url>\n" for p in sorted(pages)) + "</urlset>\n")
-    chapters = "\n".join(f"- [{c['title']}]({BASE}{chapter_url(c, p)}): {'outline' if c['outline'] else 'written'}, {c['words']} words, part {p['title']}" for p in parts for c in p["chapters"])
+    chapters = "\n".join(f"- [{c['title']}]({BASE}{chapter_url(c, p)}): {c['kind']}{', p. ' + str(c['print_page']) if c.get('print_page') else ''}, {c['words']} words, part {p['title']}" for p in parts for c in p["chapters"])
     write("llms.txt", f"""# gen-z-developers.sgit.ai
 
 > The website for finishing the second edition of Generation Z Developers (Dinis Cruz, 2018). The repository holds the official versions of the book; a public vault holds the working versions. Site {VERSION}.
@@ -607,7 +937,9 @@ node admin/build/validate.js       # the gate: version, links, canonical, key le
 The repository holds the official versions; the vault holds the working versions. v1.0.0 is the 2018 first edition as released, frozen. A version moves from the vault to the repository when signed off, and the versions page shows the delta block by block.
 
 ## Sections
-- [The book, v1.0.0]({BASE}v1/book/index.html): the 2018 first edition chapter by chapter; [on one page]({BASE}v1/book/single.html); [frozen markdown]({BASE}v1/versions/v1.0.0.md)
+- [The book, v1.0.0]({BASE}v1/book/index.html): the 2018 first edition as published, 28 chapters in the print edition's order, then the drafts and outlines it left out; [on one page]({BASE}v1/book/single.html); [the drafts]({BASE}v1/book/drafts.html); [frozen markdown]({BASE}v1/versions/v1.0.0.md); [the print PDF, 139 pages]({BASE}v1/generation-z-print-ready.pdf)
+- [Read and review]({BASE}read/index.html): the reader with the graph beside it and the editor's desk (states, comments, folds, export); the book as data at [book.json]({BASE}v1/book/book.json)
+- [The contributors]({BASE}contributors/index.html): who contributed to the first edition, from git and GitHub; data at [contributors.json]({BASE}admin/content/contributors.json)
 - [Versions]({BASE}v1/versions/index.html): the official versions and their deltas (page_versions.py from the newsroom)
 - [The map]({BASE}map/index.html): one row per 2018 file, the newsroom articles that answer it, the gap; data at [map.json]({BASE}admin/content/map.json)
 - [The briefs]({BASE}briefs/index.html): the six newsroom articles tagged gen-z-book and the two build briefs, verbatim
@@ -640,21 +972,25 @@ def main():
         "version": "v1.0.0", "released": "2018-09-30", "last_content_change": "2018-10-08", "frozen_on": "2026-10-18",
         "source": {"repository": SOURCE_REPO, "commit": SOURCE_COMMIT, "paths": ["content/", "static/images/", "LICENSE"]},
         "leanpub": {"url": "https://leanpub.com/generation-z", "complete": "60%", "pages": 136, "words": 30695, "readers": 465, "read_on": "2026-10-18"},
-        "counts": {"markdown_files": 138, "outlines": 90},
+        "print_pdf": {"path": "v1/generation-z-print-ready.pdf", "pages": 139, "sha256": PDF_SHA, "what": "the Leanpub build of 2018-10-08 made print-ready for the paperback; its table of contents is the published book's"},
+        "counts": {"markdown_files": 138, "published_chapters": 28, "outlines": 90},
     }, indent=1) + "\n", encoding="utf-8")
-    parts = load_book()
+    parts, front = load_book()
     map_doc = json.loads((ROOT / "admin/content/map.json").read_text(encoding="utf-8"))
     files_in_map = {r["file"] for r in map_doc["rows"]}
     files_on_disk = {p.relative_to(CONTENT).as_posix() for p in CONTENT.rglob("*.md")}
     if files_in_map != files_on_disk:
         sys.exit(f"build: map.json and v1/content disagree: {sorted(files_in_map ^ files_on_disk)}; run gen_map.py")
-    frozen_md, flat = build_book(parts, map_doc["rows"])
-    build_versions(frozen_md, parts)
+    frozen_md, flat, pub, drafts = build_book(parts, front, map_doc["rows"])
+    build_versions(frozen_md, parts, pub)
+    bookdoc = build_bookjson(parts, front, flat, map_doc["rows"])
+    build_read(bookdoc)
+    contrib = build_contributors()
     build_map(parts, map_doc)
     briefs = build_briefs()
     roles = build_team()
     vault = build_vault()
-    build_home(parts, flat, map_doc, briefs, roles, vault)
+    build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib)
     print(f"build: {VERSION}, {len(flat)} chapters, {len([w for w in written if w.endswith('.html')])} pages, {len(written)} files written")
 
 

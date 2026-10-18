@@ -5,9 +5,11 @@ The website for reviewing and finishing the second edition of Dinis Cruz's 2018 
 
 > **The repository holds the official versions; the vault holds the working versions.**
 
-v1.0.0 is the first edition exactly as released (September 2018, Leanpub at 60%, 138 markdown
-files of which 90 are outlines). It is in this repository, frozen, and the site shows it chapter
-by chapter. Everything after it is worked on in a public, encrypted vault whose **read** key is
+v1.0.0 is the first edition exactly as published: the 28 chapters the 2018 build put in the
+Leanpub book and the print PDF (139 pages, 30 September 2018), in that order. It is in this
+repository, frozen, and the site shows it chapter by chapter. The 2018 repository also held 5
+drafts and 89 outlines the build left out; they are kept beside the book, marked, as the second
+edition's raw material, and are not part of any version. Everything after it is worked on in a public, encrypted vault whose **read** key is
 published, so anyone can read along. A version moves from the vault into the repository when it
 is signed off, on top of the one before, and the versions page shows the delta between every two
 versions, block by block and word by word.
@@ -37,8 +39,16 @@ v1/                   THE FIRST EDITION, FROZEN
   MANIFEST.json       what v1 is, where it came from, the counts
   content/            the 2018 book's content/ folder, verbatim (DinisCruz/Book_Generation_Z_Developer @ 6188644)
   images/             its figures
-  book/               generated: one page per chapter, the table of contents, single.html, manifest.json
-  versions/           generated: v1.0.0.md (the book frozen as one markdown file) and the versions page
+  generation-z-print-ready.pdf   the print edition, 139 pages (the published book)
+  book/               generated: one page per chapter and draft, the table of contents (published, then drafts),
+                      single.html (the published book), drafts.html and drafts.md (the rest), book.json (the book as
+                      blocks, for read/), manifest.json
+  versions/           generated: v1.0.0.md (the published book frozen as one markdown file) and the versions page
+read/                 generated shell + assets/reader.js, reader.css: the reader and the editor's desk. Content left,
+                      graph right; chapter states, comments on paragraphs, filters and folds, a reading meter after
+                      the newsroom's rules, export of the review as markdown/JSON. Everything stays in the browser
+                      (localStorage genz.reader.v1) until exported.
+contributors/         generated: who contributed to the first edition, from git and GitHub (admin/content/contributors.json)
 map/                  generated: one row per 2018 file, the newsroom articles that answer it, the gap
 briefs/               generated: the articles and notes above, rendered
 team/                 the roles: reviewer, editor, publisher
@@ -51,10 +61,13 @@ vault/                generated: how to open the working vault, read-only
 admin/
   build/version.txt   the site's version (vX.Y.Z), bumped once per release
   build/gen_map.py    writes admin/content/map.json: the authored chapter-to-article reading
-  build/build.py      writes every page, the manifests, the frozen markdown, llms.txt, the sitemap
+  build/gen_contributors.py  writes admin/content/contributors.json from admin/content/github/ (git log, issues, PRs)
+  build/build.py      writes every page, the manifests, the frozen markdown, book.json, llms.txt, the sitemap
   build/page_versions.py  the newsroom's version differ (newsroom v0.12.113), copied, not rewritten
   build/validate.js   the gate
-  content/            the authored data: map.json, briefs/, book/versions.json, versions.json, vault.json
+  content/            the authored data: map.json, briefs/, book/versions.json, book/print-toc.json (the print
+                      PDF's table of contents, matched to the files), contributors.json, github/ (the raw record of
+                      the 2018 repository), versions.json, vault.json
   index.html, versions.html   admin and the narrated release history
 assets/site.css       the one stylesheet
 llms.txt, sitemap.xml, robots.txt, 404.html, CNAME

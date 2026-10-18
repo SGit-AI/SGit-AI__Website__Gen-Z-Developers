@@ -39,6 +39,21 @@ their working copies in the public vault.
 6. Commit as `site vX.Y.Z: what changed`, the colon straight after the version; CI parses it.
 7. Push your branch, then `dev`. On a version collision: fetch, renumber, rebuild, retry; never force.
 
+## Published and drafts
+
+What the 2018 build published is a rule, not a judgement: a file with `status: content` in its front matter
+(28 of them) went into the Leanpub book and the print PDF; everything else stayed in the repository as a
+draft (6 with text) or an outline (89). `v1.0.0` is the published book. The drafts are shown apart and
+marked, never mixed into the published sequence, and never counted as part of a version. Keep that line.
+
+## The reader (read/)
+
+`assets/reader.js` keeps everything in the browser (`genz.reader.v1`): the meter's balance and charges, the
+state of each chapter, the comments, the folds. It sends nothing. The export is how a review reaches the
+vault's `reviews/` folder. Do not add a server, an analytics call or a network write to it; the newsroom's
+rules for the meter (charge by share read, never less than a tenth once opened, below zero allowed,
+nothing blocked) are the rules here.
+
 ## Two version streams
 
 The **site's** version (`admin/build/version.txt`) moves on every push. The **book's** version

@@ -1,0 +1,245 @@
+{
+ "what": "The table of contents of the print-ready PDF of the first edition (v1/generation-z-print-ready.pdf, 139 pages, the Leanpub build of 8 October 2018 made print-ready for Amazon), matched to the 2018 files. The printed titles are as the PDF text layer gives them (ligatures dropped); file is the 2018 markdown that chapter came from. Generated once from the PDF by the agent on 2026-10-18 and kept as data.",
+ "pdf": "v1/generation-z-print-ready.pdf",
+ "pages": 139,
+ "entries": [
+  {
+   "printed": "GitHubIssues",
+   "page": 1,
+   "file": "_manuscript/github-issues.md",
+   "title": "GitHub Issues",
+   "kind": "chapter"
+  },
+  {
+   "printed": "Generation Z Developers",
+   "page": 3,
+   "file": null,
+   "title": null,
+   "kind": "title"
+  },
+  {
+   "printed": "Introduction",
+   "page": 5,
+   "file": "1.introduction/_index.md",
+   "title": "Introduction",
+   "kind": "part"
+  },
+  {
+   "printed": "GenerationZ",
+   "page": 7,
+   "file": "1.introduction/generation-z.md",
+   "title": "Generation Z",
+   "kind": "chapter"
+  },
+  {
+   "printed": "Howtogetajob",
+   "page": 9,
+   "file": "1.introduction/how-to-get-a-job.md",
+   "title": "How to get a job",
+   "kind": "chapter"
+  },
+  {
+   "printed": "Howthisbookisbeingcreated",
+   "page": 12,
+   "file": "1.introduction/how-this -book-was-created.md",
+   "title": "How this book is being created",
+   "kind": "chapter"
+  },
+  {
+   "printed": "MVP for Gen Z Dev",
+   "page": 13,
+   "file": "2.mvp-for-gen-z-dev/_index.md",
+   "title": "MVP for Gen Z Dev",
+   "kind": "part"
+  },
+  {
+   "printed": "CreativeCommons",
+   "page": 14,
+   "file": "2.mvp-for-gen-z-dev/content/creative-commons.md",
+   "title": "Creative Commons",
+   "kind": "chapter"
+  },
+  {
+   "printed": "OpenSource",
+   "page": 20,
+   "file": "2.mvp-for-gen-z-dev/content/open-source.md",
+   "title": "Open Source",
+   "kind": "chapter"
+  },
+  {
+   "printed": "Doer",
+   "page": 29,
+   "file": "2.mvp-for-gen-z-dev/content/docker.md",
+   "title": "Docker",
+   "kind": "chapter"
+  },
+  {
+   "printed": "Jira",
+   "page": 33,
+   "file": "2.mvp-for-gen-z-dev/content/jira.md",
+   "title": "Jira",
+   "kind": "chapter"
+  },
+  {
+   "printed": "OWASP",
+   "page": 38,
+   "file": "2.mvp-for-gen-z-dev/content/owasp.md",
+   "title": "OWASP",
+   "kind": "chapter"
+  },
+  {
+   "printed": "Python",
+   "page": 40,
+   "file": "2.mvp-for-gen-z-dev/content/python.md",
+   "title": "Python",
+   "kind": "chapter"
+  },
+  {
+   "printed": "SlaandChatOps",
+   "page": 43,
+   "file": "2.mvp-for-gen-z-dev/content/slack-and-chatops.md",
+   "title": "Slack and ChatOps",
+   "kind": "chapter"
+  },
+  {
+   "printed": "Hugo",
+   "page": 52,
+   "file": "2.mvp-for-gen-z-dev/content/hugo.md",
+   "title": "Hugo",
+   "kind": "chapter"
+  },
+  {
+   "printed": "GoogleSear,GDDandSRE",
+   "page": 56,
+   "file": "2.mvp-for-gen-z-dev/content/google-search-gdd-sre.md",
+   "title": "Google Search, GDD and SRE",
+   "kind": "chapter"
+  },
+  {
+   "printed": "XcodeandSwi",
+   "page": 62,
+   "file": "2.mvp-for-gen-z-dev/content/xcode-and-swift.md",
+   "title": "Xcode and Swift",
+   "kind": "chapter"
+  },
+  {
+   "printed": "DotLanguage",
+   "page": 65,
+   "file": "2.mvp-for-gen-z-dev/content/dot-language.md",
+   "title": "Dot Language",
+   "kind": "chapter"
+  },
+  {
+   "printed": "WallabyandNCrun",
+   "page": 79,
+   "file": "2.mvp-for-gen-z-dev/draft/wallaby-and-ncrunch.md",
+   "title": "Wallaby and NCrunch",
+   "kind": "chapter"
+  },
+  {
+   "printed": "Tenologies",
+   "page": 93,
+   "file": "3.technologies/_index.md",
+   "title": "Technologies",
+   "kind": "part"
+  },
+  {
+   "printed": "Books",
+   "page": 93,
+   "file": "3.technologies/content/books.md",
+   "title": "Books",
+   "kind": "chapter"
+  },
+  {
+   "printed": "PenandPaper",
+   "page": 95,
+   "file": "3.technologies/content/pen-and-paper.md",
+   "title": "Pen and Paper",
+   "kind": "chapter"
+  },
+  {
+   "printed": "AssemblyandBytecode",
+   "page": 97,
+   "file": "3.technologies/content/assembly-and-bytecode.md",
+   "title": "Assembly and Bytecode",
+   "kind": "chapter"
+  },
+  {
+   "printed": "Brain",
+   "page": 99,
+   "file": "3.technologies/content/brain.md",
+   "title": "Brain",
+   "kind": "chapter"
+  },
+  {
+   "printed": "IDE",
+   "page": 101,
+   "file": "3.technologies/content/ide.md",
+   "title": "IDE",
+   "kind": "chapter"
+  },
+  {
+   "printed": "MaineLearningandAI",
+   "page": 102,
+   "file": "3.technologies/content/ml-ai.md",
+   "title": "Machine Learning and AI",
+   "kind": "chapter"
+  },
+  {
+   "printed": "AST(AbstractSyntaxTree)",
+   "page": 104,
+   "file": "3.technologies/content/AST.md",
+   "title": "AST (Abstract Syntax Tree)",
+   "kind": "chapter"
+  },
+  {
+   "printed": "Life Patterns",
+   "page": 113,
+   "file": "4.life-patterns/_index.md",
+   "title": "Life Patterns",
+   "kind": "part"
+  },
+  {
+   "printed": "Learning",
+   "page": 113,
+   "file": "4.life-patterns/content/learning.md",
+   "title": "Learning",
+   "kind": "chapter"
+  },
+  {
+   "printed": "Beafounder",
+   "page": 116,
+   "file": "4.life-patterns/content/be-a-founder.md",
+   "title": "Be a founder",
+   "kind": "chapter"
+  },
+  {
+   "printed": "Beingcriticizedisanprivilege",
+   "page": 117,
+   "file": "4.life-patterns/content/being-criticized-is-a-privilege.md",
+   "title": "Being criticized is an privilege",
+   "kind": "chapter"
+  },
+  {
+   "printed": "Baupyourlife",
+   "page": 128,
+   "file": "4.life-patterns/content/backup-your-life.md",
+   "title": "Backup your life",
+   "kind": "chapter"
+  },
+  {
+   "printed": "Talkingtoyourselfdigitally",
+   "page": 131,
+   "file": "4.life-patterns/content/talking-to-yourself.md",
+   "title": "Talking to yourself digitally",
+   "kind": "chapter"
+  },
+  {
+   "printed": "efutureneedsyou",
+   "page": 133,
+   "file": "4.life-patterns/content/future-needs-you.md",
+   "title": "The future needs you",
+   "kind": "chapter"
+  }
+ ]
+}

@@ -1,0 +1,2057 @@
+{
+ "what": "Who contributed to the first edition, from the 2018 repository's git history and its GitHub issues, pull requests and comments, captured 2026-10-18. Names are joined to GitHub logins by hand (gen_contributors.py ALIASES); the raw data is beside this file under admin/content/github/.",
+ "repository": {
+  "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer",
+  "created": "2018-02-17",
+  "last_push": "2024-03-01",
+  "stars": 40,
+  "forks": 20,
+  "open_issues": 35,
+  "licence_file": "Apache-2.0"
+ },
+ "totals": {
+  "people": 21,
+  "contributors": 20,
+  "commits": 189,
+  "merge_commits": 52,
+  "commits_by_contributors": 63,
+  "pull_requests": 24,
+  "pull_requests_merged": 21,
+  "issues": 43,
+  "issues_open": 35,
+  "issues_closed": 8,
+  "comments": 28,
+  "first_commit": "2018-02-17",
+  "last_commit": "2024-03-01",
+  "first_issue": "2018-02-22",
+  "last_issue": "2020-08-21",
+  "chapters_touched_by_contributors": 29
+ },
+ "by_year": {
+  "2018": 169,
+  "2019": 9,
+  "2020": 10,
+  "2024": 1
+ },
+ "timeline": [
+  {
+   "month": "2018-02",
+   "commits": 29,
+   "issues": 1,
+   "prs": 0
+  },
+  {
+   "month": "2018-03",
+   "commits": 10,
+   "issues": 7,
+   "prs": 0
+  },
+  {
+   "month": "2018-08",
+   "commits": 9,
+   "issues": 0,
+   "prs": 0
+  },
+  {
+   "month": "2018-09",
+   "commits": 63,
+   "issues": 4,
+   "prs": 3
+  },
+  {
+   "month": "2018-10",
+   "commits": 65,
+   "issues": 13,
+   "prs": 10
+  },
+  {
+   "month": "2018-11",
+   "commits": 28,
+   "issues": 8,
+   "prs": 0
+  },
+  {
+   "month": "2018-12",
+   "commits": 1,
+   "issues": 2,
+   "prs": 1
+  },
+  {
+   "month": "2019-01",
+   "commits": 1,
+   "issues": 2,
+   "prs": 1
+  },
+  {
+   "month": "2019-02",
+   "commits": 0,
+   "issues": 2,
+   "prs": 0
+  },
+  {
+   "month": "2019-06",
+   "commits": 21,
+   "issues": 3,
+   "prs": 6
+  },
+  {
+   "month": "2019-10",
+   "commits": 0,
+   "issues": 1,
+   "prs": 0
+  },
+  {
+   "month": "2020-01",
+   "commits": 8,
+   "issues": 0,
+   "prs": 2
+  },
+  {
+   "month": "2020-02",
+   "commits": 4,
+   "issues": 0,
+   "prs": 0
+  },
+  {
+   "month": "2020-08",
+   "commits": 0,
+   "issues": 0,
+   "prs": 1
+  },
+  {
+   "month": "2024-03",
+   "commits": 2,
+   "issues": 0,
+   "prs": 0
+  }
+ ],
+ "labels": [
+  [
+   "new-content",
+   15
+  ],
+  [
+   "improvement",
+   10
+  ],
+  [
+   "reader-feedback",
+   9
+  ],
+  [
+   "show-in-book",
+   5
+  ],
+  [
+   "bug-or-typo",
+   2
+  ],
+  [
+   "code-sample",
+   1
+  ],
+  [
+   "update-content",
+   1
+  ],
+  [
+   "fix",
+   1
+  ]
+ ],
+ "show_in_book": [
+  {
+   "number": 6,
+   "title": "Add chapter on 'cloud-native'",
+   "state": "open",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/6",
+   "by": "DinisCruz",
+   "date": "2018-03-04"
+  },
+  {
+   "number": 5,
+   "title": "Add chapter on 'Typography and Design'",
+   "state": "open",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/5",
+   "by": "DinisCruz",
+   "date": "2018-03-04"
+  },
+  {
+   "number": 4,
+   "title": "Add chapter on 'Closure'",
+   "state": "open",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/4",
+   "by": "DinisCruz",
+   "date": "2018-03-04"
+  },
+  {
+   "number": 3,
+   "title": "Re-apply context fixes submitted to Build repo",
+   "state": "open",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/3",
+   "by": "DinisCruz",
+   "date": "2018-03-04"
+  },
+  {
+   "number": 2,
+   "title": "Add chapter on 'Coordinated Disclosure'",
+   "state": "open",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/2",
+   "by": "DinisCruz",
+   "date": "2018-03-03"
+  }
+ ],
+ "people": [
+  {
+   "name": "Dinis Cruz",
+   "login": "DinisCruz",
+   "commits": 126,
+   "merges": 50,
+   "lines_added": 7415,
+   "lines_deleted": 1938,
+   "files": 596,
+   "chapters": [
+    "1.introduction/_index.md",
+    "1.introduction/generation-z.md",
+    "1.introduction/how-this -book-was-created.md",
+    "1.introduction/how-to-get-a-job.md",
+    "1.introduction/stem-tech-stack.md",
+    "1.introduction/why-I-wrote-this-book.md",
+    "1.introduction/why-write-this-book.md",
+    "10.misc/books-to-read.md",
+    "10.misc/diagrams-to-add.md",
+    "10.misc/eff.md",
+    "10.misc/gen-z-digital-env.md",
+    "10.misc/gen-z-research.md",
+    "10.misc/o2-platform.md",
+    "10.misc/stories-to-tell.md",
+    "10.misc/technium.md",
+    "10.misc/wait-but-why.md",
+    "2.mvp-for-gen-z-dev/_index.md",
+    "2.mvp-for-gen-z-dev/content/creative-commons.md",
+    "2.mvp-for-gen-z-dev/content/docker.md",
+    "2.mvp-for-gen-z-dev/content/dot-language.md",
+    "2.mvp-for-gen-z-dev/content/google-search-gdd-sre.md",
+    "2.mvp-for-gen-z-dev/content/hugo.md",
+    "2.mvp-for-gen-z-dev/content/jira.md",
+    "2.mvp-for-gen-z-dev/content/owasp.md",
+    "2.mvp-for-gen-z-dev/content/python.md",
+    "2.mvp-for-gen-z-dev/content/slack-and-chatops.md",
+    "2.mvp-for-gen-z-dev/content/slack.md",
+    "2.mvp-for-gen-z-dev/content/xcode-and-swift.md",
+    "2.mvp-for-gen-z-dev/draft/dot-language.md",
+    "2.mvp-for-gen-z-dev/draft/electron.md",
+    "2.mvp-for-gen-z-dev/draft/free-sofware-foundation.md",
+    "2.mvp-for-gen-z-dev/draft/github-flow.md",
+    "2.mvp-for-gen-z-dev/draft/google.md",
+    "2.mvp-for-gen-z-dev/draft/linux.md",
+    "2.mvp-for-gen-z-dev/draft/open-source.md",
+    "2.mvp-for-gen-z-dev/draft/owasp.md",
+    "2.mvp-for-gen-z-dev/draft/python.md",
+    "2.mvp-for-gen-z-dev/draft/raspberry-pi.md",
+    "2.mvp-for-gen-z-dev/draft/slack.md",
+    "2.mvp-for-gen-z-dev/draft/stack-overflow.md",
+    "2.mvp-for-gen-z-dev/draft/tdd.md",
+    "2.mvp-for-gen-z-dev/draft/wallaby-and-ncrunch.md",
+    "2.mvp-for-gen-z-dev/draft/wallaby-js.md",
+    "2.mvp-for-gen-z-dev/draft/wikipedia.md",
+    "2.mvp-for-gen-z-dev/draft/xcode.md",
+    "2.mvp-for-gen-z-dev/mvp-table.md",
+    "2.mvp-for-gen-z-dev/{draft => content}/dot-language.md",
+    "2.mvp-for-gen-z-dev/{draft => content}/open-source.md",
+    "2.mvp-for-gen-z-dev/{draft => content}/slack.md",
+    "2.technologies/AST.md",
+    "2.technologies/aws.md",
+    "2.technologies/books.md",
+    "2.technologies/brain.md",
+    "2.technologies/hugo.md",
+    "2.technologies/iot.md",
+    "2.technologies/jira.md",
+    "2.technologies/ml-ai.md",
+    "2.technologies/pen-and-paper.md",
+    "2.what-is-this/_index.md",
+    "2.what-is-this/content/creative-commons.md",
+    "2.what-is-this/copyright.md",
+    "2.what-is-this/creative-commons.md",
+    "2.what-is-this/draft/creative-commons.md",
+    "2.what-is-this/free-sofware-foundation.md",
+    "2.what-is-this/github.md",
+    "2.what-is-this/google.md",
+    "2.what-is-this/linux.md",
+    "2.what-is-this/open-source.md",
+    "2.what-is-this/raspberry-pi.md",
+    "2.what-is-this/slack.md",
+    "2.what-is-this/wallaby-js.md",
+    "2.what-is-this/wallabyjs-and-nodejs.md",
+    "2.what-is-this/xcode.md",
+    "2.what-is-this/{ => content}/docker.md",
+    "2.what-is-this/{ => draft}/copyright.md",
+    "2.what-is-this/{ => draft}/cpu.md",
+    "2.what-is-this/{ => draft}/eff.md",
+    "2.what-is-this/{ => draft}/free-sofware-foundation.md",
+    "2.what-is-this/{ => draft}/google.md",
+    "2.what-is-this/{ => draft}/linux.md",
+    "2.what-is-this/{ => draft}/open-source.md",
+    "2.what-is-this/{ => draft}/owasp.md",
+    "2.what-is-this/{ => draft}/python.md",
+    "2.what-is-this/{ => draft}/raspberry-pi.md",
+    "2.what-is-this/{ => draft}/slack.md",
+    "2.what-is-this/{ => draft}/wallaby-js.md",
+    "2.what-is-this/{ => draft}/xcode.md",
+    "3.technologies/AST.md",
+    "3.technologies/_index.md",
+    "3.technologies/content/AST.md",
+    "3.technologies/content/assembly-and-bytecode.md",
+    "3.technologies/content/books.md",
+    "3.technologies/content/brain.md",
+    "3.technologies/content/hugo.md",
+    "3.technologies/content/ide.md",
+    "3.technologies/content/ml-ai.md",
+    "3.technologies/content/pen-and-paper.md",
+    "3.technologies/dot-language.md",
+    "3.technologies/draft/AST.md",
+    "3.technologies/draft/blockchain.md",
+    "3.technologies/draft/browser-automation.md",
+    "3.technologies/draft/dopamine.md",
+    "3.technologies/draft/dsl.md",
+    "3.technologies/draft/iot.md",
+    "3.technologies/draft/jira.md",
+    "3.technologies/draft/node-js.md",
+    "3.technologies/draft/r-language.md",
+    "3.technologies/draft/scratch.md",
+    "3.technologies/draft/streams.md",
+    "3.technologies/draft/web-proxies.md",
+    "3.technologies/iot.md",
+    "3.technologies/{ => content}/books.md",
+    "3.technologies/{ => content}/brain.md",
+    "3.technologies/{ => content}/hugo.md",
+    "3.technologies/{ => content}/ml-ai.md",
+    "3.technologies/{ => content}/pen-and-paper.md",
+    "3.technologies/{ => draft}/aws.md",
+    "3.technologies/{ => draft}/dot-language.md",
+    "3.technologies/{ => draft}/jira.md",
+    "3.technologies/{draft => content}/jira.md",
+    "3.what-is-this/cpu.md",
+    "3.what-is-this/creative-commons.md",
+    "3.what-is-this/defcon.md",
+    "3.what-is-this/docker.md",
+    "3.what-is-this/eff.md",
+    "3.what-is-this/github.md",
+    "3.what-is-this/google.md",
+    "3.what-is-this/linux.md",
+    "3.what-is-this/open-source.md",
+    "3.what-is-this/owasp.md",
+    "3.what-is-this/python.md",
+    "3.what-is-this/raspberry-pi.md",
+    "3.what-is-this/slack.md",
+    "3.what-is-this/wallabyjs-and-nodejs.md",
+    "4.life-patterns/BBS-and-modems.md",
+    "4.life-patterns/automate-your-workflows.md",
+    "4.life-patterns/backup-your-life.md",
+    "4.life-patterns/be-a-founder.md",
+    "4.life-patterns/being-criticized-is-a-privilege.md",
+    "4.life-patterns/content/be-a-founder.md",
+    "4.life-patterns/content/being-criticized-is-a-privilege.md",
+    "4.life-patterns/content/learning.md",
+    "4.life-patterns/content/talking-to-yourself.md",
+    "4.life-patterns/curse-of-knowledge.md",
+    "4.life-patterns/draft/talk-to-yourself.md",
+    "4.life-patterns/future-needs-you.md",
+    "4.life-patterns/ideas.md",
+    "4.life-patterns/impostor-syndrome.md",
+    "4.life-patterns/king-is-naked.md",
+    "4.life-patterns/learn-to-hack.md",
+    "4.life-patterns/learning.md",
+    "4.life-patterns/mentors.md",
+    "4.life-patterns/nudge.md",
+    "4.life-patterns/one-way-two-way-doors.md",
+    "4.life-patterns/pionners-settlers-town-planners.md",
+    "4.life-patterns/power-of-habits.md",
+    "4.life-patterns/publish-publish-publish.md",
+    "4.life-patterns/refactoring.md",
+    "4.life-patterns/talking-to-yourself.md",
+    "4.life-patterns/the-zone.md",
+    "4.life-patterns/thinking-as-programmer.md",
+    "4.life-patterns/why-diversity-matters.md",
+    "4.life-patterns/{ => content}/backup-your-life.md",
+    "4.life-patterns/{ => content}/be-a-founder.md",
+    "4.life-patterns/{ => content}/being-criticized-is-a-privilege.md",
+    "4.life-patterns/{ => content}/future-needs-you.md",
+    "4.life-patterns/{ => content}/learning.md",
+    "5.concepts/CI-Testing.md",
+    "5.concepts/agile-and-kanban.md",
+    "5.concepts/amazon-press-releases.md",
+    "5.concepts/change.md",
+    "5.concepts/chaos-engineering.md",
+    "5.concepts/continuous-integration.md",
+    "5.concepts/copyright.md",
+    "5.concepts/cpu.md",
+    "5.concepts/deadlines.md",
+    "5.concepts/design.md",
+    "5.concepts/devops.md",
+    "5.concepts/draft/bdd.md",
+    "5.concepts/draft/fdd.md",
+    "5.concepts/draft/tdd.md",
+    "5.concepts/facts.md",
+    "5.concepts/fdd.md",
+    "5.concepts/feedback-loops.md",
+    "5.concepts/funtional-programming.md",
+    "5.concepts/gamification.md",
+    "5.concepts/gdpr.md",
+    "5.concepts/graphs.md",
+    "5.concepts/inventing-on-principle.md",
+    "5.concepts/karma-points.md",
+    "5.concepts/legacy-applications.md",
+    "5.concepts/netflix-culture.md",
+    "5.concepts/pair-programming.md",
+    "5.concepts/recursive-functions.md",
+    "5.concepts/serverless.md",
+    "5.concepts/sre.md",
+    "5.concepts/strong-vs-weak-types.md",
+    "5.concepts/tdd.md",
+    "5.concepts/{ => draft}/fdd.md",
+    "5.concepts/{ => draft}/tdd.md",
+    "6.security/3rd-party-modules.md",
+    "6.security/bug-bounties.md",
+    "6.security/defcon.md",
+    "6.security/dont-touch-production.md",
+    "6.security/security-better-developers.md",
+    "6.security/strings-should-be-banned.md",
+    "6.security/threat-modeling.md",
+    "7.your-cv/blogs.md",
+    "7.your-cv/future-self.md",
+    "7.your-cv/git.md",
+    "7.your-cv/github.md",
+    "7.your-cv/leanpub.md",
+    "7.your-cv/linkedin.md",
+    "7.your-cv/personal-brand.md",
+    "7.your-cv/twitter.md",
+    "7.your-cv/upwork.md",
+    "_footer.md",
+    "_index.md",
+    "_manuscript/book.md",
+    "_manuscript/change-log.md",
+    "_manuscript/github-issues.md",
+    "_template.md",
+    "change-engineering.md",
+    "civic-responsibility.md",
+    "concepts/_index.md",
+    "concepts/agile-and-kanban.md",
+    "concepts/change.md",
+    "concepts/chaos-engineering.md",
+    "concepts/continuous-integration.md",
+    "concepts/facts.md",
+    "concepts/fdd.md",
+    "concepts/gamification.md",
+    "concepts/gdpr.md",
+    "concepts/karma-points.md",
+    "concepts/netflix-culture.md",
+    "concepts/tdd.md",
+    "eff.md",
+    "future-self.md",
+    "introduction/_index.md",
+    "introduction/why-write-this-book.md",
+    "life-patterns/_index.md",
+    "life-patterns/be-a-founder.md",
+    "life-patterns/ideas.md",
+    "life-patterns/impostor-syndrome.md",
+    "life-patterns/learning.md",
+    "life-patterns/refactoring.md",
+    "life-patterns/the-zone.md",
+    "life-patterns/thinking-as-programmer.md",
+    "love-maths.md",
+    "micro-services.md",
+    "minecraft.md",
+    "misc/_index.md",
+    "misc/stories-to-tell.md",
+    "ngrok.md",
+    "pointers.md",
+    "repl.md",
+    "security/_index.md",
+    "security/security-better-developers.md",
+    "spotify-model.md",
+    "start-with-why.md",
+    "stories-to-tell.md",
+    "strings-should-be-banned.md",
+    "technologies/_index.md",
+    "technologies/aws.md",
+    "technologies/books.md",
+    "technologies/brain.md",
+    "technologies/hugo.md",
+    "technologies/jira.md",
+    "technologies/ml-ai.md",
+    "technologies/pen-and-paper.md",
+    "what-is-this/_index.md",
+    "what-is-this/cpu.md",
+    "what-is-this/creative-commons.md",
+    "what-is-this/defcon.md",
+    "what-is-this/docker.md",
+    "what-is-this/dopamine.md",
+    "what-is-this/git.md",
+    "what-is-this/github.md",
+    "what-is-this/linux.md",
+    "what-is-this/open-source.md",
+    "what-is-this/owasp.md",
+    "what-is-this/raspberry-pi.md",
+    "what-is-this/slack.md",
+    "workflows.md",
+    "your-cv/_index.md",
+    "your-cv/blogs.md",
+    "your-cv/git.md",
+    "your-cv/leanpub.md",
+    "your-cv/linkedin.md",
+    "your-cv/online-avatar.md",
+    "your-cv/personal-brand.md",
+    "your-cv/twitter.md",
+    "your-cv/upwork.md",
+    "{ => 2.mvp-for-gen-z-dev/draft}/minecraft.md",
+    "{ => 3.technologies/draft}/ngrok.md",
+    "{ => 4.life-patterns}/civic-responsibility.md",
+    "{ => 4.life-patterns}/love-maths.md",
+    "{ => 4.life-patterns}/start-with-why.md",
+    "{ => 4.life-patterns}/workflows.md",
+    "{ => 5.concepts/draft}/spotify-model.md",
+    "{ => 5.concepts}/change-engineering.md",
+    "{ => 5.concepts}/micro-services.md",
+    "{ => 5.concepts}/repl.md",
+    "{ => 6.security}/pointers.md",
+    "{ => 6.security}/strings-should-be-banned.md",
+    "{ => 7.your-cv}/future-self.md",
+    "{ => what-is-this}/eff.md",
+    "{2.mvp-for-gen-z-dev/draft => 10.misc}/eff.md",
+    "{2.mvp-for-gen-z-dev/draft => 5.concepts}/copyright.md",
+    "{2.mvp-for-gen-z-dev/draft => 5.concepts}/cpu.md",
+    "{2.technologies => 3.technologies}/AST.md",
+    "{2.technologies => 3.technologies}/_index.md",
+    "{2.technologies => 3.technologies}/aws.md",
+    "{2.technologies => 3.technologies}/books.md",
+    "{2.technologies => 3.technologies}/brain.md",
+    "{2.technologies => 3.technologies}/hugo.md",
+    "{2.technologies => 3.technologies}/iot.md",
+    "{2.technologies => 3.technologies}/jira.md",
+    "{2.technologies => 3.technologies}/ml-ai.md",
+    "{2.technologies => 3.technologies}/pen-and-paper.md",
+    "{2.what-is-this => 2.mvp-for-gen-z-dev}/content/creative-commons.md",
+    "{2.what-is-this => 2.mvp-for-gen-z-dev}/content/docker.md",
+    "{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/copyright.md",
+    "{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/cpu.md",
+    "{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/eff.md",
+    "{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/free-sofware-foundation.md",
+    "{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/google.md",
+    "{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/linux.md",
+    "{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/open-source.md",
+    "{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/owasp.md",
+    "{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/python.md",
+    "{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/raspberry-pi.md",
+    "{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/slack.md",
+    "{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/wallaby-js.md",
+    "{2.what-is-this => 2.mvp-for-gen-z-dev}/draft/xcode.md",
+    "{2.what-is-this => 3.technologies/draft}/dopamine.md",
+    "{3.technologies => 2.mvp-for-gen-z-dev}/content/hugo.md",
+    "{3.technologies => 2.mvp-for-gen-z-dev}/content/jira.md",
+    "{3.technologies => 2.mvp-for-gen-z-dev}/draft/aws.md",
+    "{3.technologies => 2.mvp-for-gen-z-dev}/draft/dot-language.md",
+    "{3.technologies => 2.mvp-for-gen-z-dev}/draft/iot.md",
+    "{3.what-is-this => 2.what-is-this}/_index.md",
+    "{3.what-is-this => 2.what-is-this}/cpu.md",
+    "{3.what-is-this => 2.what-is-this}/creative-commons.md",
+    "{3.what-is-this => 2.what-is-this}/docker.md",
+    "{3.what-is-this => 2.what-is-this}/dopamine.md",
+    "{3.what-is-this => 2.what-is-this}/eff.md",
+    "{3.what-is-this => 2.what-is-this}/github.md",
+    "{3.what-is-this => 2.what-is-this}/google.md",
+    "{3.what-is-this => 2.what-is-this}/linux.md",
+    "{3.what-is-this => 2.what-is-this}/open-source.md",
+    "{3.what-is-this => 2.what-is-this}/owasp.md",
+    "{3.what-is-this => 2.what-is-this}/python.md",
+    "{3.what-is-this => 2.what-is-this}/raspberry-pi.md",
+    "{3.what-is-this => 2.what-is-this}/slack.md",
+    "{3.what-is-this => 2.what-is-this}/wallabyjs-and-nodejs.md",
+    "{5.concepts => 2.mvp-for-gen-z-dev/draft}/continuous-integration.md",
+    "{concepts => 5.concepts}/_index.md",
+    "{concepts => 5.concepts}/agile-and-kanban.md",
+    "{concepts => 5.concepts}/change.md",
+    "{concepts => 5.concepts}/chaos-engineering.md",
+    "{concepts => 5.concepts}/continuous-integration.md",
+    "{concepts => 5.concepts}/facts.md",
+    "{concepts => 5.concepts}/fdd.md",
+    "{concepts => 5.concepts}/gamification.md",
+    "{concepts => 5.concepts}/gdpr.md",
+    "{concepts => 5.concepts}/karma-points.md",
+    "{concepts => 5.concepts}/netflix-culture.md",
+    "{concepts => 5.concepts}/tdd.md",
+    "{life-patterns => 4.life-patterns}/_index.md",
+    "{life-patterns => 4.life-patterns}/be-a-founder.md",
+    "{life-patterns => 4.life-patterns}/ideas.md",
+    "{life-patterns => 4.life-patterns}/impostor-syndrome.md",
+    "{life-patterns => 4.life-patterns}/learning.md",
+    "{life-patterns => 4.life-patterns}/refactoring.md",
+    "{life-patterns => 4.life-patterns}/the-zone.md",
+    "{life-patterns => 4.life-patterns}/thinking-as-programmer.md",
+    "{misc => 10.misc}/_index.md",
+    "{misc => 10.misc}/stories-to-tell.md",
+    "{security => 6.security}/_index.md",
+    "{security => 6.security}/security-better-developers.md",
+    "{technologies => 2.technologies}/_index.md",
+    "{technologies => 2.technologies}/aws.md",
+    "{technologies => 2.technologies}/books.md",
+    "{technologies => 2.technologies}/brain.md",
+    "{technologies => 2.technologies}/hugo.md",
+    "{technologies => 2.technologies}/jira.md",
+    "{technologies => 2.technologies}/ml-ai.md",
+    "{technologies => 2.technologies}/pen-and-paper.md",
+    "{what-is-this => 3.what-is-this}/_index.md",
+    "{what-is-this => 3.what-is-this}/cpu.md",
+    "{what-is-this => 3.what-is-this}/creative-commons.md",
+    "{what-is-this => 3.what-is-this}/defcon.md",
+    "{what-is-this => 3.what-is-this}/docker.md",
+    "{what-is-this => 3.what-is-this}/dopamine.md",
+    "{what-is-this => 3.what-is-this}/eff.md",
+    "{what-is-this => 3.what-is-this}/github.md",
+    "{what-is-this => 3.what-is-this}/linux.md",
+    "{what-is-this => 3.what-is-this}/open-source.md",
+    "{what-is-this => 3.what-is-this}/owasp.md",
+    "{what-is-this => 3.what-is-this}/python.md",
+    "{what-is-this => 3.what-is-this}/raspberry-pi.md",
+    "{what-is-this => 3.what-is-this}/slack.md",
+    "{what-is-this => }/for-print.md",
+    "{your-cv => 7.your-cv}/_index.md",
+    "{your-cv => 7.your-cv}/blogs.md",
+    "{your-cv => 7.your-cv}/git.md",
+    "{your-cv => 7.your-cv}/leanpub.md",
+    "{your-cv => 7.your-cv}/linkedin.md",
+    "{your-cv => 7.your-cv}/personal-brand.md",
+    "{your-cv => 7.your-cv}/twitter.md",
+    "{your-cv => 7.your-cv}/upwork.md"
+   ],
+   "first": "2018-02-17",
+   "last": "2024-03-01",
+   "prs_opened": 0,
+   "prs_merged": 0,
+   "issues_opened": 31,
+   "comments": 21,
+   "credited_in_changelog": [],
+   "pr_titles": [],
+   "chapters_count": 412,
+   "role": "author"
+  },
+  {
+   "name": "didadida5555",
+   "login": "didadida5555",
+   "commits": 6,
+   "merges": 0,
+   "lines_added": 27,
+   "lines_deleted": 27,
+   "files": 6,
+   "chapters": [
+    "1.introduction/how-this -book-was-created.md",
+    "1.introduction/how-to-get-a-job.md",
+    "2.mvp-for-gen-z-dev/content/creative-commons.md",
+    "2.mvp-for-gen-z-dev/content/docker.md",
+    "2.mvp-for-gen-z-dev/content/jira.md",
+    "2.mvp-for-gen-z-dev/content/open-source.md"
+   ],
+   "first": "2019-06-16",
+   "last": "2019-06-16",
+   "prs_opened": 6,
+   "prs_merged": 6,
+   "issues_opened": 0,
+   "comments": 0,
+   "credited_in_changelog": [],
+   "pr_titles": [
+    {
+     "number": 60,
+     "title": "Update jira.md",
+     "state": "merged",
+     "date": "2019-06-23",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/60"
+    },
+    {
+     "number": 59,
+     "title": "Update docker.md",
+     "state": "merged",
+     "date": "2019-06-23",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/59"
+    },
+    {
+     "number": 58,
+     "title": "Update open-source.md",
+     "state": "merged",
+     "date": "2019-06-23",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/58"
+    },
+    {
+     "number": 57,
+     "title": "Update how-this -book-was-created.md",
+     "state": "merged",
+     "date": "2019-06-22",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/57"
+    },
+    {
+     "number": 56,
+     "title": "Update creative-commons.md",
+     "state": "merged",
+     "date": "2019-06-22",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/56"
+    },
+    {
+     "number": 55,
+     "title": "Update how-to-get-a-job.md",
+     "state": "merged",
+     "date": "2019-06-23",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/55"
+    }
+   ],
+   "chapters_count": 6,
+   "role": "contributor"
+  },
+  {
+   "name": "Sarah Cruz",
+   "login": "sarahallencruz",
+   "commits": 17,
+   "merges": 0,
+   "lines_added": 116,
+   "lines_deleted": 120,
+   "files": 10,
+   "chapters": [
+    "1.introduction/_index.md",
+    "1.introduction/generation-z.md",
+    "1.introduction/how-to-get-a-job.md",
+    "2.mvp-for-gen-z-dev/content/creative-commons.md",
+    "2.mvp-for-gen-z-dev/content/docker.md",
+    "2.mvp-for-gen-z-dev/content/google-search-gdd-sre.md",
+    "2.mvp-for-gen-z-dev/content/hugo.md",
+    "2.mvp-for-gen-z-dev/content/jira.md",
+    "2.mvp-for-gen-z-dev/content/open-source.md",
+    "2.mvp-for-gen-z-dev/draft/dot-language.md"
+   ],
+   "first": "2018-09-21",
+   "last": "2018-11-24",
+   "prs_opened": 0,
+   "prs_merged": 0,
+   "issues_opened": 0,
+   "comments": 0,
+   "credited_in_changelog": [
+    "v0.50"
+   ],
+   "pr_titles": [],
+   "chapters_count": 10,
+   "role": "contributor"
+  },
+  {
+   "name": "Mike Eriksson",
+   "login": "swedishmike",
+   "commits": 11,
+   "merges": 0,
+   "lines_added": 13,
+   "lines_deleted": 13,
+   "files": 11,
+   "chapters": [
+    "2.mvp-for-gen-z-dev/content/google-search-gdd-sre.md",
+    "2.mvp-for-gen-z-dev/content/open-source.md",
+    "2.mvp-for-gen-z-dev/content/python.md",
+    "3.technologies/content/assembly-and-bytecode.md",
+    "3.technologies/content/brain.md",
+    "3.technologies/content/ml-ai.md",
+    "3.technologies/content/pen-and-paper.md",
+    "4.life-patterns/content/be-a-founder.md",
+    "4.life-patterns/content/future-needs-you.md",
+    "4.life-patterns/content/learning.md",
+    "4.life-patterns/content/talking-to-yourself.md"
+   ],
+   "first": "2018-10-04",
+   "last": "2018-10-04",
+   "prs_opened": 3,
+   "prs_merged": 1,
+   "issues_opened": 1,
+   "comments": 3,
+   "credited_in_changelog": [
+    "v0.60"
+   ],
+   "pr_titles": [
+    {
+     "number": 26,
+     "title": "More nitpicking",
+     "state": "merged",
+     "date": "2018-10-05",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/26"
+    },
+    {
+     "number": 25,
+     "title": "Some spelling changes",
+     "state": "closed",
+     "date": "2018-10-04",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/25"
+    },
+    {
+     "number": 24,
+     "title": "Changed AWS SDL to AWS SDK",
+     "state": "closed",
+     "date": "2018-10-04",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/24"
+    }
+   ],
+   "chapters_count": 11,
+   "role": "contributor"
+  },
+  {
+   "name": "Claudio Camerino",
+   "login": "clazba",
+   "commits": 6,
+   "merges": 2,
+   "lines_added": 170,
+   "lines_deleted": 170,
+   "files": 16,
+   "chapters": [
+    "1.introduction/_index.md",
+    "1.introduction/generation-z.md",
+    "1.introduction/how-to-get-a-job.md",
+    "2.mvp-for-gen-z-dev/content/creative-commons.md",
+    "2.mvp-for-gen-z-dev/content/docker.md",
+    "2.mvp-for-gen-z-dev/content/google-search-gdd-sre.md"
+   ],
+   "first": "2018-09-29",
+   "last": "2018-10-13",
+   "prs_opened": 3,
+   "prs_merged": 3,
+   "issues_opened": 0,
+   "comments": 1,
+   "credited_in_changelog": [
+    "v0.60"
+   ],
+   "pr_titles": [
+    {
+     "number": 37,
+     "title": " Proofread #3  Google GDD",
+     "state": "merged",
+     "date": "2019-06-22",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/37"
+    },
+    {
+     "number": 29,
+     "title": "Proofread #2",
+     "state": "merged",
+     "date": "2018-10-06",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/29"
+    },
+    {
+     "number": 14,
+     "title": "Proofread #1",
+     "state": "merged",
+     "date": "2018-10-03",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/14"
+    }
+   ],
+   "chapters_count": 6,
+   "role": "contributor"
+  },
+  {
+   "name": "Martin O'Brien",
+   "login": "mobrien-gw",
+   "commits": 7,
+   "merges": 0,
+   "lines_added": 15,
+   "lines_deleted": 15,
+   "files": 7,
+   "chapters": [
+    "1.introduction/generation-z.md",
+    "1.introduction/how-this -book-was-created.md",
+    "1.introduction/how-to-get-a-job.md",
+    "10.misc/books-to-read.md",
+    "10.misc/diagrams-to-add.md",
+    "10.misc/gen-z-digital-env.md",
+    "10.misc/stories-to-tell.md"
+   ],
+   "first": "2020-01-11",
+   "last": "2020-02-01",
+   "prs_opened": 1,
+   "prs_merged": 1,
+   "issues_opened": 0,
+   "comments": 0,
+   "credited_in_changelog": [],
+   "pr_titles": [
+    {
+     "number": 67,
+     "title": "Typos and grammar corrections.",
+     "state": "merged",
+     "date": "2024-03-01",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/67"
+    }
+   ],
+   "chapters_count": 7,
+   "role": "contributor"
+  },
+  {
+   "name": "Mark Regensberg",
+   "login": "mregensberg",
+   "commits": 4,
+   "merges": 0,
+   "lines_added": 18,
+   "lines_deleted": 26,
+   "files": 2,
+   "chapters": [
+    "1.introduction/_index.md",
+    "1.introduction/generation-z.md"
+   ],
+   "first": "2018-09-23",
+   "last": "2018-09-24",
+   "prs_opened": 2,
+   "prs_merged": 2,
+   "issues_opened": 0,
+   "comments": 0,
+   "credited_in_changelog": [
+    "v0.50"
+   ],
+   "pr_titles": [
+    {
+     "number": 11,
+     "title": "Chapter 1 review",
+     "state": "merged",
+     "date": "2018-09-24",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/11"
+    },
+    {
+     "number": 10,
+     "title": "flow, layout, fixed some typos",
+     "state": "merged",
+     "date": "2018-09-24",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/10"
+    }
+   ],
+   "chapters_count": 2,
+   "role": "contributor"
+  },
+  {
+   "name": "Steven Vore",
+   "login": "StevenJV",
+   "commits": 3,
+   "merges": 0,
+   "lines_added": 9,
+   "lines_deleted": 9,
+   "files": 8,
+   "chapters": [
+    "1.introduction/_index.md",
+    "2.mvp-for-gen-z-dev/content/docker.md",
+    "2.mvp-for-gen-z-dev/content/dot-language.md",
+    "2.mvp-for-gen-z-dev/content/owasp.md",
+    "2.mvp-for-gen-z-dev/content/python.md",
+    "2.mvp-for-gen-z-dev/draft/wallaby-and-ncrunch.md",
+    "3.technologies/content/books.md",
+    "4.life-patterns/why-diversity-matters.md"
+   ],
+   "first": "2020-01-15",
+   "last": "2020-01-16",
+   "prs_opened": 2,
+   "prs_merged": 2,
+   "issues_opened": 0,
+   "comments": 0,
+   "credited_in_changelog": [],
+   "pr_titles": [
+    {
+     "number": 66,
+     "title": "First full readthrough",
+     "state": "merged",
+     "date": "2020-01-25",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/66"
+    },
+    {
+     "number": 65,
+     "title": "corrects possible typo in chap.1",
+     "state": "merged",
+     "date": "2020-01-15",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/65"
+    }
+   ],
+   "chapters_count": 8,
+   "role": "contributor"
+  },
+  {
+   "name": "Sam Willis",
+   "login": "samwillis4216",
+   "commits": 4,
+   "merges": 0,
+   "lines_added": 7,
+   "lines_deleted": 7,
+   "files": 2,
+   "chapters": [
+    "1.introduction/_index.md",
+    "1.introduction/how-to-get-a-job.md"
+   ],
+   "first": "2018-10-12",
+   "last": "2018-10-12",
+   "prs_opened": 1,
+   "prs_merged": 1,
+   "issues_opened": 0,
+   "comments": 1,
+   "credited_in_changelog": [],
+   "pr_titles": [
+    {
+     "number": 36,
+     "title": "removed 'number' from a multitude number of technologies. Just gramma…",
+     "state": "merged",
+     "date": "2019-06-22",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/36"
+    }
+   ],
+   "chapters_count": 2,
+   "role": "contributor"
+  },
+  {
+   "name": "Russ Miles",
+   "login": "russmiles",
+   "commits": 0,
+   "merges": 0,
+   "lines_added": 0,
+   "lines_deleted": 0,
+   "files": 0,
+   "chapters": [],
+   "first": null,
+   "last": null,
+   "prs_opened": 0,
+   "prs_merged": 0,
+   "issues_opened": 7,
+   "comments": 0,
+   "credited_in_changelog": [],
+   "pr_titles": [],
+   "chapters_count": 0,
+   "role": "contributor"
+  },
+  {
+   "name": "Mikail Tunç",
+   "login": "emtunc",
+   "commits": 2,
+   "merges": 0,
+   "lines_added": 38,
+   "lines_deleted": 38,
+   "files": 2,
+   "chapters": [
+    "2.mvp-for-gen-z-dev/content/creative-commons.md",
+    "2.mvp-for-gen-z-dev/content/docker.md"
+   ],
+   "first": "2018-10-08",
+   "last": "2018-10-08",
+   "prs_opened": 2,
+   "prs_merged": 2,
+   "issues_opened": 0,
+   "comments": 0,
+   "credited_in_changelog": [],
+   "pr_titles": [
+    {
+     "number": 32,
+     "title": "Update docker.md",
+     "state": "merged",
+     "date": "2018-10-08",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/32"
+    },
+    {
+     "number": 31,
+     "title": "Update creative-commons.md",
+     "state": "merged",
+     "date": "2018-10-08",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/31"
+    }
+   ],
+   "chapters_count": 2,
+   "role": "contributor"
+  },
+  {
+   "name": "Kevin Johnson",
+   "login": "secureideas",
+   "commits": 1,
+   "merges": 0,
+   "lines_added": 1,
+   "lines_deleted": 1,
+   "files": 1,
+   "chapters": [
+    "1.introduction/_index.md"
+   ],
+   "first": "2018-12-15",
+   "last": "2018-12-15",
+   "prs_opened": 1,
+   "prs_merged": 1,
+   "issues_opened": 0,
+   "comments": 0,
+   "credited_in_changelog": [],
+   "pr_titles": [
+    {
+     "number": 47,
+     "title": "Fixed a minor misspelling",
+     "state": "merged",
+     "date": "2019-01-16",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/47"
+    }
+   ],
+   "chapters_count": 1,
+   "role": "contributor"
+  },
+  {
+   "name": "Kenneth Jhim Infante",
+   "login": "kennethinfante",
+   "commits": 1,
+   "merges": 0,
+   "lines_added": 1,
+   "lines_deleted": 1,
+   "files": 1,
+   "chapters": [
+    "2.mvp-for-gen-z-dev/content/creative-commons.md"
+   ],
+   "first": "2018-10-09",
+   "last": "2018-10-09",
+   "prs_opened": 1,
+   "prs_merged": 1,
+   "issues_opened": 0,
+   "comments": 0,
+   "credited_in_changelog": [],
+   "pr_titles": [
+    {
+     "number": 34,
+     "title": "Update creative-commons.md",
+     "state": "merged",
+     "date": "2019-06-22",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/34"
+    }
+   ],
+   "chapters_count": 1,
+   "role": "contributor"
+  },
+  {
+   "name": "Michael Chadwick",
+   "login": "Chuddington",
+   "commits": 1,
+   "merges": 0,
+   "lines_added": 30,
+   "lines_deleted": 17,
+   "files": 2,
+   "chapters": [
+    "1.introduction/generation-z.md",
+    "1.introduction/how-to-get-a-job.md"
+   ],
+   "first": "2018-10-03",
+   "last": "2018-10-03",
+   "prs_opened": 1,
+   "prs_merged": 1,
+   "issues_opened": 0,
+   "comments": 0,
+   "credited_in_changelog": [
+    "v0.60"
+   ],
+   "pr_titles": [
+    {
+     "number": 23,
+     "title": "Wording Changed for the first Chapter",
+     "state": "merged",
+     "date": "2018-10-03",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/23"
+    }
+   ],
+   "chapters_count": 2,
+   "role": "contributor"
+  },
+  {
+   "name": "shamsul910",
+   "login": "shamsul910",
+   "commits": 0,
+   "merges": 0,
+   "lines_added": 0,
+   "lines_deleted": 0,
+   "files": 0,
+   "chapters": [],
+   "first": null,
+   "last": null,
+   "prs_opened": 0,
+   "prs_merged": 0,
+   "issues_opened": 1,
+   "comments": 0,
+   "credited_in_changelog": [],
+   "pr_titles": [],
+   "chapters_count": 0,
+   "role": "contributor"
+  },
+  {
+   "name": "Michael Hidalgo",
+   "login": "michaelhidalgo",
+   "commits": 0,
+   "merges": 0,
+   "lines_added": 0,
+   "lines_deleted": 0,
+   "files": 0,
+   "chapters": [],
+   "first": null,
+   "last": null,
+   "prs_opened": 0,
+   "prs_merged": 0,
+   "issues_opened": 1,
+   "comments": 0,
+   "credited_in_changelog": [],
+   "pr_titles": [],
+   "chapters_count": 0,
+   "role": "contributor"
+  },
+  {
+   "name": "Immortalin",
+   "login": "Immortalin",
+   "commits": 0,
+   "merges": 0,
+   "lines_added": 0,
+   "lines_deleted": 0,
+   "files": 0,
+   "chapters": [],
+   "first": null,
+   "last": null,
+   "prs_opened": 0,
+   "prs_merged": 0,
+   "issues_opened": 1,
+   "comments": 0,
+   "credited_in_changelog": [],
+   "pr_titles": [],
+   "chapters_count": 0,
+   "role": "contributor"
+  },
+  {
+   "name": "dave-theunsub",
+   "login": "dave-theunsub",
+   "commits": 0,
+   "merges": 0,
+   "lines_added": 0,
+   "lines_deleted": 0,
+   "files": 0,
+   "chapters": [],
+   "first": null,
+   "last": null,
+   "prs_opened": 0,
+   "prs_merged": 0,
+   "issues_opened": 1,
+   "comments": 0,
+   "credited_in_changelog": [],
+   "pr_titles": [],
+   "chapters_count": 0,
+   "role": "contributor"
+  },
+  {
+   "name": "1lastBr3ath",
+   "login": "1lastBr3ath",
+   "commits": 0,
+   "merges": 0,
+   "lines_added": 0,
+   "lines_deleted": 0,
+   "files": 0,
+   "chapters": [],
+   "first": null,
+   "last": null,
+   "prs_opened": 0,
+   "prs_merged": 0,
+   "issues_opened": 0,
+   "comments": 1,
+   "credited_in_changelog": [],
+   "pr_titles": [],
+   "chapters_count": 0,
+   "role": "contributor"
+  },
+  {
+   "name": "Dan Moore",
+   "login": "mooreds",
+   "commits": 0,
+   "merges": 0,
+   "lines_added": 0,
+   "lines_deleted": 0,
+   "files": 0,
+   "chapters": [],
+   "first": null,
+   "last": null,
+   "prs_opened": 0,
+   "prs_merged": 0,
+   "issues_opened": 0,
+   "comments": 1,
+   "credited_in_changelog": [],
+   "pr_titles": [],
+   "chapters_count": 0,
+   "role": "contributor"
+  },
+  {
+   "name": "Françoise Cruz",
+   "login": "francoise-cruz",
+   "commits": 0,
+   "merges": 0,
+   "lines_added": 0,
+   "lines_deleted": 0,
+   "files": 0,
+   "chapters": [],
+   "first": null,
+   "last": null,
+   "prs_opened": 1,
+   "prs_merged": 0,
+   "issues_opened": 0,
+   "comments": 0,
+   "credited_in_changelog": [],
+   "pr_titles": [
+    {
+     "number": 50,
+     "title": "Update creative-commons.md",
+     "state": "closed",
+     "date": "2019-01-01",
+     "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/50"
+    }
+   ],
+   "chapters_count": 0,
+   "role": "contributor"
+  }
+ ],
+ "pull_requests": [
+  {
+   "number": 10,
+   "title": "flow, layout, fixed some typos",
+   "by": "Mark Regensberg",
+   "state": "merged",
+   "date": "2018-09-23",
+   "merged": "2018-09-24",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/10",
+   "files_changed": null
+  },
+  {
+   "number": 11,
+   "title": "Chapter 1 review",
+   "by": "Mark Regensberg",
+   "state": "merged",
+   "date": "2018-09-24",
+   "merged": "2018-09-24",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/11",
+   "files_changed": null
+  },
+  {
+   "number": 14,
+   "title": "Proofread #1",
+   "by": "Claudio Camerino",
+   "state": "merged",
+   "date": "2018-09-29",
+   "merged": "2018-10-03",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/14",
+   "files_changed": null
+  },
+  {
+   "number": 23,
+   "title": "Wording Changed for the first Chapter",
+   "by": "Michael Chadwick",
+   "state": "merged",
+   "date": "2018-10-03",
+   "merged": "2018-10-03",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/23",
+   "files_changed": null
+  },
+  {
+   "number": 24,
+   "title": "Changed AWS SDL to AWS SDK",
+   "by": "Mike Eriksson",
+   "state": "closed",
+   "date": "2018-10-04",
+   "merged": null,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/24",
+   "files_changed": null
+  },
+  {
+   "number": 25,
+   "title": "Some spelling changes",
+   "by": "Mike Eriksson",
+   "state": "closed",
+   "date": "2018-10-04",
+   "merged": null,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/25",
+   "files_changed": null
+  },
+  {
+   "number": 26,
+   "title": "More nitpicking",
+   "by": "Mike Eriksson",
+   "state": "merged",
+   "date": "2018-10-04",
+   "merged": "2018-10-05",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/26",
+   "files_changed": null
+  },
+  {
+   "number": 29,
+   "title": "Proofread #2",
+   "by": "Claudio Camerino",
+   "state": "merged",
+   "date": "2018-10-06",
+   "merged": "2018-10-06",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/29",
+   "files_changed": null
+  },
+  {
+   "number": 31,
+   "title": "Update creative-commons.md",
+   "by": "Mikail Tunç",
+   "state": "merged",
+   "date": "2018-10-08",
+   "merged": "2018-10-08",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/31",
+   "files_changed": null
+  },
+  {
+   "number": 32,
+   "title": "Update docker.md",
+   "by": "Mikail Tunç",
+   "state": "merged",
+   "date": "2018-10-08",
+   "merged": "2018-10-08",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/32",
+   "files_changed": null
+  },
+  {
+   "number": 34,
+   "title": "Update creative-commons.md",
+   "by": "Kenneth Jhim Infante",
+   "state": "merged",
+   "date": "2018-10-08",
+   "merged": "2019-06-22",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/34",
+   "files_changed": null
+  },
+  {
+   "number": 36,
+   "title": "removed 'number' from a multitude number of technologies. Just gramma…",
+   "by": "Sam Willis",
+   "state": "merged",
+   "date": "2018-10-12",
+   "merged": "2019-06-22",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/36",
+   "files_changed": null
+  },
+  {
+   "number": 37,
+   "title": " Proofread #3  Google GDD",
+   "by": "Claudio Camerino",
+   "state": "merged",
+   "date": "2018-10-13",
+   "merged": "2019-06-22",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/37",
+   "files_changed": null
+  },
+  {
+   "number": 47,
+   "title": "Fixed a minor misspelling",
+   "by": "Kevin Johnson",
+   "state": "merged",
+   "date": "2018-12-15",
+   "merged": "2019-01-16",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/47",
+   "files_changed": null
+  },
+  {
+   "number": 50,
+   "title": "Update creative-commons.md",
+   "by": "Françoise Cruz",
+   "state": "closed",
+   "date": "2019-01-01",
+   "merged": null,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/50",
+   "files_changed": null
+  },
+  {
+   "number": 55,
+   "title": "Update how-to-get-a-job.md",
+   "by": "didadida5555",
+   "state": "merged",
+   "date": "2019-06-16",
+   "merged": "2019-06-23",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/55",
+   "files_changed": null
+  },
+  {
+   "number": 56,
+   "title": "Update creative-commons.md",
+   "by": "didadida5555",
+   "state": "merged",
+   "date": "2019-06-16",
+   "merged": "2019-06-22",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/56",
+   "files_changed": null
+  },
+  {
+   "number": 57,
+   "title": "Update how-this -book-was-created.md",
+   "by": "didadida5555",
+   "state": "merged",
+   "date": "2019-06-16",
+   "merged": "2019-06-22",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/57",
+   "files_changed": null
+  },
+  {
+   "number": 58,
+   "title": "Update open-source.md",
+   "by": "didadida5555",
+   "state": "merged",
+   "date": "2019-06-16",
+   "merged": "2019-06-23",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/58",
+   "files_changed": null
+  },
+  {
+   "number": 59,
+   "title": "Update docker.md",
+   "by": "didadida5555",
+   "state": "merged",
+   "date": "2019-06-16",
+   "merged": "2019-06-23",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/59",
+   "files_changed": null
+  },
+  {
+   "number": 60,
+   "title": "Update jira.md",
+   "by": "didadida5555",
+   "state": "merged",
+   "date": "2019-06-16",
+   "merged": "2019-06-23",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/60",
+   "files_changed": null
+  },
+  {
+   "number": 65,
+   "title": "corrects possible typo in chap.1",
+   "by": "Steven Vore",
+   "state": "merged",
+   "date": "2020-01-15",
+   "merged": "2020-01-15",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/65",
+   "files_changed": null
+  },
+  {
+   "number": 66,
+   "title": "First full readthrough",
+   "by": "Steven Vore",
+   "state": "merged",
+   "date": "2020-01-16",
+   "merged": "2020-01-25",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/66",
+   "files_changed": null
+  },
+  {
+   "number": 67,
+   "title": "Typos and grammar corrections.",
+   "by": "Martin O'Brien",
+   "state": "merged",
+   "date": "2020-08-21",
+   "merged": "2024-03-01",
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/pull/67",
+   "files_changed": null
+  }
+ ],
+ "issues": [
+  {
+   "number": 1,
+   "title": "Create pool (Google forms) to gather data about book's topics",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [],
+   "date": "2018-02-22",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/1"
+  },
+  {
+   "number": 2,
+   "title": "Add chapter on 'Coordinated Disclosure'",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "new-content",
+    "show-in-book"
+   ],
+   "date": "2018-03-03",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/2"
+  },
+  {
+   "number": 3,
+   "title": "Re-apply context fixes submitted to Build repo",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "show-in-book",
+    "fix"
+   ],
+   "date": "2018-03-04",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/3"
+  },
+  {
+   "number": 4,
+   "title": "Add chapter on 'Closure'",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "new-content",
+    "show-in-book"
+   ],
+   "date": "2018-03-04",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/4"
+  },
+  {
+   "number": 5,
+   "title": "Add chapter on 'Typography and Design'",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "new-content",
+    "show-in-book"
+   ],
+   "date": "2018-03-04",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/5"
+  },
+  {
+   "number": 6,
+   "title": "Add chapter on 'cloud-native'",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "new-content",
+    "show-in-book"
+   ],
+   "date": "2018-03-04",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/6"
+  },
+  {
+   "number": 7,
+   "title": "Add 'Ubiquitous computing' reference to IoT chapter",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "update-content"
+   ],
+   "date": "2018-03-04",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/7"
+  },
+  {
+   "number": 8,
+   "title": "Typo on cover",
+   "state": "closed",
+   "by": "dave-theunsub",
+   "labels": [
+    "bug-or-typo"
+   ],
+   "date": "2018-03-06",
+   "comments": 3,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/8"
+  },
+  {
+   "number": 9,
+   "title": "Feedback on Open Source article",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "improvement"
+   ],
+   "date": "2018-09-11",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/9"
+  },
+  {
+   "number": 12,
+   "title": "Fix chapter's ordering",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "bug-or-typo"
+   ],
+   "date": "2018-09-27",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/12"
+  },
+  {
+   "number": 13,
+   "title": "Create Slack organisation for book",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [],
+   "date": "2018-09-27",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/13"
+  },
+  {
+   "number": 15,
+   "title": "Add content on - lack of mastery, copy from Stack overflow, learn from you tube",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "improvement",
+    "reader-feedback"
+   ],
+   "date": "2018-09-30",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/15"
+  },
+  {
+   "number": 16,
+   "title": "Chaos Engineering is Experimentation and Testing",
+   "state": "closed",
+   "by": "Russ Miles",
+   "labels": [],
+   "date": "2018-10-03",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/16"
+  },
+  {
+   "number": 17,
+   "title": "Chaos Engineering and Resilience Engineering",
+   "state": "closed",
+   "by": "Russ Miles",
+   "labels": [],
+   "date": "2018-10-03",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/17"
+  },
+  {
+   "number": 18,
+   "title": "Make sure to reference the Principles of Chaos",
+   "state": "closed",
+   "by": "Russ Miles",
+   "labels": [],
+   "date": "2018-10-03",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/18"
+  },
+  {
+   "number": 19,
+   "title": "Game Days and Automated Chaos Experiments part of a Chaos Engineers toolbox",
+   "state": "closed",
+   "by": "Russ Miles",
+   "labels": [],
+   "date": "2018-10-03",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/19"
+  },
+  {
+   "number": 20,
+   "title": "Chaos Engineering and the overall Software Development Lifecycle",
+   "state": "closed",
+   "by": "Russ Miles",
+   "labels": [],
+   "date": "2018-10-03",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/20"
+  },
+  {
+   "number": 21,
+   "title": "Continuous Chaos (Engineering)",
+   "state": "closed",
+   "by": "Russ Miles",
+   "labels": [],
+   "date": "2018-10-03",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/21"
+  },
+  {
+   "number": 22,
+   "title": "Chaos Engineering and Observability",
+   "state": "closed",
+   "by": "Russ Miles",
+   "labels": [],
+   "date": "2018-10-03",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/22"
+  },
+  {
+   "number": 27,
+   "title": "Arduino Logo",
+   "state": "open",
+   "by": "Immortalin",
+   "labels": [
+    "new-content",
+    "reader-feedback"
+   ],
+   "date": "2018-10-05",
+   "comments": 1,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/27"
+  },
+  {
+   "number": 28,
+   "title": "Add 'Is this book just for Gen Z' chapter",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "new-content"
+   ],
+   "date": "2018-10-06",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/28"
+  },
+  {
+   "number": 30,
+   "title": "A mention of Hacktoberfest?",
+   "state": "open",
+   "by": "Mike Eriksson",
+   "labels": [
+    "new-content",
+    "reader-feedback"
+   ],
+   "date": "2018-10-07",
+   "comments": 3,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/30"
+  },
+  {
+   "number": 33,
+   "title": "review 'developer roadmap visualization\"",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [],
+   "date": "2018-10-08",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/33"
+  },
+  {
+   "number": 35,
+   "title": "reply to thread 'What is your best advice for a junior software developer?'",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [],
+   "date": "2018-10-10",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/35"
+  },
+  {
+   "number": 38,
+   "title": "Add content about back to basis on HTTP",
+   "state": "open",
+   "by": "Michael Hidalgo",
+   "labels": [
+    "new-content",
+    "reader-feedback"
+   ],
+   "date": "2018-10-15",
+   "comments": 1,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/38"
+  },
+  {
+   "number": 39,
+   "title": "Add chapter on \"understand what game is being played\"",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "new-content",
+    "reader-feedback"
+   ],
+   "date": "2018-11-04",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/39"
+  },
+  {
+   "number": 40,
+   "title": "Add chapter on 'summits vs conferences'",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "new-content",
+    "reader-feedback"
+   ],
+   "date": "2018-11-04",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/40"
+  },
+  {
+   "number": 41,
+   "title": "Add reference and example from explainshell.com on Linux chapter",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "improvement"
+   ],
+   "date": "2018-11-07",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/41"
+  },
+  {
+   "number": 42,
+   "title": "Add section on ELK and how I'm using it ",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "new-content"
+   ],
+   "date": "2018-11-07",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/42"
+  },
+  {
+   "number": 43,
+   "title": "Add section on code formatting",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [],
+   "date": "2018-11-07",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/43"
+  },
+  {
+   "number": 44,
+   "title": "Add reference to 'what makes a good visulalisation' and Ikigai",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "improvement"
+   ],
+   "date": "2018-11-08",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/44"
+  },
+  {
+   "number": 45,
+   "title": "Add code sample for running Chrome in Lambda",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "new-content",
+    "code-sample"
+   ],
+   "date": "2018-11-15",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/45"
+  },
+  {
+   "number": 46,
+   "title": "Add chapter on C4 model for software architecture ",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "new-content"
+   ],
+   "date": "2018-11-18",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/46"
+  },
+  {
+   "number": 48,
+   "title": "Add ldjam as an example for developers to write games",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "new-content"
+   ],
+   "date": "2018-12-19",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/48"
+  },
+  {
+   "number": 49,
+   "title": "Write post to letters to a new developer",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "new-content"
+   ],
+   "date": "2018-12-19",
+   "comments": 1,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/49"
+  },
+  {
+   "number": 51,
+   "title": "Add reference to istio to the containers section",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "improvement"
+   ],
+   "date": "2019-01-06",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/51"
+  },
+  {
+   "number": 52,
+   "title": "Content to add to OWASP Chapter",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "improvement"
+   ],
+   "date": "2019-01-14",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/52"
+  },
+  {
+   "number": 53,
+   "title": "to add to privacy chapter",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [],
+   "date": "2019-02-20",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/53"
+  },
+  {
+   "number": 54,
+   "title": "where did all the women in tech go (add to skills gap chapter)",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "improvement"
+   ],
+   "date": "2019-02-20",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/54"
+  },
+  {
+   "number": 61,
+   "title": "Introduce TDD and Devops (or link resources)",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "improvement",
+    "reader-feedback"
+   ],
+   "date": "2019-06-23",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/61"
+  },
+  {
+   "number": 62,
+   "title": "Explain better the concept of running ELK in Docker",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "improvement",
+    "reader-feedback"
+   ],
+   "date": "2019-06-23",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/62"
+  },
+  {
+   "number": 63,
+   "title": "Explain meaning of \"compared to normal or power users\"",
+   "state": "open",
+   "by": "Dinis Cruz",
+   "labels": [
+    "improvement",
+    "reader-feedback"
+   ],
+   "date": "2019-06-23",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/63"
+  },
+  {
+   "number": 64,
+   "title": "Google Search, GDD and SRE section & Learning section - Typos",
+   "state": "open",
+   "by": "shamsul910",
+   "labels": [],
+   "date": "2019-10-03",
+   "comments": 0,
+   "url": "https://github.com/DinisCruz/Book_Generation_Z_Developer/issues/64"
+  }
+ ],
+ "changelog_credits": {
+  "v0.60": [
+   "Mike Eriksson",
+   "Michael Chadwick",
+   "Claudio Camerino"
+  ],
+  "v0.50": [
+   "Mark Regensberg",
+   "Sarah Cruz"
+  ]
+ }
+}

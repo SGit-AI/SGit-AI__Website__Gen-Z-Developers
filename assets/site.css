@@ -159,7 +159,7 @@ a.card{color:var(--fg)} a.card:hover{text-decoration:none;border-color:var(--acc
 .quote{margin:0;padding:.9rem 1.1rem;border-left:3px solid #e8b64a;background:var(--panel);border-radius:0 10px 10px 0;font-style:italic;color:#2b2e35}
 .quote span{display:block;margin-top:.4rem;font-style:normal;font-size:.85rem;color:var(--dim)}
 .making{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1rem;margin:1.2rem 0}
-.making .card.big{grid-row:span 2;background:#0c2a3d;color:#e6e9ec;border-color:#0c2a3d;padding:1.4rem}
+.making .card.big{grid-row:span 3;background:#0c2a3d;color:#e6e9ec;border-color:#0c2a3d;padding:1.4rem}
 .making .card.big h3{color:#fff;font-size:1.5rem;line-height:1.15}
 .making .card.big p{color:#c9d3da;font-size:.95rem}
 .making .card.big .k{color:#a8b4bd}
@@ -176,3 +176,9 @@ a.card{color:var(--fg)} a.card:hover{text-decoration:none;border-color:var(--acc
 .toc-head > div{flex:1 1 480px;min-width:0}
 @media (max-width:900px){.making{grid-template-columns:1fr 1fr}.making .card.big{grid-column:span 2;grid-row:auto}.twocol{grid-template-columns:1fr}}
 @media (max-width:640px){.hero{padding:1.6rem 1.2rem}.hero h1{font-size:2.2rem}.cover-lines{columns:1}.hero .cover{flex-basis:220px}.hero .cover img{width:220px}.making{grid-template-columns:1fr}.making .card.big{grid-column:auto}}
+
+/* ---------- v0.2.0: published vs drafts, contributors ---------- */
+.badge.draft{color:#7c3aed;border-color:#d8c8f5;background:#f5f0ff}
+.note.warn{border-left-color:var(--warm)}
+svg.tl{width:100%;height:auto;max-width:760px;display:block;margin:.6rem 0;background:var(--panel);border:1px solid var(--line);border-radius:8px}
+table.people td:first-child{white-space:nowrap}

@@ -21,8 +21,15 @@
   "readers": 465,
   "read_on": "2026-10-18"
  },
+ "print_pdf": {
+  "path": "v1/generation-z-print-ready.pdf",
+  "pages": 139,
+  "sha256": "6accc25c0c8bf83e6b1420069872b622e4269a170a8f3d8b74235318b006460d",
+  "what": "the Leanpub build of 2018-10-08 made print-ready for the paperback; its table of contents is the published book's"
+ },
  "counts": {
   "markdown_files": 138,
+  "published_chapters": 28,
   "outlines": 90
  }
 }
