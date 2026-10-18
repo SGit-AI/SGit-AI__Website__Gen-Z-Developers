@@ -50,7 +50,7 @@ But I did not want a page of "books that shaped me". So the register at [influen
 | **Christopher Alexander**, *A Pattern Language* (1977) | Code is a space people inhabit | The town planner's craft |
 | **Simon Sinek**, *Start With Why* (2009) | Purpose before mechanism | The opening; why the book exists |
 | **Team Topologies and Cynefin** | The shape of the team decides the shape of the system | Context for the town planner; probably not a chapter |
-| **David Rice**, keynote at OWASP AppSec USA 2010 | Security as an opportunity, not a fear industry | The opening's optimism |
+| **David Rice**, *Upon the Threshold of Opportunity*, OWASP AppSec USA 2010 | Security risk as pollution: measured, regulated, then designed out | The opening's optimism; security for the agent era |
 | **Neil Peart** and Rush | Technical mastery in service of meaning | Craft; needs my own account |
 | **Music, and playing in a band** | Playing together in real time is collaborative flow | Flow and teams; needs my own account |
 
@@ -82,7 +82,7 @@ Design, in Jobs's sense that design is how it works, became a mandatory step in 
 
 Simon Sinek's golden circle, why before how before what, is on my list and was a 2018 outline, *Start with why*. The 2018 introduction asked the same question of the logos it opened with: "Why is the **why** important?" The book should start with why, which is what [you are lucky to be here](/articles/lucky-to-be-here.html) does.
 
-A keynote by David Rice, the author of *Geekonomics*, argued that security is an opportunity rather than a fear industry. The recording I meant is his keynote at [OWASP AppSec USA 2010](https://www.youtube.com/watch?v=O8sLSwnId9c), posted in three parts. It made enough of an impression that the OWASP Summit in 2011 had a working session on [how to present his "Pollution keynote" worldwide](https://wiki.owasp.org/index.php/Summit_2011_Working_Sessions/Session088): an analogy between what society went through with pollution and the state of application security. It belongs next to the book's argument for ignoring the doom.
+A keynote by David Rice, the author of *Geekonomics*, argued that security is an opportunity rather than a fear industry. The talk is *Upon the Threshold of Opportunity*, his keynote at OWASP AppSec USA 2010; the [full recording is on Vimeo](https://vimeo.com/15506033), and it is also on YouTube in three parts. I wrote about it in December 2016, in [the pollution analogy](https://diniscruz.blogspot.com/2016/12/the-pollution-analogy.html): "When talking about risks, I prefer to use an pollution analogy rather than technical debt." Pollution is the unintended negative consequences of creating something, which is what security risk is; society went from accepting pollution, to regulating it, to designing it out, and application security should get to the third. And one line from that post belongs in this book: "security doesn't need to say no all time." It made enough of an impression that the OWASP Summit in 2011 had a working session on [how to present his "Pollution keynote" worldwide](https://wiki.owasp.org/index.php/Summit_2011_Working_Sessions/Session088): an analogy between what society went through with pollution and the state of application security. It belongs next to the book's argument for ignoring the doom.
 
 ## Entries only I can fill in {#mine}
 
@@ -123,7 +123,6 @@ Questions for me, kept apart:
 
 - Can the 2018 findings be sent to the influences site as a brief?
 - Is *What Technology Wants* the right anchor for Kevin Kelly?
-- Is the AppSec USA 2010 keynote the one the register calls *Upon the Threshold of Opportunity*?
 
 ## What this does not claim {#limits}
 
@@ -139,4 +138,4 @@ If you keep a list of your own influences, or try the exercise, write to [agent@
 
 A message of mine on 18 October 2026 asking for a review of [influences.sgit.ai](https://influences.sgit.ai), written up by this site's journalist, `gen-z.journalist`, in my voice. The argument and the editorial responsibility are mine.
 
-The register: the repository [SGit-AI/SGit-AI__Website__Influences](https://github.com/SGit-AI/SGit-AI__Website__Influences), read on 18 October 2026: `data/influences.json` (25 entries, their tiers, anchors and principles), the entry for Bret Victor, and the article *An influence is a claim you can check*, quoted word for word. The 2018 quotations are from book v1.0.0 (the Introduction; *Open Source*, "The Cathedral and the Bazaar"; *OWASP*, "Find jobs via OWASP contributions") and from the drafts in `v1/content/`: `5.concepts/inventing-on-principle.md`, `10.misc/technium.md`, `4.life-patterns/start-with-why.md`, `4.life-patterns/why-diversity-matters.md` and `10.misc/books-to-read.md`. The David Rice recording is the one I found and shared afterwards, [OWASP AppSec USA 2010: Keynote: David Rice 2/3](https://www.youtube.com/watch?v=O8sLSwnId9c), with the OWASP wiki's [Summit 2011 working session](https://wiki.owasp.org/index.php/Summit_2011_Working_Sessions/Session088) on presenting it.
+The register: the repository [SGit-AI/SGit-AI__Website__Influences](https://github.com/SGit-AI/SGit-AI__Website__Influences), read on 18 October 2026: `data/influences.json` (25 entries, their tiers, anchors and principles), the entry for Bret Victor, and the article *An influence is a claim you can check*, quoted word for word. The 2018 quotations are from book v1.0.0 (the Introduction; *Open Source*, "The Cathedral and the Bazaar"; *OWASP*, "Find jobs via OWASP contributions") and from the drafts in `v1/content/`: `5.concepts/inventing-on-principle.md`, `10.misc/technium.md`, `4.life-patterns/start-with-why.md`, `4.life-patterns/why-diversity-matters.md` and `10.misc/books-to-read.md`. The David Rice recording is the one I shared afterwards: [the full keynote on Vimeo](https://vimeo.com/15506033) and [part 2 of 3 on YouTube](https://www.youtube.com/watch?v=O8sLSwnId9c), with my post [the pollution analogy](https://diniscruz.blogspot.com/2016/12/the-pollution-analogy.html) of 11 December 2016, quoted word for word, with the OWASP wiki's [Summit 2011 working session](https://wiki.owasp.org/index.php/Summit_2011_Working_Sessions/Session088) on presenting it.

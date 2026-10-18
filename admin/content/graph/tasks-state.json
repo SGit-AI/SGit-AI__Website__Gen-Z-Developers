@@ -161,7 +161,7 @@
   },
   "start-from-the-storyline:editor:4": {
    "state": "done",
-   "evidence": "gen_map.py names places-of-highest-leverage, from-a-spreadsheet-to-a-folder-per-person, why-my-agents-do-not-run-on-my-laptop and who-owns-the-words (site v0.2.11)"
+   "evidence": "gen_map.py names places-of-highest-leverage, from-a-spreadsheet-to-a-folder-per-person, why-my-agents-do-not-run-on-my-laptop and who-owns-the-words (site v0.2.12)"
   },
   "start-from-the-storyline:editor:5": {
    "state": "open",
@@ -269,7 +269,7 @@
   },
   "follow-the-rabbit-holes:editor:1": {
    "state": "in-progress",
-   "evidence": "chapters.json has facts-and-the-record under Direction and judgement, with the five ideas from the article placed in it (site v0.2.11); the editor's map decides"
+   "evidence": "chapters.json has facts-and-the-record under Direction and judgement, with the five ideas from the article placed in it (site v0.2.12); the editor's map decides"
   },
   "follow-the-rabbit-holes:editor:2": {
    "state": "in-progress",
