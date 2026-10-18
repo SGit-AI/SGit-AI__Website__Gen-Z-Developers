@@ -35,6 +35,8 @@ So this site now has [a journalist](/team/journalist/index.html), the role that 
 
 Each article has a markdown twin next to its page, `articles/<slug>.md`. That is the file to hand to an agent.
 
+There is a second stream, for the agents' own voice. When an agent finishes a significant body of work, it writes an [agent article](/articles/index.html#agents): what it did, the flows, the changes, what it leaves for the other roles, and who decided what. These articles are co-written with me, in my voice; those are written by the agents, in theirs, and they name me where a decision was mine.
+
 ## The roles, and their names {#roles}
 
 I wondered whether "editor" was the right name for the role that changes the book. I think it is: in publishing, the editor is the person who works on the text with the author, and that is exactly the job. So the names stay, with one added:
@@ -66,13 +68,13 @@ Everything I do starts with getting a version out. A version that is not release
 
 This book has a released version already. The 2018 first edition is [in this repository](/v1/book/index.html), frozen as v1.0.0 and, since site v0.2.0, exactly as it was published: 28 chapters and the GitHub issues page, [30,893 words](/v1/versions/index.html), with the 6 drafts and 89 outlines kept apart. The 139-page, 6 by 9 inch file the paperback was printed from, typeset by Leanpub on 8 October 2018, is here too.
 
-What is not here is everything around that file. The only cover is a 975 by 1,474 pixel image of the 2018 one, too small to print. There is no metadata sheet, no upload checklist, no record of which file went where. And nothing in this repository can build the book: the 2018 file was made by Leanpub from another repository, and the second edition cannot be. So the first thing to do, before any word of the second edition changes, is to release v1.0.0 again, twice: once with the 2018 interior and a new cover, to prove the publishing half; once built here, checked against the 2018 file, to prove the build half. When the second edition's first version arrives, releasing it is a rebuild, not a project.
+What is not here is a way to make that book ourselves. Nothing in this repository can build it: the 2018 file was made by Leanpub from another repository, and the second edition cannot be. There is no EPUB, no metadata sheet, no upload checklist, no record of which file went where. So the first thing to do, before any word of the second edition changes, is to release v1.0.0 again: built here, in every format from the same source, matched page by page against the file Leanpub made in 2018, and uploaded as our own file, to Leanpub first and then Amazon. When the second edition's first version arrives, releasing it is a rebuild, not a project.
 
 ## The series {#series}
 
 | | Article | For | Done when |
 |---|---|---|---|
-| 2 | [Release the book we already released](/articles/release-the-book-we-already-released.html) | Publisher | v1.0.0 is out with a new cover and recorded; then the same book is built here and matches the 2018 file |
+| 2 | [Release the book we already released](/articles/release-the-book-we-already-released.html) | Publisher | v1.0.0 is built here, matches the 2018 file, and is uploaded to Leanpub and then Amazon, in every format from one source |
 | 3 | [One board for the book](/articles/one-board-for-the-book.html) | Editor, with every role | Every issue is a file, the board on the site is built from the files, and content issues name the version and the sentence |
 | 4 | [Everything unfinished in one place](/articles/everything-unfinished-in-one-place.html) | Editor | The outlines, the drafts, the 2018 GitHub issues and my notes are in one inventory, each item with a decision slot |
 | 5 | [Read, comment, decide](/articles/read-comment-decide.html) | Editor, and me | On [the editor's desk](/read/index.html), the first batch of my decisions is recorded and acted on, and the loop has run once |

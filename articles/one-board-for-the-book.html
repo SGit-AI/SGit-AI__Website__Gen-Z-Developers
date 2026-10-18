@@ -17,20 +17,19 @@
 <nav class="site"><div class="row">
 <a class="brand" href="../index.html">gen-z-developers<span>.sgit.ai</span></a>
 <a class="parent" href="https://sgit.ai" title="sgit.ai, the parent project">&#8599; part of <b>sgit.ai</b></a>
-<a class="nl" href="../v1/book/index.html">The book</a><a class="nl" href="../read/index.html">Read &amp; review</a><a class="nl" href="../v1/versions/index.html">Versions</a><a class="nl" href="../contributors/index.html">Contributors</a><a class="nl" href="../map/index.html">The map</a><a class="nl here" href="../articles/index.html">Articles</a><a class="nl" href="../briefs/index.html">The briefs</a><a class="nl" href="../team/index.html">The team</a><a class="nl" href="../vault/index.html">The vault</a><a class="nl" href="../admin/index.html">Admin</a>
-<span class="ver">site <a href="../admin/versions.html" title="Release history">v0.2.1</a></span>
+<a class="nl" href="../v1/book/index.html">The book</a><a class="nl" href="../read/index.html">Read &amp; review</a><a class="nl" href="../v1/versions/index.html">Versions</a><a class="nl" href="../contributors/index.html">Contributors</a><a class="nl" href="../map/index.html">The map</a><a class="nl here" href="../articles/index.html">Articles</a><a class="nl" href="../decisions/index.html">Decisions</a><a class="nl" href="../briefs/index.html">The briefs</a><a class="nl" href="../team/index.html">The team</a><a class="nl" href="../vault/index.html">The vault</a><a class="nl" href="../admin/index.html">Admin</a>
+<span class="ver">site <a href="../admin/versions.html" title="Release history">v0.2.2</a></span>
 </div></nav>
 <main><div class="inner">
 <div class="crumbs"><a href="../index.html">gen-z-developers.sgit.ai</a> &rarr; <a href="../articles/index.html">Articles</a> &rarr; <b>One board for the book</b></div>
-<article class="doc"><p class="kicker">article &middot; 2026-10-18 &middot; site v0.2.1 &middot; <a href="one-board-for-the-book.md">markdown</a></p><h1>One board for the book: every issue a file, a Kanban page built from the files, and every content issue pinned to a version and a sentence</h1><p class="byline">By Dinis Cruz, written up by this site&rsquo;s journalist, <code>gen-z.journalist</code>; the editorial responsibility is Dinis Cruz&rsquo;s.</p><div class="src"><b>Abstract.</b> To finish a book with agents in several roles, I need to see, in one place, what is open, what is blocked, what is done, and what is waiting on me. This site already has the pieces: each role keeps its issues as files, in folders called open, blocked and done, where the folder is the status, which is the pattern graphs.sgit.ai calls Issues-FS-lite. There are ten of them today, across three roles. What it does not have is the view across them. The vault&#x27;s board is a markdown file that someone rewrites by hand whenever an issue moves, which means it will drift. And there is a second kind of issue that has nowhere to live yet: the content issue, a finding about a sentence of the book, from the reviewer, a reader, an old GitHub issue or me. A content issue is not a task for a role; it is a question about the text, and it needs the file, the version, the sentence quoted, and in the end an answer: fixed, declined with its reason, or deferred to a later version. So the proposal is one board, built from files. Work issues stay where they are, in each role&#x27;s folder. Content issues get a folder of their own, with the same three statuses and a fixed set of fields. The build reads all of them and writes a Kanban page on this site, with a column per status, a card per issue, and a filter by role, by kind and by the version an issue is meant for. The board in the vault becomes a copy of that page, never written by hand. The 2018 book&#x27;s own GitHub issues, 43 of them, 35 still open, come in as content issues, each with its link. And the gate checks the fields, so an issue without a &quot;done when&quot;, or a finding without its sentence, does not get in.</div><div class="body"><h2 id="in-short">In short</h2>
+<article class="doc"><p class="kicker">article &middot; 2026-10-18 &middot; site v0.2.1 &middot; <a href="one-board-for-the-book.md">markdown</a></p><h1>One board for the book: every issue a file, a Kanban page built from the files, and every content issue pinned to a version and a sentence</h1><p class="byline">By Dinis Cruz, co-written with this site&rsquo;s journalist, <code>gen-z.journalist</code>, in Dinis Cruz&rsquo;s voice; the editorial responsibility is Dinis Cruz&rsquo;s.</p><div class="src"><b>Abstract.</b> To finish a book with agents in several roles, I need to see, in one place, what is open, what is blocked, what is done, and what is waiting on me. This site already has the pieces: each role keeps its issues as files, in folders called open, blocked and done, where the folder is the status, which is the pattern graphs.sgit.ai calls Issues-FS-lite. There are ten of them today, across three roles. What it does not have is the view across them. The vault&#x27;s board is a markdown file that someone rewrites by hand whenever an issue moves, which means it will drift. And there is a second kind of issue that has nowhere to live yet: the content issue, a finding about a sentence of the book, from the reviewer, a reader, an old GitHub issue or me. A content issue is not a task for a role; it is a question about the text, and it needs the file, the version, the sentence quoted, and in the end an answer: fixed, declined with its reason, or deferred to a later version. So the proposal is boards built from files, never written by hand. Work issues stay where they are, in each role&#x27;s folder in this repository, and the build writes a Kanban page for them on this site, with a column per status and filters by role. Content issues live in the vault, with the working copy of the text they are about, in a folder of their own with the same three statuses and a fixed set of fields, and the vault&#x27;s board is generated from them. The 2018 book&#x27;s own GitHub issues, 43 of them, 35 still open, come in as content issues, each with its link. And the gate checks the fields, so an issue without a &quot;done when&quot;, or a finding without its sentence, does not get in.</div><div class="body"><h2 id="in-short">In short</h2>
 <ul>
 <li><strong>I need one view of the work.</strong> What is open, blocked and done, across the roles, and what waits on me.</li>
 <li><strong>The pieces exist.</strong> Each role keeps issues as files in open, blocked and done; the folder is the status; ten issues today.</li>
 <li><strong>The view across them is written by hand.</strong> The vault's board is rewritten whenever an issue moves, so it will drift.</li>
 <li><strong>A second kind of issue has nowhere to live.</strong> The content issue: a finding about a sentence of the book, which needs the version, the quote and an answer.</li>
-<li><strong>Work issues stay with the roles; content issues get a folder of their own.</strong> Same three statuses, fixed fields.</li>
-<li><strong>The build writes the board.</strong> A Kanban page on this site, a column per status, filters by role, kind and target version.</li>
-<li><strong>The vault's board becomes a copy.</strong> Never edited by hand again.</li>
+<li><strong>Work issues stay with the roles, here; content issues live in the vault.</strong> Next to the working copy of the text; same three statuses, fixed fields.</li>
+<li><strong>Every board is generated.</strong> The site's from the work issues, the vault's from the content issues; never edited by hand.</li>
 <li><strong>The 2018 GitHub issues come in as content issues.</strong> 43 of them, 35 still open, each with its number and link.</li>
 </ul>
 <h2 id="have">What we have</h2>
@@ -75,13 +74,13 @@
 </ul>
 <p>The reviewer's role already describes content issues without naming them: findings, numbered, each with its evidence and severity, and an answer recorded next to it, "fixed (where), declined (why), or deferred (to which version)". The proposal is to give them a home that every role and the board can see, rather than leaving them inside review records.</p>
 <h2 id="where">Where content issues live</h2>
-<p>In this repository, at <code>board/content/open|blocked|done/</code>, with the same rules as the roles' folders: the folder is the status, <code>NNN__slug.md</code>, never renumbered, never deleted.</p>
-<p>I know that bends the rule that the vault holds the working versions. My reasoning: an issue is not a version of the book, it is a record about one, and the board on the site can only be built from files the build can read. And the repository gives every issue a history for free. The drafts of the text stay in the vault; the record of what we found and decided lives here. If the editor sees a reason this is wrong, that is a question for me, not a decision to make quietly.</p>
-<p>Who writes: any role may create a content issue, and records itself as the one who raised it. Only the editor moves one to done, because only the editor changes the text; a content issue is done when its answer is recorded, whether that answer is "fixed in v1.1.0" or "declined, because the book is not doing that". A content issue waiting on my decision is blocked, with <strong>Waits on.</strong> Dinis.</p>
+<p>In the vault, at <code>board/issues/open|blocked|done/</code>, with the same rules as the roles' folders: the folder is the status, <code>NNN__slug.md</code>, never renumbered, never deleted.</p>
+<p>That is where the working text is, and a finding belongs next to the sentence it is about. When a version is signed off and comes into this repository, the content issues it answered come with it in its record, so what we found and decided about an official version is official too. The working copy starts from the book as site v0.2.0 froze it: v1.0.0, the published book.</p>
+<p>Who writes: any role may create a content issue, and records itself as the one who raised it. Only the editor moves one to done, because only the editor changes the text; a content issue is done when its answer is recorded, whether that answer is "fixed in v1.0.1" or "declined, because the book is not doing that". A content issue waiting on my decision is blocked, with <strong>Waits on.</strong> Dinis. Writing into the vault needs its write key, which I hold and give to the role that needs it.</p>
 <p>The fields, in the same style as the work issues:</p>
 <pre><code># &lt;the finding, as a sentence&gt;
 
-**File.** v1/content/&lt;path&gt;.md
+**File.** &lt;path in the working copy&gt;
 **Version.** book v1.0.0
 **Quote.** &quot;&lt;the sentence, word for word&gt;&quot;
 **Kind.** spelling | dated | wrong | missing | broken link | structure | reader | idea
@@ -89,17 +88,18 @@
 **For.** the book version this should land in, or &quot;undecided&quot;
 **Answer.** fixed (where, which version) | declined (why) | deferred (to which version)
 </code></pre>
-<p>The <strong>Quote</strong> is checked: the gate finds the quoted sentence in the named file at the named version, and fails if it is not there, which is the newsroom's rule that a quote is word for word, applied to findings.</p>
-<h2 id="board">The board</h2>
-<p>The build reads every work issue and every content issue and writes <code>board/index.html</code>, a Kanban page:</p>
+<p>The <strong>Quote</strong> is checked: a script finds the quoted sentence in the named file at the named version, and refuses the issue if it is not there, which is the newsroom's rule that a quote is word for word, applied to findings.</p>
+<h2 id="board">The boards</h2>
+<p>Two generated views, one per place the issues live.</p>
+<p><strong>On this site</strong>, <code>board/index.html</code>, built from every role's work issues:</p>
 <ul>
 <li><strong>Three columns</strong>, open, blocked and done, because those are the statuses the folders have. No "in progress" column: a role that is working on an issue says so in its debrief, and a fourth folder would be a fourth thing to keep in step.</li>
-<li><strong>A card per issue</strong>: the title, the role or "content", the kind, the version it is for, and for a blocked card, what it waits on.</li>
-<li><strong>Filters</strong> by role, by kind, and by target version, so "everything that has to land in v1.1.0" is one click.</li>
-<li><strong>A "waits on Dinis" strip</strong> at the top: every blocked issue whose <strong>Waits on.</strong> names me, and the open questions. This is the part I will read every day.</li>
-<li><strong>Counts per column and per role</strong>, which the publisher's and the editor's debriefs can quote.</li>
+<li><strong>A card per issue</strong>: the title, the role, and for a blocked card, what it waits on.</li>
+<li><strong>Filters</strong> by role.</li>
+<li><strong>A "waits on Dinis" strip</strong> at the top: every blocked issue whose <strong>Waits on.</strong> names me. This is the part I will read every day.</li>
+<li><strong>Counts per column and per role</strong>, which the roles' debriefs can quote.</li>
 </ul>
-<p>It is generated, like every page here, so it is never edited by hand. At each release, the build also writes <code>board/BOARD.md</code> for the vault, the same content as markdown, and that replaces the hand-written one.</p>
+<p><strong>In the vault</strong>, <code>board/BOARD.md</code>, generated from the content issues by a script kept in this repository and run against a checkout of the vault before each push: the same three columns, a card per content issue with its kind, its file and the version it is for, filters by kind and target version, and the same "waits on Dinis" strip. It replaces the hand-written board.</p>
 <h2 id="github">The 2018 GitHub issues</h2>
 <p>The first edition took feedback through GitHub issues, and showed some of them in the book: the 2018 Leanpub build has a page listing the issues labelled <code>show-in-book</code>. Site v0.2.0 captured the whole of the 2018 repository's issues, pull requests and comments under <code>admin/content/github/</code>, for <a href="/contributors/index.html">the contributors page</a>. Counted from that capture:</p>
 <table>
@@ -145,46 +145,47 @@
 </tbody>
 </table>
 <p>And 24 pull requests, 21 of them merged. The eight closed issues are a typo on the cover and seven notes from one reader on the chaos engineering chapter; the 35 open ones run from 22 February 2018 to 3 October 2019, and most are ideas for chapters: coordinated disclosure, closure, typography and design, cloud-native, the C4 model, "understand what game is being played", summits versus conferences, HTTP from the basics, "is this book just for Gen Z".</p>
-<p>Each comes in as a content issue, raised by "2018 GitHub issue #N", with its link, its date, its labels and its author, so the people who asked are credited if the book does what they asked. The 35 open ones go in <code>open/</code>; the 8 closed ones go straight to <code>done/</code>, with the answer the 2018 repository records. Issue 3 deserves attention of its own: it says fixes were made in the Leanpub build repository and never brought back to the source, which means the published text and the frozen source may differ in places, and <a href="/articles/release-the-book-we-already-released.html">the previous article</a> asks the publisher to check.</p>
+<p>Each comes in as a content issue in the vault, raised by "2018 GitHub issue #N", with its link, its date, its labels and its author, so the people who asked are credited if the book does what they asked. The 35 open ones go in <code>open/</code>; the 8 closed ones go straight to <code>done/</code>, with the answer the 2018 repository records. Issue 3 deserves attention of its own: it says fixes were made in the Leanpub build repository and never brought back to the source, which means the published text and the frozen source may differ in places, and <a href="/articles/release-the-book-we-already-released.html">the previous article</a> asks the publisher to check.</p>
 <h2 id="gate">The gate</h2>
-<p>What <code>validate.js</code> should refuse, so the board stays honest:</p>
+<p>What the checks should refuse, so the boards stay honest. In this repository, <code>validate.js</code>:</p>
 <ul>
 <li>A work issue without <strong>What.</strong>, <strong>Done when.</strong> and <strong>From.</strong>; a blocked one without <strong>Waits on.</strong></li>
-<li>A content issue without <strong>File.</strong>, <strong>Version.</strong>, <strong>Quote.</strong> and <strong>Kind.</strong>, or a quote that is not in the file at that version.</li>
-<li>A content issue in <code>done/</code> without an <strong>Answer.</strong></li>
 <li>A number used twice in the same folder.</li>
 <li>A status written inside a file, since the folder is the status.</li>
+</ul>
+<p>In the vault, the board script:</p>
+<ul>
+<li>A content issue without <strong>File.</strong>, <strong>Version.</strong>, <strong>Quote.</strong> and <strong>Kind.</strong>, or a quote that is not in the file at that version.</li>
+<li>A content issue in <code>done/</code> without an <strong>Answer.</strong></li>
+<li>The same numbering and status rules.</li>
 </ul>
 <h2 id="brief">The brief</h2>
 <p>For the editor, with the other roles reading along. Read <code>team/editor/role.md</code> and <code>team/ISSUES.md</code> first.</p>
 <ol>
-<li><strong>Create <code>board/content/open|blocked|done/</code></strong> and add the content issue format to <code>team/ISSUES.md</code>. Done when the guide describes both kinds and an example content issue passes the gate.</li>
-<li><strong>Teach the build to write the board</strong>: <code>board/index.html</code> from every role's issues and the content issues, with the three columns, the filters, the counts and the "waits on Dinis" strip; and <code>board/BOARD.md</code> for the vault. Done when moving an issue with <code>git mv</code> and rebuilding moves its card, with nothing else edited.</li>
-<li><strong>Teach the gate the checks above.</strong> Done when each check has a failing example that it refuses.</li>
-<li><strong>Bring in the 43 GitHub issues of the 2018 repository</strong> from <code>admin/content/github/</code> as content issues, generated rather than typed, open ones in <code>open/</code> and closed ones in <code>done/</code>. Done when every issue has a file, and the board's count matches the capture's.</li>
+<li><strong>Create <code>board/issues/open|blocked|done/</code> in the vault</strong>, with the write key I give you, and add the content issue format to <code>team/ISSUES.md</code>. Done when the guide describes both kinds and an example content issue is in the vault.</li>
+<li><strong>Teach the build to write the site's board</strong>: <code>board/index.html</code> from every role's work issues, with the three columns, the filter, the counts and the "waits on Dinis" strip. Done when moving an issue with <code>git mv</code> and rebuilding moves its card, with nothing else edited.</li>
+<li><strong>Write the vault board script</strong>: in <code>admin/build/</code>, run against a vault checkout, it writes <code>board/BOARD.md</code> from the content issues and refuses one with a missing field or a quote not in its file. Done when the vault's board is its output, and each check has a failing example.</li>
+<li><strong>Teach the gate the work-issue checks above.</strong> Done when each has a failing example that it refuses.</li>
+<li><strong>Bring in the 43 GitHub issues of the 2018 repository</strong> from <code>admin/content/github/</code> as content issues in the vault, generated rather than typed, open ones in <code>open/</code> and closed ones in <code>done/</code>. Done when every issue has a file, and the vault board's count matches the capture's.</li>
 <li><strong>Move the seven open questions from the vault's board</strong> into blocked issues that wait on me, each in the role that needs the answer. Done when the "waits on Dinis" strip shows them and the hand-written board is gone.</li>
-<li><strong>Add the board to the navigation and to <code>llms.txt</code>.</strong></li>
+<li><strong>Add the site's board to the navigation and to <code>llms.txt</code>.</strong></li>
 </ol>
-<p>Questions for me, kept apart:</p>
-<ul>
-<li>Content issues in the repository rather than the vault: agreed?</li>
-<li>Only the editor closes a content issue: agreed?</li>
-</ul>
+<p>Decided: content issues live in the vault (<a href="/decisions/index.html#text-issues-live-in-the-vault">decision 005</a>). Still a question for me: only the editor closes a content issue, agreed?</p>
 <h2 id="limits">What this does not claim</h2>
 <ul>
 <li><strong>Nothing here is built.</strong> The board is a proposal; the editor builds it.</li>
 <li><strong>The GitHub counts are from a capture.</strong> <code>admin/content/github/</code> as site v0.2.0 took it on 18 October 2026; an issue opened since is not in it.</li>
 <li><strong>No "in progress" column is a choice.</strong> If the roles find they need one, it is a fourth folder and a change to the guide.</li>
-<li><strong>Content issues in the repository bends a rule.</strong> The reasoning is above; I have not decided it yet.</li>
+<li><strong>The vault's board needs a script and a key.</strong> It cannot be built by the site's release pipeline, which does not hold the vault's write key.</li>
 <li><strong>A Kanban page is a view, not a tool.</strong> There is no drag and drop; a card moves when its file moves.</li>
 </ul>
 <p>If you keep a board like this for your own writing, or have opinions on what it should show, write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
 <h2 id="sources">Where this comes from</h2>
-<p>A voice memo of mine on 18 October 2026, written up by this site's journalist, <code>gen-z.journalist</code>, in my voice. The argument and the editorial responsibility are mine.</p>
+<p>Two voice memos of mine on 18 October 2026, written up by this site's journalist, <code>gen-z.journalist</code>, in my voice; the second decided that content issues live in the vault (<a href="/decisions/index.html#text-issues-live-in-the-vault">decision 005</a>). The argument and the editorial responsibility are mine.</p>
 <p>The record: <code>team/ISSUES.md</code> and the ten issue files under <code>team/*/issues/</code> in this repository at site v0.2.0, counted by folder; <code>board/BOARD.md</code> in the public vault <code>c14khrb8</code>, cloned read-only on 18 October 2026, quoted from its first line; <code>team/reviewer/role.md</code> for the finding format and its answers. The 2018 issues are counted from <code>admin/content/github/issues-p1.json</code> and <code>pulls.json</code>, captured by site v0.2.0, by state and label, with pull requests left out of the issue count; the <code>show-in-book</code> page is <code>manuscript/github-issues.md</code> in <a href="https://github.com/DinisCruz/Book_Generation_Z_Developer_Build">DinisCruz/Book_Generation_Z_Developer_Build</a>, 8 October 2018. The pattern is graphs.sgit.ai's Issues-FS-lite, as <code>team/ISSUES.md</code> describes it.</p></div></article>
 </div></main>
 <footer class="site"><div class="row">
-<span>Generation Z Developers, by Dinis Cruz. The 2018 text is Creative Commons BY (the cover) or BY-SA (the footer): see <a href="../v1/versions/index.html#licence">the licence note</a>. Everything else on this site is CC BY 4.0; code under the repository licence.</span>
+<span>Generation Z Developers, by Dinis Cruz. The 2018 text is Creative Commons BY 4.0, as Dinis decided on 18 October 2026: see <a href="../v1/versions/index.html#licence">the licence note</a>. Everything else on this site is CC BY 4.0; code under the repository licence.</span>
 <span><a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers">GitHub</a> &middot; <a href="../vault/index.html">the working vault</a> &middot; <a href="../admin/versions.html">release history</a> &middot; <a href="../llms.txt">llms.txt</a></span>
 </div></footer>
 </body>

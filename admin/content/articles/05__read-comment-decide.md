@@ -55,7 +55,7 @@ One distinction matters. On the desk, "signed off" is my state for a chapter as 
 
 ## A decision is a file {#record}
 
-`team/editor/decisions/NNN__<slug>.md`, numbered in the order I made them, never renumbered, never deleted. The editor writes them, because the folder is the editor's; I do not need to touch a file.
+In the vault, at `board/decisions/NNN__<slug>.md`, next to the content issues and the working text, because decisions on the text live with the text ([decision 005](/decisions/index.html#text-issues-live-in-the-vault)). Numbered in the order I made them, never renumbered, never deleted. The editor writes them, with the vault's write key; I do not need to touch a file. My decisions on how the book is made, rather than on its text, are different: they go on [the decisions page](/decisions/index.html) in this repository.
 
 ```
 # <the item>
@@ -76,7 +76,7 @@ Where the comment came from a voice memo, the memo's transcript goes in the vaul
 
 Decisions change the working copy in the vault, not this repository. Nothing in `v1/` changes, ever. When a part of the book has had its decisions and the changes are in, the editor proposes a version, with the decisions it carries listed, and I sign it off. Then the steps this repository already defines: the signed-off text comes in as the next version, with its entry in `admin/content/book/versions.json`; the build freezes it and the versions page shows the delta, block by block; and the publisher releases it, with the PDFs, the cover and the record of where it went, through the pipeline [release the book we already released](/articles/release-the-book-we-already-released.html) builds on v1.0.0.
 
-The first such version is the question I most want the loop to answer: is it a v1.1.0, the first edition corrected and finished, or does the first signed-off change already belong to the second edition? I do not know yet. The decisions will tell me.
+Its number follows [decision 006](/decisions/index.html#every-change-is-minor-unless-dinis-says-major): every change is minor unless I say it is major, so the first signed-off change is v1.0.1, and the second edition is v2.0.0 on the day I say so.
 
 ## The first batch {#first-batch}
 
@@ -95,10 +95,10 @@ I wondered whether the role that does this should have another name. I do not th
 
 For the editor. Read `team/editor/role.md` first.
 
-1. **Create `team/editor/decisions/`** and add the decision format to `team/ISSUES.md`. Done when an example decision passes the gate and the guide describes it.
+1. **Create `board/decisions/` in the vault**, with the write key I give you, and add the decision format to `team/ISSUES.md`. Done when an example decision is in the vault and the guide describes it.
 2. **Add the decision to the desk**: a verb per chapter, next to its state, kept in the browser like everything else on the desk and carried in both exports; nothing sent. Read `CLAUDE.md`'s rule on the reader first. Done when a decision survives a reload and appears in `review.md`.
 3. **Show decisions on the item pages and in the inventory**: the chapter page shows its recorded decisions under the map's reading; the inventory's decision column links each. Done when recording a decision file and rebuilding fills both, with nothing edited by hand.
-4. **Teach the gate** to refuse a decision without **Item.**, **Version read.**, **Comment.** and **Decision.**, and one whose verb is not on the list.
+4. **Teach the vault board script** (from [one board for the book](/articles/one-board-for-the-book.html)) to refuse a decision without **Item.**, **Version read.**, **Comment.** and **Decision.**, and one whose verb is not on the list.
 5. **Prepare the first batch**: the four Introduction chapters marked "to review" on the desk's filter, and the five `show-in-book` issues on one page with what I need to decide. Done when I can answer all nine in one sitting.
 6. **Run the first batch with me**, record the nine decisions, act on them in the vault, and write a debrief stamped `book__v1.0.0__decisions-01.md` with the counts by verb and what did not work about the loop. Done when the debrief is in `team/editor/debriefs/`.
 7. **Hand the journalist** any "article first" as a brief in `team/journalist/briefs/`.
@@ -106,14 +106,13 @@ For the editor. Read `team/editor/role.md` first.
 Questions for me, kept apart:
 
 - Voice memos per item, or one memo per sitting that the editor splits?
-- The first signed-off change: v1.1.0 of the first edition, or the start of the second?
 
 ## What this does not claim {#limits}
 
 - **The loop has not run.** This is the design; the first batch tests it.
 - **The verbs are a starting list.** If I keep reaching for one that is not there, it gets added.
 - **Seconds per item is a hope.** The first debrief will say how long nine items took.
-- **The version question is open.** v1.1.0 or the second edition; the decisions will tell.
+- **The decision files are not here.** They are in the vault, so this site shows them only through the inventory's decision column, once that is built.
 - **The decision on the desk is a proposal.** The desk does not have it yet; task 2 adds it.
 - **The editor acts in the vault, not here.** Nothing in this repository's copy of the book changes until a version is signed off.
 
@@ -121,6 +120,6 @@ If you edit books with an author, or with agents, and do it differently, write t
 
 ## Where this comes from {#sources}
 
-A voice memo of mine on 18 October 2026, written up by this site's journalist, `gen-z.journalist`, in my voice. The argument and the editorial responsibility are mine.
+Two voice memos of mine on 18 October 2026, written up by this site's journalist, `gen-z.journalist`, in my voice; the second decided where decisions on the text live and how versions are numbered ([the decisions page](/decisions/index.html)). The argument and the editorial responsibility are mine.
 
 The record: `team/editor/role.md` (the transcripts kept verbatim, summaries apart; the refusals quoted), `team/reviewer/role.md` (fixed, declined, deferred), `CLAUDE.md` (when a new version of the book comes in), and `admin/content/book/versions.json` in this repository at site v0.2.0; `assets/reader.js` and `CLAUDE.md`'s rule for the reader; the vault's `comments/README.md` and `reviews/README.md`. The rule that not every issue needs fixing is from [Short, punchy, and co-written with Claude](https://newsroom.sgit.ai/articles/short-punchy-and-co-written.html), 18 October 2026. The first batch's items are the five `show-in-book` issues in `admin/content/github/issues-p1.json` and the four files of `v1/content/1.introduction/`.

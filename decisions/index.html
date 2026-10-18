@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decisions &mdash; gen-z-developers.sgit.ai</title>
+<meta name="description" content="Dinis&#x27;s decisions on how the book is made, versioned and published.">
+<link rel="canonical" href="https://gen-z-developers.sgit.ai/decisions/index.html">
+<meta property="og:title" content="Decisions">
+<meta property="og:description" content="Dinis&#x27;s decisions on how the book is made, versioned and published.">
+<meta property="og:url" content="https://gen-z-developers.sgit.ai/decisions/index.html">
+<meta property="og:type" content="article">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230c2a3d%27/%3E%3Crect x=%274%27 y=%276%27 width=%2711%27 height=%2720%27 fill=%27%237bc08f%27/%3E%3Crect x=%2717%27 y=%276%27 width=%2711%27 height=%2720%27 fill=%27%23e5625b%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Arial Black,Arial%27 font-weight=%27900%27 font-size=%2718%27 text-anchor=%27middle%27 fill=%27%230c2a3d%27%3EZ%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<nav class="site"><div class="row">
+<a class="brand" href="../index.html">gen-z-developers<span>.sgit.ai</span></a>
+<a class="parent" href="https://sgit.ai" title="sgit.ai, the parent project">&#8599; part of <b>sgit.ai</b></a>
+<a class="nl" href="../v1/book/index.html">The book</a><a class="nl" href="../read/index.html">Read &amp; review</a><a class="nl" href="../v1/versions/index.html">Versions</a><a class="nl" href="../contributors/index.html">Contributors</a><a class="nl" href="../map/index.html">The map</a><a class="nl" href="../articles/index.html">Articles</a><a class="nl here" href="../decisions/index.html">Decisions</a><a class="nl" href="../briefs/index.html">The briefs</a><a class="nl" href="../team/index.html">The team</a><a class="nl" href="../vault/index.html">The vault</a><a class="nl" href="../admin/index.html">Admin</a>
+<span class="ver">site <a href="../admin/versions.html" title="Release history">v0.2.2</a></span>
+</div></nav>
+<main><div class="inner">
+<div class="crumbs"><a href="../index.html">gen-z-developers.sgit.ai</a> &rarr; <b>Decisions</b></div>
+<h1>Decisions</h1>
+<p class="lede">Dinis&rsquo;s decisions on how this book is made, versioned and published, one record each, in the order made. A decision is never deleted; a later one supersedes it and says so. Decisions on the book&rsquo;s text are kept in the vault, with the text issues.</p>
+<div class="tablewrap"><table><thead><tr><th>#</th><th>Decided</th><th>Decision</th></tr></thead><tbody><tr><td><a href="#the-2018-text-is-cc-by">001</a></td><td>2026-10-18</td><td>The 2018 text is Creative Commons BY</td></tr><tr><td><a href="#leanpub-gets-our-own-pdf">002</a></td><td>2026-10-18</td><td>Leanpub gets our own PDF, built here and matched to the 2018 one</td></tr><tr><td><a href="#every-format-from-one-source">003</a></td><td>2026-10-18</td><td>Every format from one source</td></tr><tr><td><a href="#the-cover-waits">004</a></td><td>2026-10-18</td><td>The cover waits</td></tr><tr><td><a href="#text-issues-live-in-the-vault">005</a></td><td>2026-10-18</td><td>Text issues live in the vault</td></tr><tr><td><a href="#every-change-is-minor-unless-dinis-says-major">006</a></td><td>2026-10-18</td><td>Every change is minor, unless Dinis says it is major</td></tr><tr><td><a href="#two-kinds-of-article">007</a></td><td>2026-10-18</td><td>Two kinds of article</td></tr></tbody></table></div>
+<div class="doc"><div class="body"><section id="the-2018-text-is-cc-by"><h2>001 &middot; The 2018 text is Creative Commons BY</h2><p><strong>Decided.</strong> 2026-10-18</p>
+<p><strong>By.</strong> Dinis Cruz, in a voice memo to the session running as the journalist.</p>
+<p><strong>Said.</strong> "The license of this is going to be this as before, CC by, Creative Commons by."</p>
+<p><strong>Means.</strong> The text of <em>Generation Z Developers</em> is CC BY 4.0, as the 2018 cover and Introduction said. The CC BY-SA line in the 2018 footer and the Apache 2.0 file in the 2018 repository are the exceptions, explained, not followed. The site's footer says CC BY; the print and screen editions get a copyright page that says CC BY 4.0. The reviewer closes its blocked issue <code>004__settle-the-licence-of-the-2018-text.md</code> against this record.</p>
+<p><strong>Supersedes.</strong> The open question in the build brief and in <a href="/articles/release-the-book-we-already-released.md">release the book we already released</a>.</p>
+<p><strong>Recorded in.</strong> <a href="/agent-articles/dinis-first-decisions.md">Dinis's first decisions</a>.</p></section><section id="leanpub-gets-our-own-pdf"><h2>002 &middot; Leanpub gets our own PDF, built here and matched to the 2018 one</h2><p><strong>Decided.</strong> 2026-10-18</p>
+<p><strong>By.</strong> Dinis Cruz.</p>
+<p><strong>Said.</strong> "I want to try to upload LeanPub, the print PDF. I want to see if that can work. So we can do everything here." And: "compare with the print PDF created by LeanPub, and we should be able to match it here."</p>
+<p><strong>Means.</strong> The publisher builds the PDF in this repository, with the print workflow the graphs books used (WeasyPrint, 6 by 9, the bookkit), compares it page by page with the 2018 file Leanpub made (<code>v1/generation-z-print-ready.pdf</code>, 139 pages), and keeps going until it matches: same chapters, same order, close to the same pages. Leanpub is switched to uploaded files. Then the same goes to Amazon KDP. Whether Leanpub's PDF must differ from the print one (Leanpub's buyers read on screens; the paperback is printed) is for the publisher to find out and report, not to assume.</p>
+<p><strong>Supersedes.</strong> "Release one" in <a href="/articles/release-the-book-we-already-released.md">release the book we already released</a>, the 2018 interior uploaded untouched: the first release is now the one built here.</p>
+<p><strong>Recorded in.</strong> <a href="/agent-articles/dinis-first-decisions.md">Dinis's first decisions</a>.</p></section><section id="every-format-from-one-source"><h2>003 &middot; Every format from one source</h2><p><strong>Decided.</strong> 2026-10-18</p>
+<p><strong>By.</strong> Dinis Cruz.</p>
+<p><strong>Said.</strong> "I would like to create them all here from the same source."</p>
+<p><strong>Means.</strong> The print PDF, the screen PDF, the EPUB, and whatever Kindle needs, are all built in this repository from the same frozen text, by the same build, with the same stamp and manifest. None is made by hand or by a store's converter. Dinis remembered Leanpub wanting MOBI; which formats each store accepts today is for the publisher to check and record before building (Amazon's own guidance for new Kindle ebooks is the source to read, not memory).</p>
+<p><strong>Supersedes.</strong> Nothing; it extends <a href="/articles/release-the-book-we-already-released.md">release the book we already released</a>, which left the EPUB slot empty.</p>
+<p><strong>Recorded in.</strong> <a href="/agent-articles/dinis-first-decisions.md">Dinis's first decisions</a>.</p></section><section id="the-cover-waits"><h2>004 &middot; The cover waits</h2><p><strong>Decided.</strong> 2026-10-18</p>
+<p><strong>By.</strong> Dinis Cruz.</p>
+<p><strong>Said.</strong> "We'll make a decision on the cover a bit later on."</p>
+<p><strong>Means.</strong> No cover is chosen yet. The publisher does not block the PDF work on it: the interior, the formats and the comparison with 2018 go ahead, and the Leanpub listing keeps its current cover until the decision. Drawing cover options can wait until Dinis asks for them.</p>
+<p><strong>Supersedes.</strong> Task 1 of the brief in <a href="/articles/release-the-book-we-already-released.md">release the book we already released</a>, three cover options first.</p>
+<p><strong>Recorded in.</strong> <a href="/agent-articles/dinis-first-decisions.md">Dinis's first decisions</a>.</p></section><section id="text-issues-live-in-the-vault"><h2>005 &middot; Text issues live in the vault</h2><p><strong>Decided.</strong> 2026-10-18</p>
+<p><strong>By.</strong> Dinis Cruz.</p>
+<p><strong>Said.</strong> "For now, all the text issues we'll leave in our vault. So we're going to move into the vault, and we can start with that V2.0, because it's just been released."</p>
+<p><strong>Means.</strong> Every issue about the book's text (a finding, a reader's comment, a 2018 GitHub issue, Dinis's comments and decisions on an item) is a file in the public vault, under <code>board/</code>, not in this repository. The work issues of the roles stay in <code>team/&lt;role&gt;/issues/</code>, and the decisions on how the book is made stay here, on <a href="/decisions/index.html">the decisions page</a>. The working copy starts from the book as site v0.2.0 froze it: v1.0.0, the published book, 28 chapters. The site's board, when it is built, shows the roles' work issues; the vault's board is the view of the text issues.</p>
+<p><strong>Supersedes.</strong> "Where content issues live" in <a href="/articles/one-board-for-the-book.md">one board for the book</a>, which proposed <code>board/content/</code> in this repository.</p>
+<p><strong>Recorded in.</strong> <a href="/agent-articles/dinis-first-decisions.md">Dinis's first decisions</a>. The reading of "V2.0" as site v0.2.0 is the journalist's; Dinis to confirm.</p></section><section id="every-change-is-minor-unless-dinis-says-major"><h2>006 &middot; Every change is minor, unless Dinis says it is major</h2><p><strong>Decided.</strong> 2026-10-18</p>
+<p><strong>By.</strong> Dinis Cruz.</p>
+<p><strong>Said.</strong> "Every change should be minor, unless I say it's a major one."</p>
+<p><strong>Means.</strong> Versions here are <code>v{release}.{major}.{minor}</code>, the names this repository's release pipeline already uses. Every change, to the site or to the book, bumps the last number. The middle number moves only when Dinis says a change is major, and the first only for a new edition of the book (the second edition is book v2.0.0, when Dinis says so). An agent never chooses a major on its own: the site's next release after v0.2.1 is v0.2.2, and the book's next signed-off version after v1.0.0 is v1.0.1.</p>
+<p><strong>Supersedes.</strong> The "deliberate .0 minor" in <code>CLAUDE.md</code>'s release ritual, and "a change to the text is the next minor version" in <code>admin/content/book/versions.json</code>, both read as allowing an agent to choose the middle number.</p>
+<p><strong>Recorded in.</strong> <a href="/agent-articles/dinis-first-decisions.md">Dinis's first decisions</a>.</p></section><section id="two-kinds-of-article"><h2>007 &middot; Two kinds of article</h2><p><strong>Decided.</strong> 2026-10-18</p>
+<p><strong>By.</strong> Dinis Cruz.</p>
+<p><strong>Said.</strong> "We need to have an article, which is article where I write or we co-write together, like where it's speaking in my voice. And I think you should have another article, which is where you write it with updates, and actually every agent writes with the updates."</p>
+<p><strong>Means.</strong> Two streams. <strong>Co-written articles</strong> (<code>admin/content/articles/</code>, at <code>/articles/</code>): Dinis's memo, in Dinis's voice, written up with the journalist; they brief the roles. <strong>Agent articles</strong> (<code>admin/content/agent-articles/</code>, at <code>/agent-articles/</code>): written by the agent that did the work, in its own voice, once per significant body of work, not per release: what it did, the flows, the changes, what it leaves for the other roles. "A bigger version of the version number." When an agent article refers to a human decision it names who made it ("decided by Dinis"), quoting only where the words matter. Every agent working on this repository writes one when it finishes a body of work.</p>
+<p><strong>Supersedes.</strong> Nothing; it extends <a href="/articles/write-it-as-an-article.md">write it as an article</a>.</p>
+<p><strong>Recorded in.</strong> <a href="/agent-articles/dinis-first-decisions.md">Dinis's first decisions</a>.</p></section></div></div>
+<p class="small dim">The sources are in <code>admin/content/decisions/</code>. The agent article that recorded each one is linked from it.</p>
+
+</div></main>
+<footer class="site"><div class="row">
+<span>Generation Z Developers, by Dinis Cruz. The 2018 text is Creative Commons BY 4.0, as Dinis decided on 18 October 2026: see <a href="../v1/versions/index.html#licence">the licence note</a>. Everything else on this site is CC BY 4.0; code under the repository licence.</span>
+<span><a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers">GitHub</a> &middot; <a href="../vault/index.html">the working vault</a> &middot; <a href="../admin/versions.html">release history</a> &middot; <a href="../llms.txt">llms.txt</a></span>
+</div></footer>
+</body>
+</html>

@@ -19,13 +19,17 @@
 
 ## Primary responsibilities
 
-1. The articles, in `admin/content/articles/NN__<slug>.md`, rendered at `/articles/` with a markdown twin for agents.
-2. The briefs that point a role at an article: one short file in `team/<role>/briefs/`, stamped `book__v<N>__<slug>.md` or `v<site>__<slug>.md`.
-3. The research behind each article, with its counts reproducible from the repository, the vault or a named public source.
-4. Corrections: when Dinis or a role finds an article wrong, the article is corrected in its source and the release note says what changed.
+1. The co-written articles, in Dinis's voice, in `admin/content/articles/NN__<slug>.md`, rendered at `/articles/` with a markdown twin for agents.
+2. Its own agent articles, in its own voice, in `admin/content/agent-articles/`, when it finishes a significant body of work, as every agent here does (decision 007).
+3. The decision records, in `admin/content/decisions/`, when Dinis makes a decision on how the book is made, versioned or published in a memo the journalist receives; decisions on the text go to the vault, for the editor.
+4. The briefs that point a role at an article: one short file in `team/<role>/briefs/`, stamped `book__v<N>__<slug>.md` or `v<site>__<slug>.md`.
+5. The research behind each article, with its counts reproducible from the repository, the vault or a named public source.
+6. Corrections: when Dinis or a role finds an article wrong, the article is corrected in its source and the release note says what changed.
 
 ## Core workflows
 
 1. **Write an article.** Read the memo. Read the record. Count what needs counting. Write the article in the newsroom's shape, ending with the brief. Release it with the site's release ritual.
 2. **Brief a role.** For each role the article asks something of, write `team/<role>/briefs/<stamp>__<slug>.md`: which article, which section is the brief, what is a decision for Dinis.
-3. **Follow up.** Read the role's debrief when it comes; if the work showed the article wrong, correct the article; if it raised a new idea, that is the next article.
+3. **Record a decision.** Quote Dinis's words, say what the decision means and what it supersedes, revise any article it overturns so it says what is now true, and update the briefs it changes.
+4. **Account for the work.** When a body of work is done, write the agent article: what was done, the flows, the changes, what is left for the other roles, and who decided what.
+5. **Follow up.** Read the role's debrief when it comes; if the work showed the article wrong, correct the article; if it raised a new idea, that is the next article.

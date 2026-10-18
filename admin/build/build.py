@@ -11,7 +11,9 @@ Sources (never edited by this script, except the two bootstraps noted):
   admin/content/book/versions.json       the book's official versions; text_sha256 is filled in ONCE by this build
   admin/content/map.json                 the chapter-to-article map (gen_map.py)
   admin/content/briefs/*.md              the newsroom articles and notes that brief this site, captured verbatim
-  admin/content/articles/NN__<slug>.md   this site's own articles, by its journalist: ideas, tasks and reviews for the roles
+  admin/content/articles/NN__<slug>.md   articles co-written with Dinis, in Dinis's voice: ideas, tasks and reviews for the roles
+  admin/content/agent-articles/NN__*.md  agent articles: one per significant body of work, in the agent's own voice
+  admin/content/decisions/NNN__*.md      Dinis's decisions on how the book is made, versioned and published
   admin/content/vault.json               the public working vault's read key and address (the write key is never here)
   admin/content/versions.json            the site's release history, narrated
   team/<role>/role.md, issues/, briefs/  the roles
@@ -85,6 +87,7 @@ NAV = [
     ("Contributors", "contributors/index.html"),
     ("The map", "map/index.html"),
     ("Articles", "articles/index.html"),
+    ("Decisions", "decisions/index.html"),
     ("The briefs", "briefs/index.html"),
     ("The team", "team/index.html"),
     ("The vault", "vault/index.html"),
@@ -166,7 +169,7 @@ def page(rel, title, body, description, crumbs=(), extra_head="", wide=False):
 {body}
 </div></main>
 <footer class="site"><div class="row">
-<span>Generation Z Developers, by Dinis Cruz. The 2018 text is Creative Commons BY (the cover) or BY-SA (the footer): see <a href="{up}v1/versions/index.html#licence">the licence note</a>. Everything else on this site is CC BY 4.0; code under the repository licence.</span>
+<span>Generation Z Developers, by Dinis Cruz. The 2018 text is Creative Commons BY 4.0, as Dinis decided on 18 October 2026: see <a href="{up}v1/versions/index.html#licence">the licence note</a>. Everything else on this site is CC BY 4.0; code under the repository licence.</span>
 <span><a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers">GitHub</a> &middot; <a href="{up}vault/index.html">the working vault</a> &middot; <a href="{up}admin/versions.html">release history</a> &middot; <a href="{up}llms.txt">llms.txt</a></span>
 </div></footer>
 </body>
@@ -697,7 +700,7 @@ def build_versions(frozen_md, parts, pub):
 <p class="small dim">As the book's own <code>_manuscript/change-log.md</code> records it. The contributors it names are to be credited in the second edition, with their permission.</p>
 <div class="body">{changelog_html}</div>
 <h2 id="licence">The licence</h2>
-<p>The repository's licence file is Apache 2.0 (kept as <a href="../LICENSE-2018-repository.txt">v1/LICENSE-2018-repository.txt</a>). The book's Introduction says Creative Commons Attribution 4.0; its footer says Attribution-ShareAlike 4.0; the printed cover carries the CC BY mark. The build brief says to treat the text as CC BY and confirm with Dinis. Until that is settled, the 2018 text on this site is shown under the licence the book itself declares, and the question is open on <a href="../../team/index.html">the team's board</a>.</p>
+<p>The repository's licence file is Apache 2.0 (kept as <a href="../LICENSE-2018-repository.txt">v1/LICENSE-2018-repository.txt</a>). The book's Introduction says Creative Commons Attribution 4.0; its footer says Attribution-ShareAlike 4.0; the printed cover carries the CC BY mark. On 18 October 2026 Dinis decided the text is CC BY 4.0, as the cover and the Introduction say (<a href="../../decisions/index.html#the-2018-text-is-cc-by">decision 001</a>): the BY-SA line in the footer and the Apache 2.0 file in the 2018 repository are the exceptions, recorded here, not followed.</p>
 """
     page("v1/versions/index.html", "The versions of the book", body,
          "Every official version of Generation Z Developers, and the delta between them, block by block.",
@@ -767,37 +770,82 @@ def build_briefs():
 
 
 # ------------------------------------------------------------------ articles
-def build_articles():
-    """This site's own articles, written by its journalist in the newsroom's shape (admin/content/articles/README.md).
-    The file is NN__<slug>.md; NN is the reading order and never changes, the slug is the address. Each article is
-    rendered to articles/<slug>.html and copied as articles/<slug>.md, the twin an agent is pointed at."""
-    files = sorted((ROOT / "admin/content/articles").glob("[0-9][0-9]__*.md"))
+def render_articles(src, outdir, agent):
+    """One stream of articles: admin/content/<src>/NN__<slug>.md to <outdir>/<slug>.html, plus the markdown twin
+    <outdir>/<slug>.md an agent is pointed at. NN is the reading order and never changes; the slug is the address."""
     out = []
-    for f in files:
+    for f in sorted((ROOT / "admin/content" / src).glob("[0-9][0-9]__*.md")):
         fm, text = frontmatter(f.read_text(encoding="utf-8"))
         slug = f.stem.split("__", 1)[1]
         a = {k: fm_get(fm, k) for k in ("title", "date", "author", "summary", "version", "tags", "status")}
         if a["status"] != "published":
             continue
-        rel = f"articles/{slug}.html"
+        rel = f"{outdir}/{slug}.html"
         hook = a["title"].split(":")[0]
-        body = (f'<article class="doc"><p class="kicker">article &middot; {esc(a["date"])} &middot; site {esc(a["version"])} &middot; '
-                f'<a href="{slug}.md">markdown</a></p><h1>{esc(a["title"])}</h1>'
-                f'<p class="byline">By {esc(a["author"])}, written up by this site&rsquo;s journalist, <code>gen-z.journalist</code>; the editorial responsibility is {esc(a["author"])}&rsquo;s.</p>'
+        if agent:
+            kicker = "agent article"
+            byline = (f'By <code>{esc(a["author"])}</code>, an agent of this site, in its own voice, about work it did. '
+                      f'Decisions it quotes are attributed to Dinis by name; the editorial responsibility is Dinis&rsquo;s.')
+        else:
+            kicker = "article"
+            byline = (f'By {esc(a["author"])}, co-written with this site&rsquo;s journalist, <code>gen-z.journalist</code>, in {esc(a["author"])}&rsquo;s voice; '
+                      f'the editorial responsibility is {esc(a["author"])}&rsquo;s.')
+        body = (f'<article class="doc"><p class="kicker">{kicker} &middot; {esc(a["date"])} &middot; site {esc(a["version"])} &middot; '
+                f'<a href="{slug}.md">markdown</a></p><h1>{esc(a["title"])}</h1><p class="byline">{byline}</p>'
                 f'<div class="src"><b>Abstract.</b> {esc(a["summary"])}</div>'
                 f'<div class="body">{md(text)}</div></article>')
         page(rel, hook, body, a["summary"][:300], crumbs=(("Articles", "articles/index.html"), (hook, rel)))
-        write(f"articles/{slug}.md", f.read_text(encoding="utf-8"))
+        write(f"{outdir}/{slug}.md", f.read_text(encoding="utf-8"))
         out.append((rel, a))
-    items = "".join(f'<li><a href="{rel[9:]}"><b>{esc(a["title"].split(":")[0])}</b></a>: {esc(a["title"].split(":", 1)[1].strip())}'
-                    f' <span class="small dim">({esc(a["date"])}, site {esc(a["version"])})</span></li>' for rel, a in out)
-    body = f"""<h1>Articles</h1>
-<p class="lede">This site&rsquo;s own articles, in reading order. They are how Dinis briefs the roles that finish the book: an idea, a task or a review is researched, mapped and written up as an article, in Dinis&rsquo;s voice, before any role acts on it; a role is then pointed at the article and takes it from there. The shape and the voice are the newsroom&rsquo;s (<a href="https://newsroom.sgit.ai/articles/how-the-voice-works.html">how the voice works</a>).</p>
-<ol class="articles">{items}</ol>
-<p class="small dim">The sources are in <code>admin/content/articles/</code>; each page links its markdown twin, which is the file to hand to an agent. The journalist&rsquo;s mandate is <a href="../team/journalist/index.html">its role</a>.</p>
-"""
-    page("articles/index.html", "Articles", body, "This site's own articles: ideas, tasks and reviews for the roles that finish the book.", crumbs=(("Articles", "articles/index.html"),))
     return out
+
+
+def build_articles():
+    """The two streams (decided by Dinis on 18 October 2026): articles co-written with Dinis, in Dinis's voice
+    (admin/content/articles/ to articles/), and agent articles, one per significant body of work, written by the agent
+    that did it, in its own voice (admin/content/agent-articles/ to agent-articles/). One index for both."""
+    co = render_articles("articles", "articles", agent=False)
+    ag = render_articles("agent-articles", "agent-articles", agent=True)
+
+    def li(rel, a):
+        title = a["title"].split(":", 1)
+        by = f' &middot; <code>{esc(a["author"])}</code>' if rel.startswith("agent-articles/") else ""
+        return (f'<li><a href="../{rel}"><b>{esc(title[0])}</b></a>: {esc(title[1].strip() if len(title) > 1 else "")}'
+                f' <span class="small dim">({esc(a["date"])}, site {esc(a["version"])}{by})</span></li>')
+    body = f"""<h1>Articles</h1>
+<p class="lede">How the work on this book is communicated: as articles, in two streams. Each page links its markdown twin, which is the file to hand to an agent.</p>
+<h2 id="co-written">Co-written with Dinis</h2>
+<p class="small dim">In Dinis&rsquo;s voice, from Dinis&rsquo;s memos, written up with this site&rsquo;s journalist. They are the briefs: an idea, a task or a review researched, counted and written up before any role acts on it, ending with a brief a role can execute. The shape is the newsroom&rsquo;s (<a href="https://newsroom.sgit.ai/articles/how-the-voice-works.html">how the voice works</a>). Sources in <code>admin/content/articles/</code>.</p>
+<ol class="articles">{"".join(li(r, a) for r, a in co)}</ol>
+<h2 id="agents">By the agents</h2>
+<p class="small dim">In the agent&rsquo;s own voice: every agent writes one when it has finished a significant body of work, a bigger version of a release note, with what it did, the flows, the changes, and what it leaves for the other roles. When it refers to a human decision it names who made it. Sources in <code>admin/content/agent-articles/</code>; the decisions they record are on <a href="../decisions/index.html">the decisions page</a>.</p>
+<ol class="articles">{"".join(li(r, a) for r, a in ag) or "<li class='dim'>none yet</li>"}</ol>
+<p class="small dim">The journalist&rsquo;s mandate is <a href="../team/journalist/index.html">its role</a>.</p>
+"""
+    page("articles/index.html", "Articles", body, "This site's articles: co-written with Dinis, and by the agents about their work.", crumbs=(("Articles", "articles/index.html"),))
+    build_decisions()
+    return co + ag
+
+
+def build_decisions():
+    """Dinis's decisions on how the book is made and published, one file each: admin/content/decisions/NNN__<slug>.md,
+    numbered in the order made, never renumbered or deleted. Decisions on the book's text live in the vault with the
+    text issues. Each file: '# title', then **Decided.**, **By.**, **Said.**, **Means.**, **Supersedes.**, **Recorded in.**"""
+    rows, secs = [], []
+    for f in sorted((ROOT / "admin/content/decisions").glob("[0-9][0-9][0-9]__*.md")):
+        text = f.read_text(encoding="utf-8")
+        title = re.search(r"^# (.+)$", text, re.M).group(1).strip()
+        num, slug = f.stem.split("__", 1)
+        decided = re.search(r"^\*\*Decided\.\*\*\s*(.+)$", text, re.M)
+        rows.append(f'<tr><td><a href="#{slug}">{num}</a></td><td>{esc(decided.group(1) if decided else "")}</td><td>{esc(title)}</td></tr>')
+        secs.append(f'<section id="{slug}"><h2>{num} &middot; {esc(title)}</h2>{md(text.split(chr(10), 1)[1])}</section>')
+    body = f"""<h1>Decisions</h1>
+<p class="lede">Dinis&rsquo;s decisions on how this book is made, versioned and published, one record each, in the order made. A decision is never deleted; a later one supersedes it and says so. Decisions on the book&rsquo;s text are kept in the vault, with the text issues.</p>
+<div class="tablewrap"><table><thead><tr><th>#</th><th>Decided</th><th>Decision</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div>
+<div class="doc"><div class="body">{"".join(secs)}</div></div>
+<p class="small dim">The sources are in <code>admin/content/decisions/</code>. The agent article that recorded each one is linked from it.</p>
+"""
+    page("decisions/index.html", "Decisions", body, "Dinis's decisions on how the book is made, versioned and published.", crumbs=(("Decisions", "decisions/index.html"),))
 
 
 # ------------------------------------------------------------------ team
@@ -922,7 +970,7 @@ def build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib,
 <li><b>The second edition is not written.</b> This release has the first edition, the map, the roles, the vault and the versions machinery.</li>
 <li><b>The map is a first reading.</b> Not every outline has an article, and not every article fits; the reviewer and the editor decide.</li>
 <li><b>The address is the one proposed</b>, matching the printed cover's <i>Gen Z Developers</i>; to confirm.</li>
-<li><b>The licence of the 2018 text is to confirm</b> with Dinis: CC BY on the cover, CC BY-SA in the footer, Apache 2.0 on the repository.</li>
+<li><b>The licence of the 2018 text is CC BY 4.0</b>, decided by Dinis on 18 October 2026 (<a href="decisions/index.html#the-2018-text-is-cc-by">decision 001</a>); the 2018 footer's BY-SA and the 2018 repository's Apache 2.0 file are the exceptions.</li>
 </ul></div>
 </div>
 <p class="small dim">Built as the build brief <a href="briefs/08__note-a-website-to-finish-the-book.html">a website to finish the book</a> asked: the new repository with v1 imported as released, a static site showing it chapter by chapter, and a versions page reusing the newsroom's <code>page_versions.py</code>. The agent surface is <a href="llms.txt">llms.txt</a>.</p>

@@ -32,13 +32,26 @@ their working copies in the public vault.
 ## The release ritual, every push to `dev`
 
 1. `git fetch origin dev --tags` first. Never choose a version number without fetching.
-2. `printf 'vX.Y.Z' > admin/build/version.txt`: the next patch, or a deliberate `.0` minor.
+2. `printf 'vX.Y.Z' > admin/build/version.txt`: always the next minor, the last number. The middle number moves
+   only when Dinis says a change is major; an agent never chooses it (decision 006, `/decisions/`). The same
+   rule holds for the book's versions.
 3. Add a row to `admin/content/versions.json` saying what changed and why, for a reader who will
    not open the diff.
 4. `python3 admin/build/build.py` (and `gen_map.py` first if the authored reading changed).
 5. `node admin/build/validate.js`, green.
 6. Commit as `site vX.Y.Z: what changed`, the colon straight after the version; CI parses it.
 7. Push your branch, then `dev`. On a version collision: fetch, renumber, rebuild, retry; never force.
+
+## Articles, agent articles and decisions
+
+- **Articles** (`admin/content/articles/`, `/articles/`) are co-written with Dinis, in Dinis's voice, by the journalist;
+  they brief the roles. A role pointed at one reads it, opens its own issues from its brief, and does the work.
+- **Agent articles** (`admin/content/agent-articles/`, `/agent-articles/`): when you finish a significant body of
+  work, write one, in your own voice as the agent: what you did, the flows, the changes, what you leave for the
+  other roles. Not one per release; one per body of work. When you refer to a human decision, name who made it.
+- **Decisions** on how the book is made, versioned and published are records in `admin/content/decisions/`
+  (`/decisions/`), one per decision, never deleted. Decisions on the book's **text**, and the text issues
+  themselves, live in the vault (`board/`), not here (decision 005).
 
 ## Published and drafts
 

@@ -17,8 +17,8 @@
 <nav class="site"><div class="row">
 <a class="brand" href="../../index.html">gen-z-developers<span>.sgit.ai</span></a>
 <a class="parent" href="https://sgit.ai" title="sgit.ai, the parent project">&#8599; part of <b>sgit.ai</b></a>
-<a class="nl" href="../../v1/book/index.html">The book</a><a class="nl" href="../../read/index.html">Read &amp; review</a><a class="nl" href="../../v1/versions/index.html">Versions</a><a class="nl" href="../../contributors/index.html">Contributors</a><a class="nl" href="../../map/index.html">The map</a><a class="nl" href="../../articles/index.html">Articles</a><a class="nl" href="../../briefs/index.html">The briefs</a><a class="nl here" href="../../team/index.html">The team</a><a class="nl" href="../../vault/index.html">The vault</a><a class="nl" href="../../admin/index.html">Admin</a>
-<span class="ver">site <a href="../../admin/versions.html" title="Release history">v0.2.1</a></span>
+<a class="nl" href="../../v1/book/index.html">The book</a><a class="nl" href="../../read/index.html">Read &amp; review</a><a class="nl" href="../../v1/versions/index.html">Versions</a><a class="nl" href="../../contributors/index.html">Contributors</a><a class="nl" href="../../map/index.html">The map</a><a class="nl" href="../../articles/index.html">Articles</a><a class="nl" href="../../decisions/index.html">Decisions</a><a class="nl" href="../../briefs/index.html">The briefs</a><a class="nl here" href="../../team/index.html">The team</a><a class="nl" href="../../vault/index.html">The vault</a><a class="nl" href="../../admin/index.html">Admin</a>
+<span class="ver">site <a href="../../admin/versions.html" title="Release history">v0.2.2</a></span>
 </div></nav>
 <main><div class="inner">
 <div class="crumbs"><a href="../../index.html">gen-z-developers.sgit.ai</a> &rarr; <a href="../../team/index.html">The team</a> &rarr; <b>The journalist</b></div>
@@ -37,7 +37,9 @@
 </ul>
 <h2 id="primary-responsibilities">Primary responsibilities</h2>
 <ol>
-<li>The articles, in <code>admin/content/articles/NN__&lt;slug&gt;.md</code>, rendered at <code>/articles/</code> with a markdown twin for agents.</li>
+<li>The co-written articles, in Dinis's voice, in <code>admin/content/articles/NN__&lt;slug&gt;.md</code>, rendered at <code>/articles/</code> with a markdown twin for agents.</li>
+<li>Its own agent articles, in its own voice, in <code>admin/content/agent-articles/</code>, when it finishes a significant body of work, as every agent here does (decision 007).</li>
+<li>The decision records, in <code>admin/content/decisions/</code>, when Dinis makes a decision on how the book is made, versioned or published in a memo the journalist receives; decisions on the text go to the vault, for the editor.</li>
 <li>The briefs that point a role at an article: one short file in <code>team/&lt;role&gt;/briefs/</code>, stamped <code>book__v&lt;N&gt;__&lt;slug&gt;.md</code> or <code>v&lt;site&gt;__&lt;slug&gt;.md</code>.</li>
 <li>The research behind each article, with its counts reproducible from the repository, the vault or a named public source.</li>
 <li>Corrections: when Dinis or a role finds an article wrong, the article is corrected in its source and the release note says what changed.</li>
@@ -46,11 +48,13 @@
 <ol>
 <li><strong>Write an article.</strong> Read the memo. Read the record. Count what needs counting. Write the article in the newsroom's shape, ending with the brief. Release it with the site's release ritual.</li>
 <li><strong>Brief a role.</strong> For each role the article asks something of, write <code>team/&lt;role&gt;/briefs/&lt;stamp&gt;__&lt;slug&gt;.md</code>: which article, which section is the brief, what is a decision for Dinis.</li>
+<li><strong>Record a decision.</strong> Quote Dinis's words, say what the decision means and what it supersedes, revise any article it overturns so it says what is now true, and update the briefs it changes.</li>
+<li><strong>Account for the work.</strong> When a body of work is done, write the agent article: what was done, the flows, the changes, what is left for the other roles, and who decided what.</li>
 <li><strong>Follow up.</strong> Read the role's debrief when it comes; if the work showed the article wrong, correct the article; if it raised a new idea, that is the next article.</li>
 </ol></div><h2 id="work">The work environment</h2><p class="small dim">The folder is the status: an issue moves between open/, blocked/ and done/ with a <code>git mv</code>. Another role may read this folder; only this role writes into it. Briefs arrive here; debriefs are what the role reports back, stamped with the version they reviewed.</p><h3>Issues: open (0)</h3><ul><li class='dim'>none</li></ul><h3>Issues: blocked (0)</h3><ul><li class='dim'>none</li></ul><h3>Issues: done (0)</h3><ul><li class='dim'>none</li></ul><h3>Briefs</h3><ul><li class='dim'>none yet</li></ul><h3>Debriefs</h3><ul><li class='dim'>none yet</li></ul></article>
 </div></main>
 <footer class="site"><div class="row">
-<span>Generation Z Developers, by Dinis Cruz. The 2018 text is Creative Commons BY (the cover) or BY-SA (the footer): see <a href="../../v1/versions/index.html#licence">the licence note</a>. Everything else on this site is CC BY 4.0; code under the repository licence.</span>
+<span>Generation Z Developers, by Dinis Cruz. The 2018 text is Creative Commons BY 4.0, as Dinis decided on 18 October 2026: see <a href="../../v1/versions/index.html#licence">the licence note</a>. Everything else on this site is CC BY 4.0; code under the repository licence.</span>
 <span><a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers">GitHub</a> &middot; <a href="../../vault/index.html">the working vault</a> &middot; <a href="../../admin/versions.html">release history</a> &middot; <a href="../../llms.txt">llms.txt</a></span>
 </div></footer>
 </body>
