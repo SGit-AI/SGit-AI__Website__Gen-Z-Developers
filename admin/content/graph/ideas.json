@@ -2207,6 +2207,537 @@
    "decided_by": null,
    "gravity": "explorer",
    "notes": "Dinis's question, kept apart in the article: inside the book, or a companion renewed every year? The chapter map gains the part as proposed (hands-on-2026) so the workflows have somewhere to point; the editor's task 2."
+  },
+  {
+   "id": "a-graph-is-not-a-diagram",
+   "title": "A graph is a network of nodes and edges, not a diagram",
+   "kind": "frame",
+   "statement": "Some readers think a graph is a picture with boxes; the book means a network, nodes and the edges between them, and shows it with visualisations. Of the three things people mean by the word (networks for analysis, graph databases for storage, semantics for meaning) the book uses the first and the third.",
+   "sources": [
+    {
+     "ref": "art:everything-is-connected",
+     "where": "A graph is not a diagram"
+    },
+    {
+     "ref": "news:the-graphs-books",
+     "where": "'In this book a graph is a network: nodes and the edges that connect them. Never a chart, never a figure'; 'A node connected to nothing is literally meaningless'"
+    },
+    {
+     "ref": "book:5.concepts/graphs.md",
+     "where": "the 2018 outline: 'requires an ability to think in nodes and edges'"
+    }
+   ],
+   "answers": [
+    "5.concepts/graphs.md"
+   ],
+   "topic": "graphs-memory",
+   "chapter": "everything-is-connected",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Everything is connected; the editor records it in the vault",
+   "gravity": "all"
+  },
+  {
+   "id": "the-whodunit-board",
+   "title": "The whodunit is the easiest way in: the detective's board is a graph",
+   "kind": "story",
+   "statement": "The board on the wall with the photos, the notes and the red string is a graph, and the question is always a connection from A to B; this generation are good detectives already. A teaching device: real investigations are messier than red string.",
+   "sources": [
+    {
+     "ref": "art:everything-is-connected",
+     "where": "The whodunit"
+    },
+    {
+     "ref": "sb:everything-is-connected",
+     "where": "the detective's board panel"
+    },
+    {
+     "ref": "art:follow-the-rabbit-holes",
+     "where": "They already have it"
+    }
+   ],
+   "answers": [
+    "5.concepts/graphs.md"
+   ],
+   "topic": "graphs-memory",
+   "chapter": "everything-is-connected",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Everything is connected; the editor records it in the vault",
+   "gravity": "all"
+  },
+  {
+   "id": "a-map-is-a-graph-with-positions",
+   "title": "A map is a graph with positions; a Wardley map is a graph with context",
+   "kind": "frame",
+   "statement": "A map is a graph where each node has a place: on a Wardley map, how visible it is and how evolved it is. That is why the graphs chapter and Where do you land belong next to each other; which comes first is Dinis's question.",
+   "sources": [
+    {
+     "ref": "art:everything-is-connected",
+     "where": "A map is a graph with positions"
+    },
+    {
+     "ref": "art:where-do-you-land",
+     "where": "the Wardley axes"
+    }
+   ],
+   "answers": [
+    "5.concepts/graphs.md"
+   ],
+   "topic": "graphs-memory",
+   "chapter": "everything-is-connected",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Everything is connected; the editor records it in the vault",
+   "gravity": "all",
+   "notes": "Dinis's open question: graphs before Wardley maps, or the other way round? The proposed map puts the graphs chapter just before Where do you land."
+  },
+  {
+   "id": "graphs-of-graphs",
+   "title": "Graphs nest, and so does the world: groups of groups are the abstraction layers we think in",
+   "kind": "frame",
+   "statement": "Fractal graphs, graphs of graphs: there is no top and no bottom, only the altitude you look from and how much definition you load there. Even nature can be seen as a gigantic graph, from systems to molecules to photons; groups of groups form the natural abstraction layers, which is how we think.",
+   "sources": [
+    {
+     "ref": "art:everything-is-connected",
+     "where": "Graphs of graphs"
+    },
+    {
+     "ref": "news:introducing-fractal-semantic-graphs",
+     "where": "'There is no top and no bottom. There is only the altitude you happen to be looking from'"
+    }
+   ],
+   "answers": [
+    "5.concepts/graphs.md",
+    "5.concepts/recursive-functions.md"
+   ],
+   "topic": "graphs-memory",
+   "chapter": "everything-is-connected",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Everything is connected; the editor records it in the vault",
+   "gravity": "all",
+   "notes": "'Nature is a graph' is a way of seeing, not a claim in physics; the book should say so."
+  },
+  {
+   "id": "provenance-is-a-graph",
+   "title": "Provenance is a graph: where a claim came from is a chain of edges back to its source",
+   "kind": "claim",
+   "statement": "How Dinis sees the world is connections, which is why provenance is a graph and why so many relationships in the book are graphs: the influences, the paths, the evidence, the people in a team. The record should be 'a graph whose every edge has a date and a source'.",
+   "sources": [
+    {
+     "ref": "art:everything-is-connected",
+     "where": "How I see the world"
+    },
+    {
+     "ref": "news:journalism-becomes-intelligence",
+     "where": "'not a pile of articles, but a graph whose every edge has a date and a source'"
+    },
+    {
+     "ref": "news:memory-is-not-a-spectator-sport",
+     "where": "Provenance built in: a URL for every quote, a hash for every file, a byline on every page"
+    }
+   ],
+   "answers": [
+    "5.concepts/facts.md",
+    "5.concepts/graphs.md"
+   ],
+   "topic": "facts-and-the-record",
+   "chapter": "facts-and-the-record",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Everything is connected; the editor records it in the vault",
+   "gravity": "all"
+  },
+  {
+   "id": "start-anywhere",
+   "title": "You can start anywhere: it matters that you start, and get movement",
+   "kind": "advice",
+   "statement": "A graph has no front page and no top, so you never need to feel overwhelmed: it does not matter where you start or whether you go straight in the right direction; it matters that you start, connect the dots and get movement. A path only makes sense afterwards.",
+   "sources": [
+    {
+     "ref": "art:everything-is-connected",
+     "where": "Start anywhere"
+    },
+    {
+     "ref": "art:connect-the-dots-backwards",
+     "where": "the path only makes sense afterwards"
+    }
+   ],
+   "answers": [
+    "5.concepts/graphs.md",
+    "4.life-patterns/content/learning.md"
+   ],
+   "topic": "graphs-memory",
+   "chapter": "everything-is-connected",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Everything is connected; the editor records it in the vault",
+   "gravity": "explorer"
+  },
+  {
+   "id": "the-2018-graph-chapters",
+   "title": "The 2018 book was already there: Dot Language and AST were graphs without saying so",
+   "kind": "evidence",
+   "statement": "The 2018 outline Graphs has four bullets that are the new chapter in miniature, and two published chapters, Dot Language (drawing the diagrams software never has) and AST (a syntax tree as 'a graph representation of source code'), are examples to place inside it.",
+   "sources": [
+    {
+     "ref": "art:everything-is-connected",
+     "where": "The 2018 book was already there"
+    },
+    {
+     "ref": "book:2.mvp-for-gen-z-dev/content/dot-language.md",
+     "where": "the published chapter"
+    },
+    {
+     "ref": "book:3.technologies/content/AST.md",
+     "where": "'a graph representation of source code'"
+    }
+   ],
+   "answers": [
+    "5.concepts/graphs.md",
+    "2.mvp-for-gen-z-dev/content/dot-language.md",
+    "3.technologies/content/AST.md"
+   ],
+   "topic": "graphs-memory",
+   "chapter": "everything-is-connected",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all",
+   "notes": "The editor's task 3 of Everything is connected: where the two chapters sit inside the new one. Which of Dinis's graph presentations the outline meant is his question."
+  },
+  {
+   "id": "code-is-already-a-graph",
+   "title": "Source code is a fractal semantic graph, and a review should read every layer of it",
+   "kind": "claim",
+   "statement": "Stories, flows, components, classes, methods and calls, the syntax tree: each layer is a graph with its own vocabulary. Naming a node and its verb is now cheap, so a change can be diffed at every altitude: a refactor moves the bottom and leaves the top still; a fix is a story holding again; the blast radius is the climb from the methods touched to the stories that can reach them. The only honest answer to AI-generated code that breaks something three packages away.",
+   "sources": [
+    {
+     "ref": "news:code-review-as-a-fractal-semantic-graph",
+     "where": "Source code is already the thing; Review every layer, diff every layer"
+    },
+    {
+     "ref": "news:code-review-as-a-fractal-semantic-graph",
+     "where": "Method streams, again: the O2 Platform technique from 2012, one script over a syntax tree"
+    },
+    {
+     "ref": "art:everything-is-connected",
+     "where": "What to bring: next to the 2018 AST chapter"
+    }
+   ],
+   "answers": [
+    "3.technologies/content/AST.md",
+    "6.security/threat-modeling.md",
+    "5.concepts/graphs.md"
+   ],
+   "topic": "graphs-memory",
+   "chapter": "everything-is-connected",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "notes": "The worked example is the sgit tool read as layered graphs, published as a vault with the read key on the page; the stories are hand-written and the example runs nothing. The numbers on the review burden (GitClear, DORA, Stack Overflow, Veracode) are in the article."
+  },
+  {
+   "id": "reality-corrects-the-graph",
+   "title": "A graph is trustworthy not because it is right but because it is where users, experts and tests can correct it",
+   "kind": "method",
+   "statement": "A model's first reading of anything will be partly wrong; the plan does not need it right. It needs layers someone knows and predictions something can check: users confirm the top, experts their own layer, tests the execution, and every correction is a commit with a name on it. Patterns in the shape are findings in themselves.",
+   "sources": [
+    {
+     "ref": "news:code-review-as-a-fractal-semantic-graph",
+     "where": "What makes it work is reality"
+    },
+    {
+     "ref": "news:knowledge-that-maintains-itself",
+     "where": "maintain, do not perfect"
+    }
+   ],
+   "answers": [
+    "5.concepts/facts.md",
+    "5.concepts/feedback-loops.md"
+   ],
+   "topic": "facts-and-the-record",
+   "chapter": "facts-and-the-record",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager"
+  },
+  {
+   "id": "a-company-in-the-review",
+   "title": "There is a company in this: a code review that reads every layer, for somebody to build",
+   "kind": "advice",
+   "statement": "Say the business plainly: a review attached to a repository that keeps the layered graph current per commit and shows each change at every altitude, sold to anyone generating code faster than they can review it, and to teams whose threat model and component layer should be the same graph. What is defensible is the record and the loop, not the model; the scripts are Apache-2.0 and a founder needs a second language and a first customer, not permission.",
+   "sources": [
+    {
+     "ref": "news:code-review-as-a-fractal-semantic-graph",
+     "where": "For somebody to build"
+    }
+   ],
+   "answers": [],
+   "topic": "be-a-founder",
+   "chapter": "be-a-founder",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer",
+   "notes": "One of the business plans published for founders on sgit.ai; an example of the book's advice to start a company from a published plan."
+  },
+  {
+   "id": "the-voice-is-four-inputs",
+   "title": "The voice is not a setting: a corpus, a memo, a short list of rules, and a reader who corrects",
+   "kind": "method",
+   "statement": "An agent sounds like its author because of four inputs: a corpus of the author's writing that defines the vocabulary; voice memos that carry how the author thinks, in the order they thought it; a short list of wording rules, each learned from one correction; and the author reading everything before and after it goes live. Take any one away and it stops working. The method transfers; the voice does not.",
+   "sources": [
+    {
+     "ref": "news:how-the-voice-works",
+     "where": "In short; The four inputs"
+    },
+    {
+     "ref": "news:how-the-voice-works",
+     "where": "This is Claude speaking: 'the person has to do most of the work, by thinking out loud, by reading, and by saying no'"
+    },
+    {
+     "ref": "news:how-much-of-this-did-i-write",
+     "where": "63,000 words in, 85,000 out: the real input is twenty years of writing"
+    }
+   ],
+   "answers": [
+    "7.your-cv/blogs.md"
+   ],
+   "topic": "publish-in-public",
+   "chapter": "your-own-newsroom",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all",
+   "notes": "Also how this book is written: see co-written-and-credited. Nothing is trained; the voice is context, which is why the rules live in a file."
+  },
+  {
+   "id": "the-memo-is-the-thinking",
+   "title": "Speak it, do not type it: a memo carries how you got there, a brief only what to write",
+   "kind": "claim",
+   "statement": "A typed brief is already edited into someone else's register; a voice memo keeps the rhythm, the tangents and the order the ideas came in, and the agent keeps those phrases rather than paraphrasing them. The tangent is not noise; it is the connection the author made. An article from a memo sounds like its author; one from a typed brief sounds like a careful assistant.",
+   "sources": [
+    {
+     "ref": "news:how-the-voice-works",
+     "where": "The memo; This is Claude speaking"
+    }
+   ],
+   "answers": [
+    "7.your-cv/blogs.md"
+   ],
+   "topic": "publish-in-public",
+   "chapter": "your-own-newsroom",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all",
+   "notes": "Dinis's hypothesis, with one session's counts behind it; the book should say it is one author's experience."
+  },
+  {
+   "id": "a-correction-becomes-a-rule",
+   "title": "A wording correction is made once and enforced; a content correction is new thinking every time",
+   "kind": "advice",
+   "statement": "'No em-dashes' is a rule an agent can keep; 'sound more human' is not. Each jarring word becomes a line in the behaviour policy, restored after every summary and checked by the validator, so the corrections move from language to content, which is the measure that the voice is working.",
+   "sources": [
+    {
+     "ref": "news:how-the-voice-works",
+     "where": "The rules; What the corrections are about now"
+    },
+    {
+     "ref": "news:re-anchoring-agent-behaviour-policies",
+     "where": "the policy printed back after every summary"
+    }
+   ],
+   "answers": [],
+   "topic": "working-with-agents",
+   "chapter": "how-to-work-with-agents",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "Sits next to every-mistake-added-a-rule: that idea is the trap (rules that grow), this one is the kind of rule that works (specific, enforced, few)."
+  },
+  {
+   "id": "memory-is-context-management",
+   "title": "Memory is not a spectator sport: it is context management, many memories, fractal, published and shared",
+   "kind": "frame",
+   "statement": "The industry's picture is one store everything is pumped into and retrieved from by similarity. Dinis's is the opposite: memory is deciding what an agent needs in its window now, and no more, because context costs tokens and attention; it is many memories, each with its own vocabulary; it is fractal, principles in a few kilobytes at the top and code at the bottom; it is published and open so an agent can fetch, quote and cite; and it is shared through vaults so a session can end and the next picks up from the same files. The field arrived at files too: a plain filesystem beat a graph memory on the benchmark.",
+   "sources": [
+    {
+     "ref": "news:memory-is-not-a-spectator-sport",
+     "where": "In short; Memory is context management; Many memories, each its own context"
+    },
+    {
+     "ref": "news:memory-is-not-a-spectator-sport",
+     "where": "What the industry built, and where we agree: Letta's benchmark, Manus, Anthropic's memory tool, context engineering"
+    },
+    {
+     "ref": "news:memory-is-not-a-spectator-sport",
+     "where": "What it looked like in the session that wrote this: nothing remembered between resets except what the files remembered"
+    }
+   ],
+   "answers": [
+    "7.your-cv/future-self.md",
+    "4.life-patterns/content/backup-your-life.md"
+   ],
+   "topic": "graphs-memory",
+   "chapter": "graphs-and-your-future-self",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "notes": "The thesis calls itself untested and falsifiable; the article lists what does not exist yet (a second estate, a freshness check, a published hand-off shape)."
+  },
+  {
+   "id": "the-site-becomes-the-memory",
+   "title": "Publish, and your published work becomes your agents' memory, with a URL for every claim",
+   "kind": "advice",
+   "statement": "Open source and Creative Commons are not a licensing preference: they are what makes a memory usable by an agent. The more you publish, the more the next session stands on and the less it has to be told; a public page can be fetched, a public quote cited, a public graph loaded, a public vault cloned with a key that is itself public. For the reader: write in public, and your future self and your agents inherit it.",
+   "sources": [
+    {
+     "ref": "news:memory-is-not-a-spectator-sport",
+     "where": "Many memories, each its own context: 'the site is becoming the memory'"
+    },
+    {
+     "ref": "news:memory-is-not-a-spectator-sport",
+     "where": "The loop, and the conventions that keep it cheap"
+    }
+   ],
+   "answers": [
+    "7.your-cv/blogs.md",
+    "7.your-cv/future-self.md",
+    "2.mvp-for-gen-z-dev/content/open-source.md"
+   ],
+   "topic": "publish-in-public",
+   "chapter": "graphs-and-your-future-self",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all"
+  },
+  {
+   "id": "stale-pages-become-false-memories",
+   "title": "Stale pages become false memories, so a memory must say where each thing came from and name its own errors",
+   "kind": "claim",
+   "statement": "A shared memory made by agents and people becomes a rumour mill unless every item carries its source; and it goes stale: the session that wrote the article found four stale claims about its own estate and fixed two, measuring the rest at build time rather than remembering them. A memory that hides its errors is the thing to argue against. 'If the reality document doesn't list it, it does not exist.'",
+   "sources": [
+    {
+     "ref": "news:memory-is-not-a-spectator-sport",
+     "where": "Provenance built in; Where it falls short"
+    }
+   ],
+   "answers": [
+    "5.concepts/facts.md"
+   ],
+   "topic": "facts-and-the-record",
+   "chapter": "facts-and-the-record",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager"
+  },
+  {
+   "id": "the-file-system-is-the-database",
+   "title": "The file system is the database: load, extract, transform, save, and keep every intermediate as a file",
+   "kind": "method",
+   "statement": "A database server is a large, stateful, always-on thing to provision, secure, back up and pay for, and most of what it holds would be happy as files. LETS loads state, works on it and saves every stage back as files you can version, diff and read: a cache, a database and an audit trail in one, with git as its history. Two real database engines now run in the reader's browser over the site's own JSON.",
+   "sources": [
+    {
+     "ref": "news:no-server-by-design",
+     "where": "Step one: the file system is the database"
+    }
+   ],
+   "answers": [
+    "5.concepts/serverless.md"
+   ],
+   "topic": "building-blocks",
+   "chapter": "building-blocks",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner"
+  },
+  {
+   "id": "no-server-by-design",
+   "title": "No server, by design: retire the back end too, and keep only commodity servers",
+   "kind": "frame",
+   "statement": "After the database, the back end: the newsroom's personas, reading meter, payments, versions and databases all run in the browser, and what is left on the server side is a product someone else runs (static hosting, a vault server that stores only ciphertext, a payment link, DNS, a build pipeline). A constraint did the design: the vault server cannot read anything, so the logic had to go where the key is. It scales without its complexity scaling, ships fast (114 releases in eleven days), and lines up with sovereignty, privacy, explainability and determinism. The one real limit: a secret the reader must not hold cannot live in their browser.",
+   "sources": [
+    {
+     "ref": "news:no-server-by-design",
+     "where": "Step two: the back end goes too; Not 'no servers': commodity servers"
+    },
+    {
+     "ref": "news:no-server-by-design",
+     "where": "It scales without the complexity scaling; It ships fast; Sovereignty, privacy, explainability, determinism"
+    },
+    {
+     "ref": "news:no-server-by-design",
+     "where": "How far can it be pushed?"
+    }
+   ],
+   "answers": [
+    "5.concepts/serverless.md"
+   ],
+   "topic": "building-blocks",
+   "chapter": "building-blocks",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "notes": "Answers the 2018 outline Serverless ('the path to Serverless', 'important to understand the limitations') from the other side: not Lambda, no back end at all. Not a claim that servers are bad: a trading system or a bank's ledger needs shared, live, authoritative state."
+  },
+  {
+   "id": "security-as-a-business-tool",
+   "title": "Security experience is what lets you ship with known gaps: list them, match them to the reader, say what would change the call",
+   "kind": "claim",
+   "statement": "A design with no server has gaps, and the honest thing is to write them down: a reader can edit a balance, start again in a private window, credit themselves; every one changes a number only the cheater sees. Closing them would bring back accounts, a database, a server and a sign-up wall. Security judgement is asking who you are protecting against, accepting what does not match the threat, and naming the condition that would make the gaps unacceptable.",
+   "sources": [
+    {
+     "ref": "news:no-server-by-design",
+     "where": "Security as a business tool"
+    },
+    {
+     "ref": "news:who-are-you-protecting-against",
+     "where": "the question"
+    }
+   ],
+   "answers": [
+    "6.security/threat-modeling.md",
+    "6.security/security-better-developers.md"
+   ],
+   "topic": "security-agent-era",
+   "chapter": "controlling-your-agent",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "The synthetic readers found no security problem but found the cost of the gaps in the words on the page ('below zero' read as a debt)."
+  },
+  {
+   "id": "open-source-removes-the-moat-excuse",
+   "title": "Open source is why it is easy to throw your own technology away",
+   "kind": "claim",
+   "statement": "When everything you build is open, there is no moat you have to keep using and no part of the stack to protect from replacement; you can be the first to replace what you wrote when something better appears. The habit is to ask of every component whether it still earns its place, and open source removes the one bad reason to say yes: that you built it.",
+   "sources": [
+    {
+     "ref": "news:no-server-by-design",
+     "where": "Why it is easy to throw technology away"
+    }
+   ],
+   "answers": [
+    "2.mvp-for-gen-z-dev/content/open-source.md"
+   ],
+   "topic": "open-source",
+   "chapter": "open-source",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all"
   }
  ]
 }

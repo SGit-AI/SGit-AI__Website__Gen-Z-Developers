@@ -34,6 +34,23 @@
      ]
     },
     {
+     "id": "everything-is-connected",
+     "title": "Everything is connected: graphs",
+     "punchline": "A graph is a network, not a diagram: the detective's board, a map as a graph with positions, graphs of graphs, provenance as a graph, and start anywhere.",
+     "topics": [
+      "graphs-memory"
+     ],
+     "gravity": "all",
+     "character": "zara",
+     "state": "storyboarded",
+     "answers_2018": [
+      "5.concepts/graphs.md",
+      "2.mvp-for-gen-z-dev/content/dot-language.md",
+      "3.technologies/content/AST.md"
+     ],
+     "note": "Placed just before Where do you land because a map is a graph with positions; whether graphs come before Wardley maps or after is Dinis's question (Everything is connected, task 1). Dot Language and AST are examples inside it (task 3)."
+    },
+    {
      "id": "where-do-you-land",
      "title": "Where do you land?",
      "punchline": "Maps before names, and the first thing to work out is your centre of gravity: explorer, villager or town planner.",
@@ -355,7 +372,7 @@
     {
      "id": "graphs-and-your-future-self",
      "title": "Graphs, memory and your future self",
-     "punchline": "Think in graphs; maintain knowledge rather than perfect it; keep your work linkable and backed up for the person you will be.",
+     "punchline": "Memory is context management: many memories, fractal, published and shared; maintain knowledge rather than perfect it; keep your work linkable and backed up for the person you will be.",
      "topics": [
       "graphs-memory"
      ],
@@ -363,7 +380,6 @@
      "character": "priya",
      "state": "proposed",
      "answers_2018": [
-      "5.concepts/graphs.md",
       "7.your-cv/future-self.md",
       "4.life-patterns/content/backup-your-life.md",
       "2.mvp-for-gen-z-dev/content/dot-language.md",
@@ -412,6 +428,18 @@
      "punchline": "One afternoon, five exercises: from a spreadsheet to a folder per person, and a first agent that works for you.",
      "topics": [
       "your-first-workspace"
+     ],
+     "gravity": "explorer",
+     "character": "zara",
+     "state": "proposed",
+     "answers_2018": []
+    },
+    {
+     "id": "your-first-graph",
+     "title": "Your first graph, built by hand",
+     "punchline": "Nodes, edges as verbs, and a first graph of something you know, after chapter 15 of Fractal Semantic Graphs.",
+     "topics": [
+      "graphs-memory"
      ],
      "gravity": "explorer",
      "character": "zara",

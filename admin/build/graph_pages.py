@@ -239,7 +239,7 @@ def build_graph(ctx):
 </ul>
 <h2>What waits on the roles</h2>
 <ul>
-<li><b>The librarian</b>: {len(todo)} bring articles still to process ({", ".join(href(n, "../") for n in todo)}); the {nb.get("to-mine", 0)} content articles to mine as the chapters are drafted; a pass over the {len(unans)} 2018 files with neither an article nor an idea.</li>
+<li><b>The librarian</b>: {(str(len(todo)) + " bring articles still to process (" + ", ".join(href(n, "../") for n in todo) + ")") if todo else "no bring article left to process"}; the {nb.get("to-mine", 0)} content articles to mine as the chapters are drafted; a pass over the {len(unans)} 2018 files with neither an article nor an idea.</li>
 <li><b>The editor</b>: the chapter map (this one is a proposal), the vault's decisions folder, the first interview, the first batch of the loop.</li>
 <li><b>The publisher</b>: release v1.0.0 end to end, the ten tasks.</li>
 <li><b>The journalist</b>: the gap articles, the fear and the job hunt first; the evidence the opening needs.</li>

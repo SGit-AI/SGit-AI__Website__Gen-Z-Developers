@@ -282,6 +282,26 @@
   "follow-the-rabbit-holes:journalist:4": {
    "state": "open",
    "evidence": "no hands-on workflow article yet; meeting briefs and follow-ups first"
+  },
+  "everything-is-connected:editor:1": {
+   "state": "in-progress",
+   "evidence": "chapters.json places everything-is-connected just before where-do-you-land in Before you start, with the reason in its note (site v0.2.14); the order is Dinis's question and the editor's map decides"
+  },
+  "everything-is-connected:editor:2": {
+   "state": "open",
+   "evidence": "no figures or worked example named in chapters.json yet; the candidates are the table in the article"
+  },
+  "everything-is-connected:editor:3": {
+   "state": "in-progress",
+   "evidence": "the chapter's answers_2018 names 5.concepts/graphs.md, dot-language.md and AST.md, and the idea the-2018-graph-chapters says they are examples inside it; the editor's map decides"
+  },
+  "everything-is-connected:editor:4": {
+   "state": "done",
+   "evidence": "chapters.json lists your-first-graph in the hands-on 2026 part (site v0.2.14)"
+  },
+  "everything-is-connected:editor:5": {
+   "state": "open",
+   "evidence": "no interview script on graphs in team/editor/briefs/"
   }
  }
 }

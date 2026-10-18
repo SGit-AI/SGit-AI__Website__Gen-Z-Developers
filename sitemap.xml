@@ -33,7 +33,11 @@
   <url><loc>https://gen-z-developers.sgit.ai/graph/chapters.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/a-book-for-one-reader.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/a-claim-earns-its-status-by-being-refutable.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/a-company-in-the-review.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/a-correction-becomes-a-rule.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/a-graph-is-not-a-diagram.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/a-hands-on-part-for-2026.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/a-map-is-a-graph-with-positions.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/a-rabbit-hole-is-a-prompt-away.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/act-as-the-job-you-want.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/agents-decide-people-answer.html</loc></url>
@@ -46,6 +50,7 @@
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/centre-of-gravity.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/co-written-and-credited.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/code-is-a-liability.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/code-is-already-a-graph.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/connect-the-dots-backwards.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/craftspeople-make-their-own-tools.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/direction-is-the-scarce-skill.html</loc></url>
@@ -64,6 +69,7 @@
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/gen-ai-edition-name.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/gen-ai-makes-the-checking-cheap.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/generative-ai-not-ai.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/graphs-of-graphs.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/green-does-not-mean-live.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/hack-your-country.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/hired-for-the-workflow.html</loc></url>
@@ -82,30 +88,44 @@
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/mandate-reach-gap.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/maps-before-names.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/maths-taught-to-be-hated.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/memory-is-context-management.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/multidisciplinary-edge.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/no-server-by-design.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/nobody-knows.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/not-on-your-laptop.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/omnichannel-programming.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/one-board-and-one-inventory.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/one-way-two-way-doors.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/open-source-community-as-the-way-in.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/open-source-removes-the-moat-excuse.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/privacy-aware-generation.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/provenance-is-a-graph.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/publish-publish-publish.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/read-comment-decide.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/read-it-on-paper.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/reality-corrects-the-graph.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/release-v1-again.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/repository-official-vault-working.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/secrets-never-in-the-chat.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/security-as-a-business-tool.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/seven-transformations.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/small-minority.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/stale-pages-become-false-memories.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/start-anywhere.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/start-from-the-storyline.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/start-with-why-sinek.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/technology-finally-works-for-you.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/the-2018-graph-chapters.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/the-book-as-a-graph.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/the-file-system-is-the-database.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/the-fork-next-door.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/the-handover.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/the-memo-is-the-thinking.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/the-record-checks-you.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/the-site-becomes-the-memory.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/the-villagers-craft.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/the-voice-is-four-inputs.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/the-whodunit-board.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/think-in-graphs.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/think-with-it.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/ideas/three-learning-paths.html</loc></url>

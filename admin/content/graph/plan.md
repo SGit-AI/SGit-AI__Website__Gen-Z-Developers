@@ -37,7 +37,7 @@ Every idea carries: its statement; its sources, each with the section; the 2018 
 4. If the article says something the book should say and no chapter fits, the chapter map gains a proposed chapter, marked so.
 5. The librarian never writes an idea in the book's voice. The statement is a summary; the chapter is written from the article, by the editor, with Dinis.
 
-The four bring articles still to process, and the content articles still to mine, are counted on [the sources page](sources.html) and in [the graph's hub](index.html).
+The bring articles still to process (none, after the second pass) and the content articles still to mine are counted on [the sources page](sources.html) and in [the graph's hub](index.html).
 
 ## How Dinis decides
 
@@ -55,9 +55,9 @@ Until the loop runs, an idea is "accepted" only when Dinis said it as his own po
 
 ## The order of work from here
 
-1. **Dinis reads the register** (81 ideas, in the order of the chapter map) and decides the candidates, or tells the editor to run the first batch of the loop on them with the four Introduction chapters.
+1. **Dinis reads the register** (101 ideas, in the order of the chapter map) and decides the candidates, or tells the editor to run the first batch of the loop on them with the four Introduction chapters.
 2. **The editor records the accepted ideas** in the vault as decisions on the text (three briefs already ask for it), and takes the proposed chapter map as the start of its own, with Dinis's changes.
-3. **The librarian processes the four bring articles left**, mines the content articles as each chapter is drafted (the chapter page lists what to mine), and makes a pass over the 2018 files that have neither an article nor an idea: each becomes an idea marked "article first", or a proposal to cut.
+3. **The librarian keeps the bring class at zero** (the four left after the first pass were processed in the second: no server by design, how the voice works, memory is not a spectator sport, code review as a fractal semantic graph), mines the content articles as each chapter is drafted (the chapter page lists what to mine), and makes a pass over the 2018 files that have neither an article nor an idea: each becomes an idea marked "article first", or a proposal to cut.
 4. **The journalist writes the gap articles**, the fear and the job hunt in 2026 first, and each becomes ideas within a release.
 5. **The publisher releases v1.0.0 end to end**, so the pipeline's last stage exists before the first signed-off change (v1.0.1) needs it.
 6. **The chapter pages get the ideas.** When the editor's map exists, each proposed chapter's page shows its ideas in order, the 2018 text it replaces, and the articles to mine: the brief for writing it.
