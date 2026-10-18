@@ -6,7 +6,8 @@
  *   StoryboardKit.drawCharacter(g, rc, who, x, floor, {pose, mood, flip, scale})
  *   StoryboardKit.deck(root)                            the swipe deck on a storyboard page (keyboard, buttons, swipe)
  *
- * Scene kinds: cover, scene, evidence, punchline, spectrum, map (a Wardley map, from data). Characters with a
+ * Scene kinds: cover, scene, evidence, punchline, spectrum, map (a Wardley map, from data), graph (a network of
+ * nodes and edges, with nested groups and a highlighted path; 'detective' style for the whodunit board). Characters with a
  * 'gravity' (explorer, villager, town-planner) wear its badge, black and white, by their name. A scene's cast entries say who, where (x, 0..1), pose
  * (stand, point, wave, arms-up, shrug, think, sit), mood (neutral, happy, worried, surprised, thinking, determined)
  * and what they say. Everything drawn is tagged so the deck can animate it: strokes draw themselves, people and
@@ -301,6 +302,70 @@
     });
   }
 
+  // ------------------------------------------------------------ graphs
+  // A network graph, drawn from data: nodes and the edges between them, never a chart. groups draw dashed outlines
+  // round sets of nodes (groups can hold groups: the abstraction layers); path highlights a chain of edges, A to B.
+  // style 'detective' is the whodunit board: cork, pinned notes, red string. Coordinates are 0..1 of the panel.
+  function drawGraph(g, rc, m) {
+    const X0 = 70, X1 = 1530, Y0 = 150, Y1 = 860, px = (v) => X0 + v * (X1 - X0), py = (v) => Y0 + v * (Y1 - Y0);
+    const det = m.style === 'detective', at = {}, byId = {};
+    (m.nodes || []).forEach(n => { at[n.id] = [px(n.x), py(n.y)]; byId[n.id] = n; });
+    if (det) draw(g, rc.rectangle(X0 - 30, Y0 - 40, X1 - X0 + 60, Y1 - Y0 + 80, { fill: '#d8b48a', fillStyle: 'cross-hatch', hachureGap: 22, fillWeight: 0.8, stroke: '#7c4a1e', strokeWidth: 8, roughness: 1.2 }), 'scenery');
+    // groups, largest first, so nested groups sit inside
+    const groups = (m.groups || []).map(gr => {
+      const ids = [];
+      const collect = (x) => { (x.nodes || []).forEach(id => { const sub = (m.groups || []).find(o => o.id === id); if (sub) collect(sub); else ids.push(id); }); };
+      collect(gr);
+      const pts = ids.map(id => at[id]).filter(Boolean);
+      const pad = gr.pad || 70, xs = pts.map(q => q[0]), ys = pts.map(q => q[1]);
+      return { gr, x: Math.min(...xs) - pad, y: Math.min(...ys) - pad - 44, w: Math.max(...xs) - Math.min(...xs) + pad * 2, h: Math.max(...ys) - Math.min(...ys) + pad * 2 + 44 };
+    }).sort((a, b) => b.w * b.h - a.w * a.h);
+    groups.forEach((q, i) => {
+      const gg = el('g', { class: 'pop', style: `--d:${0.1 + i * 0.15}s` }, g);
+      draw(gg, rc.path(roundRectPath(q.x, q.y, q.w, q.h, 40), { stroke: q.gr.colour || '#6b7280', strokeWidth: 2.6, strokeLineDash: [12, 9], roughness: 1, fill: q.gr.fill || 'none', fillStyle: 'solid' }));
+      textBlock(gg, [q.gr.label], q.x + 24, q.y + 34, 28, { fill: q.gr.colour || '#4b5563', weight: 'bold' });
+    });
+    const onPath = new Set();
+    const path = m.path || [];
+    for (let i = 0; i + 1 < path.length; i++) { onPath.add(path[i] + '>' + path[i + 1]); onPath.add(path[i + 1] + '>' + path[i]); }
+    (m.edges || []).forEach((e, i) => {
+      const a = at[e.from], b = at[e.to]; if (!a || !b) return;
+      const eg = el('g', { class: 'pop', style: `--d:${0.5 + i * 0.08}s` }, g), hot = onPath.has(e.from + '>' + e.to);
+      const mx = (a[0] + b[0]) / 2, my = (a[1] + b[1]) / 2 + (det ? 26 : 0);
+      if (hot) draw(eg, rc.curve([a, [mx, my], b], { stroke: '#fde047', strokeWidth: 18, roughness: 0.6 }));
+      if (det) draw(eg, rc.curve([a, [mx, my], b], { stroke: '#b91c1c', strokeWidth: hot ? 5 : 3.2, roughness: 0.4 }));
+      else {
+        draw(eg, rc.line(a[0], a[1], b[0], b[1], { stroke: hot ? '#b91c1c' : '#374151', strokeWidth: hot ? 4 : 2.4 }));
+        const ang = Math.atan2(b[1] - a[1], b[0] - a[0]), ex = b[0] - Math.cos(ang) * 34, ey = b[1] - Math.sin(ang) * 34;
+        draw(eg, rc.path(`M${ex - Math.cos(ang - 0.45) * 22},${ey - Math.sin(ang - 0.45) * 22} L${ex},${ey} L${ex - Math.cos(ang + 0.45) * 22},${ey - Math.sin(ang + 0.45) * 22}`, { stroke: hot ? '#b91c1c' : '#374151', strokeWidth: 2.6 }));
+      }
+      if (e.label) {
+        const w = e.label.length * 11 + 20;
+        el('rect', { x: mx - w / 2, y: my - 20, width: w, height: 30, rx: 8, fill: det ? '#fffbeb' : PAPER, opacity: 0.92 }, eg);
+        textBlock(eg, [e.label], mx, my + 2, 22, { anchor: 'middle', fill: hot ? '#b91c1c' : '#4b5563' });
+      }
+    });
+    (m.nodes || []).forEach((n, i) => {
+      const [x, y] = at[n.id], ng = el('g', { class: 'pop', style: `--d:${0.25 + i * 0.07}s` }, g), kind = n.kind || (det ? 'note' : 'circle');
+      const lines = wrap(n.label, kind === 'note' ? 14 : 18);
+      if (kind === 'note') {
+        const w = Math.max(...lines.map(l => l.length)) * 13 + 40, h = lines.length * 30 + 30, rot = ((i * 37) % 9) - 4;
+        const nt = el('g', { transform: `rotate(${rot} ${x} ${y})` }, ng);
+        draw(nt, rc.rectangle(x - w / 2, y - h / 2, w, h, { fill: n.colour || '#fef9c3', fillStyle: 'solid', stroke: INK, strokeWidth: 2, roughness: 0.8 }));
+        textBlock(nt, lines, x, y - h / 2 + 34, 26, { anchor: 'middle' });
+        if (det) draw(ng, rc.circle(x, y - h / 2 + 4, 16, { fill: '#dc2626', fillStyle: 'solid', stroke: INK, strokeWidth: 1.6 }));
+      } else if (kind === 'person') {
+        draw(ng, rc.circle(x, y - 22, 34, { fill: n.colour || '#e5e7eb', fillStyle: 'solid', stroke: INK, strokeWidth: 2.2 }));
+        draw(ng, rc.path(`M${x - 28},${y + 26} Q${x},${y - 8} ${x + 28},${y + 26} Z`, { fill: n.colour || '#e5e7eb', fillStyle: 'solid', stroke: INK, strokeWidth: 2.2 }));
+        textBlock(ng, lines, x, y + 56, 26, { anchor: 'middle', weight: 'bold' });
+      } else {
+        const hot = path.includes(n.id);
+        draw(ng, rc.circle(x, y, n.size || 34, { fill: hot ? '#fde68a' : (n.colour || '#fff'), fillStyle: 'solid', stroke: INK, strokeWidth: 2.6 }));
+        textBlock(ng, lines, x, y - (n.size || 34) / 2 - 12 - (lines.length - 1) * 28, 26, { anchor: 'middle' });
+      }
+    });
+  }
+
   // ------------------------------------------------------------ settings
   function setting(g, rc, name) {
     draw(g, rc.line(0, FLOOR, W, FLOOR, { stroke: INK, strokeWidth: 3, roughness: 2 }), 'ink');
@@ -390,6 +455,10 @@
         textBlock(card, wrap(ev.source || '', 50), x + 44, y + h - 44, 28, { fill: '#6b7280' });
       }
       if (scene.caption) caption(g, rc, scene.caption, { max: 34 });
+    } else if (k === 'graph') {
+      drawGraph(g, rc, scene.graph || {});
+      people(g, rc, scene, cast, FLOOR, 0.55);
+      if (scene.caption) caption(g, rc, scene.caption);
     } else if (k === 'map') {
       drawMap(g, rc, scene.map || {});
       people(g, rc, scene, cast, FLOOR, 0.55);
@@ -468,7 +537,7 @@
     });
   }
 
-  window.StoryboardKit = { drawScene, drawCharacter, drawMap, badge, deck, castSheet, W, H };
+  window.StoryboardKit = { drawScene, drawCharacter, drawMap, drawGraph, badge, deck, castSheet, W, H };
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.sb-deck').forEach(deck);
     document.querySelectorAll('.sb-cast').forEach(castSheet);
