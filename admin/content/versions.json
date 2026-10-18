@@ -55,6 +55,11 @@
    "version": "v0.2.8",
    "date": "2026-10-18",
    "what": "What the book means by generative AI. A co-written article, generative AI, not AI: AI is a huge bucket and the book is about the generative kind; Dinis's picture of how it works (a model builds its own representation and generates from it; a language model predicts the next word from a rich picture of how things connect, which is why a better prompt helps and why hallucinations happen; the image-extension tools of 2022 and 2023 that made it click; the patterns models found in our language; the wonder of what they can still turn out to do); and, because he asked to be corrected, a section of corrections with sources: classic machine learning learns too, the difference is predicting versus generating; inside a model there are vectors and attention, not a stored graph, so the graph is a metaphor; the prompt conditions rather than fine-tunes; next-token prediction plus training on feedback; a second cause of hallucinations from training that rewards guessing (Kalai and others, September 2025); diffusion for most image models; emergent abilities debated (Wei 2022, Schaeffer 2023). A note on the name (Gen Z, Gen AI, Gen Alpha born 2010 to 2024) left for the title interview. A 12-panel storyboard, quote-checked by the build, and a brief for the editor."
+  },
+  {
+   "version": "v0.2.9",
+   "date": "2026-10-18",
+   "what": "Questioning and evidence, and the David Rice keynote found. A co-written article, follow the rabbit holes: questioning and asking for the evidence is one of the most important skills now, and this generation already has much of it (good detectives, privacy-aware); provenance and explainability are how people can disagree rationally, including that not knowing can be a fact; following a rabbit hole is now a prompt away; managing information is what work is; generative AI makes what once cost hundreds of thousands of pounds a brief and a feedback loop, so be the best-prepared person in the room; and a proposed hands-on part for 2026, renewed yearly. A 10-panel storyboard, quote-checked by the build. The influences article now cites the recording Dinis shared, OWASP AppSec USA 2010: Keynote: David Rice, and the OWASP Summit 2011 working session on presenting his Pollution keynote; the journalist's register brief carries both. A brief for the editor."
   }
  ]
 }

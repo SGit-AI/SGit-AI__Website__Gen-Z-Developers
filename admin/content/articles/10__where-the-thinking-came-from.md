@@ -50,7 +50,7 @@ But I did not want a page of "books that shaped me". So the register at [influen
 | **Christopher Alexander**, *A Pattern Language* (1977) | Code is a space people inhabit | The town planner's craft |
 | **Simon Sinek**, *Start With Why* (2009) | Purpose before mechanism | The opening; why the book exists |
 | **Team Topologies and Cynefin** | The shape of the team decides the shape of the system | Context for the town planner; probably not a chapter |
-| **David Rice**, *Upon the Threshold of Opportunity* | Security as an opportunity, not a fear industry | The opening's optimism; needs the recording found |
+| **David Rice**, keynote at OWASP AppSec USA 2010 | Security as an opportunity, not a fear industry | The opening's optimism |
 | **Neil Peart** and Rush | Technical mastery in service of meaning | Craft; needs my own account |
 | **Music, and playing in a band** | Playing together in real time is collaborative flow | Flow and teams; needs my own account |
 
@@ -82,7 +82,7 @@ Design, in Jobs's sense that design is how it works, became a mandatory step in 
 
 Simon Sinek's golden circle, why before how before what, is on my list and was a 2018 outline, *Start with why*. The 2018 introduction asked the same question of the logos it opened with: "Why is the **why** important?" The book should start with why, which is what [you are lucky to be here](/articles/lucky-to-be-here.html) does.
 
-A keynote by David Rice at an OWASP conference, *Upon the Threshold of Opportunity*, argued that security is an opportunity rather than a fear industry. It is on my list from memory and the recording still has to be found; if it can be, it belongs next to the book's argument for ignoring the doom.
+A keynote by David Rice, the author of *Geekonomics*, argued that security is an opportunity rather than a fear industry. The recording I meant is his keynote at [OWASP AppSec USA 2010](https://www.youtube.com/watch?v=O8sLSwnId9c), posted in three parts. It made enough of an impression that the OWASP Summit in 2011 had a working session on [how to present his "Pollution keynote" worldwide](https://wiki.owasp.org/index.php/Summit_2011_Working_Sessions/Session088): an analogy between what society went through with pollution and the state of application security. It belongs next to the book's argument for ignoring the doom.
 
 ## Entries only I can fill in {#mine}
 
@@ -112,7 +112,7 @@ For the editor. Read `team/editor/role.md`, this article and the register at inf
 1. **Add an influence column to the chapter map**: the influences behind each chapter, from the table above. Done when every chapter that draws on one names it.
 2. **Plan a box per chapter, "where this comes from"**, naming its influence and linking the register entry; and an appendix, *Where the thinking came from*, as the reading list. Done when the chapter map marks the boxes and the appendix has an outline.
 3. **Real people appear as quote cards, not as cast members.** Done when the storyboard guidance says so.
-4. **Interview me on the stubs**: Neil Peart, playing in a band, diverse and distributed teams, David Rice. Done when the script is in your `briefs/` and the transcripts are in the vault.
+4. **Interview me on the stubs**: Neil Peart, playing in a band, diverse and distributed teams, and what David Rice's keynote changed for me. Done when the script is in your `briefs/` and the transcripts are in the vault.
 5. **Put the reader's exercise in the book**, at the end of the learning part. Done when the chapter map places it.
 
 For the journalist:
@@ -123,7 +123,7 @@ Questions for me, kept apart:
 
 - Can the 2018 findings be sent to the influences site as a brief?
 - Is *What Technology Wants* the right anchor for Kevin Kelly?
-- Where is the David Rice keynote recorded?
+- Is the AppSec USA 2010 keynote the one the register calls *Upon the Threshold of Opportunity*?
 
 ## What this does not claim {#limits}
 
@@ -139,4 +139,4 @@ If you keep a list of your own influences, or try the exercise, write to [agent@
 
 A message of mine on 18 October 2026 asking for a review of [influences.sgit.ai](https://influences.sgit.ai), written up by this site's journalist, `gen-z.journalist`, in my voice. The argument and the editorial responsibility are mine.
 
-The register: the repository [SGit-AI/SGit-AI__Website__Influences](https://github.com/SGit-AI/SGit-AI__Website__Influences), read on 18 October 2026: `data/influences.json` (25 entries, their tiers, anchors and principles), the entry for Bret Victor, and the article *An influence is a claim you can check*, quoted word for word. The 2018 quotations are from book v1.0.0 (the Introduction; *Open Source*, "The Cathedral and the Bazaar"; *OWASP*, "Find jobs via OWASP contributions") and from the drafts in `v1/content/`: `5.concepts/inventing-on-principle.md`, `10.misc/technium.md`, `4.life-patterns/start-with-why.md`, `4.life-patterns/why-diversity-matters.md` and `10.misc/books-to-read.md`.
+The register: the repository [SGit-AI/SGit-AI__Website__Influences](https://github.com/SGit-AI/SGit-AI__Website__Influences), read on 18 October 2026: `data/influences.json` (25 entries, their tiers, anchors and principles), the entry for Bret Victor, and the article *An influence is a claim you can check*, quoted word for word. The 2018 quotations are from book v1.0.0 (the Introduction; *Open Source*, "The Cathedral and the Bazaar"; *OWASP*, "Find jobs via OWASP contributions") and from the drafts in `v1/content/`: `5.concepts/inventing-on-principle.md`, `10.misc/technium.md`, `4.life-patterns/start-with-why.md`, `4.life-patterns/why-diversity-matters.md` and `10.misc/books-to-read.md`. The David Rice recording is the one I found and shared afterwards, [OWASP AppSec USA 2010: Keynote: David Rice 2/3](https://www.youtube.com/watch?v=O8sLSwnId9c), with the OWASP wiki's [Summit 2011 working session](https://wiki.owasp.org/index.php/Summit_2011_Working_Sessions/Session088) on presenting it.
