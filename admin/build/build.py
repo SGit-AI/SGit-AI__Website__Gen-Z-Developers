@@ -903,7 +903,7 @@ def build_newsroom_survey():
 
 
 # ------------------------------------------------------------------ storyboards
-SB_KINDS = {"cover", "scene", "evidence", "punchline", "spectrum"}
+SB_KINDS = {"cover", "scene", "evidence", "punchline", "spectrum", "map"}
 SB_POSES = {"stand", "point", "wave", "arms-up", "shrug", "think", "sit"}
 SB_MOODS = {"neutral", "happy", "worried", "surprised", "thinking", "determined"}
 SB_HEAD = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'

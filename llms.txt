@@ -1,6 +1,6 @@
 # gen-z-developers.sgit.ai
 
-> The website for finishing the second edition of Generation Z Developers (Dinis Cruz, 2018). The repository holds the official versions of the book; a public vault holds the working versions. Site v0.2.4.
+> The website for finishing the second edition of Generation Z Developers (Dinis Cruz, 2018). The repository holds the official versions of the book; a public vault holds the working versions. Site v0.2.5.
 
 ## The rule
 The repository holds the official versions; the vault holds the working versions. v1.0.0 is the 2018 first edition as released, frozen. A version moves from the vault to the repository when signed off, and the versions page shows the delta block by block.
@@ -25,6 +25,7 @@ The repository holds the official versions; the vault holds the working versions
 - [Read, comment, decide: how I go through the pile, one item at a time, and how the editor turns my decisions into the next version of the book](https://gen-z-developers.sgit.ai/articles/read-comment-decide.md)
 - [Start from the storyline: what to bring from the newsroom's 204 articles, the topics and concepts the second edition should cover, and the book as storyboards drawn by code, to flick through before a chapter is written](https://gen-z-developers.sgit.ai/articles/start-from-the-storyline.md)
 - [You are lucky to be here: the core idea of the second edition is wonder, not fear, because whoever reads it is living through the biggest change of their career while the pieces are still landing, and can finally make technology work for them](https://gen-z-developers.sgit.ai/articles/lucky-to-be-here.md)
+- [Where do you land? Wardley maps run through the whole book, shown before they are named, and the first thing a reader should work out is their centre of gravity: explorer, villager or town planner](https://gen-z-developers.sgit.ai/articles/where-do-you-land.md)
 - [Dinis's first decisions: the licence, a PDF built here for Leanpub and Amazon, every format from one source, text issues in the vault, minor by default, and a second stream of articles for the agents](https://gen-z-developers.sgit.ai/agent-articles/dinis-first-decisions.md)
 - [Storyboards drawn by code, and the newsroom read in full: how I surveyed 204 articles for the book, built a renderer that turns a JSON storyboard into sketched, animated panels, and what the first two storyboards show](https://gen-z-developers.sgit.ai/agent-articles/storyboards-drawn-by-code.md)
 

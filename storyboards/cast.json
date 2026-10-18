@@ -1,5 +1,5 @@
 {
- "what": "The cast of the Generation Z Developers storyboards, v0.1, proposed by gen-z.journalist on 18 October 2026 for Dinis to accept, change or replace. Characters are drawn programmatically by assets/storyboard.js from 'look'; nothing here is an image. Fictional people: each stands for a reader the book is for (the target audience), or for a role in the story. Names chosen to avoid clashing with the riskmandate.ai cast (which has a Maya) and with the word 'developer' (no 'Dev').",
+ "what": "The cast of the Generation Z Developers storyboards, v0.1, proposed by gen-z.journalist on 18 October 2026 for Dinis to accept, change or replace. Characters are drawn programmatically by assets/storyboard.js from 'look'; nothing here is an image. Each human with a 'gravity' wears its badge (explorer, villager, town-planner), black and white, by their name: a centre of gravity, not a box, as Dinis describes it. Fictional people: each stands for a reader the book is for (the target audience), or for a role in the story. Names chosen to avoid clashing with the riskmandate.ai cast (which has a Maya) and with the word 'developer' (no 'Dev').",
  "characters": [
   {
    "id": "zara",
@@ -22,7 +22,8 @@
     "accessory": "headphones",
     "accentColour": "#f59e0b",
     "height": 0.96
-   }
+   },
+   "gravity": "explorer"
   },
   {
    "id": "tomas",
@@ -31,7 +32,7 @@
    "pronouns": "he/him",
    "age": 24,
    "role": "the graduate: a computing degree, working the 2018 way, looking for his next job in Lisbon",
-   "stands_for": "the villager: competent, careful, about to be outcompeted by people with an agentic workflow",
+   "stands_for": "the town planner: attention to detail, pride in getting it right, happiest when nothing goes wrong; working the 2018 way, and about to be outcompeted by people with an agentic workflow",
    "personality": "diligent, modest, a little proud of doing things by hand; sceptical of shortcuts",
    "wants": "to be taken seriously",
    "fears": "that his degree is already out of date",
@@ -44,7 +45,8 @@
     "trousers": "#334155",
     "accessory": "glasses",
     "height": 1.04
-   }
+   },
+   "gravity": "town-planner"
   },
   {
    "id": "priya",
@@ -53,7 +55,7 @@
    "pronouns": "she/her",
    "age": 38,
    "role": "the career changer: an operations manager who has never written code",
-   "stands_for": "everyone else the book is for: if anyone who can brief an agent is a developer, so is she",
+   "stands_for": "the villager, and everyone else the book is for: she puts herself in the middle of her team's problem, and if anyone who can brief an agent is a developer, so is she",
    "personality": "practical, impatient with jargon, very good at explaining what she needs",
    "wants": "to build the tools her team keeps asking IT for",
    "fears": "looking foolish in front of people half her age",
@@ -67,7 +69,8 @@
     "accessory": "lanyard",
     "accentColour": "#1d4ed8",
     "height": 0.98
-   }
+   },
+   "gravity": "villager"
   },
   {
    "id": "sam",

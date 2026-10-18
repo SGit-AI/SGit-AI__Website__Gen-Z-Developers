@@ -6,7 +6,8 @@
  *   StoryboardKit.drawCharacter(g, rc, who, x, floor, {pose, mood, flip, scale})
  *   StoryboardKit.deck(root)                            the swipe deck on a storyboard page (keyboard, buttons, swipe)
  *
- * Scene kinds: cover, scene, evidence, punchline, spectrum. A scene's cast entries say who, where (x, 0..1), pose
+ * Scene kinds: cover, scene, evidence, punchline, spectrum, map (a Wardley map, from data). Characters with a
+ * 'gravity' (explorer, villager, town-planner) wear its badge, black and white, by their name. A scene's cast entries say who, where (x, 0..1), pose
  * (stand, point, wave, arms-up, shrug, think, sit), mood (neutral, happy, worried, surprised, thinking, determined)
  * and what they say. Everything drawn is tagged so the deck can animate it: strokes draw themselves, people and
  * bubbles arrive in order.
@@ -240,6 +241,66 @@
     },
   };
 
+  // ------------------------------------------------------------ badges: explorer, villager, town planner
+  // Black-and-white by design (the printed book is black and white): the shape carries the meaning, not the colour.
+  // Explorer: a compass. Villager: a house. Town planner: a grid.
+  function badge(g, rc, type, x, y, size) {
+    const r = size / 2, o = { stroke: INK, strokeWidth: Math.max(1.6, size / 22), roughness: 0.6, fill: '#fff', fillStyle: 'solid' }, ln = { stroke: INK, strokeWidth: Math.max(1.4, size / 26), roughness: 0.5 };
+    const b = el('g', { class: 'badge' }, g);
+    draw(b, rc.circle(x, y, size, o));
+    if (type === 'explorer') {
+      draw(b, rc.polygon([[x, y - r * 0.78], [x + r * 0.2, y], [x, y + r * 0.78], [x - r * 0.2, y]], Object.assign({}, ln, { fill: INK, fillStyle: 'solid' })));
+      draw(b, rc.polygon([[x - r * 0.78, y], [x, y - r * 0.2], [x + r * 0.78, y], [x, y + r * 0.2]], Object.assign({}, ln, { fill: '#fff', fillStyle: 'solid' })));
+    } else if (type === 'villager') {
+      draw(b, rc.polygon([[x - r * 0.55, y + r * 0.5], [x - r * 0.55, y - r * 0.08], [x, y - r * 0.6], [x + r * 0.55, y - r * 0.08], [x + r * 0.55, y + r * 0.5]], ln));
+      draw(b, rc.rectangle(x - r * 0.14, y + r * 0.12, r * 0.28, r * 0.38, Object.assign({}, ln, { fill: INK, fillStyle: 'solid' })));
+    } else if (type === 'town-planner') {
+      const q = r * 0.5;
+      draw(b, rc.rectangle(x - q, y - q, q * 2, q * 2, ln));
+      for (const k of [-1, 1]) { draw(b, rc.line(x + k * q / 3, y - q, x + k * q / 3, y + q, ln)); draw(b, rc.line(x - q, y + k * q / 3, x + q, y + k * q / 3, ln)); }
+    }
+    return b;
+  }
+
+  // ------------------------------------------------------------ maps
+  // A Wardley map, drawn from data: an anchor (the user and their need) at the top, the value chain below it by
+  // visibility, everything placed along evolution, and the movements drawn as arrows. axis 'wardley' names the
+  // stages; axis 'plain' shows the same map without the vocabulary, for showing maps before naming them.
+  function drawMap(g, rc, m) {
+    const X0 = 150, X1 = 1470, Y0 = 200, Y1 = 830, px = (v) => X0 + v * (X1 - X0), py = (v) => Y0 + v * (Y1 - Y0);
+    const stages = m.axis === 'plain' ? ['brand new', 'made by hand', 'a product', 'everywhere'] : ['Genesis', 'Custom built', 'Product (+rental)', 'Commodity (+utility)'];
+    draw(g, rc.line(X0, Y1 + 30, X1 + 10, Y1 + 30, { stroke: INK, strokeWidth: 3 }));
+    draw(g, rc.path(`M${X1 - 10},${Y1 + 18} L${X1 + 14},${Y1 + 30} L${X1 - 10},${Y1 + 42}`, { stroke: INK, strokeWidth: 3 }));
+    draw(g, rc.line(X0 - 30, Y1 + 30, X0 - 30, Y0 - 20, { stroke: INK, strokeWidth: 3 }));
+    stages.forEach((st, i) => {
+      if (i) draw(g, rc.line(px(i / 4), Y0 - 20, px(i / 4), Y1 + 30, { stroke: '#9ca3af', strokeWidth: 1.6, strokeLineDash: [8, 10], roughness: 0.4 }), 'scenery');
+      textBlock(g, [st], px(i / 4 + 0.125), Y1 + 70, 28, { anchor: 'middle', fill: '#374151' });
+    });
+    const yl = el('text', { x: X0 - 46, y: (Y0 + Y1) / 2, 'font-family': FONT, 'font-size': 26, fill: '#374151', 'text-anchor': 'middle', transform: `rotate(-90 ${X0 - 46} ${(Y0 + Y1) / 2})` }, g);
+    yl.textContent = m.axis === 'plain' ? 'what the user sees  →  what they never see' : 'visible  →  invisible (the value chain)';
+    yl.setAttribute('transform', `rotate(90 ${X0 - 46} ${(Y0 + Y1) / 2})`);
+    const at = {};
+    (m.nodes || []).forEach(n => { at[n.id] = [px(n.x), py(n.y)]; });
+    (m.links || []).forEach(([a, b]) => { if (at[a] && at[b]) draw(g, rc.line(at[a][0], at[a][1], at[b][0], at[b][1], { stroke: '#4b5563', strokeWidth: 2.2 })); });
+    (m.moves || []).forEach((mv, i) => {
+      const f = at[mv.from]; if (!f) return;
+      const tx = px(mv.to), mg = el('g', { class: 'pop', style: `--d:${1 + i * 0.4}s` }, g);
+      draw(mg, rc.line(f[0] + 22, f[1], tx - 22, f[1], { stroke: '#dc2626', strokeWidth: 4, strokeLineDash: [14, 10], roughness: 0.6 }));
+      draw(mg, rc.path(`M${tx - 40},${f[1] - 14} L${tx - 16},${f[1]} L${tx - 40},${f[1] + 14}`, { stroke: '#dc2626', strokeWidth: 4 }));
+      draw(mg, rc.circle(tx, f[1], 30, { stroke: '#dc2626', strokeWidth: 2.6, strokeLineDash: [6, 6] }));
+      if (mv.label) textBlock(mg, [mv.label], (f[0] + tx) / 2, f[1] + 44, 26, { anchor: 'middle', fill: '#b91c1c' });
+    });
+    (m.nodes || []).forEach((n, i) => {
+      const [x, y] = at[n.id], ng = el('g', { class: 'pop', style: `--d:${0.2 + i * 0.12}s` }, g);
+      if (n.anchor) {
+        draw(ng, rc.circle(x, y - 6, 26, { fill: INK, fillStyle: 'solid', stroke: INK }));
+        draw(ng, rc.path(`M${x - 22},${y + 30} Q${x},${y - 4} ${x + 22},${y + 30} Z`, { fill: INK, fillStyle: 'solid', stroke: INK }));
+      } else draw(ng, rc.circle(x, y, 30, { fill: n.highlight ? '#fde68a' : '#fff', fillStyle: 'solid', stroke: INK, strokeWidth: 2.6 }));
+      const nl = wrap(n.label, 22);
+      textBlock(ng, nl, x + 24, y - 24 - (nl.length - 1) * 30, 28, { weight: n.anchor ? 'bold' : 'normal' });
+    });
+  }
+
   // ------------------------------------------------------------ settings
   function setting(g, rc, name) {
     draw(g, rc.line(0, FLOOR, W, FLOOR, { stroke: INK, strokeWidth: 3, roughness: 2 }), 'ink');
@@ -270,6 +331,7 @@
       const head = drawCharacter(fig, rc, who, x, floor, { pose: p.pose, mood: p.mood, flip: p.flip, scale: (p.scale || 1) * (scale || 1) });
       const name = el('text', { x, y: floor + 44, 'font-family': FONT, 'font-size': 26, fill: '#6b7280', 'text-anchor': 'middle', class: 'name' }, fig);
       name.textContent = who.name;
+      if (who.gravity && !p.noBadge) badge(fig, rc, who.gravity, x - who.name.length * 6.5 - 26, floor + 35, 34);
       placed.push({ p, who, x, head, fig });
     });
     placed.forEach((q, i) => {
@@ -328,6 +390,10 @@
         textBlock(card, wrap(ev.source || '', 50), x + 44, y + h - 44, 28, { fill: '#6b7280' });
       }
       if (scene.caption) caption(g, rc, scene.caption, { max: 34 });
+    } else if (k === 'map') {
+      drawMap(g, rc, scene.map || {});
+      people(g, rc, scene, cast, FLOOR, 0.55);
+      if (scene.caption) caption(g, rc, scene.caption);
     } else if (k === 'spectrum') {
       setting(g, rc, scene.setting);
       const stops = scene.stops || [], y = 330;
@@ -336,6 +402,7 @@
       stops.forEach((s, i) => {
         const sx = 200 + i * (W - 400) / Math.max(stops.length - 1, 1), st = el('g', { class: 'pop', style: `--d:${0.2 + i * 0.3}s` }, g);
         draw(st, rc.circle(sx, y, 28, { fill: s.colour || '#fde68a', fillStyle: 'solid', stroke: INK, strokeWidth: 2.4 }));
+        if (s.badge) badge(st, rc, s.badge, sx, y - 120, 64);
         textBlock(st, [s.label], sx, y - 46, 40, { anchor: 'middle', font: TITLE, weight: 'bold' });
         if (s.note) textBlock(st, wrap(s.note, 18), sx, y + 66, 30, { anchor: 'middle', fill: '#374151' });
       });
@@ -401,7 +468,7 @@
     });
   }
 
-  window.StoryboardKit = { drawScene, drawCharacter, deck, castSheet, W, H };
+  window.StoryboardKit = { drawScene, drawCharacter, drawMap, badge, deck, castSheet, W, H };
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.sb-deck').forEach(deck);
     document.querySelectorAll('.sb-cast').forEach(castSheet);
