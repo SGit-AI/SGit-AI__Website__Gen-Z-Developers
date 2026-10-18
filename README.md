@@ -49,11 +49,15 @@ read/                 generated shell + assets/reader.js, reader.css: the reader
                       the newsroom's rules, export of the review as markdown/JSON. Everything stays in the browser
                       (localStorage genz.reader.v1) until exported.
 contributors/         generated: who contributed to the first edition, from git and GitHub (admin/content/contributors.json)
+graph/                generated: the book as a graph, the admin area of the publishing process (admin/content/graph/: ideas.json,
+                      chapters.json, sources-state.json, tasks-state.json, plan.md; admin/build/graph_model.py derives the nodes
+                      and edges and refuses a dangling one; graph_pages.py renders the hub, the ideas register, the sources,
+                      the chapter map, the tasks, the plan and the drawn graph; assets/graph.js draws graph.json)
 map/                  generated: one row per 2018 file, the newsroom articles that answer it, the gap
 briefs/               generated: the articles and notes above, rendered
 storyboards/          generated: the cast sheet and a swipe deck per storyboard, drawn in the browser from admin/content/storyboards/*.json
 articles/             generated: this site's own articles (admin/content/articles/), each with its markdown twin; the briefs for the roles
-team/                 the roles: reviewer, editor, publisher, journalist
+team/                 the roles: reviewer, editor, publisher, journalist, librarian (keeps the graph)
   ISSUES.md           how the roles keep issues (the folder is the status)
   <role>/role.md      Identity, Foundation, Primary Responsibilities, Core Workflows
   <role>/issues/      open/ blocked/ done/

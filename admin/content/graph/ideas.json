@@ -1,70 +1,1995 @@
 {
  "what": "The ideas register: the core ideas the second edition is made of, one node each, with where each came from (provenance), which 2018 chapters it answers, which proposed chapter it goes to, and its state. Authored by the librarian on 18 October 2026 from the nine co-written articles, the seven decisions, the newsroom survey and the 49 articles it brings, and the six briefs; extended whenever a new article is processed. A state is 'candidate' until Dinis accepts it (read, comment, decide); 'accepted' here means Dinis said it in a co-written article as his own position, and the decision on the text is still to be recorded in the vault by the editor.",
- "kinds": {"frame": "a way of seeing the whole book uses", "claim": "something the book asserts and must back", "advice": "what the reader should do", "method": "a way of working the reader can copy", "story": "a lived example, dated", "evidence": "a number or a source the book cites", "process": "how the book itself is made; the last part, or not the book at all"},
- "destinations": {"this-edition": "in the second edition's first release", "next-version": "after the first release of the second edition", "another-book": "belongs to a different book", "the-process": "about how the book is made: the site, the workflow, not the reader's text", "undecided": "Dinis has not said"},
- "states": {"candidate": "proposed; waits on Dinis", "accepted": "Dinis said it, in an article or a memo; to record in the vault as a decision on the text", "drafting": "the editor is writing it in the vault", "signed-off": "in a signed-off version", "declined": "not doing it, with the reason", "deferred": "later, to a named version or book"},
+ "kinds": {
+  "frame": "a way of seeing the whole book uses",
+  "claim": "something the book asserts and must back",
+  "advice": "what the reader should do",
+  "method": "a way of working the reader can copy",
+  "story": "a lived example, dated",
+  "evidence": "a number or a source the book cites",
+  "process": "how the book itself is made; the last part, or not the book at all"
+ },
+ "destinations": {
+  "this-edition": "in the second edition's first release",
+  "next-version": "after the first release of the second edition",
+  "another-book": "belongs to a different book",
+  "the-process": "about how the book is made: the site, the workflow, not the reader's text",
+  "undecided": "Dinis has not said"
+ },
+ "states": {
+  "candidate": "proposed; waits on Dinis",
+  "accepted": "Dinis said it, in an article or a memo; to record in the vault as a decision on the text",
+  "drafting": "the editor is writing it in the vault",
+  "signed-off": "in a signed-off version",
+  "declined": "not doing it, with the reason",
+  "deferred": "later, to a named version or book"
+ },
  "ideas": [
-  {"id": "wonder-not-fear", "title": "The book opens with wonder, not fear and not technologies", "kind": "frame", "statement": "The first edition opened with a slide of logos and went too technical too soon; the second opens with wonder and privilege, and the fear is what the reader hears, not where the book starts.", "sources": [{"ref": "art:lucky-to-be-here", "where": "In short; How the first edition started; What goes where"}, {"ref": "sb:the-opening", "where": "panels 1 to 4"}], "answers": ["1.introduction/_index.md", "1.introduction/generation-z.md"], "topic": "everyone-is-a-developer", "chapter": "lucky-to-be-here", "destination": "this-edition", "state": "accepted", "decided_by": "Dinis, in You are lucky to be here (the editor records it in the vault, brief task 1)", "gravity": "all"},
-  {"id": "lucky-to-be-here", "title": "Whoever reads this now is lucky to be here", "kind": "claim", "statement": "Alive, and starting out, in the middle of a transition this big, while the pieces are still landing: that is luck, and the book says so before anything else.", "sources": [{"ref": "art:lucky-to-be-here", "where": "You are lucky to be here; The pieces are still landing"}], "answers": ["1.introduction/generation-z.md"], "topic": "everyone-is-a-developer", "chapter": "lucky-to-be-here", "destination": "this-edition", "state": "accepted", "decided_by": "Dinis, in You are lucky to be here", "gravity": "all"},
-  {"id": "nobody-knows", "title": "Ignore the doom: nobody knows what happens next", "kind": "claim", "statement": "Every transformation came with the warning that this time is different; this one is televised. The hype may crash, as the dot-com did, and the opportunity was real both times.", "sources": [{"ref": "art:lucky-to-be-here", "where": "The hype, and maybe the crash"}, {"ref": "news:two-years-in-the-opposite", "where": "the counter-story to AI burnout"}], "answers": [], "topic": "everyone-is-a-developer", "chapter": "lucky-to-be-here", "destination": "this-edition", "state": "accepted", "decided_by": "Dinis, in You are lucky to be here; whether the dot-com crash belongs in the opening is still his question", "gravity": "all"},
-  {"id": "seven-transformations", "title": "Seven transformations, lived through: the Spectrum, the BBS, the internet, the mobile phone, the cloud, the apps, AI", "kind": "story", "statement": "Dinis's own history as the evidence that transitions reward the people who get in early and keep learning; each dated, each with its warning at the time.", "sources": [{"ref": "art:lucky-to-be-here", "where": "The transformations I have lived through"}, {"ref": "sb:the-opening", "where": "the spectrum panel"}], "answers": ["4.life-patterns/BBS-and-modems.md", "1.introduction/stem-tech-stack.md"], "topic": "civic-and-history", "chapter": "lucky-to-be-here", "destination": "this-edition", "state": "candidate", "decided_by": null, "notes": "The journalist is to write the history, dated and sourced (brief task 5).", "gravity": "all"},
-  {"id": "technology-finally-works-for-you", "title": "Technology can finally work for you", "kind": "claim", "statement": "Gen Z grew up with technology designed to hook them (the attention economy); with agents they can build again, and make technology serve them.", "sources": [{"ref": "art:lucky-to-be-here", "where": "Technology that did not work for you"}, {"ref": "news:custom-uis-are-not-the-exception", "where": "a custom interface for each moment"}], "answers": ["3.technologies/draft/dopamine.md", "10.misc/gen-z-digital-env.md"], "topic": "everyone-is-a-developer", "chapter": "lucky-to-be-here", "destination": "this-edition", "state": "accepted", "decided_by": "Dinis, in You are lucky to be here; the attention-economy evidence is the journalist's to find", "gravity": "all"},
-  {"id": "learning-made-for-you", "title": "Learning can be made for you, not for a mythical average student", "kind": "claim", "statement": "Your gaps, your curiosity, your zone: an agent can shape learning to how you think, and you can build the tools for it.", "sources": [{"ref": "art:lucky-to-be-here", "where": "Learning, made for you"}, {"ref": "art:connect-the-dots-backwards", "where": "This is about you; Learning is a lifelong skill"}], "answers": ["4.life-patterns/content/learning.md", "4.life-patterns/the-zone.md"], "topic": "everyone-is-a-developer", "chapter": "connect-the-dots-backwards", "destination": "this-edition", "state": "accepted", "decided_by": "Dinis, in both articles", "gravity": "all"},
-  {"id": "craftspeople-make-their-own-tools", "title": "Become a developer, because craftspeople make their own tools", "kind": "advice", "statement": "The reason to become a developer is not a job title: every craft makes its own tools, and now anyone can.", "sources": [{"ref": "art:lucky-to-be-here", "where": "Become a developer: craftspeople make their own tools"}, {"ref": "news:the-citizen-developer", "where": "the spreadsheet grown up"}], "answers": ["4.life-patterns/thinking-as-programmer.md", "1.introduction/stem-tech-stack.md"], "topic": "everyone-is-a-developer", "chapter": "everyone-is-a-developer", "destination": "this-edition", "state": "accepted", "decided_by": "Dinis, in You are lucky to be here", "gravity": "all"},
-  {"id": "think-with-it", "title": "Think with the AI; never delegate your thinking to it", "kind": "advice", "statement": "Search gave answers; generative AI lets you question them. Use it to go deeper and ask for the evidence, not to skip understanding.", "sources": [{"ref": "art:lucky-to-be-here", "where": "Think with it; do not delegate your thinking to it"}, {"ref": "art:connect-the-dots-backwards", "where": "From answers to questions"}], "answers": ["4.life-patterns/content/learning.md"], "topic": "everyone-is-a-developer", "chapter": "connect-the-dots-backwards", "destination": "this-edition", "state": "accepted", "decided_by": "Dinis, in both articles", "gravity": "all"},
-  {"id": "jobs-that-never-scaled", "title": "The opportunity is in old jobs too: the ones that never scaled, and now can", "kind": "claim", "statement": "Jobs done for centuries one person at a time can now scale with agents; the map shows where a reader might land.", "sources": [{"ref": "art:lucky-to-be-here", "where": "The jobs that never scaled"}], "answers": [], "topic": "be-a-founder", "chapter": "where-do-you-land", "destination": "this-edition", "state": "candidate", "decided_by": null, "notes": "Needs Dinis's three examples (his open question).", "gravity": "villager"},
-  {"id": "read-it-on-paper", "title": "Read it on paper, with a pen", "kind": "advice", "statement": "The printed page is still the best technology to learn from; the opening tells the reader how to read the book before the first chapter.", "sources": [{"ref": "art:connect-the-dots-backwards", "where": "Read it on paper, with a pen"}], "answers": ["3.technologies/content/pen-and-paper.md", "3.technologies/content/books.md"], "topic": "everyone-is-a-developer", "chapter": "lucky-to-be-here", "destination": "this-edition", "state": "accepted", "decided_by": "Dinis, in Connect the dots backwards; whether to ship a PDF laid out for pen and paper is his open question", "gravity": "all"},
-  {"id": "connect-the-dots-backwards", "title": "A path only makes sense looking back", "kind": "frame", "statement": "Trust your gut going forward and use a method for walking: doors, fast iteration, constraints, leverage. Jobs's calligraphy class became the Mac's typography.", "sources": [{"ref": "art:connect-the-dots-backwards", "where": "Connect the dots backwards"}, {"ref": "sb:connect-the-dots-backwards", "where": "panels 1 to 3"}], "answers": ["7.your-cv/future-self.md", "4.life-patterns/one-way-two-way-doors.md"], "topic": "direction-is-the-scarce-skill", "chapter": "connect-the-dots-backwards", "destination": "this-edition", "state": "accepted", "decided_by": "Dinis, in Connect the dots backwards; his own three dots are still his to name", "gravity": "all"},
-  {"id": "multidisciplinary-edge", "title": "The edge is now multidisciplinary", "kind": "claim", "statement": "Learning to intersect disciplines is where the advantage is; the humanities and mathematics both matter.", "sources": [{"ref": "art:connect-the-dots-backwards", "where": "The edge is multidisciplinary"}], "answers": ["4.life-patterns/why-diversity-matters.md"], "topic": "direction-is-the-scarce-skill", "chapter": "connect-the-dots-backwards", "destination": "this-edition", "state": "accepted", "decided_by": "Dinis, in Connect the dots backwards", "gravity": "explorer"},
-  {"id": "maths-taught-to-be-hated", "title": "We teach maths, and music, as if to make people hate them", "kind": "claim", "statement": "We give the solution away and skip the wonder and the struggle (Lockhart's A Mathematician's Lament); a reader who hated maths at school was taught badly, not born without it.", "sources": [{"ref": "art:connect-the-dots-backwards", "where": "We teach maths as if to make people hate it"}], "answers": ["4.life-patterns/love-maths.md"], "topic": "everyone-is-a-developer", "chapter": "connect-the-dots-backwards", "destination": "this-edition", "state": "accepted", "decided_by": "Dinis, in Connect the dots backwards (the first name was corrected by the checking)", "gravity": "all"},
-  {"id": "explore-again", "title": "Generative AI lets you explore and communicate again", "kind": "claim", "statement": "Ways of communicating you could not afford before, like the storyboards on this site, are now an afternoon's work; exploring is back.", "sources": [{"ref": "art:connect-the-dots-backwards", "where": "Generative AI lets you explore again"}, {"ref": "agent:storyboards-drawn-by-code", "where": "the renderer"}], "answers": ["5.concepts/inventing-on-principle.md"], "topic": "explorers-villagers-town-planners", "chapter": "connect-the-dots-backwards", "destination": "this-edition", "state": "accepted", "decided_by": "Dinis, in Connect the dots backwards; the creativity study it cites is the journalist's to check first", "gravity": "explorer"},
-  {"id": "small-minority", "title": "By reading this you are already in a small minority, and geography no longer decides", "kind": "claim", "statement": "Learning is a lifelong skill; the future is local, decentralised and sovereign; the reader who reads is already ahead.", "sources": [{"ref": "art:connect-the-dots-backwards", "where": "You are already in a small minority; Learning is a lifelong skill"}, {"ref": "news:who-will-game-the-reading-meter", "where": "0.6% of internet users are developers; 26% of OECD adults cannot use a computer"}], "answers": ["4.life-patterns/civic-responsibility.md"], "topic": "civic-and-history", "chapter": "connect-the-dots-backwards", "destination": "this-edition", "state": "accepted", "decided_by": "Dinis, in Connect the dots backwards", "gravity": "all"},
-  {"id": "maps-before-names", "title": "Wardley maps run through the whole book, shown before they are named", "kind": "frame", "statement": "Let the reader feel the pattern, things moving from genesis to commodity, before learning the words; a map in every part.", "sources": [{"ref": "art:where-do-you-land", "where": "Maps everywhere, shown before they are named"}, {"ref": "news:why-i-love-wardley-maps", "where": "the frame, taught directly"}, {"ref": "sb:where-do-you-land", "where": "the map panels"}], "answers": ["4.life-patterns/pionners-settlers-town-planners.md"], "topic": "explorers-villagers-town-planners", "chapter": "where-do-you-land", "destination": "this-edition", "state": "accepted", "decided_by": "Dinis, in Where do you land? (the editor records it in the vault, brief task 1)", "gravity": "all"},
-  {"id": "four-stages-beyond-activities", "title": "The four stages of evolution are not only for activities", "kind": "frame", "statement": "Dinis's table from his Open Security Summit talk: Wardley's four rows and ten more scales, from openness to backups to data, all move from genesis to commodity.", "sources": [{"ref": "art:where-do-you-land", "where": "The four stages are not only for activities"}], "answers": ["5.concepts/graphs.md"], "topic": "explorers-villagers-town-planners", "chapter": "where-do-you-land", "destination": "this-edition", "state": "accepted", "decided_by": "Dinis, in Where do you land?", "gravity": "town-planner"},
-  {"id": "centre-of-gravity", "title": "Explorer, villager, town planner: personalities, each with a centre of gravity", "kind": "frame", "statement": "Wardley's three describe people better than the business personality tests; everyone has a centre of gravity, some can play at several levels, it moves over a career, and it is where time flies.", "sources": [{"ref": "art:where-do-you-land", "where": "Where do you fit?; The explorer; The villager; The town planner; A centre of gravity, not a box"}, {"ref": "news:explorer-coding", "where": "the three kinds of people and work"}, {"ref": "news:software-vendors-as-villagers", "where": "users explore on top, vendors sell the maintenance"}, {"ref": "sb:where-do-you-land", "where": "the spectrum panel"}], "answers": ["4.life-patterns/pionners-settlers-town-planners.md"], "topic": "explorers-villagers-town-planners", "chapter": "where-do-you-land", "destination": "this-edition", "state": "accepted", "decided_by": "Dinis, in Where do you land?; whether to group the book by centre of gravity or only mark it is his open question", "gravity": "all"},
-  {"id": "three-learning-paths", "title": "Each centre of gravity needs different skills and a different learning path", "kind": "method", "statement": "All three are brilliant at different things; the book carries a black-and-white badge per chapter and three paths through it.", "sources": [{"ref": "art:where-do-you-land", "where": "A badge for each, in black and white; The brief, tasks 2 and 3"}], "answers": ["4.life-patterns/content/learning.md"], "topic": "explorers-villagers-town-planners", "chapter": "where-do-you-land", "destination": "this-edition", "state": "accepted", "decided_by": "Dinis, in Where do you land?; whether the badges work is his open question", "gravity": "all"},
-  {"id": "explorer-coding", "title": "Explorer coding: what people call vibe coding, done as exploring", "kind": "frame", "statement": "Anyone with a need explores it by building, with the fast feedback loop that made spreadsheets win; it is not a way to ship, it is a way to find out.", "sources": [{"ref": "news:explorer-coding", "where": "the definition"}, {"ref": "news:a-browser-for-one", "where": "frustration plus the power to build"}], "answers": ["5.concepts/repl.md", "4.life-patterns/thinking-as-programmer.md"], "topic": "explorers-villagers-town-planners", "chapter": "explorer-coding-and-the-handover", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "explorer"},
-  {"id": "the-handover", "title": "The deployment gap is a handover, and the prototype is the best brief", "kind": "frame", "statement": "The step from a prototype to a tool people rely on is not a place to stop but a handover from explorers to villagers and town planners; what someone built for themselves says what they want better than any document.", "sources": [{"ref": "news:who-will-fix-your-mess", "where": "the answer to HBR's deployment gap"}, {"ref": "news:the-citizen-developer", "where": "the prototype is the best brief"}, {"ref": "news:explorer-to-villager-newsroom", "where": "a worked handover with real numbers"}], "answers": ["5.concepts/legacy-applications.md", "4.life-patterns/refactoring.md"], "topic": "explorers-villagers-town-planners", "chapter": "explorer-coding-and-the-handover", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "villager"},
-  {"id": "everyone-is-a-developer", "title": "Everyone who can brief an agent is a developer now", "kind": "frame", "statement": "The definition widened: the citizen developer is the spreadsheet grown up, and Portuguese is a programming language because prompts are natural language. The book must also say what the briefing-only developer cannot do.", "sources": [{"ref": "news:generation-z-developers-again", "where": "The name"}, {"ref": "news:the-citizen-developer", "where": "the citizen developer is good news"}, {"ref": "news:portugal-2024-genai-in-portuguese", "where": "the quiz"}, {"ref": "art:lucky-to-be-here", "where": "Become a developer"}], "answers": ["1.introduction/generation-z.md", "1.introduction/stem-tech-stack.md", "3.technologies/draft/scratch.md"], "topic": "everyone-is-a-developer", "chapter": "everyone-is-a-developer", "destination": "this-edition", "state": "accepted", "decided_by": "Dinis, in Generation Z Developers, again; what the briefing-only developer cannot do is interview question 6", "gravity": "all"},
-  {"id": "hired-for-the-workflow", "title": "The one competitive advantage in 2026 is running agentic workflows", "kind": "claim", "statement": "Companies need AI operators, not model builders; 71% of leaders would rather hire less experience with AI skills; the roles pay 62% more; the edge shows when the choice is close.", "sources": [{"ref": "news:hired-for-the-workflow", "where": "the whole argument and the data"}, {"ref": "book:1.introduction/how-to-get-a-job.md", "where": "Having one competitive advantage"}], "answers": ["1.introduction/how-to-get-a-job.md", "3.technologies/content/ml-ai.md"], "topic": "getting-the-job", "chapter": "hired-for-the-workflow", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "all"},
-  {"id": "you-are-more-technical-than-you-think", "title": "You are more technical than you think", "kind": "advice", "statement": "People who use email, websites and apps at an advanced level and still say they are not technical have learned every previous technique; they only need the new one.", "sources": [{"ref": "news:hired-for-the-workflow", "where": "There was a time"}], "answers": ["4.life-patterns/impostor-syndrome.md"], "topic": "getting-the-job", "chapter": "hired-for-the-workflow", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "all"},
-  {"id": "it-starts-with-the-application", "title": "The edge starts with the application", "kind": "advice", "statement": "A CV fitted to the role, an analysis of the company's problem, and something they have not seen: the interview then starts from your strengths. It worked for Dinis through OWASP before agents existed.", "sources": [{"ref": "news:hired-for-the-workflow", "where": "It starts with the application; When all things are equal"}], "answers": ["1.introduction/how-to-get-a-job.md", "7.your-cv/_index.md"], "topic": "getting-the-job", "chapter": "hired-for-the-workflow", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "all"},
-  {"id": "act-as-the-job-you-want", "title": "Act as the job you want: do the job in public before you have it", "kind": "advice", "statement": "If you are looking for a job you have time; pick a startup or an open-source project, do the work as that person, in public, so it can be linked; reach does not matter, the link does; let the people who want to help you help you.", "sources": [{"ref": "news:act-as-the-job-you-want", "where": "the whole argument"}, {"ref": "book:1.introduction/how-to-get-a-job.md", "where": "Act like you are part of the company"}], "answers": ["1.introduction/how-to-get-a-job.md", "7.your-cv/github.md", "4.life-patterns/mentors.md", "6.security/bug-bounties.md"], "topic": "getting-the-job", "chapter": "act-as-the-job-you-want", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "all"},
-  {"id": "your-cv-online", "title": "Your CV should be online, with links to the work", "kind": "advice", "statement": "A page anyone can forward, not only a PDF; your GitHub is your CV because it shows how you work with others; the bar to build it is an afternoon.", "sources": [{"ref": "news:act-as-the-job-you-want", "where": "Your CV should be online; The bar is not high"}, {"ref": "news:three-linkedin-pages", "where": "drafting pages in the open"}], "answers": ["7.your-cv/_index.md", "7.your-cv/github.md", "7.your-cv/linkedin.md", "7.your-cv/blogs.md"], "topic": "publish-in-public", "chapter": "act-as-the-job-you-want", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "all"},
-  {"id": "job-hunt-in-2026", "title": "How a job hunt works in 2026: interviews, take-home tests with AI, what a junior role looks like", "kind": "advice", "statement": "A gap no article covers yet: the mechanics of applying, interviewing and freelancing now; the journalist writes it from a memo.", "sources": [{"ref": "survey:gaps", "where": "The job hunt mechanics in 2026"}, {"ref": "art:start-from-the-storyline", "where": "The gaps; brief task 6"}], "answers": ["7.your-cv/upwork.md"], "topic": "getting-the-job", "chapter": "act-as-the-job-you-want", "destination": "this-edition", "state": "candidate", "decided_by": null, "notes": "Article first.", "gravity": "all"},
-  {"id": "fear-of-ai", "title": "The fear, impostor syndrome and anxiety about AI among young people", "kind": "claim", "statement": "Young Europeans are fed fear about AI; the book concedes which fears are right (the first hiring wave went to the wrong people, projects will be cancelled) and answers the rest. A gap: no article is written for the newcomer yet.", "sources": [{"ref": "survey:gaps", "where": "Fear, impostor syndrome and anxiety"}, {"ref": "news:generation-z-developers-again", "where": "The name"}, {"ref": "art:lucky-to-be-here", "where": "The hype, and maybe the crash"}], "answers": ["4.life-patterns/impostor-syndrome.md"], "topic": "everyone-is-a-developer", "chapter": "lucky-to-be-here", "destination": "this-edition", "state": "candidate", "decided_by": null, "notes": "Article first; interview question 4.", "gravity": "all"},
-  {"id": "publish-publish-publish", "title": "Publish, publish, publish: your own newsroom", "kind": "method", "statement": "A publishing loop you can copy on day one: a voice memo in, an agent researches, checks and writes in your voice, a validated static site out; small finished pieces over big batches; linkable work is the CV.", "sources": [{"ref": "news:your-own-newsroom", "where": "the step-by-step recipe"}, {"ref": "news:books-from-articles", "where": "books stall at 95%"}, {"ref": "news:nineteen-sites", "where": "twenty sites in fifteen days"}], "answers": ["4.life-patterns/publish-publish-publish.md", "7.your-cv/blogs.md", "2.mvp-for-gen-z-dev/content/hugo.md", "7.your-cv/leanpub.md"], "topic": "publish-in-public", "chapter": "your-own-newsroom", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "explorer"},
-  {"id": "every-part-buys-the-next", "title": "Write it once, link it many times; every part buys the next", "kind": "method", "statement": "An article behind every answer; the subject buys the first line, the first line the paragraph; the Wizard of Oz in reverse: agent-drafted, person-sent.", "sources": [{"ref": "news:the-man-behind-the-curtain", "where": "the argument"}, {"ref": "news:the-question-is-whether-they-miss-it", "where": "every part buys the next"}], "answers": ["5.concepts/amazon-press-releases.md"], "topic": "publish-in-public", "chapter": "your-own-newsroom", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "villager"},
-  {"id": "first-workspace", "title": "Your first workspace: from a spreadsheet to a folder per person, drafts never send", "kind": "method", "statement": "A Drive folder per person, a Claude Project connected to Drive and Gmail, a six-line policy, five exercises in an afternoon; then habits, an agent mailbox, and surfaces chosen by reach.", "sources": [{"ref": "news:from-a-spreadsheet-to-a-folder-per-person", "where": "the how-to"}, {"ref": "news:replicating-the-agentic-inbox", "where": "drafts, never send"}, {"ref": "news:how-i-work-with-claude", "where": "six habits"}, {"ref": "news:short-punchy-and-co-written", "where": "For anyone getting into AI: the Google Workspace chapter"}], "answers": ["2.mvp-for-gen-z-dev/_index.md", "2.mvp-for-gen-z-dev/content/slack-and-chatops.md", "4.life-patterns/automate-your-workflows.md"], "topic": "your-first-workspace", "chapter": "your-first-workspace", "destination": "this-edition", "state": "candidate", "decided_by": null, "notes": "The beginner's accounts and costs checklist is still a gap.", "gravity": "all"},
-  {"id": "an-agent-is-a-session-with-a-focus", "title": "An agent is a session with a focus: one session per topic, named, with a role file", "kind": "method", "statement": "One session per topic, @names, a role.md saying what it does and does not do, lessons and debriefs as memory, a daily brief.", "sources": [{"ref": "news:how-i-work-with-claude", "where": "the six habits"}, {"ref": "news:the-agents-write-too", "where": "a team of focused sessions"}, {"ref": "news:the-librarians-daily-brief", "where": "the daily brief"}], "answers": ["4.life-patterns/workflows.md", "5.concepts/agile-and-kanban.md"], "topic": "working-with-agents", "chapter": "how-to-work-with-agents", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "villager"},
-  {"id": "brief-is-the-unit-of-work", "title": "The brief is the unit of work, and writing it as an article forces the research", "kind": "method", "statement": "A written request an agent can start from: what is asked, what exists, what remains, what done looks like; an article beats a list because it makes you check the record first.", "sources": [{"ref": "art:write-it-as-an-article", "where": "Why an article; How an article becomes work"}, {"ref": "news:the-briefs-so-far", "where": "the brief"}, {"ref": "news:brief-the-agent-too", "where": "the people I talk to work with agents"}], "answers": ["5.concepts/design.md"], "topic": "working-with-agents", "chapter": "how-to-work-with-agents", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "villager"},
-  {"id": "omnichannel-programming", "title": "Omnichannel programming: brief by voice, review on the phone, one shared state", "kind": "method", "statement": "Voice, chat, phone, IDE and pull requests all read and write one shared state (git, vaults, briefs, graphs); this is how a new generation programs.", "sources": [{"ref": "news:omnichannel-programming", "where": "the argument"}], "answers": ["3.technologies/content/ide.md", "2.mvp-for-gen-z-dev/content/slack-and-chatops.md"], "topic": "working-with-agents", "chapter": "how-to-work-with-agents", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "explorer"},
-  {"id": "every-mistake-added-a-rule", "title": "Every mistake added a rule: the complexity trap of the agent operator", "kind": "claim", "statement": "Each mistake becomes a rule, the prompt grows, compaction comes sooner and new mistakes follow; the way out is fewer, enforced rules, re-anchored after every summary.", "sources": [{"ref": "news:every-mistake-added-a-rule", "where": "the trap"}, {"ref": "news:re-anchoring-agent-behaviour-policies", "where": "summarised 18 times in a month"}], "answers": ["5.concepts/changes.md"], "topic": "working-with-agents", "chapter": "how-to-work-with-agents", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "villager"},
-  {"id": "not-on-your-laptop", "title": "Why your agents should not run on your laptop", "kind": "advice", "statement": "An agent on your laptop runs as you, with your SSH keys, cookies and password-manager session; pick the cloud surface by reach.", "sources": [{"ref": "news:why-my-agents-do-not-run-on-my-laptop", "where": "the safety advice"}], "answers": ["6.security/dont-touch-production.md"], "topic": "security-agent-era", "chapter": "your-first-workspace", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "all"},
-  {"id": "direction-is-the-scarce-skill", "title": "Direction is the scarce skill: the place of highest leverage", "kind": "frame", "statement": "When anyone can brief an agent, building stops being the bottleneck; choosing what to build next, where nothing blocks you, and starting without knowing the end, is what employers and users pay for.", "sources": [{"ref": "news:places-of-highest-leverage", "where": "the argument"}, {"ref": "news:not-a-straight-line", "where": "two days against six months"}, {"ref": "art:connect-the-dots-backwards", "where": "doors, fast iteration, constraints, leverage"}], "answers": ["5.concepts/deadlines.md", "4.life-patterns/start-with-why.md"], "topic": "direction-is-the-scarce-skill", "chapter": "direction-and-judgement", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "explorer"},
-  {"id": "knowing-when-to-stop", "title": "Knowing when to stop is most of seniority", "kind": "claim", "statement": "Who the attackers are, the phase of the business, the bottleneck, what good enough looks like: experience gives people this, agents lack it, and the book has to teach the junior's version.", "sources": [{"ref": "news:knowing-when-to-stop", "where": "the argument"}, {"ref": "book:3.technologies/content/brain.md", "where": "the chapter on how the brain decides"}], "answers": ["3.technologies/content/brain.md", "5.concepts/deadlines.md"], "topic": "direction-is-the-scarce-skill", "chapter": "direction-and-judgement", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "town-planner"},
-  {"id": "one-way-two-way-doors", "title": "One-way and two-way doors, blast radius, and where a person belongs", "kind": "frame", "statement": "How cheap is it to undo decides where the human goes: put the person where the output cannot be undone and the blast radius is large; give them the why; let the record move the line over time. People approve 93% of permission prompts.", "sources": [{"ref": "news:how-cheap-is-it-to-undo", "where": "the test"}, {"ref": "news:the-human-in-the-loop", "where": "93%"}, {"ref": "news:footprint-and-blast-radius", "where": "footprint beside blast radius"}, {"ref": "news:agency-is-not-a-yes", "where": "the seven-level scale"}], "answers": ["4.life-patterns/one-way-two-way-doors.md", "6.security/dont-touch-production.md", "5.concepts/chaos-engineering.md"], "topic": "human-in-the-loop", "chapter": "direction-and-judgement", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "town-planner"},
-  {"id": "agents-decide-people-answer", "title": "Agents decide, people answer", "kind": "claim", "statement": "Agents in loops make real decisions, but responsibility stays with whoever granted the reach and set the mandate; also ELIZA and anthropomorphism.", "sources": [{"ref": "news:who-owns-the-words", "where": "the argument"}, {"ref": "news:the-policy-draws-the-liability-line", "where": "the prohibitions list"}], "answers": ["4.life-patterns/civic-responsibility.md"], "topic": "human-in-the-loop", "chapter": "direction-and-judgement", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "town-planner"},
-  {"id": "the-record-checks-you", "title": "Make fact-based decisions: think out loud and let the record check you", "kind": "method", "statement": "Count rather than remember; publish only what the record supports (5 claims confirmed, 5 corrected, 2 not found); review as a record with every finding answered; distrust self-reports.", "sources": [{"ref": "news:my-memory-checked", "where": "the experiment"}, {"ref": "news:reviews-on-the-record", "where": "review as a record"}, {"ref": "news:your-agents-logs-are-a-self-report", "where": "under 2% admitted"}, {"ref": "book:5.concepts/facts.md", "where": "the 2018 outline"}], "answers": ["5.concepts/facts.md", "5.concepts/feedback-loops.md", "4.life-patterns/content/being-criticized-is-a-privilege.md"], "topic": "facts-and-the-record", "chapter": "facts-and-the-record", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "villager"},
-  {"id": "mandate-reach-gap", "title": "Mandate, reach and the gap: hope versus enforcement", "kind": "frame", "statement": "Before you give an agent access, write down what it is for and what it can reach; the gap is the risk; rules in a prompt are hope, rules in a hook or platform are enforcement; behaviour, decision and workflow policies are different things.", "sources": [{"ref": "news:what-can-your-agent-reach", "where": "the plain explainer"}, {"ref": "news:are-hooks-the-sweet-spot", "where": "hope-based security"}, {"ref": "news:attacks-rewritten-as-mandates", "where": "28 incidents"}, {"ref": "news:three-policies-for-an-agent", "where": "the three-policy split"}], "answers": ["6.security/threat-modeling.md", "6.security/3rd-party-modules.md"], "topic": "controlling-your-agent", "chapter": "controlling-your-agent", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "town-planner"},
-  {"id": "code-is-a-liability", "title": "Code is a liability; the future is the smallest code that does the job", "kind": "claim", "statement": "Every shipped line is a capability someone may misuse (Log4j; 428 of 1,500 files ran); the next maintainer is an agent; the minimal viable code path.", "sources": [{"ref": "news:the-code-you-do-not-ship", "where": "the argument"}, {"ref": "news:the-minimum-code-below", "where": "428 of 1,500"}], "answers": ["5.concepts/legacy-applications.md", "4.life-patterns/refactoring.md", "4.life-patterns/content/future-needs-you.md"], "topic": "security-agent-era", "chapter": "controlling-your-agent", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "town-planner"},
-  {"id": "learn-to-hack", "title": "Learning to hack is still how you learn how things work: draw the line where the attacker is", "kind": "advice", "statement": "Name the threat agent, the vector and how sophisticated it is; a ladder from your own mistakes up to states; the bookmarklet trick; to hack means to solve problems.", "sources": [{"ref": "news:who-are-you-protecting-against", "where": "the ladder"}, {"ref": "news:fix-the-page-yourself", "where": "the bookmarklet"}, {"ref": "news:portugal-2016-hacking-portugal", "where": "to hack means to solve problems"}], "answers": ["4.life-patterns/learn-to-hack.md", "6.security/security-better-developers.md", "6.security/threat-modeling.md"], "topic": "security-agent-era", "chapter": "controlling-your-agent", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "explorer"},
-  {"id": "secrets-never-in-the-chat", "title": "The secret goes from the drop into the tool, never into the chat", "kind": "advice", "statement": "Classify the credential before it touches anything; an agent told something cannot untell it; the lethal trifecta.", "sources": [{"ref": "news:handing-secrets-to-agents", "where": "the rule"}, {"ref": "news:seven-vaults-one-method", "where": "classify the credential first"}, {"ref": "news:skill-behaviour-policy", "where": "the lethal trifecta"}], "answers": ["6.security/pointers.md", "6.security/strings-should-be-banned.md"], "topic": "security-agent-era", "chapter": "controlling-your-agent", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "villager"},
-  {"id": "the-fork-next-door", "title": "Open source means nobody can lock you in: the fork next door", "kind": "claim", "statement": "Anyone can fork, which protects founders, customers and investors from each other; forks take hold only when someone stops executing; six misconceptions; open source is about to become the most secure software.", "sources": [{"ref": "news:the-fork-next-door", "where": "the argument"}, {"ref": "news:what-open-source-is-and-is-not", "where": "six misconceptions"}, {"ref": "news:the-eyeballs-get-cheap", "where": "curl's year"}, {"ref": "book:2.mvp-for-gen-z-dev/content/open-source.md", "where": "the 2018 chapter"}], "answers": ["2.mvp-for-gen-z-dev/content/open-source.md", "2.mvp-for-gen-z-dev/content/creative-commons.md"], "topic": "open-source", "chapter": "open-source", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "all"},
-  {"id": "first-pr", "title": "Your first pull request: open source is still the newcomer's best door", "kind": "advice", "statement": "A one-file, 83-line documentation PR merged into a 9,625-commit project; contribute to the projects of the companies you want to work for.", "sources": [{"ref": "news:our-first-pr-in-ruflo", "where": "the first-contribution story"}, {"ref": "news:act-as-the-job-you-want", "where": "collaborate on their open-source projects"}], "answers": ["7.your-cv/github.md", "2.mvp-for-gen-z-dev/draft/github-flow.md"], "topic": "open-source", "chapter": "open-source", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "explorer"},
-  {"id": "lego-blocks", "title": "Building blocks: cloud as Lego, free models with your own key, git as a standard", "kind": "method", "statement": "What a non-specialist can assemble today, mostly free, with an agent doing the one-time setup; serverless as ephemeral town planner services; knowing what tokens cost.", "sources": [{"ref": "news:cloudflare-as-lego-blocks", "where": "the map of free blocks"}, {"ref": "news:free-models-your-own-key", "where": "free in October 2026"}, {"ref": "news:ephemeral-town-planner-services", "where": "the test for serverless"}, {"ref": "news:sgit-is-a-standard", "where": "git won because it is a standard"}, {"ref": "news:the-tokens-hook", "where": "$170 against $1,950"}], "answers": ["2.mvp-for-gen-z-dev/draft/aws.md", "5.concepts/serverless.md", "5.concepts/micro-services.md", "7.your-cv/git.md", "2.mvp-for-gen-z-dev/content/docker.md"], "topic": "building-blocks", "chapter": "building-blocks", "destination": "this-edition", "state": "candidate", "decided_by": null, "notes": "Costs for a newcomer is still a gap.", "gravity": "villager"},
-  {"id": "green-does-not-mean-live", "title": "Shipped means the user has it: green does not mean live, go slow to go fast", "kind": "claim", "statement": "A CI pass is not a release until you have checked what the user sees; tests that never run are not tests; the explorer-to-villager move is a refactor you can prove; synthetic users in an afternoon.", "sources": [{"ref": "news:green-does-not-mean-live", "where": "shipped is a fact about the reader"}, {"ref": "news:explorer-to-villager-newsroom", "where": "go slow to go fast"}, {"ref": "news:how-to-run-synthetic-users", "where": "five people who do not exist"}], "answers": ["5.concepts/CI-Testing.md", "2.mvp-for-gen-z-dev/draft/continuous-integration.md", "2.mvp-for-gen-z-dev/draft/tdd.md", "5.concepts/devops.md"], "topic": "shipped-means-the-user-has-it", "chapter": "shipped-means-the-user-has-it", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "villager"},
-  {"id": "think-in-graphs", "title": "Think in graphs: knowledge that maintains itself, and your future self", "kind": "frame", "statement": "Graphs as the way of thinking, not only a drawing tool: brief from a graph, maintain it rather than perfect it, search as navigation; keep your work linkable and backed up so your future self can find it.", "sources": [{"ref": "news:the-graphs-books", "where": "three books in a day"}, {"ref": "news:knowledge-that-maintains-itself", "where": "maintain, do not perfect"}, {"ref": "news:bringing-my-past-work-back", "where": "eighteen years of essays"}, {"ref": "art:connect-the-dots-backwards", "where": "I think in graphs"}, {"ref": "news:introducing-fractal-semantic-graphs", "where": "the defining article"}], "answers": ["5.concepts/graphs.md", "7.your-cv/future-self.md", "4.life-patterns/content/backup-your-life.md", "2.mvp-for-gen-z-dev/content/dot-language.md", "5.concepts/recursive-functions.md"], "topic": "graphs-memory", "chapter": "graphs-and-your-future-self", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "all"},
-  {"id": "expert-founders", "title": "Be a founder: the expert can build first now, and the test is whether they miss it", "kind": "claim", "statement": "Generative AI lets the people who know the problem build it; the mean founding age of the fastest-growing startups is 45; open source everything; do they miss it; pay after the value.", "sources": [{"ref": "news:the-expert-founders", "where": "the argument"}, {"ref": "news:the-question-is-whether-they-miss-it", "where": "the startup test"}, {"ref": "news:paying-after-the-value", "where": "the gym figure"}, {"ref": "book:4.life-patterns/content/be-a-founder.md", "where": "the 2018 chapter"}], "answers": ["4.life-patterns/content/be-a-founder.md"], "topic": "be-a-founder", "chapter": "be-a-founder", "destination": "this-edition", "state": "candidate", "decided_by": null, "gravity": "explorer"},
-  {"id": "hack-your-country", "title": "Civic responsibility: to hack means to solve problems, and small countries can lead now", "kind": "claim", "statement": "Dinis's Portugal talks as the then-and-now: what regulation delivered, the Portuguese Hacking Service, judo for small countries, sovereignty as the ability to move.", "sources": [{"ref": "news:portugal-2010-a-challenge", "where": "what came true in 16 years"}, {"ref": "news:portugal-2016-hacking-portugal", "where": "the keynote"}, {"ref": "news:judo-for-small-countries", "where": "the plumbing"}, {"ref": "news:sovereignty-is-the-ability-to-move", "where": "the test"}], "answers": ["4.life-patterns/civic-responsibility.md"], "topic": "civic-and-history", "chapter": "civic-responsibility", "destination": "this-edition", "state": "candidate", "decided_by": null, "notes": "Portuguese edition or both languages is Dinis's open question.", "gravity": "all"},
-  {"id": "repository-official-vault-working", "title": "The repository holds the official versions; the vault holds the working versions", "kind": "process", "statement": "The rule this site is built on: v1 frozen in the repository, work in a public vault with its read key published, a delta between every two versions.", "sources": [{"ref": "news:a-website-to-finish-the-book", "where": "The repository and the vault"}, {"ref": "dec:005", "where": "text issues live in the vault"}], "answers": ["1.introduction/how-this -book-was-created.md"], "topic": "making-of", "chapter": "how-this-book-was-made", "destination": "this-edition", "state": "accepted", "decided_by": "Dinis, in A website to finish the book, and decision 005", "gravity": "town-planner"},
-  {"id": "co-written-and-credited", "title": "Co-written with Claude, credited, with the ratio shown; short and punchy; every paragraph knows what it is", "kind": "process", "statement": "The book says it is co-written, shows the memo-to-word ratio (63,000 words in, 85,000 out on the newsroom), stays short and punchy, and every paragraph carries its purpose, evidence, facts and hypotheses in the graph.", "sources": [{"ref": "news:short-punchy-and-co-written", "where": "the whole argument"}, {"ref": "news:how-much-of-this-did-i-write", "where": "the numbers"}, {"ref": "news:who-is-speaking", "where": "three voices"}], "answers": ["1.introduction/how-this -book-was-created.md"], "topic": "making-of", "chapter": "how-this-book-was-made", "destination": "this-edition", "state": "accepted", "decided_by": "Dinis, in Short, punchy, and co-written with Claude", "gravity": "all"},
-  {"id": "a-book-for-one-reader", "title": "A personal edition, assembled by an agent, paid for as it is read", "kind": "process", "statement": "Once the book is a graph an agent can assemble an edition for one person; sent not published; pay as you read from five pounds of credit.", "sources": [{"ref": "news:a-book-for-one-reader", "where": "the whole argument"}], "answers": [], "topic": "making-of", "chapter": "how-this-book-was-made", "destination": "next-version", "state": "deferred", "decided_by": "The brief: nothing of it is built; it waits for the book's graph (this register is the first step)", "gravity": "explorer"},
-  {"id": "read-comment-decide", "title": "Read, comment, decide: the loop that turns Dinis's decisions into versions", "kind": "process", "statement": "Read an item, comment verbatim, pick a verb (keep, fix, rewrite, merge, cut, article first, later, not doing it); the editor records it as a file in the vault and acts; decisions add up to a version Dinis signs off.", "sources": [{"ref": "art:read-comment-decide", "where": "The loop; The verbs; A decision is a file"}, {"ref": "dec:006", "where": "every change is minor"}], "answers": [], "topic": "making-of", "chapter": "how-this-book-was-made", "destination": "the-process", "state": "accepted", "decided_by": "Dinis, in Read, comment, decide", "gravity": "villager"},
-  {"id": "write-it-as-an-article", "title": "An article is how to brief an agent, and the roles keep their names", "kind": "process", "statement": "Reviewer, editor, publisher, journalist; every article ends with a brief; the first job is to ship the book we already shipped.", "sources": [{"ref": "art:write-it-as-an-article", "where": "the whole argument"}, {"ref": "dec:007", "where": "two kinds of article"}], "answers": [], "topic": "making-of", "chapter": "how-this-book-was-made", "destination": "the-process", "state": "accepted", "decided_by": "Dinis, in Write it as an article, and decision 007", "gravity": "villager"},
-  {"id": "release-v1-again", "title": "Release the book we already released: every format from one source", "kind": "process", "statement": "Build v1.0.0 here, match it page by page to the 2018 PDF, then every format (print, screen, EPUB, Kindle) from the same build; Leanpub first, then Amazon; the licence is CC BY; the cover waits.", "sources": [{"ref": "art:release-the-book-we-already-released", "where": "the whole argument"}, {"ref": "dec:001", "where": "CC BY"}, {"ref": "dec:002", "where": "our own PDF"}, {"ref": "dec:003", "where": "every format from one source"}, {"ref": "dec:004", "where": "the cover waits"}], "answers": [], "topic": "making-of", "chapter": "how-this-book-was-made", "destination": "the-process", "state": "accepted", "decided_by": "Dinis, decisions 001 to 004", "gravity": "town-planner"},
-  {"id": "one-board-and-one-inventory", "title": "One board for the work, one inventory of everything unfinished", "kind": "process", "statement": "Every issue a file, the boards generated; text issues in the vault; one inventory of the 89 outlines, the drafts, the 43 GitHub issues and the handwritten notes, with a decision column.", "sources": [{"ref": "art:one-board-for-the-book", "where": "the whole argument"}, {"ref": "art:everything-unfinished-in-one-place", "where": "the whole argument"}, {"ref": "dec:005", "where": "text issues live in the vault"}], "answers": [], "topic": "making-of", "chapter": "how-this-book-was-made", "destination": "the-process", "state": "accepted", "decided_by": "Dinis, in both articles and decision 005", "gravity": "town-planner"},
-  {"id": "start-from-the-storyline", "title": "Start from the storyline, as storyboards drawn by code", "kind": "process", "statement": "The 2018 text and the newsroom are the material, not the plan: the storyline first, as panels with a punchline, a concept, the evidence and the character they are for; a cast of six; everything a proposal until Dinis decides.", "sources": [{"ref": "art:start-from-the-storyline", "where": "the whole argument"}, {"ref": "agent:storyboards-drawn-by-code", "where": "the renderer and the survey"}], "answers": [], "topic": "making-of", "chapter": "how-this-book-was-made", "destination": "the-process", "state": "accepted", "decided_by": "Dinis, in Start from the storyline; the cast and the storyline wait on him", "gravity": "explorer"},
-  {"id": "the-book-as-a-graph", "title": "Everything we do here becomes a graph: ideas as nodes, provenance as edges, state on every node", "kind": "process", "statement": "Sources, ideas, chapters, decisions and tasks as one graph, so that what goes in the book, what waits and what is declined is a property of a node with its evidence, and the publishing process can be shown, counted and sold.", "sources": [{"ref": "news:a-website-to-finish-the-book", "where": "The book as a graph, at every altitude"}, {"ref": "news:short-punchy-and-co-written", "where": "Every paragraph knows what it is"}, {"ref": "memo:2026-10-18-graphs", "where": "Dinis's message asking for the graph, the mappings and the tracking"}], "answers": ["5.concepts/graphs.md"], "topic": "making-of", "chapter": "how-this-book-was-made", "destination": "the-process", "state": "accepted", "decided_by": "Dinis, in the message of 18 October 2026 that asked for this register", "gravity": "town-planner"}
+  {
+   "id": "wonder-not-fear",
+   "title": "The book opens with wonder, not fear and not technologies",
+   "kind": "frame",
+   "statement": "The first edition opened with a slide of logos and went too technical too soon; the second opens with wonder and privilege, and the fear is what the reader hears, not where the book starts.",
+   "sources": [
+    {
+     "ref": "art:lucky-to-be-here",
+     "where": "In short; How the first edition started; What goes where"
+    },
+    {
+     "ref": "sb:the-opening",
+     "where": "panels 1 to 4"
+    }
+   ],
+   "answers": [
+    "1.introduction/_index.md",
+    "1.introduction/generation-z.md"
+   ],
+   "topic": "everyone-is-a-developer",
+   "chapter": "lucky-to-be-here",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in You are lucky to be here (the editor records it in the vault, brief task 1)",
+   "gravity": "all"
+  },
+  {
+   "id": "lucky-to-be-here",
+   "title": "Whoever reads this now is lucky to be here",
+   "kind": "claim",
+   "statement": "Alive, and starting out, in the middle of a transition this big, while the pieces are still landing: that is luck, and the book says so before anything else.",
+   "sources": [
+    {
+     "ref": "art:lucky-to-be-here",
+     "where": "You are lucky to be here; The pieces are still landing"
+    }
+   ],
+   "answers": [
+    "1.introduction/generation-z.md"
+   ],
+   "topic": "everyone-is-a-developer",
+   "chapter": "lucky-to-be-here",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in You are lucky to be here",
+   "gravity": "all"
+  },
+  {
+   "id": "nobody-knows",
+   "title": "Ignore the doom: nobody knows what happens next",
+   "kind": "claim",
+   "statement": "Every transformation came with the warning that this time is different; this one is televised. The hype may crash, as the dot-com did, and the opportunity was real both times.",
+   "sources": [
+    {
+     "ref": "art:lucky-to-be-here",
+     "where": "The hype, and maybe the crash"
+    },
+    {
+     "ref": "news:two-years-in-the-opposite",
+     "where": "the counter-story to AI burnout"
+    }
+   ],
+   "answers": [],
+   "topic": "everyone-is-a-developer",
+   "chapter": "lucky-to-be-here",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in You are lucky to be here; whether the dot-com crash belongs in the opening is still his question",
+   "gravity": "all"
+  },
+  {
+   "id": "seven-transformations",
+   "title": "Seven transformations, lived through: the Spectrum, the BBS, the internet, the mobile phone, the cloud, the apps, AI",
+   "kind": "story",
+   "statement": "Dinis's own history as the evidence that transitions reward the people who get in early and keep learning; each dated, each with its warning at the time.",
+   "sources": [
+    {
+     "ref": "art:lucky-to-be-here",
+     "where": "The transformations I have lived through"
+    },
+    {
+     "ref": "sb:the-opening",
+     "where": "the spectrum panel"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/BBS-and-modems.md",
+    "1.introduction/stem-tech-stack.md"
+   ],
+   "topic": "civic-and-history",
+   "chapter": "lucky-to-be-here",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "notes": "The journalist is to write the history, dated and sourced (brief task 5).",
+   "gravity": "all"
+  },
+  {
+   "id": "technology-finally-works-for-you",
+   "title": "Technology can finally work for you",
+   "kind": "claim",
+   "statement": "Gen Z grew up with technology designed to hook them (the attention economy); with agents they can build again, and make technology serve them.",
+   "sources": [
+    {
+     "ref": "art:lucky-to-be-here",
+     "where": "Technology that did not work for you"
+    },
+    {
+     "ref": "news:custom-uis-are-not-the-exception",
+     "where": "a custom interface for each moment"
+    }
+   ],
+   "answers": [
+    "3.technologies/draft/dopamine.md",
+    "10.misc/gen-z-digital-env.md"
+   ],
+   "topic": "everyone-is-a-developer",
+   "chapter": "lucky-to-be-here",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in You are lucky to be here; the attention-economy evidence is the journalist's to find",
+   "gravity": "all"
+  },
+  {
+   "id": "learning-made-for-you",
+   "title": "Learning can be made for you, not for a mythical average student",
+   "kind": "claim",
+   "statement": "Your gaps, your curiosity, your zone: an agent can shape learning to how you think, and you can build the tools for it.",
+   "sources": [
+    {
+     "ref": "art:lucky-to-be-here",
+     "where": "Learning, made for you"
+    },
+    {
+     "ref": "art:connect-the-dots-backwards",
+     "where": "This is about you; Learning is a lifelong skill"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/content/learning.md",
+    "4.life-patterns/the-zone.md"
+   ],
+   "topic": "everyone-is-a-developer",
+   "chapter": "connect-the-dots-backwards",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in both articles",
+   "gravity": "all"
+  },
+  {
+   "id": "craftspeople-make-their-own-tools",
+   "title": "Become a developer, because craftspeople make their own tools",
+   "kind": "advice",
+   "statement": "The reason to become a developer is not a job title: every craft makes its own tools, and now anyone can.",
+   "sources": [
+    {
+     "ref": "art:lucky-to-be-here",
+     "where": "Become a developer: craftspeople make their own tools"
+    },
+    {
+     "ref": "news:the-citizen-developer",
+     "where": "the spreadsheet grown up"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/thinking-as-programmer.md",
+    "1.introduction/stem-tech-stack.md"
+   ],
+   "topic": "everyone-is-a-developer",
+   "chapter": "everyone-is-a-developer",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in You are lucky to be here",
+   "gravity": "all"
+  },
+  {
+   "id": "think-with-it",
+   "title": "Think with the AI; never delegate your thinking to it",
+   "kind": "advice",
+   "statement": "Search gave answers; generative AI lets you question them. Use it to go deeper and ask for the evidence, not to skip understanding.",
+   "sources": [
+    {
+     "ref": "art:lucky-to-be-here",
+     "where": "Think with it; do not delegate your thinking to it"
+    },
+    {
+     "ref": "art:connect-the-dots-backwards",
+     "where": "From answers to questions"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/content/learning.md"
+   ],
+   "topic": "everyone-is-a-developer",
+   "chapter": "connect-the-dots-backwards",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in both articles",
+   "gravity": "all"
+  },
+  {
+   "id": "jobs-that-never-scaled",
+   "title": "The opportunity is in old jobs too: the ones that never scaled, and now can",
+   "kind": "claim",
+   "statement": "Jobs done for centuries one person at a time can now scale with agents; the map shows where a reader might land.",
+   "sources": [
+    {
+     "ref": "art:lucky-to-be-here",
+     "where": "The jobs that never scaled"
+    }
+   ],
+   "answers": [],
+   "topic": "be-a-founder",
+   "chapter": "where-do-you-land",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "notes": "Needs Dinis's three examples (his open question).",
+   "gravity": "villager"
+  },
+  {
+   "id": "read-it-on-paper",
+   "title": "Read it on paper, with a pen",
+   "kind": "advice",
+   "statement": "The printed page is still the best technology to learn from; the opening tells the reader how to read the book before the first chapter.",
+   "sources": [
+    {
+     "ref": "art:connect-the-dots-backwards",
+     "where": "Read it on paper, with a pen"
+    }
+   ],
+   "answers": [
+    "3.technologies/content/pen-and-paper.md",
+    "3.technologies/content/books.md"
+   ],
+   "topic": "everyone-is-a-developer",
+   "chapter": "lucky-to-be-here",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Connect the dots backwards; whether to ship a PDF laid out for pen and paper is his open question",
+   "gravity": "all"
+  },
+  {
+   "id": "connect-the-dots-backwards",
+   "title": "A path only makes sense looking back",
+   "kind": "frame",
+   "statement": "Trust your gut going forward and use a method for walking: doors, fast iteration, constraints, leverage. Jobs's calligraphy class became the Mac's typography.",
+   "sources": [
+    {
+     "ref": "art:connect-the-dots-backwards",
+     "where": "Connect the dots backwards"
+    },
+    {
+     "ref": "sb:connect-the-dots-backwards",
+     "where": "panels 1 to 3"
+    }
+   ],
+   "answers": [
+    "7.your-cv/future-self.md",
+    "4.life-patterns/one-way-two-way-doors.md"
+   ],
+   "topic": "direction-is-the-scarce-skill",
+   "chapter": "connect-the-dots-backwards",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Connect the dots backwards; his own three dots are still his to name",
+   "gravity": "all"
+  },
+  {
+   "id": "multidisciplinary-edge",
+   "title": "The edge is now multidisciplinary",
+   "kind": "claim",
+   "statement": "Learning to intersect disciplines is where the advantage is; the humanities and mathematics both matter.",
+   "sources": [
+    {
+     "ref": "art:connect-the-dots-backwards",
+     "where": "The edge is multidisciplinary"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/why-diversity-matters.md"
+   ],
+   "topic": "direction-is-the-scarce-skill",
+   "chapter": "connect-the-dots-backwards",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Connect the dots backwards",
+   "gravity": "explorer"
+  },
+  {
+   "id": "maths-taught-to-be-hated",
+   "title": "We teach maths, and music, as if to make people hate them",
+   "kind": "claim",
+   "statement": "We give the solution away and skip the wonder and the struggle (Lockhart's A Mathematician's Lament); a reader who hated maths at school was taught badly, not born without it.",
+   "sources": [
+    {
+     "ref": "art:connect-the-dots-backwards",
+     "where": "We teach maths as if to make people hate it"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/love-maths.md"
+   ],
+   "topic": "everyone-is-a-developer",
+   "chapter": "connect-the-dots-backwards",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Connect the dots backwards (the first name was corrected by the checking)",
+   "gravity": "all"
+  },
+  {
+   "id": "explore-again",
+   "title": "Generative AI lets you explore and communicate again",
+   "kind": "claim",
+   "statement": "Ways of communicating you could not afford before, like the storyboards on this site, are now an afternoon's work; exploring is back.",
+   "sources": [
+    {
+     "ref": "art:connect-the-dots-backwards",
+     "where": "Generative AI lets you explore again"
+    },
+    {
+     "ref": "agent:storyboards-drawn-by-code",
+     "where": "the renderer"
+    }
+   ],
+   "answers": [
+    "5.concepts/inventing-on-principle.md"
+   ],
+   "topic": "explorers-villagers-town-planners",
+   "chapter": "connect-the-dots-backwards",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Connect the dots backwards; the creativity study it cites is the journalist's to check first",
+   "gravity": "explorer"
+  },
+  {
+   "id": "small-minority",
+   "title": "By reading this you are already in a small minority, and geography no longer decides",
+   "kind": "claim",
+   "statement": "Learning is a lifelong skill; the future is local, decentralised and sovereign; the reader who reads is already ahead.",
+   "sources": [
+    {
+     "ref": "art:connect-the-dots-backwards",
+     "where": "You are already in a small minority; Learning is a lifelong skill"
+    },
+    {
+     "ref": "news:who-will-game-the-reading-meter",
+     "where": "0.6% of internet users are developers; 26% of OECD adults cannot use a computer"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/civic-responsibility.md"
+   ],
+   "topic": "civic-and-history",
+   "chapter": "connect-the-dots-backwards",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Connect the dots backwards",
+   "gravity": "all"
+  },
+  {
+   "id": "maps-before-names",
+   "title": "Wardley maps run through the whole book, shown before they are named",
+   "kind": "frame",
+   "statement": "Let the reader feel the pattern, things moving from genesis to commodity, before learning the words; a map in every part.",
+   "sources": [
+    {
+     "ref": "art:where-do-you-land",
+     "where": "Maps everywhere, shown before they are named"
+    },
+    {
+     "ref": "news:why-i-love-wardley-maps",
+     "where": "the frame, taught directly"
+    },
+    {
+     "ref": "sb:where-do-you-land",
+     "where": "the map panels"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/pionners-settlers-town-planners.md"
+   ],
+   "topic": "explorers-villagers-town-planners",
+   "chapter": "where-do-you-land",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Where do you land? (the editor records it in the vault, brief task 1)",
+   "gravity": "all"
+  },
+  {
+   "id": "four-stages-beyond-activities",
+   "title": "The four stages of evolution are not only for activities",
+   "kind": "frame",
+   "statement": "Dinis's table from his Open Security Summit talk: Wardley's four rows and ten more scales, from openness to backups to data, all move from genesis to commodity.",
+   "sources": [
+    {
+     "ref": "art:where-do-you-land",
+     "where": "The four stages are not only for activities"
+    }
+   ],
+   "answers": [
+    "5.concepts/graphs.md"
+   ],
+   "topic": "explorers-villagers-town-planners",
+   "chapter": "where-do-you-land",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Where do you land?",
+   "gravity": "town-planner"
+  },
+  {
+   "id": "centre-of-gravity",
+   "title": "Explorer, villager, town planner: personalities, each with a centre of gravity",
+   "kind": "frame",
+   "statement": "Wardley's three describe people better than the business personality tests; everyone has a centre of gravity, some can play at several levels, it moves over a career, and it is where time flies.",
+   "sources": [
+    {
+     "ref": "art:where-do-you-land",
+     "where": "Where do you fit?; The explorer; The villager; The town planner; A centre of gravity, not a box"
+    },
+    {
+     "ref": "news:explorer-coding",
+     "where": "the three kinds of people and work"
+    },
+    {
+     "ref": "news:software-vendors-as-villagers",
+     "where": "users explore on top, vendors sell the maintenance"
+    },
+    {
+     "ref": "sb:where-do-you-land",
+     "where": "the spectrum panel"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/pionners-settlers-town-planners.md"
+   ],
+   "topic": "explorers-villagers-town-planners",
+   "chapter": "where-do-you-land",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Where do you land?; whether to group the book by centre of gravity or only mark it is his open question",
+   "gravity": "all"
+  },
+  {
+   "id": "three-learning-paths",
+   "title": "Each centre of gravity needs different skills and a different learning path",
+   "kind": "method",
+   "statement": "All three are brilliant at different things; the book carries a black-and-white badge per chapter and three paths through it.",
+   "sources": [
+    {
+     "ref": "art:where-do-you-land",
+     "where": "A badge for each, in black and white; The brief, tasks 2 and 3"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/content/learning.md"
+   ],
+   "topic": "explorers-villagers-town-planners",
+   "chapter": "where-do-you-land",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Where do you land?; whether the badges work is his open question",
+   "gravity": "all"
+  },
+  {
+   "id": "explorer-coding",
+   "title": "Explorer coding: what people call vibe coding, done as exploring",
+   "kind": "frame",
+   "statement": "Anyone with a need explores it by building, with the fast feedback loop that made spreadsheets win; it is not a way to ship, it is a way to find out.",
+   "sources": [
+    {
+     "ref": "news:explorer-coding",
+     "where": "the definition"
+    },
+    {
+     "ref": "news:a-browser-for-one",
+     "where": "frustration plus the power to build"
+    }
+   ],
+   "answers": [
+    "5.concepts/repl.md",
+    "4.life-patterns/thinking-as-programmer.md"
+   ],
+   "topic": "explorers-villagers-town-planners",
+   "chapter": "explorer-coding-and-the-handover",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer"
+  },
+  {
+   "id": "the-handover",
+   "title": "The deployment gap is a handover, and the prototype is the best brief",
+   "kind": "frame",
+   "statement": "The step from a prototype to a tool people rely on is not a place to stop but a handover from explorers to villagers and town planners; what someone built for themselves says what they want better than any document.",
+   "sources": [
+    {
+     "ref": "news:who-will-fix-your-mess",
+     "where": "the answer to HBR's deployment gap"
+    },
+    {
+     "ref": "news:the-citizen-developer",
+     "where": "the prototype is the best brief"
+    },
+    {
+     "ref": "news:explorer-to-villager-newsroom",
+     "where": "a worked handover with real numbers"
+    }
+   ],
+   "answers": [
+    "5.concepts/legacy-applications.md",
+    "4.life-patterns/refactoring.md"
+   ],
+   "topic": "explorers-villagers-town-planners",
+   "chapter": "explorer-coding-and-the-handover",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager"
+  },
+  {
+   "id": "everyone-is-a-developer",
+   "title": "Everyone who can brief an agent is a developer now",
+   "kind": "frame",
+   "statement": "The definition widened: the citizen developer is the spreadsheet grown up, and Portuguese is a programming language because prompts are natural language. The book must also say what the briefing-only developer cannot do.",
+   "sources": [
+    {
+     "ref": "news:generation-z-developers-again",
+     "where": "The name"
+    },
+    {
+     "ref": "news:the-citizen-developer",
+     "where": "the citizen developer is good news"
+    },
+    {
+     "ref": "news:portugal-2024-genai-in-portuguese",
+     "where": "the quiz"
+    },
+    {
+     "ref": "art:lucky-to-be-here",
+     "where": "Become a developer"
+    }
+   ],
+   "answers": [
+    "1.introduction/generation-z.md",
+    "1.introduction/stem-tech-stack.md",
+    "3.technologies/draft/scratch.md"
+   ],
+   "topic": "everyone-is-a-developer",
+   "chapter": "everyone-is-a-developer",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Generation Z Developers, again; what the briefing-only developer cannot do is interview question 6",
+   "gravity": "all"
+  },
+  {
+   "id": "hired-for-the-workflow",
+   "title": "The one competitive advantage in 2026 is running agentic workflows",
+   "kind": "claim",
+   "statement": "Companies need AI operators, not model builders; 71% of leaders would rather hire less experience with AI skills; the roles pay 62% more; the edge shows when the choice is close.",
+   "sources": [
+    {
+     "ref": "news:hired-for-the-workflow",
+     "where": "the whole argument and the data"
+    },
+    {
+     "ref": "book:1.introduction/how-to-get-a-job.md",
+     "where": "Having one competitive advantage"
+    }
+   ],
+   "answers": [
+    "1.introduction/how-to-get-a-job.md",
+    "3.technologies/content/ml-ai.md"
+   ],
+   "topic": "getting-the-job",
+   "chapter": "hired-for-the-workflow",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all"
+  },
+  {
+   "id": "you-are-more-technical-than-you-think",
+   "title": "You are more technical than you think",
+   "kind": "advice",
+   "statement": "People who use email, websites and apps at an advanced level and still say they are not technical have learned every previous technique; they only need the new one.",
+   "sources": [
+    {
+     "ref": "news:hired-for-the-workflow",
+     "where": "There was a time"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/impostor-syndrome.md"
+   ],
+   "topic": "getting-the-job",
+   "chapter": "hired-for-the-workflow",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all"
+  },
+  {
+   "id": "it-starts-with-the-application",
+   "title": "The edge starts with the application",
+   "kind": "advice",
+   "statement": "A CV fitted to the role, an analysis of the company's problem, and something they have not seen: the interview then starts from your strengths. It worked for Dinis through OWASP before agents existed.",
+   "sources": [
+    {
+     "ref": "news:hired-for-the-workflow",
+     "where": "It starts with the application; When all things are equal"
+    }
+   ],
+   "answers": [
+    "1.introduction/how-to-get-a-job.md",
+    "7.your-cv/_index.md"
+   ],
+   "topic": "getting-the-job",
+   "chapter": "hired-for-the-workflow",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all"
+  },
+  {
+   "id": "act-as-the-job-you-want",
+   "title": "Act as the job you want: do the job in public before you have it",
+   "kind": "advice",
+   "statement": "If you are looking for a job you have time; pick a startup or an open-source project, do the work as that person, in public, so it can be linked; reach does not matter, the link does; let the people who want to help you help you.",
+   "sources": [
+    {
+     "ref": "news:act-as-the-job-you-want",
+     "where": "the whole argument"
+    },
+    {
+     "ref": "book:1.introduction/how-to-get-a-job.md",
+     "where": "Act like you are part of the company"
+    }
+   ],
+   "answers": [
+    "1.introduction/how-to-get-a-job.md",
+    "7.your-cv/github.md",
+    "4.life-patterns/mentors.md",
+    "6.security/bug-bounties.md"
+   ],
+   "topic": "getting-the-job",
+   "chapter": "act-as-the-job-you-want",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all"
+  },
+  {
+   "id": "your-cv-online",
+   "title": "Your CV should be online, with links to the work",
+   "kind": "advice",
+   "statement": "A page anyone can forward, not only a PDF; your GitHub is your CV because it shows how you work with others; the bar to build it is an afternoon.",
+   "sources": [
+    {
+     "ref": "news:act-as-the-job-you-want",
+     "where": "Your CV should be online; The bar is not high"
+    },
+    {
+     "ref": "news:three-linkedin-pages",
+     "where": "drafting pages in the open"
+    }
+   ],
+   "answers": [
+    "7.your-cv/_index.md",
+    "7.your-cv/github.md",
+    "7.your-cv/linkedin.md",
+    "7.your-cv/blogs.md"
+   ],
+   "topic": "publish-in-public",
+   "chapter": "act-as-the-job-you-want",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all"
+  },
+  {
+   "id": "job-hunt-in-2026",
+   "title": "How a job hunt works in 2026: interviews, take-home tests with AI, what a junior role looks like",
+   "kind": "advice",
+   "statement": "A gap no article covers yet: the mechanics of applying, interviewing and freelancing now; the journalist writes it from a memo.",
+   "sources": [
+    {
+     "ref": "survey:gaps",
+     "where": "The job hunt mechanics in 2026"
+    },
+    {
+     "ref": "art:start-from-the-storyline",
+     "where": "The gaps; brief task 6"
+    }
+   ],
+   "answers": [
+    "7.your-cv/upwork.md"
+   ],
+   "topic": "getting-the-job",
+   "chapter": "act-as-the-job-you-want",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "notes": "Article first.",
+   "gravity": "all"
+  },
+  {
+   "id": "fear-of-ai",
+   "title": "The fear, impostor syndrome and anxiety about AI among young people",
+   "kind": "claim",
+   "statement": "Young Europeans are fed fear about AI; the book concedes which fears are right (the first hiring wave went to the wrong people, projects will be cancelled) and answers the rest. A gap: no article is written for the newcomer yet.",
+   "sources": [
+    {
+     "ref": "survey:gaps",
+     "where": "Fear, impostor syndrome and anxiety"
+    },
+    {
+     "ref": "news:generation-z-developers-again",
+     "where": "The name"
+    },
+    {
+     "ref": "art:lucky-to-be-here",
+     "where": "The hype, and maybe the crash"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/impostor-syndrome.md"
+   ],
+   "topic": "everyone-is-a-developer",
+   "chapter": "lucky-to-be-here",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "notes": "Article first; interview question 4.",
+   "gravity": "all"
+  },
+  {
+   "id": "publish-publish-publish",
+   "title": "Publish, publish, publish: your own newsroom",
+   "kind": "method",
+   "statement": "A publishing loop you can copy on day one: a voice memo in, an agent researches, checks and writes in your voice, a validated static site out; small finished pieces over big batches; linkable work is the CV.",
+   "sources": [
+    {
+     "ref": "news:your-own-newsroom",
+     "where": "the step-by-step recipe"
+    },
+    {
+     "ref": "news:books-from-articles",
+     "where": "books stall at 95%"
+    },
+    {
+     "ref": "news:nineteen-sites",
+     "where": "twenty sites in fifteen days"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/publish-publish-publish.md",
+    "7.your-cv/blogs.md",
+    "2.mvp-for-gen-z-dev/content/hugo.md",
+    "7.your-cv/leanpub.md"
+   ],
+   "topic": "publish-in-public",
+   "chapter": "your-own-newsroom",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer"
+  },
+  {
+   "id": "every-part-buys-the-next",
+   "title": "Write it once, link it many times; every part buys the next",
+   "kind": "method",
+   "statement": "An article behind every answer; the subject buys the first line, the first line the paragraph; the Wizard of Oz in reverse: agent-drafted, person-sent.",
+   "sources": [
+    {
+     "ref": "news:the-man-behind-the-curtain",
+     "where": "the argument"
+    },
+    {
+     "ref": "news:the-question-is-whether-they-miss-it",
+     "where": "every part buys the next"
+    }
+   ],
+   "answers": [
+    "5.concepts/amazon-press-releases.md"
+   ],
+   "topic": "publish-in-public",
+   "chapter": "your-own-newsroom",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager"
+  },
+  {
+   "id": "first-workspace",
+   "title": "Your first workspace: from a spreadsheet to a folder per person, drafts never send",
+   "kind": "method",
+   "statement": "A Drive folder per person, a Claude Project connected to Drive and Gmail, a six-line policy, five exercises in an afternoon; then habits, an agent mailbox, and surfaces chosen by reach.",
+   "sources": [
+    {
+     "ref": "news:from-a-spreadsheet-to-a-folder-per-person",
+     "where": "the how-to"
+    },
+    {
+     "ref": "news:replicating-the-agentic-inbox",
+     "where": "drafts, never send"
+    },
+    {
+     "ref": "news:how-i-work-with-claude",
+     "where": "six habits"
+    },
+    {
+     "ref": "news:short-punchy-and-co-written",
+     "where": "For anyone getting into AI: the Google Workspace chapter"
+    }
+   ],
+   "answers": [
+    "2.mvp-for-gen-z-dev/_index.md",
+    "2.mvp-for-gen-z-dev/content/slack-and-chatops.md",
+    "4.life-patterns/automate-your-workflows.md"
+   ],
+   "topic": "your-first-workspace",
+   "chapter": "your-first-workspace",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "notes": "The beginner's accounts and costs checklist is still a gap.",
+   "gravity": "all"
+  },
+  {
+   "id": "an-agent-is-a-session-with-a-focus",
+   "title": "An agent is a session with a focus: one session per topic, named, with a role file",
+   "kind": "method",
+   "statement": "One session per topic, @names, a role.md saying what it does and does not do, lessons and debriefs as memory, a daily brief.",
+   "sources": [
+    {
+     "ref": "news:how-i-work-with-claude",
+     "where": "the six habits"
+    },
+    {
+     "ref": "news:the-agents-write-too",
+     "where": "a team of focused sessions"
+    },
+    {
+     "ref": "news:the-librarians-daily-brief",
+     "where": "the daily brief"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/workflows.md",
+    "5.concepts/agile-and-kanban.md"
+   ],
+   "topic": "working-with-agents",
+   "chapter": "how-to-work-with-agents",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager"
+  },
+  {
+   "id": "brief-is-the-unit-of-work",
+   "title": "The brief is the unit of work, and writing it as an article forces the research",
+   "kind": "method",
+   "statement": "A written request an agent can start from: what is asked, what exists, what remains, what done looks like; an article beats a list because it makes you check the record first.",
+   "sources": [
+    {
+     "ref": "art:write-it-as-an-article",
+     "where": "Why an article; How an article becomes work"
+    },
+    {
+     "ref": "news:the-briefs-so-far",
+     "where": "the brief"
+    },
+    {
+     "ref": "news:brief-the-agent-too",
+     "where": "the people I talk to work with agents"
+    }
+   ],
+   "answers": [
+    "5.concepts/design.md"
+   ],
+   "topic": "working-with-agents",
+   "chapter": "how-to-work-with-agents",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager"
+  },
+  {
+   "id": "omnichannel-programming",
+   "title": "Omnichannel programming: brief by voice, review on the phone, one shared state",
+   "kind": "method",
+   "statement": "Voice, chat, phone, IDE and pull requests all read and write one shared state (git, vaults, briefs, graphs); this is how a new generation programs.",
+   "sources": [
+    {
+     "ref": "news:omnichannel-programming",
+     "where": "the argument"
+    }
+   ],
+   "answers": [
+    "3.technologies/content/ide.md",
+    "2.mvp-for-gen-z-dev/content/slack-and-chatops.md"
+   ],
+   "topic": "working-with-agents",
+   "chapter": "how-to-work-with-agents",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer"
+  },
+  {
+   "id": "every-mistake-added-a-rule",
+   "title": "Every mistake added a rule: the complexity trap of the agent operator",
+   "kind": "claim",
+   "statement": "Each mistake becomes a rule, the prompt grows, compaction comes sooner and new mistakes follow; the way out is fewer, enforced rules, re-anchored after every summary.",
+   "sources": [
+    {
+     "ref": "news:every-mistake-added-a-rule",
+     "where": "the trap"
+    },
+    {
+     "ref": "news:re-anchoring-agent-behaviour-policies",
+     "where": "summarised 18 times in a month"
+    }
+   ],
+   "answers": [
+    "5.concepts/changes.md"
+   ],
+   "topic": "working-with-agents",
+   "chapter": "how-to-work-with-agents",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager"
+  },
+  {
+   "id": "not-on-your-laptop",
+   "title": "Why your agents should not run on your laptop",
+   "kind": "advice",
+   "statement": "An agent on your laptop runs as you, with your SSH keys, cookies and password-manager session; pick the cloud surface by reach.",
+   "sources": [
+    {
+     "ref": "news:why-my-agents-do-not-run-on-my-laptop",
+     "where": "the safety advice"
+    }
+   ],
+   "answers": [
+    "6.security/dont-touch-production.md"
+   ],
+   "topic": "security-agent-era",
+   "chapter": "your-first-workspace",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all"
+  },
+  {
+   "id": "direction-is-the-scarce-skill",
+   "title": "Direction is the scarce skill: the place of highest leverage",
+   "kind": "frame",
+   "statement": "When anyone can brief an agent, building stops being the bottleneck; choosing what to build next, where nothing blocks you, and starting without knowing the end, is what employers and users pay for.",
+   "sources": [
+    {
+     "ref": "news:places-of-highest-leverage",
+     "where": "the argument"
+    },
+    {
+     "ref": "news:not-a-straight-line",
+     "where": "two days against six months"
+    },
+    {
+     "ref": "art:connect-the-dots-backwards",
+     "where": "doors, fast iteration, constraints, leverage"
+    }
+   ],
+   "answers": [
+    "5.concepts/deadlines.md",
+    "4.life-patterns/start-with-why.md"
+   ],
+   "topic": "direction-is-the-scarce-skill",
+   "chapter": "direction-and-judgement",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer"
+  },
+  {
+   "id": "knowing-when-to-stop",
+   "title": "Knowing when to stop is most of seniority",
+   "kind": "claim",
+   "statement": "Who the attackers are, the phase of the business, the bottleneck, what good enough looks like: experience gives people this, agents lack it, and the book has to teach the junior's version.",
+   "sources": [
+    {
+     "ref": "news:knowing-when-to-stop",
+     "where": "the argument"
+    },
+    {
+     "ref": "book:3.technologies/content/brain.md",
+     "where": "the chapter on how the brain decides"
+    }
+   ],
+   "answers": [
+    "3.technologies/content/brain.md",
+    "5.concepts/deadlines.md"
+   ],
+   "topic": "direction-is-the-scarce-skill",
+   "chapter": "direction-and-judgement",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner"
+  },
+  {
+   "id": "one-way-two-way-doors",
+   "title": "One-way and two-way doors, blast radius, and where a person belongs",
+   "kind": "frame",
+   "statement": "How cheap is it to undo decides where the human goes: put the person where the output cannot be undone and the blast radius is large; give them the why; let the record move the line over time. People approve 93% of permission prompts.",
+   "sources": [
+    {
+     "ref": "news:how-cheap-is-it-to-undo",
+     "where": "the test"
+    },
+    {
+     "ref": "news:the-human-in-the-loop",
+     "where": "93%"
+    },
+    {
+     "ref": "news:footprint-and-blast-radius",
+     "where": "footprint beside blast radius"
+    },
+    {
+     "ref": "news:agency-is-not-a-yes",
+     "where": "the seven-level scale"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/one-way-two-way-doors.md",
+    "6.security/dont-touch-production.md",
+    "5.concepts/chaos-engineering.md"
+   ],
+   "topic": "human-in-the-loop",
+   "chapter": "direction-and-judgement",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner"
+  },
+  {
+   "id": "agents-decide-people-answer",
+   "title": "Agents decide, people answer",
+   "kind": "claim",
+   "statement": "Agents in loops make real decisions, but responsibility stays with whoever granted the reach and set the mandate; also ELIZA and anthropomorphism.",
+   "sources": [
+    {
+     "ref": "news:who-owns-the-words",
+     "where": "the argument"
+    },
+    {
+     "ref": "news:the-policy-draws-the-liability-line",
+     "where": "the prohibitions list"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/civic-responsibility.md"
+   ],
+   "topic": "human-in-the-loop",
+   "chapter": "direction-and-judgement",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner"
+  },
+  {
+   "id": "the-record-checks-you",
+   "title": "Make fact-based decisions: think out loud and let the record check you",
+   "kind": "method",
+   "statement": "Count rather than remember; publish only what the record supports (5 claims confirmed, 5 corrected, 2 not found); review as a record with every finding answered; distrust self-reports.",
+   "sources": [
+    {
+     "ref": "news:my-memory-checked",
+     "where": "the experiment"
+    },
+    {
+     "ref": "news:reviews-on-the-record",
+     "where": "review as a record"
+    },
+    {
+     "ref": "news:your-agents-logs-are-a-self-report",
+     "where": "under 2% admitted"
+    },
+    {
+     "ref": "book:5.concepts/facts.md",
+     "where": "the 2018 outline"
+    }
+   ],
+   "answers": [
+    "5.concepts/facts.md",
+    "5.concepts/feedback-loops.md",
+    "4.life-patterns/content/being-criticized-is-a-privilege.md"
+   ],
+   "topic": "facts-and-the-record",
+   "chapter": "facts-and-the-record",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager"
+  },
+  {
+   "id": "mandate-reach-gap",
+   "title": "Mandate, reach and the gap: hope versus enforcement",
+   "kind": "frame",
+   "statement": "Before you give an agent access, write down what it is for and what it can reach; the gap is the risk; rules in a prompt are hope, rules in a hook or platform are enforcement; behaviour, decision and workflow policies are different things.",
+   "sources": [
+    {
+     "ref": "news:what-can-your-agent-reach",
+     "where": "the plain explainer"
+    },
+    {
+     "ref": "news:are-hooks-the-sweet-spot",
+     "where": "hope-based security"
+    },
+    {
+     "ref": "news:attacks-rewritten-as-mandates",
+     "where": "28 incidents"
+    },
+    {
+     "ref": "news:three-policies-for-an-agent",
+     "where": "the three-policy split"
+    }
+   ],
+   "answers": [
+    "6.security/threat-modeling.md",
+    "6.security/3rd-party-modules.md"
+   ],
+   "topic": "controlling-your-agent",
+   "chapter": "controlling-your-agent",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner"
+  },
+  {
+   "id": "code-is-a-liability",
+   "title": "Code is a liability; the future is the smallest code that does the job",
+   "kind": "claim",
+   "statement": "Every shipped line is a capability someone may misuse (Log4j; 428 of 1,500 files ran); the next maintainer is an agent; the minimal viable code path.",
+   "sources": [
+    {
+     "ref": "news:the-code-you-do-not-ship",
+     "where": "the argument"
+    },
+    {
+     "ref": "news:the-minimum-code-below",
+     "where": "428 of 1,500"
+    }
+   ],
+   "answers": [
+    "5.concepts/legacy-applications.md",
+    "4.life-patterns/refactoring.md",
+    "4.life-patterns/content/future-needs-you.md"
+   ],
+   "topic": "security-agent-era",
+   "chapter": "controlling-your-agent",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner"
+  },
+  {
+   "id": "learn-to-hack",
+   "title": "Learning to hack is still how you learn how things work: draw the line where the attacker is",
+   "kind": "advice",
+   "statement": "Name the threat agent, the vector and how sophisticated it is; a ladder from your own mistakes up to states; the bookmarklet trick; to hack means to solve problems.",
+   "sources": [
+    {
+     "ref": "news:who-are-you-protecting-against",
+     "where": "the ladder"
+    },
+    {
+     "ref": "news:fix-the-page-yourself",
+     "where": "the bookmarklet"
+    },
+    {
+     "ref": "news:portugal-2016-hacking-portugal",
+     "where": "to hack means to solve problems"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/learn-to-hack.md",
+    "6.security/security-better-developers.md",
+    "6.security/threat-modeling.md"
+   ],
+   "topic": "security-agent-era",
+   "chapter": "controlling-your-agent",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer"
+  },
+  {
+   "id": "secrets-never-in-the-chat",
+   "title": "The secret goes from the drop into the tool, never into the chat",
+   "kind": "advice",
+   "statement": "Classify the credential before it touches anything; an agent told something cannot untell it; the lethal trifecta.",
+   "sources": [
+    {
+     "ref": "news:handing-secrets-to-agents",
+     "where": "the rule"
+    },
+    {
+     "ref": "news:seven-vaults-one-method",
+     "where": "classify the credential first"
+    },
+    {
+     "ref": "news:skill-behaviour-policy",
+     "where": "the lethal trifecta"
+    }
+   ],
+   "answers": [
+    "6.security/pointers.md",
+    "6.security/strings-should-be-banned.md"
+   ],
+   "topic": "security-agent-era",
+   "chapter": "controlling-your-agent",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager"
+  },
+  {
+   "id": "the-fork-next-door",
+   "title": "Open source means nobody can lock you in: the fork next door",
+   "kind": "claim",
+   "statement": "Anyone can fork, which protects founders, customers and investors from each other; forks take hold only when someone stops executing; six misconceptions; open source is about to become the most secure software.",
+   "sources": [
+    {
+     "ref": "news:the-fork-next-door",
+     "where": "the argument"
+    },
+    {
+     "ref": "news:what-open-source-is-and-is-not",
+     "where": "six misconceptions"
+    },
+    {
+     "ref": "news:the-eyeballs-get-cheap",
+     "where": "curl's year"
+    },
+    {
+     "ref": "book:2.mvp-for-gen-z-dev/content/open-source.md",
+     "where": "the 2018 chapter"
+    }
+   ],
+   "answers": [
+    "2.mvp-for-gen-z-dev/content/open-source.md",
+    "2.mvp-for-gen-z-dev/content/creative-commons.md"
+   ],
+   "topic": "open-source",
+   "chapter": "open-source",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all"
+  },
+  {
+   "id": "first-pr",
+   "title": "Your first pull request: open source is still the newcomer's best door",
+   "kind": "advice",
+   "statement": "A one-file, 83-line documentation PR merged into a 9,625-commit project; contribute to the projects of the companies you want to work for.",
+   "sources": [
+    {
+     "ref": "news:our-first-pr-in-ruflo",
+     "where": "the first-contribution story"
+    },
+    {
+     "ref": "news:act-as-the-job-you-want",
+     "where": "collaborate on their open-source projects"
+    }
+   ],
+   "answers": [
+    "7.your-cv/github.md",
+    "2.mvp-for-gen-z-dev/draft/github-flow.md"
+   ],
+   "topic": "open-source",
+   "chapter": "open-source",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer"
+  },
+  {
+   "id": "lego-blocks",
+   "title": "Building blocks: cloud as Lego, free models with your own key, git as a standard",
+   "kind": "method",
+   "statement": "What a non-specialist can assemble today, mostly free, with an agent doing the one-time setup; serverless as ephemeral town planner services; knowing what tokens cost.",
+   "sources": [
+    {
+     "ref": "news:cloudflare-as-lego-blocks",
+     "where": "the map of free blocks"
+    },
+    {
+     "ref": "news:free-models-your-own-key",
+     "where": "free in October 2026"
+    },
+    {
+     "ref": "news:ephemeral-town-planner-services",
+     "where": "the test for serverless"
+    },
+    {
+     "ref": "news:sgit-is-a-standard",
+     "where": "git won because it is a standard"
+    },
+    {
+     "ref": "news:the-tokens-hook",
+     "where": "$170 against $1,950"
+    }
+   ],
+   "answers": [
+    "2.mvp-for-gen-z-dev/draft/aws.md",
+    "5.concepts/serverless.md",
+    "5.concepts/micro-services.md",
+    "7.your-cv/git.md",
+    "2.mvp-for-gen-z-dev/content/docker.md"
+   ],
+   "topic": "building-blocks",
+   "chapter": "building-blocks",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "notes": "Costs for a newcomer is still a gap.",
+   "gravity": "villager"
+  },
+  {
+   "id": "green-does-not-mean-live",
+   "title": "Shipped means the user has it: green does not mean live, go slow to go fast",
+   "kind": "claim",
+   "statement": "A CI pass is not a release until you have checked what the user sees; tests that never run are not tests; the explorer-to-villager move is a refactor you can prove; synthetic users in an afternoon.",
+   "sources": [
+    {
+     "ref": "news:green-does-not-mean-live",
+     "where": "shipped is a fact about the reader"
+    },
+    {
+     "ref": "news:explorer-to-villager-newsroom",
+     "where": "go slow to go fast"
+    },
+    {
+     "ref": "news:how-to-run-synthetic-users",
+     "where": "five people who do not exist"
+    }
+   ],
+   "answers": [
+    "5.concepts/CI-Testing.md",
+    "2.mvp-for-gen-z-dev/draft/continuous-integration.md",
+    "2.mvp-for-gen-z-dev/draft/tdd.md",
+    "5.concepts/devops.md"
+   ],
+   "topic": "shipped-means-the-user-has-it",
+   "chapter": "shipped-means-the-user-has-it",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager"
+  },
+  {
+   "id": "think-in-graphs",
+   "title": "Think in graphs: knowledge that maintains itself, and your future self",
+   "kind": "frame",
+   "statement": "Graphs as the way of thinking, not only a drawing tool: brief from a graph, maintain it rather than perfect it, search as navigation; keep your work linkable and backed up so your future self can find it.",
+   "sources": [
+    {
+     "ref": "news:the-graphs-books",
+     "where": "three books in a day"
+    },
+    {
+     "ref": "news:knowledge-that-maintains-itself",
+     "where": "maintain, do not perfect"
+    },
+    {
+     "ref": "news:bringing-my-past-work-back",
+     "where": "eighteen years of essays"
+    },
+    {
+     "ref": "art:connect-the-dots-backwards",
+     "where": "I think in graphs"
+    },
+    {
+     "ref": "news:introducing-fractal-semantic-graphs",
+     "where": "the defining article"
+    }
+   ],
+   "answers": [
+    "5.concepts/graphs.md",
+    "7.your-cv/future-self.md",
+    "4.life-patterns/content/backup-your-life.md",
+    "2.mvp-for-gen-z-dev/content/dot-language.md",
+    "5.concepts/recursive-functions.md"
+   ],
+   "topic": "graphs-memory",
+   "chapter": "graphs-and-your-future-self",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all"
+  },
+  {
+   "id": "expert-founders",
+   "title": "Be a founder: the expert can build first now, and the test is whether they miss it",
+   "kind": "claim",
+   "statement": "Generative AI lets the people who know the problem build it; the mean founding age of the fastest-growing startups is 45; open source everything; do they miss it; pay after the value.",
+   "sources": [
+    {
+     "ref": "news:the-expert-founders",
+     "where": "the argument"
+    },
+    {
+     "ref": "news:the-question-is-whether-they-miss-it",
+     "where": "the startup test"
+    },
+    {
+     "ref": "news:paying-after-the-value",
+     "where": "the gym figure"
+    },
+    {
+     "ref": "book:4.life-patterns/content/be-a-founder.md",
+     "where": "the 2018 chapter"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/content/be-a-founder.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "be-a-founder",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer"
+  },
+  {
+   "id": "hack-your-country",
+   "title": "Civic responsibility: to hack means to solve problems, and small countries can lead now",
+   "kind": "claim",
+   "statement": "Dinis's Portugal talks as the then-and-now: what regulation delivered, the Portuguese Hacking Service, judo for small countries, sovereignty as the ability to move.",
+   "sources": [
+    {
+     "ref": "news:portugal-2010-a-challenge",
+     "where": "what came true in 16 years"
+    },
+    {
+     "ref": "news:portugal-2016-hacking-portugal",
+     "where": "the keynote"
+    },
+    {
+     "ref": "news:judo-for-small-countries",
+     "where": "the plumbing"
+    },
+    {
+     "ref": "news:sovereignty-is-the-ability-to-move",
+     "where": "the test"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/civic-responsibility.md"
+   ],
+   "topic": "civic-and-history",
+   "chapter": "civic-responsibility",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "notes": "Portuguese edition or both languages is Dinis's open question.",
+   "gravity": "all"
+  },
+  {
+   "id": "repository-official-vault-working",
+   "title": "The repository holds the official versions; the vault holds the working versions",
+   "kind": "process",
+   "statement": "The rule this site is built on: v1 frozen in the repository, work in a public vault with its read key published, a delta between every two versions.",
+   "sources": [
+    {
+     "ref": "news:a-website-to-finish-the-book",
+     "where": "The repository and the vault"
+    },
+    {
+     "ref": "dec:005",
+     "where": "text issues live in the vault"
+    }
+   ],
+   "answers": [
+    "1.introduction/how-this -book-was-created.md"
+   ],
+   "topic": "making-of",
+   "chapter": "how-this-book-was-made",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in A website to finish the book, and decision 005",
+   "gravity": "town-planner"
+  },
+  {
+   "id": "co-written-and-credited",
+   "title": "Co-written with Claude, credited, with the ratio shown; short and punchy; every paragraph knows what it is",
+   "kind": "process",
+   "statement": "The book says it is co-written, shows the memo-to-word ratio (63,000 words in, 85,000 out on the newsroom), stays short and punchy, and every paragraph carries its purpose, evidence, facts and hypotheses in the graph.",
+   "sources": [
+    {
+     "ref": "news:short-punchy-and-co-written",
+     "where": "the whole argument"
+    },
+    {
+     "ref": "news:how-much-of-this-did-i-write",
+     "where": "the numbers"
+    },
+    {
+     "ref": "news:who-is-speaking",
+     "where": "three voices"
+    }
+   ],
+   "answers": [
+    "1.introduction/how-this -book-was-created.md"
+   ],
+   "topic": "making-of",
+   "chapter": "how-this-book-was-made",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Short, punchy, and co-written with Claude",
+   "gravity": "all"
+  },
+  {
+   "id": "a-book-for-one-reader",
+   "title": "A personal edition, assembled by an agent, paid for as it is read",
+   "kind": "process",
+   "statement": "Once the book is a graph an agent can assemble an edition for one person; sent not published; pay as you read from five pounds of credit.",
+   "sources": [
+    {
+     "ref": "news:a-book-for-one-reader",
+     "where": "the whole argument"
+    }
+   ],
+   "answers": [],
+   "topic": "making-of",
+   "chapter": "how-this-book-was-made",
+   "destination": "next-version",
+   "state": "deferred",
+   "decided_by": "The brief: nothing of it is built; it waits for the book's graph (this register is the first step)",
+   "gravity": "explorer"
+  },
+  {
+   "id": "read-comment-decide",
+   "title": "Read, comment, decide: the loop that turns Dinis's decisions into versions",
+   "kind": "process",
+   "statement": "Read an item, comment verbatim, pick a verb (keep, fix, rewrite, merge, cut, article first, later, not doing it); the editor records it as a file in the vault and acts; decisions add up to a version Dinis signs off.",
+   "sources": [
+    {
+     "ref": "art:read-comment-decide",
+     "where": "The loop; The verbs; A decision is a file"
+    },
+    {
+     "ref": "dec:006",
+     "where": "every change is minor"
+    }
+   ],
+   "answers": [],
+   "topic": "making-of",
+   "chapter": "how-this-book-was-made",
+   "destination": "the-process",
+   "state": "accepted",
+   "decided_by": "Dinis, in Read, comment, decide",
+   "gravity": "villager"
+  },
+  {
+   "id": "write-it-as-an-article",
+   "title": "An article is how to brief an agent, and the roles keep their names",
+   "kind": "process",
+   "statement": "Reviewer, editor, publisher, journalist; every article ends with a brief; the first job is to ship the book we already shipped.",
+   "sources": [
+    {
+     "ref": "art:write-it-as-an-article",
+     "where": "the whole argument"
+    },
+    {
+     "ref": "dec:007",
+     "where": "two kinds of article"
+    }
+   ],
+   "answers": [],
+   "topic": "making-of",
+   "chapter": "how-this-book-was-made",
+   "destination": "the-process",
+   "state": "accepted",
+   "decided_by": "Dinis, in Write it as an article, and decision 007",
+   "gravity": "villager"
+  },
+  {
+   "id": "release-v1-again",
+   "title": "Release the book we already released: every format from one source",
+   "kind": "process",
+   "statement": "Build v1.0.0 here, match it page by page to the 2018 PDF, then every format (print, screen, EPUB, Kindle) from the same build; Leanpub first, then Amazon; the licence is CC BY; the cover waits.",
+   "sources": [
+    {
+     "ref": "art:release-the-book-we-already-released",
+     "where": "the whole argument"
+    },
+    {
+     "ref": "dec:001",
+     "where": "CC BY"
+    },
+    {
+     "ref": "dec:002",
+     "where": "our own PDF"
+    },
+    {
+     "ref": "dec:003",
+     "where": "every format from one source"
+    },
+    {
+     "ref": "dec:004",
+     "where": "the cover waits"
+    }
+   ],
+   "answers": [],
+   "topic": "making-of",
+   "chapter": "how-this-book-was-made",
+   "destination": "the-process",
+   "state": "accepted",
+   "decided_by": "Dinis, decisions 001 to 004",
+   "gravity": "town-planner"
+  },
+  {
+   "id": "one-board-and-one-inventory",
+   "title": "One board for the work, one inventory of everything unfinished",
+   "kind": "process",
+   "statement": "Every issue a file, the boards generated; text issues in the vault; one inventory of the 89 outlines, the drafts, the 43 GitHub issues and the handwritten notes, with a decision column.",
+   "sources": [
+    {
+     "ref": "art:one-board-for-the-book",
+     "where": "the whole argument"
+    },
+    {
+     "ref": "art:everything-unfinished-in-one-place",
+     "where": "the whole argument"
+    },
+    {
+     "ref": "dec:005",
+     "where": "text issues live in the vault"
+    }
+   ],
+   "answers": [],
+   "topic": "making-of",
+   "chapter": "how-this-book-was-made",
+   "destination": "the-process",
+   "state": "accepted",
+   "decided_by": "Dinis, in both articles and decision 005",
+   "gravity": "town-planner"
+  },
+  {
+   "id": "start-from-the-storyline",
+   "title": "Start from the storyline, as storyboards drawn by code",
+   "kind": "process",
+   "statement": "The 2018 text and the newsroom are the material, not the plan: the storyline first, as panels with a punchline, a concept, the evidence and the character they are for; a cast of six; everything a proposal until Dinis decides.",
+   "sources": [
+    {
+     "ref": "art:start-from-the-storyline",
+     "where": "the whole argument"
+    },
+    {
+     "ref": "agent:storyboards-drawn-by-code",
+     "where": "the renderer and the survey"
+    }
+   ],
+   "answers": [],
+   "topic": "making-of",
+   "chapter": "how-this-book-was-made",
+   "destination": "the-process",
+   "state": "accepted",
+   "decided_by": "Dinis, in Start from the storyline; the cast and the storyline wait on him",
+   "gravity": "explorer"
+  },
+  {
+   "id": "the-book-as-a-graph",
+   "title": "Everything we do here becomes a graph: ideas as nodes, provenance as edges, state on every node",
+   "kind": "process",
+   "statement": "Sources, ideas, chapters, decisions and tasks as one graph, so that what goes in the book, what waits and what is declined is a property of a node with its evidence, and the publishing process can be shown, counted and sold.",
+   "sources": [
+    {
+     "ref": "news:a-website-to-finish-the-book",
+     "where": "The book as a graph, at every altitude"
+    },
+    {
+     "ref": "news:short-punchy-and-co-written",
+     "where": "Every paragraph knows what it is"
+    },
+    {
+     "ref": "memo:2026-10-18-graphs",
+     "where": "Dinis's message asking for the graph, the mappings and the tracking"
+    },
+    {
+     "ref": "agent:the-book-as-a-graph",
+     "where": "the account of this first pass"
+    }
+   ],
+   "answers": [
+    "5.concepts/graphs.md"
+   ],
+   "topic": "making-of",
+   "chapter": "how-this-book-was-made",
+   "destination": "the-process",
+   "state": "accepted",
+   "decided_by": "Dinis, in the message of 18 October 2026 that asked for this register",
+   "gravity": "town-planner"
+  },
+  {
+   "id": "generative-ai-not-ai",
+   "title": "This book is about generative AI, not AI in general",
+   "kind": "frame",
+   "statement": "AI is a huge bucket (AI, machine learning, deep learning, generative AI); the book is about the kind that generates: data goes in, the model builds its own representation, and it recreates an output from it. The book says 'generative AI', and 'AI' only for the wider field.",
+   "sources": [
+    {
+     "ref": "art:generative-ai-not-ai",
+     "where": "AI is a huge bucket; How I understand it; A note on the name"
+    }
+   ],
+   "answers": [
+    "3.technologies/content/ml-ai.md"
+   ],
+   "topic": "everyone-is-a-developer",
+   "chapter": "what-generative-ai-is",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Generative AI, not AI; the editor plans the section (brief task 1) and the style note (task 2)",
+   "gravity": "all"
+  },
+  {
+   "id": "better-prompt-richer-picture",
+   "title": "A language model predicts the next word from a rich picture of how things connect; that is why a better prompt helps, and where hallucinations come from",
+   "kind": "claim",
+   "statement": "Everything is connected in the model's picture; the text you give it says which connections matter; the image-extension tools of 2022 and 2023 made it click. The corrections stand beside it: vectors and attention, not a stored graph; the prompt conditions rather than fine-tunes.",
+   "sources": [
+    {
+     "ref": "art:generative-ai-not-ai",
+     "where": "How I understand it; Where hallucinations come from; The image that made it click; Where I was corrected"
+    }
+   ],
+   "answers": [
+    "3.technologies/content/ml-ai.md",
+    "3.technologies/content/brain.md"
+   ],
+   "topic": "everyone-is-a-developer",
+   "chapter": "what-generative-ai-is",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Generative AI, not AI, with the corrections he asked for",
+   "gravity": "all"
+  },
+  {
+   "id": "asked-to-be-corrected",
+   "title": "Ask to be corrected, and print the corrections with their sources",
+   "kind": "method",
+   "statement": "The article on generative AI carries a section of corrections (machine learning learns too; no stored graph inside a model; the prompt conditions; next-token prediction plus training on feedback; emergence) because Dinis asked for them: the book does the same wherever his picture and the evidence differ.",
+   "sources": [
+    {
+     "ref": "art:generative-ai-not-ai",
+     "where": "Where I was corrected"
+    },
+    {
+     "ref": "news:my-memory-checked",
+     "where": "publish only what the record supports"
+    }
+   ],
+   "answers": [
+    "5.concepts/facts.md",
+    "4.life-patterns/content/being-criticized-is-a-privilege.md"
+   ],
+   "topic": "facts-and-the-record",
+   "chapter": "facts-and-the-record",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Generative AI, not AI",
+   "gravity": "villager"
+  },
+  {
+   "id": "gen-ai-edition-name",
+   "title": "Gen Z, Gen AI, and Gen Alpha after them: whether the edition carries the name",
+   "kind": "process",
+   "statement": "A note on the name: the Gen AI edition, or not, as a subtitle or nothing; and whether Gen Alpha is a future reader. Goes into the title interview.",
+   "sources": [
+    {
+     "ref": "art:generative-ai-not-ai",
+     "where": "A note on the name; The brief, task 3"
+    },
+    {
+     "ref": "news:generation-z-developers-again",
+     "where": "The name"
+    }
+   ],
+   "answers": [],
+   "topic": "making-of",
+   "chapter": null,
+   "destination": "undecided",
+   "state": "candidate",
+   "decided_by": null,
+   "notes": "Dinis's open question; the editor adds it to the title interview (issue 002).",
+   "gravity": "all"
+  },
+  {
+   "id": "immediate-connection",
+   "title": "The immediate connection between a creator and what they make is the wonder the book opens with",
+   "kind": "frame",
+   "statement": "Bret Victor's Inventing on Principle: see the effect of a change as you make it. The 2018 book already had it as an outline; the opening uses it for the wonder.",
+   "sources": [
+    {
+     "ref": "art:where-the-thinking-came-from",
+     "where": "The opening, and learning; Bret Victor"
+    },
+    {
+     "ref": "art:lucky-to-be-here",
+     "where": "Wonder"
+    }
+   ],
+   "answers": [
+    "5.concepts/inventing-on-principle.md"
+   ],
+   "topic": "everyone-is-a-developer",
+   "chapter": "lucky-to-be-here",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Where the thinking came from",
+   "gravity": "explorer"
+  },
+  {
+   "id": "flow-and-deliberate-practice",
+   "title": "Flow and deliberate practice are the science of the zone and of learning",
+   "kind": "evidence",
+   "statement": "Csikszentmihalyi on flow and Ericsson on deliberate practice back the 2018 chapters on the zone and on learning; the book names them in a 'where this comes from' box.",
+   "sources": [
+    {
+     "ref": "art:where-the-thinking-came-from",
+     "where": "The opening, and learning"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/the-zone.md",
+    "4.life-patterns/content/learning.md",
+    "4.life-patterns/power-of-habits.md"
+   ],
+   "topic": "everyone-is-a-developer",
+   "chapter": "connect-the-dots-backwards",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Where the thinking came from",
+   "gravity": "all"
+  },
+  {
+   "id": "a-claim-earns-its-status-by-being-refutable",
+   "title": "Question everything: a claim earns its status by being refutable",
+   "kind": "frame",
+   "statement": "Popper for the chapter on questioning, Schneier for security thinking: the cover's first line, with its philosophy named.",
+   "sources": [
+    {
+     "ref": "art:where-the-thinking-came-from",
+     "where": "Questioning and evidence"
+    }
+   ],
+   "answers": [
+    "5.concepts/facts.md"
+   ],
+   "topic": "facts-and-the-record",
+   "chapter": "facts-and-the-record",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Where the thinking came from",
+   "gravity": "town-planner"
+  },
+  {
+   "id": "know-where-your-ideas-come-from",
+   "title": "Know where your ideas come from: keep your own register",
+   "kind": "advice",
+   "statement": "The reader's exercise at the end of the learning part: write your influences as claims you can check, tied to where they show up in your work, the way influences.sgit.ai does; the book's own 'where this comes from' boxes and appendix are the example.",
+   "sources": [
+    {
+     "ref": "art:where-the-thinking-came-from",
+     "where": "An exercise for the reader; The brief, tasks 2 and 5"
+    }
+   ],
+   "answers": [
+    "7.your-cv/future-self.md",
+    "4.life-patterns/mentors.md"
+   ],
+   "topic": "graphs-memory",
+   "chapter": "connect-the-dots-backwards",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Where the thinking came from",
+   "gravity": "all"
+  },
+  {
+   "id": "open-source-community-as-the-way-in",
+   "title": "Open source, community and OWASP: working and getting hired in the open, with the names behind it",
+   "kind": "story",
+   "statement": "Torvalds, The Cathedral and the Bazaar, open source and OWASP as the influences behind act as the job you want; the 2018 book had already written the Cathedral and the Bazaar down.",
+   "sources": [
+    {
+     "ref": "art:where-the-thinking-came-from",
+     "where": "Open source, community and getting hired in the open; What the 2018 book gives back to the register"
+    },
+    {
+     "ref": "book:2.mvp-for-gen-z-dev/content/owasp.md",
+     "where": "the 2018 chapter"
+    }
+   ],
+   "answers": [
+    "2.mvp-for-gen-z-dev/content/owasp.md",
+    "2.mvp-for-gen-z-dev/content/open-source.md"
+   ],
+   "topic": "open-source",
+   "chapter": "open-source",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Where the thinking came from",
+   "gravity": "all"
+  },
+  {
+   "id": "the-villagers-craft",
+   "title": "Design, the design canon and Christopher Alexander: the villager's and town planner's craft",
+   "kind": "frame",
+   "statement": "The craft of making something others rely on has a canon; the book names it where the villager's chapters need it.",
+   "sources": [
+    {
+     "ref": "art:where-the-thinking-came-from",
+     "where": "The villager's craft"
+    }
+   ],
+   "answers": [
+    "5.concepts/design.md",
+    "5.concepts/netflix-culture.md"
+   ],
+   "topic": "explorers-villagers-town-planners",
+   "chapter": "explorer-coding-and-the-handover",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Where the thinking came from",
+   "gravity": "villager"
+  },
+  {
+   "id": "start-with-why-sinek",
+   "title": "Purpose, and optimism: Sinek for why, Kevin Kelly for what technology wants",
+   "kind": "frame",
+   "statement": "The 2018 outline Start with Why gets its influence named; Kevin Kelly's view of where technology goes is the frame's optimism, with the anchor (What Technology Wants or another) still Dinis's question.",
+   "sources": [
+    {
+     "ref": "art:where-the-thinking-came-from",
+     "where": "Purpose, and optimism"
+    },
+    {
+     "ref": "book:3.technologies/content/ml-ai.md",
+     "where": "Kevin Kelly's The Inevitable, recommended in 2018"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/start-with-why.md",
+    "10.misc/technium.md"
+   ],
+   "topic": "everyone-is-a-developer",
+   "chapter": "lucky-to-be-here",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Where the thinking came from; the Kevin Kelly anchor is his open question",
+   "gravity": "all"
+  }
  ]
 }

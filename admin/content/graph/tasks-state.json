@@ -1,61 +1,271 @@
 {
  "what": "The state of every task the co-written articles' briefs ask for, checked against the repository by the librarian on 18 October 2026. The tasks themselves are read from each article's 'The brief' section by the build (one task per numbered item, with the role the section names); this file says what the repository shows about each: done, in-progress, blocked, open. Evidence names the file or page that proves it. A task not listed here is open.",
- "states": {"open": "nothing in the repository or the vault shows it started", "in-progress": "started; the evidence says how far", "blocked": "waits on a decision or another task", "done": "the done-when holds; the evidence shows it"},
+ "states": {
+  "open": "nothing in the repository or the vault shows it started",
+  "in-progress": "started; the evidence says how far",
+  "blocked": "waits on a decision or another task",
+  "done": "the done-when holds; the evidence shows it"
+ },
  "tasks": {
-  "write-it-as-an-article:journalist:1": {"state": "done", "evidence": "articles/ has nine articles with markdown twins; the gate passes (site v0.2.1 to v0.2.6)"},
-  "write-it-as-an-article:journalist:2": {"state": "done", "evidence": "team/publisher/briefs/book__v1.0.0__release-the-book-we-already-released.md; team/editor/briefs/ has the three"},
-  "write-it-as-an-article:journalist:3": {"state": "open", "evidence": "no debrief has come back yet (team/*/debriefs/ are empty)"},
-  "write-it-as-an-article:dinis:1": {"state": "in-progress", "evidence": "the seven decisions of 18 October (decisions/) came from reading the first five"},
-  "write-it-as-an-article:dinis:2": {"state": "open", "evidence": "no publisher or editor debrief yet"},
-  "release-the-book-we-already-released:publisher:1": {"state": "open", "evidence": "admin/build/ has no bookkit"},
-  "release-the-book-we-already-released:publisher:2": {"state": "open", "evidence": "no v1/publish/"},
-  "release-the-book-we-already-released:publisher:3": {"state": "open", "evidence": "no v1/publish/"},
-  "release-the-book-we-already-released:publisher:4": {"state": "open", "evidence": "no debrief"},
-  "release-the-book-we-already-released:publisher:5": {"state": "open", "evidence": "no debrief"},
-  "release-the-book-we-already-released:publisher:6": {"state": "open", "evidence": "no v1/publish/"},
-  "release-the-book-we-already-released:publisher:7": {"state": "open", "evidence": "validate.js has no manifest check for v1/publish/"},
-  "release-the-book-we-already-released:publisher:8": {"state": "open", "evidence": "no upload checklist in team/publisher/debriefs/"},
-  "release-the-book-we-already-released:publisher:9": {"state": "open", "evidence": "no admin/content/book/publications.json"},
-  "release-the-book-we-already-released:publisher:10": {"state": "open", "evidence": "no publisher agent article"},
-  "one-board-for-the-book:editor:1": {"state": "open", "evidence": "the vault has board/issues/ folders from v0.1.0 but no content-issue format in team/ISSUES.md"},
-  "one-board-for-the-book:editor:2": {"state": "open", "evidence": "no board/index.html on the site"},
-  "one-board-for-the-book:editor:3": {"state": "open", "evidence": "no vault board script in admin/build/"},
-  "one-board-for-the-book:editor:4": {"state": "open", "evidence": "validate.js has no work-issue checks"},
-  "one-board-for-the-book:editor:5": {"state": "open", "evidence": "the 43 GitHub issues are captured (admin/content/github/) but not in the vault as content issues"},
-  "one-board-for-the-book:editor:6": {"state": "open", "evidence": "the vault's BOARD.md still lists the questions by hand"},
-  "one-board-for-the-book:editor:7": {"state": "open", "evidence": "no board in the navigation"},
-  "everything-unfinished-in-one-place:editor:1": {"state": "open", "evidence": "no inventory/"},
-  "everything-unfinished-in-one-place:editor:2": {"state": "open", "evidence": "no inventory/"},
-  "everything-unfinished-in-one-place:editor:3": {"state": "blocked", "evidence": "waits on the vault board (one board for the book, task 1)"},
-  "everything-unfinished-in-one-place:editor:4": {"state": "open", "evidence": "no admin/content/notes/"},
-  "everything-unfinished-in-one-place:editor:5": {"state": "in-progress", "evidence": "the graph's sources page lists the 2018 files with no idea and no article (the 'article first' candidates); the inventory filter itself is not built"},
-  "everything-unfinished-in-one-place:editor:6": {"state": "open", "evidence": "no inventory in the navigation"},
-  "read-comment-decide:editor:1": {"state": "open", "evidence": "no board/decisions/ in the vault"},
-  "read-comment-decide:editor:2": {"state": "open", "evidence": "assets/reader.js has states and comments, no decision verb"},
-  "read-comment-decide:editor:3": {"state": "open", "evidence": "chapter pages show the map's reading only"},
-  "read-comment-decide:editor:4": {"state": "blocked", "evidence": "waits on the vault board script (one board for the book, task 3)"},
-  "read-comment-decide:editor:5": {"state": "open", "evidence": "no first-batch page"},
-  "read-comment-decide:editor:6": {"state": "blocked", "evidence": "waits on task 5 and on Dinis's sitting"},
-  "read-comment-decide:editor:7": {"state": "open", "evidence": "team/journalist/briefs/ is empty"},
-  "start-from-the-storyline:editor:1": {"state": "in-progress", "evidence": "admin/content/graph/chapters.json is the librarian's proposed chapter map, one row per chapter with punchline, topics, gravity, character and the 2018 files it answers; rendered at graph/chapters.html; the editor's map decides"},
-  "start-from-the-storyline:editor:2": {"state": "in-progress", "evidence": "storyboards exist for the opening, where do you land and connect the dots (the first part); none yet for the other parts"},
-  "start-from-the-storyline:editor:3": {"state": "open", "evidence": "no decision recorded on a storyboard"},
-  "start-from-the-storyline:editor:4": {"state": "done", "evidence": "gen_map.py names places-of-highest-leverage, from-a-spreadsheet-to-a-folder-per-person, why-my-agents-do-not-run-on-my-laptop and who-owns-the-words (site v0.2.7)"},
-  "start-from-the-storyline:editor:5": {"state": "open", "evidence": "no class decisions in the vault"},
-  "start-from-the-storyline:journalist:6": {"state": "open", "evidence": "no gap article yet; the gaps are nodes on the ideas register (fear-of-ai, job-hunt-in-2026) marked article first"},
-  "lucky-to-be-here:editor:1": {"state": "open", "evidence": "no board/decisions/ in the vault; the idea wonder-not-fear is 'accepted' on the register pending that record"},
-  "lucky-to-be-here:editor:2": {"state": "open", "evidence": "02__a-first-storyline.json still opens with the fear"},
-  "lucky-to-be-here:editor:3": {"state": "open", "evidence": "no second interview script in team/editor/briefs/"},
-  "lucky-to-be-here:editor:4": {"state": "in-progress", "evidence": "chapters.json places The Zone, BBS and modems, Dopamine under lucky-to-be-here; the editor's map decides"},
-  "lucky-to-be-here:journalist:5": {"state": "open", "evidence": "no history, attention-economy or jobs-that-never-scaled article"},
-  "where-do-you-land:editor:1": {"state": "open", "evidence": "no board/decisions/ in the vault"},
-  "where-do-you-land:editor:2": {"state": "in-progress", "evidence": "chapters.json gives every proposed chapter a gravity; counts on graph/chapters.html"},
-  "where-do-you-land:editor:3": {"state": "open", "evidence": "no learning paths"},
-  "where-do-you-land:editor:4": {"state": "open", "evidence": "only the where-do-you-land storyboard has a map panel"},
-  "where-do-you-land:editor:5": {"state": "open", "evidence": "no interview script on this"},
-  "connect-the-dots-backwards:editor:1": {"state": "in-progress", "evidence": "chapters.json places Learning, Books, Pen and Paper, Love maths, The Zone and Thinking as a programmer; the editor's map decides"},
-  "connect-the-dots-backwards:editor:2": {"state": "open", "evidence": "03__the-opening.json has no read-it-on-paper panel"},
-  "connect-the-dots-backwards:editor:3": {"state": "open", "evidence": "no interview script on this"},
-  "connect-the-dots-backwards:journalist:4": {"state": "open", "evidence": "no article on the creativity study or reading on paper"}
+  "write-it-as-an-article:journalist:1": {
+   "state": "done",
+   "evidence": "articles/ has nine articles with markdown twins; the gate passes (site v0.2.1 to v0.2.6)"
+  },
+  "write-it-as-an-article:journalist:2": {
+   "state": "done",
+   "evidence": "team/publisher/briefs/book__v1.0.0__release-the-book-we-already-released.md; team/editor/briefs/ has the three"
+  },
+  "write-it-as-an-article:journalist:3": {
+   "state": "open",
+   "evidence": "no debrief has come back yet (team/*/debriefs/ are empty)"
+  },
+  "write-it-as-an-article:dinis:1": {
+   "state": "in-progress",
+   "evidence": "the seven decisions of 18 October (decisions/) came from reading the first five"
+  },
+  "write-it-as-an-article:dinis:2": {
+   "state": "open",
+   "evidence": "no publisher or editor debrief yet"
+  },
+  "release-the-book-we-already-released:publisher:1": {
+   "state": "open",
+   "evidence": "admin/build/ has no bookkit"
+  },
+  "release-the-book-we-already-released:publisher:2": {
+   "state": "open",
+   "evidence": "no v1/publish/"
+  },
+  "release-the-book-we-already-released:publisher:3": {
+   "state": "open",
+   "evidence": "no v1/publish/"
+  },
+  "release-the-book-we-already-released:publisher:4": {
+   "state": "open",
+   "evidence": "no debrief"
+  },
+  "release-the-book-we-already-released:publisher:5": {
+   "state": "open",
+   "evidence": "no debrief"
+  },
+  "release-the-book-we-already-released:publisher:6": {
+   "state": "open",
+   "evidence": "no v1/publish/"
+  },
+  "release-the-book-we-already-released:publisher:7": {
+   "state": "open",
+   "evidence": "validate.js has no manifest check for v1/publish/"
+  },
+  "release-the-book-we-already-released:publisher:8": {
+   "state": "open",
+   "evidence": "no upload checklist in team/publisher/debriefs/"
+  },
+  "release-the-book-we-already-released:publisher:9": {
+   "state": "open",
+   "evidence": "no admin/content/book/publications.json"
+  },
+  "release-the-book-we-already-released:publisher:10": {
+   "state": "open",
+   "evidence": "no publisher agent article"
+  },
+  "one-board-for-the-book:editor:1": {
+   "state": "open",
+   "evidence": "the vault has board/issues/ folders from v0.1.0 but no content-issue format in team/ISSUES.md"
+  },
+  "one-board-for-the-book:editor:2": {
+   "state": "open",
+   "evidence": "no board/index.html on the site"
+  },
+  "one-board-for-the-book:editor:3": {
+   "state": "open",
+   "evidence": "no vault board script in admin/build/"
+  },
+  "one-board-for-the-book:editor:4": {
+   "state": "open",
+   "evidence": "validate.js has no work-issue checks"
+  },
+  "one-board-for-the-book:editor:5": {
+   "state": "open",
+   "evidence": "the 43 GitHub issues are captured (admin/content/github/) but not in the vault as content issues"
+  },
+  "one-board-for-the-book:editor:6": {
+   "state": "open",
+   "evidence": "the vault's BOARD.md still lists the questions by hand"
+  },
+  "one-board-for-the-book:editor:7": {
+   "state": "open",
+   "evidence": "no board in the navigation"
+  },
+  "everything-unfinished-in-one-place:editor:1": {
+   "state": "open",
+   "evidence": "no inventory/"
+  },
+  "everything-unfinished-in-one-place:editor:2": {
+   "state": "open",
+   "evidence": "no inventory/"
+  },
+  "everything-unfinished-in-one-place:editor:3": {
+   "state": "blocked",
+   "evidence": "waits on the vault board (one board for the book, task 1)"
+  },
+  "everything-unfinished-in-one-place:editor:4": {
+   "state": "open",
+   "evidence": "no admin/content/notes/"
+  },
+  "everything-unfinished-in-one-place:editor:5": {
+   "state": "in-progress",
+   "evidence": "the graph's sources page lists the 2018 files with no idea and no article (the 'article first' candidates); the inventory filter itself is not built"
+  },
+  "everything-unfinished-in-one-place:editor:6": {
+   "state": "open",
+   "evidence": "no inventory in the navigation"
+  },
+  "read-comment-decide:editor:1": {
+   "state": "open",
+   "evidence": "no board/decisions/ in the vault"
+  },
+  "read-comment-decide:editor:2": {
+   "state": "open",
+   "evidence": "assets/reader.js has states and comments, no decision verb"
+  },
+  "read-comment-decide:editor:3": {
+   "state": "open",
+   "evidence": "chapter pages show the map's reading only"
+  },
+  "read-comment-decide:editor:4": {
+   "state": "blocked",
+   "evidence": "waits on the vault board script (one board for the book, task 3)"
+  },
+  "read-comment-decide:editor:5": {
+   "state": "open",
+   "evidence": "no first-batch page"
+  },
+  "read-comment-decide:editor:6": {
+   "state": "blocked",
+   "evidence": "waits on task 5 and on Dinis's sitting"
+  },
+  "read-comment-decide:editor:7": {
+   "state": "open",
+   "evidence": "team/journalist/briefs/ is empty"
+  },
+  "start-from-the-storyline:editor:1": {
+   "state": "in-progress",
+   "evidence": "admin/content/graph/chapters.json is the librarian's proposed chapter map, one row per chapter with punchline, topics, gravity, character and the 2018 files it answers; rendered at graph/chapters.html; the editor's map decides"
+  },
+  "start-from-the-storyline:editor:2": {
+   "state": "in-progress",
+   "evidence": "storyboards exist for the opening, where do you land and connect the dots (the first part); none yet for the other parts"
+  },
+  "start-from-the-storyline:editor:3": {
+   "state": "open",
+   "evidence": "no decision recorded on a storyboard"
+  },
+  "start-from-the-storyline:editor:4": {
+   "state": "done",
+   "evidence": "gen_map.py names places-of-highest-leverage, from-a-spreadsheet-to-a-folder-per-person, why-my-agents-do-not-run-on-my-laptop and who-owns-the-words (site v0.2.7)"
+  },
+  "start-from-the-storyline:editor:5": {
+   "state": "open",
+   "evidence": "no class decisions in the vault"
+  },
+  "start-from-the-storyline:journalist:6": {
+   "state": "open",
+   "evidence": "no gap article yet; the gaps are nodes on the ideas register (fear-of-ai, job-hunt-in-2026) marked article first"
+  },
+  "lucky-to-be-here:editor:1": {
+   "state": "open",
+   "evidence": "no board/decisions/ in the vault; the idea wonder-not-fear is 'accepted' on the register pending that record"
+  },
+  "lucky-to-be-here:editor:2": {
+   "state": "open",
+   "evidence": "02__a-first-storyline.json still opens with the fear"
+  },
+  "lucky-to-be-here:editor:3": {
+   "state": "open",
+   "evidence": "no second interview script in team/editor/briefs/"
+  },
+  "lucky-to-be-here:editor:4": {
+   "state": "in-progress",
+   "evidence": "chapters.json places The Zone, BBS and modems, Dopamine under lucky-to-be-here; the editor's map decides"
+  },
+  "lucky-to-be-here:journalist:5": {
+   "state": "open",
+   "evidence": "no history, attention-economy or jobs-that-never-scaled article"
+  },
+  "where-do-you-land:editor:1": {
+   "state": "open",
+   "evidence": "no board/decisions/ in the vault"
+  },
+  "where-do-you-land:editor:2": {
+   "state": "in-progress",
+   "evidence": "chapters.json gives every proposed chapter a gravity; counts on graph/chapters.html"
+  },
+  "where-do-you-land:editor:3": {
+   "state": "open",
+   "evidence": "no learning paths"
+  },
+  "where-do-you-land:editor:4": {
+   "state": "open",
+   "evidence": "only the where-do-you-land storyboard has a map panel"
+  },
+  "where-do-you-land:editor:5": {
+   "state": "open",
+   "evidence": "no interview script on this"
+  },
+  "connect-the-dots-backwards:editor:1": {
+   "state": "in-progress",
+   "evidence": "chapters.json places Learning, Books, Pen and Paper, Love maths, The Zone and Thinking as a programmer; the editor's map decides"
+  },
+  "connect-the-dots-backwards:editor:2": {
+   "state": "open",
+   "evidence": "03__the-opening.json has no read-it-on-paper panel"
+  },
+  "connect-the-dots-backwards:editor:3": {
+   "state": "open",
+   "evidence": "no interview script on this"
+  },
+  "connect-the-dots-backwards:journalist:4": {
+   "state": "open",
+   "evidence": "no article on the creativity study or reading on paper"
+  },
+  "where-the-thinking-came-from:editor:1": {
+   "state": "open",
+   "evidence": "chapters.json has no influence column yet; the ideas from the register name the influences in their statements"
+  },
+  "where-the-thinking-came-from:editor:2": {
+   "state": "open",
+   "evidence": "no boxes planned"
+  },
+  "where-the-thinking-came-from:editor:3": {
+   "state": "open",
+   "evidence": "no storyboard guidance on real people"
+  },
+  "where-the-thinking-came-from:editor:4": {
+   "state": "open",
+   "evidence": "no interview script on the stubs"
+  },
+  "where-the-thinking-came-from:editor:5": {
+   "state": "in-progress",
+   "evidence": "the idea know-where-your-ideas-come-from is placed under connect-the-dots-backwards (the learning chapter); the editor's map decides"
+  },
+  "where-the-thinking-came-from:journalist:6": {
+   "state": "open",
+   "evidence": "no brief delivered to the influences repository"
+  },
+  "generative-ai-not-ai:editor:1": {
+   "state": "in-progress",
+   "evidence": "chapters.json proposes the chapter what-generative-ai-is, first in the frame, with two ideas; no storyboard yet"
+  },
+  "generative-ai-not-ai:editor:2": {
+   "state": "open",
+   "evidence": "no style notes for the drafts exist"
+  },
+  "generative-ai-not-ai:editor:3": {
+   "state": "open",
+   "evidence": "002__the-title-the-subtitle-and-the-language.md does not mention Gen AI yet"
+  },
+  "generative-ai-not-ai:editor:4": {
+   "state": "open",
+   "evidence": "no image slide found"
+  }
  }
 }

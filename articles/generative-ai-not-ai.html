@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Generative AI, not AI &mdash; gen-z-developers.sgit.ai</title>
+<meta name="description" content="AI has become a huge bucket, and the word gets abused. The technology that is changing the world, and the one driving my imagination and my capabilities, is generative AI, so the book should say so, and explain the difference between AI, machine learning and generative AI. My understanding is this: ">
+<link rel="canonical" href="https://gen-z-developers.sgit.ai/articles/generative-ai-not-ai.html">
+<meta property="og:title" content="Generative AI, not AI">
+<meta property="og:description" content="AI has become a huge bucket, and the word gets abused. The technology that is changing the world, and the one driving my imagination and my capabilities, is generative AI, so the book should say so, and explain the difference between AI, machine learning and generative AI. My understanding is this: ">
+<meta property="og:url" content="https://gen-z-developers.sgit.ai/articles/generative-ai-not-ai.html">
+<meta property="og:type" content="article">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230c2a3d%27/%3E%3Crect x=%274%27 y=%276%27 width=%2711%27 height=%2720%27 fill=%27%237bc08f%27/%3E%3Crect x=%2717%27 y=%276%27 width=%2711%27 height=%2720%27 fill=%27%23e5625b%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Arial Black,Arial%27 font-weight=%27900%27 font-size=%2718%27 text-anchor=%27middle%27 fill=%27%230c2a3d%27%3EZ%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/graph.css">
+</head>
+<body>
+<nav class="site"><div class="row">
+<a class="brand" href="../index.html">gen-z-developers<span>.sgit.ai</span></a>
+<a class="parent" href="https://sgit.ai" title="sgit.ai, the parent project">&#8599; part of <b>sgit.ai</b></a>
+<a class="nl" href="../v1/book/index.html">The book</a><a class="nl" href="../read/index.html">Read &amp; review</a><a class="nl" href="../v1/versions/index.html">Versions</a><a class="nl" href="../contributors/index.html">Contributors</a><a class="nl" href="../map/index.html">The map</a><a class="nl" href="../graph/index.html">The graph</a><a class="nl here" href="../articles/index.html">Articles</a><a class="nl" href="../decisions/index.html">Decisions</a><a class="nl" href="../storyboards/index.html">Storyboards</a><a class="nl" href="../briefs/index.html">The briefs</a><a class="nl" href="../team/index.html">The team</a><a class="nl" href="../vault/index.html">The vault</a><a class="nl" href="../admin/index.html">Admin</a>
+<span class="ver">site <a href="../admin/versions.html" title="Release history">v0.2.9</a></span>
+</div></nav>
+<main><div class="inner">
+<div class="crumbs"><a href="../index.html">gen-z-developers.sgit.ai</a> &rarr; <a href="../articles/index.html">Articles</a> &rarr; <b>Generative AI, not AI</b></div>
+<article class="doc"><p class="kicker">article &middot; 2026-10-18 &middot; site v0.2.8 &middot; <a href="generative-ai-not-ai.md">markdown</a></p><h1>Generative AI, not AI: the technology this book is about is the one that generates, how I understand it works, from next-word prediction to the image that made it click, and where I was corrected</h1><p class="byline">By Dinis Cruz, co-written with this site&rsquo;s journalist, <code>gen-z.journalist</code>, in Dinis Cruz&rsquo;s voice; the editorial responsibility is Dinis Cruz&rsquo;s.</p><div class="src"><b>Abstract.</b> AI has become a huge bucket, and the word gets abused. The technology that is changing the world, and the one driving my imagination and my capabilities, is generative AI, so the book should say so, and explain the difference between AI, machine learning and generative AI. My understanding is this: the data goes into a model, the model builds its own interpretation of it, and then it recreates an output from that interpretation, an abstraction layer between what goes in and what comes out. A language model predicts the next word, but it predicts it from an incredibly rich picture of how everything connects, which is why a better prompt gives a better answer, and why hallucinations happen: inside the model everything is connected to everything, and it is hard to know where the lines are, so the text you give it acts as a short-term memory of what the connections actually are. What made it click for me was an image: the early tools that extended a photo, where the new parts matched the old, which only works if the model has learned the mountains, the light, the shadows and the palette. Then I realised that is what happens with text. I think the models have found patterns in our language we never put into words, and we are still discovering what they can do. I asked to be corrected, and I was, on several points: classic machine learning learns too; inside a model there are vectors, not a stored graph, so my graph is a metaphor; most image models work by removing noise, not by predicting the next piece; hallucinations also come from training that rewards guessing; and emergent abilities are debated. And a note on the name: Gen Z, Gen AI, and after them Gen Alpha, already born.</div><div class="body"><h2 id="in-short">In short</h2>
+<ul>
+<li><strong>This book is about generative AI, not AI in general.</strong> AI is now a huge bucket, and the word gets abused.</li>
+<li><strong>Generative AI generates.</strong> Data goes in, the model builds its own representation, and it recreates an output from it.</li>
+<li><strong>A language model predicts the next word, from a very rich picture of how things connect.</strong> Which is why a better prompt gives a better answer.</li>
+<li><strong>Hallucinations come partly from that richness.</strong> Everything is connected; the text you give it says which connections matter.</li>
+<li><strong>An image made it click for me.</strong> Extending a photo coherently needs mountains, light and shadows learned; text is the same.</li>
+<li><strong>We are still discovering what these models can do.</strong> That is the sense of wonder again.</li>
+<li><strong>I asked to be corrected, and I was.</strong> On machine learning, on the graph, on images, on hallucinations and on emergence.</li>
+<li><strong>A note on the name.</strong> Gen Z, Gen AI, and Gen Alpha after them.</li>
+</ul>
+<h2 id="bucket">AI is a huge bucket</h2>
+<p>I want to be exact about this. The technology that is changing the world, and the technology that is really driving my imagination and my capabilities right now, is generative AI. AI has become a huge bucket, and to be honest the word gets abused a lot. So the book should have a section that explains the difference between AI, machine learning and generative AI, and then say plainly that it is about the generative kind.</p>
+<p>There will be very few examples in this book of AI in the wider sense, out in the field, recognising faces or scoring loans or recommending films. That AI is huge and has a lot of interesting applications. What this book is about is the generative one: the AI that creates something based on the input it is given.</p>
+<h2 id="understand">How I understand it</h2>
+<p>The interesting property of generative AI, which I have talked about before, is in the name: it generates the output. There are the transformers and all that jazz, but for me the interesting part is that the data goes into a model, and the model recreates the output from its own interpretation of it. There is an abstraction layer between the input and the output: the input becomes an intermediate representation inside the model, and the output, an image or a text, is generated from that representation.</p>
+<p>Inside a language model, what happens is that it predicts the next word. But it predicts the next word from an incredibly rich picture of the world, of how things connect, which it narrows down based on your prompt. That is why the better your prompt, the better the output, as I am doing here by talking for ten minutes: the model knows better which concepts you are talking about. I wrote in <a href="https://newsroom.sgit.ai/articles/who-owns-the-words.html">who owns the words</a> that "predicting the next word" is accurate and demeaning at the same time, and that a prompt pulls the model towards the part of what it knows that you mean.</p>
+<h2 id="hallucinations">Where hallucinations come from</h2>
+<p>I think that is also where hallucinations come from. Just about everything is connected to everything, and from inside the model they are all just connections; it is very hard for a model to know where the lines are. That is why giving it text helps so much: the text in your prompt is like a short-term memory that says, these are the connections that actually hold here.</p>
+<p>In a talk I gave in Lisbon in June 2024, which the newsroom wrote up as <a href="https://newsroom.sgit.ai/articles/portugal-2024-genai-in-portuguese.html">GenAI in Portuguese</a>, I said hallucinations "Are a FEATURE when creating content and when we want creativity, But are a BUG and PROBLEM when we want facts, evident and trust". I still think so.</p>
+<h2 id="image">The image that made it click</h2>
+<p>Ironically, it was an image, in one of my presentations, that made me understand generative AI at this level. It was the early tools that extended an image: you gave them a picture, and they added to it, and the new parts looked like they belonged. OpenAI announced outpainting for DALL-E in August 2022, and Adobe put Generative Fill into Photoshop in May 2023.</p>
+<p>I remember thinking: for that to work, the model has to have learned all those concepts. The patterns, the structure, the positions, the palette; what we are actually looking at, the landscape, the sky, a character. If there is a mountain here, there will be a mountain there, and the new mountains have to be coherent with every other mountain it has seen. If the sun is there, the light falls a certain way, and so do the shadows. Once you see all the variables it has to hold, extending the image makes sense.</p>
+<p>And then I took that to text, and thought: that is exactly what happens with text. A large language model is a model built on language, and generative AI is the wider family of models that generate, but I believe the language models are doing the same thing with words.</p>
+<h2 id="language">What the models found in our language</h2>
+<p>As I have written before, I think the models have discovered things about our language that we never found ourselves, because we were never able to rationalise them. We do not know what is happening in a child's head as they learn to speak, because they cannot put it into words; and we are too close to our own language to see it. With many layers, and as they get bigger, the models found connections and relationships in it.</p>
+<p>We are still discovering what they can do. In the early days of ChatGPT there were all these stories: it can count, it can do chemistry, it speaks all these languages. A model trained mostly on English turns out to work in a language it saw very little of. How does that work? That is the same sense of wonder the book starts with.</p>
+<h2 id="corrected">Where I was corrected</h2>
+<p>I asked Claude, which is helping me write this book, to correct me where I was wrong. It did, and the corrections belong in the book, because they are the kind of thing a reader should learn to ask for.</p>
+<ul>
+<li><strong>Classic machine learning learns too.</strong> My memo said traditional AI was more like a sequence of steps or a formula, and generative AI learns. The older, rule-based AI was like that; but machine learning in general learns from data, and generative AI is one branch of it. The real difference is what comes out: most machine learning predicts a label or a number (is this spam, what will this cost), while a generative model produces new content of the kind it was trained on.</li>
+<li><strong>Inside the model there are vectors, not a graph.</strong> A language model represents words and their contexts as long lists of numbers, and passes them through many layers; its attention mechanism connects every word in the text to every other word, with learned strengths. You can picture that as a graph, and I find the picture useful, but there is no stored graph of nodes and edges inside. My graph is a metaphor, and the book should say so.</li>
+<li><strong>The prompt does not change the model.</strong> It conditions what the model computes. My "real-time fine-tuning" is also a metaphor: the model's weights stay the same, and the prompt steers what it draws on.</li>
+<li><strong>It predicts the next token, then it is trained to be useful.</strong> Tokens are pieces of words. The prediction is the start; further training, including on human feedback, is what makes a model into an assistant that follows instructions.</li>
+<li><strong>Hallucinations have a second cause.</strong> Besides the one in my picture, a study published by OpenAI researchers in September 2025, <a href="https://openai.com/index/why-language-models-hallucinate/">Why language models hallucinate</a>, argues that training and evaluation reward guessing over saying "I don't know": a guess is sometimes right, while an honest "I don't know" scores nothing.</li>
+<li><strong>Most image models work differently.</strong> The common kind are diffusion models: they start from noise and remove it step by step, guided by the text, rather than predicting the next piece. My intuition, that they have learned the structure of images, still holds; but they learned statistical patterns, and they still get light, shadows and hands wrong in ways a person would not.</li>
+<li><strong>"Emergent abilities" are debated.</strong> The term comes from a 2022 paper by Jason Wei and others: abilities that appear only in larger models. A 2023 paper by Rylan Schaeffer and others, <a href="https://arxiv.org/abs/2304.15004">Are emergent abilities of large language models a mirage?</a>, argues that many of those jumps come from how they were measured. Models working across languages is real and studied; the specific stories of near-zero data and full fluency are anecdotes.</li>
+<li><strong>Whether models have a "world model" is an open question.</strong> There is research showing they form internal representations of things like positions, places and dates; how far that goes is argued about.</li>
+</ul>
+<h2 id="name">A note on the name</h2>
+<p>Most of what this book says should say generative AI, not AI. And the edition has been described as the AI edition; maybe it should be the Gen AI edition, because there is a play in it: Gen Z, Gen AI. And after Gen Z comes Gen Alpha: Mark McCrindle, who named them, puts them as born from 2010 to 2024, so the oldest are sixteen in 2026, and after them Gen Beta, from 2025. The boundaries are not official. I am only leaving a note here; the title is a question for the editor's interview.</p>
+<h2 id="brief">The brief</h2>
+<p>For the editor. Read <code>team/editor/role.md</code> and this article first.</p>
+<ol>
+<li><strong>Plan a short section, early, on what generative AI is</strong>: the bucket (AI, machine learning, deep learning, generative AI), how a language model works in plain words, why a better prompt helps, where hallucinations come from, and the corrections above. Done when the chapter map places it and the storyboard draws it.</li>
+<li><strong>Use "generative AI" across the book</strong>, and "AI" only where the wider field is meant. Done when the style notes for the drafts say so.</li>
+<li><strong>Add the name to the title interview</strong> (<code>002__the-title-the-subtitle-and-the-language.md</code>): Gen AI edition, or not; and whether Gen Alpha is a future reader. Done when the question is in the script.</li>
+<li><strong>Find the image slide</strong> in my presentations, the one about extending an image, so the book can show it. Done when it is found or I say it cannot be.</li>
+</ol>
+<p>Questions for me, kept apart:</p>
+<ul>
+<li>The Gen AI edition: yes, no, or a subtitle?</li>
+<li>Which presentation had the image slide?</li>
+</ul>
+<h2 id="limits">What this does not claim</h2>
+<ul>
+<li><strong>My picture of how models work is a working picture.</strong> The corrections say where it is a metaphor, and the book should keep both: the picture, and what is actually inside.</li>
+<li><strong>"The models discovered things about our language we had not" is my hypothesis.</strong> Interpretability research is finding structures inside models; what they mean is still being worked out.</li>
+<li><strong>The hallucination study is one explanation</strong>, from researchers at one model maker; it is not the only one.</li>
+<li><strong>The dates of the image tools are the announced ones.</strong> Outpainting on 31 August 2022; Generative Fill in beta on 23 May 2023.</li>
+<li><strong>Generation boundaries are conventions.</strong> No official body sets them.</li>
+</ul>
+<p>If you can explain generative AI more simply than this, without losing what is true, write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>.</p>
+<h2 id="sources">Where this comes from</h2>
+<p>A voice memo of mine on 18 October 2026, written up by this site's journalist, <code>gen-z.journalist</code>, in my voice, with the corrections I asked for. The argument and the editorial responsibility are mine.</p>
+<p>The quotes from my June 2024 talk are as the newsroom recorded them in <a href="https://newsroom.sgit.ai/articles/portugal-2024-genai-in-portuguese.html">GenAI in Portuguese</a>; the next-word passage is from <a href="https://newsroom.sgit.ai/articles/who-owns-the-words.html">who owns the words</a>. Sources for the corrections: Adam Tauman Kalai, Ofir Nachum, Santosh Vempala and Edwin Zhang, <a href="https://arxiv.org/abs/2509.04664">Why Language Models Hallucinate</a>, 4 September 2025, and OpenAI's <a href="https://openai.com/index/why-language-models-hallucinate/">post</a> of 5 September; Rylan Schaeffer, Brando Miranda and Sanmi Koyejo, <a href="https://arxiv.org/abs/2304.15004">Are Emergent Abilities of Large Language Models a Mirage?</a>, 2023; Jason Wei and others, <em>Emergent Abilities of Large Language Models</em>, 2022. Outpainting: OpenAI's announcement of 31 August 2022, reported by <a href="https://dataconomy.com/2022/09/02/dall-e-2-launched-outpainting/">Dataconomy</a>; Generative Fill: <a href="https://petapixel.com/2023/05/23/photoshops-new-generative-fill-uses-ai-to-expand-or-change-photos">PetaPixel, 23 May 2023</a>. Generations: Mark McCrindle's ranges, as summarised by <a href="https://en.wikipedia.org/wiki/Generation_Beta">Wikipedia on Generation Beta</a>.</p></div></article>
+</div></main>
+<footer class="site"><div class="row">
+<span>Generation Z Developers, by Dinis Cruz. The 2018 text is Creative Commons BY 4.0, as Dinis decided on 18 October 2026: see <a href="../v1/versions/index.html#licence">the licence note</a>. Everything else on this site is CC BY 4.0; code under the repository licence.</span>
+<span><a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers">GitHub</a> &middot; <a href="../vault/index.html">the working vault</a> &middot; <a href="../admin/versions.html">release history</a> &middot; <a href="../llms.txt">llms.txt</a></span>
+</div></footer>
+</body>
+</html>

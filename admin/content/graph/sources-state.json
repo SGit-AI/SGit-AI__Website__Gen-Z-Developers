@@ -1,6 +1,14 @@
 {
  "what": "The processing state of every source the book draws on, authored by the librarian. A source's default state comes from where it is: a newsroom article from its survey class (bring: to-process; content: to-mine; context: background; skip: skipped), a site article or a decision: to-process, a 2018 file: from the map (answered or unanswered). This file overrides the default where the librarian has done the work: 'processed' means its ideas are in the ideas register (ideas.json names it as a source); 'mined' means a content article's number, story or quote has been attached to an idea. The build refuses a 'processed' source that no idea cites.",
- "states": {"to-process": "a source the book should bring; its ideas not yet extracted", "processed": "its ideas are in the register", "to-mine": "has an example, number, story or quote to take; not yet attached to an idea", "mined": "attached to an idea", "background": "context for the agents, not for the reader", "skipped": "not for this reader", "placed": "every idea from it has a destination decided by Dinis"},
+ "states": {
+  "to-process": "a source the book should bring; its ideas not yet extracted",
+  "processed": "its ideas are in the register",
+  "to-mine": "has an example, number, story or quote to take; not yet attached to an idea",
+  "mined": "attached to an idea",
+  "background": "context for the agents, not for the reader",
+  "skipped": "not for this reader",
+  "placed": "every idea from it has a destination decided by Dinis"
+ },
  "counted_on": "2026-10-18",
  "overrides": {
   "art:write-it-as-an-article": "processed",
@@ -14,7 +22,16 @@
   "art:connect-the-dots-backwards": "processed",
   "agent:dinis-first-decisions": "background",
   "agent:storyboards-drawn-by-code": "processed",
-  "dec:001": "processed", "dec:002": "processed", "dec:003": "processed", "dec:004": "processed", "dec:005": "processed", "dec:006": "processed", "dec:007": "processed"
+  "dec:001": "processed",
+  "dec:002": "processed",
+  "dec:003": "processed",
+  "dec:004": "processed",
+  "dec:005": "processed",
+  "dec:006": "processed",
+  "dec:007": "processed",
+  "art:where-the-thinking-came-from": "processed",
+  "art:generative-ai-not-ai": "processed",
+  "agent:the-book-as-a-graph": "processed"
  },
  "rule": "A newsroom 'bring' article becomes 'processed' automatically when an idea cites it; a 'content' article becomes 'mined' the same way. The librarian adds an override only to say something the citations cannot: that an article was read and has nothing more to give (background), or that Dinis has placed everything from it (placed)."
 }

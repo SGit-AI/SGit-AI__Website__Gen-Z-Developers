@@ -75,6 +75,15 @@ vault's `reviews/` folder. Do not add a server, an analytics call or a network w
 rules for the meter (charge by share read, never less than a tenth once opened, below zero allowed,
 nothing blocked) are the rules here.
 
+## The graph (graph/)
+
+`admin/content/graph/` is the librarian's folder: the ideas register, the proposed chapter map, the source and
+task states, the plan. An idea names its sources and sections; the build refuses an idea that cites a source that
+does not exist, a chapter nothing names, a source marked processed that nothing cites, or a task state for a task
+no article has. A source's processing state is derived from the edges, never ticked by hand. When Dinis decides an
+idea through the loop, the editor records the decision in the vault and the idea's state moves in the same release,
+naming the decision. Process every new co-written article, decision and bring article into ideas within a release.
+
 ## Two version streams
 
 The **site's** version (`admin/build/version.txt`) moves on every push. The **book's** version
