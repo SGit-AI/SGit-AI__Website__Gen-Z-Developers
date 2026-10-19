@@ -143,7 +143,7 @@ For the publisher:
 
 Questions for me, kept apart:
 
-- The title: *Gen ZX Developers*, with *the GenAI Startup Edition* as the tagline, in place of *Gen Z Developers (GenAI Edition)*? And is it the second edition of *Generation Z Developers*, or a new book that grew out of it?
+- The title. Decided: *Generation ZX Developers (GenAI Startup Edition)*, [decision 014](/decisions/index.html#the-title-is-generation-zx-developers-genai-startup-edition). Still open: is it the second edition of *Generation Z Developers*, or a new book that grew out of it?
 - The millennials: does the book say why it is not for them first, or leave it unsaid?
 - Lithuania and the EU: written now, from what I know, or after I have done it?
 - The measure: how does a reader tell us about their company, and is the list public?
