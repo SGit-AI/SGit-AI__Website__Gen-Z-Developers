@@ -26,7 +26,8 @@ FONTS = {"Caveat": ROOT / "admin/content/reviews/fonts/caveat/caveat-400-700.wof
          "Plex": ROOT / "admin/content/covers/fonts/ibm-plex-sans/ibm-plex-sans-normal-400.woff2"}
 INK, DIM, PAPER, PEN = "#1f2937", "#9ca3af", "#ffffff", "#1d3a8a"
 THEME = {"first-page": "#dc2626", "show": "#2563eb", "doing": "#16a34a", "altitude": "#9333ea", "process-out": "#d97706",
-         "voice": "#0891b2", "reader-context": "#db2777", "release": "#4f46e5"}
+         "voice": "#0891b2", "reader-context": "#db2777", "release": "#4f46e5",
+         "evidence": "#0f766e", "links": "#c026d3", "works": "#15803d"}
 HAND, TYPE = "Caveat, cursive", "Plex, 'IBM Plex Sans', Arial, sans-serif"
 # which part each hands-on chapter would sit beside, if the hands-on part is spread across the book (note 11): a proposal
 SPREAD = {30: "working-with-agents", 31: "before-you-start", 32: "the-frame", 33: "the-frame", 34: "getting-the-job",
@@ -574,10 +575,72 @@ def after_reviewer_page(rv):
     return svg(1000, 1414, "".join(page_frame(b, foot="Generation ZX Developers, reviewer edition \u00b7 page 7")), "Sketch: a page of the reviewer edition, with boxes to tick, write and draw in")
 
 
+def qr_image(qid, x, y, size):
+    """A drawn QR code (q/<id>/qr.svg, made by qr_codes.py), embedded so the sketch stands alone."""
+    return (f'<image x="{x}" y="{y}" width="{size}" height="{size}" '
+            f'href="data:image/svg+xml;base64,{b64(ROOT / "q" / qid / "qr.svg")}"/>')
+
+
+def after_margin_system(rv):
+    """Notes 64 to 75: facts and opinions marked, concepts explained in a line, and QR codes where the page needs room."""
+    links = json.loads((ROOT / "admin/content/qr/links.json").read_text(encoding="utf-8"))["links"]
+    FACT, OPIN, STORY, CONC = "#0f766e", "#b45309", "#7c3aed", "#db2777"
+    b = [text(60, 90, "Technology that finally works for you", 30, weight="bold"),
+         text(60, 122, "a sketch of chapter 2 with the margin system: what is fact, what is opinion, and where the site takes over", 16, fill="#6b7280")]
+    paras = [
+        ("story", ["Two years in, I have never felt happier at work, or more", "empowered. That is my own account, and there are others", "like it, and others that are not."], "two-years"),
+        ("opinion", ["This is the biggest opportunity of your career, whether it", "is starting or twenty years in: the moment when you can", "still be a player, before things stabilise."], None),
+        ("fact", ["People learn more from text read on paper than on a", "screen, in study after study; so print this book and", "read it with a pen."], None),
+        ("concept", ["A UI, a user interface, is the part of software you see and", "touch: the screen, the buttons, the form. Think of a car's", "dashboard: the engine is the program, the dashboard is the UI."], "custom-ui"),
+        ("opinion", ["When an interface costs an afternoon, you stop asking", "whether it is worth building, and start asking which", "moment it is for."], "victor"),
+    ]
+    mark = {"fact": (FACT, "FACT", "backed by data, with its source"), "opinion": (OPIN, "OPINION", "mine; no data yet"),
+            "story": (STORY, "STORY", "my own account"), "concept": (CONC, "CONCEPT", "explained in a line")}
+    y = 190
+    for kind, lines, qid in paras:
+        col, lab, sub = mark[kind]
+        h = len(lines) * 30 + 20
+        if kind == "concept":
+            b.append(f'<rect x="52" y="{y - 30}" width="590" height="{h + 8}" rx="10" fill="#fdf2f8" stroke="{col}" stroke-width="2"/>')
+        b.append(text(80, y, lines, 19, lh=1.5))
+        if kind == "fact":
+            b.append(f'<circle cx="62" cy="{y - 7}" r="8" fill="{col}"/>')
+        elif kind == "opinion":
+            b.append(f'<circle cx="62" cy="{y - 7}" r="8" fill="#fff" stroke="{col}" stroke-width="3"/>')
+        elif kind == "story":
+            b.append(f'<rect x="55" y="{y - 14}" width="14" height="14" fill="{col}" transform="rotate(45 62 {y - 7})"/>')
+        b.append(text(670, y - 2, lab, 14, weight="bold", fill=col, extra='letter-spacing="1.5"'))
+        b.append(text(670, y + 18, sub, 14, fill="#6b7280"))
+        if kind == "fact":
+            b.append(text(670, y + 40, "ref: the reading studies (to find, note 76)", 13, fill=col))
+        if qid:
+            b.append(qr_image(qid, 870, y - 26, 92))
+            b.append(text(916, y + 82, "/q/" + qid, 12, fill="#374151", anchor="middle"))
+        y += h + 70
+    b.append(f'<rect x="52" y="{y - 10}" width="908" height="230" rx="14" fill="#f8fafc" stroke="#cbd5e1"/>')
+    b.append(text(80, y + 26, "The margin, in four marks", 20, weight="bold"))
+    for i, k in enumerate(("fact", "opinion", "story", "concept")):
+        col, lab, sub = mark[k]
+        yy = y + 66 + i * 34
+        if k == "fact":
+            b.append(f'<circle cx="92" cy="{yy - 6}" r="8" fill="{col}"/>')
+        elif k == "opinion":
+            b.append(f'<circle cx="92" cy="{yy - 6}" r="8" fill="#fff" stroke="{col}" stroke-width="3"/>')
+        elif k == "story":
+            b.append(f'<rect x="85" y="{yy - 13}" width="14" height="14" fill="{col}" transform="rotate(45 92 {yy - 6})"/>')
+        else:
+            b.append(f'<rect x="84" y="{yy - 14}" width="16" height="16" rx="3" fill="#fdf2f8" stroke="{col}" stroke-width="2"/>')
+        b.append(text(116, yy, f"{lab.lower()}: {sub}", 17, fill="#374151"))
+    b.append(text(560, y + 66, ["and a QR code where the page needs", "more room: the source, the explainer,", "the talk, the visualisation; each one a", "short address on the book's site, so it", "never goes out of date"], 16, fill="#374151", lh=1.35))
+    b.append(text(500, 1330, "a sketch for notes 64 to 75, and Dinis's memo on QR codes; the marks and the wording are proposals", 18, font=HAND, fill=PEN, anchor="middle"))
+    return svg(1000, 1414, "".join(page_frame(b)), "Sketch: a page with facts and opinions marked, a concept explained in a line, and QR codes to the site")
+
+
 DRAW = {"redraw_title": redraw_title, "redraw_contents1": redraw_contents1, "redraw_contents2": redraw_contents2,
         "after_title_page": None, "after_contents_map": None, "after_contents_line": None,
         "after_before_you_read": after_before_you_read, "after_part_opener": after_part_opener, "after_chapter_one": after_chapter_one,
-        "after_reviewer_page": after_reviewer_page}
+        "after_reviewer_page": after_reviewer_page,
+        "after_margin_system": after_margin_system}
 
 
 def build_paper_reviews(ctx):

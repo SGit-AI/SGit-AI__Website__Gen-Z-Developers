@@ -1,0 +1,13 @@
+{
+ "what": "The book's QR codes. Each code prints a short, stable address on this site, gen-z-developers.sgit.ai/q/<id>/, and that page sends the reader on to the target, so a printed code never goes out of date: the target changes here, the paper does not. Proposed by the journalist on 19 October 2026 from Dinis's memo on QR codes (RC2 on paper, part 3); the first ids are the links page 12 of rc2 asks for. The build writes each q/<id>/index.html; admin/build/qr_codes.py (needs segno) draws each q/<id>/qr.svg once.",
+ "base": "https://gen-z-developers.sgit.ai/q/",
+ "links": {
+  "two-years": {"to": "https://newsroom.sgit.ai/articles/two-years-in-the-opposite.html", "label": "Two years in, the opposite", "kind": "source", "for": "rc2 chapter 2, page 12"},
+  "custom-ui": {"to": "https://newsroom.sgit.ai/articles/custom-uis-are-not-the-exception.html", "label": "Custom UIs are not the exception", "kind": "source", "for": "rc2 chapter 2, page 12"},
+  "genai": {"to": "articles/generative-ai-not-ai.html", "label": "What generative AI is, and is not", "kind": "explainer", "for": "rc2 chapter 2, page 12 (note 70)"},
+  "victor": {"to": "https://vimeo.com/36579366", "label": "Bret Victor, Inventing on Principle (2012)", "kind": "source", "for": "rc2 chapter 2, page 12"},
+  "kelly": {"to": "https://kk.org/books/the-inevitable", "label": "Kevin Kelly, The Inevitable", "kind": "source", "for": "rc2 chapter 2, page 12"},
+  "land": {"to": "articles/where-do-you-land.html", "label": "Where do you land?", "kind": "chapter", "for": "rc2 chapter 2, page 12 (note 74)"},
+  "you-dev": {"to": "https://newsroom.sgit.ai/articles/you-are-a-developer.html", "label": "You are a developer, you just do not call it that", "kind": "source", "for": "the turn, chapter 8"}
+ }
+}

@@ -1,6 +1,6 @@
 # gen-z-developers.sgit.ai
 
-> The website for finishing the second edition of Generation Z Developers (Dinis Cruz, 2018). The repository holds the official versions of the book; a public vault holds the working versions. Site v0.2.38.
+> The website for finishing the second edition of Generation Z Developers (Dinis Cruz, 2018). The repository holds the official versions of the book; a public vault holds the working versions. Site v0.2.39.
 
 ## The rule
 The repository holds the official versions; the vault holds the working versions. v1.0.0 is the 2018 first edition as released, frozen. A version moves from the vault to the repository when signed off, and the versions page shows the delta block by block.
@@ -43,6 +43,7 @@ The repository holds the official versions; the vault holds the working versions
 - [Zoom in, not discover: how this book is written, with the punchline first, every first page a summary of the whole, the reader doing something early, milestones we can map, and my story at the end for anyone who wants it](https://gen-z-developers.sgit.ai/articles/zoom-in-not-discover.md)
 - [Two editions, the release and the review: every release candidate is a book you could sell, with nothing draft in it, and a reviewer's copy with the notes, the questions and a place to answer in pen](https://gen-z-developers.sgit.ai/articles/two-editions-the-release-and-the-review.md)
 - [Generation ZX Founders (GenAI Edition): the book is for the ones already up at three in the morning building, of either generation, it names them by the word they use, keeps "you are a developer" for the turn, measures itself by the companies it helped along the way, and opens with the crazy ones](https://gen-z-developers.sgit.ai/articles/generation-zx-founders.md)
+- [Paper that talks both ways: QR codes take the reader from the page to the website, where the sources, the graphs and the visualisations live, and a pen and a photograph take the reader's notes back, which changes how I want to read every book](https://gen-z-developers.sgit.ai/articles/paper-that-talks-both-ways.md)
 - [Dinis's first decisions: the licence, a PDF built here for Leanpub and Amazon, every format from one source, text issues in the vault, minor by default, and a second stream of articles for the agents](https://gen-z-developers.sgit.ai/agent-articles/dinis-first-decisions.md)
 - [Storyboards drawn by code, and the newsroom read in full: how I surveyed 204 articles for the book, built a renderer that turns a JSON storyboard into sketched, animated panels, and what the first two storyboards show](https://gen-z-developers.sgit.ai/agent-articles/storyboards-drawn-by-code.md)
 - [The book as a graph: how I read eleven articles, seven decisions and a survey into a register of ideas with their provenance, proposed a chapter map, and made the build refuse a dangling edge](https://gen-z-developers.sgit.ai/agent-articles/the-book-as-a-graph.md)
@@ -54,6 +55,7 @@ The repository holds the official versions; the vault holds the working versions
 - [Three covers drawn by code: a cover system for Generation ZX Developers, three designs in every format Amazon and Leanpub take, an art director's review, and the gates that keep a cover printable](https://gen-z-developers.sgit.ai/agent-articles/three-covers-drawn-by-code.md)
 - [RC2 on paper, part 1. Dinis's pen, made readable: the first paper review of release candidate 2, three pages drawn three ways, thirteen notes, five themes, two ways to draw the contents, and a comic strip about page three](https://gen-z-developers.sgit.ai/agent-articles/dinis-pen-made-readable.md)
 - [RC2 on paper, part 2. Pages 4 to 9, where the pen finds the voice, the reader and the release: thirty-eight notes, three new themes, two decisions, chapter 1 paragraph by paragraph, and a strip called Not to me](https://gen-z-developers.sgit.ai/agent-articles/rc2-on-paper-pages-4-to-9.md)
+- [RC2 on paper, part 3. Pages 10 to 13, chapter 2, where the pen asks for evidence and room: thirty-two notes, three new themes, a margin that marks fact from opinion, and the first QR codes](https://gen-z-developers.sgit.ai/agent-articles/rc2-on-paper-pages-10-to-13.md)
 
 ## The briefs
 - [Hired for the workflow](https://gen-z-developers.sgit.ai/briefs/01__hired-for-the-workflow.html)
