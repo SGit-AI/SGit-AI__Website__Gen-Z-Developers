@@ -1567,7 +1567,7 @@
    "theme": "voice",
    "theme_name": "The voice is mine",
    "written": "it's not their fault, the industry terminology is all over the place [left: Reword, too harsh]",
-   "means": "'I have met people for whom a graph is a picture with boxes' blames the reader; the industry's words are the problem. Reword.",
+   "means": "In ordinary use a graph means any diagram, and the industry's words are all over the place, so it is not the reader's fault their definition differs from Dinis's: do not make them feel guilty for it. Reword. (Dinis's answer, 19 October.)",
    "article": "rc2-on-paper-pages-14-to-19",
    "callouts": "rc2-04/page-14-callouts.svg"
   },
@@ -1580,7 +1580,7 @@
    "theme": "reader-context",
    "theme_name": "Meet the reader where they are",
    "written": "give more analogies of what is a node & an edge",
-   "means": "More analogies for a node and an edge, before the definition.",
+   "means": "So, instead of correcting the reader, give more analogies of what a node and an edge are: the words circled on the page.",
    "article": "rc2-on-paper-pages-14-to-19",
    "callouts": "rc2-04/page-14-callouts.svg"
   },
@@ -1631,8 +1631,8 @@
    "ckey": "ch3",
    "theme": "reader-context",
    "theme_name": "Meet the reader where they are",
-   "written": "my use of graph [...] this is wrong ↓ a graph node can be anything ↓ since a chart is a graph too ↓ see the \"thinking in graphs\" or \"fractal semantic graphs\"",
-   "means": "'Never a chart, never a figure' is wrong: a node can be anything, and a chart is a graph too. Take the definition from thinking in graphs, or fractal semantic graphs. (The first words are partly uncertain.)",
+   "written": "my use of graph → this is wrong ↓ a graph node can be anything ↓ since a chart is a graph too ↓ see the \"thinking in graphs\" or \"fractal semantic graphs\"",
+   "means": "'My use of graph' points at the circled nodes and edges, how Dinis uses the word; the arrow to 'never a chart, never a figure' says that line is wrong, and too brutal. In fractal semantic graphs anything can connect to anything, so a node can be a chart or a figure, and a chart is itself a graph, two-dimensional but still nodes and edges. Point to thinking in graphs and fractal semantic graphs: meaning comes from connectivity, and the value is in what is on the other side of an edge. (Reading confirmed by Dinis.)",
    "article": "rc2-on-paper-pages-14-to-19",
    "callouts": "rc2-04/page-14-callouts.svg"
   },
@@ -2073,8 +2073,8 @@
    "ckey": "ch4",
    "theme": "show",
    "theme_name": "Show the book, do not list it",
-   "written": "↳ first we got the reader to draw a graph, top down; then we [make it evolve?] with a storyboard, asking the question and the evolution → the reader will have a Wardley map",
-   "means": "Build the map in steps: the reader draws a graph top down, then a storyboard asks the question and adds evolution, and the reader has a Wardley map. (Two words uncertain.)",
+   "written": "↳ first we got the reader to draw a graph, top down; then we [add] the evolution → Wardley map",
+   "means": "Build the map in two steps. First the reader draws a graph, top down: this leads to this leads to this, a kind of tree, where the positions mean nothing and the dots can be moved around. Then add evolution, and the position of each dot gains significance: that is a Wardley map. (Reading confirmed by Dinis.)",
    "article": "rc2-on-paper-pages-14-to-19",
    "callouts": "rc2-04/page-18-callouts.svg"
   },
@@ -2086,8 +2086,8 @@
    "ckey": "ch4",
    "theme": "visual",
    "theme_name": "Draw it",
-   "written": "this needs to be visual",
-   "means": "The models moving right, the way of working on the left: draw it.",
+   "written": "this needs to be visual, maybe even with a storyboard, asking the questions the reader will have",
+   "means": "The models moving right and the way of working on the far left: draw it, perhaps as a storyboard that asks the questions the reader will have. (Reading confirmed by Dinis; the line above the heading Maps everywhere belongs to this note.)",
    "article": "rc2-on-paper-pages-14-to-19",
    "callouts": "rc2-04/page-18-callouts.svg"
   },
@@ -2138,8 +2138,8 @@
    "ckey": "ch4",
    "theme": "altitude",
    "theme_name": "Topics first, details under them",
-   "written": "Don't start with the [where?] [bracket on: Why do I care so much? In 2022 I gave a talk ...]",
-   "means": "Do not open the section with why Dinis cares and his 2022 talk. (The last word is uncertain.)",
+   "written": "Don't start with the where",
+   "means": "Do not start with where Dinis said something (the 2022 talk at the Open Security Summit): it reads as validating himself, with a reference the reader has not seen. Start with the concept, and put where it was said behind a QR code, if it is relevant at all. (Reading confirmed by Dinis.)",
    "article": "rc2-on-paper-pages-14-to-19",
    "callouts": "rc2-04/page-18-callouts.svg"
   },
@@ -2151,8 +2151,8 @@
    "ckey": "ch4",
    "theme": "first-page",
    "theme_name": "The first pages sell the book",
-   "written": "start here [arrow from: The map also tells you what to build and what to buy ...]",
-   "means": "Start with what the map does for a founder: what to build, what to buy, where the market is.",
+   "written": "start here",
+   "means": "Start with the message itself, 'Wardley maps give me inner peace', and then the reference. (Corrected after Dinis's answer: the arrow goes to that line, not to what the map tells you to build.)",
    "article": "rc2-on-paper-pages-14-to-19",
    "callouts": "rc2-04/page-18-callouts.svg"
   },
@@ -2268,8 +2268,8 @@
    "ckey": "ch4",
    "theme": "show",
    "theme_name": "Show the book, do not list it",
-   "written": "\"Let's meet the cast\" or \"players\" or \"personalities\"",
-   "means": "The new heading: Let's meet the cast, or the players, or the personalities. (Reading partly uncertain.)",
+   "written": "\"Let's meet the cast\" or \"players\" or \"personas\"",
+   "means": "The new heading: let's meet the cast. Introduce the explorers, the villagers and the town planners first, then show them visually, with examples, and how they connect. (Reading confirmed by Dinis, who said personas.)",
    "article": "rc2-on-paper-pages-14-to-19",
    "callouts": "rc2-04/page-19-callouts.svg"
   },
@@ -2308,7 +2308,7 @@
    "theme": "visual",
    "theme_name": "Draw it",
    "written": "visualise → the real world → explorers of a new land → followed by the villagers → followed by the town planners ↓ is a good one ↓ as population grows",
-   "means": "Draw it as the settling of a new land: explorers first, then villagers, then town planners, as the population grows.",
+   "means": "Draw it as the settling of a new land: the explorers arrive first; as more people come, the villagers build the village; as the village grows, it needs town planners, with rules, laws and roads. The population growing is what makes the analogy work. (Dinis's answer, 19 October.)",
    "article": "rc2-on-paper-pages-14-to-19",
    "callouts": "rc2-04/page-19-callouts.svg"
   },

@@ -56,7 +56,7 @@ Reading code at the altitude you need: "show example of this working in practice
 
 <figure><a href="../reviews/paper/rc2-04/page-18-callouts.svg"><img src="../reviews/paper/rc2-04/page-18-callouts.svg" alt="Page 18 with notes 123 to 133" loading="lazy"></a></figure>
 
-Chapter 4 opens by asking the reader to draw a map without naming it: "visualise this". On the right, how to build it: first the reader draws a graph, top down; then a storyboard asks the question and adds the evolution, and the reader has a Wardley map. The models moving right: "this needs to be visual". "Gave you the graph": "??? what does this mean". The four stages: "show other types of evolution". Three sentences are struck. Then two arrows: from the paragraph on why Dinis cares and his 2022 talk, "Don't start with the" (I read "where", and am not sure); from "The map also tells you what to build and what to buy", "start here". And before the four stages: "explain ILC, movements & attention".
+Chapter 4 opens by asking the reader to draw a map without naming it: "visualise this". On the right, how to build it: "first we got the reader to draw a graph, top down; then we add the evolution, Wardley map". The models moving right: "this needs to be visual, maybe even with a storyboard, asking the questions the reader will have". "Gave you the graph": "??? what does this mean". The four stages: "show other types of evolution". Three sentences are struck. Then two arrows. Down the left, from the paragraph on why Dinis cares and his 2022 talk: "Don't start with the where". Down the right, to "Wardley Maps gives me inner peace": "start here". And before the four stages: "explain ILC, movements & attention".
 
 ## Page 19 {#page-19}
 
@@ -75,21 +75,27 @@ The pattern under them is one note, said many ways: the reader is on page 14, an
 - **The presentation on graphs** the 2018 outline names: graphs.sgit.ai (note 92).
 - **Graphs or Wardley maps first**: "First we need to show the Wardley maps & how to read them, then go into graphs" (note 106). Chapters 3 and 4 swap in the next candidate, and the map is built in steps, as note 124 describes.
 
+Dinis then read the four uncertain notes back to me, and said what he meant:
+
+- **A chart is a graph too (notes 85, 86, 90).** "My use of graph" is right, and points at the circled nodes and edges, the way Dinis uses the word. In ordinary use a graph means any diagram, so it is not the reader's fault their definition is different, and the book should not make them feel guilty for it; it should give more analogies of what a node and an edge are. "Never a chart, never a figure" is too brutal, and wrong: in fractal semantic graphs anything can connect to anything, so a node can be a chart or a figure, and a chart is itself a graph, two-dimensional, but still nodes and edges. That is why the note points to thinking in graphs and fractal semantic graphs: meaning comes from connectivity, and the value is in what is on the other side of an edge.
+- **The map in two steps (notes 124, 125).** First the reader draws a graph, top down: this leads to this leads to this, a kind of tree. There the positions mean nothing; you can move the dots around. Then the evolution is added, and the position of each dot gains significance. That is the moment the reader has a Wardley map. The line I had joined to note 124 belongs to note 125: draw it, perhaps as a storyboard that asks the questions the reader will have.
+- **Don't start with the where (notes 129, 130).** "Where" is right. The book keeps saying where something was said (I did this, I talked about this, here is the article) before the idea, and the reader has not read any of it; it reads as Dinis validating himself. Start with the concept, "Wardley Maps gives me inner peace", which is where the "start here" arrow goes, and put where it was said behind a QR code, if it is relevant at all. The editor should ask that question each time: does the reader need to know where?
+- **Meet the cast (notes 139, 142).** "Let's meet the cast", or the players, or the personas: introduce the explorers, the villagers and the town planners first, then show them, with examples and how they connect. The picture down the right margin is the settling of a new land: the explorers arrive; as more people come, the villagers build the village; as the village grows, it needs town planners, with rules, laws and roads. The population growing is what makes the analogy work.
+
 ## The strip {#strip}
 
 [A new land](/storyboards/a-new-land.html), six panels, is note 142 drawn: Zara arrives first, explorers of a new land; followed by the villagers, Priya; followed by the town planners, Tomás; as population grows. The pacing experiment this time is accumulation: every panel keeps the people of the panel before, so the reader feels the land fill up instead of being told.
 
 ## What I need from Dinis {#questions}
 
-- **Note 90.** The first words down the left of page 14: I read "my use of graph", pointing at "never a chart, never a figure". Is that right?
-- **Note 124.** The middle of the note on building the map: I read "then we make it evolve with a storyboard". Two words are uncertain.
-- **Note 129.** "Don't start with the ...": I read "where"; it may be "why", which would fit the paragraph it points at better.
-- **Note 139.** The new heading: "Let's meet the cast", or "players", or "personalities". Is that the reading?
-- **Still open from part 3:** note 61 ("format better"?) and note 78 ("adult first"?).
+The four readings of this batch are answered above. Two remain from part 3:
+
+- **Note 61.** Page 11, right margin, about a third of the way down, beside the list of transformations: "good", then, as I read it, "format better".
+- **Note 78.** Page 13, left margin, a little above the middle, beside the paragraph on how to use the rest of the book: "Reword from an '...' approach"; I read "adult first".
 
 ## What this does not claim {#limits}
 
-- **The reading is mine**, word for word; the uncertain readings are listed above and marked in the record.
+- **The reading is mine**, word for word; the four uncertain readings were confirmed or corrected by Dinis, and the record says which.
 - **The regions on the photographs are placed by eye.** A box shows which note is which, not an exact boundary.
 - **The hub counts the notes, not their weight.** "visualise this" counts as one note, the same as the paragraph that set the chapter's job.
 
