@@ -1,0 +1,716 @@
+{
+ "id": "rc2-02",
+ "series": "RC2 on paper",
+ "part": 2,
+ "title": "Release candidate 2 on paper, batch 2: pages 4 to 9, About this release candidate, the part opener and chapter 1",
+ "candidate": "v2.0.0-rc2",
+ "pdf": "v2/generation-z-developers-v2.0.0-rc2.pdf",
+ "reviewer": "Dinis Cruz",
+ "date": "2026-10-19",
+ "how": "Six photographs of pages 4 to 9 of the printed candidate, sent out of page order and put back in order here; the notes continue the numbering of batch 1 from 14. The handwriting was read by the journalist; four readings are uncertain and marked so.",
+ "drawings": [
+  "after_before_you_read",
+  "after_part_opener",
+  "after_chapter_one"
+ ],
+ "themes": {
+  "first-page": {
+   "name": "The first pages sell the book",
+   "principle": "Every step of attention buys the next (Zoom in, not discover)."
+  },
+  "show": {
+   "name": "Show the book, do not list it",
+   "principle": "The opening is a best of; the first page shows the art of the possible (Zoom in, not discover)."
+  },
+  "altitude": {
+   "name": "Topics first, details under them",
+   "principle": "The book zooms in: detail comes after the point, never before it (Zoom in, not discover)."
+  },
+  "process-out": {
+   "name": "The making-of out of the reader's way",
+   "principle": "How the book was made, and the 2018 book, go to a section at the end (the first batch, sign-off 5)."
+  },
+  "voice": {
+   "name": "The voice is mine",
+   "principle": "The book is in Dinis's voice; a line that sounds harsh, odd or not like him is rewritten, and family stays out."
+  },
+  "reader-context": {
+   "name": "Meet the reader where they are",
+   "principle": "Say what a term means before using it, link the source, and tell the reader how to read the book."
+  },
+  "release": {
+   "name": "A release, not a draft",
+   "principle": "The release candidate is shipped and sold; it should read as a book, not as a working document."
+  }
+ },
+ "pages": [
+  {
+   "id": "page-4",
+   "photo": "photos/page-4.jpg",
+   "name": "Page 4, About this release candidate",
+   "notes": [
+    {
+     "n": 14,
+     "region": [
+      0.15,
+      0.06,
+      0.72,
+      0.12
+     ],
+     "written": "the ZX FOUNDER doesn't care yet → maybe at the end of the Book",
+     "means": "The reader does not care how the book was made, not yet: About this release candidate moves to the end.",
+     "theme": "process-out"
+    },
+    {
+     "n": 15,
+     "region": [
+      0.13,
+      0.05,
+      0.31,
+      0.05
+     ],
+     "written": "is this a better name than ZX developer?",
+     "means": "A naming question: is 'ZX founder' a better name for the reader than 'ZX developer'? (Asked again on page 8.)",
+     "theme": "voice"
+    },
+    {
+     "n": 16,
+     "region": [
+      0.16,
+      0.325,
+      0.44,
+      0.05
+     ],
+     "written": "logistics",
+     "means": "How the chapters say where their sources ran out is logistics, not reading.",
+     "theme": "process-out"
+    },
+    {
+     "n": 17,
+     "region": [
+      0.04,
+      0.43,
+      0.13,
+      0.37
+     ],
+     "written": "this is the story & workflow detail ↓ then they should not be here",
+     "means": "The story of rc1 and the workflow do not belong on page 4.",
+     "theme": "process-out"
+    },
+    {
+     "n": 18,
+     "region": [
+      0.15,
+      0.55,
+      0.69,
+      0.075
+     ],
+     "written": "remove",
+     "means": "Remove the paragraph about placeholder chapters from the reader's book.",
+     "theme": "release"
+    },
+    {
+     "n": 19,
+     "region": [
+      0.15,
+      0.625,
+      0.24,
+      0.04
+     ],
+     "written": "WRONG [over: not a version]",
+     "means": "'This is a candidate, not a version' is wrong: this is a release.",
+     "theme": "release"
+    },
+    {
+     "n": 20,
+     "region": [
+      0.64,
+      0.645,
+      0.33,
+      0.3
+     ],
+     "written": "this is an RC which will be added to Leanpub & sold ✓ ... i.e. we are selling & shipping this book now",
+     "means": "The release candidate goes on Leanpub and is sold, now.",
+     "theme": "release"
+    },
+    {
+     "n": 21,
+     "region": [
+      0.05,
+      0.83,
+      0.58,
+      0.12
+     ],
+     "written": "this RCx → RELEASE CANDIDATE ↓ i.e. this should be a release → not a draft",
+     "means": "Spell out 'release candidate', and treat it as a release, not a draft.",
+     "theme": "release"
+    }
+   ]
+  },
+  {
+   "id": "page-5",
+   "photo": "photos/page-5.jpg",
+   "name": "Page 5, the end of About this release candidate",
+   "notes": [
+    {
+     "n": 22,
+     "region": [
+      0.29,
+      0.1,
+      0.36,
+      0.11
+     ],
+     "written": "Not to me [over: Then, if you are Dinis,] ... I am :) [over: read it with a pen]",
+     "means": "The book should not talk to Dinis; it talks to the reader. (And yes, he is reading it with a pen.)",
+     "theme": "release"
+    },
+    {
+     "n": 23,
+     "region": [
+      0.3,
+      0.05,
+      0.57,
+      0.24
+     ],
+     "written": "we need to tell the reader that if they are reading this on a screen they should stop ↓ and print this book",
+     "means": "Tell the reader to print it: the book is meant to be read on paper.",
+     "theme": "reader-context"
+    },
+    {
+     "n": 24,
+     "region": [
+      0.17,
+      0.3,
+      0.72,
+      0.12
+     ],
+     "written": "here we should have a section pointing to the website of this book & · show what is there, namely the tools & visualisations · show where to find the chapter PDFs (for print)",
+     "means": "A section that points to the book's website: what is there, the tools and visualisations, and the chapter PDFs for print.",
+     "theme": "reader-context"
+    },
+    {
+     "n": 25,
+     "region": [
+      0.18,
+      0.42,
+      0.72,
+      0.31
+     ],
+     "written": "VERY important → explain that this entire book content is released under CC-BY which means they are free to · copy it · distribute it · sell it · remix. All they need to do is to have a small credit of where the text came from ... CC-BY is a copyright licence that gives the reader rights",
+     "means": "Explain CC BY in plain words: copy, distribute, sell, remix, with a small credit.",
+     "theme": "reader-context"
+    },
+    {
+     "n": 26,
+     "region": [
+      0.56,
+      0.73,
+      0.37,
+      0.22
+     ],
+     "written": "page 5 and \"why am I reading this book?\" + \"why should I continue\"",
+     "means": "By page 5 the reader still does not know why to read the book, or why to go on.",
+     "theme": "first-page"
+    }
+   ]
+  },
+  {
+   "id": "page-6",
+   "photo": "photos/page-6.jpg",
+   "name": "Page 6, the opener of Part 1",
+   "notes": [
+    {
+     "n": 27,
+     "region": [
+      0.18,
+      0.555,
+      0.66,
+      0.315
+     ],
+     "written": "infographic and/or graph visualization of this part",
+     "means": "Every part opener gets a picture of the part: an infographic or a graph.",
+     "theme": "show"
+    }
+   ]
+  },
+  {
+   "id": "page-7",
+   "photo": "photos/page-7.jpg",
+   "name": "Page 7, chapter 1 begins",
+   "notes": [
+    {
+     "n": 28,
+     "region": [
+      0.72,
+      0.18,
+      0.21,
+      0.07
+     ],
+     "written": "too harsh voice [under: what I want]",
+     "means": "'What I want to have happened' sounds harsh; rewrite in a warmer voice.",
+     "theme": "voice"
+    },
+    {
+     "n": 29,
+     "region": [
+      0.29,
+      0.21,
+      0.43,
+      0.04
+     ],
+     "written": "you finish chapter one, part one and the book [under: by the time you close the book]",
+     "means": "Say what the reader will have by the end of chapter 1, of part 1 and of the book: milestones, not one finish line.",
+     "theme": "altitude"
+    },
+    {
+     "n": 30,
+     "region": [
+      0.08,
+      0.3,
+      0.18,
+      0.21
+     ],
+     "written": "Don't mention my daughters ↓ say \"kids\" or \"children\"",
+     "means": "No daughters in the book: say kids or children.",
+     "theme": "voice"
+    },
+    {
+     "n": 31,
+     "region": [
+      0.53,
+      0.32,
+      0.14,
+      0.06
+     ],
+     "written": "I now [?] [circled: are not]",
+     "means": "Uncertain reading: a change to 'a lot of them are not looking for a job'; Dinis to confirm.",
+     "theme": "voice"
+    },
+    {
+     "n": 32,
+     "region": [
+      0.72,
+      0.325,
+      0.26,
+      0.04
+     ],
+     "written": "find better word [struck: hungry]",
+     "means": "'Hungry' is the wrong word for Generation Z; find a better one.",
+     "theme": "voice"
+    },
+    {
+     "n": 33,
+     "region": [
+      0.88,
+      0.37,
+      0.11,
+      0.07
+     ],
+     "written": "to harsh [under: what I want]",
+     "means": "The same 'what I want' again: too harsh.",
+     "theme": "voice"
+    },
+    {
+     "n": 34,
+     "region": [
+      0.13,
+      0.93,
+      0.85,
+      0.045
+     ],
+     "written": "(1) → link to article ← here or at the end of this section or book",
+     "means": "The Expert founders needs a link to the article: in place, or at the end of the section or the book.",
+     "theme": "reader-context"
+    },
+    {
+     "n": 35,
+     "region": [
+      0.34,
+      0.64,
+      0.58,
+      0.085
+     ],
+     "written": "they didn't, agents are a 2026 thing [circled: one grew up with the agents]",
+     "means": "Wrong: Generation Z did not grow up with agents; agents are a 2026 thing.",
+     "theme": "voice"
+    },
+    {
+     "n": 36,
+     "region": [
+      0.91,
+      0.71,
+      0.09,
+      0.16
+     ],
+     "written": "wrong story ... [the rest runs off the photograph]",
+     "means": "The mother-and-daughter line is the wrong story; Dinis to say what the rest of the note says.",
+     "theme": "voice"
+    },
+    {
+     "n": 37,
+     "region": [
+      0.06,
+      0.685,
+      0.86,
+      0.17
+     ],
+     "written": "this kind of detail is not needed [and struck: Boundaries differ between sources ... I still mean it.]",
+     "means": "The Pew dates paragraph is detail the opening does not need.",
+     "theme": "altitude"
+    }
+   ]
+  },
+  {
+   "id": "page-8",
+   "photo": "photos/page-8.jpg",
+   "name": "Page 8, chapter 1 continued",
+   "notes": [
+    {
+     "n": 38,
+     "region": [
+      0.73,
+      0.045,
+      0.13,
+      0.07
+     ],
+     "written": "weird, not me [over: and now cannot give up]",
+     "means": "'And now cannot give up' does not sound like Dinis.",
+     "theme": "voice"
+    },
+    {
+     "n": 39,
+     "region": [
+      0.17,
+      0.205,
+      0.38,
+      0.045
+     ],
+     "written": "show storyboard here :)",
+     "means": "Put the storyboard panel with the ZX Spectrum here, in the chapter.",
+     "theme": "show"
+    },
+    {
+     "n": 40,
+     "region": [
+      0.05,
+      0.235,
+      0.8,
+      0.14
+     ],
+     "written": "NR → Not Relevant [over the XZ paragraph, struck with a wave]",
+     "means": "The XZ paragraph is not relevant: cut it.",
+     "theme": "altitude"
+    },
+    {
+     "n": 41,
+     "region": [
+      0.45,
+      0.28,
+      0.16,
+      0.05
+     ],
+     "written": "REF [over: explorer coding]",
+     "means": "Explorer coding needs a reference.",
+     "theme": "reader-context"
+    },
+    {
+     "n": 42,
+     "region": [
+      0.66,
+      0.31,
+      0.26,
+      0.29
+     ],
+     "written": "readers don't know about Wardley maps or what I mean by \"explorer\"",
+     "means": "Explain explorer (and Wardley maps) before using the word.",
+     "theme": "reader-context"
+    },
+    {
+     "n": 43,
+     "region": [
+      0.39,
+      0.57,
+      0.44,
+      0.045
+     ],
+     "written": "ZX FOUNDER? :) [after: You can be the founder.]",
+     "means": "The name again: 'ZX founder', next to 'You can be the founder'.",
+     "theme": "voice"
+    },
+    {
+     "n": 44,
+     "region": [
+      0.83,
+      0.71,
+      0.1,
+      0.1
+     ],
+     "written": "this is at the end [beside: limited company in the UK, the case for Lithuania, Portugal]",
+     "means": "The list of countries belongs at the end, with the company chapters.",
+     "theme": "altitude"
+    },
+    {
+     "n": 45,
+     "region": [
+      0.09,
+      0.72,
+      0.76,
+      0.12
+     ],
+     "written": "move to end [beside: Two honest clauses about that list]",
+     "means": "The two honest clauses move to the end.",
+     "theme": "process-out"
+    },
+    {
+     "n": 46,
+     "region": [
+      0.04,
+      0.845,
+      0.93,
+      0.15
+     ],
+     "written": "I don't think we should talk or mention too much what was on the other book → this is going to be a big rewrite ↳ maybe on that section at the end about how this book was written and evolved",
+     "means": "Less of the 2018 book: this is a big rewrite, and the 2018 story goes to the section at the end on how the book was written and evolved.",
+     "theme": "process-out"
+    }
+   ]
+  },
+  {
+   "id": "page-9",
+   "photo": "photos/page-9.jpg",
+   "name": "Page 9, the end of chapter 1",
+   "notes": [
+    {
+     "n": 47,
+     "region": [
+      0.12,
+      0.025,
+      0.73,
+      0.17
+     ],
+     "written": "Finally we tell the reader why they should read this book :)",
+     "means": "This paragraph, the shape of the middle and 'Ship', is the reason to read the book; it arrives on page 9.",
+     "theme": "first-page"
+    },
+    {
+     "n": 48,
+     "region": [
+      0.67,
+      0.2,
+      0.21,
+      0.19
+     ],
+     "written": "too much detail at this stage of the book",
+     "means": "Build it without a server, SG/Send, sgit and RiskMandate are too much detail for chapter 1.",
+     "theme": "altitude"
+    },
+    {
+     "n": 49,
+     "region": [
+      0.16,
+      0.855,
+      0.58,
+      0.1
+     ],
+     "written": "yes, point to our website (of this book) where ALL materials are public → first version of this site will have my own stand ups :)",
+     "means": "The measure: point to the book's website, where all the materials are public; the first version will carry Dinis's own stand-ups. (Reading of 'stand ups' uncertain.)",
+     "theme": "reader-context"
+    },
+    {
+     "n": 50,
+     "region": [
+      0.66,
+      0.555,
+      0.17,
+      0.05
+     ],
+     "written": "new book [circled: new book that]",
+     "means": "The answer to 'second edition or a new book?': a new book.",
+     "theme": "release"
+    },
+    {
+     "n": 51,
+     "region": [
+      0.81,
+      0.88,
+      0.18,
+      0.115
+     ],
+     "written": "But I really like this kind of box, but it means we need two ... [the rest runs off the photograph]",
+     "means": "The For Dinis boxes work, but they imply two versions of the book (likely one for review and one for readers); Dinis to confirm.",
+     "theme": "release"
+    }
+   ]
+  }
+ ],
+ "chapter_one": {
+  "what": "Chapter 1 of rc2, paragraph by paragraph, with what the notes ask for each, for the cut map drawing.",
+  "fates": {
+   "keep": "keep",
+   "fix": "keep, fix a line",
+   "rewrite": "rewrite",
+   "forward": "bring forward",
+   "end": "move to the end",
+   "cut": "cut"
+  },
+  "blocks": [
+   {
+    "section": "Opening",
+    "first": "The first line of the 2018 book was this",
+    "fate": "end",
+    "notes": [
+     46
+    ]
+   },
+   {
+    "section": "Opening",
+    "first": "This edition needs a longer first line",
+    "fate": "rewrite",
+    "notes": [
+     28,
+     29
+    ]
+   },
+   {
+    "section": "Two generations",
+    "first": "In 2018 I wrote that Generation Z was",
+    "fate": "rewrite",
+    "notes": [
+     30,
+     31,
+     32
+    ]
+   },
+   {
+    "section": "Two generations",
+    "first": "The second reader is my own generation",
+    "fate": "fix",
+    "notes": [
+     33
+    ]
+   },
+   {
+    "section": "Two generations",
+    "first": "In The expert founders I put the change",
+    "fate": "fix",
+    "notes": [
+     34
+    ]
+   },
+   {
+    "section": "Two generations",
+    "first": "Often the two readers are in the same family",
+    "fate": "rewrite",
+    "notes": [
+     35,
+     36
+    ]
+   },
+   {
+    "section": "Two generations",
+    "first": "The dates I use are the Pew Research Center's",
+    "fate": "cut",
+    "notes": [
+     37
+    ]
+   },
+   {
+    "section": "Generation ZX",
+    "first": "Put the two letters together",
+    "fate": "fix",
+    "notes": [
+     38,
+     39
+    ]
+   },
+   {
+    "section": "Generation ZX",
+    "first": "One more thing about the name (XZ)",
+    "fate": "cut",
+    "notes": [
+     40
+    ]
+   },
+   {
+    "section": "Generation ZX",
+    "first": "And they are developers",
+    "fate": "rewrite",
+    "notes": [
+     41,
+     42
+    ]
+   },
+   {
+    "section": "What it is for",
+    "first": "The 2018 book had a chapter called Be a founder",
+    "fate": "end",
+    "notes": [
+     43,
+     46
+    ]
+   },
+   {
+    "section": "What it is for",
+    "first": "So this book has an objective",
+    "fate": "fix",
+    "notes": [
+     44
+    ]
+   },
+   {
+    "section": "What it is for",
+    "first": "Two honest clauses about that list",
+    "fate": "end",
+    "notes": [
+     45
+    ]
+   },
+   {
+    "section": "What it is for",
+    "first": "The shape of the middle follows from the objective",
+    "fate": "forward",
+    "notes": [
+     47
+    ]
+   },
+   {
+    "section": "What it is for",
+    "first": "Then Build it without a server",
+    "fate": "cut",
+    "notes": [
+     48
+    ]
+   },
+   {
+    "section": "The measure",
+    "first": "A book that is a book to read is fine",
+    "fate": "keep",
+    "notes": []
+   },
+   {
+    "section": "The measure",
+    "first": "That means asking you to tell us",
+    "fate": "fix",
+    "notes": [
+     49
+    ]
+   },
+   {
+    "section": "The measure",
+    "first": "For Dinis: the measure; second edition or new book",
+    "fate": "end",
+    "notes": [
+     49,
+     50,
+     51
+    ]
+   },
+   {
+    "section": "The measure",
+    "first": "That is who you are",
+    "fate": "keep",
+    "notes": []
+   }
+  ]
+ }
+}

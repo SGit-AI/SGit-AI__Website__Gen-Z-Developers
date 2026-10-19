@@ -509,5 +509,15 @@
     "page": 159
    }
   ]
- }
+ },
+ "series": "RC2 on paper",
+ "part": 1,
+ "drawings": [
+  "redraw_title:page-1",
+  "redraw_contents1:page-2",
+  "redraw_contents2:page-3",
+  "after_title_page",
+  "after_contents_map",
+  "after_contents_line"
+ ]
 }

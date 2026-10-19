@@ -5,7 +5,7 @@
  "status": "draft",
  "book_version": "v2.0.0-rc2 (a release candidate)",
  "by": "gen-z.journalist, 19 October 2026, from Dinis's first paper review",
- "quote_source": "admin/content/agent-articles/07__dinis-pen-made-readable.md",
+ "quote_source": "admin/content/agent-articles/10__dinis-pen-made-readable.md",
  "rule": "Every line the Guide says is from the agent article 'Dinis's pen, made readable', word for word, and both are Dinis's notes from the printed page; the build checks it. Marta's, Zara's and the Agent's lines are the strip's, marked not_a_quote.",
  "scenes": [
   {

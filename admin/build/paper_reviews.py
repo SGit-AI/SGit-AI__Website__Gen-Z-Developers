@@ -25,7 +25,8 @@ SRC = ROOT / "admin/content/reviews/paper"
 FONTS = {"Caveat": ROOT / "admin/content/reviews/fonts/caveat/caveat-400-700.woff2",
          "Plex": ROOT / "admin/content/covers/fonts/ibm-plex-sans/ibm-plex-sans-normal-400.woff2"}
 INK, DIM, PAPER, PEN = "#1f2937", "#9ca3af", "#ffffff", "#1d3a8a"
-THEME = {"first-page": "#dc2626", "show": "#2563eb", "doing": "#16a34a", "altitude": "#9333ea", "process-out": "#d97706"}
+THEME = {"first-page": "#dc2626", "show": "#2563eb", "doing": "#16a34a", "altitude": "#9333ea", "process-out": "#d97706",
+         "voice": "#0891b2", "reader-context": "#db2777", "release": "#4f46e5"}
 HAND, TYPE = "Caveat, cursive", "Plex, 'IBM Plex Sans', Arial, sans-serif"
 # which part each hands-on chapter would sit beside, if the hands-on part is spread across the book (note 11): a proposal
 SPREAD = {30: "working-with-agents", 31: "before-you-start", 32: "the-frame", 33: "the-frame", 34: "getting-the-job",
@@ -300,7 +301,7 @@ def redraw_contents2(rv):
 
 
 # ------------------------------------------------------------------ 3. after: the title page and the contents
-def after_title(rv):
+def after_title_page(rv):
     b = []
     names = [("you", "You"), ("before-you-start", "Start"), ("the-frame", "The frame"), ("working-with-agents", "Agents"),
              ("judgement", "Judgement"), ("start-the-company", "The company"), ("build-it-without-a-server", "No server"),
@@ -404,7 +405,128 @@ def after_contents_line(rv):
     return svg(W, H, "".join(page_frame(b)), "Sketch: the contents as a line from you to a company, with the hands-on chapters as branches")
 
 
+def contents_of(candidate):
+    """The candidate's contents and page numbers, from whichever review of that candidate records them."""
+    for f in sorted(SRC.glob("*.json")):
+        rv = json.loads(f.read_text(encoding="utf-8"))
+        if rv.get("candidate") == candidate and rv.get("contents"):
+            return rv["contents"]
+    raise SystemExit(f"paper reviews: no review of {candidate} records its contents")
+
+
+def after_before_you_read(rv):
+    """Notes 22 to 26: the page before chapter 1, for the reader, not for the author."""
+    b = [text(500, 120, "Before you read", 44, weight="bold", anchor="middle"),
+         text(500, 160, "a sketch of the page after About this release candidate moves to the end", 20, font=HAND, fill="#2563eb", anchor="middle")]
+    b.append('<rect x="90" y="200" width="820" height="150" rx="16" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>')
+    b.append(text(130, 255, "Reading this on a screen? Stop, and print it.", 30, weight="bold"))
+    b.append(text(130, 300, ["This book is made to be read on paper, with a pen. Every chapter", "is a PDF on the website, ready to print."], 19, fill="#374151", lh=1.4))
+    b.append(text(90, 410, "The book's website", 28, weight="bold"))
+    items = [("The tools and visualisations", "the graph of the book, the storyboards, the infographics, the reader"),
+             ("The chapter PDFs, for print", "one per chapter, or the whole book"),
+             ("Everything else, in public", "the articles, the decisions, the reviews: every material, open")]
+    for i, (h, d) in enumerate(items):
+        y = 460 + i * 92
+        b.append(f'<rect x="90" y="{y - 30}" width="820" height="76" rx="12" fill="#fff" stroke="#cbd5e1"/>')
+        b.append(f'<circle cx="130" cy="{y + 8}" r="14" fill="#2563eb"/>')
+        b.append(text(160, y, h, 21, weight="bold"))
+        b.append(text(160, y + 28, d, 17, fill="#4b5563"))
+    b.append(text(90, 790, "Yours to copy, share, sell and remix", 28, weight="bold"))
+    b.append(text(90, 826, "The whole text is under Creative Commons Attribution (CC BY 4.0), a copyright licence that gives you rights:", 17, fill="#374151"))
+    verbs = ["copy it", "distribute it", "sell it", "remix it"]
+    for i, v in enumerate(verbs):
+        x = 90 + i * 210
+        b.append(f'<rect x="{x}" y="850" width="190" height="90" rx="14" fill="#ecfdf5" stroke="#16a34a" stroke-width="3"/>')
+        b.append(text(x + 95, 905, v, 24, weight="bold", fill="#166534", anchor="middle"))
+    b.append(text(90, 985, "All you need to do is give a small credit for where the text came from.", 19, fill="#374151"))
+    b.append('<rect x="90" y="1030" width="820" height="210" rx="16" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>')
+    b.append(text(130, 1085, "Why read this book, and why keep going", 26, weight="bold"))
+    b.append(text(130, 1125, ["By the end, you have started a GenAI company. Every part ends with", "something you can now do. The first thing to do is on the next page."], 19, fill="#374151", lh=1.45))
+    b.append(text(500, 1215, "(note 26: answer these by page 5)", 22, font=HAND, fill="#2563eb", anchor="middle"))
+    return svg(1000, 1414, "".join(page_frame(b)), "Sketch: the page before chapter 1, after the review")
+
+
+def after_part_opener(rv):
+    """Note 27: the part opener with a picture of the part, drawn from the candidate's contents."""
+    cont = contents_of(rv["candidate"])
+    chs = [c for c in cont["chapters"] if c["part"] == "before-you-start"]
+    b = [text(110, 150, "PART 1", 22, fill="#4b5563", extra='letter-spacing="3"'),
+         text(110, 215, "Before you start", 54, weight="bold"),
+         text(110, 265, ["Who this book is for and what it is for, why you are lucky to be here,", "why everything is a graph, where you land, and why the path only", "makes sense afterwards."], 21, fill="#374151", lh=1.45)]
+    xs = [170, 330, 500, 670, 830]
+    ys = [620, 500, 640, 500, 620]
+    names = ["Gen ZX", "Lucky to be here", "Everything is connected", "Where do you land?", "Connect the dots"]
+    for i in range(len(xs) - 1):
+        b.append(f'<line x1="{xs[i]}" y1="{ys[i]}" x2="{xs[i + 1]}" y2="{ys[i + 1]}" stroke="#94a3b8" stroke-width="5"/>')
+    b.append(f'<path d="M{xs[-1]},{ys[-1] + 110} C{xs[-1]},800 700,860 600,878" fill="none" stroke="#16a34a" stroke-width="5" stroke-dasharray="10 8"/>')
+    for i, c in enumerate(chs):
+        b.append(f'<circle cx="{xs[i]}" cy="{ys[i]}" r="38" fill="#fff" stroke="#2563eb" stroke-width="6"/>')
+        b.append(text(xs[i], ys[i] + 11, str(c["n"]), 30, weight="bold", fill="#2563eb", anchor="middle"))
+        lab = wrap(names[i], 12)
+        b.append(text(xs[i], ys[i] + (70 if ys[i] > 560 else -80 - 22 * (len(lab) - 1)), lab, 19, weight="bold", anchor="middle", lh=1.15))
+        b.append(text(xs[i], ys[i] + (70 if ys[i] > 560 else -80 - 22 * (len(lab) - 1)) + 22 * len(lab), f"p. {c['page']}", 16, fill="#6b7280", anchor="middle"))
+    b.append('<rect x="250" y="880" width="500" height="120" rx="18" fill="#ecfdf5" stroke="#16a34a" stroke-width="3"/>')
+    b.append(text(500, 930, "After this part, you can:", 22, weight="bold", fill="#166534", anchor="middle"))
+    b.append(text(500, 968, "name your problem, and where you stand", 22, fill="#166534", anchor="middle"))
+    b.append(text(500, 1100, ["a sketch for note 27: the part as a graph, its chapters", "as the stops, and the milestone it ends on"], 24, font=HAND, fill="#2563eb", anchor="middle", lh=1.1))
+    return svg(1000, 1414, "".join(page_frame(b)), "Sketch: the opener of Part 1 with a graph of the part")
+
+
+FATE_COLOUR = {"keep": "#16a34a", "fix": "#65a30d", "rewrite": "#2563eb", "forward": "#9333ea", "end": "#d97706", "cut": "#dc2626"}
+
+
+def after_chapter_one(rv):
+    """Notes 28 to 51 on chapter 1, as a map of its paragraphs and what happens to each."""
+    data = rv["chapter_one"]
+    blocks = data["blocks"]
+    W, top, bh, gap = 1000, 190, 46, 10
+    H = top + len(blocks) * (bh + gap) + 330
+    b = [text(70, 90, "Chapter 1, paragraph by paragraph", 34, weight="bold"),
+         text(70, 126, "What the pen asks for each paragraph of Gen ZX: who this book is for, and what it is for (rc2, pages 7 to 9)", 16, fill="#6b7280")]
+    lx = 70
+    for i, (k, lab) in enumerate(data["fates"].items()):
+        x = lx + i * 150
+        b.append(f'<rect x="{x}" y="146" width="20" height="20" rx="4" fill="{FATE_COLOUR[k]}"/>')
+        b.append(text(x + 28, 162, lab, 14, fill="#374151"))
+    y, section = top, None
+    end_ys, fwd_ys = [], []
+    for blk in blocks:
+        if blk["section"] != section:
+            section = blk["section"]
+        col = FATE_COLOUR[blk["fate"]]
+        cut = blk["fate"] == "cut"
+        b.append(f'<rect x="150" y="{y}" width="560" height="{bh}" rx="10" fill="{col}" fill-opacity="{0.10 if cut else 0.16}" stroke="{col}" stroke-width="2.5"{" stroke-dasharray=\"7 6\"" if cut else ""}/>')
+        b.append(text(165, y + 29, blk["first"], 16, fill="#9ca3af" if cut else INK, extra='text-decoration="line-through"' if cut else ""))
+        if blk["notes"]:
+            b.append(text(700, y + 29, "notes " + ", ".join(str(n) for n in blk["notes"]), 13, fill=col, anchor="end"))
+        b.append(text(140, y + 29, blk["section"] if blocks.index(blk) == 0 or blocks[blocks.index(blk) - 1]["section"] != blk["section"] else "", 13, fill="#6b7280", anchor="end"))
+        if blk["fate"] == "end":
+            end_ys.append(y + bh / 2)
+        if blk["fate"] == "forward":
+            fwd_ys.append(y + bh / 2)
+        y += bh + gap
+    ey = y + 60
+    b.append(f'<rect x="150" y="{ey}" width="560" height="110" rx="14" fill="#fff7ed" stroke="#d97706" stroke-width="3"/>')
+    b.append(text(430, ey + 45, "At the end of the book", 22, weight="bold", fill="#9a3412", anchor="middle"))
+    b.append(text(430, ey + 78, "how this book was written, and evolved", 19, fill="#9a3412", anchor="middle"))
+    for k, yy in enumerate(end_ys):
+        x = 740 + k * 22
+        b.append(f'<path d="M710,{yy} L{x},{yy} L{x},{ey + 55} L712,{ey + 55}" fill="none" stroke="#d97706" stroke-width="2.5"/>')
+    for yy in fwd_ys:
+        b.append(f'<path d="M150,{yy} L95,{yy} L95,{top + 4} L148,{top + 4}" fill="none" stroke="#9333ea" stroke-width="3"/>')
+        b.append(text(88, (yy + top) / 2, "the reason to read it, first", 15, font=HAND, fill="#9333ea", anchor="middle", extra=f'transform="rotate(-90 88 {(yy + top) / 2})"'))
+    return svg(W, H, "".join(page_frame(b, h=H)), "Sketch: chapter 1 of rc2, paragraph by paragraph, with what happens to each")
+
+
+DRAW = {"redraw_title": redraw_title, "redraw_contents1": redraw_contents1, "redraw_contents2": redraw_contents2,
+        "after_title_page": None, "after_contents_map": None, "after_contents_line": None,
+        "after_before_you_read": after_before_you_read, "after_part_opener": after_part_opener, "after_chapter_one": after_chapter_one}
+
+
 def build_paper_reviews(ctx):
+    """Draw every review: the callouts for each photographed page, then the drawings the review names. A drawing named
+    with a page ("redraw_title:page-1") is written as <page>-redrawn.svg; one without, as after-<name>.svg."""
+    DRAW.update({"after_title_page": after_title_page, "after_contents_map": after_contents_map, "after_contents_line": after_contents_line})
     written = []
     for f in sorted(SRC.glob("*.json")):
         rv = json.loads(f.read_text(encoding="utf-8"))
@@ -414,12 +536,12 @@ def build_paper_reviews(ctx):
                 if n["theme"] not in rv["themes"]:
                     raise SystemExit(f"paper review {f.name}: note {n['n']} has an unknown theme {n['theme']}")
             (out / f"{page['id']}-callouts.svg").write_text(callouts(rv, page, out), encoding="utf-8")
-        redraws = {"page-1": redraw_title, "page-2": redraw_contents1, "page-3": redraw_contents2}
-        for pid, fn in redraws.items():
-            (out / f"{pid}-redrawn.svg").write_text(fn(rv), encoding="utf-8")
-        (out / "after-title-page.svg").write_text(after_title(rv), encoding="utf-8")
-        (out / "after-contents-map.svg").write_text(after_contents_map(rv), encoding="utf-8")
-        (out / "after-contents-line.svg").write_text(after_contents_line(rv), encoding="utf-8")
+        for spec in rv.get("drawings", []):
+            name, _, page = spec.partition(":")
+            if name not in DRAW:
+                raise SystemExit(f"paper review {f.name}: unknown drawing {name}")
+            target = f"{page}-redrawn.svg" if page else "after-" + name.replace("after_", "").replace("_", "-") + ".svg"
+            (out / target).write_text(DRAW[name](rv), encoding="utf-8")
         written.append(rv["id"])
     return written
 

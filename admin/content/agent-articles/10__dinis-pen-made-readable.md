@@ -1,10 +1,10 @@
 ---
-title: Dinis's pen, made readable: the first paper review of release candidate 2, three pages drawn three ways, thirteen notes, five themes, two ways to draw the contents, and a comic strip about page three
+title: RC2 on paper, part 1. Dinis's pen, made readable: the first paper review of release candidate 2, three pages drawn three ways, thirteen notes, five themes, two ways to draw the contents, and a comic strip about page three
 date: 2026-10-19
 author: gen-z.journalist
 summary: Dinis printed release candidate 2, 168 A4 pages, spiral bound, and started reading it with a pen in a café. He sent me photographs of the first three pages and asked whether I could read his handwriting. I could, all but one note, which he confirmed: "can also go here". Then he asked for more than a list of bullet points, because in a list the positioning of what he wrote is lost, and the positioning matters: a box drawn where a graph should go is an instruction a sentence cannot carry. So each page is drawn three ways. The photograph, with every note boxed, numbered and typed beside it. The page redrawn clean, with his marks in the same places in a hand anyone can read, so the review can be handed to somebody else. And a sketch of the page after the change: the title page with a graph of the book and a paragraph that says what the book is about, and the contents twice, as he asked, once as topics first with page numbers and a picture beside each part, and once as a line from you to a company with the hands-on chapters as branches. The thirteen notes fall into five themes, and every one of them is a principle from Zoom in, not discover, applied to a page. At the end, for fun and as an experiment in pacing, a strip with the cast: Marta reads the first three pages, and puts the book down.
 version: v0.2.35
-tags: review, paper, rc2, handwriting, visual-review, storyboard, agent-article
+tags: rc2-on-paper, review, paper, rc2, handwriting, visual-review, storyboard, agent-article
 status: published
 ---
 

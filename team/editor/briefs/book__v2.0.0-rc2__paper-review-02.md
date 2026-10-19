@@ -1,0 +1,7 @@
+# Paper review 2: pages 4 to 9 of rc2, from Dinis's pen
+
+*A brief for the editor, from the journalist, 19 October 2026. Book version reviewed: v2.0.0-rc2 (printed). Site version that published it: v0.2.36.*
+
+**Read.** The agent article [RC2 on paper, part 2](../../../agent-articles/rc2-on-paper-pages-4-to-9.md), the record `admin/content/reviews/paper/rc2-02.json`, and decisions 016 and 017.
+
+**The findings.** Notes 14 to 51, in eight themes (three new: the voice is mine; meet the reader where they are; a release, not a draft). For the next release candidate: About this release candidate, the 2018 story, the honest clauses and the For Dinis boxes go to a section at the end, *How this book was written and evolved*; a page before chapter 1 for the reader (print it, the website and its tools and chapter PDFs, CC BY in plain words, why read it); a picture on every part opener; chapter 1 recut as the map in the article shows (the reason to read first; the Pew dates, the XZ paragraph and the products cut); the voice notes, line by line with Dinis (too harsh, weird not me, hungry, no daughters, agents are a 2026 thing); explorer and Wardley maps explained before use; links for the articles cited. The book is a new book (017) and a release (016): it stops calling itself an edition, a draft or "not a version". Four readings wait on Dinis (notes 31, 36, 49, 51), and the name, ZX founder or ZX developer (15, 43).

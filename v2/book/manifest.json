@@ -1,6 +1,6 @@
 {
  "version": "v2.0.0-rc2",
- "site": "v0.2.35",
+ "site": "v0.2.36",
  "what": "The hash of every chapter's markdown (v2/content/) and of the <main> it rendered; validate.js refuses a page that no longer matches its markdown. A candidate's text is frozen once at v2/versions/<version>.md.",
  "chapters": [
   {
