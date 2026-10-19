@@ -1,6 +1,6 @@
 # gen-z-developers.sgit.ai
 
-> The website for finishing the second edition of Generation Z Developers (Dinis Cruz, 2018). The repository holds the official versions of the book; a public vault holds the working versions. Site v0.2.17.
+> The website for finishing the second edition of Generation Z Developers (Dinis Cruz, 2018). The repository holds the official versions of the book; a public vault holds the working versions. Site v0.2.18.
 
 ## The rule
 The repository holds the official versions; the vault holds the working versions. v1.0.0 is the 2018 first edition as released, frozen. A version moves from the vault to the repository when signed off, and the versions page shows the delta block by block.
@@ -33,6 +33,7 @@ The repository holds the official versions; the vault holds the working versions
 - [Follow the rabbit holes: provenance, explainability and asking for the evidence are the skills that matter most now, this generation is already good at them, and generative AI makes it cheap to be the best-prepared person in the room](https://gen-z-developers.sgit.ai/articles/follow-the-rabbit-holes.md)
 - [Everything is connected: a graph is a network of nodes and edges, not a diagram; a map is a graph with positions, provenance is a graph, the world is groups of groups, and you can start anywhere](https://gen-z-developers.sgit.ai/articles/everything-is-connected.md)
 - [Lenses, roles and loops: a prompt is a lens that changes who the answer is for, a role is a model with a description, an agent is a loop with a goal, tools are requests the model sends back, and long chats forget because they are compressed](https://gen-z-developers.sgit.ai/articles/lenses-roles-and-loops.md)
+- [The book in release mode: a first release candidate from the list we have, then rounds, where every idea, change and word that wants to come in argues its case before an adversarial review board, and every verdict becomes a precedent that makes the next one faster](https://gen-z-developers.sgit.ai/articles/the-book-in-release-mode.md)
 - [Dinis's first decisions: the licence, a PDF built here for Leanpub and Amazon, every format from one source, text issues in the vault, minor by default, and a second stream of articles for the agents](https://gen-z-developers.sgit.ai/agent-articles/dinis-first-decisions.md)
 - [Storyboards drawn by code, and the newsroom read in full: how I surveyed 204 articles for the book, built a renderer that turns a JSON storyboard into sketched, animated panels, and what the first two storyboards show](https://gen-z-developers.sgit.ai/agent-articles/storyboards-drawn-by-code.md)
 - [The book as a graph: how I read eleven articles, seven decisions and a survey into a register of ideas with their provenance, proposed a chapter map, and made the build refuse a dangling edge](https://gen-z-developers.sgit.ai/agent-articles/the-book-as-a-graph.md)
