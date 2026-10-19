@@ -1254,8 +1254,8 @@
    "ckey": "ch2",
    "theme": "works",
    "theme_name": "What works, keep it",
-   "written": "good, format better [?]",
-   "means": "The list of transformations works, and the format is better than prose. (Reading uncertain.)",
+   "written": "good, format better",
+   "means": "The list of transformations is good, but format it better: each item opens in bold (the home computer, BBS, the internet, the mobile phone, the cloud, apps, generative AI), then the rest of its text, so it reads better. (Reading confirmed by Dinis.)",
    "article": "rc2-on-paper-pages-10-to-13",
    "callouts": "rc2-03/page-11-callouts.svg"
   },
@@ -1475,8 +1475,8 @@
    "ckey": "ch2",
    "theme": "voice",
    "theme_name": "The voice is mine",
-   "written": "Reword from an 'adult first' [?] approach",
-   "means": "Reword the reading path; the key word is uncertain ('adult first'?), for Dinis to confirm.",
+   "written": "Reword from a 'path first' approach",
+   "means": "The same point as Don't start with the where (note 129): instead of saying where things are in the book and which parts refer to which, start with the path itself, what we are talking about; map the path first, and the mappings start from there. (Reading corrected by Dinis: 'path first', not 'adult first'.)",
    "article": "rc2-on-paper-pages-10-to-13",
    "callouts": "rc2-03/page-13-callouts.svg"
   },

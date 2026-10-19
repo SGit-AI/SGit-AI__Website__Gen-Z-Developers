@@ -34,7 +34,7 @@ The chapter opens on Dinis's own wonder ("I discover things I can do"), and the 
 
 <figure><a href="../reviews/paper/rc2-03/page-11-callouts.svg"><img src="../reviews/paper/rc2-03/page-11-callouts.svg" alt="Page 11 with notes 58 to 63" loading="lazy"></a></figure>
 
-The essay's headline "is strong enough", or "you should be able to find other articles or statistics". "That is my reading, not a measurement, and this edition still owes you a proper answer to it": "this phrasing is weird". Then the first ticks of the series: "ignore the doom", "exactly"; the list of transformations, "good", and, as I read it, "format better"; the dot-com crash, asked about in a *For Dinis* box, "yes here (this section) is good". The 2018 outline on the BBS is struck out with a wave.
+The essay's headline "is strong enough", or "you should be able to find other articles or statistics". "That is my reading, not a measurement, and this edition still owes you a proper answer to it": "this phrasing is weird". Then the first ticks of the series: "ignore the doom", "exactly"; the list of transformations, "good, format better"; the dot-com crash, asked about in a *For Dinis* box, "yes here (this section) is good". The 2018 outline on the BBS is struck out with a wave.
 
 ## Page 12 {#page-12}
 
@@ -74,14 +74,14 @@ The codes in the sketch work. Each prints a short address on this site, `gen-z-d
 
 [Scan me](/storyboards/scan-me.html), six panels: Marta, the printed book, a word she does not know, and a code in the margin. The pacing experiment this time is the cut: one panel on the page, one on the phone, and back, the way the reader's attention actually moves between the two.
 
-## What I need from Dinis {#questions}
+## What Dinis answered {#questions}
 
-- **Note 61.** Beside the list of transformations: "good", then, as I read it, "format better". Is that right?
-- **Note 78.** Beside the paragraph on how to use the rest of the book: "Reword from an '...' approach". I read "adult first"; it could be something else.
+- **Note 61.** "good, format better" is right: the list of transformations is good, and each item should open in bold (the home computer, BBS, the internet, the mobile phone, the cloud, apps, generative AI), then the rest of its text.
+- **Note 78.** Not "adult first" but "path first": the same point as note 129 in [part 4](/agent-articles/rc2-on-paper-pages-14-to-19.html), don't start with the where. Instead of saying where things are in the book and which parts point to which, start with the path itself: map the path first, and the mappings start from there.
 
 ## What this does not claim {#limits}
 
-- **The reading is mine**, word for word; two readings are uncertain and listed above.
+- **The reading is mine**, word for word; the two uncertain readings were answered by Dinis, above.
 - **The fact in the sketch is marked "to find".** That paper beats a screen for learning is what note 76 says the data shows; the book cites the studies when they are found.
 - **The margin marks are a proposal.** Four marks and a QR code; the editor and the illustrator decide the design.
 - **The QR ids are the first seven.** The rest are added as the editor places them.

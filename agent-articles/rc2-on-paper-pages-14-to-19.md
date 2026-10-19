@@ -88,10 +88,7 @@ Dinis then read the four uncertain notes back to me, and said what he meant:
 
 ## What I need from Dinis {#questions}
 
-The four readings of this batch are answered above. Two remain from part 3:
-
-- **Note 61.** Page 11, right margin, about a third of the way down, beside the list of transformations: "good", then, as I read it, "format better".
-- **Note 78.** Page 13, left margin, a little above the middle, beside the paragraph on how to use the rest of the book: "Reword from an '...' approach"; I read "adult first".
+The four readings of this batch are answered above, and so are the two left from part 3 (notes 61 and 78, "path first"); nothing is waiting on Dinis.
 
 ## What this does not claim {#limits}
 
