@@ -1,0 +1,46 @@
+{
+ "what": "What each reader was expected to do, written on 19 October 2026 before any run, and committed in its own release (site v0.2.27) before the runs, so the order is in the history. The difference between this and the run is often the finding.",
+ "written_by": "Claude Opus, in the site's session, from the candidate's contents and the personas, without the runs",
+ "journeys": [
+  {
+   "persona": "aisha",
+   "hypothesis": "Chapter 1 speaks to her, but the five chapters of Before you start (lucky to be here, graphs, where do you land, connect the dots backwards) read as the author's history and philosophy before she gets anything to do, and she starts skimming in part 1.",
+   "expected_path": "about (skim) → ch:1 (read) → ch:2 (skim) → ch:3 (skim) → ch:4 (skim) → jumps to Start the company or Hands on → ch:18 or ch:40",
+   "expected_put_down": "in part 1 or 2, before ch:10, unless she jumps to the hands-on part",
+   "expected_buy": "no, or maybe for the ebook; she would read it free",
+   "watch_for": "Whether she finds the hands-on part before she gives up; whether the history (ZX Spectrum, 2018) reads as for her parents' generation; repetition across part 1."
+  },
+  {
+   "persona": "ellie",
+   "hypothesis": "Chapter 8 (everyone who can brief an agent is a developer) is the chapter for her, but she meets graphs, generative AI's insides and lenses first, and the serverless and privacy chapters assume vocabulary she does not have.",
+   "expected_path": "about → ch:1 → ch:2 → ch:3 → ch:4 → ch:5 → ch:6 → ch:7 → ch:8 → ch:9 → skim part 3 → ch:13 (her first workspace) → part 6",
+   "expected_put_down": "in The frame (ch:6 or ch:7), or in Build it without a server (ch:23 to 25) if she gets that far",
+   "expected_buy": "maybe: she wants it to be for her, and she will say so if it is not",
+   "watch_for": "Undefined jargon (agent, serverless, repository, graph); whether there is a weekend task she could do; whether SG/Send, sgit and RiskMandate read as advertising."
+  },
+  {
+   "persona": "nadia",
+   "hypothesis": "The frame lands: chapter 1 and chapter 17 (the expert founders) are written about her, and she is the reader most likely to buy. She will be frustrated by the placeholder chapter on the company itself (ch:22) and by the UK steps being missing, which is exactly what she came for.",
+   "expected_path": "about → ch:1 to ch:22 in order, slowly → ch:37 (form your company) → ch:38 → ch:39",
+   "expected_put_down": "none in the natural phase, or at ch:22 when the company chapter is a placeholder",
+   "expected_buy": "yes, the paperback, if the company chapters are filled; maybe as it stands",
+   "watch_for": "Whether 'Generation X' is flattered or patronised; whether the claims about the expert founders are sourced; how far she gets before she needs the company chapter; whether she wants the Gen Z material at all."
+  },
+  {
+   "persona": "martin",
+   "hypothesis": "He reads the front matter and chapter 1 closely, then hunts: the AI chapters (6, 7), explorer coding (9), the founder part and the products part (23 to 25). He finds repetition between chapters, the author's products (SG/Send, sgit, RiskMandate) presented as the answer, and the For Dinis notes, and reads the making-of as either the most original thing in the book or as self-regard.",
+   "expected_path": "about → ch:1 → contents → ch:6 → ch:9 → ch:17 → ch:21 → ch:24 → ch:25 → ch:41",
+   "expected_put_down": "by the middle of Build it without a server",
+   "expected_buy": "no",
+   "watch_for": "Whether the provenance rule (every number in a source) shows on the page; whether anything is new to him; the AI-slop question; claims stronger than their evidence."
+  },
+  {
+   "persona": "catherine",
+   "hypothesis": "She sees a real hook (two generations, start a company, the ZX twist) and an author with a body of work, and a manuscript that is too long, has two audiences pulling apart, carries the author's products, has a dated hands-on part, placeholder chapters in its centre, and a free first edition. She would commission with conditions, not as it stands.",
+   "expected_path": "about → ch:1 → contents → part 1 (ch:2, ch:3) → ch:8 → ch:10 → ch:17 → ch:18 → ch:22 → ch:23 → ch:30 → ch:40 → ch:41",
+   "expected_put_down": "not applicable; decides after sampling every part",
+   "expected_buy": "yes with conditions: a tighter book, one primary reader, the company chapters written, the hands-on part as a companion, the products disclosed",
+   "watch_for": "The positioning (startup book, AI book, or career book); title clarity; the 200-page decision (012) against her sense of length; the CC BY first edition; legal risk in the company chapters."
+  }
+ ]
+}

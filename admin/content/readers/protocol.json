@@ -1,0 +1,82 @@
+{
+ "what": "The protocol for synthetic readers of a release candidate of the book: the newsroom's method for synthetic users (newsroom.sgit.ai/articles/how-to-run-synthetic-users.html, 10 October 2026), adapted from a website to a book. Every study under admin/content/readers/ follows it, so that a study of rc3 can be compared with the study of rc2. Changes to it are kept here, with the study that made them.",
+ "version": "1.0",
+ "adapted_from": "https://newsroom.sgit.ai/articles/how-to-run-synthetic-users.html",
+ "changes_from_the_site_method": [
+  "The screenshot becomes the text. A site's user gets a screenshot, not the DOM; a book's reader gets the frozen candidate's text in the order it is printed, not the graph, the ideas register, the sources or the notes behind it. Nothing a buyer of the book would not have.",
+  "The browser's record becomes the quote check. On a site, what is evidence is what the browser captured. Here it is the candidate's own text: every quote a reader cites must be in the unit it cites, word for word, and the build refuses a run where it is not. The study is pinned to the candidate's sha256, so the text the readers read is the text on this site.",
+  "One run becomes two phases. A site's user leaves and the run ends. A book's reader puts it down, and that point, with the buy decision taken there, is the most useful thing a run produces; but the editor also needs the whole book read. So the natural phase ends where the persona would put the book down, the buy decision is recorded there, and the asked phase continues as a beta reader paid for the time, marked as such, so the two are never mixed.",
+  "The rating becomes a decision. The question this study exists for is whether they would buy it; for the publisher, whether they would commission it."
+ ],
+ "phases": {
+  "natural": "Read from the first page as this person would, with their patience, format and time: read, skim or skip each unit, in order, going back or ahead only if they would. Stop where they would put the book down for good, or at the end. At that point, record the buy decision, before anything else.",
+  "asked": "The study then asks the reader, as a beta reader paid for their time, to go through what they did not read, skimming if that is how they would do it, to say what they think of the structure, pacing and content of the whole. Steps in this phase are marked asked; they never change the put-down point or the buy decision taken in the natural phase."
+ },
+ "loop": [
+  {"step": "Open", "what": "One unit: the front matter, a part's introduction, or a chapter, in the printed order unless this person would jump."},
+  {"step": "Say what you read", "what": "At the level of detail this person takes in. A skimmer takes away a heading and two lines; a slow reader the caveat in the fourth paragraph."},
+  {"step": "Think", "what": "What they are weighing, what they are suspicious of, what it means for them. Worth more than the summary."},
+  {"step": "Quote", "what": "The sentence that made them react, word for word from the unit, or nothing. The build checks it."},
+  {"step": "Record a question", "what": "Something the text raised and did not answer. Null when there is none. These are the output."},
+  {"step": "Record confusion", "what": "Where the text lost them or made them guess. A run with no confusion anywhere is a run that was not done properly."},
+  {"step": "Pace and interest", "what": "Was this unit too slow, right, or too fast for them; and their interest, 1 to 5."},
+  {"step": "Decide", "what": "Read on, skim the next, skip ahead, or put it down; with the reason in their terms, not the book's."}
+ ],
+ "rules": [
+  "Stay in the persona. Every person is invented; never claim to be a real person.",
+  "Never use knowledge they would not have. If they have not read a chapter, they do not know what is in it; if they do not know what a limited company involves, they cannot judge the chapter that assumes it.",
+  "Putting the book down is a valid ending, and often the most useful one.",
+  "Do not rewrite the book in the narration; what it should say belongs in the interview and the findings.",
+  "Every confusion points at something in the text, and every quote is word for word.",
+  "The notes marked For Dinis, and the placeholder chapters, are part of a pre-publication manuscript: the reader may react to them, but judges the book that would be sold, and says which is which.",
+  "No real person is named as a reader, a comparison or a source of a view; comparable books are described by kind, not invented by title."
+ ],
+ "units": "about (the front matter), part:N (the introduction to part N, 1 to 10), ch:N (chapter N, 1 to 41), as numbered in the candidate.",
+ "modes": ["read", "skim", "skip", "stop"],
+ "pace": ["too slow", "right", "too fast"],
+ "the_offer": "The study assumes the shape of a trade book so that the buy question has something to answer: an ebook at £9.99 and a paperback at £19.99, about 75,000 words, the first edition still free to read online. No price, format or publisher has been decided; this is the study's assumption, not the book's.",
+ "interview": [
+  "In one sentence, what is this book?",
+  "Who is it for? Is it for you, and which part?",
+  "Did you believe it? What made you believe it, or not?",
+  "Where did it lose you, or make you guess?",
+  "The pacing: where did it drag, and where did it rush?",
+  "The structure: does the order of the parts make sense? What would you move, cut or merge?",
+  "What is strongest? What would you underline, or send to somebody?",
+  "What is weakest, or does not make sense?",
+  "Did it read as written by a person, or by an AI? What made you think so?",
+  "Will you buy it? At what price, in which format? If not, what would have to change?",
+  "One change. What is it?",
+  "Would you give it to somebody else? Who?"
+ ],
+ "publisher_interview": [
+  "Would you commission it, under your imprint? Yes, yes with conditions, or no.",
+  "Who buys it, and where does it sit in a bookshop or a store?",
+  "What are the risks: the market, the dating of the material, the free first edition, the author's own products, advice that reads as legal or tax advice, the AI co-writing?",
+  "What would you change before you signed: title, length, audience, structure?",
+  "What must the author bring: platform, endorsements, a date?"
+ ],
+ "costs": [
+  {"id": "loses-the-commission", "label": "loses the commission", "what": "A publisher would say no because of it."},
+  {"id": "loses-the-sale", "label": "loses the sale", "what": "A reader who came to buy would not, because of it."},
+  {"id": "loses-the-reader", "label": "loses the reader", "what": "A reader puts the book down here, or skips the rest of a part."},
+  {"id": "costs-trust", "label": "costs trust", "what": "The reader believes the book less."},
+  {"id": "worth-fixing", "label": "worth fixing", "what": "A real problem that loses nothing on its own."},
+  {"id": "minor", "label": "minor", "what": "A nit."}
+ ],
+ "record": {
+  "file": "admin/content/readers/<study>/runs/<persona>.json",
+  "fields": {
+   "persona": "the id in personas.json",
+   "steps": "[{n, phase: natural|asked, unit, mode, read, thought, quote, question, confusion, pace, interest, next}]",
+   "put_down": "{after_step, unit, why} or null if they finished the natural phase at the end",
+   "buy_at_put_down": "{decision: yes|maybe|no, format, would_pay, why}; for the publisher, the commission decision at that point",
+   "interview": "the answers, in the order of the interview (and publisher_interview for a publisher)",
+   "rating": "1 to 5, and rating_why in one sentence",
+   "decision": "{buy: yes|maybe|no, commission: yes|yes-with-conditions|no (publisher only), why}",
+   "findings": "[{id, unit, step, cost, what, quote}], 3 to 8, ordered by cost",
+   "recommendations": "[the changes they would ask for, most important first]"
+  }
+ },
+ "models": "Each reader is one agent, Claude Sonnet, given only its persona, this protocol and the candidate's text. The personas, the journeys, the build's checks, the checks after the runs and the synthesis are Claude Opus's, in the site's session. It is not user research."
+}

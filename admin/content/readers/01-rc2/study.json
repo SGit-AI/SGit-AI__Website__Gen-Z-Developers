@@ -1,0 +1,13 @@
+{
+ "id": "01-rc2",
+ "title": "Five synthetic readers of release candidate 2",
+ "candidate": "v2.0.0-rc2",
+ "candidate_file": "v2/versions/v2.0.0-rc2.md",
+ "candidate_sha256": "5ed445042a0b5499b4fbc6a40557ea076247ba0570d386242e41ed8d0d9b66fb",
+ "asked_by": "Dinis Cruz, 19 October 2026: five synthetic users to read the book and say, on its pacing, content and structure, what is strong, what makes sense and what does not, and above all whether they would buy it; two from Generation Z, two from Generation X, and one publisher who decides whether to commission it. Pages on this site, not a vault.",
+ "brief": "team/editor/briefs/book__v2.0.0-rc2__synthetic-readers.md",
+ "protocol": "admin/content/readers/protocol.json",
+ "disclosure": "Everybody in this study is invented. The readers, their names and every word attributed to them were written by a language model (Claude Sonnet, one agent per reader) reading the candidate's text. It is not reader research, and no sentence in it is evidence about a real person or a real market. What is evidence is the candidate's own text: every quote a reader cites is checked by the build, word for word, against the unit it cites, in the frozen file whose hash is recorded here.",
+ "date": "2026-10-19",
+ "state": "frame"
+}
