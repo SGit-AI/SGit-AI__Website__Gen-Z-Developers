@@ -951,9 +951,31 @@ def build_newsroom_survey():
 # ------------------------------------------------------------------ storyboards
 SB_KINDS = {"cover", "scene", "evidence", "punchline", "spectrum", "map", "graph"}
 SB_POSES = {"stand", "point", "wave", "arms-up", "shrug", "think", "sit"}
-SB_MOODS = {"neutral", "happy", "worried", "surprised", "thinking", "determined"}
+SB_MOODS = {"neutral", "happy", "excited", "calm", "worried", "sad", "surprised", "thinking", "confused", "determined"}
+SB_SETTINGS = {"none", "office", "interview", "street", "night", "classroom"}
+SB_PROPS = {"laptop", "desk", "book", "board", "phone", "sign"}
 SB_HEAD = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
            '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Patrick+Hand&display=swap">\n')
+
+
+def sb_tools(views):
+    """The storyboard toolbar: the views (on a board's page), panels per row, animation, text under the panels, play in
+    order, the filter and the keys. assets/storyboard.js wires it; what a viewer picks is kept in their browser only."""
+    v = ('<span class="sb-views" role="group" aria-label="View">'
+         '<button type="button" data-view="deck" title="One panel at a time (d)">Deck</button>'
+         '<button type="button" data-view="grid" title="Every panel on one page (g)">Grid</button>'
+         '<button type="button" data-view="script" title="The storyboard as text (t)">Script</button></span>') if views else ""
+    cols = "".join(f'<option value="{n}">{n}</option>' for n in range(1, 7))
+    keys = ("<kbd>d</kbd> <kbd>g</kbd> <kbd>t</kbd> views &middot; " if views else "") + \
+        "<kbd>a</kbd> animation &middot; <kbd>x</kbd> text &middot; <kbd>+</kbd><kbd>&minus;</kbd> per row &middot; <kbd>/</kbd> filter &middot; <kbd>p</kbd> play" + \
+        (" &middot; <kbd>&larr;</kbd><kbd>&rarr;</kbd> <kbd>n</kbd> notes <kbd>f</kbd> full screen" if views else "")
+    return (f'<div class="sb-tools" role="toolbar" aria-label="How to view the panels">{v}'
+            f'<label class="sb-for-grid">Per row <select class="sb-cols">{cols}</select></label>'
+            '<label title="Panels play as they arrive (a)"><input type="checkbox" class="sb-anim"> Animation</label>'
+            '<label class="sb-for-grid" title="Each panel\'s script under it (x)"><input type="checkbox" class="sb-showtext"> Text</label>'
+            '<button type="button" class="sb-playall sb-for-grid" title="Play the panels one after another (p)">Play in order</button>'
+            '<input type="search" class="sb-filter sb-for-list" placeholder="Filter: a word, a name, a mood, a kind" aria-label="Filter the panels">'
+            f'<span class="sb-keys">{keys}</span></div>')
 
 
 def build_storyboards():
@@ -972,6 +994,11 @@ def build_storyboards():
             where = f"{f.name} scene {i}"
             if sc.get("kind", "scene") not in SB_KINDS:
                 sys.exit(f"build: {where}: unknown kind {sc.get('kind')}")
+            if sc.get("setting", "none") not in SB_SETTINGS:
+                sys.exit(f"build: {where}: unknown setting {sc.get('setting')} (the renderer knows {', '.join(sorted(SB_SETTINGS))})")
+            for pr in sc.get("props", []):
+                if pr.get("kind") not in SB_PROPS:
+                    sys.exit(f"build: {where}: unknown prop {pr.get('kind')} (the renderer knows {', '.join(sorted(SB_PROPS))})")
             for c in sc.get("cast", []):
                 if c["who"] not in ids:
                     sys.exit(f"build: {where}: {c['who']} is not in the cast")
@@ -994,11 +1021,14 @@ def build_storyboards():
                        f' <span class="small dim">({esc(sc.get("kind", "scene"))}; {esc(sc.get("source", ""))})</span></li>' for i, sc in enumerate(sb["scenes"], 1))
         body = f"""<h1>{esc(sb["title"])}</h1>
 <p class="lede">{esc(sb["subtitle"])}</p>
-<p class="small dim">Status: {esc(sb["status"])} &middot; book {esc(sb["book_version"])} &middot; {esc(sb["by"])}. {esc(sb.get("rule", ""))} Swipe, use the arrow keys, or the buttons; <b>Notes</b> shows what each panel is for and its source; <b>Full screen</b> for an iPad.</p>
-<div class="sb-deck"><div class="sb-track"></div>
-<div class="sb-bar"><button type="button" class="sb-prev" aria-label="Previous panel">&larr;</button><span class="sb-count"></span><button type="button" class="sb-next" aria-label="Next panel">&rarr;</button><button type="button" class="sb-notes-toggle">Notes</button><button type="button" class="sb-full">Full screen</button></div>
-<div class="sb-notes"></div>
-<script type="application/json">{payload}</script></div>
+<p class="small dim">Status: {esc(sb["status"])} &middot; book {esc(sb["book_version"])} &middot; {esc(sb["by"])}. {esc(sb.get("rule", ""))}</p>
+<div class="sb-viewer">{sb_tools(views=True)}
+<div class="sb-deck" hidden><div class="sb-track"></div>
+<div class="sb-bar"><button type="button" class="sb-prev" aria-label="Previous panel">&larr;</button><span class="sb-count"></span><button type="button" class="sb-next" aria-label="Next panel">&rarr;</button><button type="button" class="sb-replay" title="Play this panel (p)">&#9654; Play</button><button type="button" class="sb-notes-toggle" title="Notes (n)">Notes</button><button type="button" class="sb-full" title="Full screen (f)">Full screen</button></div>
+<div class="sb-notes"></div></div>
+<div class="sb-grid" hidden></div>
+<div class="sb-script" hidden></div>
+<script type="application/json" class="sb-data">{payload}</script></div>
 <h2 id="panels">The panels</h2>
 <ol class="small">{rows}</ol>
 <p class="small dim">The data is <a href="{slug}.json">{slug}.json</a> and <a href="cast.json">cast.json</a>; the panels are drawn in your browser from it, by <code>assets/storyboard.js</code> with Rough.js. Nothing is an image file: change the JSON, rebuild, and every panel is redrawn.</p>
@@ -1008,6 +1038,25 @@ def build_storyboards():
         write(f"storyboards/{slug}.json", f.read_text(encoding="utf-8"))
         boards.append((rel, sb))
     write("storyboards/cast.json", (src / "cast.json").read_text(encoding="utf-8"))
+    sb_head = SB_HEAD + '<link rel="stylesheet" href="../assets/storyboard.css">\n'
+    total = sum(len(sb["scenes"]) for _, sb in boards)
+    payload = json.dumps({"boards": [{"href": rel[12:], "storyboard": sb} for rel, sb in boards], "cast": cast}, ensure_ascii=False).replace("</", "<\\/")
+    body = f"""<h1>Every panel</h1>
+<p class="lede">All {len(boards)} storyboards, {total} panels, on one page, in order: to see the book as a flow rather than one panel at a time. A click on a panel plays it; its number opens it in that storyboard's deck.</p>
+<div class="sb-contact" data-view="grid">{sb_tools(views=False)}<script type="application/json" class="sb-data">{payload}</script></div>
+{scripts}
+"""
+    page("storyboards/all.html", "Every panel", body, f"All {total} storyboard panels on one page, as a grid: filter, play, open in the deck.",
+         crumbs=(("Storyboards", "storyboards/index.html"), ("Every panel", "storyboards/all.html")), extra_head=sb_head, wide=True)
+    payload = json.dumps({"cast": cast}, ensure_ascii=False).replace("</", "<\\/")
+    body = f"""<h1>The model sheet</h1>
+<p class="lede">Every character in every mood and every pose, side by side, the way animators check a character is on model: a face that reads wrong here reads wrong in every panel it is in. Correct the drawing in <code>assets/storyboard.js</code> or the look in <code>cast.json</code>, rebuild, and every panel changes with it.</p>
+<p class="small dim">Moods: {", ".join(sorted(SB_MOODS))}. Poses: {", ".join(sorted(SB_POSES))}.</p>
+<div class="sb-sheet"><script type="application/json" class="sb-data">{payload}</script></div>
+{scripts}
+"""
+    page("storyboards/model-sheet.html", "The model sheet", body, "Every storyboard character in every mood and pose, to check the drawing.",
+         crumbs=(("Storyboards", "storyboards/index.html"), ("The model sheet", "storyboards/model-sheet.html")), extra_head=sb_head, wide=True)
     payload = json.dumps({"cast": cast}, ensure_ascii=False).replace("</", "<\\/")
     poses = {"agent": ("wave,point,think", "happy,happy,thinking")}
     cards = "".join(
@@ -1021,6 +1070,7 @@ def build_storyboards():
     body = f"""<h1>Storyboards</h1>
 <p class="lede">The book as a sequence of panels: the punchline, the concepts, the evidence and the people they are for, one panel at a time, to flick through on a tablet before a word of a chapter is written. A storyboard is data and the panels are drawn from it by code, so a panel is corrected by changing a line, not by redrawing a picture.</p>
 <h2>The storyboards</h2>
+<p>Each opens as a deck, a grid of every panel, or a script; the toolbar switches between them and turns the animation off or on. Or see <a href="all.html"><b>every panel</b></a> of every storyboard on one page, and <a href="model-sheet.html"><b>the model sheet</b></a>: every character in every mood and pose.</p>
 <ol class="articles">{items}</ol>
 <h2 id="cast">The cast</h2>
 <p class="small dim">{esc(cast["what"])}</p>
@@ -1029,7 +1079,8 @@ def build_storyboards():
 <ul class="small">
 <li><b>The data.</b> <code>admin/content/storyboards/cast.json</code>, and one <code>NN__&lt;slug&gt;.json</code> per storyboard: scenes of kind cover, scene, evidence (a quote card or a bar chart), punchline or spectrum; each with a caption, the people in it (who, where, pose, mood, what they say or think), props, a note on what the panel is for, and its source.</li>
 <li><b>The drawing.</b> <code>assets/storyboard.js</code> draws people, bubbles, captions, props and charts as SVG with <a href="https://roughjs.com">Rough.js</a> (MIT, vendored in <code>assets/vendor/</code>), so everything looks sketched; a fixed seed per panel keeps the wobble the same on every load. In the deck the strokes draw themselves and the people and bubbles arrive in order.</li>
-<li><b>The checks.</b> The build refuses a scene whose character is not in the cast, an unknown pose, mood or kind, or an evidence panel with nothing in it.</li>
+<li><b>The views.</b> A deck (one panel at a time, swiped), a grid (every panel on one page, one to six per row, with each panel's text under it if you want it, played one by one or in order), and a script (the storyboard as text). The animation is a setting; what you choose is kept in your browser and nowhere else.</li>
+<li><b>The checks.</b> The build refuses a scene whose character is not in the cast, an unknown pose, mood, kind, setting or prop, or an evidence panel with nothing in it.</li>
 <li><b>No generated images.</b> Nothing here is drawn by an image model; that keeps every panel correctable, versioned and free of licence questions. Image models can still be given a storyboard as a brief, the way riskmandate.ai's stories do.</li>
 </ul>
 <script src="../assets/vendor/rough-4.6.6.js"></script><script src="../assets/storyboard.js"></script>
