@@ -1,0 +1,78 @@
+---
+title: Act as the job you want
+slug: act-as-the-job-you-want
+part: getting-the-job
+number: 10
+ideas: [act-as-the-job-you-want, your-cv-online, job-hunt-in-2026]
+answers_2018: [7.your-cv/_index.md, 7.your-cv/github.md, 7.your-cv/linkedin.md, 7.your-cv/blogs.md, 4.life-patterns/mentors.md, 7.your-cv/upwork.md, 6.security/bug-bounties.md]
+sources: [news:act-as-the-job-you-want, news:three-linkedin-pages, art:start-from-the-storyline, book:1.introduction/how-to-get-a-job.md, book:7.your-cv/_index.md, book:7.your-cv/github.md, book:7.your-cv/linkedin.md, book:7.your-cv/blogs.md, book:4.life-patterns/mentors.md, book:7.your-cv/upwork.md, book:6.security/bug-bounties.md]
+character: tomas
+gravity: all
+status: draft
+---
+
+At a startup summit I met someone doing work experience who wanted to become a project manager. She did not have the reputation, the track record or the CV for it. Every application asked for exactly the experience she could not get without the job. You will know this loop if you have been anywhere near it: the role wants two years of the thing, and the only place to get two years of the thing is the role.
+
+My advice was simple: start acting in the role you want. These days there are so many startups, so many open-source projects, so many areas where you can just start working as that person. Pick one. Manage something for them: a release, a backlog, an event, a migration. Add value to that company. Tag them on LinkedIn when you write about it. Send them messages and ideas. Connect with the people who work there. The work gives you the CV you did not have.
+
+> **For Dinis:** the person at the startup summit: may she be named, and what happened next? The article says you have not asked her yet.
+
+This is the advice I end up giving most often to people I know who are looking for a job, and it is the part of the first edition I would most like to finish.
+
+## If you are looking for a job, you have time
+
+I know a lot of people who are looking for a job right now. Some are between jobs. Some left one to try the next thing. Some have just come out of university, or just arrived in a new country. Some are coming back from maternity leave. Some are still in a job, with a few hours in the evening. And some have no spare time at all, because of caring for someone, or a second job, or illness, which is its own problem and not one this chapter solves. But for most of them the bottom line is the same: if you are looking for a job, you have time.
+
+And if you have time, the best way to get a job is to act as the person in the job you want. Not to prepare for it, not to read about it. To do it.
+
+## I wrote this in 2018
+
+This is not new advice from me. The first edition's chapter on getting a job asked how you start working with the companies you want to work for, and answered:
+
+> Easy, start collaborating on their Open Source projects. Act like you are part of the company. Understand their values, and behave in ways that will add value to that company, namely the tech stack.
+
+And a few lines later: "What's interesting is that there is nothing stopping you from doing this!" That was true in 2018 and it is more true now. In 2018, acting like part of the company meant pull requests on their open source and conversations with their developers, which is still a good route if you write code. What has changed is that the tools to do real work for a company, before they have hired you, are now in everyone's hands, whatever the job. The product brief, the market analysis, the release plan, the event page, the migration runbook: an agent and an afternoon get you a first version of any of them, and *Hired for the workflow* said why that is the skill companies are hiring for.
+
+If you came out of a computing degree and work carefully, by hand, you may feel a pull against this. You were taught to get it right before you show it. Keep the care. Change where you spend it: on checking what you publish, not on keeping it private until it is finished. Finished and private is invisible.
+
+It is the same for any job. If you want to be an artist, publish what you make. If you want to be a security engineer, find vulnerabilities in open-source projects and report them properly; the first edition had an outline on bug bounties that only got as far as "big business these days", and that is still the shortest honest description of them. If you want to be a product manager, write the product brief for a product you love and send it to the team. Act on the job you want to get.
+
+## Do it in public
+
+Do the work where it can be seen. A pull request on a public repository, a post that tags the company, an article on your own site, a project board anyone can open. Work done in private helps the company; work done in public helps the company and you, because it can be linked.
+
+The link is the whole point, and it is why the rest of this chapter is about links. Many of those companies, if you do a good job, especially in public, will give you a reference. Some will introduce you to people who are hiring. Some will pay you. And some will hire you. Each of those starts with somebody being able to point at the work.
+
+One caution, because unpaid work can be exploited. Choose projects where the work is yours to show, and stop if it is only taken.
+
+## Reach does not matter
+
+People sometimes look at what I publish and assume I have a lot of reach. I do not. Most of what I publish does not get read. On LinkedIn these days most of my posts get a hundred views, sometimes five hundred, and every now and then one reaches a thousand or more. That is fine. If you write for reach you will be disappointed, and you will stop.
+
+Publish anyway, because reach is not the point. The point is that you now have something you can link. And that changes what other people can do for you.
+
+## Let the people who want to help you help you
+
+There are people who want to help you: former colleagues, friends, people you met once at an event, people like me. The first edition's outline on mentors said you would be surprised by how approachable they are, and why: if you have the right attitude, the mentors see themselves in you, which is why most have a soft spot for helping. That is still my experience.
+
+But most of them cannot do much with "I am looking for a job in project management". What they can do is forward a link: "Have a look at what this person did for this startup." To do that, they need the link. So give the people who want to help you something they can use behind the scenes: linkable work, a page that explains who you are and what you have done, evidence they can send to someone with one line of introduction. An answer is much more useful when there is something behind it that can be linked, which is the rule *Publish, publish, publish: your own newsroom* is built on.
+
+## Your CV should be online
+
+That is also why, if you are looking for a job, your CV should be online. Not only a PDF sent to whoever asks, but a page, with links to the work, that anyone can forward.
+
+The first edition had a whole part called *Your CV*. It was a heading and a set of outlines: GitHub, LinkedIn, blogs, Leanpub, Upwork. I never wrote them up, but the notes say what I thought, and most of it holds. GitHub is your CV, the outline said, because it shows how you code and how you interact with others; your commits and pull requests show your voice; your accepted pull requests on other projects are badges of honour and belong on your CV; and the number of people using your tools is a better validation of your skills than any recommendation system. Keep the long tail of projects curated, because it is your research playground. On LinkedIn the notes were shorter: connect to people so that you can reach them, build the network, get recommendations, and expect a low signal-to-noise ratio. All of that is still true. What I would add in 2026 is that the GitHub that shows how you work with others is now also the GitHub your agent works in, so it shows how you work with agents too. That is the part a hiring manager in 2026 wants to see, and it is the one your degree did not give you.
+
+What a page like that looks like in practice: when I drafted the LinkedIn pages for my own companies this October, I did not write them from adjectives. I asked an agent to gather what the platform needed and what we had already published, and to draft every field from the record, with ten first posts for each page, every one an article or page already published. Then I published the drafts, before any page went up, because the drafting is part of the story. Your page can be made the same way: not "a motivated team player", but the three things you did, each with its link.
+
+## The bar is not high
+
+If you cannot yet open a GitHub account, connect it to an agent and have the agent build and edit a site for you, learn that first. The bar is not that high. It takes an afternoon, and the next chapter describes one way to do it, by voice memo. It is a critical skill, because it is the one that connects the dots: the work you do, the page that shows it, and the people who can pass it on.
+
+## The job hunt itself
+
+There is a gap here, and I would rather say so than fill it with guesses. What this part does not yet have is the mechanics of a job hunt in 2026: how interviews run now, what a take-home test is when AI is allowed and when it is not, what an entry-level role actually looks like day to day, and how freelancing fits. The first edition had an outline on Upwork that was mostly about the hiring side; its lines for you were that the on-demand economy is not just a race to the bottom, and that delegating to a freelancer is hard and worth learning. The survey of my articles for this edition listed the job hunt as a gap no article covers, and the plan is an article first, from a memo of mine, and the chapter after.
+
+> **For Dinis:** the memo on the job hunt in 2026: interviews, take-home tests with and without AI, a junior role day to day, freelancing. *Start from the storyline* and the survey both list it as the first gap; this section is the placeholder for it.
+
+What I can say without the memo is what every piece of this chapter already says. Whatever shape the interview takes, the person on the other side has one question, why should I hire you, and the best answer to it is a link to the job you have already been doing.

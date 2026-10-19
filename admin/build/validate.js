@@ -41,6 +41,7 @@ const files = walk(ROOT);
 const htmlFiles = files.filter(f => f.endsWith('.html'));
 const read = f => fs.readFileSync(f, 'utf8');
 const sha = s => crypto.createHash('sha256').update(s, 'utf8').digest('hex');
+let manifestChapters = 0;
 
 // --- 1. version agreement ---------------------------------------------------
 const VERSION = read(path.join(ROOT, 'admin/build/version.txt')).trim();
@@ -103,24 +104,39 @@ for (const f of htmlFiles) {
 }
 
 // --- 6. the book is a projection of its markdown ----------------------------
-const manifest = JSON.parse(read(path.join(ROOT, 'v1/book/manifest.json')));
-if (manifest.site !== VERSION) errors.push(`v1/book/manifest.json was generated at ${manifest.site}, not ${VERSION}: rerun build.py`);
-for (const ch of manifest.chapters) {
-  const mdPath = path.join(ROOT, 'v1/content', ch.file);
-  if (!fs.existsSync(mdPath)) { errors.push(`manifest names ${ch.file}, which is not in v1/content`); continue; }
-  if (sha(read(mdPath)) !== ch.markdown_sha256) errors.push(`v1/content/${ch.file} changed since its page was built (v1 is frozen; a change needs a new version)`);
-  const pg = path.join(ROOT, ch.page);
-  if (!fs.existsSync(pg)) { errors.push(`manifest names ${ch.page}, which does not exist`); continue; }
-  const main = read(pg).match(/<article class="chapter">[\s\S]*?<\/article>/);
-  if (!main) errors.push(`${ch.page}: no <article class="chapter">`);
-  else if (sha(main[0]) !== ch.main_sha256) errors.push(`${ch.page}: hand-edited behind its markdown (hash differs from the manifest)`);
+// v1 (frozen: the markdown may not change at all) and, when it exists, v2 (the release candidate: its pages must match
+// its markdown, and the candidate's frozen text is checked in 7).
+for (const ed of [{ dir: 'v1', frozen: true }, { dir: 'v2', frozen: false }]) {
+  const mf = path.join(ROOT, ed.dir, 'book/manifest.json');
+  if (!fs.existsSync(mf)) { if (ed.frozen) errors.push(`${ed.dir}/book/manifest.json is missing`); continue; }
+  const manifest = JSON.parse(read(mf));
+  if (manifest.site !== VERSION) errors.push(`${ed.dir}/book/manifest.json was generated at ${manifest.site}, not ${VERSION}: rerun build.py`);
+  for (const ch of manifest.chapters) {
+    const mdPath = ed.frozen ? path.join(ROOT, 'v1/content', ch.file) : path.join(ROOT, ch.file);
+    if (!fs.existsSync(mdPath)) { errors.push(`${ed.dir} manifest names ${ch.file}, which does not exist`); continue; }
+    if (sha(read(mdPath)) !== ch.markdown_sha256) errors.push(ed.frozen ? `v1/content/${ch.file} changed since its page was built (v1 is frozen; a change needs a new version)` : `${ch.file} changed since its page was built: rerun build.py`);
+    const pg = path.join(ROOT, ch.page);
+    if (!fs.existsSync(pg)) { errors.push(`${ed.dir} manifest names ${ch.page}, which does not exist`); continue; }
+    const main = read(pg).match(/<article class="chapter( v2)?">[\s\S]*?<\/article>/);
+    if (!main) errors.push(`${ch.page}: no <article class="chapter">`);
+    else if (sha(main[0]) !== ch.main_sha256) errors.push(`${ch.page}: hand-edited behind its markdown (hash differs from the manifest)`);
+  }
+  manifestChapters += manifest.chapters.length;
 }
 
 // --- 7. the frozen version exists -------------------------------------------
-const bookVersions = JSON.parse(read(path.join(ROOT, 'admin/content/book/versions.json'))).versions;
-for (const v of bookVersions) {
+const bookDoc = JSON.parse(read(path.join(ROOT, 'admin/content/book/versions.json')));
+for (const v of bookDoc.versions) {
   if (!fs.existsSync(path.join(ROOT, 'v1/versions', v.version + '.md'))) errors.push(`v1/versions/${v.version}.md is missing`);
   if (!v.text_sha256) errors.push(`admin/content/book/versions.json: ${v.version} has no text_sha256`);
+}
+for (const c of (bookDoc.candidates || [])) {
+  // a candidate is frozen once; its text is checked by build.py against text_sha256, the gate checks the file is there and matches
+  const fz = path.join(ROOT, c.frozen || ('v2/versions/' + c.version + '.md'));
+  if (!c.text_sha256) errors.push(`admin/content/book/versions.json: candidate ${c.version} has no text_sha256 (run build.py)`);
+  else if (!fs.existsSync(fz)) errors.push(`${c.frozen}: the frozen candidate is missing`);
+  else if (sha(read(fz)) !== c.text_sha256) errors.push(`${c.frozen}: the frozen candidate no longer matches its recorded hash`);
+  if (/^v\d+\.\d+\.\d+$/.test(c.version)) errors.push(`candidate ${c.version} is named like a version; a candidate carries a suffix (-rc1)`);
 }
 
 // --- 8. the map covers the book --------------------------------------------
@@ -145,4 +161,4 @@ if (errors.length) {
   for (const e of errors) console.error('  - ' + e);
   process.exit(1);
 }
-console.log(`validate: ok — ${VERSION}, ${htmlFiles.length} pages, ${manifest.chapters.length} chapters checked against their markdown, no private key in the tree`);
+console.log(`validate: ok — ${VERSION}, ${htmlFiles.length} pages, ${manifestChapters} chapters checked against their markdown, no private key in the tree`);

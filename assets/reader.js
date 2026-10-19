@@ -11,7 +11,8 @@
  */
 (function () {
   'use strict';
-  const KEY = 'genz.reader.v1';
+  const rootEl = document.getElementById('reader');
+  const KEY = (rootEl && rootEl.dataset.store) || 'genz.reader.v1';
   const STATES = [['unread', 'Unread'], ['reading', 'Reading'], ['read', 'Read'], ['review', 'To review'], ['continue', 'Continue'], ['signed', 'Signed off']];
   const root = document.getElementById('reader');
   if (!root) return;
@@ -88,7 +89,7 @@
       const pc = chapters.filter((c) => c.part === p.slug && c.published);
       if (pc.length) groups.push({ title: p.title, items: pc });
     }
-    const front = { slug: 'github-issues', title: book.front.title, number: 0, published: true, front: true };
+    const front = { slug: book.front.slug || 'github-issues', title: book.front.title, number: 0, published: true, front: true };
     groups.unshift({ title: 'Front matter', items: [front] });
     const drafts = chapters.filter((c) => !c.published);
     const dgroups = [];
@@ -117,8 +118,8 @@
   function chapterCard(ch) {
     const card = el('article', 'rd-ch' + (isFolded(ch) ? ' folded' : ''));
     card.id = ch.slug; card.dataset.slug = ch.slug;
-    const where = ch.front ? `front matter, p. ${ch.print_page}` : ch.published ? `chapter ${ch.number} of the published book &middot; p. ${ch.print_page}` : (ch.kind === 'outline' ? 'an outline, never published' : 'a draft, never published');
-    const badge = ch.front || ch.published ? '<span class="badge written">published</span>' : (ch.kind === 'outline' ? '<span class="badge outline">outline</span>' : '<span class="badge draft">draft</span>');
+    const where = book.candidate ? (ch.front ? 'front matter' : `chapter ${ch.number} of ${chapters.length}`) : ch.front ? `front matter, p. ${ch.print_page}` : ch.published ? `chapter ${ch.number} of the published book &middot; p. ${ch.print_page}` : (ch.kind === 'outline' ? 'an outline, never published' : 'a draft, never published');
+    const badge = book.candidate ? `<span class="badge draft">${esc(book.candidate)}</span>` : ch.front || ch.published ? '<span class="badge written">published</span>' : (ch.kind === 'outline' ? '<span class="badge outline">outline</span>' : '<span class="badge draft">draft</span>');
     const head = el('div', 'rd-chhead', `<h2>${esc(ch.title)}</h2><span>${where}</span> ${badge} <span>${ch.words.toLocaleString()} words</span>` +
       (ch.url ? ` <a href="../${ch.url}">its page</a>` : '') +
       `<span class="rd-state" data-slug="${ch.slug}"></span><button type="button" class="fold" aria-expanded="${!isFolded(ch)}">${isFolded(ch) ? 'Open' : 'Fold'}</button>`);
@@ -287,6 +288,7 @@
     g.appendChild(el('div', 'glegend', '<span><i style="background:#0c2a3d"></i>this chapter</span><span><i style="background:#e8b64a"></i>part</span><span><i style="background:#94a3b8"></i>before / after</span><span><i style="background:#3b9fb0"></i>shares terms</span><span><i style="background:#0f766e"></i>newsroom article</span>'));
     if (rel.length) g.appendChild(el('ul', 'gedges', rel.map((r) => `<li><b>${esc((chapterOf(r.slug) || {}).title || r.slug)}</b>: ${r.shared.map(esc).join(', ')}</li>`).join('')));
     if (ch.terms && ch.terms.length) g.appendChild(el('p', 'small dim', 'Terms: ' + ch.terms.map(esc).join(', ')));
+    if (ch.ideas && ch.ideas.length) g.appendChild(el('p', 'small', 'Written from: ' + ch.ideas.map((i) => `<a href="${esc(i.url)}">${esc(i.title)}</a> <span class="dim">(${esc(i.state)})</span>`).join('; ')));
     if (ch.gap && ch.gap !== 'none' && ch.gap !== '') g.appendChild(el('p', 'small dim', 'The map says: ' + esc(ch.gap)));
   }
   function bookGraph(g) {

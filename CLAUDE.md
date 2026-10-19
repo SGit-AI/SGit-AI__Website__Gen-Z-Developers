@@ -92,11 +92,22 @@ the vault, and `v1.0.0` is the 2018 edition. A file name carrying a version says
 `book__v1.0.0__<slug>.md` for work on the book at that version, `v0.1.0__<slug>.md` for work on the
 site.
 
+## The release candidate (v2/)
+
+`v2/content/` is the second edition as a release candidate, decided by Dinis on 19 October 2026 (decision 008): one
+markdown file per chapter, whose front matter names the ideas it was written from, the sources it drew on and the 2018
+files it answers; `admin/build/book_v2.py` renders `v2/book/` and refuses a chapter that cites an idea, source, part or
+file that does not exist, or that uses a banned string (an em-dash among them). A candidate is frozen once (text to
+`v2/versions/<candidate>.md`, hash under `candidates` in `admin/content/book/versions.json`): do not edit a frozen
+candidate's text; Dinis's feedback becomes the next candidate (`-rc2`), added with `text_sha256: null`, and the chapter
+files change then. A candidate is not a version and nothing is published from it outside this site. The PDF is made
+by `node admin/build/print_pdf.js` after the build and committed; CI does not render it.
+
 ## When a new version of the book comes in
 
 1. The editor has signed off the version in the vault, and the publisher has agreed it is official.
-2. Copy the signed-off text into the repository as the next version (the layout for `v2/` is to be
-   decided when the first one arrives; keep `v1/` untouched).
+2. Copy the signed-off text into the repository as the next version (`v2/content/` is the layout, one file per
+   chapter with its provenance in the front matter, as the release candidates use; keep `v1/` untouched).
 3. Add the entry to `admin/content/book/versions.json` with its `text_sha256` (the build prints the
    hash it expects when the text changes).
 4. Rebuild: `page_versions.freeze` writes `v<N>/versions/<version>.md` once, and the versions page

@@ -4,7 +4,7 @@
   "proposed": "the librarian's reading",
   "mapped": "in the editor's chapter map",
   "storyboarded": "a storyboard exists for its part",
-  "drafting": "being written in the vault",
+  "drafting": "a chapter of it exists in the release candidate (v2/content/), written from its ideas; the editor's map and Dinis's reading decide what happens next",
   "reviewed": "the reviewer and synthetic readers have had a round",
   "signed-off": "Dinis signed the part off",
   "published": "in a released version"
@@ -24,14 +24,15 @@
      ],
      "gravity": "all",
      "character": "zara",
-     "state": "storyboarded",
+     "state": "drafting",
      "answers_2018": [
       "1.introduction/_index.md",
       "1.introduction/generation-z.md",
       "4.life-patterns/the-zone.md",
       "4.life-patterns/BBS-and-modems.md",
       "3.technologies/draft/dopamine.md"
-     ]
+     ],
+     "draft": "v2/book/lucky-to-be-here.html"
     },
     {
      "id": "everything-is-connected",
@@ -42,13 +43,14 @@
      ],
      "gravity": "all",
      "character": "zara",
-     "state": "storyboarded",
+     "state": "drafting",
      "answers_2018": [
       "5.concepts/graphs.md",
       "2.mvp-for-gen-z-dev/content/dot-language.md",
       "3.technologies/content/AST.md"
      ],
-     "note": "Placed just before Where do you land because a map is a graph with positions; whether graphs come before Wardley maps or after is Dinis's question (Everything is connected, task 1). Dot Language and AST are examples inside it (task 3)."
+     "note": "Placed just before Where do you land because a map is a graph with positions; whether graphs come before Wardley maps or after is Dinis's question (Everything is connected, task 1). Dot Language and AST are examples inside it (task 3).",
+     "draft": "v2/book/everything-is-connected.html"
     },
     {
      "id": "where-do-you-land",
@@ -59,10 +61,11 @@
      ],
      "gravity": "all",
      "character": "tomas",
-     "state": "storyboarded",
+     "state": "drafting",
      "answers_2018": [
       "4.life-patterns/pionners-settlers-town-planners.md"
-     ]
+     ],
+     "draft": "v2/book/where-do-you-land.html"
     },
     {
      "id": "connect-the-dots-backwards",
@@ -74,14 +77,15 @@
      ],
      "gravity": "all",
      "character": "priya",
-     "state": "storyboarded",
+     "state": "drafting",
      "answers_2018": [
       "4.life-patterns/content/learning.md",
       "3.technologies/content/books.md",
       "3.technologies/content/pen-and-paper.md",
       "4.life-patterns/love-maths.md",
       "4.life-patterns/thinking-as-programmer.md"
-     ]
+     ],
+     "draft": "v2/book/connect-the-dots-backwards.html"
     }
    ]
   },
@@ -99,10 +103,11 @@
      ],
      "gravity": "all",
      "character": "zara",
-     "state": "proposed",
+     "state": "drafting",
      "answers_2018": [
       "3.technologies/content/ml-ai.md"
-     ]
+     ],
+     "draft": "v2/book/what-generative-ai-is.html"
     },
     {
      "id": "lenses-roles-and-loops",
@@ -114,11 +119,12 @@
      ],
      "gravity": "all",
      "character": "zara",
-     "state": "storyboarded",
+     "state": "drafting",
      "answers_2018": [
       "3.technologies/content/ml-ai.md"
      ],
-     "note": "Placed right after What generative AI is, as the article asks (task 1)."
+     "note": "Placed right after What generative AI is, as the article asks (task 1).",
+     "draft": "v2/book/lenses-roles-and-loops.html"
     },
     {
      "id": "everyone-is-a-developer",
@@ -129,12 +135,13 @@
      ],
      "gravity": "all",
      "character": "priya",
-     "state": "proposed",
+     "state": "drafting",
      "answers_2018": [
       "1.introduction/stem-tech-stack.md",
       "3.technologies/draft/scratch.md",
       "4.life-patterns/thinking-as-programmer.md"
-     ]
+     ],
+     "draft": "v2/book/everyone-is-a-developer.html"
     },
     {
      "id": "explorer-coding-and-the-handover",
@@ -145,12 +152,13 @@
      ],
      "gravity": "explorer",
      "character": "zara",
-     "state": "proposed",
+     "state": "drafting",
      "answers_2018": [
       "5.concepts/repl.md",
       "5.concepts/legacy-applications.md",
       "4.life-patterns/refactoring.md"
-     ]
+     ],
+     "draft": "v2/book/explorer-coding-and-the-handover.html"
     }
    ]
   },
@@ -168,12 +176,13 @@
      ],
      "gravity": "all",
      "character": "zara",
-     "state": "proposed",
+     "state": "drafting",
      "answers_2018": [
       "1.introduction/how-to-get-a-job.md",
       "3.technologies/content/ml-ai.md",
       "4.life-patterns/impostor-syndrome.md"
-     ]
+     ],
+     "draft": "v2/book/hired-for-the-workflow.html"
     },
     {
      "id": "act-as-the-job-you-want",
@@ -185,7 +194,7 @@
      ],
      "gravity": "all",
      "character": "tomas",
-     "state": "proposed",
+     "state": "drafting",
      "answers_2018": [
       "7.your-cv/_index.md",
       "7.your-cv/github.md",
@@ -194,7 +203,8 @@
       "4.life-patterns/mentors.md",
       "7.your-cv/upwork.md",
       "6.security/bug-bounties.md"
-     ]
+     ],
+     "draft": "v2/book/act-as-the-job-you-want.html"
     },
     {
      "id": "your-own-newsroom",
@@ -205,13 +215,14 @@
      ],
      "gravity": "explorer",
      "character": "tomas",
-     "state": "proposed",
+     "state": "drafting",
      "answers_2018": [
       "4.life-patterns/publish-publish-publish.md",
       "2.mvp-for-gen-z-dev/content/hugo.md",
       "7.your-cv/leanpub.md",
       "5.concepts/amazon-press-releases.md"
-     ]
+     ],
+     "draft": "v2/book/your-own-newsroom.html"
     }
    ]
   },
@@ -230,13 +241,14 @@
      ],
      "gravity": "all",
      "character": "priya",
-     "state": "proposed",
+     "state": "drafting",
      "answers_2018": [
       "2.mvp-for-gen-z-dev/_index.md",
       "2.mvp-for-gen-z-dev/content/slack-and-chatops.md",
       "4.life-patterns/automate-your-workflows.md",
       "6.security/dont-touch-production.md"
-     ]
+     ],
+     "draft": "v2/book/your-first-workspace.html"
     },
     {
      "id": "how-to-work-with-agents",
@@ -247,14 +259,15 @@
      ],
      "gravity": "villager",
      "character": "sam",
-     "state": "proposed",
+     "state": "drafting",
      "answers_2018": [
       "4.life-patterns/workflows.md",
       "5.concepts/agile-and-kanban.md",
       "3.technologies/content/ide.md",
       "5.concepts/design.md",
       "5.concepts/changes.md"
-     ]
+     ],
+     "draft": "v2/book/how-to-work-with-agents.html"
     }
    ]
   },
@@ -273,7 +286,7 @@
      ],
      "gravity": "town-planner",
      "character": "sam",
-     "state": "proposed",
+     "state": "drafting",
      "answers_2018": [
       "5.concepts/deadlines.md",
       "4.life-patterns/start-with-why.md",
@@ -281,7 +294,8 @@
       "4.life-patterns/one-way-two-way-doors.md",
       "5.concepts/chaos-engineering.md",
       "4.life-patterns/civic-responsibility.md"
-     ]
+     ],
+     "draft": "v2/book/direction-and-judgement.html"
     },
     {
      "id": "facts-and-the-record",
@@ -292,12 +306,13 @@
      ],
      "gravity": "villager",
      "character": "sam",
-     "state": "proposed",
+     "state": "drafting",
      "answers_2018": [
       "5.concepts/facts.md",
       "5.concepts/feedback-loops.md",
       "4.life-patterns/content/being-criticized-is-a-privilege.md"
-     ]
+     ],
+     "draft": "v2/book/facts-and-the-record.html"
     }
    ]
   },
@@ -316,7 +331,7 @@
      ],
      "gravity": "town-planner",
      "character": "sam",
-     "state": "proposed",
+     "state": "drafting",
      "answers_2018": [
       "6.security/threat-modeling.md",
       "6.security/3rd-party-modules.md",
@@ -325,7 +340,8 @@
       "6.security/pointers.md",
       "6.security/strings-should-be-banned.md",
       "4.life-patterns/content/future-needs-you.md"
-     ]
+     ],
+     "draft": "v2/book/controlling-your-agent.html"
     },
     {
      "id": "open-source",
@@ -336,12 +352,13 @@
      ],
      "gravity": "all",
      "character": "tomas",
-     "state": "proposed",
+     "state": "drafting",
      "answers_2018": [
       "2.mvp-for-gen-z-dev/content/open-source.md",
       "2.mvp-for-gen-z-dev/content/creative-commons.md",
       "2.mvp-for-gen-z-dev/draft/github-flow.md"
-     ]
+     ],
+     "draft": "v2/book/open-source.html"
     },
     {
      "id": "building-blocks",
@@ -352,14 +369,15 @@
      ],
      "gravity": "villager",
      "character": "priya",
-     "state": "proposed",
+     "state": "drafting",
      "answers_2018": [
       "2.mvp-for-gen-z-dev/draft/aws.md",
       "5.concepts/serverless.md",
       "5.concepts/micro-services.md",
       "7.your-cv/git.md",
       "2.mvp-for-gen-z-dev/content/docker.md"
-     ]
+     ],
+     "draft": "v2/book/building-blocks.html"
     },
     {
      "id": "shipped-means-the-user-has-it",
@@ -370,13 +388,14 @@
      ],
      "gravity": "villager",
      "character": "sam",
-     "state": "proposed",
+     "state": "drafting",
      "answers_2018": [
       "5.concepts/CI-Testing.md",
       "2.mvp-for-gen-z-dev/draft/continuous-integration.md",
       "2.mvp-for-gen-z-dev/draft/tdd.md",
       "5.concepts/devops.md"
-     ]
+     ],
+     "draft": "v2/book/shipped-means-the-user-has-it.html"
     }
    ]
   },
@@ -394,13 +413,14 @@
      ],
      "gravity": "all",
      "character": "priya",
-     "state": "proposed",
+     "state": "drafting",
      "answers_2018": [
       "7.your-cv/future-self.md",
       "4.life-patterns/content/backup-your-life.md",
       "2.mvp-for-gen-z-dev/content/dot-language.md",
       "5.concepts/recursive-functions.md"
-     ]
+     ],
+     "draft": "v2/book/graphs-and-your-future-self.html"
     },
     {
      "id": "be-a-founder",
@@ -411,10 +431,11 @@
      ],
      "gravity": "explorer",
      "character": "tomas",
-     "state": "proposed",
+     "state": "drafting",
      "answers_2018": [
       "4.life-patterns/content/be-a-founder.md"
-     ]
+     ],
+     "draft": "v2/book/be-a-founder.html"
     },
     {
      "id": "civic-responsibility",
@@ -425,10 +446,11 @@
      ],
      "gravity": "all",
      "character": "guide",
-     "state": "proposed",
+     "state": "drafting",
      "answers_2018": [
       "4.life-patterns/civic-responsibility.md"
-     ]
+     ],
+     "draft": "v2/book/civic-responsibility.html"
     }
    ]
   },
@@ -447,8 +469,9 @@
      ],
      "gravity": "explorer",
      "character": "zara",
-     "state": "proposed",
-     "answers_2018": []
+     "state": "drafting",
+     "answers_2018": [],
+     "draft": "v2/book/an-agentic-workflow-from-zero.html"
     },
     {
      "id": "your-first-graph",
@@ -459,8 +482,9 @@
      ],
      "gravity": "explorer",
      "character": "zara",
-     "state": "proposed",
-     "answers_2018": []
+     "state": "drafting",
+     "answers_2018": [],
+     "draft": "v2/book/your-first-graph.html"
     },
     {
      "id": "five-lenses",
@@ -471,8 +495,9 @@
      ],
      "gravity": "explorer",
      "character": "zara",
-     "state": "proposed",
-     "answers_2018": []
+     "state": "drafting",
+     "answers_2018": [],
+     "draft": "v2/book/five-lenses.html"
     },
     {
      "id": "a-tiny-agent-loop",
@@ -483,8 +508,9 @@
      ],
      "gravity": "explorer",
      "character": "zara",
-     "state": "proposed",
-     "answers_2018": []
+     "state": "drafting",
+     "answers_2018": [],
+     "draft": "v2/book/a-tiny-agent-loop.html"
     },
     {
      "id": "images-infographics-and-storyboards",
@@ -495,8 +521,9 @@
      ],
      "gravity": "explorer",
      "character": "zara",
-     "state": "proposed",
-     "answers_2018": []
+     "state": "drafting",
+     "answers_2018": [],
+     "draft": "v2/book/images-infographics-and-storyboards.html"
     },
     {
      "id": "meeting-briefs-and-follow-ups",
@@ -507,8 +534,9 @@
      ],
      "gravity": "villager",
      "character": "sam",
-     "state": "proposed",
-     "answers_2018": []
+     "state": "drafting",
+     "answers_2018": [],
+     "draft": "v2/book/meeting-briefs-and-follow-ups.html"
     },
     {
      "id": "your-own-publishing",
@@ -520,8 +548,9 @@
      ],
      "gravity": "villager",
      "character": "priya",
-     "state": "proposed",
-     "answers_2018": []
+     "state": "drafting",
+     "answers_2018": [],
+     "draft": "v2/book/your-own-publishing.html"
     }
    ]
   },
@@ -539,11 +568,12 @@
      ],
      "gravity": "town-planner",
      "character": "guide",
-     "state": "proposed",
+     "state": "drafting",
      "answers_2018": [
       "1.introduction/how-this -book-was-created.md",
       "_manuscript/github-issues.md"
-     ]
+     ],
+     "draft": "v2/book/how-this-book-was-made.html"
     }
    ]
   }

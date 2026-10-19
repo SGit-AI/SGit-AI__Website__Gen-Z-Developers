@@ -1,0 +1,45 @@
+/* v2/book/single.html: the whole release candidate on one page, laid out for reading and for print. */
+.printbook{max-width:46rem;margin:0 auto;font-family:var(--serif);font-size:1.05rem;line-height:1.7;color:#1f2328}
+.printbook h1,.printbook h2,.printbook h3{font-family:var(--sans)}
+.pr-title{text-align:center;padding:3rem 0 2rem;border-bottom:1px solid var(--line);margin-bottom:2rem}
+.pr-title h1{font-size:2.6rem;margin:.6rem 0 .2rem;letter-spacing:-.01em}
+.pr-k{font-family:var(--sans);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--dim2);margin:0}
+.pr-sub{font-size:1.2rem;color:var(--dim);margin:.2rem 0 1.2rem}
+.pr-by{font-family:var(--sans);font-weight:600;margin:0 0 1.6rem}
+.pr-note{font-family:var(--sans);font-size:.85rem;color:var(--dim);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.7rem 1rem;text-align:left}
+.pr-toc{margin:0 0 2rem}
+.pr-toc h1{font-size:1.5rem}
+.pr-toc ol{list-style:none;padding:0;margin:0;font-family:var(--sans);font-size:.95rem}
+.pr-toc .pr-tocpart{font-weight:700;margin:.8rem 0 .2rem}
+.pr-toc .pr-tocpart ol{font-weight:400;padding-left:1.2rem;margin:.2rem 0 0}
+.pr-toc .pr-tocpart ol li{margin:.1rem 0}
+.pr-part{padding:3rem 0 1rem;border-top:1px solid var(--line);margin-top:2.5rem}
+.pr-partn{font-family:var(--sans);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--dim2);margin:0}
+.pr-part h1{font-size:2rem;margin:.2rem 0 .8rem}
+.pr-part p{font-family:var(--sans);color:var(--dim);font-size:1rem}
+.pr-chapter{margin:2.4rem 0 0}
+.pr-chapter h2{font-size:1.65rem;margin:0 0 1rem;line-height:1.2}
+.pr-chapter h2 .num{display:inline-block;min-width:2.2rem;color:var(--dim2);font-weight:500}
+.pr-chapter .body h2{font-size:1.15rem;margin:1.6rem 0 .4rem}
+.pr-chapter .body p{margin:0 0 .9rem}
+.pr-chapter .body ul,.pr-chapter .body ol{padding-left:1.4rem}
+.pr-prov{font-family:var(--sans);font-size:.8rem;color:var(--dim);border-top:1px dotted var(--line2);padding-top:.5rem;margin-top:1.2rem}
+.pr-part.back ul{font-family:var(--sans);font-size:.92rem}
+.for-dinis{font-family:var(--sans);font-size:.92rem;background:#fff7ed;border:1px solid #f0c9a0;border-left:4px solid var(--warm);border-radius:0 8px 8px 0;padding:.6rem .9rem;margin:1rem 0;color:#7c3a0b}
+.for-dinis b{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.15rem}
+@media print{
+  @page{size:A4;margin:22mm 20mm 24mm 20mm}
+  body{font-size:11pt;background:#fff}
+  main .inner{max-width:none;padding:0}
+  .printbook{max-width:none;font-size:11pt;line-height:1.55;color:#000}
+  .pr-title{page-break-after:always;border:0;padding-top:30vh}
+  .pr-toc{page-break-after:always}
+  .pr-part{page-break-before:always;border:0;padding-top:30vh}
+  .pr-chapter{page-break-before:always;margin-top:0}
+  .pr-chapter.front{page-break-before:auto}
+  .pr-chapter h2,.pr-chapter .body h2{page-break-after:avoid}
+  .pr-chapter .body p,.pr-chapter .body li{orphans:3;widows:3}
+  .for-dinis{border:1px solid #999;border-left:4px solid #999;background:#f3f3f3;color:#000;page-break-inside:avoid}
+  .pr-prov{color:#555}
+  a{color:inherit;text-decoration:none}
+}
