@@ -580,7 +580,7 @@ def build_read_v2(doc):
 <noscript><p class="note warn">The reader needs JavaScript. The candidate itself does not: <a href="../v2/book/index.html">the contents</a>, <a href="../v2/book/single.html">on one page</a>.</p></noscript>
 <div class="rd-strip" id="rd-strip">
   <div class="rd-strip-left">
-    <a class="rd-brand" href="../v2/book/index.html" title="The contents">Generation Z Developers, second edition <span class="badge draft">{esc(doc["version"])}</span></a>
+    <a class="rd-brand" href="../v2/book/index.html" title="The contents">Gen Z Developers (GenAI Edition) <span class="badge draft">{esc(doc["version"])}</span></a>
     <span class="rd-progress" id="rd-progress" title="Chapters read, of the candidate"></span>
   </div>
   <div class="rd-strip-right">
@@ -604,7 +604,7 @@ def build_read_v2(doc):
 </div>
 """
     page("read/v2.html", f"Read and review the second edition, {doc['version']}", body,
-         f"Read release candidate {doc['version']} of Generation Z Developers, second edition, with the editor's desk: states, comments, folds, export.",
+         f"Read release candidate {doc['version']} of Gen Z Developers (GenAI Edition), with the editor's desk: states, comments, folds, export.",
          crumbs=(("Read and review", "read/index.html"), ("The second edition", "read/v2.html")),
          extra_head='<link rel="stylesheet" href="../assets/reader.css">\n<script defer src="../assets/reader.js"></script>\n', wide=True)
 
@@ -733,7 +733,7 @@ def build_versions(frozen_md, parts, pub):
 <p class="small dim">The table and the deltas are computed by the newsroom's <code>page_versions.py</code> (newsroom v0.12.113), copied into <code>admin/build/</code> as the brief asked rather than rewritten. Each version is frozen as one markdown file by the release that made it and never rewritten; the frozen file for v1.0.0 is <a href="v1.0.0.md">v1.0.0.md</a>, {words(chr(10).join(blocks(frozen_md))):,} words in {len(blocks(frozen_md)):,} blocks: the book as published, the {len(pub)} chapters of <a href="../generation-z-print-ready.pdf">the print PDF</a> (139 pages, sha256 {PDF_SHA[:12]}…) and the Leanpub build. The drafts the build left out are not part of any version; they are kept as <a href="../book/drafts.md">v1/book/drafts.md</a> and shown <a href="../book/drafts.html">on their own page</a>.</p>
 {diffs}
 <h2 id="candidates">Release candidates of the second edition</h2>
-<p class="small">A candidate is a draft of the next edition written in this repository for Dinis to read and mark up (<a href="../../decisions/index.html#release-candidates-live-in-the-repository">decision 008</a>). It is frozen once, like a version, so that what was read cannot change; it is not official and nothing is published from it outside this site. {cand_html}</p>
+<p class="small">A candidate is a draft of the next edition written in this repository for Dinis to read and mark up (<a href="../../decisions/index.html#a-candidate-is-read-on-the-site-from-a-frozen-snapshot">decision 009</a>). It is frozen once, like a version, so that what was read cannot change; it is not official and nothing is published from it outside this site. {cand_html}</p>
 <h2 id="record">The record</h2>
 <div class="tablewrap"><table><thead><tr><th>Version</th><th>Date</th><th>Where</th><th>What it is</th></tr></thead><tbody>{rows}</tbody></table></div>
 <h2 id="source">Where v1.0.0 comes from</h2>
@@ -1111,7 +1111,7 @@ def build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib,
     v2card = ""
     if v2:
         v2card = (f'<div class="card big v2"><span class="k">The second edition &middot; {esc(v2["version"])} &middot; release candidate, not a version</span>'
-                  f'<h3><a href="v2/book/index.html">Generation Z Developers, second edition: the first end-to-end draft</a></h3>'
+                  f'<h3><a href="v2/book/index.html">Gen Z Developers (GenAI Edition): the first end-to-end draft</a></h3>'
                   f'<p>{v2["chapters"]} chapters in {v2["parts"]} parts, {v2["words"]:,} words, written by the book\'s agents from {v2["ideas"]} ideas in the register and the articles behind them, for Dinis to read, print and mark up. Every chapter ends with where it came from; {v2["callouts"]} notes say what only Dinis can fill in.</p>'
                   f'<p class="stats"><span class="stat"><b>{v2["chapters"]}</b><span>chapters</span></span><span class="stat"><b>{v2["words"]:,}</b><span>words</span></span><span class="stat"><b>{v2["ideas"]}</b><span>ideas written in</span></span><span class="stat"><b>{v2["callouts"]}</b><span>for Dinis</span></span></p>'
                   f'<span class="more"><a href="v2/book/index.html">The contents &rarr;</a> &nbsp; <a href="read/v2.html">Read and review &rarr;</a> &nbsp; <a href="v2/book/single.html">On one page &rarr;</a>'

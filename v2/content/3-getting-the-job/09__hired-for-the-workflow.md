@@ -11,7 +11,7 @@ gravity: all
 status: draft
 ---
 
-In 2018 I wrote that the best way to get a job is to have one competitive advantage. One activity or task that you can do better than the person or company hiring you. In the 1990s, for a lot of companies, it was simply that you could use a computer. In the 2000s it was using the internet. In the early days of software development or security, all it took was good programming or hacking experience. The first edition then gave a list of what that advantage could be in 2018: ML/AI, graphs, chaos engineering, GitHub, Git, Jira, Creative Commons licences, continuous integration, AWS, WallabyJs. Ten items, and a chapter on most of them.
+In 2018 I wrote that the best way to get a job is to have one competitive advantage. One activity or task that you can do better than the person or company hiring you. In the 1990s, for a lot of companies, it was simply that you could use a computer. In the 2000s it was using the internet. In the early days of software development or security, all it took was good programming or hacking experience. The first edition then gave a list of what that advantage could be in 2018: ML/AI, graphs, chaos engineering, GitHub, Git, Jira, Creative Commons licences, continuous integration, AWS, WallabyJs.
 
 I am not going to give you a list this time. In 2026 I think the answer is one thing: running agentic workflows. Knowing how to brief an agent, give it a boundary, check what comes back, and glue the pieces together until real work gets done. That is the advantage. This chapter is about why, and about the first place it shows, which is before anyone has met you.
 
@@ -31,7 +31,7 @@ The first edition had an outline on impostor syndrome that I never wrote up. Its
 
 ## Operators, not model builders
 
-The 2018 edition had a chapter on machine learning and AI. It said this was the next major revolution in technology, and that the question was whether you were going to be a player or a pawn in it. It pointed at the cloud providers' machine learning services and said that, as a developer, you would soon be asked to write code that integrates with them. That was the right direction and the wrong detail. What arrived was not a library you call from your code. It was software you can talk to, and that can build software.
+The 2018 edition had a chapter on machine learning and AI. It said this was the next major revolution in technology, and that the question was whether you were going to be a player or a pawn in it. It said that, as a developer, you would soon be asked to write code that integrates with machine learning services. The direction was right and the detail was wrong: what arrived was not a library you call from your code, but software you can talk to, and that can build software.
 
 The detail matters because of what companies did with it. In the first wave of corporate AI hiring, when there was a lot of budget, the only people companies knew how to hire were people who did machine learning and wanted to build models. LinkedIn's 2020 emerging jobs report put "AI specialist" at the top, defined by skills like machine learning, deep learning and TensorFlow. For most companies that was the last thing they needed.
 
@@ -41,15 +41,11 @@ The data points the same way, and I will give it to you with its limits. In Micr
 
 ## When all things are equal
 
-Think about how hiring actually works, from the other side of the table. However good you are, there is always a moment when someone has to make a decision. It is very unlikely that you are so good at something that you are the only choice. Usually, once the job spec is mapped, two or three people look roughly equal. The question in the hiring manager's head is a plain one: why should I hire you?
+Think about how hiring actually works. However good you are, there is always a moment when someone has to make a decision. It is very unlikely that you are so good at something that you are the only choice. Usually, once the job spec is mapped, two or three people look roughly equal. The question in the hiring manager's head is a plain one: why should I hire you?
 
-My bet is: because you work this way. If you know how to run these agentic workflows and map a problem out, you have a real edge, and it shows from the very first step. Two candidates match the job specification equally well. One sends a CV. The other sends a CV fitted to the role, a short analysis of the company's problem, and an infographic or a small working site they have not seen before. The interview starts from that material, on the candidate's strengths, instead of from the gaps in a CV.
+My bet is: because you work this way. If you know how to run these agentic workflows and map a problem out, you have a real edge, and it shows from the very first step. Two candidates match the job specification equally well. One sends a CV. The other sends a CV fitted to the role, a short analysis of the company's problem, and an infographic or a small working site they have not seen before. The interview starts from that material, on the candidate's strengths, instead of from the gaps in a CV. An edge is not a job. It helps when the choice is close, and the choice is nearly always close.
 
-An edge is not a job. It helps when the choice is close, and the choice is nearly always close.
-
-## It starts with the application
-
-So it starts with the recruitment process itself. You send a CV customised for that role. You do an analysis of the company and its problem. You give them something that impresses them: a graph of their market, an infographic, a small site, something they have not seen before. That is exactly the work these tools make cheap. Each of those used to take days a candidate did not have. Now the question is only whether you know how to brief it and check it.
+So it starts with the recruitment process itself. You send a CV customised for that role. You do an analysis of the company and its problem. You give them something that impresses them: a graph of their market, an infographic, a small site, something they have not seen before. That is exactly the work these tools make cheap.
 
 I know this works because it worked for me, long before agents. I got jobs because of my OWASP work. I remember one interview where they already knew my OWASP project, so I spent half the interview talking about the tool they had been trying to use, and giving them insights on how to use it better. I got the job. Instead of them looking for gaps in my CV, or wondering where I might fit, we had a great conversation, and I was playing from a position of strength. Of course I was a good fit; but the conversation started from what I could do, not from what my CV did not say.
 

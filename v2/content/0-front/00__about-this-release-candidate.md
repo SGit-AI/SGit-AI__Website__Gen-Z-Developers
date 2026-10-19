@@ -5,12 +5,12 @@ part: front
 number: 0
 ideas: []
 answers_2018: []
-sources: [agent:the-book-as-a-graph, dec:008, art:read-comment-decide]
+sources: [agent:the-book-as-a-graph, dec:008, dec:009, art:read-comment-decide]
 character: guide
 gravity: all
 status: draft
 ---
-This is the first end-to-end draft of the second edition of *Generation Z Developers*, and it was not written the way the first edition was. In 2018 Dinis wrote the chapters himself, in a public repository, and readers sent fixes as GitHub issues. In 2026 the text in your hands was written in a day, by the book's agents, from a register of ideas that Dinis had already said in his own words.
+This is the first end-to-end draft of *Gen Z Developers (GenAI Edition)*, the second edition of the 2018 book, and it was not written the way the first edition was. In 2018 Dinis wrote the chapters himself, in a public repository, and readers sent fixes as GitHub issues. In 2026 the text in your hands was written in a day, by the book's agents, from a register of ideas that Dinis had already said in his own words.
 
 Here is how that works, so that you know what you are reading.
 
@@ -22,6 +22,6 @@ So this is a candidate, not a version. The first edition is still the only offic
 
 The voice is Dinis's throughout, in the first person, because the material is his: his memos, his articles, his 2018 book. Where a chapter sounds like him, that is the material doing its work. Where it does not, that is the agents', and it is exactly what the review is for. The verbs Dinis uses to answer are the ones the book's process gives him: keep, rewrite, merge, cut, article first, later, not doing it. Each one, on an idea or on a chapter, becomes a decision recorded in the book's vault, and the next candidate carries it.
 
-Two things are not decided and stand in this draft as placeholders. The title and subtitle of the second edition: the 2018 subtitle is used until Dinis chooses. And whether the hands-on part, which is dated 2026 and meant to be renewed each year, lives inside the book or as a companion; it is included here so that the decision can be made by reading it.
+One thing is decided and one is not. The title is *Gen Z Developers (GenAI Edition)*: Dinis chose it on 19 October 2026, while this draft was being written, closing a question the articles had kept open. Whether the hands-on part, which is dated 2026 and meant to be renewed each year, lives inside the book or as a companion is still his; it is included here so that the decision can be made by reading it.
 
 Read it as a reader first. Then, if you are Dinis, read it with a pen.

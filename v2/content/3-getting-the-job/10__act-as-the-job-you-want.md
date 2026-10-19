@@ -37,7 +37,7 @@ If you came out of a computing degree and work carefully, by hand, you may feel 
 
 It is the same for any job. If you want to be an artist, publish what you make. If you want to be a security engineer, find vulnerabilities in open-source projects and report them properly; the first edition had an outline on bug bounties that only got as far as "big business these days", and that is still the shortest honest description of them. If you want to be a product manager, write the product brief for a product you love and send it to the team. Act on the job you want to get.
 
-## Do it in public
+## Do it in public, and let people help you
 
 Do the work where it can be seen. A pull request on a public repository, a post that tags the company, an article on your own site, a project board anyone can open. Work done in private helps the company; work done in public helps the company and you, because it can be linked.
 
@@ -45,13 +45,9 @@ The link is the whole point, and it is why the rest of this chapter is about lin
 
 One caution, because unpaid work can be exploited. Choose projects where the work is yours to show, and stop if it is only taken.
 
-## Reach does not matter
-
 People sometimes look at what I publish and assume I have a lot of reach. I do not. Most of what I publish does not get read. On LinkedIn these days most of my posts get a hundred views, sometimes five hundred, and every now and then one reaches a thousand or more. That is fine. If you write for reach you will be disappointed, and you will stop.
 
 Publish anyway, because reach is not the point. The point is that you now have something you can link. And that changes what other people can do for you.
-
-## Let the people who want to help you help you
 
 There are people who want to help you: former colleagues, friends, people you met once at an event, people like me. The first edition's outline on mentors said you would be surprised by how approachable they are, and why: if you have the right attitude, the mentors see themselves in you, which is why most have a soft spot for helping. That is still my experience.
 
@@ -64,8 +60,6 @@ That is also why, if you are looking for a job, your CV should be online. Not on
 The first edition had a whole part called *Your CV*. It was a heading and a set of outlines: GitHub, LinkedIn, blogs, Leanpub, Upwork. I never wrote them up, but the notes say what I thought, and most of it holds. GitHub is your CV, the outline said, because it shows how you code and how you interact with others; your commits and pull requests show your voice; your accepted pull requests on other projects are badges of honour and belong on your CV; and the number of people using your tools is a better validation of your skills than any recommendation system. Keep the long tail of projects curated, because it is your research playground. On LinkedIn the notes were shorter: connect to people so that you can reach them, build the network, get recommendations, and expect a low signal-to-noise ratio. All of that is still true. What I would add in 2026 is that the GitHub that shows how you work with others is now also the GitHub your agent works in, so it shows how you work with agents too. That is the part a hiring manager in 2026 wants to see, and it is the one your degree did not give you.
 
 What a page like that looks like in practice: when I drafted the LinkedIn pages for my own companies this October, I did not write them from adjectives. I asked an agent to gather what the platform needed and what we had already published, and to draft every field from the record, with ten first posts for each page, every one an article or page already published. Then I published the drafts, before any page went up, because the drafting is part of the story. Your page can be made the same way: not "a motivated team player", but the three things you did, each with its link.
-
-## The bar is not high
 
 If you cannot yet open a GitHub account, connect it to an agent and have the agent build and edit a site for you, learn that first. The bar is not that high. It takes an afternoon, and the next chapter describes one way to do it, by voice memo. It is a critical skill, because it is the one that connects the dots: the work you do, the page that shows it, and the people who can pass it on.
 

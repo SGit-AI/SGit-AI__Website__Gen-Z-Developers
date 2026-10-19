@@ -7,7 +7,7 @@ ideas it is written from, the sources it drew on and the 2018 files it answers, 
 whose ideas, sources, part or 2018 files do not exist. A candidate is not an official version: it is frozen like
 one (text_sha256 recorded once in admin/content/book/versions.json under "candidates", the text written once to
 v2/versions/), so that what Dinis read and marked up cannot change behind him, but it is not in "versions", it is
-not published outside this site, and the publisher's rule holds (decision 008).
+not published outside this site, and the publisher's rule holds (decision 009).
 
 Called from build.py as build_v2(ctx) with the page/write/esc/md/sha helpers; pdf rendering is admin/build/print_pdf.js.
 """
@@ -23,7 +23,9 @@ SRC = ROOT / "v2/content"
 OUT = "v2/book/"
 
 CALLOUT = re.compile(r"^> \*\*For Dinis:\*\*\s*(.*?)$(?:\n^>\s?(.*?)$)*", re.M)
-BANNED = ["—", "–", " perfect", " prose", "massively", "get rid", "delve", "tapestry", "leverag", "utilis", "worth noting", "In this chapter", "dive in"]
+# the strings the build refuses outright; the writers' style check is wider (STYLE.md), but "perfect" in a quoted 2018 line and
+# "leverage" as Dinis's own noun ("places of highest leverage") are legitimate, so the gate leaves those to the editor
+BANNED = ["—", "–", " prose ", "massively", "get rid of", "delve", "tapestry", "utilis", "worth noting", "In this chapter", "dive in"]
 
 
 def frontmatter(text):
@@ -109,7 +111,7 @@ def load(graph_nodes, chapters_doc, ideas_doc):
 
 
 def frozen_markdown(book, cand):
-    out = [f"# Generation Z Developers, second edition\n\n*{cand['version']}, {cand['date']}. {cand['status']}*\n"]
+    out = [f"# Gen Z Developers (GenAI Edition)\n\n*{cand['version']}, {cand['date']}. {cand['status']}*\n"]
     if book["front"]:
         out.append(f"## {book['front']['title']}\n\n{book['front']['body']}\n")
     for p in book["parts"]:
@@ -202,7 +204,7 @@ def build_v2(ctx):
     notice = (f'<div class="rc-note"><b>A release candidate, not a version.</b> This is {esc(ver)} of the second edition: every chapter written by the book\'s agents '
               f'from <a href="../../graph/ideas/index.html">the ideas register</a>, for Dinis to read, print and mark up. Nothing in it is signed off. '
               f'The first edition, <a href="../../v1/book/index.html">v1.0.0</a>, is the only official version; the candidate\'s text is frozen at '
-              f'<a href="../versions/{esc(ver)}.md">v2/versions/{esc(ver)}.md</a> so that what was read cannot change behind the reader (<a href="../../decisions/index.html#release-candidates-live-in-the-repository">decision 008</a>).</div>')
+              f'<a href="../versions/{esc(ver)}.md">v2/versions/{esc(ver)}.md</a> so that what was read cannot change behind the reader (<a href="../../decisions/index.html#a-candidate-is-read-on-the-site-from-a-frozen-snapshot">decision 009</a>).</div>')
     # one page per chapter
     for i, (p, c) in enumerate(flat):
         rel = f"{OUT}{c['slug']}.html"
@@ -210,7 +212,7 @@ def build_v2(ctx):
         body_html = callout_html(md(c["body"]))
         main = (f'<article class="chapter v2"><p class="small dim">{esc(p["title"])} &middot; chapter {c["number"]} of {n} &middot; {badge()} &middot; {c["words"]:,} words &middot; '
                 f'<a href="{up}read/v2.html#{esc(c["slug"])}">read and review</a></p><h1>{esc(c["title"])}</h1><div class="body">{body_html}</div>{provenance(c, up)}{nav(i)}</article>')
-        page(rel, c["title"], main, f"{c['title']}: chapter {c['number']} of Generation Z Developers, second edition, release candidate {ver}.",
+        page(rel, c["title"], main, f"{c['title']}: chapter {c['number']} of Gen Z Developers (GenAI Edition), release candidate {ver}.",
              crumbs=(("The second edition", OUT + "index.html"), (p["title"], f"{OUT}index.html#{p['id']}"), (c["title"], rel)))
         manifest["chapters"].append({"file": c["file"], "page": rel, "title": c["title"], "part": p["title"], "number": c["number"], "words": c["words"],
                                      "ideas": c["ideas"], "markdown_sha256": c["sha"], "main_sha256": sha(main)})
@@ -219,7 +221,7 @@ def build_v2(ctx):
         rel = f"{OUT}{f['slug']}.html"
         main = (f'<article class="chapter v2"><p class="small dim">Front matter &middot; {badge()} &middot; {f["words"]:,} words</p><h1>{esc(f["title"])}</h1>'
                 f'<div class="body">{callout_html(md(f["body"]))}</div><div class="prevnext"><a href="index.html">&larr; The contents</a><a href="{flat[0][1]["slug"]}.html">{esc(flat[0][1]["title"])} &rarr;</a></div></article>')
-        page(rel, f["title"], main, f"{f['title']}: the front matter of Generation Z Developers, second edition, release candidate {ver}.",
+        page(rel, f["title"], main, f"{f['title']}: the front matter of Gen Z Developers (GenAI Edition), release candidate {ver}.",
              crumbs=(("The second edition", OUT + "index.html"), (f["title"], rel)))
         manifest["chapters"].append({"file": f["file"], "page": rel, "title": f["title"], "part": "Front matter", "number": 0, "words": f["words"], "ideas": [],
                                      "markdown_sha256": f["sha"], "main_sha256": sha(main)})
@@ -233,7 +235,7 @@ def build_v2(ctx):
         toc.append(f'<li id="{esc(p["id"])}"><div class="part"><span class="n">{pi}</span>{esc(p["title"])} <span class="w">{len(p["chapters"])} chapters</span></div>{intro}<ol start="{p["chapters"][0]["number"]}">{items}</ol></li>')
     front_li = f'<li><a href="{book["front"]["slug"]}.html">{esc(book["front"]["title"])}</a> <span class="w">front matter</span></li>' if book["front"] else ""
     n_ideas = len({i for c in book["chapters"] for i in c["ideas"]})
-    body = f"""<h1>Generation Z Developers, second edition</h1>
+    body = f"""<h1>Gen Z Developers (GenAI Edition)</h1>
 <p class="lede">Release candidate {esc(ver)}, {esc(cand["date"])}: {n} chapters in {len(book["parts"])} parts, {book["words"]:,} words, written from {n_ideas} of the {len(ideas)} ideas in the register, with {len(all_callouts)} places where only Dinis can fill in what is missing. {esc(cand.get("what", ""))}</p>
 {notice}
 <p class="stats"><span class="stat"><b>{n}</b><span>chapters</span></span><span class="stat"><b>{book["words"]:,}</b><span>words</span></span><span class="stat"><b>{n_ideas}</b><span>ideas written in</span></span><span class="stat"><b>{len(all_callouts)}</b><span>for Dinis</span></span></p>
@@ -244,7 +246,7 @@ def build_v2(ctx):
 <p class="small dim">Source: <code>v2/content/</code>, one markdown file per chapter with the ideas, sources and 2018 files it was written from in its front matter; <code>admin/build/book_v2.py</code> renders these pages and refuses a chapter that cites an idea, source, part or file that does not exist. Manifest: <a href="manifest.json">manifest.json</a>.</p>
 """
     page(OUT + "index.html", f"The second edition, release candidate {ver}", body,
-         f"Generation Z Developers, second edition, release candidate {ver}: {n} chapters written from the ideas register, for Dinis to read and mark up.",
+         f"Gen Z Developers (GenAI Edition), release candidate {ver}: {n} chapters written from the ideas register, for Dinis to read and mark up.",
          crumbs=(("The second edition", OUT + "index.html"),))
     # what waits on Dinis
     rows = "".join(f'<li><a href="{esc(c["slug"])}.html">{esc(c["title"])}</a>: {esc(x)}</li>' for c, x in all_callouts)
@@ -272,14 +274,14 @@ def build_v2(ctx):
     front_html = f'<section class="pr-chapter front" id="{esc(book["front"]["slug"])}"><h2>{esc(book["front"]["title"])}</h2><div class="body">{callout_html(md(book["front"]["body"]))}</div></section>' if book["front"] else ""
     back = "".join(f'<li><b>{esc(c["title"])}:</b> {esc(x)}</li>' for c, x in all_callouts)
     single = f"""<article class="printbook">
-<section class="pr-title"><p class="pr-k">Second edition &middot; release candidate {esc(ver)} &middot; {esc(cand["date"])}</p><h1>Generation Z Developers</h1><p class="pr-sub">Key concepts and ideas for the next generation of developers</p><p class="pr-by">Dinis Cruz</p>
-<p class="pr-note">{esc(cand["status"])} The first edition (2018) is the only official version. This candidate was written by the book's agents from the ideas register and is for reading and marking up. Its text is frozen as v2/versions/{esc(ver)}.md; the second edition's title and subtitle are not decided (the 2018 subtitle stands in). Text: CC BY 4.0.</p></section>
+<section class="pr-title"><p class="pr-k">Second edition &middot; release candidate {esc(ver)} &middot; {esc(cand["date"])}</p><h1>Gen Z Developers</h1><p class="pr-sub">GenAI Edition</p><p class="pr-by">Dinis Cruz</p>
+<p class="pr-note">{esc(cand["status"])} The first edition (2018) is the only official version. This candidate was written by the book's agents from the ideas register and is for reading and marking up. Its text is frozen as v2/versions/{esc(ver)}.md; the title is Dinis's decision of 19 October 2026 (decision 010). Text: CC BY 4.0.</p></section>
 <section class="pr-toc"><h1>Contents</h1><ol>{toc_print}</ol></section>
 {front_html}
 {"".join(parts_html)}
 <section class="pr-part back" id="for-dinis"><p class="pr-partn">Back matter</p><h1>What only Dinis can fill in</h1><p>The {len(all_callouts)} notes left in the chapters, collected.</p><ul>{back}</ul></section>
 </article>"""
-    page(OUT + "single.html", f"Generation Z Developers, second edition, {ver}, on one page", single,
+    page(OUT + "single.html", f"Gen Z Developers (GenAI Edition), {ver}, on one page", single,
          f"The whole release candidate {ver} of the second edition on one page, for reading and printing.",
          crumbs=(("The second edition", OUT + "index.html"), ("On one page", OUT + "single.html")),
          extra_head='<link rel="stylesheet" href="../../assets/print-book.css">\n')
@@ -294,8 +296,8 @@ def build_v2(ctx):
                          "gap": "", "terms": [], "related": [],
                          "blocks": [{"id": f"{c['slug']}-{k + 1}", "html": b, "words": len(re.findall(r"\w+", re.sub(r"<[^>]+>", " ", b)))} for k, b in enumerate(blocks_)]})
     fb = split_blocks(callout_html(md(book["front"]["body"]))) if book["front"] else []
-    doc = {"what": f"Generation Z Developers, second edition, release candidate {ver}, as data for the reader at read/v2.html. Generated by book_v2.py from v2/content/.",
-           "version": ver, "candidate": f"release candidate {ver}", "site": ctx["version"], "title": "Generation Z Developers, second edition", "subtitle": "Release candidate " + ver,
+    doc = {"what": f"Gen Z Developers (GenAI Edition), release candidate {ver}, as data for the reader at read/v2.html. Generated by book_v2.py from v2/content/.",
+           "version": ver, "candidate": f"release candidate {ver}", "site": ctx["version"], "title": "Gen Z Developers (GenAI Edition)", "subtitle": "Release candidate " + ver,
            "print_pdf": ("../" + pdf_rel) if pdf_exists else None, "cover": None,
            "parts": [{"slug": p["id"], "title": p["title"], "print_page": None, "intro_html": md(p["intro"]) if p["intro"] else ""} for p in book["parts"]],
            "front": {"slug": book["front"]["slug"] if book["front"] else "about", "title": book["front"]["title"] if book["front"] else "About", "print_page": None,

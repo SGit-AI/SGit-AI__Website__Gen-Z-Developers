@@ -1819,11 +1819,11 @@
    ],
    "answers": [],
    "topic": "making-of",
-   "chapter": null,
-   "destination": "undecided",
-   "state": "candidate",
-   "decided_by": null,
-   "notes": "Dinis's open question; the editor adds it to the title interview (issue 002).",
+   "chapter": "how-this-book-was-made",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, 19 October 2026, in the session that wrote release candidate 1: the title is Gen Z Developers (GenAI Edition) (decision 010)",
+   "notes": "Decided: the edition carries the name GenAI Edition in its title. Whether Gen Alpha is a future reader stays open for the title interview.",
    "gravity": "all"
   },
   {

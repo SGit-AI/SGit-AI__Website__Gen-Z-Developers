@@ -94,13 +94,13 @@ site.
 
 ## The release candidate (v2/)
 
-`v2/content/` is the second edition as a release candidate, decided by Dinis on 19 October 2026 (decision 008): one
+`v2/content/` is the second edition as a release candidate, decided by Dinis on 19 October 2026 (decisions 008 and 009): one
 markdown file per chapter, whose front matter names the ideas it was written from, the sources it drew on and the 2018
 files it answers; `admin/build/book_v2.py` renders `v2/book/` and refuses a chapter that cites an idea, source, part or
 file that does not exist, or that uses a banned string (an em-dash among them). A candidate is frozen once (text to
 `v2/versions/<candidate>.md`, hash under `candidates` in `admin/content/book/versions.json`): do not edit a frozen
 candidate's text; Dinis's feedback becomes the next candidate (`-rc2`), added with `text_sha256: null`, and the chapter
-files change then. A candidate is not a version and nothing is published from it outside this site. The PDF is made
+files change then. A candidate is not a version and nothing is published from it outside this site; its working copy is the vault's `book/rc<N>/`, and `v2/content/` is the frozen snapshot the site renders. The PDF is made
 by `node admin/build/print_pdf.js` after the build and committed; CI does not render it.
 
 ## When a new version of the book comes in

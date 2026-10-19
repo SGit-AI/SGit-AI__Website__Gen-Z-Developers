@@ -29,7 +29,7 @@ The interesting property of generative AI is in the name: it generates the outpu
 
 Inside a language model, what happens is that it predicts the next word. That sounds small. I wrote in the newsroom, in *Who owns the words*, that "predicting the next word" is accurate and demeaning at the same time. It is accurate because that is the mechanism. It is demeaning because of what the prediction is made from: an incredibly rich picture of the world, of how things connect, which the model narrows down based on your prompt.
 
-That is why the better your prompt, the better the output. When I talk to a model for ten minutes before I ask it for anything, as I did for the article this chapter comes from, it is not politeness. The model knows better which concepts I am talking about. The prompt pulls it towards the part of what it knows that I mean.
+That is why the better your prompt, the better the output. When I talk for ten minutes before I ask for anything, as I did in the memo this chapter comes from, it is not politeness. The model knows better which concepts I am talking about. The prompt pulls it towards the part of what it knows that I mean.
 
 ## Where hallucinations come from
 
@@ -70,6 +70,6 @@ Keep both halves. The picture is how I work with these models every day, and it 
 
 ## A note on the name
 
-Most of what this book says should say generative AI, not AI. This edition has been described as the AI edition; maybe it should be the Gen AI edition, because there is a play in it: Gen Z, Gen AI. And after Gen Z comes Gen Alpha. Mark McCrindle, who named them, puts them as born from 2010 to 2024, so the oldest are sixteen in 2026, and after them Gen Beta, from 2025. The boundaries are not official; no body sets them. If you are reading this and you are sixteen, the book is for you too.
+Most of what this book says should say generative AI, not AI. For a while this edition was described as the AI edition; I decided, while the first draft of it was being written, that it is the *GenAI Edition*, because there is a play in it: Gen Z, Gen AI. And after Gen Z comes Gen Alpha. Mark McCrindle, who named them, puts them as born from 2010 to 2024, so the oldest are sixteen in 2026, and after them Gen Beta, from 2025. The boundaries are not official; no body sets them. If you are reading this and you are sixteen, the book is for you too.
 
-> **For Dinis:** the Gen AI edition: yes, no, or a subtitle? The article leaves it to the title interview.
+> **For Dinis:** is Gen Alpha a reader of this edition, or of the next one? The other half of the name question, still for the title interview.

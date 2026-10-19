@@ -21,7 +21,7 @@ The model can do that because it has the frame of reference. It holds all those 
 
 Take one idea, recursion, and put it through five lenses. For a teenager, a meme of a meme. For a musician, a round, sung over itself. For a doctor, cells dividing into cells. For a football fan, the replay of the replay. In Portuguese, *recursividade*. Same idea, five ways in, and to the model the fifth is no different from the other four.
 
-It is the same with people who say they are not good at maths. Watch them in their day-to-day and they do a huge amount of maths: rotas, budgets, stock levels, the odds of a result. They are just not good at the kind of maths we decided was maths: sums, calculus, trigonometry, algebra. Mathematics is much more than that. It was the lens that was wrong, not the person, and that is why this book keeps showing multiple lenses. *One idea, five lenses* in the hands-on part lets you try it on an idea of your own.
+It is the same with people who say they are not good at maths. Watch them in their day-to-day and they do a huge amount of maths: rotas, budgets, stock levels. They are just not good at the kind of maths we decided was maths: sums, calculus, trigonometry, algebra. Mathematics is much more than that. It was the lens that was wrong, not the person, and that is why this book keeps showing multiple lenses. *One idea, five lenses* in the hands-on part lets you try it on an idea of your own.
 
 ## A role is a model with a description
 

@@ -11,7 +11,7 @@
    "text_sha256": "cc0b4ced52006deb8b9c71f5253dc9e4d7d21f32c91da434579a08ef242293ce"
   }
  ],
- "candidates_what": "Release candidates of the next edition, oldest first: drafts written in this repository under v2/content/ for Dinis to read and mark up (decision 008). Not versions: not official, not published outside this site. text_sha256 is filled in once by the build from the candidate's assembled markdown, frozen at v2/versions/<version>.md; a change to the text after that is the next candidate.",
+ "candidates_what": "Release candidates of the next edition, oldest first: drafts written in this repository under v2/content/ for Dinis to read and mark up (decisions 008 and 009). Not versions: not official, not published outside this site. text_sha256 is filled in once by the build from the candidate's assembled markdown, frozen at v2/versions/<version>.md; a change to the text after that is the next candidate.",
  "candidates": [
   {
    "version": "v2.0.0-rc1",
@@ -20,7 +20,8 @@
    "what": "The first end-to-end draft of the second edition, written by the book's agents from the ideas register (106 ideas, 50 of them Dinis's own positions from his co-written articles) and the articles, decisions and 2018 text behind them, in the proposed chapter map's order; the hands-on part, dated 2026, is included so that Dinis can decide whether it stays inside the book or becomes a companion. Where only Dinis can supply something, the chapter says so in a note.",
    "text_sha256": null,
    "frozen": "v2/versions/v2.0.0-rc1.md",
-   "decided_by": "Dinis, 19 October 2026 (decision 008)"
+   "decided_by": "Dinis, 19 October 2026 (decisions 008 and 009)",
+   "title": "Gen Z Developers (GenAI Edition)"
   }
  ]
 }

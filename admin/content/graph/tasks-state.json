@@ -260,8 +260,8 @@
    "evidence": "no style notes for the drafts exist"
   },
   "generative-ai-not-ai:editor:3": {
-   "state": "open",
-   "evidence": "002__the-title-the-subtitle-and-the-language.md does not mention Gen AI yet"
+   "state": "in-progress",
+   "evidence": "Dinis decided the title on 19 October 2026: Gen Z Developers (GenAI Edition) (decision 010); the editor's issue 002 (title, subtitle, language) has the title to record and the subtitle still to settle"
   },
   "generative-ai-not-ai:editor:4": {
    "state": "blocked",
