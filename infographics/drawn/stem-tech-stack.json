@@ -1,0 +1,29 @@
+{
+ "id": "stem-tech-stack",
+ "proposal": "stem-tech-stack",
+ "form": "comparison",
+ "align_rows": false,
+ "kicker": "The 2018 draft STEM Tech Stack, redrawn",
+ "title": "Mapping the tech stack per generation",
+ "subtitle": "The three figures the 2018 chapter linked and the 2018 repository never rendered, drawn from the lists under them. What is struck through is struck through in the 2018 text.",
+ "alt": "Three columns, Gen X, Gen Y and Gen Z. Gen X: brain, pen, paper, scientific calculator. Gen Y keeps the brain and pen and paper, strikes the scientific calculator, and adds spreadsheets, computer, mobile, internet, email and data center. Gen Z keeps brain and pen and paper, adds AI and ML and voice, and strikes the calculator, spreadsheets, computer and mobile, internet, email and data center.",
+ "quote_source": "v1/content/1.introduction/stem-tech-stack.md",
+ "columns": [
+  {"heading": "Gen X", "colour": "navy", "items": [
+   {"label": "Brain"}, {"label": "Pen"}, {"label": "Paper"}, {"label": "Scientific Calculator"}]},
+  {"heading": "Gen Y", "colour": "teal", "items": [
+   {"label": "Brain"}, {"label": "Pen and Paper"}, {"label": "Scientific Calculator", "state": "gone"},
+   {"label": "Spreadsheets", "state": "new"}, {"label": "Computer", "state": "new"}, {"label": "Mobile", "state": "new"},
+   {"label": "Internet", "state": "new"}, {"label": "Email", "state": "new"}, {"label": "Data Center", "state": "new"}]},
+  {"heading": "Gen Z", "colour": "green", "items": [
+   {"label": "Brain"}, {"label": "Pen and Paper"},
+   {"label": "AI and ML", "detail": "AI (Artificial Intelligence) and ML (Machine Learning)", "state": "new"},
+   {"label": "voice", "detail": "(to add to diagram)", "state": "new"},
+   {"label": "Scientific Calculator", "state": "gone"}, {"label": "Spreadsheets", "state": "gone"},
+   {"label": "Computer and Mobile", "detail": "merge and eventually disappear", "state": "gone"},
+   {"label": "Internet", "detail": "disappears since it becomes a commodity where everything is connected to it", "state": "gone"},
+   {"label": "Email", "state": "gone"}, {"label": "Data Center", "state": "gone"}]}
+ ],
+ "legend": "The 2018 text left most items as \"...\", to be written; the labels here are its words and nothing is added. Gen Z's 2018 list says \"AI and LM\" in its label and \"ML\" in its gloss; the label follows the gloss.",
+ "source_line": "Source: v1/content/1.introduction/stem-tech-stack.md, the 2018 draft STEM Tech Stack (CC BY 4.0, decision 001). Figures STEM-tech-stack_001 to _003 were linked from puml-graphs/diagrams/stem/ and never generated."
+}

@@ -1,0 +1,132 @@
+{
+ "id": "reach-mandate-gap",
+ "proposal": "reach-mandate-gap",
+ "form": "graph",
+ "kicker": "Chapter 25 · Controlling your agent",
+ "title": "Reach, mandate, gap and barrier",
+ "subtitle": "Before you give an agent access, write down four things. A control bounds a grant only if it is enforced by something the grant does not include.",
+ "alt": "A large box labelled reach, what the credential actually lets it touch, holds a smaller box, the mandate, what you authorised it to do. The rest of the reach is the gap, authority nobody ever accepted. Each capability in the gap points to its barrier, what actually stands in the way, which is one of four kinds: nothing, a rule written in the prompt, a setting the agent's own account can change, or a boundary enforced above the agent, out of its reach; only the last bounds anything.",
+ "grid": {
+  "cols": 4,
+  "rows": 3,
+  "row_height": 180,
+  "node_width": 320
+ },
+ "zones": [
+  {
+   "label": "Reach: what the credential actually lets it touch",
+   "cols": [
+    0,
+    2
+   ],
+   "rows": [
+    0,
+    2
+   ],
+   "colour": "yellow",
+   "label_col": 1
+  },
+  {
+   "label": "",
+   "cols": [
+    0,
+    0
+   ],
+   "rows": [
+    0,
+    2
+   ],
+   "colour": "green"
+  }
+ ],
+ "nodes": [
+  {
+   "id": "m",
+   "col": 0,
+   "row": 1,
+   "label": "Mandate",
+   "detail": "what you authorised it to do",
+   "colour": "green",
+   "width": 280
+  },
+  {
+   "id": "g1",
+   "col": 1,
+   "row": 0,
+   "label": "The gap",
+   "detail": "authority nobody ever accepted",
+   "colour": "red"
+  },
+  {
+   "id": "g2",
+   "col": 1,
+   "row": 1,
+   "label": "Every capability in the gap",
+   "detail": "needs its barrier",
+   "colour": "red"
+  },
+  {
+   "id": "g3",
+   "col": 1,
+   "row": 2,
+   "label": "Add a connector",
+   "detail": "the reach grows, the gap recomputes and a re-review follows",
+   "colour": "yellow"
+  },
+  {
+   "id": "b0",
+   "col": 3,
+   "row": 0,
+   "label": "Nothing",
+   "colour": "grey",
+   "width": 330
+  },
+  {
+   "id": "b1",
+   "col": 3,
+   "row": 1,
+   "label": "A rule written in the prompt",
+   "detail": "Rules in a prompt are hope",
+   "colour": "grey",
+   "width": 330
+  },
+  {
+   "id": "b2",
+   "col": 3,
+   "row": 2,
+   "label": "A boundary enforced above the agent",
+   "detail": "out of its reach: the only one that bounds anything",
+   "colour": "navy",
+   "solid": true,
+   "width": 330
+  }
+ ],
+ "edges": [
+  {
+   "from": "g2",
+   "to": "b0",
+   "label": "barrier?"
+  },
+  {
+   "from": "g2",
+   "to": "b1"
+  },
+  {
+   "from": "g2",
+   "to": "b2",
+   "hot": true
+  }
+ ],
+ "footnote": "The fourth kind of barrier, between the prompt and the boundary: a setting the agent's own account can change. The goal is the smallest mandate, the smallest reach, the smallest gap; the document with all four written down is the agent behaviour policy.",
+ "checked": [
+  "A control bounds a grant only if it is enforced by something the grant does not include.",
+  "what the credential actually lets it touch",
+  "what you authorised it to do",
+  "authority nobody ever accepted",
+  "for every capability in the gap, the **barrier**: what actually stands in the way",
+  "nothing; a rule written in the prompt; a setting the agent's own account can change; and a boundary enforced above the agent, out of its reach",
+  "Rules in a prompt are hope",
+  "Add a connector and the reach grows, the gap recomputes and a re-review follows."
+ ],
+ "source_line": "Source: chapter 25, Controlling your agent: RiskMandate (v2.0.0-rc2), from the newsroom's What can your agent reach? and RiskMandate's ten questions."
+}

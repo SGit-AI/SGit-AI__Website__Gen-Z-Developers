@@ -1,0 +1,45 @@
+{
+ "id": "read-comment-decide-loop",
+ "proposal": "read-comment-decide-loop",
+ "form": "cycle",
+ "radius": 250,
+ "kicker": "Chapter 41 · How this book was made",
+ "title": "One loop",
+ "subtitle": "My job in all of this is one loop. Not doing it is a valid decision, with its reason.",
+ "alt": "A loop of four steps around a centre that reads: small finished pieces beat one big review. One, I read an item. Two, I say what I think, in my own words. Three, I pick a verb from a short list: keep, fix, rewrite, merge, cut, article first, later, not doing it. Four, the editor records my comment word for word, turns the verb into a change in the working copy in the vault, and says where it went.",
+ "centre": {
+  "label": "Small finished pieces beat one big review.",
+  "detail": "a release candidate: a whole book, start to finish, that we could publish and do not yet"
+ },
+ "steps": [
+  {
+   "label": "I read an item",
+   "colour": "teal"
+  },
+  {
+   "label": "I say what I think, in my own words",
+   "colour": "green"
+  },
+  {
+   "label": "I pick a verb",
+   "detail": "keep, fix, rewrite, merge, cut, article first, later, not doing it",
+   "colour": "yellow"
+  },
+  {
+   "label": "The editor records my comment word for word",
+   "detail": "turns the verb into a change in the working copy in the vault, and says where it went",
+   "colour": "red"
+  }
+ ],
+ "checked": [
+  "My job in all of this is one loop.",
+  "Not doing it is a valid decision, with its reason",
+  "I read an item.",
+  "I say what I think, in my own words.",
+  "keep, fix, rewrite, merge, cut, article first, later, not doing it",
+  "The editor records my comment word for word, turns the verb into a change in the working copy in the vault, and says where it went.",
+  "Small finished pieces beat one big review.",
+  "A release candidate is a whole book, start to finish, that we could publish and do not yet"
+ ],
+ "source_line": "Source: chapter 41, How this book was made, and what you made (v2.0.0-rc2), from Read, comment, decide and The book in release mode (decisions 008 and 009)."
+}

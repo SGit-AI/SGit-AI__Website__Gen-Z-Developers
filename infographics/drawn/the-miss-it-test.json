@@ -1,0 +1,127 @@
+{
+ "id": "the-miss-it-test",
+ "proposal": "the-miss-it-test",
+ "form": "graph",
+ "kicker": "Chapter 18 · Ship it, and see if they miss it",
+ "title": "Ship it. Give it away. Take it away. Ask.",
+ "subtitle": "Then do whatever the answer tells you, including the thing you did not want to hear.",
+ "alt": "Four boxes in a row: ship, give it away, take it away, ask: do they miss it? Two branches. If they shrug and go back to their day, you do not have a product yet. If they come back and ask for it, you have something, and two questions follow: is the price one they are happy to pay, and is that price profitable for you? A note above: before you ask whether a stranger misses it, ask whether you would.",
+ "grid": {
+  "cols": 4,
+  "rows": 3,
+  "row_height": 200,
+  "node_width": 330
+ },
+ "nodes": [
+  {
+   "id": "you",
+   "col": 0,
+   "row": 0,
+   "label": "First, ask whether you would",
+   "detail": "would you pick up your own tool on Monday morning?",
+   "colour": "yellow"
+  },
+  {
+   "id": "ship",
+   "col": 0,
+   "row": 1,
+   "label": "Ship it",
+   "detail": "a thing somebody else can go and use, on their own, and get value from",
+   "colour": "teal"
+  },
+  {
+   "id": "give",
+   "col": 1,
+   "row": 1,
+   "label": "Give it away",
+   "detail": "free, for a short window",
+   "colour": "teal"
+  },
+  {
+   "id": "take",
+   "col": 2,
+   "row": 1,
+   "label": "Take it away",
+   "detail": "the trial ends; nothing else changes",
+   "colour": "teal"
+  },
+  {
+   "id": "ask",
+   "col": 3,
+   "row": 1,
+   "label": "Ask: do they miss it?",
+   "solid": true,
+   "colour": "navy"
+  },
+  {
+   "id": "shrug",
+   "col": 3,
+   "row": 0,
+   "label": "They shrug and go back to their day",
+   "detail": "you do not have a product yet",
+   "colour": "red"
+  },
+  {
+   "id": "back",
+   "col": 3,
+   "row": 2,
+   "label": "They come back and ask for it",
+   "detail": "you have something",
+   "colour": "green"
+  },
+  {
+   "id": "price",
+   "col": 1,
+   "row": 2,
+   "label": "Then two questions",
+   "detail": "Is the price one they are happy to pay? And is that price profitable for you?",
+   "colour": "green",
+   "width": 420
+  }
+ ],
+ "edges": [
+  {
+   "from": "you",
+   "to": "ship"
+  },
+  {
+   "from": "ship",
+   "to": "give"
+  },
+  {
+   "from": "give",
+   "to": "take"
+  },
+  {
+   "from": "take",
+   "to": "ask"
+  },
+  {
+   "from": "ask",
+   "to": "shrug",
+   "label": "no sense of loss"
+  },
+  {
+   "from": "ask",
+   "to": "back",
+   "label": "a why now",
+   "hot": true
+  },
+  {
+   "from": "back",
+   "to": "price",
+   "hot": true
+  }
+ ],
+ "checked": [
+  "Ship it. Give it away. Take it away. Ask.",
+  "Then do whatever the answer tells you, including the thing you did not want to hear.",
+  "If they shrug and go back to their day, you do not have a product yet.",
+  "If they come back and ask for it, you have something.",
+  "Is the price one they are happy to pay? And is that price profitable for you?",
+  "a thing somebody else can go and use, on their own, and get value from",
+  "you would not pick up your own tool on Monday morning",
+  "No sense of loss means no why now"
+ ],
+ "source_line": "Source: chapter 18, Ship it, and see if they miss it (v2.0.0-rc2), from the newsroom's The question is whether they miss it. One trap the chapter names: do not reach for a subscription by default."
+}

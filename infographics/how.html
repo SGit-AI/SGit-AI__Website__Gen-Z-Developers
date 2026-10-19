@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How they are made &mdash; gen-z-developers.sgit.ai</title>
+<meta name="description" content="How the book&#x27;s infographics are drawn from data, the palette, what the build refuses, and how to review them.">
+<link rel="canonical" href="https://gen-z-developers.sgit.ai/infographics/how.html">
+<meta property="og:title" content="How they are made">
+<meta property="og:description" content="How the book&#x27;s infographics are drawn from data, the palette, what the build refuses, and how to review them.">
+<meta property="og:url" content="https://gen-z-developers.sgit.ai/infographics/how.html">
+<meta property="og:type" content="article">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230c2a3d%27/%3E%3Crect x=%274%27 y=%276%27 width=%2711%27 height=%2720%27 fill=%27%237bc08f%27/%3E%3Crect x=%2717%27 y=%276%27 width=%2711%27 height=%2720%27 fill=%27%23e5625b%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Arial Black,Arial%27 font-weight=%27900%27 font-size=%2718%27 text-anchor=%27middle%27 fill=%27%230c2a3d%27%3EZ%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/graph.css">
+<link rel="stylesheet" href="../assets/infographics.css">
+<link rel="stylesheet" href="../assets/themes.css">
+<script src="../assets/site.js"></script>
+</head>
+<body>
+<nav class="site"><div class="row">
+<a class="brand" href="../index.html">gen-z-developers<span>.sgit.ai</span></a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+<div class="nav-items"><div class="ni"><a class="nl" href="../v1/book/index.html">The book<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../v1/book/index.html">The first edition</a><a class="sl" href="../v2/book/index.html">Second edition</a><a class="sl" href="../read/index.html">Read &amp; review</a><a class="sl" href="../readers/index.html">Synthetic readers</a><a class="sl" href="../v1/versions/index.html">Versions</a><a class="sl" href="../contributors/index.html">Contributors</a></div></div><div class="ni"><a class="nl" href="../storyboards/index.html">Storyboards<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../storyboards/index.html">Storyboards</a><a class="sl" href="../storyboards/all.html">Every panel</a><a class="sl" href="../storyboards/model-sheet.html">The model sheet</a></div></div><div class="ni"><a class="nl here" href="../infographics/index.html">Infographics<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../infographics/index.html">Infographics</a><a class="sl" href="../infographics/plan.html">The plan, and the review</a><a class="sl" href="../infographics/existing.html">What exists</a><a class="sl here" href="../infographics/how.html">How they are made</a></div></div><div class="ni"><a class="nl" href="../articles/index.html">Articles<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../articles/index.html">Articles</a><a class="sl" href="../decisions/index.html">Decisions</a><a class="sl" href="../briefs/index.html">The briefs</a></div></div><div class="ni"><a class="nl" href="../graph/index.html">The graph<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../graph/index.html">The graph</a><a class="sl" href="../map/index.html">The map</a></div></div><div class="ni"><a class="nl" href="../team/index.html">The team<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../team/index.html">The team</a><a class="sl" href="../vault/index.html">The vault</a><a class="sl" href="../admin/index.html">Admin</a></div></div></div>
+<div class="nav-tools"><div class="theme-pick"></div><span class="ver">site <a href="../admin/versions.html" title="Site release history">v0.2.32</a></span></div>
+</div></nav>
+<main><div class="inner">
+<div class="crumbs"><a href="../index.html">gen-z-developers.sgit.ai</a> &rarr; <a href="../infographics/index.html">Infographics</a> &rarr; <b>How they are made</b></div>
+<h1>How they are made, and how to review them</h1>
+<p class="lede">The infographics follow the rules the rest of this site follows: the source of truth is data in the repository, the picture is generated from it, and the build refuses what it can check is wrong.</p>
+<h2 id="altitudes">Four altitudes</h2>
+<p>The brief for the second edition asked for <i>an infographic at every altitude</i>: the whole book on one page, a view per part, an infographic per chapter and how they connect, the graph of each area. Every proposal names its altitude: <b>book</b> (1), <b>part</b> (5), <b>chapter</b> (74), <b>idea</b> (1).</p>
+<h2 id="methods">Methods</h2>
+<ul><li><b>code</b>: drawn from data by admin/build/infographic_svg.py: same data, same picture; corrected by changing a line <span class="small dim">(79 proposed)</span></li><li><b>redraw</b>: a 2018 figure drawn again by code, from the 2018 text <span class="small dim">(1 proposed)</span></li><li><b>reuse</b>: a newsroom figure used as it is, with its article <span class="small dim">(0 proposed)</span></li><li><b>image-model</b>: an illustrated picture from a written brief, by an image model; the brief is kept beside it <span class="small dim">(1 proposed)</span></li><li><b>storyboard</b>: a sequence of scenes with people, drawn by assets/storyboard.js <span class="small dim">(0 proposed)</span></li></ul>
+<p>Every chapter proposal came back as code, and that is the right default: an infographic in this book shows a structure (a loop, a test, a sum, who can read what), and structure drawn from data stays correct when the text changes. Image models earn their place where a mood matters more than a structure: the part openers are proposed that way, for Dinis to decide.</p>
+<h2 id="drawing">The drawing</h2>
+<ul>
+<li><b>Data.</b> <code>admin/content/infographics/drawn/&lt;id&gt;.json</code>: a form, a kicker, a title, a subtitle, the items, a source line and the alt text. The forms the code draws today: <code>comparison</code>, <code>flow</code>, <code>cycle</code>, <code>spectrum</code>, <code>quadrant</code>, <code>stack</code>, <code>numbers</code>, <code>checklist</code>, <code>graph</code>, <code>bookmap</code>.</li>
+<li><b>Code.</b> <code>admin/build/infographic_svg.py</code> turns a spec into a standalone SVG, 1600 pixels wide, with no browser and no library; the same spec gives the same file. <code>python3 admin/build/infographic_png.py</code> makes PNGs on demand, for a slide or a post.</li>
+<li><b>Palette.</b> The 2018 cover's: <span class="ig-sw" style="background:#0c2a3d"></span><code>navy #0c2a3d</code> <span class="ig-sw" style="background:#3b9fb0"></span><code>teal #3b9fb0</code> <span class="ig-sw" style="background:#7bc08f"></span><code>green #7bc08f</code> <span class="ig-sw" style="background:#e8b64a"></span><code>yellow #e8b64a</code> <span class="ig-sw" style="background:#e5625b"></span><code>red #e5625b</code>  on the storyboards' cream paper <code>#fbf7ee</code>. Navy is the answer, teal the way through, green what works, yellow a caution, red a risk or a loss. Struck through is gone; a navy tag says new. A dashed box is a placeholder or something on someone else's side.</li>
+<li><b>Type.</b> One sans family, bold for labels, regular for details; nothing under 17 pixels at 1600 wide, so it reads at half size on a page.</li>
+<li><b>The footer</b> names the source and the state: <i>drafted by code, not reviewed</i>, until Dinis has reviewed it.</li>
+<li><b>Printed pictures.</b> Like the storyboard panels, an infographic keeps its own colours in every theme of this site: it is the file that goes into the PDF.</li>
+</ul>
+<h2 id="rules">What the build refuses</h2>
+<ul>
+<li>A quote on a proposal, or a checked line on a drawing, that is not word for word in its chapter. The chapter is the authority; when it changes, the drawing has to change with it or the release stops.</li>
+<li>A proposal for a chapter, part, 2018 file, source or idea that does not exist; an unknown form, method or state.</li>
+<li>A decision without a name: a proposal marked accepted, changes, declined or deferred must say who decided and where.</li>
+<li>A proposal marked drafted with no drawing, and a drawing with no proposal.</li>
+<li>A 2018 image the text references with no row in the inventory.</li>
+</ul>
+<h2 id="states">States</h2>
+<ul><li><b>proposed</b>: written down by the agent; nothing drawn <span class="small dim">(71)</span></li><li><b>drafted</b>: drawn by code as a prototype, not reviewed <span class="small dim">(10)</span></li><li><b>accepted</b>: Dinis said yes; it goes into the next candidate <span class="small dim">(0)</span></li><li><b>changes</b>: Dinis asked for changes; the note says what <span class="small dim">(0)</span></li><li><b>declined</b>: Dinis said no, with the reason; kept, so it is not proposed again <span class="small dim">(0)</span></li><li><b>deferred</b>: not now; kept for a later candidate <span class="small dim">(0)</span></li></ul>
+<h2 id="review">How to review</h2>
+<ol>
+<li><b>Open <a href="plan.html">the plan</a></b>, on a laptop or an iPad. Start with the drawn ones (filter <i>State: drafted</i>), then priority 1.</li>
+<li><b>For each card</b>, press accept, change, decline or later, and write a line if you want: what to change, why not. It is kept in your browser only.</li>
+<li><b>Export</b> the review as markdown or JSON from the bar at the top of the plan, and put it in the vault's <code>reviews/</code> folder, or hand it to the agent.</li>
+<li><b>The agent records it</b>: each verdict becomes the proposal's state, with <code>decided_by</code> naming you and the review file, in the next release. Accepted ones are drawn; changed ones redrawn; declined ones kept with the reason, so nobody proposes them again.</li>
+</ol>
+<p class="small dim">Data: <a href="plan.json">plan.json</a>. The agent that keeps it: <a href="../team/illustrator/index.html">the illustrator</a>.</p>
+</div></main>
+<footer class="site"><div class="row">
+<span>Generation Z Developers, by Dinis Cruz. The 2018 text is Creative Commons BY 4.0, as Dinis decided on 18 October 2026: see <a href="../v1/versions/index.html#licence">the licence note</a>. Everything else on this site is CC BY 4.0; code under the repository licence.</span>
+<span>Part of <a href="https://sgit.ai">sgit.ai</a> &middot; <a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers">GitHub</a> &middot; <a href="../vault/index.html">the working vault</a> &middot; <a href="../admin/versions.html">release history</a> &middot; <a href="../llms.txt">llms.txt</a></span>
+</div></footer>
+</body>
+</html>

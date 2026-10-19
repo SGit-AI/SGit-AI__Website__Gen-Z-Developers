@@ -1,0 +1,10 @@
+{
+ "id": "the-book-on-one-page",
+ "proposal": "the-book-on-one-page",
+ "form": "bookmap",
+ "kicker": "The book at the top altitude · release candidate 2",
+ "title": "Generation ZX Developers, on one page",
+ "subtitle": "Every chapter of the release candidate, by part, in the printed order. A tile's height is the chapter's length; its colour is how the five synthetic readers held there. Drawn from the candidate and the study, not by hand: rebuild and it redraws.",
+ "alt": "The forty-one chapters of release candidate 2 in ten columns, one per part, each a tile as tall as the chapter is long, coloured from red (readers lost interest) to green (readers held). Part 1 and the making-of are mostly amber; the frame, working with agents and judgement are greener; the two company chapters, 22 and 37, are short dashed placeholders, and 37, 39, 40 and 41 carry the marks where readers put the book down.",
+ "source_line": "Source: v2/content/ (release candidate v2.0.0-rc2) and admin/content/readers/01-rc2/runs/ (five invented readers, Claude Sonnet, 19 October 2026). Interest is the readers' own mark, 1 to 5, averaged over every step that read or skimmed the chapter."
+}

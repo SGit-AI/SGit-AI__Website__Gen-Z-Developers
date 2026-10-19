@@ -47,6 +47,7 @@ from graph_pages import build_graph
 from readers_pages import build_readers  # noqa: E402
 import graph_model  # noqa: E402
 from book_v2 import build_v2  # noqa: E402  # noqa: E402
+from infographics import build_infographics  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 VERSION = (ROOT / "admin/build/version.txt").read_text().strip()
@@ -92,6 +93,8 @@ NAV_GROUPS = [
                   ("Versions", "v1/versions/index.html"), ("Contributors", "contributors/index.html")]),
     ("Storyboards", [("Storyboards", "storyboards/index.html"), ("Every panel", "storyboards/all.html"),
                      ("The model sheet", "storyboards/model-sheet.html")]),
+    ("Infographics", [("Infographics", "infographics/index.html"), ("The plan, and the review", "infographics/plan.html"),
+                      ("What exists", "infographics/existing.html"), ("How they are made", "infographics/how.html")]),
     ("Articles", [("Articles", "articles/index.html"), ("Decisions", "decisions/index.html"), ("The briefs", "briefs/index.html")]),
     ("The graph", [("The graph", "graph/index.html"), ("The map", "map/index.html")]),
     ("The team", [("The team", "team/index.html"), ("The vault", "vault/index.html"), ("Admin", "admin/index.html")]),
@@ -1280,6 +1283,7 @@ def build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib,
 <a class="card" href="vault/index.html"><span class="k">The vault</span><h3>Read along</h3><p>The public working vault, its read key published: the working copy of v1, the board, the reviews, the roles.</p></a>
 <a class="card" href="read/index.html"><span class="k">Read &amp; review</span><h3>The reader, and the editor's desk</h3><p>The book with its graph beside it; mark, comment, fold and export a review; a reading meter after the newsroom's rules.</p></a>
 <a class="card" href="contributors/index.html"><span class="k">Contributors</span><h3>{contrib["totals"]["contributors"]} people, {contrib["totals"]["pull_requests_merged"]} pull requests</h3><p>Who fixed, asked and commented on the first edition, from its git history and GitHub issues: {contrib["totals"]["commits_by_contributors"]} commits by others, {contrib["totals"]["issues"]} issues.</p></a>
+<a class="card" href="infographics/index.html"><span class="k">Infographics</span><h3>The book at every altitude, as pictures</h3><p>What the 2018 book and the newsroom already have, the proposals for the second edition by part and chapter, the first ones drawn by code, and the review that decides.</p></a>
 <a class="card" href="graph/index.html"><span class="k">The graph</span><h3>The book as a graph: ideas, sources, chapters, tasks</h3><p>The admin area of the publishing process: which articles are processed, which ideas Dinis has accepted, where each goes, and what the briefs asked for.</p></a>
 </div>
 <h2 id="articles">This site's articles</h2>
@@ -1360,6 +1364,7 @@ The repository holds the official versions; the vault holds the working versions
 - [Read and review]({BASE}read/index.html): the reader with the graph beside it and the editor's desk (states, comments, folds, export); the book as data at [book.json]({BASE}v1/book/book.json)
 - [Synthetic readers]({BASE}readers/index.html): invented readers who read a release candidate the way they would, say where they would put it down and whether they would buy it, and are interviewed; the newsroom's synthetic-users method adapted to a book ([the protocol]({BASE}readers/protocol.html)); data under admin/content/readers/
 - [The graph]({BASE}graph/index.html): the admin area of the publishing process: [the ideas register]({BASE}graph/ideas/index.html), [the sources and their states]({BASE}graph/sources.html), [the chapter map, proposed]({BASE}graph/chapters.html), [the tasks]({BASE}graph/tasks.html), [the plan]({BASE}graph/plan.html), [the graph drawn]({BASE}graph/view.html); data at [graph.json]({BASE}graph/graph.json)
+- [Infographics]({BASE}infographics/index.html): the book at every altitude as pictures: [the plan, with a review]({BASE}infographics/plan.html) (data at [plan.json]({BASE}infographics/plan.json)), [what exists]({BASE}infographics/existing.html) (the 2018 images and the newsroom's figures), [how they are made]({BASE}infographics/how.html); drawn by code from admin/content/infographics/drawn/*.json into infographics/svg/*.svg
 - [The contributors]({BASE}contributors/index.html): who contributed to the first edition, from git and GitHub; data at [contributors.json]({BASE}admin/content/contributors.json)
 - [Versions]({BASE}v1/versions/index.html): the official versions and their deltas (page_versions.py from the newsroom)
 - [The map]({BASE}map/index.html): one row per 2018 file, the newsroom articles that answer it, the gap; data at [map.json]({BASE}admin/content/map.json)
@@ -1423,6 +1428,7 @@ def main():
     v2 = build_v2({"page": page, "write": write, "esc": esc, "md": md, "sha": sha, "split_blocks": lambda h: _TopLevel().split(h), "graph": graph_model.load(), "version": VERSION})
     if v2:
         build_read_v2(v2)
+    build_infographics({"page": page, "write": write, "esc": esc, "md": md, "graph": graph_model.load(), "version": VERSION})
     build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib, articles, v2)
     print(f"build: {VERSION}, {len(flat)} chapters, {len([w for w in written if w.endswith('.html')])} pages, {len(written)} files written")
 

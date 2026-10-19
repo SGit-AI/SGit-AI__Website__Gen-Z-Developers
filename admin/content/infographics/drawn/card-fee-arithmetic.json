@@ -1,0 +1,45 @@
+{
+ "id": "card-fee-arithmetic",
+ "proposal": "card-fee-arithmetic",
+ "form": "numbers",
+ "per_row": 4,
+ "kicker": "Chapter 19 · Price it, then give it away",
+ "title": "Below about £5, the fixed fee is the price",
+ "subtitle": "Stripe's standard UK card rate is 1.5% plus 20p. The same fee, on four payments.",
+ "alt": "Four tiles. On a £20 payment the card fee is 2.5%. On £5 it is 5.5%. On 50p it is 41.5%. On 10p the fee is more than the payment. Below: payments of pence only work aggregated.",
+ "tiles": [
+  {
+   "value": "2.5%",
+   "label": "of a £20 payment",
+   "detail": "a fee of 50p",
+   "colour": "green"
+  },
+  {
+   "value": "5.5%",
+   "label": "of a £5 payment",
+   "detail": "a fee of 27.5p",
+   "colour": "yellow"
+  },
+  {
+   "value": "41.5%",
+   "label": "of a 50p payment",
+   "detail": "a fee of 20.75p",
+   "colour": "red"
+  },
+  {
+   "value": "> 100%",
+   "label": "of a 10p payment",
+   "detail": "the fee is more than the payment",
+   "colour": "red",
+   "result": true
+  }
+ ],
+ "note": "So payments of pence only work aggregated: one charge a year that covers many things, or a platform that already holds a balance and settles in bulk. The fees in pence are this drawing's arithmetic from the chapter's rate; recheck the rate and date it before print.",
+ "checked": [
+  "Stripe's standard UK card rate is 1.5% plus 20p.",
+  "On a £20 payment that is 2.5%. On £5 it is 5.5%. On 50p it is 41.5%, and on 10p the fee is more than the payment.",
+  "Below about £5, the fixed fee is the price.",
+  "So payments of pence only work aggregated: one charge a year that covers many things, or a platform that already holds a balance and settles in bulk."
+ ],
+ "source_line": "Source: chapter 19, Price it, then give it away (v2.0.0-rc2), from the newsroom's Paying after the value. The rate is as the chapter gives it, October 2026."
+}

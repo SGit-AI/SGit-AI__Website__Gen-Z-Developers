@@ -1,0 +1,115 @@
+{
+ "id": "who-can-read-what",
+ "proposal": "who-can-read-what-sgit",
+ "form": "graph",
+ "kicker": "Chapter 24 · Privacy by design",
+ "title": "Who can read what",
+ "subtitle": "Everything is encrypted before it leaves your machine. The line stops being where the data is stored and becomes who holds the keys.",
+ "alt": "Two zones. On your machine: your files, and the keys, which stay with you. An arrow, encrypted before it leaves your machine, to the server, which holds ciphertext and nothing else: not your filenames, not your directory structure, not your commit messages. One object is 786 bytes of AES-256-GCM ciphertext named by the SHA-256 of the encrypted bytes, so the host can deduplicate it, cache it for a year and serve it from a CDN while remaining unable to tell you what it is. A note: there is no key escrow, no admin override and no support engineer who can recover it for you.",
+ "grid": {
+  "cols": 3,
+  "rows": 2,
+  "row_height": 220,
+  "node_width": 380
+ },
+ "zones": [
+  {
+   "label": "Your machine",
+   "cols": [
+    0,
+    0
+   ],
+   "rows": [
+    0,
+    1
+   ],
+   "colour": "green"
+  },
+  {
+   "label": "The server",
+   "cols": [
+    1,
+    2
+   ],
+   "rows": [
+    0,
+    1
+   ],
+   "colour": "grey",
+   "dashed": true
+  }
+ ],
+ "nodes": [
+  {
+   "id": "files",
+   "col": 0,
+   "row": 0,
+   "label": "Your files",
+   "detail": "filenames, directory structure, commit messages",
+   "colour": "green"
+  },
+  {
+   "id": "keys",
+   "col": 0,
+   "row": 1,
+   "label": "The keys",
+   "detail": "No key escrow, no admin override, no support engineer who can recover it for you",
+   "colour": "navy",
+   "solid": true
+  },
+  {
+   "id": "obj",
+   "col": 1,
+   "row": 0,
+   "label": "One object",
+   "detail": "786 bytes of AES-256-GCM ciphertext, named by the SHA-256 of the encrypted bytes",
+   "colour": "grey"
+  },
+  {
+   "id": "host",
+   "col": 2,
+   "row": 0,
+   "label": "The host can deduplicate it, cache it for a year and serve it from a CDN",
+   "detail": "while remaining unable to tell you what it is",
+   "colour": "grey"
+  },
+  {
+   "id": "protect",
+   "col": 1.5,
+   "row": 1,
+   "label": "What has to be protected",
+   "detail": "not every copy, backup, log and replica, but the keys: a much smaller problem",
+   "colour": "teal",
+   "width": 760
+  }
+ ],
+ "edges": [
+  {
+   "from": "files",
+   "to": "obj",
+   "label": "encrypted",
+   "hot": true
+  },
+  {
+   "from": "obj",
+   "to": "host"
+  },
+  {
+   "from": "keys",
+   "to": "protect",
+   "dashed": true
+  }
+ ],
+ "checked": [
+  "Everything is encrypted before it leaves your machine",
+  "The line stops being where the data is stored and becomes who holds the keys.",
+  "not your filenames, not your directory structure, not your commit messages",
+  "no key escrow, no admin override and no support engineer who can recover it for you",
+  "786 bytes of AES-256-GCM ciphertext, named by the SHA-256 of the encrypted bytes",
+  "the host can deduplicate it, cache it for a year and serve it from a CDN while remaining unable to tell you what it is",
+  "every copy, backup, log and replica",
+  "the problem moves to protecting the keys, which is a much smaller problem"
+ ],
+ "footnote": "sgit is the author's own product, and in beta; the figures are from the newsroom's What sgit is, August 2026.",
+ "source_line": "Source: chapter 24, Privacy by design: SG/Send, sgit, and the value of constraints (v2.0.0-rc2), from the newsroom's What sgit is and No server by design."
+}

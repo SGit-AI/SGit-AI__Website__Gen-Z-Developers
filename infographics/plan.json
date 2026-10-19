@@ -1,0 +1,4639 @@
+{
+ "what": "The plan for the book's infographics: what to draw, where it goes, how it is made, and its state. Written by the infographics agent on 19 October 2026 from release candidate 2, the articles, the newsroom's figures and the synthetic readers' study; the chapter proposals were drafted by three reading agents, one per third of the book, and every quote in them is checked by the build against its chapter, word for word. Nothing here is decided: a proposal becomes accepted only when Dinis says so, and decided_by names him.",
+ "altitudes": {
+  "book": "the whole book on one page",
+  "part": "a view per part",
+  "chapter": "an infographic per chapter",
+  "idea": "the graph of an area of ideas"
+ },
+ "forms": [
+  "map",
+  "flow",
+  "cycle",
+  "ladder",
+  "spectrum",
+  "quadrant",
+  "comparison",
+  "stack",
+  "timeline",
+  "graph",
+  "numbers",
+  "checklist",
+  "anatomy",
+  "decision",
+  "architecture"
+ ],
+ "methods": {
+  "code": "drawn from data by admin/build/infographic_svg.py: same data, same picture; corrected by changing a line",
+  "redraw": "a 2018 figure drawn again by code, from the 2018 text",
+  "reuse": "a newsroom figure used as it is, with its article",
+  "image-model": "an illustrated picture from a written brief, by an image model; the brief is kept beside it",
+  "storyboard": "a sequence of scenes with people, drawn by assets/storyboard.js"
+ },
+ "states": {
+  "proposed": "written down by the agent; nothing drawn",
+  "drafted": "drawn by code as a prototype, not reviewed",
+  "accepted": "Dinis said yes; it goes into the next candidate",
+  "changes": "Dinis asked for changes; the note says what",
+  "declined": "Dinis said no, with the reason; kept, so it is not proposed again",
+  "deferred": "not now; kept for a later candidate"
+ },
+ "proposals": [
+  {
+   "id": "the-book-on-one-page",
+   "title": "Generation ZX Developers, on one page",
+   "altitude": "book",
+   "target": "book",
+   "form": "map",
+   "method": "code",
+   "priority": 1,
+   "state": "drafted",
+   "drawn": "the-book-on-one-page",
+   "shows": "Every chapter of the release candidate as a tile in a column per part, as tall as the chapter is long, coloured by how the five synthetic readers held there, with a mark where a reader put the book down.",
+   "why": "Readers navigate this book by jumping from the contents page; this is the contents page as a picture, and the editor's view of where the book is slow, at the altitude the brief asked for first: the whole book on one page.",
+   "elements": [
+    {
+     "label": "ten parts, 41 chapters",
+     "detail": "from v2/content/"
+    },
+    {
+     "label": "tile height",
+     "detail": "the chapter's length in words"
+    },
+    {
+     "label": "tile colour",
+     "detail": "mean interest of the synthetic readers, 1 to 5"
+    },
+    {
+     "label": "marks",
+     "detail": "where readers put the book down"
+    },
+    {
+     "label": "dashed",
+     "detail": "a placeholder chapter"
+    }
+   ],
+   "quotes": [],
+   "sources": [
+    "agent:five-readers-who-do-not-exist"
+   ],
+   "ideas": [],
+   "notes": "Computed, not authored: it redraws on every build from the candidate and the study, so it is never out of date. For print, a version coloured by part rather than by the study (the study is the editor's tool, not the reader's)."
+  },
+  {
+   "id": "stem-tech-stack",
+   "title": "Mapping the tech stack per generation (the 2018 figures)",
+   "altitude": "chapter",
+   "target": "book:1.introduction/stem-tech-stack.md",
+   "form": "comparison",
+   "method": "redraw",
+   "priority": 2,
+   "state": "drafted",
+   "drawn": "stem-tech-stack",
+   "shows": "The three figures the 2018 draft linked and never generated (STEM-tech-stack_001 to _003), drawn from the lists under them: Gen X, Gen Y and Gen Z, with what is new and what is struck through.",
+   "why": "The reviewer's open issue 003 asks whether to render the missing figures or redraw them as infographics; this is the redraw, from the 2018 text alone, ready for that decision. Chapter 8's tech-stack-per-generation proposal builds on it.",
+   "elements": [
+    {
+     "label": "Gen X",
+     "detail": "Brain, Pen, Paper, Scientific Calculator"
+    },
+    {
+     "label": "Gen Y",
+     "detail": "adds Spreadsheets, Computer, Mobile, Internet, Email, Data Center; strikes the calculator"
+    },
+    {
+     "label": "Gen Z",
+     "detail": "adds AI and ML, and voice; strikes the rest"
+    }
+   ],
+   "quotes": [],
+   "sources": [
+    "book:1.introduction/stem-tech-stack.md"
+   ],
+   "ideas": [],
+   "notes": "The 2018 text has 'AI and LM' in its label and 'ML' in its gloss; the drawing follows the gloss and says so. v1/ is frozen: the figure goes to the vault's working copy, or into chapter 8 through tech-stack-per-generation, never into v1/."
+  },
+  {
+   "id": "a-strip-per-part",
+   "title": "A strip per part",
+   "altitude": "part",
+   "target": "book",
+   "form": "map",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "For each of the ten parts, its chapters as a strip: number, title, the one thing each leaves the reader with, and the badges (compass, house, grid); the opener of the part, drawn from the candidate's data like the book on one page.",
+   "why": "The second altitude the brief asked for, a view per part; three parts have a hand-made proposal (before you start, start the company, hands on), and a computed strip gives the other seven one today and keeps all ten honest as chapters move.",
+   "elements": [
+    {
+     "label": "the part's title and intro"
+    },
+    {
+     "label": "its chapters, in order"
+    },
+    {
+     "label": "per chapter",
+     "detail": "what it leaves you with; its badge"
+    }
+   ],
+   "quotes": [],
+   "sources": [],
+   "ideas": [],
+   "notes": "Needs one line per chapter, 'what it leaves you with', which the candidate does not carry yet: a front-matter field for the editor, or the hands-on chapters' own 'By the end of this chapter' lines. Not the storyboards plan's 'chapter strip' (three panels under a chapter's title): this is a contents strip for a part, drawn from data."
+  },
+  {
+   "id": "part-openers-illustrated",
+   "title": "An illustrated opener per part",
+   "altitude": "part",
+   "target": "book",
+   "form": "map",
+   "method": "image-model",
+   "priority": 3,
+   "state": "proposed",
+   "shows": "One illustrated page per part, made by an image model from a brief generated from the part's intro and the cast: the part's argument as a scene, with the book's palette.",
+   "why": "Every proposal in this plan is structure, so every one came back as code; the openers are where a picture with a mood earns its place, and where the newsroom's image-model bake-off says the models now do well.",
+   "elements": [
+    {
+     "label": "ten parts"
+    },
+    {
+     "label": "brief",
+     "detail": "the part's intro, the cast's looks, the palette, the footer line"
+    }
+   ],
+   "quotes": [],
+   "sources": [
+    "agent:storyboards-drawn-by-code"
+   ],
+   "ideas": [],
+   "notes": "Needs the OpenRouter key in the private vault, which Dinis holds; the newsroom's The infographic bake-off recommends Nano Banana 2.1 for concept slides. Whether the book carries any image-model art at all is Dinis's to decide (the storyboards chose none). The storyboards agent proposes the same page as four to six panels from the part's storyboard (agent article 07, a plan for putting storyboards in the book); this is the alternative, and this agent recommends the panels. Dinis picks one, or neither."
+  },
+  {
+   "id": "the-register-by-topic",
+   "title": "The ideas, area by area",
+   "altitude": "idea",
+   "target": "book",
+   "form": "graph",
+   "method": "code",
+   "priority": 3,
+   "state": "proposed",
+   "shows": "One small graph per topic of the register: its ideas as nodes, the chapters they go to, the sources behind them; the fourth altitude, the graph of each area.",
+   "why": "The brief asked for an infographic at every altitude, the graph of each area among them; the graph pages already hold the data, and this draws it a topic at a time for the book's back matter or the site.",
+   "elements": [
+    {
+     "label": "18 topics"
+    },
+    {
+     "label": "per topic",
+     "detail": "ideas, chapters, sources, and their states"
+    }
+   ],
+   "quotes": [],
+   "sources": [
+    "agent:the-book-as-a-graph"
+   ],
+   "ideas": [
+    "the-book-as-a-graph"
+   ],
+   "notes": "The drawn graph at graph/view.html is the whole thing at once; this is the same data cut by topic. A layout is needed (the grid form places nodes by hand)."
+  },
+  {
+   "id": "how-this-book-is-made",
+   "title": "How this book is made",
+   "altitude": "chapter",
+   "target": "about-this-release-candidate",
+   "form": "flow",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "newsroom": "https://newsroom.sgit.ai/articles/images/gw-site.webp",
+   "shows": "One left-to-right pipeline from Dinis's voice memo to a frozen candidate and back again: memo, article, idea, chapter map, chapter, frozen snapshot, review, Dinis's verdict, next candidate. The one rule sits above the line; the seven verbs sit at the end.",
+   "why": "The front matter explains an unfamiliar method in 700 words of prose; a reader who jumps here from the contents page gets the whole method, and why every claim is sourced, in one look.",
+   "elements": [
+    {
+     "label": "Voice memos",
+     "detail": "the book is talked into existence"
+    },
+    {
+     "label": "Articles in his voice",
+     "detail": "written up with a journalist agent, each ending with a brief for the roles"
+    },
+    {
+     "label": "Ideas",
+     "detail": "a librarian writes one idea per thing the book would say, with where it came from, down to the section"
+    },
+    {
+     "label": "Chapter map",
+     "detail": "the ideas are placed on a chapter map"
+    },
+    {
+     "label": "Chapters",
+     "detail": "each written from the ideas placed in it, by an agent that reads the articles and the 2018 text behind them and nothing else"
+    },
+    {
+     "label": "Notes to Dinis",
+     "detail": "where the sources run out, the chapter says so"
+    },
+    {
+     "label": "Frozen snapshot",
+     "detail": "a candidate, not a version; what Dinis reads cannot change behind him"
+    },
+    {
+     "label": "Review board",
+     "detail": "an advocate and a cutter and the readers and a checker and the editor"
+    },
+    {
+     "label": "Dinis decides",
+     "detail": "keep, rewrite, merge, cut, article first, later, not doing it"
+    },
+    {
+     "label": "Next candidate",
+     "detail": "his feedback produces the next candidate rather than an edit of this one"
+    },
+    {
+     "label": "Release candidate 1: thirty chapters",
+     "detail": "side note"
+    },
+    {
+     "label": "Release candidate 2: forty-one chapters in ten parts",
+     "detail": "side note"
+    }
+   ],
+   "quotes": [
+    "The rule is simple: every number, every quotation and every story has to be in a source the chapter names."
+   ],
+   "sources": [
+    "agent:the-book-as-a-graph",
+    "dec:008",
+    "dec:009",
+    "art:read-comment-decide"
+   ],
+   "ideas": [],
+   "notes": "The storyboard 11__the-book-in-release-mode may cover part of this; check for overlap. Counts (30, 41, ten parts) must be updated if rc3 changes them."
+  },
+  {
+   "id": "part-one-in-one-page",
+   "title": "Before you start: five chapters in one page",
+   "altitude": "part",
+   "target": "part:before-you-start",
+   "form": "map",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "The five chapters of part 1 as five stations on one line, each with its single question and its one-line answer, ending at an arrow 'go where your map says' pointing to the three badges (compass, house, grid) and the part Start the company.",
+   "why": "Part 1 is 8,751 words before anything practical; a reader who sees the whole part at once can decide what to read closely and what to skim, instead of putting the book down.",
+   "elements": [
+    {
+     "label": "1. Gen ZX",
+     "detail": "who this book is for and what it is for: two generations; by the end you have started a company"
+    },
+    {
+     "label": "2. You are lucky to be here",
+     "detail": "nobody knows what is going to happen; the pieces are still landing"
+    },
+    {
+     "label": "3. Everything is connected",
+     "detail": "one chapter on graphs because everything after it is one; start anywhere"
+    },
+    {
+     "label": "4. Where do you land?",
+     "detail": "which kind of developer you are: explorer, villager, town planner"
+    },
+    {
+     "label": "5. Connect the dots backwards",
+     "detail": "why the path only makes sense afterwards; make dots worth connecting"
+    },
+    {
+     "label": "Then go where your map says",
+     "detail": "the chapters for everyone, then the ones with your badge"
+    }
+   ],
+   "quotes": [
+    "Read these first; then go where your map says."
+   ],
+   "sources": [],
+   "ideas": [],
+   "notes": "The one-line answers are taken from each chapter's own text (see the chapter proposals); the 8,751-word figure is from the reader study, not the book, and should not appear on the drawing."
+  },
+  {
+   "id": "from-reader-to-company",
+   "title": "The book's route to a company",
+   "altitude": "chapter",
+   "target": "gen-zx",
+   "form": "map",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "A route map of the book with the objective at the destination: the frame, then Start the company at the centre (its five stops), then Build it without a server, then the dated hands-on part, ending at the measure: companies created.",
+   "why": "Readers navigate by jumping from the contents page; this tells a founder where the practical parts are and why the earlier chapters come first.",
+   "elements": [
+    {
+     "label": "Objective",
+     "detail": "by the end of the book you have started a company"
+    },
+    {
+     "label": "Start the company (the centre of the book)",
+     "detail": "be a founder; ship it and see if they miss it; price it and then give it away; sell; fund it or do not; the company itself"
+    },
+    {
+     "label": "The company, for real",
+     "detail": "a limited company in the UK, the case for Lithuania, Portugal, the European Union and what exists there for a founder"
+    },
+    {
+     "label": "Build it without a server",
+     "detail": "no servers of yours with logic in them, no database of yours, the work done on the user's side; SG/Send and sgit; RiskMandate"
+    },
+    {
+     "label": "Hands-on part, dated",
+     "detail": "cloud providers and startup programmes, renewed each year; ends with a product shipped that way in a weekend"
+    },
+    {
+     "label": "The first sale",
+     "detail": ""
+    },
+    {
+     "label": "The measure",
+     "detail": "how many companies have been created from it"
+    },
+    {
+     "label": "Caveat",
+     "detail": "written from experience; not legal or tax advice"
+    }
+   ],
+   "quotes": [
+    "Our job is to empower the reader to create a startup by the end of the book."
+   ],
+   "sources": [
+    "art:gen-zx-developers",
+    "dec:015",
+    "dec:014"
+   ],
+   "ideas": [
+    "the-reader-is-the-founder"
+   ],
+   "notes": "Storyboard 12__gen-zx-developers has 'From a problem to a company' and 'Start the company, for real'; this is a navigational map of the book, not a scene. Part names must match the final contents of rc2/rc3."
+  },
+  {
+   "id": "two-generations-one-book",
+   "title": "Gen Z + Gen X = Gen ZX",
+   "altitude": "chapter",
+   "target": "gen-zx",
+   "form": "comparison",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "Two columns, Generation Z and Generation X, joined at the bottom into Gen ZX, with the expert-founder numbers as a strip of key figures beneath the Gen X column.",
+   "why": "The chapter's two readers and the evidence for the older one are scattered across prose; side by side, each reader finds themselves in one glance.",
+   "elements": [
+    {
+     "label": "Generation Z",
+     "detail": "born 1997 to 2012; the first reader; entering the workforce; the new entrepreneurs; grew up with the agents"
+    },
+    {
+     "label": "Generation X",
+     "detail": "born 1965 to 1980; the second reader; the subject-matter experts, twenty years inside a problem; grew up with the problem"
+    },
+    {
+     "label": "Millennials, 1981 to 1996",
+     "detail": "in the middle; a different story"
+    },
+    {
+     "label": "Often the same family",
+     "detail": "Generation Z are, by the dates, the children of Generation X"
+    },
+    {
+     "label": "45",
+     "detail": "mean age at founding of the fastest-growing one in a thousand new companies (2.7 million US founders)"
+    },
+    {
+     "label": "2x",
+     "detail": "founders with three or more years in the same industry reached that top tier at twice the rate"
+    },
+    {
+     "label": "A third",
+     "detail": "of new US startups now have a single founder"
+    },
+    {
+     "label": "Gen ZX",
+     "detail": "goes back to the ZX Spectrum, April 1982"
+    },
+    {
+     "label": "Dates: Pew Research Center",
+     "detail": "boundaries differ between sources"
+    }
+   ],
+   "quotes": [
+    "Execution just got cheap.",
+    "one grew up with the agents, the other grew up with the problem."
+   ],
+   "sources": [
+    "news:the-expert-founders",
+    "art:gen-zx-developers",
+    "sb:gen-zx-developers"
+   ],
+   "ideas": [
+    "two-generations-gen-zx",
+    "the-reader-is-the-founder"
+   ],
+   "notes": "The storyboard has a Pew-dates spectrum; this adds the founder numbers, which come from news:the-expert-founders (check the underlying study before printing)."
+  },
+  {
+   "id": "chapter-two-argument-in-one-look",
+   "title": "Why you are lucky to be here",
+   "altitude": "chapter",
+   "target": "lucky-to-be-here",
+   "form": "flow",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "The chapter's argument as six steps, each a heading and one sentence: from wonder, past the fear, through the transformations, to technology that works for you and how to read the book.",
+   "why": "Chapter 2 is marked too slow by all five readers; this gives its argument in one look so the reader can choose which section to read in full.",
+   "elements": [
+    {
+     "label": "Wonder",
+     "detail": "I discover things I can do"
+    },
+    {
+     "label": "The fear is what you hear",
+     "detail": "AI took the jobs before you got there; it is too late for you"
+    },
+    {
+     "label": "Nobody knows",
+     "detail": "my position, not a forecast"
+    },
+    {
+     "label": "We have been here before",
+     "detail": "seven transformations; each time the paths evolved"
+    },
+    {
+     "label": "Technology that finally works for you",
+     "detail": "one of you was handed technology to use; the other put the building down; now you can both build again"
+    },
+    {
+     "label": "Read it on paper, with a pen",
+     "detail": "find your centre of gravity first"
+    }
+   ],
+   "quotes": [
+    "ignore the doom, because nobody knows what is going to happen."
+   ],
+   "sources": [
+    "art:lucky-to-be-here",
+    "news:two-years-in-the-opposite"
+   ],
+   "ideas": [
+    "wonder-not-fear",
+    "lucky-to-be-here",
+    "nobody-knows",
+    "technology-finally-works-for-you",
+    "read-it-on-paper"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "seven-transformations-timeline",
+   "title": "The transformations I have lived through",
+   "altitude": "chapter",
+   "target": "lucky-to-be-here",
+   "form": "timeline",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "A dated timeline from the early 1980s to November 2022 with the seven transformations and what each changed, and one marked dip: the dot-com crash, Nasdaq peak March 2000 to October 2002, with the internet carrying on above it.",
+   "why": "The chapter's evidence that 'this time is different' has been said before is a list in the middle of a slow chapter; a timeline makes the pattern visible instantly.",
+   "elements": [
+    {
+     "label": "Home computer, early 1980s",
+     "detail": "a computer became something you could own, open and program"
+    },
+    {
+     "label": "BBS, 1980s and early 1990s",
+     "detail": "text messages and chat between strangers, over a phone line"
+    },
+    {
+     "label": "Internet, 1990s",
+     "detail": "everything published, linked and searchable"
+    },
+    {
+     "label": "Mobile phone, late 1990s; smartphone, 2007",
+     "detail": "the network in your pocket"
+    },
+    {
+     "label": "Cloud, mid 2000s",
+     "detail": "servers you rent by the hour instead of buy"
+    },
+    {
+     "label": "Apps, 2008",
+     "detail": "software delivered to everyone, instantly"
+    },
+    {
+     "label": "Generative AI, November 2022",
+     "detail": "software you can talk to, and that can build software"
+    },
+    {
+     "label": "Dot-com crash",
+     "detail": "Nasdaq peaked in March 2000; lost roughly four fifths of its value by October 2002"
+    }
+   ],
+   "quotes": [
+    "A crash would change who makes money; it would not undo what people can now do."
+   ],
+   "sources": [
+    "art:lucky-to-be-here",
+    "sb:the-opening"
+   ],
+   "ideas": [
+    "seven-transformations",
+    "nobody-knows"
+   ],
+   "notes": "The storyboard 03__the-opening has a spectrum of the transformations without dates or the crash; this is the dated version. Whether the dot-com crash stays in this chapter is an open question to Dinis in the text."
+  },
+  {
+   "id": "graph-map-graphs-of-graphs",
+   "title": "From the detective's board to graphs of graphs",
+   "altitude": "chapter",
+   "target": "everything-is-connected",
+   "form": "ladder",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "Four rungs, each drawn with the same few nodes: a whodunit board (things and string), a graph (nodes and edges), a map (the same graph with positions), graphs of graphs (a node opened to show a graph inside it). The bottom line: start anywhere.",
+   "why": "The non-coder gets lost in technical passages; this shows the chapter's one idea building up in four steps with the same nodes, before any code appears.",
+   "elements": [
+    {
+     "label": "The whodunit board",
+     "detail": "everything on that board is either a thing or a connection between two things; what connects A to B?"
+    },
+    {
+     "label": "A graph",
+     "detail": "a network: nodes, and the edges that connect them; never a chart, never a figure"
+    },
+    {
+     "label": "A map",
+     "detail": "a graph with positions: same nodes, same edges, every node a place on the page that means something"
+    },
+    {
+     "label": "Graphs of graphs",
+     "detail": "zoom into a node and you find another graph inside it; a law, its articles, the terms they use"
+    },
+    {
+     "label": "Start anywhere",
+     "detail": "a graph has no front page; pick a node and follow one edge"
+    }
+   ],
+   "quotes": [
+    "A node connected to nothing is literally meaningless.",
+    "It does not matter where you start; it matters that you start."
+   ],
+   "sources": [
+    "art:everything-is-connected",
+    "news:the-graphs-books",
+    "news:introducing-fractal-semantic-graphs",
+    "sb:everything-is-connected"
+   ],
+   "ideas": [
+    "a-graph-is-not-a-diagram",
+    "the-whodunit-board",
+    "a-map-is-a-graph-with-positions",
+    "graphs-of-graphs",
+    "start-anywhere"
+   ],
+   "notes": "The storyboard draws these as separate panels; this is the single summary picture. Keep the same nodes on every rung so the progression is visible."
+  },
+  {
+   "id": "code-is-a-layered-graph",
+   "title": "Code is already a graph",
+   "altitude": "chapter",
+   "target": "everything-is-connected",
+   "form": "stack",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "Six layers from a person at the top down to the syntax tree, with one change highlighted at the methods layer and its blast radius climbing up to the stories it reaches; a numbers strip shows the sgit example.",
+   "why": "The section is the chapter's most technical and the founder needs it most; a stack lets a non-coder read 'read what the agents made at the altitude you need' without reading code.",
+   "elements": [
+    {
+     "label": "A person trying to do something",
+     "detail": "the stories at the top"
+    },
+    {
+     "label": "Features and flows",
+     "detail": ""
+    },
+    {
+     "label": "Components",
+     "detail": "what people draw when you ask for the architecture"
+    },
+    {
+     "label": "Classes",
+     "detail": ""
+    },
+    {
+     "label": "Methods and the calls between them",
+     "detail": ""
+    },
+    {
+     "label": "Syntax tree",
+     "detail": "an abstract syntax tree: a graph representation of source code"
+    },
+    {
+     "label": "A refactor",
+     "detail": "moves the bottom layers, leaves the stories at the top still"
+    },
+    {
+     "label": "A bug",
+     "detail": "a story that stopped holding"
+    },
+    {
+     "label": "Blast radius",
+     "detail": "the climb from the methods it touched up to the stories that can reach them"
+    },
+    {
+     "label": "75 lines added, 7 removed, 3 files",
+     "detail": "one commit to the sgit command line"
+    },
+    {
+     "label": "9 of 72 commands, 6 of 11 user stories",
+     "detail": "what that commit reached, read with nothing run"
+    }
+   ],
+   "quotes": [
+    "A refactor is a change that moves the bottom layers and leaves the stories at the top still."
+   ],
+   "sources": [
+    "news:code-review-as-a-fractal-semantic-graph",
+    "book:3.technologies/content/AST.md"
+   ],
+   "ideas": [
+    "code-is-already-a-graph",
+    "graphs-of-graphs"
+   ],
+   "notes": "Numbers are from news:code-review-as-a-fractal-semantic-graph; check against the published vault before print."
+  },
+  {
+   "id": "three-centres-of-gravity",
+   "title": "Explorer, villager, town planner",
+   "altitude": "chapter",
+   "target": "where-do-you-land",
+   "form": "comparison",
+   "method": "code",
+   "priority": 1,
+   "state": "drafted",
+   "drawn": "three-centres-of-gravity",
+   "newsroom": "https://newsroom.sgit.ai/articles/images/ec-handover.webp",
+   "shows": "Three columns, each headed with its badge (compass, house, grid): what they love, how they see failure, what they make, and which chapters to read first; across the top, the movement from genesis to commodity; across the bottom, the test for your centre of gravity.",
+   "why": "This is the chapter the rest of the book is navigated by; a reader who can find their column at a glance knows which badged chapters to jump to from the contents.",
+   "elements": [
+    {
+     "label": "Explorer (compass)",
+     "detail": "bursting with ideas; failure is just an experiment; wants to invent the bricks; makes prototypes for early adopters; read early: explorer coding, building fast with agents"
+    },
+    {
+     "label": "Villager (house)",
+     "detail": "loves the user; does not like failure that much; packaging, releasing, going to market; the second version has to be designed; read early: shipping, selling, your own newsroom"
+    },
+    {
+     "label": "Town planner (grid)",
+     "detail": "geeks out on the details; boring is good; likes to be invisible; makes something a commodity; owns the code in production; read early: controlling your agent, the record, serverless for real, reading code as a graph"
+    },
+    {
+     "label": "Wardley's names",
+     "detail": "pioneers, settlers, town planners (2015); explorers, villagers, town planners (since 2023)"
+    },
+    {
+     "label": "The test",
+     "detail": "What do you care about? What makes you lose your sense of time?"
+    },
+    {
+     "label": "It moves",
+     "detail": "as your career changes, your centre can move with it"
+    },
+    {
+     "label": "Founder",
+     "detail": "needs both halves: the exploring and the handover"
+    }
+   ],
+   "quotes": [
+    "All three are brilliant.",
+    "This is a lens, not a label."
+   ],
+   "sources": [
+    "art:where-do-you-land",
+    "news:why-i-love-wardley-maps",
+    "news:explorer-coding",
+    "book:4.life-patterns/pionners-settlers-town-planners.md"
+   ],
+   "ideas": [
+    "centre-of-gravity",
+    "three-learning-paths"
+   ],
+   "notes": "The storyboard 04__where-do-you-land has one scene per persona; this is the reference table. The badges are 'a first attempt' per the text; reuse the storyboard's drawn badges. Wardley's quoted definitions are his (CC BY-SA material); attribute."
+  },
+  {
+   "id": "evolution-is-everywhere",
+   "title": "The four stages are not only for activities",
+   "altitude": "chapter",
+   "target": "where-do-you-land",
+   "form": "spectrum",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "A grid: one horizontal arrow from genesis to commodity, and under it eight rows, each running through four stages left to right; a line separates Wardley's four published rows from Dinis's own explorations.",
+   "why": "The list is hard to read as prose; drawn as aligned rows it shows the chapter's claim that the same movement is everywhere, in one look.",
+   "elements": [
+    {
+     "label": "Activity",
+     "detail": "genesis, custom build, product, commodity"
+    },
+    {
+     "label": "Practice",
+     "detail": "novel, emerging, good, best"
+    },
+    {
+     "label": "Data",
+     "detail": "unmodelled, divergent, convergent, modelled"
+    },
+    {
+     "label": "Knowledge",
+     "detail": "concept, hypothesis, theory, accepted"
+    },
+    {
+     "label": "Openness of content (Dinis)",
+     "detail": "confidential, published with ordinary copyright, CC BY, CC0"
+    },
+    {
+     "label": "Openness of software (Dinis)",
+     "detail": "proprietary, GPL, open source, public domain"
+    },
+    {
+     "label": "Backup restore time (Dinis)",
+     "detail": "infinity (no backups), a week, a day, real time"
+    },
+    {
+     "label": "Data, by shape (Dinis)",
+     "detail": "unstructured raw text, spreadsheet, graph, map"
+    }
+   ],
+   "quotes": [
+    "Every dot is a claim."
+   ],
+   "sources": [
+    "news:why-i-love-wardley-maps",
+    "art:where-do-you-land"
+   ],
+   "ideas": [
+    "four-stages-beyond-activities"
+   ],
+   "notes": "The first four rows are from Wardley's published material (CC BY-SA); attribute and keep the dividing line. The original talk table has more rows (incident response, security logs, risk...) that only Dinis's talk can supply."
+  },
+  {
+   "id": "connect-the-dots-chapter-map",
+   "title": "Connect the dots backwards: the chapter in one look",
+   "altitude": "chapter",
+   "target": "connect-the-dots-backwards",
+   "form": "graph",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "The chapter's lessons as dots scattered on the page, each with a short label; a single line runs backwards through them from the last to the first, so the path only appears looking back.",
+   "why": "Chapter 5 is marked too slow by all five readers; this gives its ten lessons in one look, drawn as the chapter's own metaphor.",
+   "elements": [
+    {
+     "label": "Connect the dots backwards",
+     "detail": "you can't connect the dots looking forward; one-way and two-way doors"
+    },
+    {
+     "label": "The edge is multidisciplinary",
+     "detail": "the ability to learn, and to intersect disciplines"
+    },
+    {
+     "label": "We teach maths as if to make people hate it",
+     "detail": "If you hated maths at school, you were probably taught it badly"
+    },
+    {
+     "label": "Learning, made for you",
+     "detail": "clear goals, immediate feedback, a challenge matched to your skill (Flow; Peak)"
+    },
+    {
+     "label": "Think with it",
+     "detail": "do not delegate your thinking to it"
+    },
+    {
+     "label": "Generative AI lets you explore again",
+     "detail": "experiment, learn, try, start, and adjust"
+    },
+    {
+     "label": "Learning is a lifelong skill",
+     "detail": "learning is like a muscle"
+    },
+    {
+     "label": "You are already in a very small minority",
+     "detail": "developers about 0.6% of internet users; 5% of adults reached the level of a skilled user"
+    },
+    {
+     "label": "The thinking is never wasted",
+     "detail": "a pivot leaves assets, if you did the work in the open"
+    },
+    {
+     "label": "Know where your ideas come from",
+     "detail": "keep a register; write it on paper first"
+    }
+   ],
+   "quotes": [
+    "Your future self will connect the dots. Your job now is to make dots worth connecting."
+   ],
+   "sources": [
+    "art:connect-the-dots-backwards",
+    "art:where-the-thinking-came-from",
+    "news:not-a-straight-line"
+   ],
+   "ideas": [
+    "connect-the-dots-backwards",
+    "multidisciplinary-edge",
+    "maths-taught-to-be-hated",
+    "learning-made-for-you",
+    "think-with-it",
+    "explore-again",
+    "small-minority",
+    "the-thinking-is-never-wasted",
+    "know-where-your-ideas-come-from"
+   ],
+   "notes": "The 0.6% and 5% figures are the newsroom's arithmetic on others' surveys, 'for sizing, not for adding up'; label them so or leave them off."
+  },
+  {
+   "id": "think-with-it-not-delegate",
+   "title": "Think with it; do not delegate your thinking to it",
+   "altitude": "chapter",
+   "target": "connect-the-dots-backwards",
+   "form": "comparison",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "Two paths from the same question: on one, ask for the answer and paste it in, ending at 'learned nothing'; on the other, ask why, where it came from, what would show it was wrong, ending at 'learning'. Under both, a third short path: use generative AI to write the tool that does the job with no model in the loop.",
+   "why": "It is the most practical idea in part 1 and is buried mid-chapter; the non-coder can act on it the same day.",
+   "elements": [
+    {
+     "label": "Search gave you an answer",
+     "detail": "without the ability to question it"
+    },
+    {
+     "label": "Delegating",
+     "detail": "ask it for the answer and paste it in: you have learned nothing and put your name on something you cannot defend"
+    },
+    {
+     "label": "Thinking with it",
+     "detail": "ask it why, then where that came from, then what would show it was wrong: you are learning"
+    },
+    {
+     "label": "It is still your name",
+     "detail": "if the company is yours, so is everything the agents build in it"
+    },
+    {
+     "label": "Example",
+     "detail": "the agent double-checks quotes and finds the evidence; it corrected the author's name of A Mathematician's Lament"
+    },
+    {
+     "label": "Use generative AI so that you do not have to use generative AI",
+     "detail": "write the script or the tool that then does the job reliably, with no model in the loop"
+    }
+   ],
+   "quotes": [
+    "This is not you delegating your thinking to generative AI; it is you thinking with it."
+   ],
+   "sources": [
+    "art:connect-the-dots-backwards"
+   ],
+   "ideas": [
+    "think-with-it"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "your-register-of-influences",
+   "title": "Know where your ideas come from: the exercise",
+   "altitude": "chapter",
+   "target": "connect-the-dots-backwards",
+   "form": "checklist",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "A blank card, to be filled on paper, with three rows (three people or works) and four columns; one row filled in as an example from the chapter (Csikszentmihalyi's Flow, the zone).",
+   "why": "Part 1 has nothing practical for 8,751 words; this is the one exercise in it, and a card makes it something the reader does, not reads.",
+   "elements": [
+    {
+     "label": "Pick the three people or works that have shaped how you think",
+     "detail": ""
+    },
+    {
+     "label": "The one work that did it",
+     "detail": ""
+    },
+    {
+     "label": "The principle you took from it",
+     "detail": "in one sentence anyone could use"
+    },
+    {
+     "label": "Where that principle shows up",
+     "detail": "in something you have made"
+    },
+    {
+     "label": "Where it does not yet",
+     "detail": ""
+    },
+    {
+     "label": "Write it on paper first",
+     "detail": "you will forget the ideas you are having today"
+    }
+   ],
+   "quotes": [
+    "An entry in this register is a falsifiable claim about my codebase."
+   ],
+   "sources": [
+    "art:where-the-thinking-came-from",
+    "book:3.technologies/content/pen-and-paper.md"
+   ],
+   "ideas": [
+    "know-where-your-ideas-come-from"
+   ],
+   "notes": "A filled example row needs Dinis's register entry for Flow (or another work) word for word; do not invent the principle sentence."
+  },
+  {
+   "id": "input-representation-output",
+   "title": "How I understand generative AI",
+   "altitude": "chapter",
+   "target": "what-generative-ai-is",
+   "form": "flow",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "Input, then a black box labelled GenAI holding an intermediate representation, then output; the prompt drawn as the thing that narrows the model's rich picture; after the output, human verification and human ownership. A fork on the output shows hallucination as a feature (stories) and a bug (facts).",
+   "why": "The non-coder gets lost in technical passages; this is the chapter's own slide picture, so the mechanism is seen before it is explained.",
+   "elements": [
+    {
+     "label": "Input",
+     "detail": "the data, or your prompt"
+    },
+    {
+     "label": "Intermediate Representation",
+     "detail": "the model builds its own interpretation of it"
+    },
+    {
+     "label": "Output",
+     "detail": "an image or a text, generated from that representation"
+    },
+    {
+     "label": "Predicts the next word",
+     "detail": "accurate and demeaning at the same time"
+    },
+    {
+     "label": "The better your prompt, the better the output",
+     "detail": "the prompt pulls it towards the part of what it knows that I mean"
+    },
+    {
+     "label": "Human verification and human ownership",
+     "detail": "what matters is not the black box"
+    },
+    {
+     "label": "Hallucination: a feature",
+     "detail": "when creating content and when we want creativity"
+    },
+    {
+     "label": "Hallucination: a bug",
+     "detail": "when we want facts, evident and trust"
+    }
+   ],
+   "quotes": [
+    "There is an abstraction layer between what goes in and what comes out"
+   ],
+   "sources": [
+    "art:generative-ai-not-ai"
+   ],
+   "ideas": [
+    "generative-ai-not-ai",
+    "better-prompt-richer-picture"
+   ],
+   "notes": "Redraw, do not copy, the Lisbon 2024 slide (Dinis's own; fine to reuse if he agrees). Lee Brimelow's Starry Night image is not usable without permission (the chapter's own note). 'evident' is the slide's wording; keep it if quoted, or use 'facts' only."
+  },
+  {
+   "id": "working-picture-vs-whats-inside",
+   "title": "My working picture, and what is actually inside",
+   "altitude": "chapter",
+   "target": "what-generative-ai-is",
+   "form": "comparison",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "Two columns: on the left Dinis's working picture in his words; on the right the agent's correction for each, with the open questions marked as open.",
+   "why": "The corrections are a dense list the non-coder will skim past; paired with the intuition they correct, each one reads in a second and models the habit of asking to be corrected.",
+   "elements": [
+    {
+     "label": "The older AI was steps or a formula",
+     "detail": "correction: machine learning in general learns from data; generative AI is one branch of it; it produces new content"
+    },
+    {
+     "label": "A graph inside the model",
+     "detail": "correction: vectors, not a graph; attention connects every word to every other word; my graph is a metaphor"
+    },
+    {
+     "label": "Real-time fine-tuning",
+     "detail": "correction: the prompt does not change the model; the weights stay the same"
+    },
+    {
+     "label": "It predicts the next word",
+     "detail": "correction: the next token, then it is trained to be useful, including on human feedback"
+    },
+    {
+     "label": "Hallucinations come from connections",
+     "detail": "correction: a second cause; training and evaluation reward guessing over saying I don't know"
+    },
+    {
+     "label": "Image models learned the structure of images",
+     "detail": "correction: most are diffusion models; statistical patterns; they still get light, shadows and hands wrong"
+    },
+    {
+     "label": "Emergent abilities",
+     "detail": "debated (Wei 2022; Schaeffer 2023)"
+    },
+    {
+     "label": "A world model",
+     "detail": "an open question"
+    }
+   ],
+   "quotes": [
+    "Keep both halves.",
+    "You will need the first to be fast and the second to be honest"
+   ],
+   "sources": [
+    "art:generative-ai-not-ai"
+   ],
+   "ideas": [
+    "generative-ai-not-ai"
+   ],
+   "notes": "The AI bucket (AI, machine learning, deep learning, generative AI) is already a spectrum in storyboard 07, so it is not proposed again."
+  },
+  {
+   "id": "anatomy-of-an-agent",
+   "title": "A lens, a role, a loop",
+   "altitude": "chapter",
+   "target": "lenses-roles-and-loops",
+   "form": "anatomy",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "One agent drawn as nested parts: at the centre the same raw model; around it the lens (the prompt), then the role (a role description and a question), then the loop (tools, a rule for stopping), with the harness around everything as the place the control lives.",
+   "why": "The chapter promises 'it is not magic'; one labelled anatomy gives the non-coder the whole workflow from a single prompt to an agent that runs for hours before the detail.",
+   "elements": [
+    {
+     "label": "The model",
+     "detail": "the same model sits behind every role"
+    },
+    {
+     "label": "A prompt is a lens",
+     "detail": "it puts the right lens in front of the idea: a teenager, a musician, a doctor, a football fan, Portuguese"
+    },
+    {
+     "label": "A role is a model with a description",
+     "detail": "who you are, what you care about, what you refuse, how you work (role.md), and a question"
+    },
+    {
+     "label": "An agent is a loop with a goal",
+     "detail": "do this; then, are we done yet, or do we need to continue?"
+    },
+    {
+     "label": "Tools",
+     "detail": "the model writes a structured request: a tool name and its arguments"
+    },
+    {
+     "label": "A rule for stopping",
+     "detail": "the model's own judgement, a test that passes, a budget that runs out, or a person"
+    },
+    {
+     "label": "The harness",
+     "detail": "decides whether to run it, runs it, and adds the result to the conversation"
+    }
+   ],
+   "quotes": [
+    "Not magic: a lens, a role, a loop.",
+    "the model never runs a tool."
+   ],
+   "sources": [
+    "art:lenses-roles-and-loops",
+    "news:how-i-work-with-claude"
+   ],
+   "ideas": [
+    "a-prompt-is-a-lens",
+    "a-role-is-a-model-with-a-description",
+    "tools-changed-everything"
+   ],
+   "notes": "The storyboard 10 already has the five lenses, the role graph and the one-tool-call loop as separate panels; this is the single anatomy that holds them together, not a repeat of the weather example."
+  },
+  {
+   "id": "it-remembers-nothing",
+   "title": "It remembers nothing; the files do",
+   "altitude": "chapter",
+   "target": "lenses-roles-and-loops",
+   "form": "numbers",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "A tall bar for one long session's context and a thin sliver for what a summary keeps, with the measured numbers; beside it, a file icon labelled 'printed back after every summary'.",
+   "why": "The chapter's practical advice (many focused threads, rules in files) rests on one number; showing the 1.7% makes the advice obvious to a reader who skims.",
+   "elements": [
+    {
+     "label": "Every request is independent",
+     "detail": "the application around it keeps the conversation and resends it"
+    },
+    {
+     "label": "18",
+     "detail": "times the sgit.ai site's session was summarised in a month, all automatically"
+    },
+    {
+     "label": "about 780,000 to 800,000 tokens",
+     "detail": "the context each summary started from"
+    },
+    {
+     "label": "9,000 to 19,000 tokens",
+     "detail": "what it kept"
+    },
+    {
+     "label": "1.7%",
+     "detail": "on average, of what it replaced"
+    },
+    {
+     "label": "Rules in a file",
+     "detail": "printed back after every summary"
+    },
+    {
+     "label": "One topic per session",
+     "detail": "when the topic changes, open a new session"
+    }
+   ],
+   "quotes": [
+    "Nothing is remembered by the model between sessions. Everything is remembered by the files.",
+    "The rules are restored, not remembered."
+   ],
+   "sources": [
+    "news:memory-is-not-a-spectator-sport",
+    "news:re-anchoring-agent-behaviour-policies"
+   ],
+   "ideas": [
+    "the-model-remembers-nothing",
+    "long-chats-are-compressed"
+   ],
+   "notes": "One session's measurement on one site over one month (the text says so); carry that caveat on the drawing. Storyboard 10 has an evidence card on compression; this is the numbers picture."
+  },
+  {
+   "id": "tech-stack-per-generation",
+   "title": "A tech stack per generation",
+   "altitude": "chapter",
+   "target": "everyone-is-a-developer",
+   "form": "stack",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "Three stacked toolkits side by side, the generation before Dinis's, his, and yours, finishing the 2018 drawing he never finished: the new top layer is not programmed but briefed, in your own words.",
+   "why": "It finishes the 2018 draft's own picture and carries the chapter's turn (from 'learn to code' to 'brief it') for the non-coder in one image.",
+   "elements": [
+    {
+     "label": "The generation before mine",
+     "detail": "a brain, a pen, paper and a scientific calculator"
+    },
+    {
+     "label": "Mine",
+     "detail": "spreadsheets, a computer, a mobile, the internet, email and a data centre"
+    },
+    {
+     "label": "Yours (2018 note)",
+     "detail": "\"AI and ML\" and \"voice\""
+    },
+    {
+     "label": "Yours (2026)",
+     "detail": "you brief it, and the brief is in your own words"
+    },
+    {
+     "label": "Portuguese is a programming language",
+     "detail": "236 million first-language speakers"
+    },
+    {
+     "label": "Anyone who can brief an agent to build something is a developer",
+     "detail": "the graduate, the manager who has never coded, the expert of twenty-five years"
+    }
+   ],
+   "quotes": [
+    "It turns out you brief it, and the brief is in your own words."
+   ],
+   "sources": [
+    "book:1.introduction/stem-tech-stack.md",
+    "news:portugal-2024-genai-in-portuguese",
+    "news:the-citizen-developer"
+   ],
+   "ideas": [
+    "craftspeople-make-their-own-tools",
+    "everyone-is-a-developer"
+   ],
+   "notes": "If the 2018 draft has an original sketch in v1/images, it can be shown beside the new drawing (do not edit it). A possible second picture, the spreadsheet errors (49 of 54; 15,841 cases; 65,536 rows), was left out as weaker."
+  },
+  {
+   "id": "explore-then-hand-over",
+   "title": "Explore, then hand it over",
+   "altitude": "chapter",
+   "target": "explorer-coding-and-the-handover",
+   "form": "flow",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "newsroom": "https://newsroom.sgit.ai/articles/images/ec-handover.webp",
+   "shows": "Three stations on the evolution axis, explorer, villager, town planner, with what each does to the same app; a gate between explorer and villager marked 'not ready to be in line', and a gate before production marked with the bonus test. Under the axis: the further towards commodity, the fewer agents in line.",
+   "why": "The chapter's two halves are the founder's way of building; one flow shows where the prototype stops and what has to happen before a customer depends on it.",
+   "elements": [
+    {
+     "label": "Explorer coding",
+     "detail": "not vibe coding; a way to find out; produces a brief that runs"
+    },
+    {
+     "label": "Not ready to be in line",
+     "detail": "nobody has read the code; nobody has validated the architecture"
+    },
+    {
+     "label": "Villagers make it reliable",
+     "detail": "tests, data handling, releases that do not break it, behaviour policies for the agents"
+    },
+    {
+     "label": "Town planners run it at scale and own it in production",
+     "detail": ""
+    },
+    {
+     "label": "The bonus test",
+     "detail": "would your team accept a bonus tied to how this tool performs in production?"
+    },
+    {
+     "label": "Make the agents leave a record",
+     "detail": "a written mandate, memory in a versioned store, what they built described as a graph"
+    },
+    {
+     "label": "The further towards commodity",
+     "detail": "the fewer agents in line, and the more deterministic the code"
+    },
+    {
+     "label": "In a company of one, that team is you",
+     "detail": ""
+    }
+   ],
+   "quotes": [
+    "The explorer builds the brief. The villager keeps it alive."
+   ],
+   "sources": [
+    "news:explorer-coding",
+    "news:who-will-fix-your-mess",
+    "news:explorer-to-villager-newsroom"
+   ],
+   "ideas": [
+    "explorer-coding",
+    "the-handover",
+    "not-ready-to-be-in-line",
+    "the-bonus-test-is-accountability",
+    "the-agents-leave-a-record"
+   ],
+   "notes": "Reuse the three badges (compass, house, grid) from Where do you land? so the two chapters read as one frame."
+  },
+  {
+   "id": "go-slow-to-go-fast",
+   "title": "Go slow to go fast: the newsroom's handover",
+   "altitude": "chapter",
+   "target": "explorer-coding-and-the-handover",
+   "form": "ladder",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "Six phases as steps, with 'no behaviour change' shaded over the first four and the explorer returning only at the last; the starting numbers at the foot; the rule at the top.",
+   "why": "It turns the chapter's real case into a sequence a founder can copy for their own first handover.",
+   "elements": [
+    {
+     "label": "1. Map everything",
+     "detail": ""
+    },
+    {
+     "label": "2. Move the code to its own repository",
+     "detail": "a pure refactoring, the same behaviour and the same bugs, proved by hashing every file before and after"
+    },
+    {
+     "label": "3. Write tests",
+     "detail": "every known bug recorded as a test that passes"
+    },
+    {
+     "label": "4. Review",
+     "detail": ""
+    },
+    {
+     "label": "5. Refactor",
+     "detail": ""
+    },
+    {
+     "label": "6. The explorer returns",
+     "detail": ""
+    },
+    {
+     "label": "About 2,700 lines, 433 tests",
+     "detail": "the live reader code, measured on 11 October 2026; the one workflow never ran the tests"
+    },
+    {
+     "label": "No new features while you move",
+     "detail": "a migration is a pure villager move"
+    }
+   ],
+   "quotes": [
+    "Move first, with the code unmodified. Then add the features."
+   ],
+   "sources": [
+    "news:explorer-to-villager-newsroom",
+    "news:move-the-cloud-not-the-code"
+   ],
+   "ideas": [
+    "no-new-features-during-the-move"
+   ],
+   "notes": "The text says 'no behaviour change until the fifth' phase; the shading must stop before phase 5 (refactor), so check with the source article whether refactor counts as a behaviour change."
+  },
+  {
+   "id": "start-the-company-in-six-steps",
+   "title": "Start the company: the part in six chapters",
+   "altitude": "part",
+   "target": "part:start-the-company",
+   "form": "flow",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "The part as one left-to-right path: know the problem and build the first answer, ship it and see if they miss it, price it and give it away, sell, decide whether to raise at all, make the company itself real. Each step carries its chapter title and the one test it asks.",
+   "why": "Readers jump from the contents page straight to Start the company; this gives them the part's shape and where to begin before they open a chapter.",
+   "elements": [
+    {
+     "label": "Be a founder: the expert founders",
+     "detail": "Execution just got cheap, so the person who knows the problem can build the first answer"
+    },
+    {
+     "label": "Ship it, and see if they miss it",
+     "detail": "Ship it. Give it away. Take it away. Ask."
+    },
+    {
+     "label": "Price it, then give it away",
+     "detail": "Price it first, because the price is the claim"
+    },
+    {
+     "label": "Sell",
+     "detail": "answer a question somebody already has, with a deadline"
+    },
+    {
+     "label": "Fund it, or do not",
+     "detail": "decide whether to raise at all; investors should be calling you"
+    },
+    {
+     "label": "The company itself",
+     "detail": "the UK, Portugal, Lithuania, the European Union (placeholder)"
+    },
+    {
+     "label": "Footer",
+     "detail": "From experience, mine and the people I work with; not legal or tax advice."
+    }
+   ],
+   "quotes": [
+    "Execution just got cheap, so the person who knows the problem can build the first answer"
+   ],
+   "sources": [],
+   "ideas": [],
+   "notes": "Labels come from the part's _index.md and the chapter titles; the step glosses are lines from chapters 18, 19, 20 and 21. The last step must be visibly marked as not yet written. Quote is from v2/content/6-start-the-company/_index.md."
+  },
+  {
+   "id": "two-candidates-one-edge",
+   "title": "When all things are equal",
+   "altitude": "chapter",
+   "target": "hired-for-the-workflow",
+   "form": "comparison",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "newsroom": "https://newsroom.sgit.ai/articles/images/hw-the-edge.webp",
+   "shows": "Two candidates who match the job specification equally well, side by side: one sends a CV, the other sends a fitted CV, a short analysis of the company's problem and something they have not seen. Underneath, where each interview starts: from the gaps in a CV, or from the candidate's strengths.",
+   "why": "It turns the chapter's central claim, why should I hire you, into a picture a job seeker (or a founder making a first sale) can copy for the next application.",
+   "elements": [
+    {
+     "label": "The question",
+     "detail": "why should I hire you?"
+    },
+    {
+     "label": "Candidate A",
+     "detail": "sends a CV"
+    },
+    {
+     "label": "Interview starts from",
+     "detail": "the gaps in a CV"
+    },
+    {
+     "label": "Candidate B",
+     "detail": "a CV fitted to the role"
+    },
+    {
+     "label": "+",
+     "detail": "a short analysis of the company's problem"
+    },
+    {
+     "label": "+",
+     "detail": "an infographic or a small working site they have not seen before"
+    },
+    {
+     "label": "Interview starts from",
+     "detail": "the candidate's strengths"
+    },
+    {
+     "label": "Same move, customer side",
+     "detail": "a founder's first sale: two suppliers look roughly equal"
+    },
+    {
+     "label": "Three things",
+     "detail": "Pick one workflow and do it end to end. Publish it. Use it in your next application."
+    }
+   ],
+   "quotes": [
+    "An edge is not a job. It helps when the choice is close, and the choice is nearly always close."
+   ],
+   "sources": [
+    "news:hired-for-the-workflow"
+   ],
+   "ideas": [
+    "hired-for-the-workflow",
+    "it-starts-with-the-application"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "there-was-a-time-timeline",
+   "title": "There was a time: the skill that got you hired",
+   "altitude": "chapter",
+   "target": "hired-for-the-workflow",
+   "form": "timeline",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "newsroom": "https://newsroom.sgit.ai/articles/images/hw-there-was-a-time.webp",
+   "shows": "A timeline of skills that once got people hired on what they could show (using a computer in the 1990s, the internet in the 2000s, breaking applications, code review, threat modelling, websites, email campaigns, mobile apps after the App Store in July 2008, Salesforce, spreadsheets) ending at now: running agentic workflows. A band beneath shows the shape each one followed: rare, hired on what you show, then expected of everyone.",
+   "why": "It makes the chapter's argument visible at a glance: the non-coder sees that every skill they already have was once this new technique, so they are more technical than they think.",
+   "elements": [
+    {
+     "label": "1990s",
+     "detail": "you could use a computer"
+    },
+    {
+     "label": "2000s",
+     "detail": "using the internet"
+    },
+    {
+     "label": "security and software",
+     "detail": "break an application; do a code review; threat modelling; program decently"
+    },
+    {
+     "label": "the web",
+     "detail": "building a website; sending email campaigns"
+    },
+    {
+     "label": "July 2008",
+     "detail": "App Store opens, more than 800 apps in its first weekend; people who could build a mobile app got jobs"
+    },
+    {
+     "label": "the business tools",
+     "detail": "Salesforce inside out; making a spreadsheet do things others could not"
+    },
+    {
+     "label": "2026",
+     "detail": "running agentic workflows: brief an agent, give it a boundary, check what comes back, glue the pieces together"
+    },
+    {
+     "label": "The shape",
+     "detail": "a skill is rare; it gets people hired on what they can show; then everyone is expected to have it"
+    }
+   ],
+   "quotes": [
+    "Each of those skills later became normal."
+   ],
+   "sources": [
+    "news:hired-for-the-workflow",
+    "book:1.introduction/how-to-get-a-job.md"
+   ],
+   "ideas": [
+    "hired-for-the-workflow",
+    "you-are-more-technical-than-you-think"
+   ],
+   "notes": "Only the 1990s, 2000s and July 2008 entries carry dates in the text; the other rows should be drawn as undated bands, not placed on invented years."
+  },
+  {
+   "id": "act-as-the-job-loop",
+   "title": "Break the loop: act as the job you want",
+   "altitude": "chapter",
+   "target": "act-as-the-job-you-want",
+   "form": "flow",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "newsroom": "https://newsroom.sgit.ai/articles/images/aj-loop.webp",
+   "shows": "On the left, the closed loop: the role wants two years of the thing, the only place to get two years is the role. On the right, the way out: act in the role, do it in public, the work can be linked, people who want to help forward the link, and four outcomes branch off it: a reference, an introduction, pay, a hire.",
+   "why": "It gives the stuck job seeker (and the parent with twenty years in a field) the chapter's whole method on one page, with linkable work as the hinge.",
+   "elements": [
+    {
+     "label": "The loop",
+     "detail": "the role wants two years of the thing, and the only place to get two years of the thing is the role"
+    },
+    {
+     "label": "Act in the role",
+     "detail": "manage something for them: a release, a backlog, an event, a migration"
+    },
+    {
+     "label": "Do it in public",
+     "detail": "a pull request, a post that tags the company, an article on your own site, a project board anyone can open"
+    },
+    {
+     "label": "Something you can link",
+     "detail": "a page that explains who you are and what you have done"
+    },
+    {
+     "label": "People who want to help",
+     "detail": "forward a link: \"Have a look at what this person did for this startup.\""
+    },
+    {
+     "label": "Outcomes",
+     "detail": "a reference; introductions to people who are hiring; pay; a hire"
+    },
+    {
+     "label": "Caution",
+     "detail": "Choose projects where the work is yours to show, and stop if it is only taken."
+    },
+    {
+     "label": "By job",
+     "detail": "artist: publish what you make; security engineer: find and report vulnerabilities in open source; product manager: write the product brief and send it"
+    }
+   ],
+   "quotes": [
+    "Finished and private is invisible.",
+    "The work gives you the CV you did not have."
+   ],
+   "sources": [
+    "news:act-as-the-job-you-want",
+    "book:1.introduction/how-to-get-a-job.md"
+   ],
+   "ideas": [
+    "act-as-the-job-you-want",
+    "your-cv-online"
+   ],
+   "notes": "Reach figures (a hundred views, sometimes five hundred) could be a side note but are Dinis's own LinkedIn numbers and dated to 2026."
+  },
+  {
+   "id": "newsroom-in-five-steps",
+   "title": "Your own newsroom in five steps",
+   "altitude": "chapter",
+   "target": "your-own-newsroom",
+   "form": "flow",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "What you need (three items) above five numbered steps from creating the repository to keeping the record, with the loop drawn under them: you speak a memo, the agent researches, writes, checks, builds, publishes, you read and correct by voice.",
+   "why": "It is the copyable recipe the chapter gives founders and job seekers; a reader should be able to set it up from the poster alone.",
+   "elements": [
+    {
+     "label": "You need",
+     "detail": "a GitHub account and one public repository (Pages is free; nothing confidential goes in it)"
+    },
+    {
+     "label": "You need",
+     "detail": "an agent plan with cloud sessions connected to that repository"
+    },
+    {
+     "label": "You need",
+     "detail": "any app that turns a voice memo into text"
+    },
+    {
+     "label": "1. Create the repository and turn on Pages",
+     "detail": "a workflow that validates before it publishes; a failed check stops the release"
+    },
+    {
+     "label": "2. Write the house rules",
+     "detail": "one file at the root the agent reads every session; grows by one line every time you correct the agent"
+    },
+    {
+     "label": "3. Connect a cloud session and give it the first brief",
+     "detail": "folders, an article template, a small build script, a validator, a first page about you"
+    },
+    {
+     "label": "4. Record, paste, review",
+     "detail": "correct by voice; the agent rebuilds, validates, pushes, checks the live page"
+    },
+    {
+     "label": "5. Keep the record",
+     "detail": "a correction is a new version; every release gets a version and a one-line note"
+    },
+    {
+     "label": "What it is like to run",
+     "detail": "in three days, 54 messages, ten of them voice memos, became 40 releases"
+    }
+   ],
+   "quotes": [
+    "And a rule in a prompt is a hope: only the rules a hook or the build keeps are enforced, so mark which is which."
+   ],
+   "sources": [
+    "news:your-own-newsroom",
+    "news:nineteen-sites",
+    "book:2.mvp-for-gen-z-dev/content/hugo.md"
+   ],
+   "ideas": [
+    "publish-publish-publish",
+    "your-newsroom-is-your-demo-and-your-crm"
+   ],
+   "notes": "The 54 messages / 40 releases figure is dated October 2026 and from the newsroom. The free-plan Pages condition (public repository) is GitHub's current rule; recheck before printing."
+  },
+  {
+   "id": "the-voice-is-four-inputs",
+   "title": "The voice is not a setting: four inputs",
+   "altitude": "chapter",
+   "target": "your-own-newsroom",
+   "form": "anatomy",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "Four inputs feeding one session (the corpus, the memo, the rules, the reader), each with its number or example, and a note that taking any one away stops it working; a small inset shows how to start each one this week.",
+   "why": "It answers the reader's 'how does it sound like you?' and shows that the method transfers while the voice does not.",
+   "elements": [
+    {
+     "label": "The corpus",
+     "detail": "everything already published: 86 articles, about 347,000 words, 51 of them from voice memos"
+    },
+    {
+     "label": "The memo",
+     "detail": "me talking, in the order I thought it"
+    },
+    {
+     "label": "The rules",
+     "detail": "seven, each a correction made once: no em-dashes; no absolutes I cannot back; \"great\", not \"perfect\"; British English; plainer words"
+    },
+    {
+     "label": "The reader",
+     "detail": "I read every article, before it goes live and after; a wrong word becomes a rule, a wrong point a new version"
+    },
+    {
+     "label": "Nothing is trained",
+     "detail": "the same model anyone uses; one session's context"
+    },
+    {
+     "label": "Start today",
+     "detail": "the corpus at one article; the rules file at one line"
+    }
+   ],
+   "quotes": [
+    "The model never decides whether something sounds like me. I do.",
+    "the person has to do most of the work, by thinking out loud, by reading, and by saying no."
+   ],
+   "sources": [
+    "news:how-the-voice-works",
+    "news:how-much-of-this-did-i-write"
+   ],
+   "ideas": [
+    "the-voice-is-four-inputs",
+    "the-memo-is-the-thinking"
+   ],
+   "notes": "Only five of the seven rules are named in the text; draw five and mark 'and two more' rather than inventing them. Corpus counts are the newsroom's at the time of the article."
+  },
+  {
+   "id": "the-row-becomes-a-folder",
+   "title": "The row becomes a folder",
+   "altitude": "chapter",
+   "target": "your-first-workspace",
+   "form": "anatomy",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "A spreadsheet row on the left turning into a Contacts folder on the right: one folder per person, five documents inside, with the Summary drawn as derived from the other four and each document marked with what the agent may do to it (add, write, show me first, regenerate).",
+   "why": "The non-coder's first workspace, drawn so it can be built in Google Drive from the picture alone, with the rule that the Summary is a view and the Record is the truth.",
+   "elements": [
+    {
+     "label": "Spreadsheet row",
+     "detail": "a summary you typed: a stage, a date, a next step, a notes column"
+    },
+    {
+     "label": "Contacts / one folder per person"
+    },
+    {
+     "label": "Record",
+     "detail": "role, company, how you met, stage, next step and date, what they care about; every fact with its source, \"(email, 3 Oct)\"; agent shows you any change first"
+    },
+    {
+     "label": "Ledger",
+     "detail": "one line per event: date, in or out, channel, one sentence; only ever added to"
+    },
+    {
+     "label": "Messages",
+     "detail": "every email and note, pasted word for word"
+    },
+    {
+     "label": "Notes",
+     "detail": "calls and meetings, dated, including what you said into your phone afterwards"
+    },
+    {
+     "label": "Summary",
+     "detail": "written by the agent from the four above; never edited by hand"
+    },
+    {
+     "label": "The fix",
+     "detail": "if the Summary is wrong, fix the Record or the Ledger and regenerate"
+    },
+    {
+     "label": "Week one",
+     "detail": "Ask, Prepare, Draft, Debrief, Campaign"
+    }
+   ],
+   "quotes": [
+    "The Summary is a view; the Record is the truth."
+   ],
+   "sources": [
+    "news:from-a-spreadsheet-to-a-folder-per-person",
+    "news:replicating-the-agentic-inbox"
+   ],
+   "ideas": [
+    "first-workspace"
+   ],
+   "notes": "Uses Google Drive, Gmail and the Claude app by name, as the chapter does; the accounts-and-costs checklist is a gap the chapter flags for Dinis, so do not add prices."
+  },
+  {
+   "id": "six-lines-draft-never-send",
+   "title": "Six lines: the agent's behaviour policy",
+   "altitude": "chapter",
+   "target": "your-first-workspace",
+   "form": "checklist",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "The six-line policy as a card to paste into a Project's instructions, with the three lines learned the hard way highlighted (draft and never send; append and never rewrite; stay in the folder) and a tag on each saying whether it is enforced or told.",
+   "why": "A founder setting up a first agent can copy it exactly, and see which lines the app actually holds and which only the one-line report checks.",
+   "elements": [
+    {
+     "label": "1",
+     "detail": "You work for me. Every email you write is a draft that I read and send. You never send. (holds as far as Gmail drafting goes)"
+    },
+    {
+     "label": "2",
+     "detail": "You write only into a person's folder: Ledger, Messages, Notes and Summary; never change the Record without showing me first"
+    },
+    {
+     "label": "3",
+     "detail": "You add to the Ledger and the Messages. You never rewrite or delete a line. A correction is a new line."
+    },
+    {
+     "label": "4",
+     "detail": "Every fact you put in a Record or a Summary names where it came from."
+    },
+    {
+     "label": "5",
+     "detail": "If a person has no folder, you ask before making one. If a request would reach outside the folder, you ask."
+    },
+    {
+     "label": "6",
+     "detail": "At the end of every task you say, in one line, what you read and what you wrote."
+    },
+    {
+     "label": "Learned the hard way",
+     "detail": "draft and never send; append and never rewrite; stay in the folder"
+    }
+   ],
+   "quotes": [
+    "Draft, never send is the rule that never changes."
+   ],
+   "sources": [
+    "news:replicating-the-agentic-inbox",
+    "news:how-i-work-with-claude"
+   ],
+   "ideas": [
+    "first-workspace"
+   ],
+   "notes": "Line 2 is condensed; the full wording is in the chapter and should be used if space allows. The enforced-or-told tags follow the chapter's statement about the Claude app 'today' (October 2026) and may date."
+  },
+  {
+   "id": "pick-the-surface-by-reach",
+   "title": "Pick the surface by reach",
+   "altitude": "chapter",
+   "target": "your-first-workspace",
+   "form": "comparison",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "Three agent surfaces as columns, with what each reaches (nothing, no repositories, one repository per session) and what it is for, beside the laptop that reaches everything you can read.",
+   "why": "It makes the chapter's security argument usable: a reader can see why the agent does not run on the laptop and which surface to open for which job.",
+   "elements": [
+    {
+     "label": "Your laptop",
+     "detail": "a process you start runs as you: cloud credentials, the password manager while unlocked, every signed-in site"
+    },
+    {
+     "label": "A chat with nothing connected",
+     "detail": "for thinking"
+    },
+    {
+     "label": "Cowork in the cloud, with no repositories",
+     "detail": "for most of the agentic work"
+    },
+    {
+     "label": "Claude Code on the web, one repository per session",
+     "detail": "when code has to change"
+    },
+    {
+     "label": "Your Contacts Project",
+     "detail": "reaches one folder and one mailbox, and nothing else of yours"
+    },
+    {
+     "label": "The agent's own mailbox",
+     "detail": "empty on day one; reaches exactly what you forward to it"
+    }
+   ],
+   "quotes": [
+    "A mistake inside a boundary is a bad afternoon. The same mistake inside your account is an incident."
+   ],
+   "sources": [
+    "news:why-my-agents-do-not-run-on-my-laptop",
+    "book:6.security/dont-touch-production.md"
+   ],
+   "ideas": [
+    "not-on-your-laptop"
+   ],
+   "notes": "Product names (Cowork, Claude Code on the web) are as of October 2026."
+  },
+  {
+   "id": "a-session-with-a-focus",
+   "title": "An agent is a session with a focus",
+   "altitude": "chapter",
+   "target": "how-to-work-with-agents",
+   "form": "stack",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "One agent drawn as a stack: the project documents, the role.md, a named session that reads them first; around it the three shared files that make several agents work (lessons, debriefs, the daily brief), and below it the four things a good brief says.",
+   "why": "It gives the reader, coder or not, the minimal kit for an agent and the brief as its unit of work, which is what a hiring manager or a founder looks for as evidence.",
+   "elements": [
+    {
+     "label": "Project documents",
+     "detail": "what it is, where it is going, what has been decided"
+    },
+    {
+     "label": "role.md",
+     "detail": "what it may do, what it must not do, and where it writes"
+    },
+    {
+     "label": "A named session",
+     "detail": "reads those first; @briefs, @inbox, @librarian"
+    },
+    {
+     "label": "One session per topic",
+     "detail": "a thread is the model's frame of reference"
+    },
+    {
+     "label": "Lessons",
+     "detail": "one thing learned, the evidence, which agents it applies to, whether it still holds"
+    },
+    {
+     "label": "Debrief",
+     "detail": "what was done, what is open, what went wrong"
+    },
+    {
+     "label": "Daily brief",
+     "detail": "the Librarian: what needs me, what happened, at most three suggestions"
+    },
+    {
+     "label": "The brief",
+     "detail": "what is asked, what exists, what remains, what done looks like"
+    }
+   ],
+   "quotes": [
+    "The brief is the short letter."
+   ],
+   "sources": [
+    "news:how-i-work-with-claude",
+    "news:the-librarians-daily-brief",
+    "news:brief-the-agent-too",
+    "art:write-it-as-an-article"
+   ],
+   "ideas": [
+    "an-agent-is-a-session-with-a-focus",
+    "brief-is-the-unit-of-work"
+   ],
+   "notes": "The chapter asks Dinis whether the Librarian runs now; draw it as described, not as a running system, until he answers."
+  },
+  {
+   "id": "every-mistake-added-a-rule",
+   "title": "Every mistake added a rule",
+   "altitude": "chapter",
+   "target": "how-to-work-with-agents",
+   "form": "cycle",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "The trap as a loop (a mistake adds a rule, the prompt grows, the summary comes sooner, the summary decides which rules survive, a lost rule causes a new mistake), with the way out drawn as a branch: replace the rule with a stronger barrier, keep the rest in a file restored after every summary.",
+   "why": "The reader who has started using agents meets this trap first; the picture shows why a stronger wording does not help and what does.",
+   "elements": [
+    {
+     "label": "A mistake",
+     "detail": "adds a rule"
+    },
+    {
+     "label": "The prompt grows",
+     "detail": "one friend's had grown to 100 KB"
+    },
+    {
+     "label": "The summary comes sooner",
+     "detail": "one session summarised eighteen times in a month, each keeping on average 1.7%"
+    },
+    {
+     "label": "The summary decides which rules survive"
+    },
+    {
+     "label": "A lost rule",
+     "detail": "when it does not survive, nothing tells you"
+    },
+    {
+     "label": "Way out: a stronger barrier",
+     "detail": "a step short enough to finish before the summary; a wrapper that writes every output to a file; a script committed and hashed before it runs"
+    },
+    {
+     "label": "Re-anchoring",
+     "detail": "the rules are restored, not remembered"
+    },
+    {
+     "label": "Keep few",
+     "detail": "rules from incidents, enforced by machines, stay few; rules from worry, enforced by attention, multiply"
+    }
+   ],
+   "quotes": [
+    "Every mistake added a rule, and every new rule caused new mistakes."
+   ],
+   "sources": [
+    "news:every-mistake-added-a-rule",
+    "news:re-anchoring-agent-behaviour-policies"
+   ],
+   "ideas": [
+    "every-mistake-added-a-rule",
+    "a-correction-becomes-a-rule"
+   ],
+   "notes": "Counts (100 KB, eighteen summaries, 1.7%) are from the cited articles and specific to those sessions."
+  },
+  {
+   "id": "how-cheap-is-it-to-undo",
+   "title": "How cheap is it to undo?",
+   "altitude": "chapter",
+   "target": "direction-and-judgement",
+   "form": "decision",
+   "method": "code",
+   "priority": 1,
+   "state": "drafted",
+   "drawn": "how-cheap-is-it-to-undo",
+   "shows": "A decision tree that replaces 'do I trust the agent?' with one question about each output: if this is wrong, how cheap is it to undo, and what does it break before I do? The two-way branch goes to controls that do not get tired; the one-way branch goes to a person, with the four places named.",
+   "why": "It is the chapter's most usable test, for an employee reviewing agent output and for a founder deciding build or buy; a founder can pin it above the desk.",
+   "elements": [
+    {
+     "label": "Not",
+     "detail": "do I trust the agent? (which has no answer)"
+    },
+    {
+     "label": "Ask",
+     "detail": "if this is wrong, how cheap is it to undo, and what does it break before I do?"
+    },
+    {
+     "label": "Two-way door",
+     "detail": "an article: a correction is a new version; a narrow internal tool that can be switched off: build it, explore, learn"
+    },
+    {
+     "label": "Use controls that do not get tired",
+     "detail": "a validator, a policy row enforced outside the model, a record read afterwards"
+    },
+    {
+     "label": "One-way door",
+     "detail": "an email in my name; a tool that touches regulated data every day"
+    },
+    {
+     "label": "Put the person here",
+     "detail": "sending in my name, typing a secret, spending money, deleting what has no backup"
+    },
+    {
+     "label": "Why not everywhere",
+     "detail": "users approve 93% of permission prompts"
+    },
+    {
+     "label": "13 October 2026",
+     "detail": "fourteen releases, none approved first; twelve agents drafted every email and sent none"
+    }
+   ],
+   "quotes": [
+    "An article is a two-way door: a correction is a new version, and the next reader gets the fixed page. An email in my name is a one-way door."
+   ],
+   "sources": [
+    "news:how-cheap-is-it-to-undo",
+    "news:the-human-in-the-loop",
+    "news:footprint-and-blast-radius",
+    "book:4.life-patterns/one-way-two-way-doors.md"
+   ],
+   "ideas": [
+    "one-way-two-way-doors",
+    "agents-decide-people-answer"
+   ],
+   "notes": "The 93% figure is Anthropic's measurement as cited in the chapter; keep the attribution on the graphic. The Google executive's test is unsourced (open question for Dinis), so leave it off."
+  },
+  {
+   "id": "places-of-highest-leverage",
+   "title": "Places of highest leverage",
+   "altitude": "chapter",
+   "target": "direction-and-judgement",
+   "form": "quadrant",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "A 2x2 of blocked or not blocked against changes little or changes a lot, with the whole blocked column greyed, one quadrant 'not blocked, would not change much', and the lit quadrant 'not blocked, would change a lot: work on those, and only those'. Beside it, the five ways the bigger picture is designed in for an agent, and the junior version: name the stop.",
+   "why": "It shows the skimming reader what direction means in practice, the scarce skill the chapter says people are paid for.",
+   "elements": [
+    {
+     "label": "Blocked on something",
+     "detail": "most things"
+    },
+    {
+     "label": "Not blocked, would not change much",
+     "detail": "some"
+    },
+    {
+     "label": "Not blocked, would change a lot",
+     "detail": "a few: work on those, and only those, until they stop being that"
+    },
+    {
+     "label": "Design the picture in",
+     "detail": "a brief that explains the thinking; a mandate that only reaches what the job needs; memory that holds the strategy and the threats; a stop named before the work begins; shipping often enough that users tell you"
+    },
+    {
+     "label": "Name the stop",
+     "detail": "a time, a budget, or a result that counts as good enough"
+    },
+    {
+     "label": "The measure",
+     "detail": "am I getting better?"
+    }
+   ],
+   "quotes": [
+    "always follow the users, even when the user is you, and follow the feedback loops."
+   ],
+   "sources": [
+    "news:places-of-highest-leverage",
+    "news:knowing-when-to-stop",
+    "news:not-a-straight-line"
+   ],
+   "ideas": [
+    "direction-is-the-scarce-skill",
+    "knowing-when-to-stop"
+   ],
+   "notes": "The text gives three categories, not four; the 2x2 must leave the blocked column undivided rather than invent a 'blocked but high impact' quadrant."
+  },
+  {
+   "id": "remembered-versus-recorded",
+   "title": "Count rather than remember",
+   "altitude": "chapter",
+   "target": "facts-and-the-record",
+   "form": "comparison",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "Two columns, what I remembered and what the record showed, for the founder's own company story, under a tally of eight articles' claims checked against the record (five confirmed, five corrected, two not found). The three valid answers to a review finding run along the bottom.",
+   "why": "It makes 'check' concrete for the founder who will tell an investor their story, and shows that being corrected is the method, not the failure.",
+   "elements": [
+    {
+     "label": "Last eight articles",
+     "detail": "5 confirmed, 5 corrected, 2 could not be found"
+    },
+    {
+     "label": "Remembered: the data room and the vault came from a zip feature",
+     "detail": "Record: both named in February, before the features existed"
+    },
+    {
+     "label": "Remembered: a week of briefs on copying Git's model",
+     "detail": "Record: about two weeks and some 48 brief files"
+    },
+    {
+     "label": "Remembered: nine months",
+     "detail": "Record: eight"
+    },
+    {
+     "label": "Investor one-pager: 30 paying customers",
+     "detail": "Record: ten"
+    },
+    {
+     "label": "Every finding gets an answer",
+     "detail": "fixed, in which version; declined, with the reason; or open. Deleting the finding is not an answer."
+    }
+   ],
+   "quotes": [
+    "Not found is not false.",
+    "Count rather than remember, especially about yourself."
+   ],
+   "sources": [
+    "news:my-memory-checked",
+    "news:reviews-on-the-record",
+    "news:from-send-to-sgit"
+   ],
+   "ideas": [
+    "the-record-checks-you",
+    "asked-to-be-corrected",
+    "disagree-rationally-with-provenance"
+   ],
+   "notes": "The 5/5/2 tally is 'when I counted', at the time of the article."
+  },
+  {
+   "id": "the-meeting-brief-board",
+   "title": "Be the best-prepared person in the room",
+   "altitude": "chapter",
+   "target": "facts-and-the-record",
+   "form": "anatomy",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "A one-page meeting brief laid out as the chapter's storyboard puts it on one board: who they are, what they want; what I want, what I know; what I don't know; the follow-ups.",
+   "why": "A founder's first sales calls and a job seeker's interviews are where this earns its keep; it is a template to print before every meeting.",
+   "elements": [
+    {
+     "label": "Who they are, what they want"
+    },
+    {
+     "label": "What I want, what I know"
+    },
+    {
+     "label": "What I don't know"
+    },
+    {
+     "label": "The follow-ups"
+    },
+    {
+     "label": "Briefings and pre-briefings",
+     "detail": "briefings for you, and briefings on the people you are meeting"
+    }
+   ],
+   "quotes": [
+    "These days there is no excuse not to be."
+   ],
+   "sources": [
+    "sb:follow-the-rabbit-holes",
+    "art:follow-the-rabbit-holes"
+   ],
+   "ideas": [
+    "best-prepared-person-in-the-room"
+   ],
+   "notes": "Labels are the ones the chapter quotes from the storyboard; check them against admin/content/storyboards for the exact board. Dinis's own step-by-step preparation is still an open question in the chapter, so the graphic should not add steps."
+  },
+  {
+   "id": "the-two-moves",
+   "title": "Where the company sits: the two moves",
+   "altitude": "chapter",
+   "target": "be-a-founder",
+   "form": "map",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "newsroom": "https://newsroom.sgit.ai/articles/images/ef-playbooks.webp",
+   "shows": "Explorer, villager and town planner as three stations with who reads the code at each, and the two moves between them highlighted as the places a company sits: explorer to villager, villager to town planner.",
+   "why": "It shows the expert founder (and the graduate) where a business can be built in a world of generated code, which is the chapter's least obvious claim.",
+   "elements": [
+    {
+     "label": "Explorer",
+     "detail": "code read for intent, mostly by agents"
+    },
+    {
+     "label": "Move 1: explorer to villager",
+     "detail": "when a guess becomes a product and needs the review it never had"
+    },
+    {
+     "label": "Villager",
+     "detail": "code read line by line; where changes land and the blast radius lives"
+    },
+    {
+     "label": "Move 2: villager to town planner",
+     "detail": "when a product becomes a commodity and the review becomes checks that run without anyone"
+    },
+    {
+     "label": "Town planner",
+     "detail": "deterministic checks at the boundary, with a person for the exceptions"
+    },
+    {
+     "label": "The trap",
+     "detail": "not knowing which stage the code is at"
+    },
+    {
+     "label": "The companies",
+     "detail": "take the finished brief and run it, secure it, version it, keep it working; paid by consumption, not by the seat"
+    }
+   ],
+   "quotes": [
+    "The company sits in the two moves between them."
+   ],
+   "sources": [
+    "news:code-review-as-a-fractal-semantic-graph",
+    "news:if-somebody-built-a-company-on-code-review"
+   ],
+   "ideas": [
+    "the-company-sits-in-the-two-moves"
+   ],
+   "notes": "Should reuse the explorer/villager/town-planner visual language of 'Where do you land?' so the two read as one map."
+  },
+  {
+   "id": "expert-founders-in-numbers",
+   "title": "The expert founders, in numbers",
+   "altitude": "chapter",
+   "target": "be-a-founder",
+   "form": "numbers",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "newsroom": "https://newsroom.sgit.ai/articles/images/ef-playbooks.webp",
+   "shows": "A wall of key figures in two halves: the old playbook (many bets, a few pay for the rest) and the case for the expert (age 45, twice the rate with industry years, the rise of solo founders), with the opening underneath: software people pay for and do not like.",
+   "why": "The 51-year-old claims expert asks whether this is for them; the numbers say why the expert was always the better bet and why the build no longer stops them.",
+   "elements": [
+    {
+     "label": "about half",
+     "detail": "of just over 7,000 venture investments (1985 to 2014) returned less than the original investment"
+    },
+    {
+     "label": "6% / 60%",
+     "detail": "6% of the deals produced 60% of the total returns"
+    },
+    {
+     "label": "45",
+     "detail": "mean age at founding of the fastest-growing one-in-a-thousand ventures (2.7 million US founders)"
+    },
+    {
+     "label": "2x",
+     "detail": "founders with three or more years in the same industry reached top-tier growth at twice the rate"
+    },
+    {
+     "label": "23.7% to 36.3%",
+     "detail": "new US startups with a solo founder, 2019 to the first half of 2025"
+    },
+    {
+     "label": "11.5 months",
+     "detail": "median to a million dollars of annualised revenue, Stripe's top 100 AI companies (the fastest, not the typical)"
+    },
+    {
+     "label": "91%",
+     "detail": "frustrated by inadequate workplace technology (8,698 surveyed)"
+    },
+    {
+     "label": "80%",
+     "detail": "of features in the average product rarely or never used (615 products)"
+    },
+    {
+     "label": "73%",
+     "detail": "of companies prepare their VAT returns in Excel"
+    },
+    {
+     "label": "100% for 10%",
+     "detail": "you pay 100% for the 10% of features you actually wanted"
+    }
+   ],
+   "quotes": [
+    "If you are the expert, you already know which 10% your field uses and which 20% hurts."
+   ],
+   "sources": [
+    "news:the-expert-founders",
+    "news:saas-apocalypse-decided-by-inertia-not-by-ai"
+   ],
+   "ideas": [
+    "the-expert-founders-in-numbers",
+    "expert-founders",
+    "users-were-never-happy"
+   ],
+   "notes": "Every figure needs its source named on the graphic (Horsley Bridge, the 2.7 million founder study, Stripe, Freshworks, Pendo); the chapter names some by organisation only. Solo-founder and Stripe figures are 2025 data. The $21 million Zylo and 78% spreadsheet figures can be added if space allows."
+  },
+  {
+   "id": "the-miss-it-test",
+   "title": "Ship it. Give it away. Take it away. Ask.",
+   "altitude": "chapter",
+   "target": "ship-it-and-see-if-they-miss-it",
+   "form": "decision",
+   "method": "code",
+   "priority": 1,
+   "state": "drafted",
+   "drawn": "the-miss-it-test",
+   "newsroom": "https://newsroom.sgit.ai/articles/images/startup-test-hero.webp",
+   "shows": "Four steps in a row, then the fork: do they miss it? A shrug leads to 'you do not have a product yet'; coming back asking for it leads to two price questions, happy to pay and profitable for you. A side test first: would you use it on Monday morning?",
+   "why": "Readers valued this test most; drawn as a decision tree, a founder can run it on the wall and know what each answer means.",
+   "elements": [
+    {
+     "label": "Ship",
+     "detail": "a thing somebody else can go and use, on their own, and get value from; not a proof of concept, not a demo"
+    },
+    {
+     "label": "Give it away",
+     "detail": "for free, a short window; the cost of generosity inside what you can absorb"
+    },
+    {
+     "label": "Take it away",
+     "detail": "the trial expired; nothing else changes; no apology"
+    },
+    {
+     "label": "Ask: do they miss it?"
+    },
+    {
+     "label": "They shrug and go back to their day",
+     "detail": "you do not have a product yet; no sense of loss means no why now"
+    },
+    {
+     "label": "They come back and ask for it",
+     "detail": "you have something"
+    },
+    {
+     "label": "Then",
+     "detail": "is the price one they are happy to pay? is that price profitable for you?"
+    },
+    {
+     "label": "The test applies to you",
+     "detail": "before you ask whether a stranger misses it, ask whether you would"
+    },
+    {
+     "label": "Trap",
+     "detail": "do not reach for a subscription by default"
+    }
+   ],
+   "quotes": [
+    "Ship it. Give it away. Take it away. Ask.",
+    "If they shrug and go back to their day, you do not have a product yet."
+   ],
+   "sources": [
+    "news:the-question-is-whether-they-miss-it",
+    "news:i-miss-it"
+   ],
+   "ideas": [
+    "do-they-miss-it",
+    "the-roadmap-deciders-must-use-it",
+    "silence-is-a-signal"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "sg-send-five-days-timeline",
+   "title": "Five days, ten customers, and the silence",
+   "altitude": "chapter",
+   "target": "ship-it-and-see-if-they-miss-it",
+   "form": "timeline",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "SG/Send's first month on a dated line, from first commit to the 5 March brief that said the use case had not landed, with an hour-by-hour inset for the first feature request and the pace figures beneath.",
+   "why": "It shows the loop with real dates, including the failed miss-it test, so the reader sees that working technology and a product are different things.",
+   "elements": [
+    {
+     "label": "8 February 2026",
+     "detail": "first commit: files encrypted on the client; the key never sent to the server"
+    },
+    {
+     "label": "13 February",
+     "detail": "send.sgraph.ai live: five days"
+    },
+    {
+     "label": "1 March",
+     "detail": "Stripe checkout live"
+    },
+    {
+     "label": "2 March",
+     "detail": "ten paying customers (buy £5 of credits, get a £5 Amazon voucher; several declined it)"
+    },
+    {
+     "label": "2 March, 20:26",
+     "detail": "first feature request: send a folder; proposal committed"
+    },
+    {
+     "label": "20:48",
+     "detail": "implementation"
+    },
+    {
+     "label": "22:15",
+     "detail": "viewer for the zip on the download page"
+    },
+    {
+     "label": "5 March",
+     "detail": "Users buy credits, test once, and don't come back. Credits sit unused."
+    },
+    {
+     "label": "The pace",
+     "detail": "4,476 commits on 246 of the first 249 days; 739 release tags; unit tests 237 to 4,232"
+    },
+    {
+     "label": "Unverified",
+     "detail": "thirty paying customers: only in an investor one-pager; ten is the recorded number"
+    }
+   ],
+   "quotes": [
+    "That silence was the signal."
+   ],
+   "sources": [
+    "news:from-send-to-sgit",
+    "news:the-question-is-whether-they-miss-it"
+   ],
+   "ideas": [
+    "sg-send-live-in-five-days",
+    "silence-is-a-signal"
+   ],
+   "notes": "Dates and counts are from the git logs and briefs as checked in October 2026 (tests figure to 14 October). The chapter asks Dinis whether the SG/Send story stays at this length here; if it moves to 'Your first price and your first ten customers', the graphic moves with it. Usage after 5 March is described, not counted: draw no usage curve."
+  },
+  {
+   "id": "card-fee-arithmetic",
+   "title": "Below about £5, the fixed fee is the price",
+   "altitude": "chapter",
+   "target": "price-it-then-give-it-away",
+   "form": "numbers",
+   "method": "code",
+   "priority": 1,
+   "state": "drafted",
+   "drawn": "card-fee-arithmetic",
+   "shows": "Four payments (£20, £5, 50p, 10p) as bars with the card fee of 1.5% plus 20p drawn on each, the share it takes written beside it, and the fix underneath: aggregate the pence into one balance.",
+   "why": "Readers valued this arithmetic; drawn, any founder pricing in pence can see in a second where the model stops existing.",
+   "elements": [
+    {
+     "label": "Stripe standard UK card rate",
+     "detail": "1.5% plus 20p"
+    },
+    {
+     "label": "£20",
+     "detail": "fee 2.5%"
+    },
+    {
+     "label": "£5",
+     "detail": "fee 5.5%"
+    },
+    {
+     "label": "50p",
+     "detail": "fee 41.5%"
+    },
+    {
+     "label": "10p",
+     "detail": "the fee is more than the payment"
+    },
+    {
+     "label": "So",
+     "detail": "one charge a year that covers many things, or a platform that holds a balance and settles in bulk"
+    },
+    {
+     "label": "The newsroom's meter",
+     "detail": "a page at a few pence against £5 of credit settled as one balance; never charges the card per page"
+    }
+   ],
+   "quotes": [
+    "Below about £5, the fixed fee is the price.",
+    "Anything you pay for by the number will be gamed by the number."
+   ],
+   "sources": [
+    "news:paying-after-the-value",
+    "news:price-it-then-give-it-away"
+   ],
+   "ideas": [
+    "pence-only-work-aggregated"
+   ],
+   "notes": "Fees check: £20 gives 50p (2.5%), £5 gives 27.5p (5.5%), 50p gives 20.75p (41.5%), 10p gives 20.15p. Stripe's rate is the published UK standard rate in 2026; recheck before printing and date it on the graphic."
+  },
+  {
+   "id": "four-moves-in-order",
+   "title": "Four moves, in order",
+   "altitude": "chapter",
+   "target": "price-it-then-give-it-away",
+   "form": "flow",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "The four moves as numbered steps, each with the RiskMandate example under it: the product sentence, the four-tier price ladder, the agent-run delivery, the twenty free places; then the fork of two outcomes.",
+   "why": "It gives the expert founder the step after the miss-it test, with a real price ladder they can use as a model for their own.",
+   "elements": [
+    {
+     "label": "1. Define the product",
+     "detail": "not the technology, the thing somebody receives: an Agent Behaviour Policy for one agent, as an encrypted vault the customer holds the keys to"
+    },
+    {
+     "label": "2. Price it, at a number that makes sense to you",
+     "detail": "£10 pack downloaded; £50 a working vault; £500 corrected for your situation; £1,500 two sessions and a professional's signature (2 October 2026)"
+    },
+    {
+     "label": "3. Deliver at a cost that grows a step at a time",
+     "detail": "the twentieth customer costs close to the second: linear, not exponential"
+    },
+    {
+     "label": "4. Offer it, free, to the people who already know you",
+     "detail": "twenty places, the £500 tier given away; invite only, 30 September 2026"
+    },
+    {
+     "label": "Measure what it cost them",
+     "detail": "time to first reply; never replied; started and stopped; questions the message should have answered"
+    },
+    {
+     "label": "They take it",
+     "detail": "you have a product; the next question is price"
+    },
+    {
+     "label": "They do not find the time",
+     "detail": "you do not have a product yet; not a marketing problem"
+    }
+   ],
+   "quotes": [
+    "A commercial product is one people take when the only cost is their own attention."
+   ],
+   "sources": [
+    "news:price-it-then-give-it-away",
+    "news:open-source-is-not-free"
+   ],
+   "ideas": [
+    "price-it-before-you-give-it-away",
+    "free-is-never-free-for-the-other-side"
+   ],
+   "notes": "Prices are the ones RiskMandate published on the dates given; label them as an example, not advice, as the chapter does. The results of the early access programme are an open question for Dinis."
+  },
+  {
+   "id": "the-engagement-path",
+   "title": "Sell a service before the product",
+   "altitude": "chapter",
+   "target": "sell",
+   "form": "ladder",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "A staircase of engagement steps, each small enough to say yes to and each ending with something the client keeps, from a free conversation to a maintained setup, with the boutique market's shape as a faint comparison track beside it.",
+   "why": "It shows a founder how to price a first service in steps a cautious buyer can sign, and what each step leaves behind.",
+   "elements": [
+    {
+     "label": "A conversation",
+     "detail": "free: what the client wants agents to do and what they must never do"
+    },
+    {
+     "label": "A first run on a real problem",
+     "detail": "£10 to £50; leaves a vault"
+    },
+    {
+     "label": "Expert time",
+     "detail": "two hours for £500 to steer it, or a day for £1,500 to write the behaviour policy for one team"
+    },
+    {
+     "label": "A four-day pilot",
+     "detail": "£5,000, in their own environment"
+    },
+    {
+     "label": "A maintained setup",
+     "detail": "from £149 a month, so they run it themselves"
+    },
+    {
+     "label": "The boutiques",
+     "detail": "a free call; paid discovery (£2,500 London, €2,900 Germany, $4,999); a pilot from £8,000; a build; a retainer"
+    },
+    {
+     "label": "Every step",
+     "detail": "leaves a vault the client keeps: the work, the history, a ledger of what each agent did"
+    }
+   ],
+   "quotes": [
+    "Where we are early, we say so."
+   ],
+   "sources": [
+    "news:agentics-ready-to-sell",
+    "news:riskmandate-ten-questions"
+   ],
+   "ideas": [
+    "the-engagement-path-starts-small",
+    "evidence-first-is-the-position"
+   ],
+   "notes": "The chapter says plainly: no paid run yet, and the prices are hypotheses to test with the first ten customers (written down 15 October 2026). The graphic must carry that line. Dinis's open question on whether the chapter waits for the first paid engagement applies here too."
+  },
+  {
+   "id": "questions-already-in-the-room",
+   "title": "Answer the question already in the room",
+   "altitude": "chapter",
+   "target": "sell",
+   "form": "comparison",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "On one side, 'sell the need' crossed out; on the other, five questions that already land on a buyer's desk with a date, each with its owner. Below, the buyer's new instrument: the questionnaire that gave the vendor the pen, against the agent that leaves the vendor the redaction marker.",
+   "why": "It turns the chapter's way in into something an expert founder can redo for their own field: list the questions with a deadline, then sell the answer.",
+   "elements": [
+    {
+     "label": "A contract",
+     "detail": "legal and procurement need to know what a vendor's agent will reach and do with their data"
+    },
+    {
+     "label": "A security questionnaire",
+     "detail": "the first serious enterprise customer asks which agents touch their data and how they are bounded"
+    },
+    {
+     "label": "An insurance renewal",
+     "detail": "is AI excluded from cover?"
+    },
+    {
+     "label": "The board's risk appetite",
+     "detail": "who can pull the plug, how fast, and what cannot be undone"
+    },
+    {
+     "label": "Twenty minutes with the assistant you already run",
+     "detail": "the list of what it can reach is the surprise"
+    },
+    {
+     "label": "The questionnaire",
+     "detail": "627 questions in its core form; 37.3 requests a month; 179 hours a month"
+    },
+    {
+     "label": "The agent",
+     "detail": "runs in the vendor's environment and comes back with a graph of what is actually there"
+    }
+   ],
+   "quotes": [
+    "The questionnaire gave the vendor the pen. The agent takes the pen away and leaves the vendor the redaction marker."
+   ],
+   "sources": [
+    "news:riskmandate-ten-questions",
+    "news:what-can-your-agent-reach",
+    "news:send-an-agent-not-a-spreadsheet"
+   ],
+   "ideas": [
+    "answer-the-question-already-in-the-room",
+    "due-diligence-becomes-an-agent"
+   ],
+   "notes": "The insurance point is RiskMandate's own argument, not independently surveyed; mark it. The due-diligence agent does not exist yet; the graphic should say so."
+  },
+  {
+   "id": "sell-dont-issue-worked-example",
+   "title": "Sell, don't issue: a worked example",
+   "altitude": "chapter",
+   "target": "fund-it-or-do-not",
+   "form": "numbers",
+   "method": "code",
+   "priority": 1,
+   "state": "drafted",
+   "drawn": "sell-dont-issue",
+   "newsroom": "https://newsroom.sgit.ai/articles/images/si-example.webp",
+   "shows": "A normal round and a private sale side by side for the same deal (a £10 million company, £2 million from an investor, the founder keeping 80% either way), then the founder's money traced as a waterfall: £2 million in, about £420,000 tax, about £1.58 million, £0.75 million lent back, about £0.83 million kept.",
+   "why": "It answers the expert founder's runway and salary question with the chapter's own arithmetic: paid now for years of underpaid work, with no part of the money buying the steering wheel.",
+   "elements": [
+    {
+     "label": "Issue (normal round)",
+     "detail": "new shares; the money goes into the company; preferred shares, a board seat, a veto, a liquidation preference often follow"
+    },
+    {
+     "label": "Sell (private sale)",
+     "detail": "the investor buys ordinary shares you already own; you are paid now; the company is not diluted"
+    },
+    {
+     "label": "The deal",
+     "detail": "a UK company worth £10 million; investor writes £2 million; buys 20% of the founder's shares; founder keeps 80%"
+    },
+    {
+     "label": "Tax",
+     "detail": "about £420,000: 18% on the first £1 million under Business Asset Disposal Relief (from 6 April 2026, if conditions are met), 24% above"
+    },
+    {
+     "label": "After tax",
+     "detail": "about £1.58 million"
+    },
+    {
+     "label": "Lend, don't dilute",
+     "detail": "£0.75 million lent back, subordinated by contract to every other creditor"
+    },
+    {
+     "label": "Kept",
+     "detail": "about £0.83 million"
+    },
+    {
+     "label": "Buyer",
+     "detail": "pays 0.5% stamp duty"
+    },
+    {
+     "label": "The investor's insurance",
+     "detail": "not control but the fork"
+    }
+   ],
+   "quotes": [
+    "Do not get signed before you have the album."
+   ],
+   "sources": [
+    "news:sell-dont-issue",
+    "news:the-controllable-founder"
+   ],
+   "ideas": [
+    "sell-dont-issue",
+    "profitable-before-raising"
+   ],
+   "notes": "Illustrative only and not legal, tax or investment advice, as the chapter says; the graphic must carry that line and 'UK figures for one tax year'. Tax check: 18% x £1m = £180,000 plus 24% x £1m = £240,000, total £420,000. The chapter gives no numbers for the normal round beyond 'keeps 80% either way'; draw that side qualitatively."
+  },
+  {
+   "id": "when-the-model-fits",
+   "title": "Raise from strength: when it fits, what breaks",
+   "altitude": "chapter",
+   "target": "fund-it-or-do-not",
+   "form": "comparison",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "Where selling and lending fits, against where it fits badly, with the costs a founder should know before the term sheet as a list beneath, and the control-rights line from the evidence: the worse the firm performs, the more control the investors take.",
+   "why": "A founder deciding whether to raise sees at a glance whether their company is the kind this works for, and what to refuse.",
+   "elements": [
+    {
+     "label": "Fits",
+     "detail": "a profitable company growing on its own revenue; competition for the deal; open code; customers who stay for the service"
+    },
+    {
+     "label": "Fits badly",
+     "detail": "must spend heavily ahead of revenue; angels who need EIS; value in proprietary code (no fork); funds whose model depends on control"
+    },
+    {
+     "label": "EIS 30%, SEIS 50%",
+     "detail": "only on newly issued shares, so bought shares are dearer to UK angels"
+    },
+    {
+     "label": "10% to 30%",
+     "detail": "ordinary shares often priced below the last round"
+    },
+    {
+     "label": "Refuse a broad non-compete",
+     "detail": "offer confidentiality, no poaching of staff or customers for a period, no use of the brand"
+    },
+    {
+     "label": "Control rights",
+     "detail": "performs poorly: VCs obtain full control; performs very well: they relinquish most control and liquidation rights"
+    },
+    {
+     "label": "By year three",
+     "detail": "50% of founders were no longer the CEO (212 US startups)"
+    },
+    {
+     "label": "74%",
+     "detail": "of about 3,200 high-growth internet startups failed through premature scaling"
+    }
+   ],
+   "quotes": [
+    "Raise from strength, on terms you set, from people who came to you because the thing already works."
+   ],
+   "sources": [
+    "news:sell-dont-issue",
+    "news:the-controllable-founder"
+   ],
+   "ideas": [
+    "what-breaks-when-you-sell-not-issue",
+    "investors-select-for-control"
+   ],
+   "notes": "Not advice. The Wasserman figures are from startups of the late 1990s and early 2000s; the graphic should say so. The control hypothesis is untested, per the chapter."
+  },
+  {
+   "id": "the-company-itself-status-map",
+   "title": "The company itself: what the book knows so far",
+   "altitude": "chapter",
+   "target": "the-company-itself",
+   "form": "map",
+   "method": "code",
+   "priority": 3,
+   "state": "proposed",
+   "shows": "Four places (the UK, Portugal, Lithuania, the European Union) each with an honest status: what the sources say today, and what waits on a memo. A fifth panel holds the one part that exists: build the structure before the first hire.",
+   "why": "Readers jump to Start the company wanting the how; the map tells them what is known and what is coming, rather than letting the gap look like an oversight.",
+   "elements": [
+    {
+     "label": "Portugal",
+     "detail": "the company created for MyFeeds is being closed: running a company with little revenue there is expensive in a way it is not in England"
+    },
+    {
+     "label": "Lithuania",
+     "detail": "being looked at for the next one, for its digital advantages; nothing has been registered"
+    },
+    {
+     "label": "The UK",
+     "detail": "creating a limited company, from experience: not written"
+    },
+    {
+     "label": "The European Union",
+     "detail": "what exists for a founder: not written"
+    },
+    {
+     "label": "Before the first hire",
+     "detail": "a project management team, a structure team, an onboarding team, then Upwork to manage Upwork"
+    }
+   ],
+   "quotes": [
+    "the team can be anywhere, if you build the structure before the first hire."
+   ],
+   "sources": [
+    "news:not-a-straight-line",
+    "news:judo-for-small-countries"
+   ],
+   "ideas": [
+    "the-company-itself-for-real",
+    "lithuania-two-lines",
+    "millions-on-a-distributed-workforce"
+   ],
+   "notes": "Placeholder chapter: waits on Dinis's UK, Portugal, Lithuania and EU memos. Status is as of 12 October 2026 and must be redrawn when the memos arrive. Not legal or tax advice."
+  },
+  {
+   "id": "no-server-of-mine-architecture",
+   "title": "No servers of mine with logic in them",
+   "altitude": "chapter",
+   "target": "building-blocks",
+   "form": "architecture",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "newsroom": "https://newsroom.sgit.ai/articles/images/ns-architecture.webp",
+   "shows": "A box diagram of the newsroom-style product: the user's browser holding the key and running everything that reads the user's data, surrounded by the commodity pieces that remain (static hosting, a vault server that stores only ciphertext, a payment provider's hosted page, DNS, a build pipeline). A side panel lists what disappears when there is no server, and the caption says every item comes back if you add one.",
+   "why": "The non-coder in part 7 is lost on jargon; one picture of where data lives, where the key is and what runs where makes the whole part readable.",
+   "elements": [
+    {
+     "label": "The browser",
+     "detail": "where the key is; anything that reads the user's data runs here"
+    },
+    {
+     "label": "Static hosting",
+     "detail": "commodity"
+    },
+    {
+     "label": "A vault server that stores only ciphertext",
+     "detail": "cannot read a byte"
+    },
+    {
+     "label": "A payment provider's hosted page",
+     "detail": "commodity"
+    },
+    {
+     "label": "DNS",
+     "detail": "commodity"
+    },
+    {
+     "label": "A build pipeline",
+     "detail": "commodity"
+    },
+    {
+     "label": "Removed: data custody and its governance"
+    },
+    {
+     "label": "Removed: a place where a breach can happen"
+    },
+    {
+     "label": "Removed: a billing system"
+    },
+    {
+     "label": "Removed: a database of users"
+    },
+    {
+     "label": "Removed: a thing that has to scale"
+    },
+    {
+     "label": "Removed: a thing that has to be up at three in the morning, and a person to wake"
+    },
+    {
+     "label": "Add a server and every item comes back."
+    },
+    {
+     "label": "The honest limit",
+     "detail": "anything the user must not hold cannot live in the user's browser"
+    }
+   ],
+   "quotes": [
+    "I am not saying there are no servers. It is no servers of mine with logic in them.",
+    "That is not one feature; it is a different company, with a different cost base and a different risk register."
+   ],
+   "sources": [
+    "news:no-server-by-design",
+    "news:chat-on-a-static-site"
+   ],
+   "ideas": [
+    "no-server-by-design"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "the-by-the-hour-test",
+   "title": "The by-the-hour test",
+   "altitude": "chapter",
+   "target": "building-blocks",
+   "form": "comparison",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "Two columns split by one line: products that cost zero when idle on the left, products with an hourly floor on the right, each with its idle cost. The test sits on the dividing line.",
+   "why": "The chapter's table is the most re-usable tool in the part, and a reader should be able to apply the test at a glance without reading the pricing detail.",
+   "elements": [
+    {
+     "label": "Lambda event functions",
+     "detail": "Zero; per request and per millisecond"
+    },
+    {
+     "label": "Cloud Run",
+     "detail": "Zero; per 100 ms, idle instances not charged"
+    },
+    {
+     "label": "Cosmos DB serverless",
+     "detail": "Zero; per request unit, no minimum"
+    },
+    {
+     "label": "Neon",
+     "detail": "Zero; compute suspends when idle"
+    },
+    {
+     "label": "Redshift Serverless",
+     "detail": "Zero; per second while running"
+    },
+    {
+     "label": "Aurora Serverless v2",
+     "detail": "Zero since November 2024"
+    },
+    {
+     "label": "OpenSearch, next generation",
+     "detail": "Zero since May 2026"
+    },
+    {
+     "label": "OpenSearch, classic",
+     "detail": "About $350 a month; a floor of 2 capacity units"
+    },
+    {
+     "label": "MSK Serverless",
+     "detail": "About $550 a month; $0.75 per cluster-hour"
+    },
+    {
+     "label": "Neptune Serverless",
+     "detail": "About $80 a month; a floor of 1 capacity unit"
+    },
+    {
+     "label": "ElastiCache Serverless",
+     "detail": "From $6 a month; a minimum of storage, metered hourly"
+    },
+    {
+     "label": "Excluding storage, on 18 October 2026"
+    }
+   ],
+   "quotes": [
+    "if it bills you by the hour when nobody is using it, it is not serverless"
+   ],
+   "sources": [
+    "news:ephemeral-town-planner-services"
+   ],
+   "ideas": [
+    "what-serverless-costs-when-idle",
+    "ship-now-ship-serverless"
+   ],
+   "notes": "Dated figures: read on 18 October 2026, monthly figures are Dinis's arithmetic at 730 hours and US East rates; the table is renewed each year in chapter 40, so the infographic must carry the date and be regenerated with it."
+  },
+  {
+   "id": "cloud-as-lego-packages",
+   "title": "Cloud as Lego: blocks and packages",
+   "altitude": "chapter",
+   "target": "building-blocks",
+   "form": "map",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "Six small blocks drawn as bricks, and below them five packages, each the smallest set of bricks for one job, with lines from each package to the bricks it uses. A note says setup happens once, by a deploy button or an agent with a terminal.",
+   "why": "Gives a founder who will never learn the cloud a picture of what the blocks are and which job each set does.",
+   "elements": [
+    {
+     "label": "Static files served free"
+    },
+    {
+     "label": "Small pieces of code at the edge"
+    },
+    {
+     "label": "Object storage that can be pinned to the EU"
+    },
+    {
+     "label": "Hosted models",
+     "detail": "with a promise not to train on what you send"
+    },
+    {
+     "label": "Inbound email"
+    },
+    {
+     "label": "A sign-in gate"
+    },
+    {
+     "label": "A site on your domain"
+    },
+    {
+     "label": "Your vault, hosted"
+    },
+    {
+     "label": "An assistant over your documents"
+    },
+    {
+     "label": "An inbox that does things"
+    },
+    {
+     "label": "A form or a small API"
+    },
+    {
+     "label": "Setup happens once",
+     "detail": "a deploy button or an agent with a terminal that signs in, runs the commands and hands back the URL"
+    }
+   ],
+   "quotes": [],
+   "sources": [
+    "news:cloudflare-as-lego-blocks"
+   ],
+   "ideas": [
+    "lego-blocks"
+   ],
+   "notes": "The chapter does not say which block each package uses; the package-to-block lines must be taken from the source article Cloudflare as Lego blocks, or the lines left out. Limits as of 18 October 2026."
+  },
+  {
+   "id": "one-string-vault-key",
+   "title": "One string, three jobs, and the key you can publish",
+   "altitude": "chapter",
+   "target": "privacy-by-design",
+   "form": "anatomy",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "The vault key drawn as one string (a passphrase and a vault id) with three labels pointing at it, an arrow going one way to the read key, and beside it the single-job credentials. Each is marked safe to publish or never publish.",
+   "why": "The whole sharing model rests on the asymmetry between the vault key and the read key, which a non-coder cannot hold in their head from prose alone.",
+   "elements": [
+    {
+     "label": "Vault key",
+     "detail": "a passphrase and a vault id"
+    },
+    {
+     "label": "The address of the vault"
+    },
+    {
+     "label": "The authorisation to write to it"
+    },
+    {
+     "label": "The key that decrypts it"
+    },
+    {
+     "label": "Derived one way: the read key",
+     "detail": "same vault, read-only, safe to publish; no account, no login and no access request"
+    },
+    {
+     "label": "Write key",
+     "detail": "the server checks it as a hash"
+    },
+    {
+     "label": "Append token",
+     "detail": "writes one message to one lane and nothing else"
+    },
+    {
+     "label": "Key pair",
+     "detail": "for sealing something that only its holder can open"
+    },
+    {
+     "label": "In the browser",
+     "detail": "the key sits after the # in the address, which browsers do not send to the server"
+    },
+    {
+     "label": "No vault key has ever been published",
+     "detail": "a tripwire in the release pipeline"
+    }
+   ],
+   "quotes": [
+    "Lose it and the data is gone. Leak it and someone can rewrite your history."
+   ],
+   "sources": [
+    "news:what-sgit-is",
+    "news:where-the-vault-keys-live"
+   ],
+   "ideas": [
+    "the-read-key-is-the-sharing-model"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "who-can-read-what-sgit",
+   "title": "Who can read what",
+   "altitude": "chapter",
+   "target": "privacy-by-design",
+   "form": "architecture",
+   "method": "code",
+   "priority": 1,
+   "state": "drafted",
+   "drawn": "who-can-read-what",
+   "shows": "Your machine (with the key) encrypts before anything leaves; the server and the CDN hold only ciphertext named by its hash. Labels on the server say what it does not see; a second panel compares what has to be protected when the server can read versus when it holds ciphertext.",
+   "why": "Answers the non-coder's first question about part 7, where the data lives and who can read it, and shows why the problem moves to the keys.",
+   "elements": [
+    {
+     "label": "Your machine",
+     "detail": "everything is encrypted before it leaves your machine"
+    },
+    {
+     "label": "Server",
+     "detail": "holds ciphertext and nothing else"
+    },
+    {
+     "label": "Not your filenames, not your directory structure, not your commit messages"
+    },
+    {
+     "label": "One object",
+     "detail": "786 bytes of AES-256-GCM ciphertext, named by the SHA-256 of the encrypted bytes"
+    },
+    {
+     "label": "The host can deduplicate it, cache it for a year and serve it from a CDN",
+     "detail": "while remaining unable to tell you what it is"
+    },
+    {
+     "label": "No key escrow, no admin override",
+     "detail": "no support engineer who can recover it for you"
+    },
+    {
+     "label": "Server can read",
+     "detail": "every copy, backup, log and replica, and every person and process with access, has to be protected"
+    },
+    {
+     "label": "Server holds ciphertext",
+     "detail": "the problem moves to protecting the keys"
+    },
+    {
+     "label": "The line becomes who holds the keys",
+     "detail": "not where the data is stored"
+    }
+   ],
+   "quotes": [
+    "When the server holds ciphertext named by the hash of that ciphertext, the problem moves to protecting the keys, which is a much smaller problem."
+   ],
+   "sources": [
+    "news:what-sgit-is",
+    "news:no-server-by-design"
+   ],
+   "ideas": [
+    "git-for-things-you-cannot-put-on-github",
+    "protect-the-keys-not-the-data"
+   ],
+   "notes": "sgit is beta; the infographic should not imply more. Numbers (786 bytes) from the August 2026 article."
+  },
+  {
+   "id": "reach-mandate-gap",
+   "title": "Reach, mandate, gap and barrier",
+   "altitude": "chapter",
+   "target": "controlling-your-agent",
+   "form": "anatomy",
+   "method": "code",
+   "priority": 1,
+   "state": "drafted",
+   "drawn": "reach-mandate-gap",
+   "shows": "Two nested shapes: the large one is reach (what the credential lets it touch), the small one inside is mandate (what you authorised); the ring between them is the gap, with a barrier marked against each capability in it. Arrows show the goal: shrink all three.",
+   "why": "Readers valued this model above most in the book; drawn once it becomes the picture every later chapter (inbox, newsroom, desktop) can point back to.",
+   "elements": [
+    {
+     "label": "Reach",
+     "detail": "what the credential actually lets it touch"
+    },
+    {
+     "label": "Mandate",
+     "detail": "what you authorised it to do"
+    },
+    {
+     "label": "Gap",
+     "detail": "authority nobody ever accepted"
+    },
+    {
+     "label": "Barrier",
+     "detail": "for every capability in the gap, what actually stands in the way"
+    },
+    {
+     "label": "Agent Behaviour Policy",
+     "detail": "the document with all four written down"
+    },
+    {
+     "label": "The goal",
+     "detail": "the smallest mandate, the smallest reach, the smallest gap"
+    },
+    {
+     "label": "Add a connector",
+     "detail": "the reach grows, the gap recomputes and a re-review follows"
+    }
+   ],
+   "quotes": [
+    "A control bounds a grant only if it is enforced by something the grant does not include."
+   ],
+   "sources": [
+    "news:what-can-your-agent-reach",
+    "news:riskmandate-ten-questions"
+   ],
+   "ideas": [
+    "mandate-reach-gap",
+    "reach-is-a-computed-value"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "four-barriers-three-states",
+   "title": "Control, accepted risk, or hope",
+   "altitude": "chapter",
+   "target": "controlling-your-agent",
+   "form": "ladder",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "A four-rung ladder of barriers, only the top rung shaded as one that bounds anything; beside it the three states every rule lands in, with the worked inbox-agent example as a bar of 17 rules split 5, 6 and 6.",
+   "why": "Makes the chapter's key distinction, prompt rules are hope and enforcement sits above the agent, countable in one look.",
+   "elements": [
+    {
+     "label": "Nothing"
+    },
+    {
+     "label": "A rule written in the prompt",
+     "detail": "hope"
+    },
+    {
+     "label": "A setting the agent's own account can change"
+    },
+    {
+     "label": "A boundary enforced above the agent, out of its reach",
+     "detail": "the only one that bounds anything: a hook, a gateway or the platform"
+    },
+    {
+     "label": "Backed by a control",
+     "detail": "5 of 17"
+    },
+    {
+     "label": "Governed by an accepted risk",
+     "detail": "6 of 17; a named person, with an expiry"
+    },
+    {
+     "label": "Resting on hope",
+     "detail": "6 of 17"
+    }
+   ],
+   "quotes": [
+    "Rules in a prompt are hope; rules in a hook, a gateway or the platform are enforcement."
+   ],
+   "sources": [
+    "news:three-policies-for-an-agent",
+    "news:are-hooks-the-sweet-spot"
+   ],
+   "ideas": [
+    "control-accepted-risk-or-hope",
+    "the-model-cannot-be-the-barrier"
+   ],
+   "notes": "The 5/6/6 split is from a worked example the chapter calls illustrative proportions; the label should say so."
+  },
+  {
+   "id": "fork-next-door-triangle",
+   "title": "The fork next door",
+   "altitude": "chapter",
+   "target": "open-source",
+   "form": "graph",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "A triangle of founders, investors and customers around open code; each side carries the exit that party has if a corner goes wrong, with the code going with it. A footer gives the fork numbers and the velocity line.",
+   "why": "The chapter's business argument for open source is a three-party structure that is much easier to see than to read.",
+   "elements": [
+    {
+     "label": "Founders stop executing",
+     "detail": "investors can fund a team to run the same code next door"
+    },
+    {
+     "label": "A new owner changes direction or the licence",
+     "detail": "the founders can leave with the code"
+    },
+    {
+     "label": "Anyone lets the customers down",
+     "detail": "the customers can move, as long as their data moves with them"
+    },
+    {
+     "label": "220 significant forks, only 7 merged back"
+    },
+    {
+     "label": "The moat is a rate, not a wall"
+    },
+    {
+     "label": "Two conditions",
+     "detail": "a genuinely open licence, not open core; a copyright structure not gathered into one corporate holder"
+    }
+   ],
+   "quotes": [
+    "A competitor who forks our code today gets our position as of today. They do not get our velocity."
+   ],
+   "sources": [
+    "news:the-fork-next-door"
+   ],
+   "ideas": [
+    "the-fork-next-door"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "who-pays-for-open-source",
+   "title": "Somebody is paying for open source",
+   "altitude": "chapter",
+   "target": "open-source",
+   "form": "numbers",
+   "method": "code",
+   "priority": 3,
+   "state": "proposed",
+   "shows": "A grid of key numbers on the long tail of old versions and where money flows, closing on the result of the sell-the-build model: donations, supported builds and customised builds side by side.",
+   "why": "Turns the chapter's densest paragraphs of figures into one card and lands its business conclusion, sell the build, not the code.",
+   "elements": [
+    {
+     "label": "6.99%",
+     "detail": "of macOS install events in the last 30 days from versions older than the newest three (Homebrew)"
+    },
+    {
+     "label": "16.66%",
+     "detail": "the same, over a year"
+    },
+    {
+     "label": "18.55%",
+     "detail": "of pip downloads run on end-of-life Python"
+    },
+    {
+     "label": "$19.8 billion",
+     "detail": "Oracle's support earnings last year"
+    },
+    {
+     "label": "About 0.09%",
+     "detail": "of open source's estimated value received in investment"
+    },
+    {
+     "label": "60%",
+     "detail": "of maintainers describe themselves as unpaid hobbyists"
+    },
+    {
+     "label": "Donations",
+     "detail": "covered the cost in 24% of draws"
+    },
+    {
+     "label": "Supported builds to individuals",
+     "detail": "about £1.80 a machine a year; half the draws"
+    },
+    {
+     "label": "Customised builds for companies",
+     "detail": "94%"
+    }
+   ],
+   "quotes": [
+    "The value is the support, not the code, so the code can stay open."
+   ],
+   "sources": [
+    "news:open-source-is-not-free",
+    "news:who-will-fix-your-mess"
+   ],
+   "ideas": [
+    "open-source-is-not-free",
+    "sell-the-build-not-the-code"
+   ],
+   "notes": "The draws are from a model, not a forecast, as the chapter says; label it. Figures dated to the source articles (2026)."
+  },
+  {
+   "id": "three-boundaries-of-shipping",
+   "title": "Green does not mean live",
+   "altitude": "chapter",
+   "target": "shipped-means-the-user-has-it",
+   "form": "flow",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "Source to remote to deployment to reader, with ticks on the first two boundaries the release checked and a break between deployment and the reader where the deploy job died. The fix appears at the end: ask the live site what version it is serving.",
+   "why": "The chapter's central story is a pipeline with a missing check, which a non-coder can follow as a picture where they cannot follow the CI vocabulary.",
+   "elements": [
+    {
+     "label": "Source",
+     "detail": "build the site from source; run the validator"
+    },
+    {
+     "label": "Remote",
+     "detail": "push and confirm the local head matches the remote: the bytes arrived at the code host"
+    },
+    {
+     "label": "Deployment",
+     "detail": "a hosted build job with its own failure modes; nothing in our release looked at it"
+    },
+    {
+     "label": "Reader",
+     "detail": "the site served a two-release-old page for forty minutes"
+    },
+    {
+     "label": "429 (Too Many Requests)",
+     "detail": "three attempts, give up"
+    },
+    {
+     "label": "The fix",
+     "detail": "ask the live site what version it is serving, polling with a cache-buster for up to eight minutes"
+    },
+    {
+     "label": "Three rules, one claim",
+     "detail": "a page nothing links to, a page the machine index omits, a page the deploy never served: each is unpublished"
+    }
+   ],
+   "quotes": [
+    "shipped is a fact about the reader, not about your repository"
+   ],
+   "sources": [
+    "news:green-does-not-mean-live"
+   ],
+   "ideas": [
+    "green-does-not-mean-live"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "five-synthetic-users-results",
+   "title": "Five people who do not exist",
+   "altitude": "chapter",
+   "target": "shipped-means-the-user-has-it",
+   "form": "numbers",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "The newsroom study as key numbers (readers, steps, questions, findings, blocking, who left, ratings), with the record of a synthetic user and the two habits beside it.",
+   "why": "Gives the reader the method and its payoff in one card, so the habit 'five users before it is called done' is believable.",
+   "elements": [
+    {
+     "label": "5",
+     "detail": "invented readers"
+    },
+    {
+     "label": "62",
+     "detail": "steps"
+    },
+    {
+     "label": "51",
+     "detail": "questions the site did not answer"
+    },
+    {
+     "label": "31",
+     "detail": "findings, six of them blocking"
+    },
+    {
+     "label": "4 of 5",
+     "detail": "left"
+    },
+    {
+     "label": "2, 2, 3, 3 and 2",
+     "detail": "their ratings"
+    },
+    {
+     "label": "A synthetic user is a record",
+     "detail": "a situation, a question they arrive with, what they know and do not know, what makes them leave, their patience and their screen size"
+    },
+    {
+     "label": "Include somebody who will never buy"
+    },
+    {
+     "label": "Put at least one person on a phone"
+    },
+    {
+     "label": "Give the agent the screenshot",
+     "detail": "not the page's code"
+    }
+   ],
+   "quotes": [
+    "every site gets five users before it is called done, and the same five again after the fixes"
+   ],
+   "sources": [
+    "news:how-to-run-synthetic-users"
+   ],
+   "ideas": [],
+   "notes": "Every person is invented; the card should say so where nobody can scroll past it, as the chapter asks."
+  },
+  {
+   "id": "memory-is-context-management",
+   "title": "Memory is context management",
+   "altitude": "chapter",
+   "target": "graphs-and-your-future-self",
+   "form": "anatomy",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "The agent's window at the centre, fed from many small memories, each correct for its context, drawn as a fractal stack from principles at the top to code at the bottom, stored as files shared between sessions. A small bar compares the benchmark result.",
+   "why": "Replaces the picture most people have (one memory behind the agent) with the chapter's opposite picture in one look.",
+   "elements": [
+    {
+     "label": "What does this agent need in its window right now",
+     "detail": "and no more"
+    },
+    {
+     "label": "Many memories, not one",
+     "detail": "each with its own words; each is correct for its context"
+    },
+    {
+     "label": "Fractal",
+     "detail": "principles at the top in a few kilobytes, code at the bottom; an agent loads the altitude its question lives at"
+    },
+    {
+     "label": "Files",
+     "detail": "a plain filesystem scored 74.0 percent against 68.5 percent for a graph-based memory product (Letta, August 2025)"
+    },
+    {
+     "label": "Shared",
+     "detail": "the next session, a different agent, or a person picks up from the same files"
+    },
+    {
+     "label": "Provenance",
+     "detail": "every quote has a URL, every release a commit, every vault a read key, every file a hash, every page a byline"
+    }
+   ],
+   "quotes": [
+    "Nothing is remembered by the model between sessions. Everything is remembered by the files.",
+    "The fractal is the budget."
+   ],
+   "sources": [
+    "news:memory-is-not-a-spectator-sport",
+    "news:knowledge-that-maintains-itself"
+   ],
+   "ideas": [
+    "memory-is-context-management",
+    "the-site-becomes-the-memory"
+   ],
+   "notes": "The chapter says the thesis calls itself untested and falsifiable; a footer should carry that."
+  },
+  {
+   "id": "the-plumbing-is-the-road",
+   "title": "The plumbing is the state's road",
+   "altitude": "chapter",
+   "target": "civic-responsibility",
+   "form": "map",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "A person at the top selling a service to a buyer abroad; underneath, the plumbing pieces each custom built by the person who needs it, with the Eurostat bars showing how little commerce crosses a border. Estonia appears as the case where the road was built.",
+   "why": "The chapter's argument that a state should build the plumbing is a map with a person on top, and the numbers make the attrition visible.",
+   "elements": [
+    {
+     "label": "A developer in Cluj, a designer in Porto, a pharmacist in Braga",
+     "detail": "selling a service to a buyer abroad"
+    },
+    {
+     "label": "Forming a company"
+    },
+    {
+     "label": "Hiring across a border"
+    },
+    {
+     "label": "Being paid across Europe"
+    },
+    {
+     "label": "Working in a language the buyer reads"
+    },
+    {
+     "label": "A contract, an invoice, a tax form valid on both sides"
+    },
+    {
+     "label": "18.5 percent",
+     "detail": "of EU enterprises sold online to customers in their own country (2021)"
+    },
+    {
+     "label": "8.1 percent",
+     "detail": "to other EU countries"
+    },
+    {
+     "label": "4.6 percent",
+     "detail": "to the rest of the world"
+    },
+    {
+     "label": "Estonia",
+     "detail": "more than 142,000 e-residents and more than 43,000 companies; X-Road, open source under the MIT licence"
+    }
+   ],
+   "quotes": [
+    "None of that is the service. All of it is plumbing",
+    "A road with a toll gate owned by one company is lock-in with tarmac."
+   ],
+   "sources": [
+    "news:judo-for-small-countries",
+    "news:sovereignty-is-the-ability-to-move"
+   ],
+   "ideas": [
+    "the-plumbing-is-the-states-road",
+    "what-the-state-pays-for-belongs-to-the-commons"
+   ],
+   "notes": "Eurostat figures are for 2021 and Estonia's dashboard figures are as of 2026; date both on the card."
+  },
+  {
+   "id": "five-move-civic-playbook",
+   "title": "The playbook, in five moves",
+   "altitude": "chapter",
+   "target": "civic-responsibility",
+   "form": "flow",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "newsroom": "https://newsroom.sgit.ai/articles/images/sc-playbook.webp",
+   "shows": "Five numbered moves left to right, from mapping the attrition to regulating what settled, with the sovereignty test (take each dot away, what happens?) as a footer.",
+   "why": "The chapter ends its argument with an explicit five-step list that a reader should be able to carry away.",
+   "elements": [
+    {
+     "label": "Map the attrition",
+     "detail": "every place commerce stops between a talented person and a buyer abroad"
+    },
+    {
+     "label": "Commoditise the plumbing",
+     "detail": "built once, open to all"
+    },
+    {
+     "label": "Create the demand",
+     "detail": "before the day you need it"
+    },
+    {
+     "label": "Put the money where the market is still genesis",
+     "detail": "small models, data that stays with its owner, agents with the least agency, not GPUs"
+    },
+    {
+     "label": "Regulate what settled",
+     "detail": "after the market and not before it"
+    },
+    {
+     "label": "The test",
+     "detail": "for each dot you do not control: take it away, what happens?"
+    }
+   ],
+   "quotes": [
+    "Technology sovereignty is the ability to move, almost liquidity."
+   ],
+   "sources": [
+    "news:judo-for-small-countries",
+    "news:sovereignty-is-the-ability-to-move",
+    "news:move-the-cloud-not-the-code"
+   ],
+   "ideas": [
+    "hack-your-country",
+    "smaller-models-more-of-them"
+   ],
+   "notes": "The chapter calls this a map and a set of moves from one person's experience, not a national strategy; the caption should keep that."
+  },
+  {
+   "id": "contacts-folder-workflow-strip",
+   "title": "An agentic workflow from zero",
+   "altitude": "chapter",
+   "target": "an-agentic-workflow-from-zero",
+   "form": "flow",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "A one-look strip: what you need, the folder per person with its five documents (Summary derived from the other four), the six-line policy compressed to its three rules, the four migration steps of the afternoon and the five exercises of the first week, ending in the output.",
+   "why": "Readers marked the hands-on part slow; this strip lets a reader follow the whole afternoon from one picture and use the text only as reference.",
+   "elements": [
+    {
+     "label": "You need",
+     "detail": "a Google Workspace account and a Claude seat"
+    },
+    {
+     "label": "Contacts / one folder per person"
+    },
+    {
+     "label": "Record",
+     "detail": "every fact with where it came from"
+    },
+    {
+     "label": "Ledger",
+     "detail": "one line per event; only ever added to"
+    },
+    {
+     "label": "Messages",
+     "detail": "pasted word for word"
+    },
+    {
+     "label": "Notes",
+     "detail": "calls and meetings, dated"
+    },
+    {
+     "label": "Summary",
+     "detail": "written by the agent from the four above, never edited by hand"
+    },
+    {
+     "label": "Policy: draft and never send; append and never rewrite; stay in the folder"
+    },
+    {
+     "label": "Afternoon 1",
+     "detail": "export the sheet as CSV; the agent says what it would make, without making anything"
+    },
+    {
+     "label": "Afternoon 2",
+     "detail": "make the folders from a template"
+    },
+    {
+     "label": "Afternoon 3",
+     "detail": "per person, a year of mail into the Record and first Ledger lines"
+    },
+    {
+     "label": "Afternoon 4",
+     "detail": "ask for the Summaries; fix the source document, not the summary"
+    },
+    {
+     "label": "Week: Ask, Prepare, Draft, Debrief, Campaign"
+    },
+    {
+     "label": "Every mistake adds a line to the policy"
+    }
+   ],
+   "quotes": [
+    "Draft and never send; append and never rewrite; stay in the folder.",
+    "The difference is not the tool. It is what counts as the record."
+   ],
+   "sources": [
+    "news:from-a-spreadsheet-to-a-folder-per-person"
+   ],
+   "ideas": [],
+   "notes": "The description of the Claude app is dated October 2026; the shape, not the tool, is what the strip should teach."
+  },
+  {
+   "id": "first-graph-seven-steps",
+   "title": "Your first graph, in seven steps",
+   "altitude": "chapter",
+   "target": "your-first-graph",
+   "form": "flow",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "Seven numbered steps as a strip, with the book's example sentence turning into a verb and its inverse at step 4, and the three rules beneath the steps they explain.",
+   "why": "Lets the reader do the afternoon from the strip, with the rules visible next to the step they justify rather than in a later section.",
+   "elements": [
+    {
+     "label": "1. Write your question at the top of a file",
+     "detail": "a question, not a subject"
+    },
+    {
+     "label": "2. List the things the question touches",
+     "detail": "fifteen to forty, by name"
+    },
+    {
+     "label": "3. Write the edges as sentences",
+     "detail": "the payments service is owned by the platform team"
+    },
+    {
+     "label": "4. A verb and its inverse",
+     "detail": "owned_by and owns"
+    },
+    {
+     "label": "5. Read your paths aloud",
+     "detail": "three or four hops"
+    },
+    {
+     "label": "6. Ask your question of the graph, by hand"
+    },
+    {
+     "label": "7. Write down what you could not answer",
+     "detail": "as nodes, with names"
+    },
+    {
+     "label": "A node connected to nothing is meaningless"
+    },
+    {
+     "label": "Every edge is a verb",
+     "detail": "the generic association edge is banned"
+    },
+    {
+     "label": "Never render the whole graph; render the result of a query"
+    }
+   ],
+   "quotes": [
+    "It does not matter where you start; it matters that you start."
+   ],
+   "sources": [
+    "art:everything-is-connected"
+   ],
+   "ideas": [],
+   "notes": "Also from graphs.sgit.ai, Fractal Semantic Graphs, 15__your-first-graph.md (the chapter cites it in free text, which is not a node of this site's graph)."
+  },
+  {
+   "id": "one-idea-five-lenses",
+   "title": "One idea, five lenses",
+   "altitude": "chapter",
+   "target": "five-lenses",
+   "form": "map",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "Your own idea in the centre, five lenses around it each in a separate session, and the steps around the outside: write yours first, compare what stayed (the idea) and what changed (the lens), check, then a sixth session to be corrected.",
+   "why": "The exercise is a hub with five spokes and a check; drawn, it needs only a paragraph of text.",
+   "elements": [
+    {
+     "label": "Pick the idea",
+     "detail": "something you understand well enough to know when an explanation of it is wrong"
+    },
+    {
+     "label": "Write your own version first",
+     "detail": "two or three sentences"
+    },
+    {
+     "label": "A teenager"
+    },
+    {
+     "label": "A musician"
+    },
+    {
+     "label": "Medical references",
+     "detail": "the ones to check"
+    },
+    {
+     "label": "Football terms"
+    },
+    {
+     "label": "Another language, one you can read"
+    },
+    {
+     "label": "What stayed the same: that is the idea"
+    },
+    {
+     "label": "What changed: that is the lens"
+    },
+    {
+     "label": "Check them against your version"
+    },
+    {
+     "label": "Then ask to be corrected",
+     "detail": "a sixth session"
+    }
+   ],
+   "quotes": [
+    "The lens was wrong, not the person."
+   ],
+   "sources": [
+    "art:lenses-roles-and-loops",
+    "art:generative-ai-not-ai"
+   ],
+   "ideas": [],
+   "notes": ""
+  },
+  {
+   "id": "agent-loop-by-hand",
+   "title": "A tiny agent loop",
+   "altitude": "chapter",
+   "target": "a-tiny-agent-loop",
+   "form": "cycle",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "A loop: the model returns a request instead of an answer, the harness (you) decides and runs the tool, the result goes back in, and the 'are we done?' gate with its four kinds of stopping rule. An outer band shows why it forgets and the three habits.",
+   "why": "The core mechanism of every agent in the book, drawn once, saves the reader the prose and makes the forgetting visible.",
+   "elements": [
+    {
+     "label": "Role",
+     "detail": "model plus instructions, tools, a loop and a rule for stopping"
+    },
+    {
+     "label": "The model writes a structured request",
+     "detail": "a tool name and its arguments; the model never runs the tool"
+    },
+    {
+     "label": "The harness",
+     "detail": "decides whether to run it, runs it, and adds the result to the conversation"
+    },
+    {
+     "label": "Are we done?",
+     "detail": "the model's own judgement, a test that passes, a budget that runs out, or a person"
+    },
+    {
+     "label": "Every request carries the whole conversation"
+    },
+    {
+     "label": "Summarised eighteen times in a month",
+     "detail": "each time keeping on average 1.7% of what it replaced"
+    },
+    {
+     "label": "One session per topic, with a name"
+    },
+    {
+     "label": "Rules in a file, not in the chat"
+    },
+    {
+     "label": "Memory is what the session reads, so curate it"
+    }
+   ],
+   "quotes": [
+    "The rules are restored, not remembered."
+   ],
+   "sources": [
+    "art:lenses-roles-and-loops",
+    "news:re-anchoring-agent-behaviour-policies",
+    "news:how-i-work-with-claude"
+   ],
+   "ideas": [],
+   "notes": "The 1.7% is one session on one site, not a law, as the chapter says."
+  },
+  {
+   "id": "storyboard-as-data-pipeline",
+   "title": "A storyboard that is data, not a picture",
+   "altitude": "chapter",
+   "target": "images-infographics-and-storyboards",
+   "form": "flow",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "Data files (cast, one file per story, the quote source) flowing through a renderer in the browser to panels, with the build's quote check as a gate that can refuse the release. A side box lists the five panel kinds.",
+   "why": "The method is a pipeline, and the step to copy, a machine check before a person reads, should be the thing the eye lands on; this is the pipeline, not a storyboard scene.",
+   "elements": [
+    {
+     "label": "1. Write the cast first",
+     "detail": "role, personality, wants and fears, a line, a look, pronouns"
+    },
+    {
+     "label": "2. One file per story",
+     "detail": "a slug, a title, a punchline, the cast it uses, and the panels"
+    },
+    {
+     "label": "3. Name the source of every quote",
+     "detail": "quote_source; not_a_quote with a note"
+    },
+    {
+     "label": "4. Render, then look"
+    },
+    {
+     "label": "5. Let the build refuse",
+     "detail": "four failed: one slip, three never meant as quotes"
+    },
+    {
+     "label": "Panel kinds",
+     "detail": "a cover; a scene; an evidence card; a punchline; a spectrum"
+    },
+    {
+     "label": "Rough.js",
+     "detail": "a seed per panel keeps it identical between loads"
+    },
+    {
+     "label": "Export",
+     "detail": "a script that screenshots each panel to a PNG"
+    }
+   ],
+   "quotes": [
+    "A citation that is not in the source should fail by machine, before a person reads it."
+   ],
+   "sources": [
+    "agent:storyboards-drawn-by-code",
+    "sb:everything-is-connected"
+   ],
+   "ideas": [],
+   "notes": ""
+  },
+  {
+   "id": "three-meeting-briefs",
+   "title": "Three briefs around every meeting",
+   "altitude": "chapter",
+   "target": "meeting-briefs-and-follow-ups",
+   "form": "flow",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "Before, about, after: a briefing for you, a briefing on who you meet, and a follow-up, each with what it holds and the exercise from chapter 30 it reuses, and the end-of-session question as a footer.",
+   "why": "The chapter is short by design and its content is a three-part shape; a strip makes it usable without the text.",
+   "elements": [
+    {
+     "label": "A briefing for you",
+     "detail": "what is this meeting for, what was last agreed, what is open, what do I want out of it (the Prepare exercise)"
+    },
+    {
+     "label": "A briefing on who you meet",
+     "detail": "who they are, what they have said in public, what they care about, where you have crossed before"
+    },
+    {
+     "label": "A follow-up",
+     "detail": "what was said, what was decided, what each person owes, and by when; written the same day (the Debrief exercise)"
+    },
+    {
+     "label": "One session per topic",
+     "detail": "project | what we are working on"
+    },
+    {
+     "label": "At the end",
+     "detail": "what did you check, against which source, and what are you not sure of"
+    }
+   ],
+   "quotes": [
+    "Not found is not false."
+   ],
+   "sources": [
+    "news:the-briefs-so-far",
+    "news:how-i-work-with-claude"
+   ],
+   "ideas": [],
+   "notes": "Waits on Dinis: the chapter says his own step-by-step for preparing a meeting is the chapter; the infographic shows only the shape until it arrives."
+  },
+  {
+   "id": "voice-memo-to-checked-site",
+   "title": "Voice memo in, a checked site out",
+   "altitude": "chapter",
+   "target": "your-own-publishing",
+   "form": "flow",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "The eight-step recipe as a strip from a public repository to keeping the record, with the four inputs of the voice beside it and the inbox's unchanging rule as a footer.",
+   "why": "The recipe is a numbered sequence the reader will follow with the page open; one strip replaces most of the section.",
+   "elements": [
+    {
+     "label": "1. A public GitHub repository with Pages"
+    },
+    {
+     "label": "2. A workflow that validates before it publishes",
+     "detail": "a failed check stops the release"
+    },
+    {
+     "label": "3. The house rules",
+     "detail": "one file the agent reads at the start of every session"
+    },
+    {
+     "label": "4. Connect a cloud session"
+    },
+    {
+     "label": "5. The first brief",
+     "detail": "the agent writes the code; you do not"
+    },
+    {
+     "label": "6. Record a memo",
+     "detail": "read on your phone, correct by voice"
+    },
+    {
+     "label": "7. The reader meter",
+     "detail": "never blocks a page"
+    },
+    {
+     "label": "8. Keep the record",
+     "detail": "a correction is a new version with its diff"
+    },
+    {
+     "label": "The voice: a corpus, the memos, wording rules, me reading everything"
+    },
+    {
+     "label": "The agent drafts, and a person sends"
+    }
+   ],
+   "quotes": [
+    "The house rules are the product.",
+    "The method transfers. The voice does not."
+   ],
+   "sources": [
+    "news:your-own-newsroom",
+    "news:how-the-voice-works",
+    "news:replicating-the-agentic-inbox"
+   ],
+   "ideas": [],
+   "notes": "The inbox phases 0 to 3 could be a second strip later; left out here to keep the count down."
+  },
+  {
+   "id": "decide-before-you-register",
+   "title": "What to decide before you register",
+   "altitude": "chapter",
+   "target": "form-your-company",
+   "form": "checklist",
+   "method": "code",
+   "priority": 3,
+   "state": "proposed",
+   "shows": "Five decisions as a checklist, each pointing to the chapter that helps answer it, under the line that the registration is a form and the decisions are the work.",
+   "why": "The only usable content of a placeholder chapter is this list, and a checklist is honest about that.",
+   "elements": [
+    {
+     "label": "What the company sells, in one sentence",
+     "detail": "Your first price and your first ten customers"
+    },
+    {
+     "label": "Where",
+     "detail": "the UK, Lithuania, Portugal, and the EU around them"
+    },
+    {
+     "label": "What it costs when nobody is using it",
+     "detail": "Ship a serverless product in a weekend"
+    },
+    {
+     "label": "Which programmes you qualify for",
+     "detail": "the day you register starts those clocks; The credits and programmes, 2026"
+    },
+    {
+     "label": "Who holds what",
+     "detail": "Fund it, or do not"
+    }
+   ],
+   "quotes": [
+    "The registration is a form. The decisions behind it are the work"
+   ],
+   "sources": [
+    "art:gen-zx-developers",
+    "news:not-a-straight-line"
+   ],
+   "ideas": [],
+   "notes": "Placeholder chapter: waits on Dinis's memos (UK limited company step by step, Lithuania, Portugal, the EU). Redraw when the chapter is written; do not add country steps before then."
+  },
+  {
+   "id": "startup-credits-october-2026",
+   "title": "The credits and programmes, as of 7 October 2026",
+   "altitude": "chapter",
+   "target": "the-credits-and-programmes-2026",
+   "form": "comparison",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "A grid of the eleven programmes with provider, amount and a one-line eligibility, the date in the title, and a strip below with the six steps of applying with the work.",
+   "why": "The table is the reason the chapter exists; a dated card is quicker to scan and the method beneath it is what outlasts the numbers.",
+   "elements": [
+    {
+     "label": "E2B for Startups",
+     "detail": "$20,000 one-time, plus the Pro tier"
+    },
+    {
+     "label": "Daytona Startup Grid",
+     "detail": "$10K immediately, up to $100K"
+    },
+    {
+     "label": "Scaleway Founders",
+     "detail": "Up to €1,000 over 12 months"
+    },
+    {
+     "label": "Scaleway Early Stage",
+     "detail": "€9,000 (€1,500 a month for 6 months)"
+    },
+    {
+     "label": "AWS Activate Founders",
+     "detail": "$1,000, up to $5,000"
+    },
+    {
+     "label": "AWS Activate Portfolio",
+     "detail": "Up to $200,000"
+    },
+    {
+     "label": "Microsoft for Startups",
+     "detail": "Up to $150K over time"
+    },
+    {
+     "label": "Google for Startups Cloud",
+     "detail": "$2,000 pre-funding; up to $350,000 for AI startups"
+    },
+    {
+     "label": "Cloudflare for Startups",
+     "detail": "$10K, $100K or $350K by tier"
+    },
+    {
+     "label": "Modal for Startups",
+     "detail": "Unspecified \"thousands\" in credits"
+    },
+    {
+     "label": "Anthropic Startup programme",
+     "detail": "$1,000 API credits, a year of Claude Team, up to $45K in partner offers"
+    },
+    {
+     "label": "1. Check every criterion against yourself"
+    },
+    {
+     "label": "2. The application is a page you have already published"
+    },
+    {
+     "label": "3. Offer the provider the result"
+    },
+    {
+     "label": "4. Ask what the pages do not say"
+    },
+    {
+     "label": "5. Principles first, then the ask, then the research"
+    },
+    {
+     "label": "6. Record every answer as an issue, with its date"
+    }
+   ],
+   "quotes": [
+    "Programmes change; check before applying."
+   ],
+   "sources": [
+    "news:an-agent-desktop-by-the-minute"
+   ],
+   "ideas": [
+    "startup-credits-october-2026",
+    "apply-with-the-work-as-the-application"
+   ],
+   "notes": "Dated figures, read from each programme's page on 7 October 2026; must be regenerated with the yearly renewal. Provider names only, no logos (licence)."
+  },
+  {
+   "id": "price-offer-count-strip",
+   "title": "Price it, give it away, count",
+   "altitude": "chapter",
+   "target": "your-first-price-and-first-ten-customers",
+   "form": "flow",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "A strip from defining the product to the take-it-away test, with RiskMandate's four-tier price ladder drawn at the price step and the counting funnel (created, customised, used, runs) at the count step.",
+   "why": "The chapter is a sequence with two embedded structures; one strip lets a founder run it from the picture.",
+   "elements": [
+    {
+     "label": "Define the product",
+     "detail": "the thing somebody receives"
+    },
+    {
+     "label": "Price it",
+     "detail": "ten pounds for the pack downloaded; fifty for a working vault; five hundred for the vault corrected; fifteen hundred for two sessions and a professional's signature"
+    },
+    {
+     "label": "Deliver it at a cost that grows a step at a time"
+    },
+    {
+     "label": "Offer it, free, to the people who already know you"
+    },
+    {
+     "label": "Do not make them apply",
+     "detail": "one sentence; yes or no"
+    },
+    {
+     "label": "Set the stop rule first"
+    },
+    {
+     "label": "Count",
+     "detail": "created, customised, used, runs; corrections received"
+    },
+    {
+     "label": "Created and never customised",
+     "detail": "a download"
+    },
+    {
+     "label": "Customised and never used",
+     "detail": "a document"
+    },
+    {
+     "label": "Take it away, and see whether they miss it"
+    },
+    {
+     "label": "Pay after the value",
+     "detail": "£5 of credit, 10p for a new article read to the end, blocks nothing"
+    }
+   ],
+   "quotes": [
+    "If friendlies will not take it free, a bigger audience will not take it either."
+   ],
+   "sources": [
+    "news:price-it-then-give-it-away",
+    "news:paying-after-the-value",
+    "news:the-question-is-whether-they-miss-it"
+   ],
+   "ideas": [
+    "do-not-make-them-apply",
+    "count-created-customised-used"
+   ],
+   "notes": "The price ladder is RiskMandate's as published on 2 October 2026; Dinis has a stake in RiskMandate, which the caption should not hide."
+  },
+  {
+   "id": "serverless-weekend-timeline",
+   "title": "Ship a serverless product in a weekend",
+   "altitude": "chapter",
+   "target": "ship-a-serverless-product-in-a-weekend",
+   "form": "timeline",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "shows": "Saturday, Sunday morning, Sunday afternoon as three blocks, each with what gets built and the one honest exception, ending in the smallest product a stranger can pay for.",
+   "why": "The chapter is already a timeline; drawn, it is the part's closing workflow strip and ties part 7's architecture to a plan.",
+   "elements": [
+    {
+     "label": "Saturday: the site",
+     "detail": "static files on a host that charges nothing for them"
+    },
+    {
+     "label": "Saturday: the data",
+     "detail": "an sgit vault; read-only needs no code (sgit publish)"
+    },
+    {
+     "label": "If users must write",
+     "detail": "a vault server of 83 lines: one Worker, one R2 bucket and one Durable Object per vault"
+    },
+    {
+     "label": "Sunday morning: a model on the page",
+     "detail": "Tier 0, Tier 1, Tier 2; scope it to one question"
+    },
+    {
+     "label": "Sunday afternoon: billing by not building billing",
+     "detail": "a payment, a cut, a key with a ceiling"
+    },
+    {
+     "label": "Read the terms, not only the docs"
+    },
+    {
+     "label": "The output",
+     "detail": "static files, the data in a vault the host cannot read, a model on the page, a payment link, and no server of yours with logic in it"
+    }
+   ],
+   "quotes": [
+    "If it bills you by the hour when nobody is using it, it is not serverless."
+   ],
+   "sources": [
+    "news:cloudflare-as-lego-blocks",
+    "news:chat-on-a-static-site",
+    "news:the-key-is-the-billing-system",
+    "news:what-sgit-is"
+   ],
+   "ideas": [
+    "a-vault-server-in-83-lines",
+    "billing-by-not-building-billing"
+   ],
+   "notes": "The 83-line vault server has not run on a real account, does not do files over 4 MB and has one shared access token; say so on the card. Free-plan claims as read on 18 October 2026."
+  },
+  {
+   "id": "three-tiers-model-static-site",
+   "title": "A model on a site with no server: three tiers",
+   "altitude": "chapter",
+   "target": "ship-a-serverless-product-in-a-weekend",
+   "form": "ladder",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "newsroom": "https://newsroom.sgit.ai/articles/images/ec-tiers.webp",
+   "shows": "Three rungs, Tier 0 to Tier 2, each with where the key lives and who trusts what, the fallback arrow back to Tier 0, and beside them the billing comparison: a billing system's parts against the payment-link model.",
+   "why": "Where the key lives is the hardest idea in the chapter for a non-coder, and the tiers are a ready-made ladder.",
+   "elements": [
+    {
+     "label": "Tier 0: a deterministic matcher in the browser",
+     "detail": "free, private, offline; shows which words it matched on; the default"
+    },
+    {
+     "label": "Tier 1: the reader's own key",
+     "detail": "opt-in and labelled; lives in the page's origin; a trust decision the reader makes"
+    },
+    {
+     "label": "Tier 2: a vault bridge",
+     "detail": "the host holds the key below the permission floor; the app never sees it; not built when the article was written"
+    },
+    {
+     "label": "When the model call fails",
+     "detail": "fall back to Tier 0 and say so"
+    },
+    {
+     "label": "A billing system",
+     "detail": "a meter on every call, a ledger per user, disputes, refunds, fraud, custody of the data"
+    },
+    {
+     "label": "Billing by not building billing",
+     "detail": "a payment, a cut, a key with a ceiling and nothing else"
+    },
+    {
+     "label": "Stopped by the terms",
+     "detail": "OpenRouter section 7(4) forbids reselling API access to Models"
+    }
+   ],
+   "quotes": [
+    "The bridge protects your key; it is not yet a boundary that prevents all egress."
+   ],
+   "sources": [
+    "news:chat-on-a-static-site",
+    "news:the-key-is-the-billing-system"
+   ],
+   "ideas": [
+    "three-tiers-for-a-model-on-a-static-site",
+    "billing-by-not-building-billing",
+    "the-licence-is-the-blocker"
+   ],
+   "notes": "Terms dated 31 August 2026; read, not interpreted, and not legal advice."
+  },
+  {
+   "id": "repository-vault-roles-map",
+   "title": "How this book is made",
+   "altitude": "chapter",
+   "target": "how-this-book-was-made",
+   "form": "architecture",
+   "method": "code",
+   "priority": 1,
+   "state": "proposed",
+   "newsroom": "https://newsroom.sgit.ai/articles/images/gw-site.webp",
+   "shows": "Two large boxes, the repository (official versions, v1.0.0 frozen, decisions, roles' work issues, the build) and the public vault (working versions, text issues, release candidates), with the five roles between them, articles as the briefs flowing into the roles, and the arrow of a signed-off version moving from vault to repository.",
+   "why": "All five readers found this chapter too slow; one picture of where things live and who does what can replace most of its first half.",
+   "elements": [
+    {
+     "label": "Repository",
+     "detail": "the official versions; v1.0.0 frozen, with hashes so the build refuses a silent change"
+    },
+    {
+     "label": "Vault",
+     "detail": "the working versions; read key published so anyone can read along"
+    },
+    {
+     "label": "Issues about the book's text",
+     "detail": "in the vault, next to the text"
+    },
+    {
+     "label": "Roles' work issues and decisions",
+     "detail": "in the repository"
+    },
+    {
+     "label": "Reviewer",
+     "detail": "records findings on the text"
+    },
+    {
+     "label": "Editor",
+     "detail": "interviews me, takes my decisions and changes the book"
+    },
+    {
+     "label": "Publisher",
+     "detail": "builds and publishes each official version"
+    },
+    {
+     "label": "Journalist",
+     "detail": "writes the articles that brief the other three"
+    },
+    {
+     "label": "Librarian",
+     "detail": "keeps the book as a graph and never decides"
+    },
+    {
+     "label": "Articles as briefs",
+     "detail": "co-written articles and agent articles"
+    },
+    {
+     "label": "Decisions as files",
+     "detail": "numbered and never deleted"
+    },
+    {
+     "label": "When a version is ready it moves into the repository",
+     "detail": "the build computes the delta"
+    },
+    {
+     "label": "Every change is minor unless I say it is major"
+    }
+   ],
+   "quotes": [
+    "The repository holds the official versions; the vault holds the working versions."
+   ],
+   "sources": [
+    "art:write-it-as-an-article",
+    "art:release-the-book-we-already-released",
+    "art:one-board-for-the-book",
+    "dec:005",
+    "dec:006"
+   ],
+   "ideas": [
+    "repository-official-vault-working",
+    "write-it-as-an-article"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "read-comment-decide-loop",
+   "title": "One loop, and release mode",
+   "altitude": "chapter",
+   "target": "how-this-book-was-made",
+   "form": "cycle",
+   "method": "code",
+   "priority": 1,
+   "state": "drafted",
+   "drawn": "read-comment-decide-loop",
+   "shows": "Dinis's loop at the centre (read an item, say what I think, pick a verb, the editor records and changes the working copy) inside the larger release-mode cycle: a candidate, a round against one pile of material, the answers, the next candidate, with rounds shrinking from parts to concepts to sentences.",
+   "why": "The process is a loop inside a loop, which prose spreads over several sections; drawn, the reader sees the whole method at once.",
+   "elements": [
+    {
+     "label": "I read an item"
+    },
+    {
+     "label": "I say what I think, in my own words"
+    },
+    {
+     "label": "I pick a verb",
+     "detail": "keep, fix, rewrite, merge, cut, article first, later, not doing it"
+    },
+    {
+     "label": "The editor records my comment word for word",
+     "detail": "turns the verb into a change in the working copy in the vault, and says where it went"
+    },
+    {
+     "label": "A release candidate",
+     "detail": "a whole book, start to finish, that we could publish and do not yet"
+    },
+    {
+     "label": "A round",
+     "detail": "one pile of material read against the current text"
+    },
+    {
+     "label": "Add, rewrite into, merge, sign off, move, or decline and say why"
+    },
+    {
+     "label": "The next candidate",
+     "detail": "frozen snapshot, hash recorded once"
+    },
+    {
+     "label": "Rounds shrink",
+     "detail": "from parts to concepts to sentences"
+    }
+   ],
+   "quotes": [
+    "Small finished pieces beat one big review."
+   ],
+   "sources": [
+    "art:read-comment-decide",
+    "art:the-book-in-release-mode",
+    "dec:008",
+    "dec:009"
+   ],
+   "ideas": [
+    "read-comment-decide",
+    "the-book-in-release-mode",
+    "a-candidate-is-read-as-a-frozen-snapshot"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "adversarial-review-board-seats",
+   "title": "Nothing enters without a hearing",
+   "altitude": "chapter",
+   "target": "how-this-book-was-made",
+   "form": "anatomy",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "The review board as a table of seats, each a role in its own session, with the cutter highlighted as the default no, Dinis deciding, and a side path for precedents that skip the hearing and land on a list Dinis can overturn.",
+   "why": "The board is the chapter's most novel mechanism and is a fixed set of seats, which a drawing shows faster than a paragraph.",
+   "elements": [
+    {
+     "label": "Advocate",
+     "detail": "argues for it"
+    },
+    {
+     "label": "Cutter",
+     "detail": "argues against it, always; the default answer is no"
+    },
+    {
+     "label": "Readers",
+     "detail": "Marta, Zara, Tomás, Priya and Sam: would they miss it"
+    },
+    {
+     "label": "Checker",
+     "detail": "sourced, true now, and quoted word for word"
+    },
+    {
+     "label": "Editor",
+     "detail": "says where it goes and what it displaces"
+    },
+    {
+     "label": "I decide"
+    },
+    {
+     "label": "Precedent",
+     "detail": "a general reason becomes a rule the board applies next time without a hearing"
+    },
+    {
+     "label": "A list I read and can overturn",
+     "detail": "overturning makes a new precedent"
+    },
+    {
+     "label": "The diff",
+     "detail": "every release candidate is a diff against the one before"
+    },
+    {
+     "label": "The cutter's budget",
+     "detail": "200 pages or more"
+    }
+   ],
+   "quotes": [
+    "The cutter is the seat that matters"
+   ],
+   "sources": [
+    "art:the-book-in-release-mode"
+   ],
+   "ideas": [
+    "the-adversarial-review-board",
+    "every-verdict-is-a-precedent",
+    "precedents-and-the-diffs",
+    "the-book-is-200-pages-or-more"
+   ],
+   "notes": "Not a storyboard scene: a diagram of seats and the precedent path; the reader characters appear only as names."
+  },
+  {
+   "id": "hands-on-eleven-workflows-map",
+   "title": "Eleven workflows, and what each leaves you with",
+   "altitude": "part",
+   "target": "part:hands-on-2026",
+   "form": "map",
+   "method": "code",
+   "priority": 2,
+   "state": "proposed",
+   "shows": "The part's eleven chapters as tiles, each with the output its opening sentence promises, grouped as the part runs from an agentic workflow to a serverless product, with the year on the frame.",
+   "why": "Readers found the hands-on part slow and repetitive; a part-level map lets a reader pick the one workflow they need instead of reading all eleven.",
+   "elements": [
+    {
+     "label": "An agentic workflow from zero",
+     "detail": "a folder for every person, an agent that drafts, six lines of rules"
+    },
+    {
+     "label": "Your first graph",
+     "detail": "a text file of forty-odd lines"
+    },
+    {
+     "label": "One idea, five lenses",
+     "detail": "one idea explained five ways"
+    },
+    {
+     "label": "A tiny agent loop",
+     "detail": "a loop run by hand"
+    },
+    {
+     "label": "Storyboards drawn by code",
+     "detail": "a storyboard that is data"
+    },
+    {
+     "label": "Meeting briefs and follow-ups",
+     "detail": "three habits around every meeting"
+    },
+    {
+     "label": "Your own newsroom and inbox",
+     "detail": "a site from voice memos; an inbox that drafts and never sends"
+    },
+    {
+     "label": "Form your company",
+     "detail": "not written yet"
+    },
+    {
+     "label": "The credits and programmes, 2026",
+     "detail": "a short list and an application for each"
+    },
+    {
+     "label": "Your first price and first ten customers",
+     "detail": "a price, an offer, a stop rule, a file of counts"
+    },
+    {
+     "label": "Ship a serverless product in a weekend",
+     "detail": "the smallest product a stranger can pay for"
+    }
+   ],
+   "quotes": [
+    "The practical part, dated 2026 and renewed every year, inside the book."
+   ],
+   "sources": [],
+   "ideas": [],
+   "notes": "Tile glosses are condensed from each chapter's first paragraph; the part index sentence is the only quote. Form your company stays marked as waiting on Dinis."
+  }
+ ]
+}

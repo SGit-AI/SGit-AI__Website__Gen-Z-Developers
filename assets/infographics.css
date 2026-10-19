@@ -1,0 +1,103 @@
+/* infographics/: the plan, the review, what exists, the gallery. Every colour is a theme token (assets/themes.css),
+   except inside the drawings themselves, which are printed pictures and keep the book's palette in every theme. */
+.ig-figure{margin:1.2rem 0;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:.6rem}
+.ig-figure img{display:block;width:100%;height:auto;border-radius:6px}
+.ig-figure figcaption{font-size:.85rem;color:var(--dim);margin:.5rem .2rem 0}
+.ig-hero{max-width:1100px}
+
+.ig-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin:1rem 0}
+.ig-gal{display:block;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;color:var(--fg);text-decoration:none;box-shadow:var(--shadow)}
+.ig-gal:hover{border-color:var(--tint-line);box-shadow:var(--shadow-pop)}
+.ig-gal img{display:block;width:100%;height:190px;object-fit:cover;object-position:top;border-bottom:1px solid var(--line)}
+.ig-gal>span{display:block;padding:.6rem .8rem}
+
+/* the review bar */
+.ig-review-bar{position:sticky;top:3.2rem;z-index:5;background:var(--panel);border:1px solid var(--tint-line);border-radius:10px;padding:.6rem .9rem;margin:1rem 0;box-shadow:var(--shadow);display:flex;flex-wrap:wrap;gap:.5rem 1rem;align-items:center;font-size:.9rem}
+.ig-review-bar .tally b{font-size:1.05rem}
+.ig-review-bar .tally span{margin-right:.7rem}
+.ig-review-bar input[type=text]{background:var(--input-bg);color:var(--fg);border:1px solid var(--line2);border-radius:6px;padding:.25rem .45rem;width:9rem}
+.ig-review-bar .acts{margin-left:auto;display:flex;flex-wrap:wrap;gap:.4rem}
+.ig-review-bar .warn{color:var(--c-amber-ink)}
+
+/* coverage */
+.ig-cov{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.6rem;margin:.6rem 0 1.4rem}
+.ig-cov-part{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:.5rem .6rem}
+.ig-ptitle{display:block;width:100%;text-align:left;background:none;border:0;padding:0 0 .35rem;color:var(--head);font:inherit;font-size:.82rem;font-weight:700;cursor:pointer}
+.ig-ptitle.has{color:var(--accent)}
+.ig-cell{width:2rem;height:2rem;margin:.12rem;border-radius:5px;border:1px solid var(--line2);background:var(--panel2);color:var(--dim);font:inherit;font-size:.78rem;font-weight:700;cursor:pointer}
+.ig-cell.n1{background:var(--c-teal-bg);border-color:var(--c-teal-line);color:var(--c-teal-ink)}
+.ig-cell.n2{background:var(--c-teal-line);border-color:var(--c-teal-ink);color:var(--c-teal-ink)}
+.ig-cell.n3{background:var(--accent);border-color:var(--accent-dk);color:var(--on-accent)}
+.ig-cell.on,.ig-ptitle.on{outline:3px solid var(--c-orange-line);outline-offset:1px}
+
+/* filters */
+.ig-filters{display:flex;flex-wrap:wrap;gap:.5rem .9rem;align-items:center;margin:.6rem 0 1rem;font-size:.85rem;color:var(--dim)}
+.ig-filters select{background:var(--input-bg);color:var(--fg);border:1px solid var(--line2);border-radius:6px;padding:.2rem .3rem;font:inherit}
+
+/* the cards */
+.ig-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,460px),1fr));gap:1rem}
+.ig-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:.9rem 1rem;box-shadow:var(--shadow);min-width:0}
+.ig-card[hidden]{display:none}
+.ig-card:target{border-color:var(--accent);box-shadow:0 0 0 3px var(--tint-line)}
+.ig-card h3{margin:.1rem 0 .3rem;font-size:1.08rem}
+.ig-card h3 a{color:var(--head);text-decoration:none}
+.ig-card p{margin:.45rem 0;font-size:.92rem}
+.ig-card .q{font-size:.88rem;margin:.4rem 0}
+.ig-card details summary{cursor:pointer;font-size:.88rem;color:var(--accent)}
+.ig-card ul{margin:.3rem 0 .3rem 1.1rem;padding:0;font-size:.88rem}
+.ig-card.v-accept{border-left:5px solid var(--c-green-ink)}
+.ig-card.v-change{border-left:5px solid var(--c-orange-ink)}
+.ig-card.v-decline{border-left:5px solid var(--c-red-ink)}
+.ig-card.v-later{border-left:5px solid var(--dim2)}
+.ig-chips{display:flex;flex-wrap:wrap;gap:.3rem;margin:.2rem 0}
+.ig-chip{display:inline-block;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.02em;border-radius:4px;padding:.08rem .4rem;border:1px solid var(--line2);color:var(--dim);background:var(--panel2);white-space:nowrap}
+.ig-chip.p1{color:var(--c-red-ink);border-color:var(--c-red-line);background:var(--c-red-bg)}
+.ig-chip.p2{color:var(--c-orange-ink);border-color:var(--c-orange-line);background:var(--c-orange-bg)}
+.ig-chip.st-drafted{color:var(--c-teal-ink);border-color:var(--c-teal-line);background:var(--c-teal-bg)}
+.ig-chip.st-accepted{color:var(--c-green-ink);border-color:var(--c-green-line);background:var(--c-green-bg)}
+.ig-chip.st-declined{color:var(--c-red-ink);border-color:var(--c-red-line);background:var(--c-red-bg)}
+.ig-chip.st-changes{color:var(--c-orange-ink);border-color:var(--c-orange-line);background:var(--c-orange-bg)}
+.ig-chip.m-image-model{color:var(--c-violet-ink);border-color:var(--c-violet-line);background:var(--c-violet-bg)}
+.ig-chip.m-redraw,.ig-chip.m-reuse{color:var(--c-blue-ink);border-color:var(--c-blue-line);background:var(--c-blue-bg)}
+.ig-chip.rec-keep{color:var(--c-green-ink);border-color:var(--c-green-line);background:var(--c-green-bg)}
+.ig-chip.rec-redraw{color:var(--c-teal-ink);border-color:var(--c-teal-line);background:var(--c-teal-bg)}
+.ig-chip.rec-replace{color:var(--c-orange-ink);border-color:var(--c-orange-line);background:var(--c-orange-bg)}
+.ig-chip.rec-drop{color:var(--c-red-ink);border-color:var(--c-red-line);background:var(--c-red-bg)}
+.ig-target{color:var(--dim)}
+.ig-thumb{display:block;margin:.5rem 0;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.ig-thumb img{display:block;width:100%;height:auto;max-height:340px;object-fit:cover;object-position:top}
+.ig-notes{color:var(--c-amber-ink)}
+.ig-news-row,.ig-nf-row{display:flex;flex-wrap:wrap;gap:.5rem;margin:.5rem 0}
+.ig-news-row img{height:90px;width:auto;max-width:200px;object-fit:cover;border:1px solid var(--line);border-radius:6px;background:var(--panel2)}
+
+/* the review controls on a card */
+.ig-review{border-top:1px dashed var(--line2);margin-top:.7rem;padding-top:.6rem}
+.ig-review .vb{display:flex;flex-wrap:wrap;gap:.35rem}
+.ig-review button{font:inherit;font-size:.82rem;font-weight:600;border-radius:6px;padding:.25rem .65rem;border:1px solid var(--line2);background:var(--panel2);color:var(--fg);cursor:pointer}
+.ig-review button.on.accept{background:var(--c-green-bg);border-color:var(--c-green-ink);color:var(--c-green-ink)}
+.ig-review button.on.change{background:var(--c-orange-bg);border-color:var(--c-orange-ink);color:var(--c-orange-ink)}
+.ig-review button.on.decline{background:var(--c-red-bg);border-color:var(--c-red-ink);color:var(--c-red-ink)}
+.ig-review button.on.later{background:var(--panel);border-color:var(--dim);color:var(--dim)}
+.ig-review textarea{width:100%;box-sizing:border-box;margin-top:.4rem;min-height:2.6rem;background:var(--input-bg);color:var(--fg);border:1px solid var(--line2);border-radius:6px;padding:.35rem .45rem;font:inherit;font-size:.88rem}
+
+/* what exists */
+table.ig-v1 td{vertical-align:top}
+.ig-tcell{width:160px}
+.ig-tcell img{display:block;width:150px;height:auto;max-height:130px;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:6px}
+.ig-missing{display:inline-block;width:150px;padding:2.2rem 0;text-align:center;font-size:.75rem;color:var(--c-red-ink);border:1px dashed var(--c-red-line);border-radius:6px}
+.ig-art{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:.5rem .8rem;margin:.5rem 0}
+.ig-art summary{cursor:pointer}
+.ig-nf{margin:0;width:190px}
+.ig-nf img{display:block;width:190px;height:120px;object-fit:cover;object-position:top;border:1px solid var(--line);border-radius:6px;background:var(--panel2)}
+.ig-nf.cited img{border:2px solid var(--accent)}
+.ig-nf figcaption{font-size:.72rem;color:var(--dim);margin-top:.2rem}
+.ig-sw{display:inline-block;width:.9rem;height:.9rem;border-radius:3px;vertical-align:middle;margin-right:.2rem}
+
+@media (max-width:640px){
+  .ig-review-bar{position:static}
+  .ig-review-bar .acts{margin-left:0}
+  .ig-tcell{width:90px}.ig-tcell img,.ig-missing{width:84px}
+}
+/* buttons, not links: .btn in site.css styles an <a> */
+button.btn,label.btn{display:inline-flex;align-items:center;font:inherit;font-size:.85rem;font-weight:600;color:var(--fg);background:var(--panel2);border:1px solid var(--line2);border-radius:6px;padding:.3rem .7rem;cursor:pointer}
+button.btn:hover,label.btn:hover{border-color:var(--accent);color:var(--accent)}

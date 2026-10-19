@@ -1,0 +1,304 @@
+{
+ "what": "Every image the 2018 book has, one row each: what it is, whose it is, and what the infographics agent recommends for the second edition. Written on 19 October 2026 by looking at each image. v1/ is frozen: a recommendation changes nothing there; it says what the working copy and the next candidate should do. The build refuses an image the 2018 text references with no row here, and a row whose image is not in v1/images (the three STEM figures excepted, which were never generated).",
+ "recommendations": {
+  "keep": "good enough to carry into the second edition, redrawn at print size if needed",
+  "redraw": "the point is worth keeping; draw it again by code, from the text, crediting the source",
+  "replace": "the point is worth keeping; a different picture, or words, say it better",
+  "drop": "not needed in the second edition",
+  "history": "not a figure; kept as the 2018 record"
+ },
+ "figures": [
+  {
+   "image": "images/list-of-icons.png",
+   "file": "1.introduction/_index.md",
+   "kind": "slide",
+   "what": "The 2017 slide of logos the first edition opened with: Raspberry Pi, Python, Creative Commons, OWASP, git, a CPU, Slack, Xcode, Docker, DEFCON, Linux, AWS, GitHub, LinkedIn, Twitter, WordPress, with 'These are your CV!'.",
+   "owner": "trademarks of their owners; the slide is the author's",
+   "recommendation": "history",
+   "why": "Chapter 2 of the release candidate tells the story of this slide and the book now opens with wonder, not logos (idea wonder-not-fear). Keep it as the 2018 record and, if Dinis wants it in chapter 2, as a small historical figure with its caption; a logo wall is not something to redraw.",
+   "v2": "lucky-to-be-here"
+  },
+  {
+   "image": "images/open-source-tree.png",
+   "file": "2.mvp-for-gen-z-dev/content/open-source.md",
+   "kind": "illustration",
+   "what": "A tree whose leaves are open-source logos: openSUSE, CakePHP, git, Ruby, PHP, Joomla, Drupal, MySQL, MongoDB, WordPress, Linux, Python and others.",
+   "owner": "trademarks of their owners; source of the drawing not recorded",
+   "recommendation": "replace",
+   "why": "The point (a whole ecosystem grew from open code) carries without logos. For chapter 26 the fork-next-door-triangle and who-pays-for-open-source proposals say what the 2026 chapter argues; drop the tree.",
+   "v2": "open-source"
+  },
+  {
+   "image": "images/wikipedia-creative-commons-licenses.png",
+   "file": "2.mvp-for-gen-z-dev/content/creative-commons.md",
+   "kind": "table",
+   "what": "Wikipedia's table of the Creative Commons licences (CC0, BY, BY-SA, BY-NC, BY-NC-SA, BY-ND, BY-NC-ND) against remix, commercial use, free cultural works and the open definition.",
+   "owner": "Wikipedia (CC BY-SA)",
+   "recommendation": "redraw",
+   "why": "Licences matter more in 2026, when everything an agent writes needs one; the facts can be drawn again by code as a small table with this book's palette, and the redraw credits Wikipedia. The book itself is CC BY 4.0 (decision 001): say so on the same page.",
+   "v2": "open-source"
+  },
+  {
+   "image": "images/logo-open-source.png",
+   "file": "2.mvp-for-gen-z-dev/content/open-source.md",
+   "kind": "logo",
+   "what": "The Open Source Initiative's keyhole logo, in the chapter's front matter.",
+   "owner": "Open Source Initiative (trademark)",
+   "recommendation": "history",
+   "why": "A front-matter logo of the 2018 Hugo theme; not a figure."
+  },
+  {
+   "image": "images/logo-creative-commons.png",
+   "file": "2.mvp-for-gen-z-dev/content/creative-commons.md",
+   "kind": "logo",
+   "what": "The Creative Commons logo, in the front matter of two 2018 chapters (Creative Commons and Jira).",
+   "owner": "Creative Commons (trademark)",
+   "recommendation": "history",
+   "why": "A front-matter logo of the 2018 Hugo theme; not a figure."
+  },
+  {
+   "image": "images/logo-docker.png",
+   "kind": "logo",
+   "what": "The Docker whale logo. No 2018 chapter references it.",
+   "owner": "Docker (trademark)",
+   "recommendation": "history",
+   "why": "Unreferenced; kept because v1/ is frozen."
+  },
+  {
+   "image": "images/hugo-simple-example.jpg",
+   "file": "2.mvp-for-gen-z-dev/content/hugo.md",
+   "kind": "screenshot",
+   "what": "An IDE and a browser side by side: a Hugo site's files, a template, and the page it renders, with the build output.",
+   "owner": "the author's screenshot",
+   "recommendation": "drop",
+   "why": "Tooling of 2018. Publishing in 2026 is chapter 12 (your own newsroom) and 36 (your own newsroom and inbox), which have their own proposals (newsroom-in-five-steps, voice-memo-to-checked-site).",
+   "v2": "your-own-publishing"
+  },
+  {
+   "image": "images/hugo-with-graphs.jpg",
+   "file": "2.mvp-for-gen-z-dev/content/hugo.md",
+   "kind": "screenshot",
+   "what": "A Hugo page rendering Neo4j Cypher queries as small graphs (limit 5, 20, 50, 100), with the code beside it.",
+   "owner": "the author's screenshot",
+   "recommendation": "drop",
+   "why": "The idea it showed, a page drawn from a graph, is now this site; graph/view.html draws the book's own graph live.",
+   "v2": "your-first-graph"
+  },
+  {
+   "image": "images/dot-language/46248785-ed561880-c415-11e8-8f07-6f5c83b4b03b.png",
+   "file": "2.mvp-for-gen-z-dev/content/dot-language.md",
+   "kind": "diagram",
+   "what": "A Graphviz drawing: Foo points to b, b to c and, dotted, to d.",
+   "owner": "the author's rendering",
+   "recommendation": "keep",
+   "why": "Small, clean and the author's own; a DOT example still teaches graphs in four lines. Chapter 31 (your first graph, built by hand) is where it would go, redrawn at print size if kept.",
+   "v2": "your-first-graph"
+  },
+  {
+   "image": "images/dot-language/46255423-a22f1a80-c494-11e8-8eb3-5c9c992e162c.png",
+   "file": "2.mvp-for-gen-z-dev/content/dot-language.md",
+   "kind": "diagram",
+   "what": "A sequence diagram: Alice, Bob and John, a 'loop Healthcheck' box and a 'Rational thoughts prevail' note.",
+   "owner": "the author's rendering of the PlantUML documentation's example",
+   "recommendation": "drop",
+   "why": "The PlantUML documentation's example, not the book's; diagrams-as-code is better shown with the book's own process (read-comment-decide-loop is one).",
+   "v2": "your-first-graph"
+  },
+  {
+   "image": "images/dot-language/46255585-abb98200-c496-11e8-93a7-7ac3abeaf535.png",
+   "file": "2.mvp-for-gen-z-dev/content/dot-language.md",
+   "kind": "diagram",
+   "what": "An 'Authentication Sequence' between Alice and Bob in websequencediagrams.com's sketched style, with the site's address on it.",
+   "owner": "websequencediagrams.com's rendering",
+   "recommendation": "drop",
+   "why": "Third-party rendering with its address on the image."
+  },
+  {
+   "image": "images/dot-language/46255638-41551180-c497-11e8-88b8-26ab35aacedf.png",
+   "file": "2.mvp-for-gen-z-dev/content/dot-language.md",
+   "kind": "screenshot",
+   "what": "Graphviz source on the left (boxes and circles, edges, a label) and the graph it renders on the right.",
+   "owner": "the author's screenshot",
+   "recommendation": "keep",
+   "why": "Code beside its picture is the whole lesson of chapter 31; worth keeping or redrawing at print size.",
+   "v2": "your-first-graph"
+  },
+  {
+   "image": "images/ast-abstract-syntax-tree/800px-Abstract_syntax_tree_for_Euclidean_algorithm.svg.png",
+   "file": "3.technologies/content/AST.md",
+   "kind": "diagram",
+   "what": "The abstract syntax tree of Euclid's algorithm: statement sequence, while, compare, branch, assign, variables and constants.",
+   "owner": "Wikimedia Commons (licence to check)",
+   "recommendation": "redraw",
+   "why": "The 2026 point, code is already a graph, is chapter 3's (code-is-a-layered-graph); a tree drawn by code from a three-line example of the book's own is clearer than a borrowed one.",
+   "v2": "everything-is-connected",
+   "proposal": "code-is-a-layered-graph"
+  },
+  {
+   "image": "images/ast-abstract-syntax-tree/46580312-4c212080-ca1a-11e8-8426-26335bd7d9d9.png",
+   "file": "3.technologies/content/AST.md",
+   "kind": "screenshot",
+   "what": "AST Explorer parsing a small Graphviz file into its tree, as JSON.",
+   "owner": "the author's screenshot of astexplorer.net",
+   "recommendation": "drop",
+   "why": "Too small to read in print; the redrawn tree replaces it."
+  },
+  {
+   "image": "images/ast-abstract-syntax-tree/46583057-a933cb00-ca48-11e8-8525-122acf63bf81.png",
+   "file": "3.technologies/content/AST.md",
+   "kind": "screenshot",
+   "what": "Two C# files side by side: the original code with Response.Write, and the patched one that encodes the payload.",
+   "owner": "the author's screenshot",
+   "recommendation": "redraw",
+   "why": "A security fix made by rewriting the tree is still a strong before-and-after; as code on a screenshot it cannot be read in print. Redraw as a two-column comparison if chapter 3 or 25 keeps the story."
+  },
+  {
+   "image": "images/ast-abstract-syntax-tree/46583215-fc0e8200-ca4a-11e8-94b6-c7d3a59e6d9d.png",
+   "file": "3.technologies/content/AST.md",
+   "kind": "screenshot",
+   "what": "The C# code that walks the tree and patches it (Roslyn).",
+   "owner": "the author's screenshot",
+   "recommendation": "drop",
+   "why": "Code is better set as code in the text than as an image."
+  },
+  {
+   "image": "images/being-criticized-is-a-privilege/46583619-b608ec80-ca51-11e8-997b-d55b10c6174d.png",
+   "file": "4.life-patterns/content/being-criticized-is-a-privilege.md",
+   "kind": "infographic",
+   "what": "The Radical Candor two by two: care personally against challenge directly, with ruinous empathy, radical candor, manipulative insincerity and obnoxious aggression.",
+   "owner": "Kim Scott's framework; drawing third party",
+   "recommendation": "replace",
+   "why": "The only true infographic in the 2018 book, and not the book's. The release candidate does not carry the chapter; if a chapter on feedback returns, draw the quadrant by code with Kim Scott credited, or link hers."
+  },
+  {
+   "image": "images/being-criticized-is-a-privilege/46584081-fd45ac00-ca56-11e8-980c-a5bd7c4e7639.png",
+   "file": "4.life-patterns/content/being-criticized-is-a-privilege.md",
+   "kind": "infographic",
+   "what": "'What's Your Personality Type?': the sixteen Myers-Briggs types, coloured, with the four questions.",
+   "owner": "third party",
+   "recommendation": "drop",
+   "why": "Third party, and the second edition reaches the same point with its own lens (where-do-you-land)."
+  },
+  {
+   "image": "images/being-criticized-is-a-privilege/46584306-a5f50b00-ca59-11e8-8f6d-4e5cddabbf0c.png",
+   "file": "4.life-patterns/content/being-criticized-is-a-privilege.md",
+   "kind": "table",
+   "what": "16Personalities' table of roles and strategies (analysts, diplomats, sentinels, explorers).",
+   "owner": "16Personalities",
+   "recommendation": "drop",
+   "why": "Third party."
+  },
+  {
+   "image": "images/being-criticized-is-a-privilege/46584313-cae97e00-ca59-11e8-91ee-10e17fb81612.png",
+   "file": "4.life-patterns/content/being-criticized-is-a-privilege.md",
+   "kind": "diagram",
+   "what": "The Big Five around 'Personality': openness, conscientiousness, extraversion, agreeableness, neuroticism.",
+   "owner": "third party",
+   "recommendation": "drop",
+   "why": "Third party; not in the release candidate."
+  },
+  {
+   "image": "images/being-criticized-is-a-privilege/46584346-e9e81000-ca59-11e8-9fd6-88acc7d8cfd3.png",
+   "file": "4.life-patterns/content/being-criticized-is-a-privilege.md",
+   "kind": "screenshot",
+   "what": "The author's own 16Personalities result: Campaigner (ENFP-A), with the five trait bars.",
+   "owner": "16Personalities' page, the author's result",
+   "recommendation": "drop",
+   "why": "A personal anecdote in a third party's design; if Dinis wants the anecdote, say it in a sentence."
+  },
+  {
+   "image": "images/future-self-1.png",
+   "file": "7.your-cv/future-self.md",
+   "kind": "screenshot",
+   "what": "A line of a markdown file: an Investopedia link and a note to find an article about Amazon as a factory of factories.",
+   "owner": "the author's screenshot",
+   "recommendation": "drop",
+   "why": "A note to self, not a figure; chapter 28 (graphs, memory and your future self) has memory-is-context-management.",
+   "v2": "graphs-and-your-future-self"
+  },
+  {
+   "image": "images/future-self-2.png",
+   "file": "7.your-cv/future-self.md",
+   "kind": "screenshot",
+   "what": "Twitter search results for 'DinisCruz amazon': the author's tweet 'The Amazon machine'.",
+   "owner": "Twitter's page, the author's tweet",
+   "recommendation": "drop",
+   "why": "The point (your public record is searchable memory for your future self) is chapter 28's; the screenshot of a 2018 Twitter page is not.",
+   "v2": "graphs-and-your-future-self"
+  },
+  {
+   "image": "images/linus-linux-post.png",
+   "file": "2.mvp-for-gen-z-dev/draft/linux.md",
+   "kind": "screenshot",
+   "what": "Linus Torvalds's post to comp.os.minix of 25 August 1991 announcing a free kernel for 386 machines, as shown in Google Groups.",
+   "owner": "Linus Torvalds's public post",
+   "recommendation": "replace",
+   "why": "Named as text in the draft, never placed. The words are the history; set them as a quote in chapter 26 rather than as a screenshot of a Groups page.",
+   "v2": "open-source"
+  },
+  {
+   "image": "images/dopamine.svg.png",
+   "file": "3.technologies/draft/dopamine.md",
+   "kind": "diagram",
+   "what": "The dopamine molecule, small, linked to Wikimedia Commons.",
+   "owner": "Wikimedia Commons",
+   "recommendation": "drop",
+   "why": "A draft's illustration; not in the release candidate."
+  },
+  {
+   "image": "images/title_page.png",
+   "kind": "cover",
+   "what": "The cover of the September 2018 early release: navy, GEN Z in four colour blocks, eight lines from Question everything to Shake things up.",
+   "owner": "the author's",
+   "recommendation": "history",
+   "why": "The cover waits (decision 004). Its four colours are this plan's palette."
+  },
+  {
+   "image": "images/title_page-old.png",
+   "kind": "cover",
+   "what": "An earlier cover design.",
+   "owner": "the author's",
+   "recommendation": "history",
+   "why": "Kept as the record."
+  },
+  {
+   "image": "images/36372107-f0fd05c0-155b-11e8-938b-ed6c7a67b7dc.png",
+   "kind": "screenshot",
+   "what": "The book's Leanpub page in February 2018, 20% complete, the early cover with logos, free with a suggested $20.",
+   "owner": "Leanpub's page, the author's book",
+   "recommendation": "history",
+   "why": "Unreferenced in the text; the record of releasing early. Chapter 41 (how this book was made) could use it beside today's site.",
+   "v2": "how-this-book-was-made"
+  },
+  {
+   "image": "../../puml-graphs/diagrams/stem/STEM-tech-stack_001.png",
+   "file": "1.introduction/stem-tech-stack.md",
+   "kind": "missing",
+   "what": "Gen X's tech stack, linked and never generated from PlantUML.",
+   "owner": "the author's",
+   "recommendation": "redraw",
+   "why": "Drawn by code from the 2018 lists: stem-tech-stack.",
+   "proposal": "stem-tech-stack"
+  },
+  {
+   "image": "../../puml-graphs/diagrams/stem/STEM-tech-stack_002.png",
+   "file": "1.introduction/stem-tech-stack.md",
+   "kind": "missing",
+   "what": "Gen Y's tech stack, linked and never generated.",
+   "owner": "the author's",
+   "recommendation": "redraw",
+   "why": "Drawn by code: stem-tech-stack.",
+   "proposal": "stem-tech-stack"
+  },
+  {
+   "image": "../../puml-graphs/diagrams/stem/STEM-tech-stack_003.png",
+   "file": "1.introduction/stem-tech-stack.md",
+   "kind": "missing",
+   "what": "Gen Z's tech stack, linked and never generated.",
+   "owner": "the author's",
+   "recommendation": "redraw",
+   "why": "Drawn by code: stem-tech-stack.",
+   "proposal": "stem-tech-stack"
+  }
+ ]
+}

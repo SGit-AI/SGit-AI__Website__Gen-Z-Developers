@@ -1,0 +1,49 @@
+{
+ "id": "sell-dont-issue",
+ "proposal": "sell-dont-issue-worked-example",
+ "form": "numbers",
+ "per_row": 4,
+ "kicker": "Chapter 21 · Fund it, or do not",
+ "title": "Sell, don't issue: a worked example",
+ "subtitle": "A UK company worth £10 million, a founder who owns all of it, an investor writing £2 million. The founder keeps 80% either way; in this model the investor buys 20% of the founder's shares.",
+ "alt": "Arithmetic in four tiles: £2 million from the investor, minus about £420,000 in tax, leaves about £1.58 million; minus £0.75 million lent back to the company leaves about £0.83 million kept. Illustrative only; not legal, tax or investment advice; UK figures for one tax year.",
+ "tiles": [
+  {
+   "value": "£2m",
+   "label": "paid to the founder",
+   "detail": "for 20% of the founder's shares",
+   "colour": "teal"
+  },
+  {
+   "op": "−",
+   "value": "£420k",
+   "label": "about, in tax",
+   "detail": "18% on the first £1 million under Business Asset Disposal Relief from 6 April 2026, if its conditions are met, and 24% above",
+   "colour": "red"
+  },
+  {
+   "op": "−",
+   "value": "£0.75m",
+   "label": "lent back",
+   "detail": "to the company",
+   "colour": "yellow"
+  },
+  {
+   "op": "=",
+   "value": "£0.83m",
+   "label": "about, kept",
+   "detail": "after tax and the loan; the buyer pays 0.5% stamp duty",
+   "colour": "navy",
+   "result": true
+  }
+ ],
+ "note": "Illustrative only: not legal, tax or investment advice; the UK figures are for one tax year and other countries differ. After tax and before the loan, about £1.58 million.",
+ "checked": [
+  "A worked example, illustrative only: a UK company worth £10 million, a founder who owns all of it, an investor writing £2 million. The founder keeps 80% either way.",
+  "In this model the investor buys 20% of the founder's shares",
+  "about £420,000 in tax (18% on the first £1 million under Business Asset Disposal Relief from 6 April 2026, if its conditions are met, and 24% above)",
+  "has about £1.58 million, lends £0.75 million back and keeps about £0.83 million; the buyer pays 0.5% stamp duty",
+  "not legal, tax or investment advice; the UK figures are for one tax year and other countries differ"
+ ],
+ "source_line": "Source: chapter 21, Fund it, or do not (v2.0.0-rc2), from the newsroom's Sell, don't issue. Check: 18% of £1m plus 24% of £1m is £420,000; £2m less that is £1.58m; less £0.75m is £0.83m."
+}

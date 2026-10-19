@@ -1,0 +1,102 @@
+{
+ "id": "three-centres-of-gravity",
+ "proposal": "three-centres-of-gravity",
+ "form": "comparison",
+ "align_rows": true,
+ "kicker": "Chapter 4 · Where do you land?",
+ "title": "Explorer, villager, town planner",
+ "subtitle": "The test: What do you care about? What makes you lose your sense of time? All three are brilliant.",
+ "alt": "Three columns. The explorer is bursting with ideas, sees failure as just an experiment, makes a prototype for early adopters, and reads explorer coding and building fast with agents first. The villager loves the user, does not like failure that much, packages and releases, and reads shipping, selling and your own newsroom first. The town planner geeks out on the details, likes to be invisible, makes something a commodity, and reads controlling your agent, the record, serverless for real and reading code as a graph first.",
+ "columns": [
+  {
+   "heading": "The explorer",
+   "sub": "the compass",
+   "colour": "teal",
+   "items": [
+    {
+     "label": "Bursting with ideas",
+     "detail": "They are not the person playing with the Lego; they want to invent the bricks."
+    },
+    {
+     "label": "Failure is exciting",
+     "detail": "because failure is just an experiment"
+    },
+    {
+     "label": "Makes a prototype",
+     "detail": "What they make only works for early adopters, because it is going to break"
+    },
+    {
+     "label": "Read early",
+     "detail": "explorer coding, and building fast with agents"
+    }
+   ]
+  },
+  {
+   "heading": "The villager",
+   "sub": "the house",
+   "colour": "green",
+   "items": [
+    {
+     "label": "Loves the user",
+     "detail": "they put themselves in the middle of the problem and solve it"
+    },
+    {
+     "label": "Does not like failure that much",
+     "detail": "because for them the product has to work"
+    },
+    {
+     "label": "Packaging, releasing, going to market",
+     "detail": "the first version just has to work; the second version has to be designed"
+    },
+    {
+     "label": "Read early",
+     "detail": "shipping, selling, and your own newsroom"
+    }
+   ]
+  },
+  {
+   "heading": "The town planner",
+   "sub": "the grid",
+   "colour": "navy",
+   "items": [
+    {
+     "label": "Geeks out on the details",
+     "detail": "boring is good"
+    },
+    {
+     "label": "Likes to be invisible",
+     "detail": "they know they have done the job right when nothing goes wrong"
+    },
+    {
+     "label": "Making something a commodity",
+     "detail": "which is still hard"
+    },
+    {
+     "label": "Read early",
+     "detail": "controlling your agent, the record, serverless for real, and reading code as a graph"
+    }
+   ]
+  }
+ ],
+ "arrows": false,
+ "legend": "This is a lens, not a label. As your career changes, your centre can move with it. Wardley named them pioneers, settlers and town planners in 2015, and since 2023 explorers, villagers and town planners.",
+ "checked": [
+  "What do you care about? What makes you lose your sense of time?",
+  "All three are brilliant.",
+  "This is a lens, not a label.",
+  "As your career changes, your centre can move with it.",
+  "They are not the person playing with the Lego; they want to invent the bricks.",
+  "because failure is just an experiment",
+  "What they make only works for early adopters, because it is going to break",
+  "they put themselves in the middle of the problem and solve it",
+  "because for them the product has to work",
+  "packaging, releasing, going to market",
+  "the first version just has to work; the second version has to be designed",
+  "geeks out on the details",
+  "boring is good",
+  "they know they have done the job right when nothing goes wrong",
+  "making something a commodity, which is still hard",
+  "pioneers, settlers and town planners in 2015, and since 2023 explorers, villagers and town planners"
+ ],
+ "source_line": "Source: chapter 4, Where do you land? (v2.0.0-rc2), after Simon Wardley's pioneers, settlers and town planners, and the 2018 outline. The compass, house and grid are the chapter's badges, a first attempt."
+}

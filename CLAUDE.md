@@ -60,6 +60,14 @@ by `assets/storyboard.js` with Rough.js; there is no image file to edit. The bui
 an unknown pose, mood or kind, and, when a storyboard names a `quote_source`, any Guide line or quote card that is not
 in it word for word (a panel that is not meant as a quote says so with `not_a_quote` and a note).
 
+## Infographics
+
+An infographic is data too (`admin/content/infographics/drawn/<id>.json`), drawn to SVG by `admin/build/infographic_svg.py` at build
+time, in the book's palette in every theme; there is no image file to edit. Every proposal is a row of `plan.json` with its altitude,
+target, form, method and state. The build refuses a quote or a drawing's `checked` line that is not word for word in its chapter,
+an unknown chapter, source, idea, form or state, a decided state (accepted, changes, declined, deferred) without `decided_by`, and a
+2018 image with no row in `v1-figures.json`. Only Dinis accepts a proposal; the illustrator (`team/illustrator/`) records it.
+
 ## Published and drafts
 
 What the 2018 build published is a rule, not a judgement: a file with `status: content` in its front matter

@@ -1,0 +1,92 @@
+{
+ "id": "how-cheap-is-it-to-undo",
+ "proposal": "how-cheap-is-it-to-undo",
+ "form": "graph",
+ "kicker": "Chapter 15 · Direction is the scarce skill",
+ "title": "How cheap is it to undo?",
+ "subtitle": "Not \"do I trust the agent\", which has no answer, but: if this is wrong, how cheap is it to undo, and what does it break before I do?",
+ "alt": "A decision tree. The question in the middle: if this is wrong, how cheap is it to undo, and what does it break before I do? To the left, the two-way door: an article, where a correction is a new version, or a narrow internal tool that can be switched off; there, use controls that do not get tired: a validator, a policy row enforced outside the model, a record read afterwards. To the right, the one-way door: an email in my name, or a tool that touches regulated data every day; there, put the person: sending in my name, typing a secret, spending money, deleting what has no backup.",
+ "grid": {
+  "cols": 2,
+  "rows": 3,
+  "row_height": 180,
+  "node_width": 620
+ },
+ "nodes": [
+  {
+   "id": "q",
+   "col": 0.5,
+   "row": 0,
+   "label": "If this is wrong, how cheap is it to undo?",
+   "detail": "and what does it break before I do?",
+   "solid": true,
+   "colour": "navy",
+   "width": 700
+  },
+  {
+   "id": "two",
+   "col": 0,
+   "row": 1,
+   "label": "A two-way door",
+   "detail": "An article: a correction is a new version, and the next reader gets the fixed page. A narrow internal tool that can be switched off.",
+   "colour": "green"
+  },
+  {
+   "id": "one",
+   "col": 1,
+   "row": 1,
+   "label": "A one-way door",
+   "detail": "An email in my name. A tool that touches regulated data every day.",
+   "colour": "red"
+  },
+  {
+   "id": "ctl",
+   "col": 0,
+   "row": 2,
+   "label": "Use controls that do not get tired",
+   "detail": "a validator, a policy row enforced outside the model, a record read afterwards",
+   "colour": "green"
+  },
+  {
+   "id": "per",
+   "col": 1,
+   "row": 2,
+   "label": "Put the person here",
+   "detail": "sending in my name, typing a secret, spending money, deleting what has no backup",
+   "colour": "red"
+  }
+ ],
+ "edges": [
+  {
+   "from": "q",
+   "to": "two",
+   "label": "cheap"
+  },
+  {
+   "from": "q",
+   "to": "one",
+   "label": "not at all"
+  },
+  {
+   "from": "two",
+   "to": "ctl"
+  },
+  {
+   "from": "one",
+   "to": "per",
+   "hot": true
+  }
+ ],
+ "note_nodes": true,
+ "checked": [
+  "Not \"do I trust the agent\", which has no answer, but: if this is wrong, how cheap is it to undo, and what does it break before I do?",
+  "An article is a two-way door: a correction is a new version, and the next reader gets the fixed page. An email in my name is a one-way door.",
+  "A narrow internal tool that a few people use and that can be switched off is a two-way door",
+  "A tool that touches regulated data every day is a one-way door",
+  "use controls that do not get tired: a validator, a policy row enforced outside the model, a record read afterwards.",
+  "sending in my name, typing a secret, spending money, deleting what has no backup",
+  "users approve 93% of permission prompts"
+ ],
+ "footnote": "Why not a person everywhere: people approve almost everything they are shown; Anthropic measured that its coding agent's users approve 93% of permission prompts.",
+ "source_line": "Source: chapter 15, Direction is the scarce skill (v2.0.0-rc2), from the newsroom's How cheap is it to undo, and Jeff Bezos's 2015 letter on one-way and two-way doors. The 93% is Anthropic's measurement, as the chapter cites it."
+}

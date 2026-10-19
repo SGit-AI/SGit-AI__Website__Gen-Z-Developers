@@ -4,6 +4,7 @@
   <url><loc>https://gen-z-developers.sgit.ai/admin/versions.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/agent-articles/dinis-first-decisions.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/agent-articles/five-readers-who-do-not-exist.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/agent-articles/infographics-at-every-altitude.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/agent-articles/reading-rc2-and-the-first-batch.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/agent-articles/storyboards-drawn-by-code.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/agent-articles/storyboards-on-the-shelf-and-into-the-book.html</loc></url>
@@ -244,6 +245,20 @@
   <url><loc>https://gen-z-developers.sgit.ai/graph/tasks.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/graph/view.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/infographics/drawn/card-fee-arithmetic.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/infographics/drawn/how-cheap-is-it-to-undo.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/infographics/drawn/reach-mandate-gap.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/infographics/drawn/read-comment-decide-loop.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/infographics/drawn/sell-dont-issue.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/infographics/drawn/stem-tech-stack.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/infographics/drawn/the-book-on-one-page.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/infographics/drawn/the-miss-it-test.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/infographics/drawn/three-centres-of-gravity.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/infographics/drawn/who-can-read-what.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/infographics/existing.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/infographics/how.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/infographics/index.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/infographics/plan.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/map/index.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/map/newsroom.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/read/index.html</loc></url>
@@ -275,6 +290,7 @@
   <url><loc>https://gen-z-developers.sgit.ai/storyboards/where-the-thinking-came-from.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/team/board/index.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/team/editor/index.html</loc></url>
+  <url><loc>https://gen-z-developers.sgit.ai/team/illustrator/index.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/team/index.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/team/journalist/index.html</loc></url>
   <url><loc>https://gen-z-developers.sgit.ai/team/librarian/index.html</loc></url>

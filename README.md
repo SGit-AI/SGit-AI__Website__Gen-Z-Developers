@@ -60,6 +60,10 @@ v2/content/           the second edition as a release candidate (decision 008): 
 map/                  generated: one row per 2018 file, the newsroom articles that answer it, the gap
 briefs/               generated: the articles and notes above, rendered
 storyboards/          generated: the cast sheet and a swipe deck per storyboard, drawn in the browser from admin/content/storyboards/*.json
+infographics/         generated: the book's infographics at every altitude: the plan with a review in the browser (plan.html), what exists
+                      (the 2018 images and the newsroom's figures), how they are made, a page per drawing, and svg/<id>.svg drawn by
+                      admin/build/infographic_svg.py from admin/content/infographics/ (plan.json, drawn/*.json, v1-figures.json,
+                      newsroom.json); admin/build/infographic_png.py exports PNGs on demand
 articles/             generated: this site's own articles (admin/content/articles/), each with its markdown twin; the briefs for the roles
 team/                 the roles: reviewer, editor, publisher, journalist, librarian (keeps the graph)
   ISSUES.md           how the roles keep issues (the folder is the status)
