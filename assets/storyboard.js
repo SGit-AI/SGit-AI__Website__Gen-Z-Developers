@@ -506,7 +506,15 @@
     };
     const mark = (i) => {
       current = i; count.textContent = `${i + 1} / ${slides.length}`;
-      slides.forEach((s, j) => s.classList.toggle('play', j === i));
+      // a panel plays once, the first time it arrives; after that it stays drawn, so moving on or back never
+      // shows a drawn panel blanking and redrawing (the flick)
+      slides.forEach((s, j) => {
+        if (j !== i) { if (s.classList.contains('play')) { s.classList.remove('play'); s.classList.add('played'); } return; }
+        if (!s.classList.contains('played') && !s.classList.contains('play')) {
+          s.classList.add('play');
+          setTimeout(() => { s.classList.add('played'); s.classList.remove('play'); }, 2200);
+        }
+      });
       const sc = data.storyboard.scenes[i];
       notes.innerHTML = '';
       const p = document.createElement('p'); p.textContent = sc.note || ''; notes.appendChild(p);
@@ -517,11 +525,30 @@
     slides.forEach(s => io.observe(s));
     root.querySelector('.sb-prev').onclick = () => show(current - 1);
     root.querySelector('.sb-next').onclick = () => show(current + 1);
-    root.querySelector('.sb-full').onclick = () => { const f = root.requestFullscreen || root.webkitRequestFullscreen; if (f) f.call(root); };
+    // full screen: the Fullscreen API where it exists (prefixed on Safari); where it does not, or fails silently
+    // (iPad), the deck is pinned to the viewport with a class and the same button leaves it
+    const fullBtn = root.querySelector('.sb-full');
+    const fsEl = () => document.fullscreenElement || document.webkitFullscreenElement || null;
+    const pinned = () => root.classList.contains('sb-pinned');
+    const pin = () => { root.classList.add('sb-pinned'); document.documentElement.classList.add('sb-lock'); fullBtn.textContent = 'Exit full screen'; };
+    const unpin = () => { root.classList.remove('sb-pinned'); document.documentElement.classList.remove('sb-lock'); fullBtn.textContent = 'Full screen'; };
+    const enterFull = () => {
+      const f = root.requestFullscreen || root.webkitRequestFullscreen;
+      if (!f) return pin();
+      try { const r = f.call(root); if (r && r.catch) r.catch(pin); } catch (e) { pin(); return; }
+      setTimeout(() => { if (!fsEl() && !pinned()) pin(); }, 400);
+    };
+    const exitFull = () => {
+      if (pinned()) return unpin();
+      if (document.exitFullscreen) document.exitFullscreen(); else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+    };
+    fullBtn.onclick = () => (fsEl() === root || pinned()) ? exitFull() : enterFull();
+    ['fullscreenchange', 'webkitfullscreenchange'].forEach(ev => document.addEventListener(ev, () => { fullBtn.textContent = fsEl() === root ? 'Exit full screen' : 'Full screen'; }));
     root.querySelector('.sb-notes-toggle').onclick = () => root.classList.toggle('with-notes');
     document.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); show(current + 1); }
       if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(current - 1); }
+      if (e.key === 'Escape' && pinned()) unpin();
     });
     const start = parseInt((location.hash.match(/scene-(\d+)/) || [])[1] || '1', 10) - 1;
     requestAnimationFrame(() => { slides[start] && slides[start].scrollIntoView({ inline: 'start', block: 'nearest' }); mark(Math.max(0, start)); });

@@ -90,6 +90,11 @@
    "version": "v0.2.15",
    "date": "2026-10-18",
    "what": "The librarian's second pass: the bring class at zero, and the graphs chapter placed. The four newsroom bring articles the first pass left (no server by design; how the voice works; memory is not a spectator sport; code review as a fractal semantic graph) were read in full and processed into thirteen ideas: the file system as the database and no server by design (answering the 2018 outline Serverless from the other side), security as a business tool, open source as the reason it is easy to throw your own technology away; the voice as four inputs, the memo as the thinking, a correction that becomes a rule; memory as context management, the site as the memory, stale pages as false memories; code as a fractal semantic graph, reality as what corrects a graph, and the company in the review. The journalist's Everything is connected is processed into seven more (a graph is not a diagram, the whodunit board, a map as a graph with positions, graphs of graphs, provenance as a graph, start anywhere, the 2018 graph chapters), and the chapter map gains the graphs chapter it asks for, placed just before Where do you land with the order left as Dinis's question, plus Your first graph in the hands-on part. The journalist's Lenses, roles and loops, released meanwhile, is processed into five (a prompt is a lens, a role is a model with a description, tools changed everything, the model remembers nothing, long chats are compressed), with its chapter right after What generative AI is and two hands-on chapters (one idea five lenses; a tiny agent loop). 106 ideas; 30 chapters in 9 parts; the librarian's issue 001 closed with its answer and a debrief with the counts."
+  },
+  {
+   "version": "v0.2.16",
+   "date": "2026-10-19",
+   "what": "Two storyboard fixes Dinis asked for. The flick on moving forward: a panel used to arrive fully drawn and then blank and redraw itself when its play began; now a panel arrives as blank paper, plays once the first time it is reached, and stays drawn after that, going forward or back. Full screen on an iPad: Safari's prefixed full-screen styles were missing and the request can fail silently; the deck now uses the prefixed selectors, and where full screen is refused or absent it pins itself to the viewport with the same button (and Escape) to leave."
   }
  ]
 }
