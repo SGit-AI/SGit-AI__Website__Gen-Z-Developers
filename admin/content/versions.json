@@ -212,6 +212,11 @@
    "version": "v0.2.39",
    "date": "2026-10-19",
    "what": "RC2 on paper, part 3: pages 10 to 13 of the printed release candidate 2 (chapter 2, You are lucky to be here), thirty-two notes (52 to 83) drawn with callouts, three new themes (fact or opinion, visibly; the website holds what the page cannot; what works, keep it), and a sketch of a margin system marking facts, opinions, stories and concepts, with QR codes. Article 21, Paper that talks both ways, from Dinis's memo with the batch: QR codes take the reader from the page to the website for provenance, explainability and room (with a commercial angle: the site's billing and credits for book buyers), and the pen and a photograph take the reader's notes back, a reading workflow Dinis wants for every book and the book should recommend. New: the book's QR codes as data (admin/content/qr/links.json), each a short stable address gen-z-developers.sgit.ai/q/<id>/ whose page the build writes (admin/build/qr_links.py, refusing a code with no page) and whose code is drawn once (admin/build/qr_codes.py, segno), with a list at /q/; the first seven, checked to scan. Storyboard 15, Scan me, a six-panel strip. Briefs to the editor, the publisher and the librarian."
+  },
+  {
+   "version": "v0.2.40",
+   "date": "2026-10-19",
+   "what": "Paper that talks both ways gains a section from Dinis's follow-up memo, A better way to get feedback: reviewing has three moments (consume, capture, package and send) and feedback collapses in the third; the pen-and-photograph workflow does the packaging, so reviewers can be asked for photographs of marked pages, comments on the site paragraph by paragraph, or a voice memo on a paragraph, carried through the book's vault. Two tasks added to the article (the editor asks reviewers this way; the publisher proposes a voice memo on a paragraph in the reader, exported into the vault, within the reader's rules) and a brief to the publisher."
   }
  ]
 }

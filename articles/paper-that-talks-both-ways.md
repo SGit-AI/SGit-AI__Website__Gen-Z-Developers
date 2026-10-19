@@ -2,7 +2,7 @@
 title: Paper that talks both ways: QR codes take the reader from the page to the website, where the sources, the graphs and the visualisations live, and a pen and a photograph take the reader's notes back, which changes how I want to read every book
 date: 2026-10-19
 author: Dinis Cruz
-summary: Two things came out of reading the printed release candidate with a pen. The first is QR codes. From a provenance and explainability point of view the medium of the book is not good enough, but we have a whole website and a whole graph behind it, so whenever the page needs more room, more evidence, a source, a visualisation, a bigger storyboard, a repository or the newest version of something, a small QR code can send the reader there. The code prints a short address on the book's site, so the paper never goes out of date. It also opens a commercial angle: the website will have its own billing, pay per page, and a book could come with credits. The second is the review itself. I write on the page, I take a photograph, and the agent reads my handwriting, captures every note, and turns it into articles and drawings. I always loved reading but never scaled the capture of what I learned, the comments I wanted to send to the author, the passages I wanted to find again. Now I can: read with a pen, photograph, and let it become something. That changes my reading habits, and it should be in the book, in How to read this book and as a workflow the reader can copy.
+summary: Two things came out of reading the printed release candidate with a pen. The first is QR codes. From a provenance and explainability point of view the medium of the book is not good enough, but we have a whole website and a whole graph behind it, so whenever the page needs more room, more evidence, a source, a visualisation, a bigger storyboard, a repository or the newest version of something, a small QR code can send the reader there. The code prints a short address on the book's site, so the paper never goes out of date. It also opens a commercial angle: the website will have its own billing, pay per page, and a book could come with credits. The second is the review itself. I write on the page, I take a photograph, and the agent reads my handwriting, captures every note, and turns it into articles and drawings. I always loved reading but never scaled the capture of what I learned, the comments I wanted to send to the author, the passages I wanted to find again. Now I can: read with a pen, photograph, and let it become something. That changes my reading habits, it is a better way for any author to get feedback from reviewers, because it does the packaging and sending, which is where feedback usually dies, and it should be in the book, in How to read this book and as a workflow the reader can copy.
 version: v0.2.39
 tags: qr-codes, reading, workflow, provenance, website, paper, gen-z-book, article
 status: published
@@ -17,6 +17,7 @@ status: published
 - **And there is a business in it.** The site will charge per page; a book could come with credits.
 - **The pen works the other way.** I write on the page, photograph it, and the agent captures every note.
 - **That changes how I read.** Every book I love can now leave something behind: comments for the author, nuggets for my influences.
+- **It is how authors should get feedback.** Consume, capture, then package and send: the third moment is where it collapses, and this fixes it.
 - **It belongs in the book.** How to read this book recommends it; the hands-on part shows how.
 
 ## The page needs more room {#room}
@@ -45,6 +46,12 @@ Then I realised: I am going to use this myself. One of the problems I always had
 
 Now I can read a book, make comments, highlight, tag, take a photograph, and have that transformed into an article, or into notes, or into something. That is a ridiculously powerful workflow. It completely changes my reading habit and makes reading a lot more interesting. It means I can go back to the books I love, find those nuggets and those comments, and leave them, for example, in [my influences](https://influences.sgit.ai/).
 
+## A better way to get feedback {#feedback}
+
+It is also an amazing way for me, or any author, to receive feedback on a book, especially when we ask people to review it. Reviewing something has three moments. There is the moment you consume it, which always happens. There is the moment you capture what you think of what you just read, which can be as simple as some writing in the margin, or a voice memo. And then there is packaging it and sending it over. That third moment is where everything collapses: the notes stay in the margin, the memo stays on the phone, and the author never hears.
+
+What we just figured out solves the third moment. When I ask for feedback, I can ask people to write on the pages and send me the photographs, and the agent does the packaging. People who would rather do it digitally can comment on the website, paragraph by paragraph, and even attach a voice memo to a paragraph. It becomes a much more interactive way of communicating. And on the website we can use vaults for that: the reader already keeps a review in the browser and exports it into the book's vault, so the review reaches us encrypted, and nothing has to be sent through a server that can read it.
+
 ## In the book {#in-the-book}
 
 That is why the page called *How to read this book* should not only say read it on paper with a pen. It should recommend this workflow, the one I am using right now to review the book: read on paper, write on it, photograph the pages, and let an agent read your handwriting and capture what you thought. And the hands-on part should show how to set it up, so the reader can do it with this book and with every book after it.
@@ -65,9 +72,17 @@ For the journalist:
 
 5. **Write the reading workflow as a hands-on chapter**: read on paper, mark, photograph, let an agent capture, publish what you learned. Done when the article for it exists, from this review as the worked example.
 
+For the editor, on feedback:
+
+6. **Ask reviewers for feedback this way**: photographs of marked pages, comments on the site paragraph by paragraph, or voice memos on a paragraph; the agent packages it. Done when the next request for reviews says so.
+
+For the publisher, on the site:
+
+7. **Propose a voice memo on a paragraph in the reader**, kept in the browser and exported into the vault with the rest of a review, as the reader's rules require (it sends nothing by itself). Done when the proposal is in your `briefs/`, for Dinis to decide.
+
 For the librarian:
 
-6. **Process this article** into the register, and the QR codes as a source of links. Done when both are cited.
+8. **Process this article** into the register, and the QR codes as a source of links. Done when both are cited.
 
 ## What this does not claim {#limits}
 
