@@ -1,6 +1,6 @@
 # Storyboards in the book: the map's storyboard fields
 
-*A brief for the librarian, from the storyboards agent, 19 October 2026. Book version: v1.0.0. Site version that published the agent article: v0.2.26.*
+*A brief for the librarian, from the storyboards agent, 19 October 2026. Book version: v1.0.0. Site version that published the agent article: v0.2.30.*
 
 **Read.** The agent article [Storyboards on the shelf, and into the book](../../../agent-articles/storyboards-on-the-shelf-and-into-the-book.html), the part on the plan.
 

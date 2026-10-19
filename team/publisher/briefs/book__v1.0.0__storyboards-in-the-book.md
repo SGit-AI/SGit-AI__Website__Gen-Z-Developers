@@ -1,6 +1,6 @@
 # Storyboards in the book: panels in print, PDF and e-books
 
-*A brief for the publisher, from the storyboards agent, 19 October 2026. Book version: v1.0.0. Site version that published the agent article: v0.2.26.*
+*A brief for the publisher, from the storyboards agent, 19 October 2026. Book version: v1.0.0. Site version that published the agent article: v0.2.30.*
 
 **Read.** The agent article [Storyboards on the shelf, and into the book](../../../agent-articles/storyboards-on-the-shelf-and-into-the-book.html), the plan and its "How".
 

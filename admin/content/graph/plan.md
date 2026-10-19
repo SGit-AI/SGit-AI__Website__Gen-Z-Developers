@@ -55,7 +55,7 @@ Until the loop runs, an idea is "accepted" only when Dinis said it as his own po
 
 ## The order of work from here
 
-1. **Dinis reads the register** (101 ideas, in the order of the chapter map) and decides the candidates, or tells the editor to run the first batch of the loop on them with the four Introduction chapters.
+1. **Dinis reads the release candidate and the register** (in the order of the chapter map) and decides the candidates, or tells the editor to run the first batch of the loop on them; from rc2 on, every change goes through the review board (decision 008), and the rounds page counts each round by size.
 2. **The editor records the accepted ideas** in the vault as decisions on the text (three briefs already ask for it), and takes the proposed chapter map as the start of its own, with Dinis's changes.
 3. **The librarian keeps the bring class at zero** (the four left after the first pass were processed in the second: no server by design, how the voice works, memory is not a spectator sport, code review as a fractal semantic graph), mines the content articles as each chapter is drafted (the chapter page lists what to mine), and makes a pass over the 2018 files that have neither an article nor an idea: each becomes an idea marked "article first", or a proposal to cut.
 4. **The journalist writes the gap articles**, the fear and the job hunt in 2026 first, and each becomes ideas within a release.

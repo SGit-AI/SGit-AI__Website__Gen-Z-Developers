@@ -1,0 +1,56 @@
+/* readers/: synthetic readers. Every colour is a theme token (assets/themes.css), so the five themes all work. */
+.disclose{background:var(--c-amber-bg);border:1px solid var(--c-amber-line);color:var(--c-amber-ink);border-radius:8px;padding:.7rem 1rem;margin:1rem 0}
+.disclose a{color:inherit;text-decoration:underline}
+.verdict{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.8rem;margin:1.2rem 0}
+.verdict>div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:.8rem 1rem}
+.verdict .k{display:block;font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--dim2);font-weight:600}
+.verdict b{display:block;margin:.25rem 0;font-size:1.05rem}
+.verdict p{margin:.2rem 0 0;font-size:.88rem;color:var(--dim)}
+.dec{display:inline-block;font-weight:700;text-transform:uppercase;font-size:.78rem;letter-spacing:.03em;border-radius:4px;padding:.1rem .45rem;border:1px solid}
+.dec.buy-yes{color:var(--c-green-ink);border-color:var(--c-green-line);background:var(--c-green-bg)}
+.dec.buy-maybe{color:var(--c-orange-ink);border-color:var(--c-orange-line);background:var(--c-orange-bg)}
+.dec.buy-no{color:var(--c-red-ink);border-color:var(--c-red-line);background:var(--c-red-bg)}
+.cost{display:inline-block;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.02em;border-radius:4px;padding:.08rem .4rem;border:1px solid;white-space:nowrap}
+.cost.loses-the-commission,.cost.loses-the-sale{color:var(--c-red-ink);border-color:var(--c-red-line);background:var(--c-red-bg)}
+.cost.loses-the-reader{color:var(--c-orange-ink);border-color:var(--c-orange-line);background:var(--c-orange-bg)}
+.cost.costs-trust{color:var(--c-violet-ink);border-color:var(--c-violet-line);background:var(--c-violet-bg)}
+.cost.worth-fixing{color:var(--c-blue-ink);border-color:var(--c-blue-line);background:var(--c-blue-bg)}
+.cost.minor{color:var(--dim);border-color:var(--line2);background:var(--panel)}
+.st.holds{color:var(--c-green-ink);border-color:var(--c-green-line);background:var(--c-green-bg)}
+.st.partly{color:var(--c-orange-ink);border-color:var(--c-orange-line);background:var(--c-orange-bg)}
+.st.does-not-hold,.st.not-about-the-book{color:var(--c-red-ink);border-color:var(--c-red-line);background:var(--c-red-bg)}
+.kv dt.neg{color:var(--c-amber-ink);font-weight:600}
+table.run td{vertical-align:top}
+table.run td.n{font-weight:700;color:var(--dim)}
+table.run td.u{min-width:9rem;max-width:14rem}
+table.run p{margin:.25rem 0}
+table.run p.th{color:var(--dim);font-style:italic}
+table.run p.qn{color:var(--c-blue-ink)}
+table.run p.cf{color:var(--c-orange-ink)}
+table.run p.nx{font-size:.88rem}
+table.run tr.putdown td{border-top:3px solid var(--c-red-line);border-bottom:3px solid var(--c-red-line)}
+table.run tr.phase td{background:var(--c-violet-bg);color:var(--c-violet-ink);font-size:.85rem;font-weight:600}
+blockquote.q{font-size:.92rem;margin:.4rem 0}
+.ok{font-size:.7rem;color:var(--c-green-ink);white-space:nowrap}
+.mode{display:inline-block;font-size:.7rem;font-weight:600;text-transform:uppercase;border-radius:4px;padding:.05rem .35rem;border:1px solid var(--line2)}
+.mode.read{color:var(--c-teal-ink);background:var(--c-teal-bg);border-color:var(--c-teal-line)}
+.mode.skim{color:var(--c-orange-ink);background:var(--c-orange-bg);border-color:var(--c-orange-line)}
+.mode.skip{color:var(--dim);background:var(--panel)}
+.mode.stop{color:var(--c-red-ink);background:var(--c-red-bg);border-color:var(--c-red-line)}
+dl.iv dt{font-weight:600;margin-top:.9rem}
+dl.iv dd{margin:.2rem 0 0 0;padding-left:.8rem;border-left:3px solid var(--line)}
+ol.findings li,ol.recs li{margin:.7rem 0}
+table.grid{font-size:.82rem}
+table.grid td,table.grid th{padding:.2rem .4rem}
+table.grid td.u{min-width:12rem}
+table.grid tr.partrow td{background:var(--panel2);font-weight:600}
+.cell{text-align:center;font-weight:700;min-width:2.2rem}
+.cell.read{background:var(--c-teal-bg);color:var(--c-teal-ink)}
+.cell.skim{background:var(--c-orange-bg);color:var(--c-orange-ink)}
+.cell.skip{background:var(--panel2);color:var(--dim)}
+.cell.stop{background:var(--c-red-bg);color:var(--c-red-ink);outline:2px solid var(--c-red-line);outline-offset:-2px}
+.cell.asked{opacity:.5}
+.cell.none{background:transparent}
+.cell.key{display:inline-block;padding:.05rem .4rem;border-radius:3px;font-size:.75rem;border:1px solid var(--line)}
+.answer{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;padding:.4rem 1.1rem}
+@media (max-width:640px){table.run td.u{min-width:6rem}table.grid td.u{min-width:8rem}}

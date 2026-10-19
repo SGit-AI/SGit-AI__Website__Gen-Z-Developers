@@ -3,7 +3,7 @@
  "title": "Gen ZX Developers",
  "subtitle": "The GenAI Startup Edition, for Generation Z and Generation X, with one objective, a company by the end of the book: proposed on 19 October 2026 and adopted by Dinis as the frame of the second release candidate (decisions 014 and 015). 14 panels.",
  "status": "draft",
- "book_version": "v1.0.0 is the only official version; the second edition is in release candidates (rc1 frozen, rc2 in progress)",
+ "book_version": "v1.0.0 is the only official version; the second edition is in release candidates (rc1 and rc2 frozen)",
  "by": "gen-z.journalist, 19 October 2026, from Dinis's memo proposing Gen ZX",
  "quote_source": "admin/content/articles/16__gen-zx-developers.md",
  "rule": "Every line the Guide says, and every quote card, is from the article 'Gen ZX Developers', word for word; the build checks it. Marta, the BASIC on the board, the path and the serverless graph are the storyboard's illustrations.",

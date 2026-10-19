@@ -3,7 +3,7 @@
  "title": "Lenses, roles and loops",
  "subtitle": "How LLMs and agents work: a prompt as a lens, a role as a model with a description, an agent as a loop, tools as requests, no memory, compression, and focused threads. 13 panels.",
  "status": "draft",
- "book_version": "v1.0.0 is the only official version; the second edition is in release candidates (rc1 frozen, rc2 in progress)",
+ "book_version": "v1.0.0 is the only official version; the second edition is in release candidates (rc1 and rc2 frozen)",
  "by": "gen-z.journalist, 18 October 2026, from Dinis's memo on LLMs and agents",
  "quote_source": "admin/content/articles/14__lenses-roles-and-loops.md",
  "rule": "Every line the Guide says, and every quote card, is from the article 'Lenses, roles and loops', word for word; the build checks it. The five lenses on recursion, the weather question and the named threads are the storyboard's illustrations.",

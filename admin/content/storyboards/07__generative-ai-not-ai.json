@@ -3,7 +3,7 @@
  "title": "Generative AI, not AI",
  "subtitle": "What the book means by generative AI, how a language model works in plain words, where hallucinations come from, and where Dinis was corrected. 12 panels.",
  "status": "draft",
- "book_version": "v1.0.0 is the only official version; the second edition is in release candidates (rc1 frozen, rc2 in progress)",
+ "book_version": "v1.0.0 is the only official version; the second edition is in release candidates (rc1 and rc2 frozen)",
  "by": "gen-z.journalist, 18 October 2026, from Dinis's memo on generative AI",
  "quote_source": "admin/content/articles/11__generative-ai-not-ai.md",
  "rule": "Every line the Guide says, and every quote card, is from the article 'Generative AI, not AI', word for word; the build checks it. The next-word probabilities in panel 4 are illustrative.",

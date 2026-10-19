@@ -44,6 +44,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import markdown  # noqa: E402
 from page_versions import Versions, blocks, sha, words  # noqa: E402
 from graph_pages import build_graph
+from readers_pages import build_readers  # noqa: E402
 import graph_model  # noqa: E402
 from book_v2 import build_v2  # noqa: E402  # noqa: E402
 
@@ -87,7 +88,7 @@ PARTS = [  # directory, slug, title, the Hugo weight that ordered it
 # one row, which overflowed onto two lines on a laptop and three on a tablet. The flat list is NAV, for anything that
 # needs every section.
 NAV_GROUPS = [
-    ("The book", [("The first edition", "v1/book/index.html"), ("Second edition", "v2/book/index.html"), ("Read & review", "read/index.html"),
+    ("The book", [("The first edition", "v1/book/index.html"), ("Second edition", "v2/book/index.html"), ("Read & review", "read/index.html"), ("Synthetic readers", "readers/index.html"),
                   ("Versions", "v1/versions/index.html"), ("Contributors", "contributors/index.html")]),
     ("Storyboards", [("Storyboards", "storyboards/index.html"), ("Every panel", "storyboards/all.html"),
                      ("The model sheet", "storyboards/model-sheet.html")]),
@@ -1357,6 +1358,7 @@ The repository holds the official versions; the vault holds the working versions
 - [The book, v1.0.0]({BASE}v1/book/index.html): the 2018 first edition as published, 28 chapters in the print edition's order, then the drafts and outlines it left out; [on one page]({BASE}v1/book/single.html); [the drafts]({BASE}v1/book/drafts.html); [frozen markdown]({BASE}v1/versions/v1.0.0.md); [the print PDF, 139 pages]({BASE}v1/generation-z-print-ready.pdf)
 - [The second edition, release candidate]({BASE}v2/book/index.html): the first end-to-end draft of the second edition, written from the ideas register, not an official version; [on one page]({BASE}v2/book/single.html); [read and review]({BASE}read/v2.html); [what waits on Dinis]({BASE}v2/book/for-dinis.html); data at [book.json]({BASE}v2/book/book.json); source v2/content/, one markdown file per chapter naming its ideas and sources
 - [Read and review]({BASE}read/index.html): the reader with the graph beside it and the editor's desk (states, comments, folds, export); the book as data at [book.json]({BASE}v1/book/book.json)
+- [Synthetic readers]({BASE}readers/index.html): invented readers who read a release candidate the way they would, say where they would put it down and whether they would buy it, and are interviewed; the newsroom's synthetic-users method adapted to a book ([the protocol]({BASE}readers/protocol.html)); data under admin/content/readers/
 - [The graph]({BASE}graph/index.html): the admin area of the publishing process: [the ideas register]({BASE}graph/ideas/index.html), [the sources and their states]({BASE}graph/sources.html), [the chapter map, proposed]({BASE}graph/chapters.html), [the tasks]({BASE}graph/tasks.html), [the plan]({BASE}graph/plan.html), [the graph drawn]({BASE}graph/view.html); data at [graph.json]({BASE}graph/graph.json)
 - [The contributors]({BASE}contributors/index.html): who contributed to the first edition, from git and GitHub; data at [contributors.json]({BASE}admin/content/contributors.json)
 - [Versions]({BASE}v1/versions/index.html): the official versions and their deltas (page_versions.py from the newsroom)
@@ -1417,6 +1419,7 @@ def main():
     build_storyboards()
     build_newsroom_survey()
     build_graph({"page": page, "write": write, "esc": esc, "md": md})
+    build_readers({"page": page, "write": write, "esc": esc, "md": md})
     v2 = build_v2({"page": page, "write": write, "esc": esc, "md": md, "sha": sha, "split_blocks": lambda h: _TopLevel().split(h), "graph": graph_model.load(), "version": VERSION})
     if v2:
         build_read_v2(v2)

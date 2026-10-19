@@ -3,7 +3,7 @@
  "title": "Where do you land?",
  "subtitle": "Wardley maps, shown before they are named, and the three centres of gravity: explorer, villager, town planner. 14 panels.",
  "status": "draft",
- "book_version": "v1.0.0 is the only official version; the second edition is in release candidates (rc1 frozen, rc2 in progress)",
+ "book_version": "v1.0.0 is the only official version; the second edition is in release candidates (rc1 and rc2 frozen)",
  "by": "gen-z.journalist, 18 October 2026, from Dinis's memo on Wardley maps",
  "quote_source": "admin/content/articles/08__where-do-you-land.md",
  "rule": "Every line the Guide says, and every quote card, is Dinis's words from the article 'Where do you land?', word for word; the build checks it. The map of Zara's first job is the storyboard's illustration, not Dinis's.",

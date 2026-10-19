@@ -3,7 +3,7 @@
  "title": "The book in release mode",
  "subtitle": "A first release candidate from the first list, the rounds, the adversarial review board, and precedents. 14 panels.",
  "status": "draft",
- "book_version": "v1.0.0 is the only official version; the second edition is in release candidates (rc1 frozen, rc2 in progress)",
+ "book_version": "v1.0.0 is the only official version; the second edition is in release candidates (rc1 and rc2 frozen)",
  "by": "gen-z.journalist, 19 October 2026, from Dinis's memo on release candidates and the review board",
  "quote_source": "admin/content/articles/15__the-book-in-release-mode.md",
  "rule": "Every line the Guide says, and every quote card, is from the article 'The book in release mode', word for word; the build checks it. The readers' answers, the cutter's line and the precedent bars are the storyboard's illustrations.",

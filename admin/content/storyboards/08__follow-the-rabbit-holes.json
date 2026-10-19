@@ -3,7 +3,7 @@
  "title": "Follow the rabbit holes",
  "subtitle": "Provenance, explainability and asking for the evidence; and being the best-prepared person in the room. 10 panels.",
  "status": "draft",
- "book_version": "v1.0.0 is the only official version; the second edition is in release candidates (rc1 frozen, rc2 in progress)",
+ "book_version": "v1.0.0 is the only official version; the second edition is in release candidates (rc1 and rc2 frozen)",
  "by": "gen-z.journalist, 18 October 2026, from Dinis's memo on questioning and evidence",
  "quote_source": "admin/content/articles/12__follow-the-rabbit-holes.md",
  "rule": "Every line the Guide says, and every quote card, is from the article 'Follow the rabbit holes', word for word; the build checks it.",
