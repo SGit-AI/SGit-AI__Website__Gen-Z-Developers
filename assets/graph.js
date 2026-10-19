@@ -14,7 +14,7 @@
     { key: 'idea', label: 'Ideas', test: (n) => n.kind === 'idea' },
     { key: 'chapter', label: 'Chapters, proposed', test: (n) => n.kind === 'chapter' || n.kind === 'part' },
   ];
-  const COLOUR = { 'book-2018': '#e8b64a', newsroom: '#3b9fb0', article: '#0c2a3d', 'agent-article': '#475569', decision: '#b45309', survey: '#94a3b8', memo: '#94a3b8', idea: '#0f766e', chapter: '#7c3aed', part: '#4c1d95' };
+  const COLOUR = { 'book-2018': '#e8b64a', newsroom: '#3b9fb0', article: 'var(--solid)', 'agent-article': '#475569', decision: '#b45309', survey: '#94a3b8', memo: '#94a3b8', idea: '#0f766e', chapter: '#7c3aed', part: '#4c1d95' };
   const STATE = { candidate: '#fb923c', accepted: '#0f766e', drafting: '#2563eb', 'signed-off': '#15803d', declined: '#b91c1c', deferred: '#6b21a8' };
   let G, filter = { state: 'all', dest: 'all' }, focus = null;
   const side = document.getElementById('gv-side'), canvas = document.getElementById('gv-canvas'), filters = document.getElementById('gv-filters');
@@ -54,7 +54,7 @@
       const p = pos[n.id];
       const g = svgEl('g', { class: 'gv-node' + (n.id === focus ? ' focus' : '') });
       const fill = n.kind === 'idea' ? STATE[n.state] || '#0f766e' : COLOUR[n.source_kind || n.kind] || '#999';
-      g.appendChild(svgEl('circle', { cx: p.x, cy: p.y, r: n.kind === 'part' ? 5 : 4, fill }));
+      g.appendChild(svgEl('circle', { cx: p.x, cy: p.y, r: n.kind === 'part' ? 5 : 4, style: `fill:${fill}` })); // style, not fill=: a theme token needs var()
       const t = svgEl('text', { x: p.x + 9, y: p.y + 3.5 }); t.textContent = (n.kind === 'part' ? '▸ ' : '') + String(n.title).slice(0, ci === 2 ? 44 : 38); g.appendChild(t);
       const title = svgEl('title'); title.textContent = n.full_title || n.title; g.appendChild(title);
       g.onclick = () => { focus = focus === n.id ? null : n.id; light(); show(n); };
