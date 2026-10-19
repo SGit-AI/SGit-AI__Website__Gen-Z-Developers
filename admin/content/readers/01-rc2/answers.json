@@ -1,0 +1,4 @@
+{
+ "what": "The editor's answer to each finding of the study, keyed by finding id: fix, rc3, article-first, later, or declined (with a reason). Declined is an answer; deleting a finding is not.",
+ "answers": {}
+}
