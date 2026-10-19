@@ -11,7 +11,7 @@
    "text_sha256": "cc0b4ced52006deb8b9c71f5253dc9e4d7d21f32c91da434579a08ef242293ce"
   }
  ],
- "candidates_what": "Release candidates of the next edition, oldest first: drafts written in this repository under v2/content/ for Dinis to read and mark up (decisions 008 and 009). Not versions: not official, not published outside this site. text_sha256 is filled in once by the build from the candidate's assembled markdown, frozen at v2/versions/<version>.md; a change to the text after that is the next candidate.",
+ "candidates_what": "Release candidates of the next edition, oldest first: drafts written in this repository under v2/content/ for Dinis to read and mark up (decisions 008 and 009). Not versions: not official, not published outside this site. text_sha256 is filled in once by the build from the candidate's assembled markdown, frozen at v2/versions/<version>.md; a change to the text after that is the next candidate. A candidate names its chapter map (map) and, while it is being written, carries in_progress: the build then renders the last finished candidate and lists the one in progress as being written.",
  "candidates": [
   {
    "version": "v2.0.0-rc1",
@@ -21,7 +21,8 @@
    "text_sha256": "0d8f6e1de8e24f270e91b04654e5d6655404cce22f96395ec476d10cb67c335b",
    "frozen": "v2/versions/v2.0.0-rc1.md",
    "decided_by": "Dinis, 19 October 2026 (decisions 008 and 009)",
-   "title": "Gen Z Developers (GenAI Edition)"
+   "title": "Gen Z Developers (GenAI Edition)",
+   "map": "admin/content/graph/chapters-rc1.json"
   },
   {
    "version": "v2.0.0-rc2",
@@ -31,7 +32,9 @@
    "what": "The book rewritten under the Gen ZX frame Dinis chose (decision 014): two generations, the founder as the reader, the objective that by the end the reader has started a company, a new part Start the company at the centre, Building, safely rebuilt as Build it without a server, a new first chapter and four more hands-on chapters, the measure in the last chapter; the round-1 batch of newsroom articles processed into ideas and written in. Where the newsroom has no article yet (the UK company, Lithuania, Portugal, the EU, the first customers, the community), the chapter stands as its title, its ideas and what is missing.",
    "text_sha256": null,
    "frozen": "v2/versions/v2.0.0-rc2.md",
-   "decided_by": "Dinis, 19 October 2026 (decisions 014 and 015)"
+   "decided_by": "Dinis, 19 October 2026 (decisions 014 and 015)",
+   "map": "admin/content/graph/chapters.json",
+   "in_progress": true
   }
  ]
 }

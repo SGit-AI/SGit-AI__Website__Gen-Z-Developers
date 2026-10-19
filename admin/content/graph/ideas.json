@@ -1806,7 +1806,7 @@
    "id": "gen-ai-edition-name",
    "title": "The name: Generation ZX Developers (GenAI Startup Edition)",
    "kind": "process",
-   "statement": "The edition carries its name in the title: Generation ZX Developers (GenAI Startup Edition), for two generations, the full form of the 2018 title with the second generation in it and the edition in brackets. It replaced Gen Z Developers (GenAI Edition), which stood for one release candidate, and the short form Gen ZX Developers, which stood for a few hours. Whether Gen Alpha is a future reader stays for the title interview.",
+   "statement": "The edition carries its name in the title: Generation ZX Developers (GenAI Startup Edition), for two generations, the full form of the 2018 title with the second generation in it and the edition in brackets; one name made of two generations. It replaced Gen Z Developers (GenAI Edition), which stood for one release candidate. Whether Gen Alpha is a future reader stays for the title interview.",
    "sources": [
     {
      "ref": "art:generative-ai-not-ai",
@@ -1821,15 +1821,11 @@
      "where": "the decision: the title is Gen Z Developers (GenAI Edition)"
     },
     {
-     "ref": "dec:014",
-     "where": "the title and the tagline"
-    },
-    {
      "ref": "art:gen-zx-developers",
      "where": "the proposal: the tagline and Generation ZX"
     },
     {
-     "ref": "dec:015",
+     "ref": "dec:014",
      "where": "the title"
     }
    ],
@@ -1838,7 +1834,7 @@
    "chapter": "how-this-book-was-made",
    "destination": "this-edition",
    "state": "accepted",
-   "decided_by": "Dinis, 19 October 2026: decision 010, then 014, then 015 (Generation ZX Developers (GenAI Startup Edition))",
+   "decided_by": "Dinis, 19 October 2026: decision 010 (Gen Z Developers (GenAI Edition)), superseded the same day by decision 014 (Generation ZX Developers (GenAI Startup Edition))",
    "notes": "Decided twice in one day; the second decision supersedes the first and the record keeps both.",
    "gravity": "all"
   },
@@ -3007,7 +3003,7 @@
    "chapter": "gen-zx",
    "destination": "this-edition",
    "state": "accepted",
-   "decided_by": "Dinis, in Gen ZX Developers, adopted as the frame of rc2 (decision 014)",
+   "decided_by": "Dinis, in Gen ZX Developers, adopted as the frame of rc2 (decision 015)",
    "gravity": "all",
    "batch": "rc2"
   },
@@ -3026,7 +3022,7 @@
      "where": "'Execution just got cheap'"
     },
     {
-     "ref": "dec:015",
+     "ref": "dec:014",
      "where": "Generation ZX in the title"
     }
    ],
@@ -3037,7 +3033,7 @@
    "chapter": "gen-zx",
    "destination": "this-edition",
    "state": "accepted",
-   "decided_by": "Dinis, in Gen ZX Developers, adopted as the frame of rc2 (decision 014)",
+   "decided_by": "Dinis, in Gen ZX Developers, adopted as the frame of rc2 (decision 015)",
    "gravity": "all",
    "batch": "rc2",
    "notes": "Generation boundaries by the Pew Research Center's dates (X 1965 to 1980, millennials 1981 to 1996, Z 1997 to 2012); the book says which it uses. Whether the book says why it is not for millennials first is Dinis's question; decision 014 says it does, briefly."
@@ -3068,7 +3064,7 @@
    "chapter": "explorer-coding-and-the-handover",
    "destination": "this-edition",
    "state": "accepted",
-   "decided_by": "Dinis, in Gen ZX Developers, adopted as the frame of rc2 (decision 014)",
+   "decided_by": "Dinis, in Gen ZX Developers, adopted as the frame of rc2 (decision 015)",
    "gravity": "explorer",
    "batch": "rc2"
   },
@@ -3102,7 +3098,7 @@
    "chapter": "building-blocks",
    "destination": "this-edition",
    "state": "accepted",
-   "decided_by": "Dinis, in Gen ZX Developers, adopted as the frame of rc2 (decision 014)",
+   "decided_by": "Dinis, in Gen ZX Developers, adopted as the frame of rc2 (decision 015)",
    "gravity": "explorer",
    "batch": "rc2"
   },
@@ -3122,7 +3118,7 @@
    "chapter": "how-this-book-was-made",
    "destination": "this-edition",
    "state": "accepted",
-   "decided_by": "Dinis, in Gen ZX Developers, adopted as the frame of rc2 (decision 014)",
+   "decided_by": "Dinis, in Gen ZX Developers, adopted as the frame of rc2 (decision 015)",
    "gravity": "all",
    "batch": "rc2",
    "notes": "The first entry in the measure is the article's own last line: write to agent@riskmandate.ai if you started a company because of something you read here."
@@ -3147,7 +3143,7 @@
    "chapter": "the-company-itself",
    "destination": "this-edition",
    "state": "accepted",
-   "decided_by": "Dinis, in Gen ZX Developers, adopted as the frame of rc2 (decision 014)",
+   "decided_by": "Dinis, in Gen ZX Developers, adopted as the frame of rc2 (decision 015)",
    "gravity": "town-planner",
    "batch": "rc2",
    "notes": "Article first: the chapters stand in rc2 as their titles, their ideas and what is missing until the journalist's gap articles arrive."

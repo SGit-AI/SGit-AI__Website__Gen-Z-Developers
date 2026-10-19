@@ -112,7 +112,7 @@ def load(graph_nodes, chapters_doc, ideas_doc):
 
 
 def frozen_markdown(book, cand):
-    out = [f"# Generation ZX Developers (GenAI Startup Edition)\n\n*{cand['version']}, {cand['date']}. {cand['status']}*\n"]
+    out = [f"# {cand.get('title', 'Generation ZX Developers (GenAI Startup Edition)')}\n\n*{cand['version']}, {cand['date']}. {cand['status']}*\n"]
     if book["front"]:
         out.append(f"## {book['front']['title']}\n\n{book['front']['body']}\n")
     for p in book["parts"]:
@@ -127,18 +127,29 @@ def frozen_markdown(book, cand):
 def build_v2(ctx):
     page, write, esc, md, sha, split_blocks, graph = (ctx[k] for k in ("page", "write", "esc", "md", "sha", "split_blocks", "graph"))
     nodes = graph["nodes"]
-    chapters_doc = json.loads((ROOT / "admin/content/graph/chapters.json").read_text(encoding="utf-8"))
+    vfile = ROOT / "admin/content/book/versions.json"
+    vdoc = json.loads(vfile.read_text(encoding="utf-8"))
+    cands = vdoc.get("candidates") or []
+    if not SRC.exists():
+        return None
+    if not cands:
+        sys.exit("book_v2: v2/content exists but admin/content/book/versions.json has no candidates entry")
+    finished = [x for x in cands if not x.get("in_progress")]
+    map_file = (finished[-1] if finished else cands[-1]).get("map", "admin/content/graph/chapters.json")
+    chapters_doc = json.loads((ROOT / map_file).read_text(encoding="utf-8"))
     ideas_doc = json.loads((ROOT / "admin/content/graph/ideas.json").read_text(encoding="utf-8"))
     ideas = {i["id"]: i for i in ideas_doc["ideas"]}
     book = load(nodes, chapters_doc, ideas_doc)
     if not book:
         return None
-    vfile = ROOT / "admin/content/book/versions.json"
-    vdoc = json.loads(vfile.read_text(encoding="utf-8"))
-    cands = vdoc.get("candidates") or []
-    if not cands:
-        sys.exit("book_v2: v2/content exists but admin/content/book/versions.json has no candidates entry")
-    cand = cands[-1]
+    finished = [x for x in cands if not x.get("in_progress")]
+    if not finished:
+        sys.exit("book_v2: every candidate is in progress; nothing to render")
+    cand = finished[-1]
+    if cands[-1] is not cand:
+        print(f"build: candidate {cands[-1]['version']} is in progress; rendering {cand['version']}")
+    title = cand.get("title", "Generation ZX Developers (GenAI Startup Edition)")
+    name, _, sub = title.partition(" (")
     text = frozen_markdown(book, cand)
     got = sha(text)
     snap = ROOT / "v2/versions" / (cand["version"] + ".md")
@@ -215,7 +226,7 @@ def build_v2(ctx):
         body_html = callout_html(md(c["body"]))
         main = (f'<article class="chapter v2"><p class="small dim">{esc(p["title"])} &middot; chapter {c["number"]} of {n} &middot; {badge()} &middot; {c["words"]:,} words &middot; '
                 f'<a href="{up}read/v2.html#{esc(c["slug"])}">read and review</a></p><h1>{esc(c["title"])}</h1><div class="body">{body_html}</div>{provenance(c, up)}{nav(i)}</article>')
-        page(rel, c["title"], main, f"{c['title']}: chapter {c['number']} of Generation ZX Developers (GenAI Startup Edition), release candidate {ver}.",
+        page(rel, c["title"], main, f"{c['title']}: chapter {c['number']} of {title}, release candidate {ver}.",
              crumbs=(("The second edition", OUT + "index.html"), (p["title"], f"{OUT}index.html#{p['id']}"), (c["title"], rel)))
         manifest["chapters"].append({"file": c["file"], "page": rel, "title": c["title"], "part": p["title"], "number": c["number"], "words": c["words"],
                                      "ideas": c["ideas"], "markdown_sha256": c["sha"], "main_sha256": sha(main)})
@@ -224,7 +235,7 @@ def build_v2(ctx):
         rel = f"{OUT}{f['slug']}.html"
         main = (f'<article class="chapter v2"><p class="small dim">Front matter &middot; {badge()} &middot; {f["words"]:,} words</p><h1>{esc(f["title"])}</h1>'
                 f'<div class="body">{callout_html(md(f["body"]))}</div><div class="prevnext"><a href="index.html">&larr; The contents</a><a href="{flat[0][1]["slug"]}.html">{esc(flat[0][1]["title"])} &rarr;</a></div></article>')
-        page(rel, f["title"], main, f"{f['title']}: the front matter of Generation ZX Developers (GenAI Startup Edition), release candidate {ver}.",
+        page(rel, f["title"], main, f"{f['title']}: the front matter of {title}, release candidate {ver}.",
              crumbs=(("The second edition", OUT + "index.html"), (f["title"], rel)))
         manifest["chapters"].append({"file": f["file"], "page": rel, "title": f["title"], "part": "Front matter", "number": 0, "words": f["words"], "ideas": [],
                                      "markdown_sha256": f["sha"], "main_sha256": sha(main)})
@@ -238,7 +249,7 @@ def build_v2(ctx):
         toc.append(f'<li id="{esc(p["id"])}"><div class="part"><span class="n">{pi}</span>{esc(p["title"])} <span class="w">{len(p["chapters"])} chapters</span></div>{intro}<ol start="{p["chapters"][0]["number"]}">{items}</ol></li>')
     front_li = f'<li><a href="{book["front"]["slug"]}.html">{esc(book["front"]["title"])}</a> <span class="w">front matter</span></li>' if book["front"] else ""
     n_ideas = len({i for c in book["chapters"] for i in c["ideas"]})
-    body = f"""<h1>Generation ZX Developers (GenAI Startup Edition)</h1>
+    body = f"""<h1>{esc(title)}</h1>
 <p class="lede">Release candidate {esc(ver)}, {esc(cand["date"])}: {n} chapters in {len(book["parts"])} parts, {book["words"]:,} words, written from {n_ideas} of the {len(ideas)} ideas in the register, with {len(all_callouts)} places where only Dinis can fill in what is missing. {esc(cand.get("what", ""))}</p>
 {notice}
 <p class="stats"><span class="stat"><b>{n}</b><span>chapters</span></span><span class="stat"><b>{book["words"]:,}</b><span>words</span></span><span class="stat"><b>{n_ideas}</b><span>ideas written in</span></span><span class="stat"><b>{len(all_callouts)}</b><span>for Dinis</span></span></p>
@@ -249,7 +260,7 @@ def build_v2(ctx):
 <p class="small dim">Source: <code>v2/content/</code>, one markdown file per chapter with the ideas, sources and 2018 files it was written from in its front matter; <code>admin/build/book_v2.py</code> renders these pages and refuses a chapter that cites an idea, source, part or file that does not exist. Manifest: <a href="manifest.json">manifest.json</a>.</p>
 """
     page(OUT + "index.html", f"The second edition, release candidate {ver}", body,
-         f"Generation ZX Developers (GenAI Startup Edition), release candidate {ver}: {n} chapters written from the ideas register, for Dinis to read and mark up.",
+         f"{title}, release candidate {ver}: {n} chapters written from the ideas register, for Dinis to read and mark up.",
          crumbs=(("The second edition", OUT + "index.html"),))
     # what waits on Dinis
     rows = "".join(f'<li><a href="{esc(c["slug"])}.html">{esc(c["title"])}</a>: {esc(x)}</li>' for c, x in all_callouts)
@@ -277,14 +288,14 @@ def build_v2(ctx):
     front_html = f'<section class="pr-chapter front" id="{esc(book["front"]["slug"])}"><h2>{esc(book["front"]["title"])}</h2><div class="body">{callout_html(md(book["front"]["body"]))}</div></section>' if book["front"] else ""
     back = "".join(f'<li><b>{esc(c["title"])}:</b> {esc(x)}</li>' for c, x in all_callouts)
     single = f"""<article class="printbook">
-<section class="pr-title"><p class="pr-k">Second edition &middot; release candidate {esc(ver)} &middot; {esc(cand["date"])}</p><h1>Generation ZX Developers</h1><p class="pr-sub">GenAI Startup Edition</p><p class="pr-by">Dinis Cruz</p>
-<p class="pr-note">{esc(cand["status"])} The first edition (2018) is the only official version. This candidate was written by the book's agents from the ideas register and is for reading and marking up. Its text is frozen as v2/versions/{esc(ver)}.md; the title is Dinis's decision of 19 October 2026 (decision 015). Text: CC BY 4.0.</p></section>
+<section class="pr-title"><p class="pr-k">Second edition &middot; release candidate {esc(ver)} &middot; {esc(cand["date"])}</p><h1>{esc(name)}</h1><p class="pr-sub">{esc(sub.rstrip(")"))}</p><p class="pr-by">Dinis Cruz</p>
+<p class="pr-note">{esc(cand["status"])} The first edition (2018) is the only official version. This candidate was written by the book's agents from the ideas register and is for reading and marking up. Its text is frozen as v2/versions/{esc(ver)}.md; the title is Dinis's decision of 19 October 2026 (decision 014). Text: CC BY 4.0.</p></section>
 <section class="pr-toc"><h1>Contents</h1><ol>{toc_print}</ol></section>
 {front_html}
 {"".join(parts_html)}
 <section class="pr-part back" id="for-dinis"><p class="pr-partn">Back matter</p><h1>What only Dinis can fill in</h1><p>The {len(all_callouts)} notes left in the chapters, collected.</p><ul>{back}</ul></section>
 </article>"""
-    page(OUT + "single.html", f"Generation ZX Developers (GenAI Startup Edition), {ver}, on one page", single,
+    page(OUT + "single.html", f"{title}, {ver}, on one page", single,
          f"The whole release candidate {ver} of the second edition on one page, for reading and printing.",
          crumbs=(("The second edition", OUT + "index.html"), ("On one page", OUT + "single.html")),
          extra_head='<link rel="stylesheet" href="../../assets/print-book.css">\n')
@@ -299,8 +310,8 @@ def build_v2(ctx):
                          "gap": "", "terms": [], "related": [],
                          "blocks": [{"id": f"{c['slug']}-{k + 1}", "html": b, "words": len(re.findall(r"\w+", re.sub(r"<[^>]+>", " ", b)))} for k, b in enumerate(blocks_)]})
     fb = split_blocks(callout_html(md(book["front"]["body"]))) if book["front"] else []
-    doc = {"what": f"Generation ZX Developers (GenAI Startup Edition), release candidate {ver}, as data for the reader at read/v2.html. Generated by book_v2.py from v2/content/.",
-           "version": ver, "candidate": f"release candidate {ver}", "site": ctx["version"], "title": "Generation ZX Developers (GenAI Startup Edition)", "subtitle": "Release candidate " + ver,
+    doc = {"what": f"{title}, release candidate {ver}, as data for the reader at read/v2.html. Generated by book_v2.py from v2/content/.",
+           "version": ver, "candidate": f"release candidate {ver}", "site": ctx["version"], "title": title, "subtitle": "Release candidate " + ver,
            "print_pdf": ("../" + pdf_rel) if pdf_exists else None, "cover": None,
            "parts": [{"slug": p["id"], "title": p["title"], "print_page": None, "intro_html": md(p["intro"]) if p["intro"] else ""} for p in book["parts"]],
            "front": {"slug": book["front"]["slug"] if book["front"] else "about", "title": book["front"]["title"] if book["front"] else "About", "print_page": None,
@@ -311,7 +322,7 @@ def build_v2(ctx):
                      "rule": "A penny per 250 words, charged for the share of the chapter read (never less than 10% once opened); credit starts at £5 and can go below zero; nothing leaves the browser."}}
     write(f"{OUT}book.json", json.dumps(doc, ensure_ascii=False) + "\n")
     build_rounds(ctx, book, cands, cand, text, ideas, notice)
-    return {"version": ver, "candidate": cand, "chapters": n, "parts": len(book["parts"]), "words": book["words"], "ideas": n_ideas, "callouts": len(all_callouts),
+    return {"version": ver, "title": title, "candidate": cand, "in_progress": cands[-1]["version"] if cands[-1] is not cand else None, "chapters": n, "parts": len(book["parts"]), "words": book["words"], "ideas": n_ideas, "callouts": len(all_callouts),
             "pdf": pdf_rel if pdf_exists else None, "book": book}
 
 
@@ -339,7 +350,8 @@ def build_rounds(ctx, book, cands, cand, text, ideas, notice):
     page, write, esc, md = (ctx[k] for k in ("page", "write", "esc", "md"))
     sys.path.insert(0, str(ROOT / "admin/build"))
     from page_versions import diff as pv_diff  # noqa: E402
-    prev = cands[-2] if len(cands) > 1 else None
+    finished = [x for x in cands if not x.get("in_progress")]
+    prev = finished[-2] if len(finished) > 1 else None
     rc_map_prev = ROOT / "admin/content/graph/chapters-rc1.json"
     rows = []
     sizes = None
@@ -388,7 +400,14 @@ def build_rounds(ctx, book, cands, cand, text, ideas, notice):
 <ul class="prov">{"".join(f'<li><a href="../../graph/ideas/{esc(i["id"])}.html">{esc(i["title"])}</a> <span class="dim small">{esc(i["kind"])} &middot; {esc(i.get("chapter") or "no chapter")}</span></li>' for i in batch)}</ul>
 <h3>Chapter by chapter</h3>
 <div class="tablewrap"><table><thead><tr><th>Chapter</th><th>What happened</th><th>Words in {esc(prev["version"])}</th><th>Words in {esc(cand["version"])}</th></tr></thead><tbody>{"".join(ch_rows)}</tbody></table></div>""")
-    cand_rows = "".join(f'<tr><td><b>{esc(c["version"])}</b></td><td>{esc(c["date"])}</td><td>{esc(c.get("title", ""))}</td><td>{len(_chapters_of_frozen((ROOT / c["frozen"]).read_text(encoding="utf-8"))) if (ROOT / c["frozen"]).exists() else len(book["chapters"])}</td><td>{(sum(w for _, _, w in _chapters_of_frozen((ROOT / c["frozen"]).read_text(encoding="utf-8"))) if (ROOT / c["frozen"]).exists() else book["words"]):,}</td><td>{("<a href=\"../../" + esc(c["frozen"]) + "\">frozen</a>") if (ROOT / c["frozen"]).exists() else "being written"}</td></tr>' for c in cands)
+    def cand_row(c):
+        fz = ROOT / c["frozen"]
+        if c.get("in_progress") and not fz.exists():
+            return f'<tr><td><b>{esc(c["version"])}</b></td><td>{esc(c["date"])}</td><td>{esc(c.get("title", ""))}</td><td colspan="3"><span class="st in-progress">being written</span> {esc(c.get("what", ""))}</td></tr>'
+        chs = _chapters_of_frozen(fz.read_text(encoding="utf-8")) if fz.exists() else [(0, c["title"], c["words"]) for c in book["chapters"]]
+        return (f'<tr><td><b>{esc(c["version"])}</b></td><td>{esc(c["date"])}</td><td>{esc(c.get("title", ""))}</td><td>{len(chs)}</td><td>{sum(w for _, _, w in chs):,}</td>'
+                f'<td>{("<a href=\"../../" + esc(c["frozen"]) + "\">frozen</a>") if fz.exists() else "this build"}</td></tr>')
+    cand_rows = "".join(cand_row(c) for c in cands)
     body = f"""<h1>The rounds</h1>
 <p class="lede">The book in release mode (decision 008): a release candidate, then a round that takes one pile of material and ends in the next candidate, until the rounds shrink from parts to sentences. This page is the librarian's count of each round by size, the ideas that came in, and the diff Dinis reads.</p>
 {notice}
