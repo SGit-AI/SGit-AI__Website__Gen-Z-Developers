@@ -1,0 +1,57 @@
+{
+ "what": "The cover system for Generation ZX Developers (GenAI Startup Edition): the book's words, the formats Amazon and Leanpub take, the shared rules, and three designs. Drawn by admin/build/covers.py into covers/<design>/ as SVG (the master, live text with its fonts embedded), the Kindle and Leanpub images and the paperback's print-ready PDF. Proposals, made at Dinis's request of 19 October 2026; decision 004 (the cover waits) holds until he picks one.",
+ "book": {
+  "title": "Generation ZX Developers",
+  "edition": "GenAI Startup Edition",
+  "cover_line": "For Generation Z and Generation X: start a GenAI company by the end of the book",
+  "author": "Dinis Cruz",
+  "site": "gen-z-developers.sgit.ai",
+  "licence": "CC BY 4.0",
+  "year": "2026",
+  "title_source": "decision 014",
+  "cover_line_source": "admin/content/articles/17__version-2-on-leanpub.md (the subtitle, proposed for Leanpub)",
+  "back_source": "admin/content/articles/17__version-2-on-leanpub.md",
+  "back": [
+   "In 2018 I wrote Generation Z Developers for one reader: the generation entering the job market. Eight years later that generation is not only looking for jobs. They are starting companies. And so is mine.",
+   "This is version 2, and it is written for two generations. Generation Z, entering the workforce and becoming the new entrepreneurs. And Generation X: the subject-matter experts, twenty years inside a problem, who can now build the first version of the answer themselves, with agents, instead of explaining it to a team they could never afford. Often they are in the same family. Put the two letters together and you get Generation ZX, which takes me back to where I started: the ZX Spectrum.",
+   "The book has one objective: that by the end of it, you have started a company."
+  ],
+  "back_close": "I measure this book by how many companies are created from it. If you start one, tell me.",
+  "cover_lines_2018": ["Question everything", "Make fact based decisions", "Understand the history of tech", "Learn how to learn",
+                       "Understand what game is being played", "Develop intellectual curiosity", "Look under the hood", "Shake things up"]
+ },
+ "formats": {
+  "paperback": {"what": "KDP paperback, full wrap (back, spine, front) as one PDF", "trim_in": [6, 9], "bleed_in": 0.125,
+                "paper": "white", "spine_in_per_page": {"white": 0.002252, "cream": 0.0025},
+                "pages": 220, "pages_note": "Assumed. The spine is computed from the final interior's page count; set it here and rerun. Decision 012 says 200 pages or more; KDP allows spine text from 80 pages.",
+                "barcode_in": [2.0, 1.2], "spine_text_min_pages": 80, "spine_margin_in": 0.0625},
+  "kindle": {"what": "Kindle eBook cover, JPEG, RGB", "px": [1600, 2560]},
+  "leanpub": {"what": "Leanpub cover for a 6 by 9 inch book, as its help centre says", "px": [1800, 2700]},
+  "check": "KDP's cover calculator and template for the final page count and paper, before upload: the spine width and barcode position here follow KDP's published rules as of October 2026 and are to be confirmed there."
+ },
+ "system": {
+  "safe_in": 0.375,
+  "mark": "four squares in the 2018 cover's colours, green, yellow, teal and red: the same mark the site's infographics carry",
+  "palette": {"navy": "#0d2235", "ink": "#121417", "paper": "#f3eee3", "ivory": "#f4efe4", "green": "#7bc08f", "yellow": "#e8b64a", "teal": "#3b9fb0", "blue": "#14779c", "red": "#e5625b", "sky": "#55c4f2"},
+  "hierarchy": ["the title, Generation ZX (the two letters are the hook)", "Developers", "the edition, GenAI Startup Edition", "the cover line", "the author"],
+  "rules": [
+   "The title reads at a thumbnail: Amazon shows a cover at about 160 pixels tall, so the two letters ZX must survive that.",
+   "Every word on the cover is the book's: the title from decision 014, the cover line from article 17, the back from article 17, checked word for word by the build.",
+   "Nothing important within 0.375 inches of the trim; the bleed is background only.",
+   "The barcode area on the back is kept clear; Amazon prints the barcode there.",
+   "Black and white must still work for the spine and the interior title page: shape and type carry it, not colour alone.",
+   "The guides (trim, bleed, safe area, spine, barcode) are a layer of their own, drawn on the review copies and never on the files that go to Amazon."
+  ]
+ },
+ "designs": [
+  {"id": "one-letter-more", "name": "One letter more", "font": {"display": "Archivo Black", "condensed": "Big Shoulders Display", "stencil": "Big Shoulders Stencil Display"},
+   "idea": "The 2018 cover, kept, with one letter added. Its blocks spelled GEN, a space, Z; now the space stays and an X joins after the Z, in ivory, the new letter. The eight 2018 lines stay: the home page says the second edition keeps all eight. For the reader of the first edition, it is the same book, grown.",
+   "risk": "The cover spells GEN ZX, as 2018 spelled GEN Z; KDP checks that the cover's title matches the book's metadata, so the full title is on the cover too, smaller, and a stricter reading may want it larger."},
+  {"id": "zx", "name": "ZX", "font": {"display": "Space Grotesk", "mono": "Space Mono"},
+   "idea": "Generation ZX goes back to where Dinis started: the ZX Spectrum. A near-black ground, the two letters huge, a prompt with a cursor for the edition, and a band of four stripes in the 2018 cover's colours in the Spectrum's order, red, yellow, green and teal, rising across the corner. A homage, not a copy: no Sinclair name, logo or keyboard.",
+   "risk": "The four-stripe band is associated with Sinclair's machines; worth a trade-mark look before print, and an easy change of angle or colour if it is a problem."},
+  {"id": "the-book-as-a-graph", "name": "The book as a graph", "font": {"display": "Fraunces", "text": "IBM Plex Sans"},
+   "idea": "The book is built as a graph, and this cover is that graph: every chapter of the candidate as a node, coloured by its part and sized by its length, every idea it was written from as a point joined to it, and the path from the first chapter to the company drawn through it. Drawn from the book's own data on every run, so the cover of the next candidate is that candidate's graph.",
+   "risk": "The quietest of the three at thumbnail size; it relies on the title, and the graph reads as texture until the book is in the hand."}
+ ]
+}

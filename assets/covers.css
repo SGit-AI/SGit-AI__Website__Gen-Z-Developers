@@ -1,0 +1,17 @@
+/* covers/: the cover proposals. Colours are theme tokens; the covers themselves keep their own, as printed things do. */
+.cv-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1.2rem 0;max-width:980px}
+.cv-three a{display:block;text-decoration:none;color:var(--fg);font-weight:600;font-size:.9rem;text-align:center}
+.cv-three img{display:block;width:100%;height:auto;border-radius:4px;box-shadow:var(--shadow-pop);margin-bottom:.5rem}
+.cv-design{border-top:1px solid var(--line);padding-top:1rem;margin-top:2rem}
+.cv-row{display:flex;flex-wrap:wrap;gap:1.5rem;align-items:flex-start}
+.cv-front{flex:0 1 340px}
+.cv-front img{display:block;width:100%;height:auto;border-radius:4px;box-shadow:var(--shadow-pop)}
+.cv-text{flex:999 1 360px;min-width:0}
+.cv-risk{color:var(--c-amber-ink)}
+.cv-kindle{display:inline-flex;gap:.6rem;align-items:flex-end;text-decoration:none;margin-top:.4rem}
+.cv-kindle img{width:96px;height:auto;border-radius:3px;box-shadow:var(--shadow)}
+.cv-wrap{margin:1.2rem 0 0}
+.cv-wrap img{display:block;width:100%;height:auto;border-radius:4px;border:1px solid var(--line)}
+.cv-back{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.4rem .9rem}
+.cv-sw{display:inline-block;width:.9rem;height:.9rem;border-radius:3px;vertical-align:middle;margin-right:.2rem;border:1px solid var(--line2)}
+@media (max-width:640px){.cv-three{grid-template-columns:repeat(3,minmax(0,1fr));gap:.4rem}.cv-three a{font-size:.72rem}}

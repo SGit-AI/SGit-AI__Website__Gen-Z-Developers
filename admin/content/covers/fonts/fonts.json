@@ -1,0 +1,75 @@
+{
+ "what": "The covers' fonts: Google Fonts, SIL Open Font License 1.1, latin subset; fetched by admin/build/cover_fonts.py.",
+ "fonts": [
+  {
+   "family": "Archivo Black",
+   "style": "normal",
+   "weight": "400",
+   "file": "archivo-black/archivo-black-normal-400.woff2",
+   "source": "https://fonts.gstatic.com/s/archivoblack/v23/HTxqL289NzCGg4MzN6KJ7eW6CYyF_g.woff2"
+  },
+  {
+   "family": "Big Shoulders Display",
+   "style": "normal",
+   "weight": "500 900",
+   "file": "big-shoulders-display/big-shoulders-display-normal-500-900.woff2",
+   "source": "https://fonts.gstatic.com/s/bigshouldersdisplay/v24/fC1_PZJEZG-e9gHhdI4-NBbfd2ys3SjJCx1czNDu.woff2"
+  },
+  {
+   "family": "Big Shoulders Stencil Display",
+   "style": "normal",
+   "weight": "700 900",
+   "file": "big-shoulders-stencil-display/big-shoulders-stencil-display-normal-700-900.woff2",
+   "source": "https://fonts.gstatic.com/s/bigshouldersstencildisplay/v30/6aeq4LS6U6pR_bp5b_t2ugOhHWFcxSGP9ttD96KCb8xPyviX0nI.woff2"
+  },
+  {
+   "family": "Space Grotesk",
+   "style": "normal",
+   "weight": "400 700",
+   "file": "space-grotesk/space-grotesk-normal-400-700.woff2",
+   "source": "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2"
+  },
+  {
+   "family": "Space Mono",
+   "style": "normal",
+   "weight": "400",
+   "file": "space-mono/space-mono-normal-400.woff2",
+   "source": "https://fonts.gstatic.com/s/spacemono/v17/i7dPIFZifjKcF5UAWdDRYEF8RQ.woff2"
+  },
+  {
+   "family": "Space Mono",
+   "style": "normal",
+   "weight": "700",
+   "file": "space-mono/space-mono-normal-700.woff2",
+   "source": "https://fonts.gstatic.com/s/spacemono/v17/i7dMIFZifjKcF5UAWdDRaPpZUFWaHg.woff2"
+  },
+  {
+   "family": "Fraunces",
+   "style": "italic",
+   "weight": "300 900",
+   "file": "fraunces/fraunces-italic-300-900.woff2",
+   "source": "https://fonts.gstatic.com/s/fraunces/v38/6NU58FyLNQOQZAnv9ZwNjucMHVn85Ni7emAe9lKqZTnbB-gzTK0K1ChjeveQ.woff2"
+  },
+  {
+   "family": "Fraunces",
+   "style": "normal",
+   "weight": "300 900",
+   "file": "fraunces/fraunces-normal-300-900.woff2",
+   "source": "https://fonts.gstatic.com/s/fraunces/v38/6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxC9TeA.woff2"
+  },
+  {
+   "family": "IBM Plex Sans",
+   "style": "italic",
+   "weight": "400",
+   "file": "ibm-plex-sans/ibm-plex-sans-italic-400.woff2",
+   "source": "https://fonts.gstatic.com/s/ibmplexsans/v23/zYXEKVElMYYaJe8bpLHnCwDKhdTEG46kmUZQCX598fQbM4jw8V78x9OWIhqbQ5g6voI.woff2"
+  },
+  {
+   "family": "IBM Plex Sans",
+   "style": "normal",
+   "weight": "400 600",
+   "file": "ibm-plex-sans/ibm-plex-sans-normal-400.woff2",
+   "source": "https://fonts.gstatic.com/s/ibmplexsans/v23/zYXzKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1syxeKYY.woff2"
+  }
+ ]
+}

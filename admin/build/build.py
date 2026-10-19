@@ -48,6 +48,7 @@ from readers_pages import build_readers  # noqa: E402
 import graph_model  # noqa: E402
 from book_v2 import build_v2  # noqa: E402  # noqa: E402
 from infographics import build_infographics  # noqa: E402
+from covers_pages import build_covers  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 VERSION = (ROOT / "admin/build/version.txt").read_text().strip()
@@ -89,7 +90,7 @@ PARTS = [  # directory, slug, title, the Hugo weight that ordered it
 # one row, which overflowed onto two lines on a laptop and three on a tablet. The flat list is NAV, for anything that
 # needs every section.
 NAV_GROUPS = [
-    ("The book", [("The first edition", "v1/book/index.html"), ("Second edition", "v2/book/index.html"), ("Read & review", "read/index.html"), ("Synthetic readers", "readers/index.html"),
+    ("The book", [("The first edition", "v1/book/index.html"), ("Second edition", "v2/book/index.html"), ("Read & review", "read/index.html"), ("Synthetic readers", "readers/index.html"), ("Covers", "covers/index.html"),
                   ("Versions", "v1/versions/index.html"), ("Contributors", "contributors/index.html")]),
     ("Storyboards", [("Storyboards", "storyboards/index.html"), ("Every panel", "storyboards/all.html"),
                      ("The model sheet", "storyboards/model-sheet.html")]),
@@ -1365,6 +1366,7 @@ The repository holds the official versions; the vault holds the working versions
 - [Synthetic readers]({BASE}readers/index.html): invented readers who read a release candidate the way they would, say where they would put it down and whether they would buy it, and are interviewed; the newsroom's synthetic-users method adapted to a book ([the protocol]({BASE}readers/protocol.html)); data under admin/content/readers/
 - [The graph]({BASE}graph/index.html): the admin area of the publishing process: [the ideas register]({BASE}graph/ideas/index.html), [the sources and their states]({BASE}graph/sources.html), [the chapter map, proposed]({BASE}graph/chapters.html), [the tasks]({BASE}graph/tasks.html), [the plan]({BASE}graph/plan.html), [the graph drawn]({BASE}graph/view.html); data at [graph.json]({BASE}graph/graph.json)
 - [Infographics]({BASE}infographics/index.html): the book at every altitude as pictures: [the plan, with a review]({BASE}infographics/plan.html) (data at [plan.json]({BASE}infographics/plan.json)), [what exists]({BASE}infographics/existing.html) (the 2018 images and the newsroom's figures), [how they are made]({BASE}infographics/how.html); drawn by code from admin/content/infographics/drawn/*.json into infographics/svg/*.svg
+- [Covers]({BASE}covers/index.html): three cover designs for the second edition, proposals (decision 004), each as SVG (the master, fonts embedded), Kindle and Leanpub JPG and a KDP paperback PDF; drawn by admin/build/covers.py from admin/content/covers/covers.json
 - [The contributors]({BASE}contributors/index.html): who contributed to the first edition, from git and GitHub; data at [contributors.json]({BASE}admin/content/contributors.json)
 - [Versions]({BASE}v1/versions/index.html): the official versions and their deltas (page_versions.py from the newsroom)
 - [The map]({BASE}map/index.html): one row per 2018 file, the newsroom articles that answer it, the gap; data at [map.json]({BASE}admin/content/map.json)
@@ -1429,6 +1431,7 @@ def main():
     if v2:
         build_read_v2(v2)
     build_infographics({"page": page, "write": write, "esc": esc, "md": md, "graph": graph_model.load(), "version": VERSION})
+    build_covers({"page": page, "esc": esc, "first_edition_lines": FIRST_EDITION["cover_lines"]})
     build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib, articles, v2)
     print(f"build: {VERSION}, {len(flat)} chapters, {len([w for w in written if w.endswith('.html')])} pages, {len(written)} files written")
 
