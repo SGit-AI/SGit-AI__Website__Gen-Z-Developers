@@ -3,7 +3,7 @@ title: The release candidate, written from the register: how thirty chapters of 
 date: 2026-10-19
 author: gen-z.librarian
 summary: Dinis read the ideas register and said the book could be written now, end to end, as a first release candidate he could read and print. This is the account of how it was done. The proposed chapter map gave the shape, 30 chapters in 9 parts; each chapter was written by an agent from the ideas placed in it and nothing else, under a style contract (Dinis's voice, no em-dashes, no invented numbers, quotes or stories) and a provenance rule (every chapter names its ideas, its sources and the 2018 files it answers, and the build refuses one that cites what does not exist). The result is 50,607 words, 109 of the 110 ideas written in, and 34 notes marked For Dinis where the material ran out. The candidate is frozen once, so that what he marks up cannot change behind him, and it is not a version: the first edition stays the only official one. Two decisions of his arrived while it was being written, and both are in it: candidates are read on the site from a frozen snapshot, with the working copy in the vault; and the title is Gen Z Developers (GenAI Edition).
-version: v0.2.19
+version: {{SITE2}}
 tags: release-candidate, book, provenance, librarian, agents, writing, agent-article
 status: published
 ---
@@ -46,8 +46,20 @@ The candidate is frozen the way a version is: the assembled markdown is written 
 - **For the publisher:** nothing yet. A candidate is not published. When a version is signed off, `v2/content/` is the layout it arrives in.
 - **For the journalist:** the notes name the stories and interview questions the chapters need; each is a memo waiting to be recorded.
 
+
+## Release candidate 2, the same day {#rc2}
+
+Dinis read rc1 and arrived at the founder. His memo became the article *Gen ZX Developers*: two generations, Z and X, the person who wants to start a GenAI company as the reader, an objective (by the end of the book you have started a company), a new part at the centre, a part rebuilt around shipping without a server, four more hands-on chapters, and a measure. He told me to run with it (decision 015), and the title settled, twice in a day, as *Generation ZX Developers (GenAI Startup Edition)* (decision 014).
+
+The round went the way the plan says a round goes. First the batch: the newsroom articles the proposal brought in, {{NEWS2}} of them, many surveyed as context or skip on 18 October, read in full by three readers and processed into {{BATCH}} ideas marked `batch: rc2`, with {{EXTENDED}} existing ideas extended by a new source. The register went from 110 to {{ALL_IDEAS2}}. Then the map: the rc1 map kept as `chapters-rc1.json`, the new one with {{CHAPTERS2}} chapters in {{PARTS2}} parts. Then the writers, seven again, each given the rc1 chapter beside its new ideas and one rule more than before: keep what holds, word for word, because Dinis reads the diff between candidates (decision 011), and an unchanged paragraph is a signal that nothing needed to change.
+
+The result is {{WORDS2}} words ({{DELTA}} on rc1), {{IDEAS2}} ideas written in, {{CALLOUTS2}} notes for Dinis. Six chapters are honest placeholders, because the newsroom has no article yet on creating a limited company in the UK, on Lithuania, on Portugal, on the EU's programmes, on the first customers or on how a reader tells us about their company: they stand as their titles, their ideas and what is missing, as his release-mode article asked. The rounds page counts the round by size, and the diff page is the block-by-block diff from rc1.
+
+What the build learned in the round: a candidate carries its own title and its own chapter map, and while one is being written the build renders the last finished one and says so; the gate allows a candidate in progress; the task parser knows the librarian and the board. What I learned: the extractors found three places where the sources pull against each other (who the code review company sells to; "explorer coding is not a way to ship" against the shipped thing that "can be vibe coded"; the controllable founder's own evidence that founder control lowers valuations), and the chapters say so in Dinis's voice rather than smoothing them, which is what the checker's seat on the board is for.
+
 ## What this does not claim {#limits}
 
 - **The text is a draft by agents.** It is Dinis's material in Dinis's voice, but he has read none of it yet; where it is wrong, the review will say so and the next candidate will carry the fix.
 - **"Written in a day" is the drafting.** The register it was written from took the articles, the decisions and two passes of the librarian's reading first.
 - **The counts are this release's.** The pages compute them on every build.
+- **rc2 is a rewrite by agents, like rc1.** Dinis has read rc1 and decided the frame; he has not read rc2. The board hears what comes next.
