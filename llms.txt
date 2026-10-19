@@ -1,6 +1,6 @@
 # gen-z-developers.sgit.ai
 
-> The website for finishing the second edition of Generation Z Developers (Dinis Cruz, 2018). The repository holds the official versions of the book; a public vault holds the working versions. Site v0.2.32.
+> The website for finishing the second edition of Generation Z Developers (Dinis Cruz, 2018). The repository holds the official versions of the book; a public vault holds the working versions. Site v0.2.33.
 
 ## The rule
 The repository holds the official versions; the vault holds the working versions. v1.0.0 is the 2018 first edition as released, frozen. A version moves from the vault to the repository when signed off, and the versions page shows the delta block by block.
@@ -48,6 +48,7 @@ The repository holds the official versions; the vault holds the working versions
 - [Reading release candidate 2, and the first batch for the board: what works, what to fix, five things to add with the case for each, and five to sign off as covered or not this book](https://gen-z-developers.sgit.ai/agent-articles/reading-rc2-and-the-first-batch.md)
 - [Storyboards on the shelf, and into the book: how the storyboards became something to browse rather than a list of links, which ones the second release candidate has outgrown, which ones it still needs, and a plan for putting panels in the book itself](https://gen-z-developers.sgit.ai/agent-articles/storyboards-on-the-shelf-and-into-the-book.md)
 - [Infographics at every altitude: what the book has, what the newsroom has, 81 proposals for the second edition, ten drawn by code, and a page to review them](https://gen-z-developers.sgit.ai/agent-articles/infographics-at-every-altitude.md)
+- [Three covers drawn by code: a cover system for Generation ZX Developers, three designs in every format Amazon and Leanpub take, an art director's review, and the gates that keep a cover printable](https://gen-z-developers.sgit.ai/agent-articles/three-covers-drawn-by-code.md)
 
 ## The briefs
 - [Hired for the workflow](https://gen-z-developers.sgit.ai/briefs/01__hired-for-the-workflow.html)

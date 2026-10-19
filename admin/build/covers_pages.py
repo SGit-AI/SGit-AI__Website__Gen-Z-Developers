@@ -23,7 +23,7 @@ def check(doc, first_edition_lines):
     if f'{b["title"]} ({b["edition"]})' not in d014:
         E.append(f"covers.json: the title and edition are not decision 014's: {b['title']} ({b['edition']})")
     a17 = (ROOT / "admin/content/articles/17__version-2-on-leanpub.md").read_text(encoding="utf-8")
-    for s in [b["cover_line"], b["back_close"]] + b["back"]:
+    for s in [b["cover_line"], b["back_close"]] + b["back"] + b["back_footer"]:
         if not quote_in(s, a17):
             E.append(f"covers.json: not word for word in article 17: {s[:70]}")
     if [l.lower() for l in b["cover_lines_2018"]] != [l.lower() for l in first_edition_lines]:
@@ -76,6 +76,10 @@ def build_covers(ctx):
 <p class="lede">Three cover designs for <i>{esc(b['title'])} ({esc(b['edition'])})</i>, ready for Amazon and Leanpub, each drawn from data by code into SVG, so any of them can be resized, recoloured or reworded and drawn again. Proposals: the cover waits on Dinis (<a href="../decisions/index.html#the-cover-waits">decision 004</a>), and these are the options he asked for on 19 October 2026.</p>
 <p class="stats"><span class="stat"><b>3</b><span>designs</span></span><span class="stat"><b>3</b><span>formats each</span></span><span class="stat"><b>{spine:.3f} in</b><span>spine, {pb['pages']} pages</span></span><span class="stat"><b>{wrap_w:.3f} &times; {wrap_h:.3f}</b><span>inches, the wrap</span></span></p>
 <figure class="cv-three">{''.join(f'<a href="#{d["id"]}"><img src="{d["id"]}/preview.png" alt="{esc(d["name"])}" width="600" height="900"><span>{esc(d["name"])}</span></a>' for d in doc['designs'])}</figure>
+<h2 id="review">The review</h2>
+<p>{esc(doc['review']['verdict'])}</p>
+<p class="small dim">Reviewed by {esc(doc['review']['by'])}. Applied before release:</p>
+<ul class="small">{''.join(f"<li>{esc(a)}</li>" for a in doc['review']['applied'])}</ul>
 {cards}
 <h2 id="system">The system</h2>
 <p>What every design shares, so that the choice between them is a choice of look, not of what the cover says or whether it prints.</p>

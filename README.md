@@ -60,6 +60,8 @@ v2/content/           the second edition as a release candidate (decision 008): 
 map/                  generated: one row per 2018 file, the newsroom articles that answer it, the gap
 briefs/               generated: the articles and notes above, rendered
 storyboards/          generated: the cast sheet and a swipe deck per storyboard, drawn in the browser from admin/content/storyboards/*.json
+covers/               generated: three cover designs (SVG masters with fonts embedded, Kindle and Leanpub JPEGs, the KDP paperback PDF),
+                      drawn by admin/build/covers.py from admin/content/covers/covers.json; the page by covers_pages.py
 infographics/         generated: the book's infographics at every altitude: the plan with a review in the browser (plan.html), what exists
                       (the 2018 images and the newsroom's figures), how they are made, a page per drawing, and svg/<id>.svg drawn by
                       admin/build/infographic_svg.py from admin/content/infographics/ (plan.json, drawn/*.json, v1-figures.json,

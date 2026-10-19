@@ -17,41 +17,142 @@
    "The book has one objective: that by the end of it, you have started a company."
   ],
   "back_close": "I measure this book by how many companies are created from it. If you start one, tell me.",
-  "cover_lines_2018": ["Question everything", "Make fact based decisions", "Understand the history of tech", "Learn how to learn",
-                       "Understand what game is being played", "Develop intellectual curiosity", "Look under the hood", "Shake things up"]
+  "back_footer": [
+   "The book is built in public at gen-z-developers.sgit.ai",
+   "Everything is Creative Commons (CC BY 4.0)."
+  ],
+  "cover_lines_2018": [
+   "Question everything",
+   "Make fact based decisions",
+   "Understand the history of tech",
+   "Learn how to learn",
+   "Understand what game is being played",
+   "Develop intellectual curiosity",
+   "Look under the hood",
+   "Shake things up"
+  ]
  },
  "formats": {
-  "paperback": {"what": "KDP paperback, full wrap (back, spine, front) as one PDF", "trim_in": [6, 9], "bleed_in": 0.125,
-                "paper": "white", "spine_in_per_page": {"white": 0.002252, "cream": 0.0025},
-                "pages": 220, "pages_note": "Assumed. The spine is computed from the final interior's page count; set it here and rerun. Decision 012 says 200 pages or more; KDP allows spine text from 80 pages.",
-                "barcode_in": [2.0, 1.2], "spine_text_min_pages": 80, "spine_margin_in": 0.0625},
-  "kindle": {"what": "Kindle eBook cover, JPEG, RGB", "px": [1600, 2560]},
-  "leanpub": {"what": "Leanpub cover for a 6 by 9 inch book, as its help centre says", "px": [1800, 2700]},
+  "paperback": {
+   "what": "KDP paperback, full wrap (back, spine, front) as one PDF",
+   "trim_in": [
+    6,
+    9
+   ],
+   "bleed_in": 0.125,
+   "paper": "white",
+   "spine_in_per_page": {
+    "white": 0.002252,
+    "cream": 0.0025
+   },
+   "pages": 220,
+   "pages_note": "Assumed. The spine is computed from the final interior's page count; set it here and rerun. Decision 012 says 200 pages or more; KDP allows spine text from 80 pages.",
+   "barcode_in": [
+    2.0,
+    1.2
+   ],
+   "spine_text_min_pages": 80,
+   "spine_margin_in": 0.0625
+  },
+  "kindle": {
+   "what": "Kindle eBook cover, JPEG, RGB",
+   "px": [
+    1600,
+    2560
+   ]
+  },
+  "leanpub": {
+   "what": "Leanpub cover for a 6 by 9 inch book, as its help centre says",
+   "px": [
+    1800,
+    2700
+   ]
+  },
   "check": "KDP's cover calculator and template for the final page count and paper, before upload: the spine width and barcode position here follow KDP's published rules as of October 2026 and are to be confirmed there."
  },
  "system": {
   "safe_in": 0.375,
   "mark": "four squares in the 2018 cover's colours, green, yellow, teal and red: the same mark the site's infographics carry",
-  "palette": {"navy": "#0d2235", "ink": "#121417", "paper": "#f3eee3", "ivory": "#f4efe4", "green": "#7bc08f", "yellow": "#e8b64a", "teal": "#3b9fb0", "blue": "#14779c", "red": "#e5625b", "sky": "#55c4f2"},
-  "hierarchy": ["the title, Generation ZX (the two letters are the hook)", "Developers", "the edition, GenAI Startup Edition", "the cover line", "the author"],
+  "palette": {
+   "navy": "#0d2235",
+   "ink": "#121417",
+   "paper": "#f3eee3",
+   "ivory": "#f4efe4",
+   "green": "#7bc08f",
+   "yellow": "#e8b64a",
+   "teal": "#3b9fb0",
+   "blue": "#14779c",
+   "red": "#e5625b",
+   "sky": "#55c4f2"
+  },
+  "hierarchy": [
+   "the title, Generation ZX (the two letters are the hook)",
+   "Developers",
+   "the edition, GenAI Startup Edition",
+   "the cover line",
+   "the author"
+  ],
   "rules": [
    "The title reads at a thumbnail: Amazon shows a cover at about 160 pixels tall, so the two letters ZX must survive that.",
    "Every word on the cover is the book's: the title from decision 014, the cover line from article 17, the back from article 17, checked word for word by the build.",
    "Nothing important within 0.375 inches of the trim; the bleed is background only.",
    "The barcode area on the back is kept clear; Amazon prints the barcode there.",
    "Black and white must still work for the spine and the interior title page: shape and type carry it, not colour alone.",
-   "The guides (trim, bleed, safe area, spine, barcode) are a layer of their own, drawn on the review copies and never on the files that go to Amazon."
+   "The guides (trim, bleed, safe area, spine, barcode) are a layer of their own, drawn on the review copies and never on the files that go to Amazon.",
+   "The full title, every word of it, on every front with a cap height of at least 2.5% of the cover's height; the generator refuses a front that fails (KDP matches the cover's title to the book's).",
+   "No glyph is stretched: a line is fitted by its size and spacing, from the font's own metrics.",
+   "The back's text is centred between the top of the safe area and the footer, and the generator refuses a back that reaches the barcode area; nothing on the spine runs over its mark.",
+   "Nothing on an Amazon cover contradicts its price; pay what you want is Leanpub's to say."
   ]
  },
  "designs": [
-  {"id": "one-letter-more", "name": "One letter more", "font": {"display": "Archivo Black", "condensed": "Big Shoulders Display", "stencil": "Big Shoulders Stencil Display"},
+  {
+   "id": "zx",
+   "name": "ZX",
+   "font": {
+    "display": "Space Grotesk",
+    "mono": "Space Mono"
+   },
+   "idea": "Generation ZX goes back to where Dinis started: the ZX Spectrum. A near-black ground, GENERATION, ZX and DEVELOPERS stacked so the full title reads at a thumbnail, a prompt with a cursor for the edition, and four bars in the book's mark colours, green, yellow, teal and red, rising across the front and over the spine. A homage, not a copy: no Sinclair name, logo or keyboard, and the bars in the book's order, not the Spectrum's.",
+   "risk": "Four bright diagonal bars on black under a large ZX still recall Sinclair's machines; worth a trade-mark look before print. Large areas of black print as four-colour black on KDP and show scuffs: a gloss finish."
+  },
+  {
+   "id": "the-book-as-a-graph",
+   "name": "The book as a graph",
+   "font": {
+    "display": "Fraunces",
+    "text": "IBM Plex Sans"
+   },
+   "idea": "The book is built as a graph, and this cover is that graph: every chapter of the candidate as a node, coloured by its part and sized by its length, every idea it was written from as a point joined to it, and the reader's route from chapter 1 to the company, chapter 22, from an open circle to a solid square. ZX in red, the hook. Drawn from the book's own data on every run, so the next candidate's cover is that candidate's graph; the back says what the drawing is.",
+   "risk": "The quietest of the three at thumbnail size; it relies on the title, and the graph reads as texture until the book is in the hand."
+  },
+  {
+   "id": "one-letter-more",
+   "name": "One letter more",
+   "font": {
+    "display": "Archivo Black",
+    "condensed": "Big Shoulders Display",
+    "stencil": "Big Shoulders Stencil Display"
+   },
    "idea": "The 2018 cover, kept, with one letter added. Its blocks spelled GEN, a space, Z; now the space stays and an X joins after the Z, in ivory, the new letter. The eight 2018 lines stay: the home page says the second edition keeps all eight. For the reader of the first edition, it is the same book, grown.",
-   "risk": "The cover spells GEN ZX, as 2018 spelled GEN Z; KDP checks that the cover's title matches the book's metadata, so the full title is on the cover too, smaller, and a stricter reading may want it larger."},
-  {"id": "zx", "name": "ZX", "font": {"display": "Space Grotesk", "mono": "Space Mono"},
-   "idea": "Generation ZX goes back to where Dinis started: the ZX Spectrum. A near-black ground, the two letters huge, a prompt with a cursor for the edition, and a band of four stripes in the 2018 cover's colours in the Spectrum's order, red, yellow, green and teal, rising across the corner. A homage, not a copy: no Sinclair name, logo or keyboard.",
-   "risk": "The four-stripe band is associated with Sinclair's machines; worth a trade-mark look before print, and an easy change of angle or colour if it is a problem."},
-  {"id": "the-book-as-a-graph", "name": "The book as a graph", "font": {"display": "Fraunces", "text": "IBM Plex Sans"},
-   "idea": "The book is built as a graph, and this cover is that graph: every chapter of the candidate as a node, coloured by its part and sized by its length, every idea it was written from as a point joined to it, and the path from the first chapter to the company drawn through it. Drawn from the book's own data on every run, so the cover of the next candidate is that candidate's graph.",
-   "risk": "The quietest of the three at thumbnail size; it relies on the title, and the graph reads as texture until the book is in the hand."}
- ]
+   "risk": "The cover spells GEN ZX, as 2018 spelled GEN Z; KDP checks that the cover's title matches the book's metadata, so the full title is on the cover too, smaller, and a stricter reading may want it larger."
+  }
+ ],
+ "review": {
+  "by": "an art-director agent, reviewing the first renders on 19 October 2026 (thumbnails at 160 pixels, the fronts, the Kindle layouts and the wraps with their guides)",
+  "ranking": [
+   "zx",
+   "the-book-as-a-graph",
+   "one-letter-more"
+  ],
+  "verdict": "Take ZX to Dinis, with the graph as the alternative: ZX is the only one that stops a scroll at a thumbnail and reads as a technology book next to the white business books; One letter more is the 2018 cover with a sticker, and buries the new promise under the eight 2018 lines.",
+  "applied": [
+   "the full title, every word, legible at a thumbnail on every front, and a gate in the generator that refuses a front that fails",
+   "no glyph stretched anywhere",
+   "ZX: GENERATION at title size, the bars in the mark's order with gaps, the band clear of the words, the spine and the barcode area, the cursor on the baseline, a larger cover line and author",
+   "the graph: ZX in red, the edition in ink, the graph inside the safe area, the route thicker, from a circle to a square, the drawing explained on the back, a hairline frame on the light JPEGs",
+   "One letter more: the full title as the first line, a narrower space block, the cover line larger, the eight lines quieter, the badge's ring closed, the back in a text face",
+   "the back centred and refused if it reaches the barcode area; the spine centred above its mark; nothing on an Amazon cover about paying nothing"
+  ]
+ }
 }
