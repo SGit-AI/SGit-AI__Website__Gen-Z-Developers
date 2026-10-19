@@ -1,6 +1,6 @@
 {
  "version": "v2.0.0-rc1",
- "site": "v0.2.18",
+ "site": "v0.2.19",
  "what": "The hash of every chapter's markdown (v2/content/) and of the <main> it rendered; validate.js refuses a page that no longer matches its markdown. A candidate's text is frozen once at v2/versions/<version>.md.",
  "chapters": [
   {
@@ -193,13 +193,13 @@
    "title": "Your first workspace",
    "part": "Working with agents",
    "number": 12,
-   "words": 1881,
+   "words": 1890,
    "ideas": [
     "first-workspace",
     "not-on-your-laptop"
    ],
-   "markdown_sha256": "d2cef860b3f67ffc7f310e646377d0719adbd7a220d623046b083fb6bde2b97a",
-   "main_sha256": "f17eb3c769573be691f9026b3aa3f0e9290105b3a81b469510a3b38df3aa9fc9"
+   "markdown_sha256": "6480d8cfcde7663d86c21b5188429fb7af1c2c60273c1ece1527a7f25bdfe367",
+   "main_sha256": "8f020cec719c899418365f127bc8824c9a5c133b392ee8d53299efb6e1e18107"
   },
   {
    "file": "v2/content/4-working-with-agents/13__how-to-work-with-agents.md",
@@ -207,7 +207,7 @@
    "title": "How to work with agents",
    "part": "Working with agents",
    "number": 13,
-   "words": 2153,
+   "words": 1895,
    "ideas": [
     "an-agent-is-a-session-with-a-focus",
     "brief-is-the-unit-of-work",
@@ -215,8 +215,8 @@
     "every-mistake-added-a-rule",
     "a-correction-becomes-a-rule"
    ],
-   "markdown_sha256": "66cfbe02babcb0bcf53dc0fc6b964c378cd5dc17218cc288077ec9c8f7d21eae",
-   "main_sha256": "eb14e9f9467ef5da4e7b0c2d35c54cdbde81a6f55d6f57e9ce7ecf45b4b2ef1b"
+   "markdown_sha256": "7e263ccf13306e6e3e39d21b53e90ca5bfef219c7b800f03ab99ea8016adfbc1",
+   "main_sha256": "fb41bb10ee9370ea46a9e4aa9827b3a671ad11e836c538f60ae3fa9b5373558a"
   },
   {
    "file": "v2/content/5-judgement/14__direction-and-judgement.md",
@@ -224,15 +224,15 @@
    "title": "Direction is the scarce skill",
    "part": "Direction and judgement",
    "number": 14,
-   "words": 2278,
+   "words": 1890,
    "ideas": [
     "direction-is-the-scarce-skill",
     "knowing-when-to-stop",
     "one-way-two-way-doors",
     "agents-decide-people-answer"
    ],
-   "markdown_sha256": "05a6a071415d2223429ddb66ece23f90c65e49bd42b96847565952e206408776",
-   "main_sha256": "556aef9930fdc338a14f955385a089c417fadc1fa31ad562aa797c5a0da18f43"
+   "markdown_sha256": "dc4cad683ed833f985161f0b987aab31838e5e14b4f346f78210e84f1f5af909",
+   "main_sha256": "bf5b9b92ca932772a9c826b1094fccd9cefdc4fa72a632dd2a34e933ff981f1b"
   },
   {
    "file": "v2/content/5-judgement/15__facts-and-the-record.md",
@@ -240,7 +240,7 @@
    "title": "Facts, evidence and the record",
    "part": "Direction and judgement",
    "number": 15,
-   "words": 2281,
+   "words": 1900,
    "ideas": [
     "the-record-checks-you",
     "asked-to-be-corrected",
@@ -256,8 +256,8 @@
     "reality-corrects-the-graph",
     "stale-pages-become-false-memories"
    ],
-   "markdown_sha256": "5d7b02dfdf97cecb1a5aec2e7bc94f968aac6a4e49f2bc0056955c3c4b4b099e",
-   "main_sha256": "969b94d6b5fba473ddb6e89d01657694c4aa5d94f134789b4783b88d6923c5ad"
+   "markdown_sha256": "45c384fc29ab901b38eb883d20f6abe0f9ac21c9813d676596ab3c267a0400f7",
+   "main_sha256": "856dc8c9b6891412e4baf36bd8e33eaaf05f222688b7dfd035f87365773b9f9d"
   },
   {
    "file": "v2/content/6-building-safely/16__controlling-your-agent.md",
@@ -265,7 +265,7 @@
    "title": "Controlling your agent, and security for the agent era",
    "part": "Building, safely",
    "number": 16,
-   "words": 1873,
+   "words": 1865,
    "ideas": [
     "mandate-reach-gap",
     "code-is-a-liability",
@@ -273,8 +273,8 @@
     "secrets-never-in-the-chat",
     "security-as-a-business-tool"
    ],
-   "markdown_sha256": "4bda290e64836852643c7003c0746eb8e755e03bcb795a830ecfce72932565a8",
-   "main_sha256": "aaff9180faa6ebf6f7333c3c37f7ed284fc6d9c2d5bcc6d055889fe193a3e9ec"
+   "markdown_sha256": "e582242e0398454f4cfb1988527b6079499813343eeb54f95e6df3050e068d0b",
+   "main_sha256": "d9bb381be7d09632a4895687f2119ebfdcb38b66444621ebb7482c6841dae36d"
   },
   {
    "file": "v2/content/6-building-safely/17__open-source.md",
@@ -298,14 +298,14 @@
    "title": "Building blocks",
    "part": "Building, safely",
    "number": 18,
-   "words": 1864,
+   "words": 1865,
    "ideas": [
     "lego-blocks",
     "the-file-system-is-the-database",
     "no-server-by-design"
    ],
-   "markdown_sha256": "c7130c10e98c76ecd7c605fa4b3b610b0a781dfb7ef2b47d080f45d6324a66f0",
-   "main_sha256": "4f2054b14a48f44f8a68547c2227908b538a1570a1e20e98cd0423bcc2d9d1a8"
+   "markdown_sha256": "8fbaf1d4b808b5034650ddb4d285182822bebc23e2fb73cd0004eaf1f725cea1",
+   "main_sha256": "5eb099d94b11160ebee1a6631758facadf2f7cce5b506afd625eeb19e904caf1"
   },
   {
    "file": "v2/content/6-building-safely/19__shipped-means-the-user-has-it.md",
@@ -317,8 +317,8 @@
    "ideas": [
     "green-does-not-mean-live"
    ],
-   "markdown_sha256": "e71d5c61eaa37c16048b38caa4866b07851b64b17ebf0fdd9096d224da9bc055",
-   "main_sha256": "6af8f9f72920765c9b13f29ebf3abc9d68635cba6eda1043a2b7de249fea86c1"
+   "markdown_sha256": "ac98e6100d36a50774bf97c789c5b3b4b4915f97e7e02499076c4b1e223a39f6",
+   "main_sha256": "b5435cb919c24e992683ca6454d7b67680c0f035d9e6e53e00a7ffb2f6b1092e"
   },
   {
    "file": "v2/content/7-the-long-game/20__graphs-and-your-future-self.md",
@@ -326,14 +326,14 @@
    "title": "Graphs, memory and your future self",
    "part": "The long game",
    "number": 20,
-   "words": 1925,
+   "words": 1777,
    "ideas": [
     "think-in-graphs",
     "memory-is-context-management",
     "the-site-becomes-the-memory"
    ],
-   "markdown_sha256": "9478c8d8d6fabc7309f3f73bbede3d784eb9aad540e8bb8b93feab0b47c5d517",
-   "main_sha256": "3ef0720b55232756485c055f16ffab0987060911aa9aaeaa39a78cd9ed5c0568"
+   "markdown_sha256": "a32c34221e7606b47d9207bbd8e795f38da008de3e205147f61b22366b1b3307",
+   "main_sha256": "76fc914ece18fe5cc58f826f514cd369b845e1726400fd9bfb8ed66570bd5fed"
   },
   {
    "file": "v2/content/7-the-long-game/21__be-a-founder.md",
@@ -341,13 +341,13 @@
    "title": "Be a founder",
    "part": "The long game",
    "number": 21,
-   "words": 2114,
+   "words": 1844,
    "ideas": [
     "expert-founders",
     "a-company-in-the-review"
    ],
-   "markdown_sha256": "09e22a8a32789f6134c8f38684b94a3318f958d17f36b81ede75d14496bcfe23",
-   "main_sha256": "21f28fedc23a7f571cfecb9ff86cbe0102fa6b66b6de84d027069b1c97ff3458"
+   "markdown_sha256": "6105b6c03ef96a012c1b9388f8c4d6fb1d0bc126a4f2f4eac6dac16ef24e7a0a",
+   "main_sha256": "589287982f936bcc45779d7ecf50002978113ab5143ebd7b3521f2ae0eff4fe3"
   },
   {
    "file": "v2/content/7-the-long-game/22__civic-responsibility.md",
@@ -355,12 +355,12 @@
    "title": "Civic responsibility",
    "part": "The long game",
    "number": 22,
-   "words": 2287,
+   "words": 1856,
    "ideas": [
     "hack-your-country"
    ],
-   "markdown_sha256": "a900ad445cce389460997312fbd919bce2bbf64b82f27fa9a6dc27d169955640",
-   "main_sha256": "4901a2cc7f7cf65f0ed56b4ab126d2e0aa70725ac9dc8a074fbdecab7ec3c7af"
+   "markdown_sha256": "17c2af0ce221c97403189715363af1ecaaa11021a4332a85fd3d955edde788d2",
+   "main_sha256": "72decbea6010cac5749b5858b2b40d997d4ea04a779c8c04c70dd2172581c6fc"
   },
   {
    "file": "v2/content/8-hands-on-2026/23__an-agentic-workflow-from-zero.md",
@@ -381,8 +381,8 @@
    "number": 24,
    "words": 1098,
    "ideas": [],
-   "markdown_sha256": "0636a623834cd4d7913514fda15065fc5d64a71c1811c374a059ba28b475601f",
-   "main_sha256": "912ccf3a5855ab52c66d880b83ae478d29a7c311a1ffe6e129bb0aab202587ff"
+   "markdown_sha256": "4619bd445a170e6f73b201568fb78740095045e0c569becda6fa4675b7a44f28",
+   "main_sha256": "f7b541e7651181b1491264945083a968e372f83850c5c4b7317aa641dd0f97da"
   },
   {
    "file": "v2/content/8-hands-on-2026/25__five-lenses.md",
@@ -445,8 +445,13 @@
    "title": "How this book was made",
    "part": "How this book was made",
    "number": 30,
-   "words": 2421,
+   "words": 2386,
    "ideas": [
+    "the-book-in-release-mode",
+    "the-adversarial-review-board",
+    "every-verdict-is-a-precedent",
+    "a-candidate-is-read-as-a-frozen-snapshot",
+    "gen-ai-edition-name",
     "repository-official-vault-working",
     "co-written-and-credited",
     "a-book-for-one-reader",
@@ -457,8 +462,8 @@
     "start-from-the-storyline",
     "the-book-as-a-graph"
    ],
-   "markdown_sha256": "5a370b7d2692ed90159c2c3c77efb736ea7f718da8a55b68b65188ee16270f7d",
-   "main_sha256": "bdde3f0f7b0840dbd5066ed6e2339608b512ebabce58403bd9a874a72658487a"
+   "markdown_sha256": "007210e067aba823b678c8992994ae86f9ababedfcc04712a3f1c68354bc4a7b",
+   "main_sha256": "0342a1d89ee825d1d6cc5187fd55db6d38dfed4c747b545449a0adba886752d0"
   },
   {
    "file": "v2/content/0-front/00__about-this-release-candidate.md",

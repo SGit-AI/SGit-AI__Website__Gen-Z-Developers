@@ -18,7 +18,7 @@
    "date": "2026-10-19",
    "status": "Release candidate 1 of the second edition: not signed off, not an official version.",
    "what": "The first end-to-end draft of the second edition, written by the book's agents from the ideas register (106 ideas, 50 of them Dinis's own positions from his co-written articles) and the articles, decisions and 2018 text behind them, in the proposed chapter map's order; the hands-on part, dated 2026, is included so that Dinis can decide whether it stays inside the book or becomes a companion. Where only Dinis can supply something, the chapter says so in a note.",
-   "text_sha256": null,
+   "text_sha256": "0d8f6e1de8e24f270e91b04654e5d6655404cce22f96395ec476d10cb67c335b",
    "frozen": "v2/versions/v2.0.0-rc1.md",
    "decided_by": "Dinis, 19 October 2026 (decisions 008 and 009)",
    "title": "Gen Z Developers (GenAI Edition)"

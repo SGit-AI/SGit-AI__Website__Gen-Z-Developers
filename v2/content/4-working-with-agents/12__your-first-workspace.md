@@ -68,7 +68,7 @@ Three habits turn a week's exercise into a way of working.
 
 One session per topic. A thread is the model's frame of reference, and everything in it is context for the next answer. Put three projects in one thread and the model starts to borrow a name from one and a decision from another. It is not being careless; it is doing exactly what you asked. When the topic changes, open a new session.
 
-Name every session: "Contacts | this week's follow-ups". An agent session gets an @ in front: @contacts. An agent, in the end, is a session with a focus: a few documents that say what the project is, a short file that says what the agent does and does not do, and a session that reads them before anything else. *How to work with agents* takes this further.
+Name every session, with the project and the job in the name: Contacts, this week's follow-ups. An agent session gets an @ in front: @contacts. An agent, in the end, is a session with a focus: a few documents that say what the project is, a short file that says what the agent does and does not do, and a session that reads them before anything else. *How to work with agents* takes this further.
 
 Give the agent a mailbox of its own. When you want it to handle mail rather than read yours, buy it a Workspace seat on a domain you own and a Claude seat of its own, and connect Gmail and Drive from that account, not yours. Your inbox has years of secrets in it. The agent's is empty on day one, so what it can leak is nothing, and what it can reach is exactly what you forward to it. That isolation is not a limitation. It is what lets you give the agent more as you learn to trust it.
 
