@@ -43,7 +43,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import markdown  # noqa: E402
 from page_versions import Versions, blocks, sha, words  # noqa: E402
-from graph_pages import build_graph  # noqa: E402
+from graph_pages import build_graph
+import graph_model  # noqa: E402
+from book_v2 import build_v2  # noqa: E402  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 VERSION = (ROOT / "admin/build/version.txt").read_text().strip()
@@ -85,7 +87,7 @@ PARTS = [  # directory, slug, title, the Hugo weight that ordered it
 # one row, which overflowed onto two lines on a laptop and three on a tablet. The flat list is NAV, for anything that
 # needs every section.
 NAV_GROUPS = [
-    ("The book", [("The book", "v1/book/index.html"), ("Read & review", "read/index.html"),
+    ("The book", [("The first edition", "v1/book/index.html"), ("Second edition", "v2/book/index.html"), ("Read & review", "read/index.html"),
                   ("Versions", "v1/versions/index.html"), ("Contributors", "contributors/index.html")]),
     ("Storyboards", [("Storyboards", "storyboards/index.html"), ("Every panel", "storyboards/all.html"),
                      ("The model sheet", "storyboards/model-sheet.html")]),
@@ -573,6 +575,41 @@ def build_bookjson(parts, front, flat, map_rows):
     return doc
 
 
+def build_read_v2(doc):
+    """read/v2.html: the same reader over the release candidate (v2/book/book.json), its own store (genz.reader.v2)."""
+    body = f"""<div id="reader" class="reader" data-book="../v2/book/book.json" data-store="genz.reader.v2">
+<noscript><p class="note warn">The reader needs JavaScript. The candidate itself does not: <a href="../v2/book/index.html">the contents</a>, <a href="../v2/book/single.html">on one page</a>.</p></noscript>
+<div class="rd-strip" id="rd-strip">
+  <div class="rd-strip-left">
+    <a class="rd-brand" href="../v2/book/index.html" title="The contents">Gen Z Developers (GenAI Edition) <span class="badge draft">{esc(doc["version"])}</span></a>
+    <span class="rd-progress" id="rd-progress" title="Chapters read, of the candidate"></span>
+  </div>
+  <div class="rd-strip-right">
+    <span class="rd-meter" id="rd-meter" title="The reading meter: a penny per 250 words read, from £5 of credit, kept in this browser"></span>
+    <button class="rd-btn" id="rd-mode" type="button" aria-pressed="false" title="Review mode: states, comments, folds and the export, for Dinis and the editor">Review mode</button>
+    <button class="rd-btn" id="rd-help" type="button" aria-expanded="false" aria-controls="rd-helpbox">?</button>
+  </div>
+</div>
+<div class="rd-helpbox" id="rd-helpbox" hidden>
+  <p><b>What this is.</b> Release candidate {esc(doc["version"])} of the second edition: {doc["chapters"]} chapters written from the ideas register, for Dinis to read and mark up. Not an official version. Keys: <kbd>j</kbd>/<kbd>k</kbd> next and previous chapter, <kbd>g</kbd> the graph, <kbd>f</kbd> focus.</p>
+  <p><b>Review mode.</b> Each chapter has a state: unread, reading, read, to review, continue, signed off. Comment on any paragraph. Export the review as markdown or JSON for the vault's <code>reviews/</code> folder. Nothing here is sent anywhere unless you export it; this reader keeps its own store (<code>genz.reader.v2</code>), apart from the 2018 book's.</p>
+  <p><b>The graph.</b> The open chapter in the middle, its part and neighbours, and the articles it was written from; the ideas it carries are listed under it, each a link to the register.</p>
+</div>
+<div class="rd-filters" id="rd-filters" hidden></div>
+<div class="rd-main">
+  <aside class="rd-toc" id="rd-toc" aria-label="Chapters"></aside>
+  <section class="rd-content" id="rd-content" aria-live="polite"></section>
+  <aside class="rd-graph" id="rd-graph" aria-label="The graph"></aside>
+</div>
+<div class="rd-export" id="rd-export" hidden></div>
+</div>
+"""
+    page("read/v2.html", f"Read and review the second edition, {doc['version']}", body,
+         f"Read release candidate {doc['version']} of Gen Z Developers (GenAI Edition), with the editor's desk: states, comments, folds, export.",
+         crumbs=(("Read and review", "read/index.html"), ("The second edition", "read/v2.html")),
+         extra_head='<link rel="stylesheet" href="../assets/reader.css">\n<script defer src="../assets/reader.js"></script>\n', wide=True)
+
+
 def build_read(bookdoc):
     """read/: the reader and the editor's review desk. Content on the left, the graph on the right, the state of every
     chapter and comment kept in this browser, the reading meter after the newsroom's rules."""
@@ -688,11 +725,16 @@ def build_versions(frozen_md, parts, pub):
     changelog = (CONTENT / "_manuscript/change-log.md").read_text(encoding="utf-8")
     changelog_html = md(frontmatter(changelog)[1])
     rows = "".join(f"<tr><td>{esc(e['version'])}</td><td>{esc(e['date'])}</td><td>{esc(e.get('where', ''))}</td><td>{esc(e['why'])}</td></tr>" for e in reversed(v.entries))
+    cands = v.data.get("candidates") or []
+    cand_html = ("</p><ul>" + "".join(f'<li><a href="../../v2/book/index.html"><b>{esc(c["version"])}</b></a>, {esc(c["date"])}: {esc(c["what"])} Frozen at <a href="../../{esc(c["frozen"])}">{esc(c["frozen"])}</a>'
+                                        + (f', sha256 {c["text_sha256"][:12]}&hellip;' if c.get("text_sha256") else "") + "</li>" for c in cands) + "</ul><p class=\"small\">") if cands else "None yet."
     body = f"""<h1>The versions of the book</h1>
 <p class="lede">The rule this site is built on: <b>the repository holds the official versions; the vault holds the working versions.</b> A version moves from <a href="../../vault/index.html">the vault</a> into the repository when it is signed off, on top of the one before, and this page shows the delta between every two versions, block by block and word by word. There is one version so far.</p>
 {table}
 <p class="small dim">The table and the deltas are computed by the newsroom's <code>page_versions.py</code> (newsroom v0.12.113), copied into <code>admin/build/</code> as the brief asked rather than rewritten. Each version is frozen as one markdown file by the release that made it and never rewritten; the frozen file for v1.0.0 is <a href="v1.0.0.md">v1.0.0.md</a>, {words(chr(10).join(blocks(frozen_md))):,} words in {len(blocks(frozen_md)):,} blocks: the book as published, the {len(pub)} chapters of <a href="../generation-z-print-ready.pdf">the print PDF</a> (139 pages, sha256 {PDF_SHA[:12]}…) and the Leanpub build. The drafts the build left out are not part of any version; they are kept as <a href="../book/drafts.md">v1/book/drafts.md</a> and shown <a href="../book/drafts.html">on their own page</a>.</p>
 {diffs}
+<h2 id="candidates">Release candidates of the second edition</h2>
+<p class="small">A candidate is a draft of the next edition written in this repository for Dinis to read and mark up (<a href="../../decisions/index.html#a-candidate-is-read-on-the-site-from-a-frozen-snapshot">decision 009</a>). It is frozen once, like a version, so that what was read cannot change; it is not official and nothing is published from it outside this site. {cand_html}</p>
 <h2 id="record">The record</h2>
 <div class="tablewrap"><table><thead><tr><th>Version</th><th>Date</th><th>Where</th><th>What it is</th></tr></thead><tbody>{rows}</tbody></table></div>
 <h2 id="source">Where v1.0.0 comes from</h2>
@@ -1117,7 +1159,15 @@ def build_vault():
 
 
 # ------------------------------------------------------------------ home, admin, agent surface
-def build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib, articles):
+def build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib, articles, v2=None):
+    v2card = ""
+    if v2:
+        v2card = (f'<div class="card big v2"><span class="k">The second edition &middot; {esc(v2["version"])} &middot; release candidate, not a version</span>'
+                  f'<h3><a href="v2/book/index.html">Gen Z Developers (GenAI Edition): the first end-to-end draft</a></h3>'
+                  f'<p>{v2["chapters"]} chapters in {v2["parts"]} parts, {v2["words"]:,} words, written by the book\'s agents from {v2["ideas"]} ideas in the register and the articles behind them, for Dinis to read, print and mark up. Every chapter ends with where it came from; {v2["callouts"]} notes say what only Dinis can fill in.</p>'
+                  f'<p class="stats"><span class="stat"><b>{v2["chapters"]}</b><span>chapters</span></span><span class="stat"><b>{v2["words"]:,}</b><span>words</span></span><span class="stat"><b>{v2["ideas"]}</b><span>ideas written in</span></span><span class="stat"><b>{v2["callouts"]}</b><span>for Dinis</span></span></p>'
+                  f'<span class="more"><a href="v2/book/index.html">The contents &rarr;</a> &nbsp; <a href="read/v2.html">Read and review &rarr;</a> &nbsp; <a href="v2/book/single.html">On one page &rarr;</a>'
+                  + (f' &nbsp; <a href="{esc(v2["pdf"])}">The PDF &rarr;</a>' if v2.get("pdf") else "") + '</span></div>')
     c = map_doc["counts"]
     n_pub = len(pub); n_draft = sum(1 for _, ch in drafts if ch["kind"] == "draft"); n_outline = sum(1 for _, ch in drafts if ch["kind"] == "outline"); pub_words = sum(ch["words"] for _, ch in pub)
     six = [b for b in briefs if "__note-" not in b[0]]
@@ -1132,7 +1182,7 @@ def build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib,
 <p class="sub">Key concepts and ideas for the next generation of developers.</p>
 <ul class="cover-lines">{lines}</ul>
 <p>The eight lines on the cover are what the book was for. They read more urgently now than in 2018, and the second edition keeps all eight: the manual for getting into development, and getting a job, now that everyone who can brief an agent is a developer.</p>
-<p class="ctas"><a class="btn primary" href="v1/book/index.html">Read the first edition here</a> <a class="btn" href="{fe["amazon"]["url"]}">Paperback on Amazon</a> <a class="btn" href="{fe["leanpub"]["url"]}">Free to read on Leanpub</a></p>
+<p class="ctas">{("<a class=\"btn primary\" href=\"v2/book/index.html\">Read the GenAI Edition, release candidate 1</a> " if v2 else "")}<a class="btn" href="v1/book/index.html">Read the first edition here</a> <a class="btn" href="{fe["amazon"]["url"]}">Paperback on Amazon</a> <a class="btn" href="{fe["leanpub"]["url"]}">Free to read on Leanpub</a></p>
 </div>
 </section>
 <h2 id="first-edition">The first edition, where it lives</h2>
@@ -1149,7 +1199,7 @@ def build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib,
 <div class="card big"><span class="k">The book &middot; v1.0.0 &middot; 2018 &middot; frozen</span><h3><a href="v1/book/index.html">The book as published, and the drafts kept apart</a></h3><p>The {n_pub} chapters the 2018 build published, in the print edition's order with its page numbers; and, kept apart, the {n_draft} drafts and {n_outline} outlines it left out, which the second edition starts from.</p>
 <p class="stats"><span class="stat"><b>{n_pub}</b><span>published chapters</span></span><span class="stat"><b>{pub_words:,}</b><span>words published</span></span><span class="stat"><b>139</b><span>print pages</span></span><span class="stat"><b>{n_draft + n_outline}</b><span>drafts and outlines</span></span></p>
 <span class="more"><a href="v1/book/index.html">The table of contents &rarr;</a> &nbsp; <a href="read/index.html">Read and review &rarr;</a> &nbsp; <a href="v1/generation-z-print-ready.pdf">The print PDF &rarr;</a></span></div>
-<a class="card" href="v1/versions/index.html"><span class="k">Versions</span><h3>One version so far</h3><p>Where v1.0.0 comes from, the 2018 change log, and the page that will carry the block-by-block delta to v2.</p></a>
+{v2card}<a class="card" href="v1/versions/index.html"><span class="k">Versions</span><h3>One version so far</h3><p>Where v1.0.0 comes from, the 2018 change log, and the page that will carry the block-by-block delta to v2.</p></a>
 <a class="card" href="map/index.html"><span class="k">The map</span><h3>{c["files"]} files, {c["answered_by_articles"]} answered</h3><p>Every 2018 chapter and outline, the newsroom articles that have since answered it, and the gap.</p></a>
 <a class="card" href="team/index.html"><span class="k">The team</span><h3>Reviewer, editor, publisher</h3><p>Each reads, challenges, interviews Dinis and signs off. The first interview script is written.</p></a>
 <a class="card" href="vault/index.html"><span class="k">The vault</span><h3>Read along</h3><p>The public working vault, its read key published: the working copy of v1, the board, the reviews, the roles.</p></a>
@@ -1193,6 +1243,7 @@ def build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib,
 <pre>python3 admin/build/gen_map.py           # admin/content/map.json from v1/content/ and the authored reading
 python3 admin/build/gen_contributors.py  # admin/content/contributors.json from admin/content/github/
 python3 admin/build/graph_model.py       # checks the graph (ideas, chapters, sources, tasks) and prints its counts
+node admin/build/print_pdf.js v2/book/single.html v2/generation-z-developers-<candidate>.pdf   # the candidate as a PDF, after build.py (Playwright)
 python3 admin/build/build.py       # every page, the manifest, the frozen markdown, llms.txt, the sitemap
 node admin/build/validate.js       # the gate: version, links, canonical, key leak, manifest, sitemap, map</pre>
 <h2>The rules</h2>
@@ -1230,6 +1281,7 @@ The repository holds the official versions; the vault holds the working versions
 
 ## Sections
 - [The book, v1.0.0]({BASE}v1/book/index.html): the 2018 first edition as published, 28 chapters in the print edition's order, then the drafts and outlines it left out; [on one page]({BASE}v1/book/single.html); [the drafts]({BASE}v1/book/drafts.html); [frozen markdown]({BASE}v1/versions/v1.0.0.md); [the print PDF, 139 pages]({BASE}v1/generation-z-print-ready.pdf)
+- [The second edition, release candidate]({BASE}v2/book/index.html): the first end-to-end draft of the second edition, written from the ideas register, not an official version; [on one page]({BASE}v2/book/single.html); [read and review]({BASE}read/v2.html); [what waits on Dinis]({BASE}v2/book/for-dinis.html); data at [book.json]({BASE}v2/book/book.json); source v2/content/, one markdown file per chapter naming its ideas and sources
 - [Read and review]({BASE}read/index.html): the reader with the graph beside it and the editor's desk (states, comments, folds, export); the book as data at [book.json]({BASE}v1/book/book.json)
 - [The graph]({BASE}graph/index.html): the admin area of the publishing process: [the ideas register]({BASE}graph/ideas/index.html), [the sources and their states]({BASE}graph/sources.html), [the chapter map, proposed]({BASE}graph/chapters.html), [the tasks]({BASE}graph/tasks.html), [the plan]({BASE}graph/plan.html), [the graph drawn]({BASE}graph/view.html); data at [graph.json]({BASE}graph/graph.json)
 - [The contributors]({BASE}contributors/index.html): who contributed to the first edition, from git and GitHub; data at [contributors.json]({BASE}admin/content/contributors.json)
@@ -1291,7 +1343,10 @@ def main():
     build_storyboards()
     build_newsroom_survey()
     build_graph({"page": page, "write": write, "esc": esc, "md": md})
-    build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib, articles)
+    v2 = build_v2({"page": page, "write": write, "esc": esc, "md": md, "sha": sha, "split_blocks": lambda h: _TopLevel().split(h), "graph": graph_model.load(), "version": VERSION})
+    if v2:
+        build_read_v2(v2)
+    build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib, articles, v2)
     print(f"build: {VERSION}, {len(flat)} chapters, {len([w for w in written if w.endswith('.html')])} pages, {len(written)} files written")
 
 

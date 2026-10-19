@@ -1815,15 +1815,19 @@
     {
      "ref": "news:generation-z-developers-again",
      "where": "The name"
+    },
+    {
+     "ref": "dec:010",
+     "where": "the decision: the title is Gen Z Developers (GenAI Edition)"
     }
    ],
    "answers": [],
    "topic": "making-of",
-   "chapter": null,
-   "destination": "undecided",
-   "state": "candidate",
-   "decided_by": null,
-   "notes": "Dinis's open question; the editor adds it to the title interview (issue 002).",
+   "chapter": "how-this-book-was-made",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, 19 October 2026, in the session that wrote release candidate 1: the title is Gen Z Developers (GenAI Edition) (decision 010)",
+   "notes": "Decided: the edition carries the name GenAI Edition in its title. Whether Gen Alpha is a future reader stays open for the title interview.",
    "gravity": "all"
   },
   {
@@ -2863,6 +2867,111 @@
    "decided_by": "Dinis, in Lenses, roles and loops; the editor records it in the vault",
    "gravity": "villager",
    "notes": "The 1.7% is one session's measurement; how each product compresses differs."
+  },
+  {
+   "id": "the-book-in-release-mode",
+   "title": "Do the book in release mode: a whole release candidate from the first list, then rounds, then the next candidate",
+   "kind": "process",
+   "statement": "Run with the librarian's first list and make the first release candidate, a whole book start to finish that could be published and is not; the question for it is whether it already has coherence and structure. Then rounds, each taking one pile (the articles' concepts, the 2018 book, the newsroom, anything new) and ending in the next candidate, until the rounds shrink from parts to sentences and the book has converged.",
+   "sources": [
+    {
+     "ref": "art:the-book-in-release-mode",
+     "where": "Run with the first list; Release mode; Then the rounds; How we know it is done"
+    },
+    {
+     "ref": "dec:008",
+     "where": "the decision"
+    },
+    {
+     "ref": "agent:the-book-as-a-graph",
+     "where": "the first list"
+    }
+   ],
+   "answers": [],
+   "topic": "making-of",
+   "chapter": "how-this-book-was-made",
+   "destination": "the-process",
+   "state": "accepted",
+   "decided_by": "Dinis, in The book in release mode (decision 008); the editor records it in the vault",
+   "gravity": "town-planner"
+  },
+  {
+   "id": "the-adversarial-review-board",
+   "title": "After rc1, nothing enters the book without a hearing: an advocate, a cutter, the readers, a checker, the editor, and Dinis decides",
+   "kind": "process",
+   "statement": "Every word, change and idea that wants in goes before a board whose seats are roles in their own sessions, so the one arguing against has not been persuaded by the context of the one arguing for. The cutter is the important seat: the default answer is no, because the first edition was liked for being short and punchy and every book grows by things that were each a good idea on their own.",
+   "sources": [
+    {
+     "ref": "art:the-book-in-release-mode",
+     "where": "The review board"
+    },
+    {
+     "ref": "dec:008",
+     "where": "the seats and the verdicts"
+    },
+    {
+     "ref": "art:lenses-roles-and-loops",
+     "where": "a role is a model with a description"
+    }
+   ],
+   "answers": [],
+   "topic": "making-of",
+   "chapter": "how-this-book-was-made",
+   "destination": "the-process",
+   "state": "accepted",
+   "decided_by": "Dinis, in The book in release mode (decision 008); the editor records it in the vault",
+   "gravity": "town-planner",
+   "notes": "The board's role file is team/board/role.md; its hearings and precedents live in the vault (decision 005)."
+  },
+  {
+   "id": "every-verdict-is-a-precedent",
+   "title": "Every verdict is recorded with its reason, and a general reason becomes a precedent that decides the next case without a hearing",
+   "kind": "process",
+   "statement": "A hearing starts with the precedents; if one covers the case the editor applies it and it goes on a list Dinis can overturn, and overturning makes a new precedent. So the first rounds are slow and the third is mostly decided by what was already said. A new article needs no new process: it is a proposal in the next round.",
+   "sources": [
+    {
+     "ref": "art:the-book-in-release-mode",
+     "where": "Every verdict is a precedent"
+    },
+    {
+     "ref": "dec:008",
+     "where": "verdicts and precedents"
+    }
+   ],
+   "answers": [],
+   "topic": "making-of",
+   "chapter": "how-this-book-was-made",
+   "destination": "the-process",
+   "state": "accepted",
+   "decided_by": "Dinis, in The book in release mode (decision 008); the editor records it in the vault",
+   "gravity": "town-planner"
+  },
+  {
+   "id": "a-candidate-is-read-as-a-frozen-snapshot",
+   "title": "A release candidate's working copy is in the vault; the site renders a frozen snapshot of it, marked, never official",
+   "kind": "process",
+   "statement": "Release candidates are working versions and live in the vault; to be read, printed and marked up one is built on the site from a frozen snapshot whose hash is recorded once, so what Dinis read cannot change behind him, and the next round of feedback is the next candidate. Not a version: not in the versions list, every page says what it is, nothing published from it outside the site.",
+   "sources": [
+    {
+     "ref": "dec:009",
+     "where": "the decision"
+    },
+    {
+     "ref": "art:the-book-in-release-mode",
+     "where": "Release mode: candidates live in the vault"
+    },
+    {
+     "ref": "agent:the-release-candidate-written-from-the-register",
+     "where": "how rc1 was built"
+    }
+   ],
+   "answers": [],
+   "topic": "making-of",
+   "chapter": "how-this-book-was-made",
+   "destination": "the-process",
+   "state": "accepted",
+   "decided_by": "Dinis, 19 October 2026 (decision 009), from his request for a fully built first release candidate he could read and print",
+   "gravity": "town-planner"
   }
  ]
 }

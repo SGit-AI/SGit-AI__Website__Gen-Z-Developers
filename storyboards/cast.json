@@ -95,6 +95,29 @@
    }
   },
   {
+   "id": "marta",
+   "name": "Marta",
+   "kind": "human",
+   "pronouns": "she/her",
+   "age": 54,
+   "role": "the expert founder: twenty-five years as a pharmacist, Generation X, starting a company, and Zara's mother",
+   "stands_for": "the Generation X founder the Gen ZX proposal adds to the readers: the subject-matter expert who now builds the tool herself, with agents, instead of waiting for a team she could never afford",
+   "personality": "knows her field better than any developer she ever briefed; grew up typing programs from magazines into a ZX Spectrum; patient with people, impatient with software",
+   "wants": "to ship the product she has described to vendors for ten years",
+   "fears": "that it is too late for her, and that she will build it and nobody will buy it",
+   "line": "I've been explaining this problem for twenty years. Can I just build it now?",
+   "look": {
+    "skin": "#ffdbac",
+    "hair": "long",
+    "hairColour": "#9ca3af",
+    "shirt": "#b45309",
+    "trousers": "#1f2937",
+    "accessory": "glasses",
+    "height": 1.0
+   },
+   "gravity": "explorer"
+  },
+  {
    "id": "guide",
    "name": "The Guide",
    "kind": "human",

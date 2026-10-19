@@ -53,6 +53,10 @@ graph/                generated: the book as a graph, the admin area of the publ
                       chapters.json, sources-state.json, tasks-state.json, plan.md; admin/build/graph_model.py derives the nodes
                       and edges and refuses a dangling one; graph_pages.py renders the hub, the ideas register, the sources,
                       the chapter map, the tasks, the plan and the drawn graph; assets/graph.js draws graph.json)
+v2/content/           the second edition as a release candidate (decision 008): one markdown file per chapter, its ideas,
+                      sources and 2018 files in the front matter; v2/book/ is generated from it by admin/build/book_v2.py
+                      (chapter pages, the contents, single.html for print, book.json for read/v2.html), v2/versions/ holds
+                      each candidate's text frozen once, and the PDF is rendered by admin/build/print_pdf.js
 map/                  generated: one row per 2018 file, the newsroom articles that answer it, the gap
 briefs/               generated: the articles and notes above, rendered
 storyboards/          generated: the cast sheet and a swipe deck per storyboard, drawn in the browser from admin/content/storyboards/*.json

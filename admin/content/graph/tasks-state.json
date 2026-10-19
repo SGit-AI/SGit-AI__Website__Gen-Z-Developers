@@ -260,8 +260,8 @@
    "evidence": "no style notes for the drafts exist"
   },
   "generative-ai-not-ai:editor:3": {
-   "state": "open",
-   "evidence": "002__the-title-the-subtitle-and-the-language.md does not mention Gen AI yet"
+   "state": "in-progress",
+   "evidence": "Dinis decided the title on 19 October 2026: Gen Z Developers (GenAI Edition) (decision 010); the editor's issue 002 (title, subtitle, language) has the title to record and the subtitle still to settle"
   },
   "generative-ai-not-ai:editor:4": {
    "state": "blocked",
@@ -318,6 +318,34 @@
   "lenses-roles-and-loops:editor:4": {
    "state": "open",
    "evidence": "no interview script on this in team/editor/briefs/"
+  },
+  "the-book-in-release-mode:editor:1": {
+   "state": "done",
+   "evidence": "rc1 exists: v2/content/ (30 chapters, every one written from its ideas, the gaps as For Dinis notes collected at v2/book/for-dinis.html and in the back matter) and the working copy in the vault's book/rc1/ (site v0.2.19); the librarian assembled it at Dinis's request, the editor's coherence read is next"
+  },
+  "the-book-in-release-mode:editor:2": {
+   "state": "open",
+   "evidence": "no coherence read of rc1 in the vault yet"
+  },
+  "the-book-in-release-mode:editor:3": {
+   "state": "open",
+   "evidence": "no board/hearings/ or board/precedents/ in the vault yet"
+  },
+  "the-book-in-release-mode:librarian:4": {
+   "state": "in-progress",
+   "evidence": "v2/book/for-dinis.html lists the ideas with no chapter and every gap rc1 names; the round-1 batch as a page on the graph (ideas and sources not represented in rc1) is not built yet"
+  },
+  "the-book-in-release-mode:librarian:5": {
+   "state": "open",
+   "evidence": "no verdicts yet; the ideas' decided_by fields are ready to name a hearing"
+  },
+  "the-book-in-release-mode:reviewer:6": {
+   "state": "open",
+   "evidence": "no round-2 proposals yet"
+  },
+  "the-book-in-release-mode:publisher:7": {
+   "state": "open",
+   "evidence": "team/publisher/briefs/ has the brief; no answer yet"
   }
  }
 }

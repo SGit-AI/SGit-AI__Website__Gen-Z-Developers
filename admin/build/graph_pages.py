@@ -109,7 +109,8 @@ def build_graph(ctx):
             cards.append(f'<div class="chapter-card" id="{esc(ch["id"])}"><h4><span class="grav" title="{g[1]}">{g[0]}</span>{esc(ch["title"])} {st(ch["state"])}</h4><p class="punch">{esc(ch["punchline"])}</p>'
                          f'<p class="meta">Centre of gravity: {esc(g[1])} &middot; written first for <b>{esc(ch["character"])}</b> &middot; topics: {", ".join(esc(nodes["topic:" + t]["title"]) for t in ch["topics"] if ("topic:" + t) in nodes)}</p>'
                          f'<ul class="ideas">{ids or "<li class=dim>no idea placed yet</li>"}</ul>'
-                         f'{("<p class=meta>Answers the 2018 files: " + ans + "</p>") if ans else ""}</div>')
+                         f'{("<p class=meta>Answers the 2018 files: " + ans + "</p>") if ans else ""}'
+                         f'{("<p class=meta><b>Drafted:</b> <a href=\"../" + esc(ch["draft"]) + "\">read the chapter in the release candidate</a></p>") if ch.get("draft") else ""}</div>')
         sb = f' &middot; storyboard: <a href="../storyboards/{esc(p["storyboard"])}.html">{esc(nodes["sb:" + p["storyboard"]]["title"])}</a>' if p.get("storyboard") and ("sb:" + p["storyboard"]) in nodes else " &middot; no storyboard yet"
         sections.append(f'<h2 class="part" id="{esc(p["id"])}">{esc(p["title"])}<span class="w">{len(p["chapters"])} chapters{sb}</span></h2>{"".join(cards)}')
     left = "".join(f'<li>{esc(x.get("note", ""))}{(": " + ", ".join("<code>" + esc(f) + "</code>" for f in x["files"])) if x.get("files") else ""}</li>' for x in m["chapters_doc"].get("left_out", []))

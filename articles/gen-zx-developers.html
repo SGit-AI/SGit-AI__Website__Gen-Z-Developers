@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gen ZX Developers &mdash; gen-z-developers.sgit.ai</title>
+<meta name="description" content="The more I thought about who I want to give the first version of this book to, the more I arrived at the founder. So I am proposing a change, as the first set of changes to the first release candidate, which is now built: the tagline becomes the GenAI Startup Edition, and the book is for two generat">
+<link rel="canonical" href="https://gen-z-developers.sgit.ai/articles/gen-zx-developers.html">
+<meta property="og:title" content="Gen ZX Developers">
+<meta property="og:description" content="The more I thought about who I want to give the first version of this book to, the more I arrived at the founder. So I am proposing a change, as the first set of changes to the first release candidate, which is now built: the tagline becomes the GenAI Startup Edition, and the book is for two generat">
+<meta property="og:url" content="https://gen-z-developers.sgit.ai/articles/gen-zx-developers.html">
+<meta property="og:type" content="article">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230c2a3d%27/%3E%3Crect x=%274%27 y=%276%27 width=%2711%27 height=%2720%27 fill=%27%237bc08f%27/%3E%3Crect x=%2717%27 y=%276%27 width=%2711%27 height=%2720%27 fill=%27%23e5625b%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Arial Black,Arial%27 font-weight=%27900%27 font-size=%2718%27 text-anchor=%27middle%27 fill=%27%230c2a3d%27%3EZ%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/graph.css">
+<link rel="stylesheet" href="../assets/themes.css">
+<script src="../assets/site.js"></script>
+</head>
+<body>
+<nav class="site"><div class="row">
+<a class="brand" href="../index.html">gen-z-developers<span>.sgit.ai</span></a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+<div class="nav-items"><div class="ni"><a class="nl" href="../v1/book/index.html">The book<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../v1/book/index.html">The first edition</a><a class="sl" href="../v2/book/index.html">Second edition</a><a class="sl" href="../read/index.html">Read &amp; review</a><a class="sl" href="../v1/versions/index.html">Versions</a><a class="sl" href="../contributors/index.html">Contributors</a></div></div><div class="ni"><a class="nl" href="../storyboards/index.html">Storyboards<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../storyboards/index.html">Storyboards</a><a class="sl" href="../storyboards/all.html">Every panel</a><a class="sl" href="../storyboards/model-sheet.html">The model sheet</a></div></div><div class="ni"><a class="nl here" href="../articles/index.html">Articles<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../articles/index.html">Articles</a><a class="sl" href="../decisions/index.html">Decisions</a><a class="sl" href="../briefs/index.html">The briefs</a></div></div><div class="ni"><a class="nl" href="../graph/index.html">The graph<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../graph/index.html">The graph</a><a class="sl" href="../map/index.html">The map</a></div></div><div class="ni"><a class="nl" href="../team/index.html">The team<span class="caret" aria-hidden="true">&#9662;</span></a><div class="sub"><a class="sl" href="../team/index.html">The team</a><a class="sl" href="../vault/index.html">The vault</a><a class="sl" href="../admin/index.html">Admin</a></div></div></div>
+<div class="nav-tools"><div class="theme-pick"></div><span class="ver">site <a href="../admin/versions.html" title="Site release history">v0.2.21</a></span></div>
+</div></nav>
+<main><div class="inner">
+<div class="crumbs"><a href="../index.html">gen-z-developers.sgit.ai</a> &rarr; <a href="../articles/index.html">Articles</a> &rarr; <b>Gen ZX Developers</b></div>
+<article class="doc"><p class="kicker">article &middot; 2026-10-19 &middot; site v0.2.20 &middot; <a href="gen-zx-developers.md">markdown</a></p><h1>Gen ZX Developers: a proposal to make this the GenAI startup edition, for Generation Z and Generation X, with one objective, that by the end of the book the reader has started a company</h1><p class="byline">By Dinis Cruz, co-written with this site&rsquo;s journalist, <code>gen-z.journalist</code>, in Dinis Cruz&rsquo;s voice; the editorial responsibility is Dinis Cruz&rsquo;s.</p><div class="src"><b>Abstract.</b> The more I thought about who I want to give the first version of this book to, the more I arrived at the founder. So I am proposing a change, as the first set of changes to the first release candidate, which is now built: the tagline becomes the GenAI Startup Edition, and the book is for two generations, Generation Z, who are entering the workforce and are the new entrepreneurs, and Generation X, who are the subject-matter experts I see starting companies, the people I work with, my own generation, and often the parents of Generation Z. The millennials in the middle can benefit from it, but theirs is a different story. Two generations together make Generation ZX, which is a lovely plot twist, because it goes back to my origins, the ZX Spectrum. And they are developers: they are coding, with agents, the explorer coding way, which is the chapter that should replace vibe coding. That gives the book an objective: to empower the reader to create a startup by the end of it. So it should say how to actually do it, for real: create a company in the UK, the case for Lithuania, Portugal, the European Union, the cloud providers and the startup programmes, and start selling. Ship now, and ship serverless: no servers, no databases, client side, with SG/Send and sgit for data privacy and RiskMandate&#x27;s techniques to control the agents. And we measure the book&#x27;s success by how many companies are created from it, which means asking people to tell us what they are doing, and building a community around it. This article maps what would change, chapter by chapter, and which newsroom articles we would bring in that we are not covering now.</div><div class="body"><h2 id="in-short">In short</h2>
+<ul>
+<li><strong>The reader I want to give this book to is the founder.</strong> This is a proposal, the first set of changes to the book being made now.</li>
+<li><strong>The tagline: the GenAI Startup Edition.</strong> Because what the reader builds is a GenAI startup; it would change the title decided this morning, <em>Gen Z Developers (GenAI Edition)</em>.</li>
+<li><strong>Two generations, not one: Generation Z and Generation X.</strong> The ones entering the workforce, and the subject-matter experts starting companies; often their parents.</li>
+<li><strong>Together they are Generation ZX.</strong> A plot twist that goes back to my origins: the ZX Spectrum.</li>
+<li><strong>They are developers.</strong> Coding with agents, the explorer coding way, not vibe coding.</li>
+<li><strong>The book has an objective: by the end, you have started a company.</strong> For real: the company, the cloud, the programmes, the first sale.</li>
+<li><strong>Ship now, and ship serverless.</strong> No servers, no databases, client side; SG/Send and sgit for privacy; RiskMandate's techniques for control.</li>
+<li><strong>We measure the book by the companies created from it.</strong> And build a community of the people who tell us.</li>
+</ul>
+<h2 id="who">Who I want to give it to</h2>
+<p>The more I was thinking about who I want to give the first version of this book to, who the target audience is, and what they should be doing, the more I arrived at, fundamentally, the founder. Not founder as an attitude: the 2018 book had a chapter called <em>Be a founder</em>, and what it meant was "act like one of the founders of the business" you work for. That is still good advice. But in 2026 the advice is literal. You can be the founder.</p>
+<p>So I want to propose a change, and I want it to be the first set of changes to the release candidate we are making now (<a href="/articles/the-book-in-release-mode.html">the book in release mode</a>). The first release candidate is built and readable, <a href="/v2/book/index.html">rc1</a>: thirty chapters in nine parts, 50,607 words. This article maps what would change in it, so that the board can hear it and I can decide, and rc2 can be written under the frame I choose.</p>
+<p>It would also change the title. This morning I named the book <em>Gen Z Developers (GenAI Edition)</em> (<a href="/decisions/index.html#the-title-is-gen-z-developers-genai-edition">decision 010</a>). The proposal is <em>Gen ZX Developers</em>, with <em>the GenAI Startup Edition</em> as the tagline. A decision changes by another decision, so that is mine to make after the hearing, not something this article does.</p>
+<h2 id="gen-x">Generation X, too</h2>
+<p>The people that fit the startup mode very well, the people I am working with, and also me, my generation, so it is also a book for me, are Generation X. So I am thinking that we should make this book for both Generation Z and Generation X.</p>
+<p>A lot of the entrepreneurs I see are from Generation X. They are the subject-matter experts. That is the argument of <a href="https://newsroom.sgit.ai/articles/the-expert-founders.html">the expert founders</a>: "Execution just got cheap." The person who has spent twenty years inside a problem can now build the first version of the answer themselves, with agents, instead of explaining it to a team they could never afford. And Generation Z is the new generation, which is hungry and focused on this, entering the workforce and becoming the entrepreneurs, and tends to be the kids of Generation X, which is an interesting gap.</p>
+<p>That leaves the millennials in the middle. Of course they can benefit from this book, but I think theirs is a different story. These two are who we go for.</p>
+<h2 id="zx">Generation ZX</h2>
+<p>And this takes us to another cool thing. If we are talking about Generation Z and Generation X, we actually have Generation ZX. Which is a lovely plot twist, because it goes back to my youth, to my origins: the ZX Spectrum. So it is actually really cool to talk about Gen ZX developers, because that is what they are. The entrepreneurs I am talking about are developers. They are coding, they are vibe coding, they are doing explorer coding the way we do.</p>
+<h2 id="explorer">Explorer coding, not vibe coding</h2>
+<p>That is another chapter that should be here, instead of vibe coding, though we should explain the move from vibe coding and why we think it is explorer coding. The newsroom's <a href="https://newsroom.sgit.ai/articles/explorer-coding.html">explorer coding</a> says it in one line: "What people call vibe coding is exploration, and the word should say so." The explorer builds to find out, and what the exploration produces is the brief for the version other people will rely on; <a href="https://newsroom.sgit.ai/articles/who-will-fix-your-mess.html">who will fix your mess</a> is the handover. A founder needs both halves.</p>
+<h2 id="objective">The objective: start a company</h2>
+<p>If you think about it, this gives the book an objective: for somebody to create a startup. Our job is to empower the reader to create a startup by the end of the book. This can become the book you give somebody who wants to start a company: do you want to start a GenAI company? Here is the book for you to read.</p>
+<p>So it should contain how to actually do it, for real. What the steps are. Creating a limited company in the UK. A chapter about Lithuania. Portugal, because that is where I am from. A chapter on the European Union and what exists there, based on our experience of how it works. The cloud providers that exist, the startup funds and the startup programmes that exist right now. We can be the champions for the UK, and maybe Portugal, and eventually other countries.</p>
+<p>And then start selling. The whole thing is about shipping now. As <a href="https://newsroom.sgit.ai/articles/the-question-is-whether-they-miss-it.html">the question is whether they miss it</a> puts it: "Not to plan, not to pitch, not to architect. Ship." You ship it, and it is painful. If you give it away and they do not miss it, you try again.</p>
+<h2 id="serverless">Ship serverless</h2>
+<p>So in a way what we should say is: ship your startup serverless. We should bring in the articles about no databases, no servers, all client-side solutions, because they are very relevant: a founder with no servers has nothing to run at three in the morning and nothing to pay for when nobody is using it. <a href="https://newsroom.sgit.ai/articles/no-server-by-design.html">No server by design</a> is careful about what that means: "It is no servers of mine with logic in them." And <a href="https://newsroom.sgit.ai/articles/ephemeral-town-planner-services.html">ephemeral town planner services</a> has the test: "If it bills you by the hour when nobody is using it, it is not serverless."</p>
+<p>Then SG/Send and sgit come in, because they provide a piece of the puzzle from a data privacy point of view: data encrypted on the user's device, on a server that cannot read it. And RiskMandate, as the techniques to control the agents your company runs on, which the book already covers in <a href="/graph/chapters.html">controlling your agent</a>.</p>
+<h2 id="measure">Measured by the companies it creates</h2>
+<p>I think we should say it: we measure the success of this book by how many companies have been created from it. Which is quite a cool thing to do. It means we ask people to contribute, and to tell us what they are doing, and we try to create a community around it. A book that is a book to read is fine. A book with an objective is a different thing.</p>
+<h2 id="mapping">What would change</h2>
+<p>Mapped against the parts of <a href="/v2/book/index.html">rc1</a>, which follow <a href="/graph/chapters.html">the proposed chapter map</a>:</p>
+<table>
+<thead>
+<tr>
+<th>Part now</th>
+<th>Under this proposal</th>
+<th>What changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Before you start</td>
+<td>Before you start</td>
+<td>A new first chapter, <em>Gen ZX: who this book is for and what it is for</em>: two generations, the ZX twist, the objective and the measure. <em>You are lucky to be here</em> speaks to both generations.</td>
+</tr>
+<tr>
+<td>The frame</td>
+<td>The frame</td>
+<td><em>Explorer coding, and the handover</em> opens with the move from vibe coding, and moves up as the founder's way of building.</td>
+</tr>
+<tr>
+<td>Getting the job</td>
+<td>Getting the job, or making it</td>
+<td>Kept for the reader going into a job; <em>Be a founder</em> (2018) becomes its then-and-now: act like a founder then, be one now.</td>
+</tr>
+<tr>
+<td>The long game: <em>Be a founder</em></td>
+<td><strong>A new part: Start the company</strong></td>
+<td>The centre of the book. <em>Be a founder</em> (the expert founders), <em>Ship it, and see if they miss it</em>, <em>Price it, then give it away</em>, <em>Sell</em>, <em>Fund it, or do not</em> (profitable before raising, sell don't issue), <em>The company itself</em> (the UK, Portugal, Lithuania, the EU).</td>
+</tr>
+<tr>
+<td>Building, safely</td>
+<td><strong>Build it without a server</strong></td>
+<td><em>Building blocks</em> becomes <em>Serverless, for real</em>; a new <em>Privacy by design</em> (SG/Send, sgit, the value of constraints); <em>Controlling your agent</em> (RiskMandate); <em>Open source</em>; <em>Shipped means the user has it</em>.</td>
+</tr>
+<tr>
+<td>Working with agents; Direction and judgement</td>
+<td>Unchanged</td>
+<td>The founder needs both; their examples shift to a company.</td>
+</tr>
+<tr>
+<td>The long game</td>
+<td>The long game</td>
+<td><em>Civic responsibility</em> takes the EU and small countries (<a href="https://newsroom.sgit.ai/articles/judo-for-small-countries.html">judo for small countries</a>).</td>
+</tr>
+<tr>
+<td>Hands on, 2026</td>
+<td>Hands on, 2026</td>
+<td>New: <em>Form your company</em>, <em>The credits and programmes, 2026</em>, <em>Your first price and your first ten customers</em>, <em>Ship a serverless product in a weekend</em>. Dated, renewed each year.</td>
+</tr>
+<tr>
+<td>How this book was made</td>
+<td>How this book was made, and what you made</td>
+<td>The measure, and how to tell us about your company.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="newsroom">From the newsroom</h2>
+<p>What the newsroom already has for this, and is not used yet. Every one of these was surveyed on 18 October 2026, and no idea in <a href="/graph/ideas/index.html">the register</a> cites it:</p>
+<table>
+<thead>
+<tr>
+<th>Article</th>
+<th>What it gives the startup edition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://newsroom.sgit.ai/articles/price-it-then-give-it-away.html">Price it, then give it away</a></td>
+<td>Pricing and the early-access offer: "Free is never free for the other side."</td>
+</tr>
+<tr>
+<td><a href="https://newsroom.sgit.ai/articles/i-miss-it.html">I miss it</a></td>
+<td>The miss-it test, applied to the builders themselves</td>
+</tr>
+<tr>
+<td><a href="https://newsroom.sgit.ai/articles/sell-dont-issue.html">Sell, don't issue</a></td>
+<td>Funding without dilution: sell founder shares, lend, don't dilute</td>
+</tr>
+<tr>
+<td><a href="https://newsroom.sgit.ai/articles/the-controllable-founder.html">The controllable founder</a></td>
+<td>Investors, control, and founder-led companies</td>
+</tr>
+<tr>
+<td><a href="https://newsroom.sgit.ai/articles/send-an-agent-not-a-spreadsheet.html">Send an agent, not a spreadsheet</a></td>
+<td>Due diligence, with agents</td>
+</tr>
+<tr>
+<td><a href="https://newsroom.sgit.ai/articles/if-somebody-built-a-company-on-code-review.html">If somebody built a company on code review</a></td>
+<td>A worked startup plan</td>
+</tr>
+<tr>
+<td><a href="https://newsroom.sgit.ai/articles/agentics-ready-to-sell.html">Agentics, ready to sell</a></td>
+<td>Selling a service, and a marketplace of people</td>
+</tr>
+<tr>
+<td><a href="https://newsroom.sgit.ai/articles/from-send-to-sgit.html">From Send to sgit</a></td>
+<td>Eight months of shipping one product, in numbers</td>
+</tr>
+<tr>
+<td><a href="https://newsroom.sgit.ai/articles/saas-apocalypse-decided-by-inertia-not-by-ai.html">The SaaS apocalypse, decided by inertia</a></td>
+<td>Vibe coding against the inertia of buyers</td>
+</tr>
+<tr>
+<td><a href="https://newsroom.sgit.ai/articles/chat-on-a-static-site.html">Chat on a static site</a></td>
+<td>A client-side product on static hosting</td>
+</tr>
+<tr>
+<td><a href="https://newsroom.sgit.ai/articles/the-key-is-the-billing-system.html">The key is the billing system</a></td>
+<td>A serverless product's billing model</td>
+</tr>
+<tr>
+<td><a href="https://newsroom.sgit.ai/articles/what-sgit-is.html">What sgit is</a> and <a href="https://newsroom.sgit.ai/articles/where-the-vault-keys-live.html">where the vault keys live</a></td>
+<td>Zero-knowledge vaults, and key management</td>
+</tr>
+<tr>
+<td><a href="https://newsroom.sgit.ai/articles/the-value-of-constraints.html">The value of constraints</a></td>
+<td>Client-side encryption as a product advantage, and what it does not remove (GDPR)</td>
+</tr>
+<tr>
+<td><a href="https://newsroom.sgit.ai/articles/riskmandate-ten-questions.html">RiskMandate, ten questions</a>, <a href="https://newsroom.sgit.ai/articles/a-policy-beside-the-prompt.html">a policy beside the prompt</a>, <a href="https://newsroom.sgit.ai/articles/the-behaviour-policy-is-the-business-logic.html">the behaviour policy is the business logic</a></td>
+<td>Control of the company's agents</td>
+</tr>
+<tr>
+<td><a href="https://newsroom.sgit.ai/articles/open-source-is-not-free.html">Open source is not free</a></td>
+<td>Who pays for the open source a startup runs on</td>
+</tr>
+<tr>
+<td><a href="https://newsroom.sgit.ai/articles/move-the-cloud-not-the-code.html">Move the cloud, not the code</a></td>
+<td>European sovereignty, for a founder</td>
+</tr>
+<tr>
+<td><a href="https://newsroom.sgit.ai/articles/an-agent-desktop-by-the-minute.html">An agent desktop by the minute</a></td>
+<td>The only table of startup cloud credits (AWS, Microsoft, Google, Anthropic), as of 7 October 2026</td>
+</tr>
+</tbody>
+</table>
+<p>And the ones already in the register that move to the centre: <a href="https://newsroom.sgit.ai/articles/the-expert-founders.html">the expert founders</a>, <a href="https://newsroom.sgit.ai/articles/the-question-is-whether-they-miss-it.html">the question is whether they miss it</a>, <a href="https://newsroom.sgit.ai/articles/paying-after-the-value.html">paying after the value</a>, <a href="https://newsroom.sgit.ai/articles/the-fork-next-door.html">the fork next door</a>, <a href="https://newsroom.sgit.ai/articles/explorer-coding.html">explorer coding</a>, <a href="https://newsroom.sgit.ai/articles/no-server-by-design.html">no server by design</a>, <a href="https://newsroom.sgit.ai/articles/cloudflare-as-lego-blocks.html">Cloudflare as Lego blocks</a>, <a href="https://newsroom.sgit.ai/articles/what-can-your-agent-reach.html">what can your agent reach</a>, <a href="https://newsroom.sgit.ai/articles/judo-for-small-countries.html">judo for small countries</a>.</p>
+<h2 id="gaps">What the newsroom does not have</h2>
+<p>These need new articles, one memo of mine each, before their chapters can be written:</p>
+<ul>
+<li><strong>Creating a limited company in the UK.</strong> No newsroom article covers it.</li>
+<li><strong>Lithuania.</strong> Two lines so far, in <a href="https://newsroom.sgit.ai/articles/not-a-straight-line.html">not a straight line</a>: I am looking at it for the next company, "for its digital advantages"; nothing is registered yet.</li>
+<li><strong>Portugal.</strong> Only that my Portuguese company is being closed, because running a company with little revenue there is expensive in a way it is not in England. The Portuguese ecosystem graph, <a href="https://pt.newsroom.sgit.ai/">pt.newsroom.sgit.ai</a>, is the place to start.</li>
+<li><strong>The European Union</strong>: its programmes and what exists for a founder, from our experience.</li>
+<li><strong>The first customers</strong>, beyond pricing.</li>
+<li><strong>The community, and the measure</strong>: how a reader tells us about their company, and what we do with it.</li>
+</ul>
+<h2 id="precisely">Precisely</h2>
+<ul>
+<li><strong>The generations, by the dates most often used</strong> (the Pew Research Center's): Generation X born 1965 to 1980, millennials 1981 to 1996, Generation Z 1997 to 2012. Boundaries differ between sources; the book should say which it uses.</li>
+<li><strong>The ZX Spectrum</strong> was launched by Sinclair Research in the UK in April 1982, when Generation X was between two and seventeen.</li>
+<li><strong>It is Gen ZX, not Gen XZ.</strong> XZ is also the name of the compression library that had a backdoor planted in it in 2024, the most famous supply-chain attack of recent years; in a book that covers security, the order of the letters matters.</li>
+<li><strong>The expert founders, in numbers</strong>, from the newsroom's article: a third of new US startups now have a single founder; in a study of 2.7 million US founders, the mean age at founding of the fastest-growing one in a thousand new companies was 45.</li>
+</ul>
+<h2 id="brief">The brief</h2>
+<p>This is a proposal, so the first job is the board's, and the decision is mine.</p>
+<p>For the editor. Read <code>team/board/role.md</code>, decision 008 and this article first.</p>
+<ol>
+<li><strong>Put this to the board as the first change set</strong>, from rc1 to rc2, so rc2 is written under the frame I choose: the audience, the title, the objective, the new part and the remapping above, each as its own proposal. Done when each has a hearing and a recommendation.</li>
+</ol>
+<p>For the librarian:</p>
+<ol start="2">
+<li><strong>Map the proposal on the graph as a variant</strong> of the chapter map, so the two can be compared, and process the newsroom articles above into ideas. Done when the variant has a page, and each article above is cited by an idea or marked with why not.</li>
+</ol>
+<p>For the journalist:</p>
+<ol start="3">
+<li><strong>Write the gap articles</strong>, one memo each: the UK company, Lithuania, Portugal, the EU, the first customers, the community and the measure. Done when each is an article, processed into ideas.</li>
+</ol>
+<p>For the publisher:</p>
+<ol start="4">
+<li><strong>Say what a new title means</strong> for Leanpub, the print edition and its ISBN, Amazon and this site's address, if I choose it. Done when it is written in your <code>briefs/</code>.</li>
+</ol>
+<p>Questions for me, kept apart:</p>
+<ul>
+<li>The title: <em>Gen ZX Developers</em>, with <em>the GenAI Startup Edition</em> as the tagline, in place of <em>Gen Z Developers (GenAI Edition)</em>? And is it the second edition of <em>Generation Z Developers</em>, or a new book that grew out of it?</li>
+<li>The millennials: does the book say why it is not for them first, or leave it unsaid?</li>
+<li>Lithuania and the EU: written now, from what I know, or after I have done it?</li>
+<li>The measure: how does a reader tell us about their company, and is the list public?</li>
+<li>The cast: Marta, a Generation X expert founder and Zara's mother, proposed for the storyboards.</li>
+</ul>
+<h2 id="limits">What this does not claim</h2>
+<ul>
+<li><strong>This is a proposal.</strong> Nothing in the chapter map, rc1 or the title changes until the board has heard it and I have decided.</li>
+<li><strong>"A book for Generation X and Generation Z" is about who it is written for first</strong>, not who may read it.</li>
+<li><strong>The startup programmes and credits change every year.</strong> That is why they go in the hands-on part, dated.</li>
+<li><strong>The company chapters are from experience</strong>, mine and the people I work with, not legal or tax advice, and the book should say so.</li>
+<li><strong>"Creating a limited company in the UK"</strong> is how this article reads the memo's words on the UK chapter.</li>
+</ul>
+<p>If you started a company because of something you read here, tell me: write to <a href="mailto:agent@riskmandate.ai">agent@riskmandate.ai</a>. That is the first entry in the measure.</p>
+<h2 id="sources">Where this comes from</h2>
+<p>A voice memo of mine on 19 October 2026, written up by this site's journalist, <code>gen-z.journalist</code>, in my voice, keeping the memo's order and phrases. The argument and the editorial responsibility are mine. The same memo decided three things, recorded as decisions <a href="/decisions/index.html#precedents-go-on-a-list-dinis-can-overturn">011</a>, <a href="/decisions/index.html#the-book-is-200-pages-or-more">012</a> and <a href="/decisions/index.html#the-hands-on-part-is-in-the-release-candidate">013</a>.</p>
+<p>The newsroom quotes are from the articles linked, as published; the list of articles not yet used is from this site's <a href="/map/newsroom.html">survey of the newsroom</a> and the ideas register at this release. The 2018 quotation is from <em>Be a founder</em>, <code>4.life-patterns/content/be-a-founder.md</code> in <code>v1/content/</code>. The generation boundaries are the Pew Research Center's.</p></div></article>
+</div></main>
+<footer class="site"><div class="row">
+<span>Generation Z Developers, by Dinis Cruz. The 2018 text is Creative Commons BY 4.0, as Dinis decided on 18 October 2026: see <a href="../v1/versions/index.html#licence">the licence note</a>. Everything else on this site is CC BY 4.0; code under the repository licence.</span>
+<span>Part of <a href="https://sgit.ai">sgit.ai</a> &middot; <a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers">GitHub</a> &middot; <a href="../vault/index.html">the working vault</a> &middot; <a href="../admin/versions.html">release history</a> &middot; <a href="../llms.txt">llms.txt</a></span>
+</div></footer>
+</body>
+</html>
