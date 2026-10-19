@@ -8,17 +8,46 @@
  "reviewer": "Dinis Cruz",
  "date": "2026-10-19",
  "how": "Four photographs of pages 10 to 13 of the printed candidate, and one of the café table; notes 52 to 83, continuing the series. The handwriting was read by the journalist; two readings are uncertain and marked so.",
- "drawings": ["after_margin_system"],
+ "drawings": [
+  "after_margin_system"
+ ],
  "themes": {
-  "first-page": {"name": "The first pages sell the book", "principle": "The opening is about the reader, and the reason to read comes first (Zoom in, not discover)."},
-  "show": {"name": "Show the book, do not list it", "principle": "A story or a picture where an argument would do less."},
-  "altitude": {"name": "Topics first, details under them", "principle": "Detail the point does not need is cut (Zoom in, not discover)."},
-  "process-out": {"name": "The making-of out of the reader's way", "principle": "The 2018 book and its outlines go to the section at the end."},
-  "voice": {"name": "The voice is mine", "principle": "Lines that sound odd, hedged or not like Dinis are rewritten."},
-  "reader-context": {"name": "Meet the reader where they are", "principle": "Explain a term before using it, with a short analogy, and say it first, then link."},
-  "evidence": {"name": "Fact or opinion, visibly", "principle": "The reader can see which claims are backed by data and which are Dinis's opinion, and the data is found (Follow the rabbit holes)."},
-  "links": {"name": "The website holds what the page cannot", "principle": "Where the book needs more room, a QR code sends the reader to the site: the source, the explainer, the visualisation."},
-  "works": {"name": "What works, keep it", "principle": "The ticks: what the pen approves is kept, and the format it likes is used again."}
+  "first-page": {
+   "name": "The first pages sell the book",
+   "principle": "The opening is about the reader, and the reason to read comes first (Zoom in, not discover)."
+  },
+  "show": {
+   "name": "Show the book, do not list it",
+   "principle": "A story or a picture where an argument would do less."
+  },
+  "altitude": {
+   "name": "Topics first, details under them",
+   "principle": "Detail the point does not need is cut (Zoom in, not discover)."
+  },
+  "process-out": {
+   "name": "The making-of out of the reader's way",
+   "principle": "The 2018 book and its outlines go to the section at the end."
+  },
+  "voice": {
+   "name": "The voice is mine",
+   "principle": "Lines that sound odd, hedged or not like Dinis are rewritten."
+  },
+  "reader-context": {
+   "name": "Meet the reader where they are",
+   "principle": "Explain a term before using it, with a short analogy, and say it first, then link."
+  },
+  "evidence": {
+   "name": "Fact or opinion, visibly",
+   "principle": "The reader can see which claims are backed by data and which are Dinis's opinion, and the data is found (Follow the rabbit holes)."
+  },
+  "links": {
+   "name": "The website holds what the page cannot",
+   "principle": "Where the book needs more room, a QR code sends the reader to the site: the source, the explainer, the visualisation."
+  },
+  "works": {
+   "name": "What works, keep it",
+   "principle": "The ticks: what the pen approves is kept, and the format it likes is used again."
+  }
  },
  "pages": [
   {
@@ -26,12 +55,78 @@
    "photo": "photos/page-10.jpg",
    "name": "Page 10, chapter 2 begins",
    "notes": [
-    {"n": 52, "region": [0.19, 0.06, 0.66, 0.06], "written": "yes but I think this should be about the [struck] READER → the [ZX founder]", "means": "The opening wonder ('I discover things I can do') should be about the reader, the ZX founder, not about Dinis.", "theme": "first-page"},
-    {"n": 53, "region": [0.80, 0.25, 0.11, 0.17], "written": "let's tell this story in my name since I also felt like this", "means": "Drop the unnamed woman on a podcast: tell the feeling as Dinis's own, since he felt it too.", "theme": "voice"},
-    {"n": 54, "region": [0.09, 0.355, 0.08, 0.07], "written": "yeah can't find it", "means": "The answer to For Dinis: the podcast cannot be found.", "theme": "voice"},
-    {"n": 55, "region": [0.06, 0.655, 0.10, 0.19], "written": "this book history is not relevant in page 10", "means": "How the first edition started, the logos slide, the zone and Start with why are history: not for page 10.", "theme": "process-out"},
-    {"n": 56, "region": [0.85, 0.705, 0.10, 0.16], "written": "Now we are getting there :)", "means": "'Whoever is reading this in 2026 or 2027 is ridiculously privileged' is where the chapter should start.", "theme": "works"},
-    {"n": 57, "region": [0.57, 0.76, 0.35, 0.19], "written": "the fact that I tried to read is not relevant", "means": "That Dinis tried to read the Business Insider essay, and hit the paywall, is not for the reader.", "theme": "altitude"}
+    {
+     "n": 52,
+     "region": [
+      0.19,
+      0.06,
+      0.66,
+      0.06
+     ],
+     "written": "yes but I think this should be about the [struck] READER → the [ZX founder]",
+     "means": "The opening wonder ('I discover things I can do') should be about the reader, the ZX founder, not about Dinis.",
+     "theme": "first-page"
+    },
+    {
+     "n": 53,
+     "region": [
+      0.8,
+      0.25,
+      0.11,
+      0.17
+     ],
+     "written": "let's tell this story in my name since I also felt like this",
+     "means": "Drop the unnamed woman on a podcast: tell the feeling as Dinis's own, since he felt it too.",
+     "theme": "voice"
+    },
+    {
+     "n": 54,
+     "region": [
+      0.09,
+      0.355,
+      0.08,
+      0.07
+     ],
+     "written": "yeah can't find it",
+     "means": "The answer to For Dinis: the podcast cannot be found.",
+     "theme": "voice"
+    },
+    {
+     "n": 55,
+     "region": [
+      0.06,
+      0.655,
+      0.1,
+      0.19
+     ],
+     "written": "this book history is not relevant in page 10",
+     "means": "How the first edition started, the logos slide, the zone and Start with why are history: not for page 10.",
+     "theme": "process-out"
+    },
+    {
+     "n": 56,
+     "region": [
+      0.85,
+      0.705,
+      0.1,
+      0.16
+     ],
+     "written": "Now we are getting there :)",
+     "means": "'Whoever is reading this in 2026 or 2027 is ridiculously privileged' is where the chapter should start.",
+     "theme": "works"
+    },
+    {
+     "n": 57,
+     "region": [
+      0.57,
+      0.76,
+      0.35,
+      0.19
+     ],
+     "written": "the fact that I tried to read is not relevant",
+     "means": "That Dinis tried to read the Business Insider essay, and hit the paywall, is not for the reader.",
+     "theme": "altitude"
+    }
    ]
   },
   {
@@ -39,12 +134,78 @@
    "photo": "photos/page-11.jpg",
    "name": "Page 11, the transformations",
    "notes": [
-    {"n": 58, "region": [0.23, 0.03, 0.65, 0.065], "written": "doesn't matter since the title is strong enough ↗ or you should be able to find other articles or statistics", "means": "The essay's headline is enough; or find other articles or statistics that make the point.", "theme": "evidence"},
-    {"n": 59, "region": [0.19, 0.10, 0.56, 0.045], "written": "this phrasing is weird [after: That is my reading, not a measurement, and this edition still owes you a proper answer to it.]", "means": "Rewrite the hedge.", "theme": "voice"},
-    {"n": 60, "region": [0.84, 0.205, 0.11, 0.06], "written": "exactly ✓", "means": "'Ignore the doom, because nobody knows what is going to happen' is right: keep it.", "theme": "works"},
-    {"n": 61, "region": [0.85, 0.355, 0.10, 0.09], "written": "good, format better [?]", "means": "The list of transformations works, and the format is better than prose. (Reading uncertain.)", "theme": "works"},
-    {"n": 62, "region": [0.17, 0.505, 0.71, 0.05], "written": "[struck with a wave: The 2018 book had an outline for the second of those, BBS and modems ...]", "means": "Cut the 2018 outline and the untold story.", "theme": "process-out"},
-    {"n": 63, "region": [0.42, 0.755, 0.52, 0.09], "written": "✓ yes here (this section) is good", "means": "The answer to For Dinis: the dot-com crash belongs here.", "theme": "works"}
+    {
+     "n": 58,
+     "region": [
+      0.23,
+      0.03,
+      0.65,
+      0.065
+     ],
+     "written": "doesn't matter since the title is strong enough ↗ or you should be able to find other articles or statistics",
+     "means": "The essay's headline is enough; or find other articles or statistics that make the point.",
+     "theme": "evidence"
+    },
+    {
+     "n": 59,
+     "region": [
+      0.19,
+      0.1,
+      0.56,
+      0.045
+     ],
+     "written": "this phrasing is weird [after: That is my reading, not a measurement, and this edition still owes you a proper answer to it.]",
+     "means": "Rewrite the hedge.",
+     "theme": "voice"
+    },
+    {
+     "n": 60,
+     "region": [
+      0.84,
+      0.205,
+      0.11,
+      0.06
+     ],
+     "written": "exactly ✓",
+     "means": "'Ignore the doom, because nobody knows what is going to happen' is right: keep it.",
+     "theme": "works"
+    },
+    {
+     "n": 61,
+     "region": [
+      0.85,
+      0.355,
+      0.1,
+      0.09
+     ],
+     "written": "good, format better [?]",
+     "means": "The list of transformations works, and the format is better than prose. (Reading uncertain.)",
+     "theme": "works"
+    },
+    {
+     "n": 62,
+     "region": [
+      0.17,
+      0.505,
+      0.71,
+      0.05
+     ],
+     "written": "[struck with a wave: The 2018 book had an outline for the second of those, BBS and modems ...]",
+     "means": "Cut the 2018 outline and the untold story.",
+     "theme": "process-out"
+    },
+    {
+     "n": 63,
+     "region": [
+      0.42,
+      0.755,
+      0.52,
+      0.09
+     ],
+     "written": "✓ yes here (this section) is good",
+     "means": "The answer to For Dinis: the dot-com crash belongs here.",
+     "theme": "works"
+    }
    ]
   },
   {
@@ -52,18 +213,150 @@
    "photo": "photos/page-12.jpg",
    "name": "Page 12, Technology that finally works for you",
    "notes": [
-    {"n": 64, "region": [0.29, 0.095, 0.51, 0.07], "written": "we need a visual way to reference to the reader facts or opinion that I do here: fact → backed by data; opinion → no data (yet) to support (REF)", "means": "Mark each claim visibly as fact (backed by data, with the reference) or opinion (no data yet).", "theme": "evidence"},
-    {"n": 65, "region": [0.45, 0.175, 0.07, 0.025], "written": "[struck: and a bit,]", "means": "Trim the quote.", "theme": "voice"},
-    {"n": 66, "region": [0.70, 0.21, 0.17, 0.04], "written": "find data to support this [beside: It is one person's account, not a study.]", "means": "Instead of apologising that it is one account, find the data.", "theme": "evidence"},
-    {"n": 67, "region": [0.10, 0.31, 0.08, 0.20], "written": "this is what should be on that intro in page 10", "means": "'The biggest opportunity of your career' is the chapter's opening.", "theme": "first-page"},
-    {"n": 68, "region": [0.18, 0.39, 0.64, 0.035], "written": "[struck: The 2018 book had a draft chapter on dopamine ...]", "means": "Cut the 2018 draft chapter.", "theme": "process-out"},
-    {"n": 69, "region": [0.82, 0.52, 0.11, 0.15], "written": "most readers don't know what UI or interface is ... link?", "means": "Explain UI and interface before using them, or link to an explainer.", "theme": "reader-context"},
-    {"n": 70, "region": [0.56, 0.705, 0.30, 0.035], "written": "ZX founder: what is generative AI?", "means": "The reader asks: what is generative AI? Say it here, briefly.", "theme": "reader-context"},
-    {"n": 71, "region": [0.885, 0.78, 0.07, 0.17], "written": "what about using QR codes here? → more details", "means": "A QR code to the site where the page needs more room.", "theme": "links"},
-    {"n": 72, "region": [0.74, 0.77, 0.09, 0.03], "written": "[struck: I recommended ... because of the way he]", "means": "Simplify the Kevin Kelly sentence.", "theme": "voice"},
-    {"n": 73, "region": [0.40, 0.815, 0.18, 0.08], "written": "weird [circled: I have not settled.]", "means": "'A question I have not settled' sounds odd.", "theme": "voice"},
-    {"n": 74, "region": [0.10, 0.885, 0.18, 0.05], "written": "say it first, then link [under: Where do you land?]", "means": "Say what Where do you land? says, then point to it.", "theme": "reader-context"},
-    {"n": 75, "region": [0.18, 0.87, 0.76, 0.12], "written": "as with above we should try to find a way to introduce the reader to these concepts with short clear analogies, infographics, stories & links to our site for more details", "means": "Every concept gets a short clear analogy, an infographic or a story, and a link to the site for more.", "theme": "links"}
+    {
+     "n": 64,
+     "region": [
+      0.29,
+      0.095,
+      0.51,
+      0.07
+     ],
+     "written": "we need a visual way to reference to the reader facts or opinion that I do here: fact → backed by data; opinion → no data (yet) to support (REF)",
+     "means": "Mark each claim visibly as fact (backed by data, with the reference) or opinion (no data yet).",
+     "theme": "evidence"
+    },
+    {
+     "n": 65,
+     "region": [
+      0.45,
+      0.175,
+      0.07,
+      0.025
+     ],
+     "written": "[struck: and a bit,]",
+     "means": "Trim the quote.",
+     "theme": "voice"
+    },
+    {
+     "n": 66,
+     "region": [
+      0.7,
+      0.21,
+      0.17,
+      0.04
+     ],
+     "written": "find data to support this [beside: It is one person's account, not a study.]",
+     "means": "Instead of apologising that it is one account, find the data.",
+     "theme": "evidence"
+    },
+    {
+     "n": 67,
+     "region": [
+      0.1,
+      0.31,
+      0.08,
+      0.2
+     ],
+     "written": "this is what should be on that intro in page 10",
+     "means": "'The biggest opportunity of your career' is the chapter's opening.",
+     "theme": "first-page"
+    },
+    {
+     "n": 68,
+     "region": [
+      0.18,
+      0.39,
+      0.64,
+      0.035
+     ],
+     "written": "[struck: The 2018 book had a draft chapter on dopamine ...]",
+     "means": "Cut the 2018 draft chapter.",
+     "theme": "process-out"
+    },
+    {
+     "n": 69,
+     "region": [
+      0.82,
+      0.52,
+      0.11,
+      0.15
+     ],
+     "written": "most readers don't know what UI or interface is ... link?",
+     "means": "Explain UI and interface before using them, or link to an explainer.",
+     "theme": "reader-context"
+    },
+    {
+     "n": 70,
+     "region": [
+      0.56,
+      0.705,
+      0.3,
+      0.035
+     ],
+     "written": "ZX founder: what is generative AI?",
+     "means": "The reader asks: what is generative AI? Say it here, briefly.",
+     "theme": "reader-context"
+    },
+    {
+     "n": 71,
+     "region": [
+      0.885,
+      0.78,
+      0.07,
+      0.17
+     ],
+     "written": "what about using QR codes here? → more details",
+     "means": "A QR code to the site where the page needs more room.",
+     "theme": "links"
+    },
+    {
+     "n": 72,
+     "region": [
+      0.74,
+      0.77,
+      0.09,
+      0.03
+     ],
+     "written": "[struck: I recommended ... because of the way he]",
+     "means": "Simplify the Kevin Kelly sentence.",
+     "theme": "voice"
+    },
+    {
+     "n": 73,
+     "region": [
+      0.4,
+      0.815,
+      0.18,
+      0.08
+     ],
+     "written": "weird [circled: I have not settled.]",
+     "means": "'A question I have not settled' sounds odd.",
+     "theme": "voice"
+    },
+    {
+     "n": 74,
+     "region": [
+      0.1,
+      0.885,
+      0.18,
+      0.05
+     ],
+     "written": "say it first, then link [under: Where do you land?]",
+     "means": "Say what Where do you land? says, then point to it.",
+     "theme": "reader-context"
+    },
+    {
+     "n": 75,
+     "region": [
+      0.18,
+      0.87,
+      0.76,
+      0.12
+     ],
+     "written": "as with above we should try to find a way to introduce the reader to these concepts with short clear analogies, infographics, stories & links to our site for more details",
+     "means": "Every concept gets a short clear analogy, an infographic or a story, and a link to the site for more.",
+     "theme": "links"
+    }
    ]
   },
   {
@@ -71,15 +364,104 @@
    "photo": "photos/page-13.jpg",
    "name": "Page 13, How to read this book",
    "notes": [
-    {"n": 76, "region": [0.68, 0.075, 0.18, 0.22], "written": "there is data to support this: that paper & book reading is better to learn", "means": "Read on paper is backed by data: find it and cite it, instead of 'my experience rather than a finding'.", "theme": "evidence"},
-    {"n": 77, "region": [0.16, 0.255, 0.66, 0.035], "written": "✓ [beside: Read it somewhere you can give it your undivided attention.]", "means": "Keep.", "theme": "works"},
-    {"n": 78, "region": [0.11, 0.38, 0.08, 0.13], "written": "Reword from an 'adult first' [?] approach", "means": "Reword the reading path; the key word is uncertain ('adult first'?), for Dinis to confirm.", "theme": "voice"},
-    {"n": 79, "region": [0.58, 0.34, 0.29, 0.065], "written": "that is not our recommendation, I think [under: so do not skip them.]", "means": "The book should not tell founders they must not skip chapters.", "theme": "reader-context"},
-    {"n": 80, "region": [0.41, 0.38, 0.21, 0.035], "written": "not anymore :) [over: says developer]", "means": "The title says founders now (decision 019).", "theme": "voice"},
-    {"n": 81, "region": [0.62, 0.49, 0.25, 0.065], "written": "Brian May story, Queen [beside: because the tools can be made to fit you]", "means": "Craftspeople made their own tools: tell the story of Brian May, of Queen, who built his own guitar.", "theme": "show"},
-    {"n": 82, "region": [0.15, 0.52, 0.72, 0.045], "written": "✓ [beside: You are lucky to be here. Not because it will be easy ...]", "means": "Keep the closing line.", "theme": "works"},
-    {"n": 83, "region": [0.47, 0.71, 0.51, 0.24], "written": "Actually I think we should expand & recommend here the workflow that I (right now) am having with you (Claude) where you are understanding & capturing my ideas as I read this RC & is something that I want to start doing the next time I read a book", "means": "How to read this book should recommend this workflow: read on paper with a pen, photograph the pages, and let an agent capture the notes.", "theme": "reader-context"}
+    {
+     "n": 76,
+     "region": [
+      0.68,
+      0.075,
+      0.18,
+      0.22
+     ],
+     "written": "there is data to support this: that paper & book reading is better to learn",
+     "means": "Read on paper is backed by data: find it and cite it, instead of 'my experience rather than a finding'.",
+     "theme": "evidence"
+    },
+    {
+     "n": 77,
+     "region": [
+      0.16,
+      0.255,
+      0.66,
+      0.035
+     ],
+     "written": "✓ [beside: Read it somewhere you can give it your undivided attention.]",
+     "means": "Keep.",
+     "theme": "works"
+    },
+    {
+     "n": 78,
+     "region": [
+      0.11,
+      0.38,
+      0.08,
+      0.13
+     ],
+     "written": "Reword from an 'adult first' [?] approach",
+     "means": "Reword the reading path; the key word is uncertain ('adult first'?), for Dinis to confirm.",
+     "theme": "voice"
+    },
+    {
+     "n": 79,
+     "region": [
+      0.58,
+      0.34,
+      0.29,
+      0.065
+     ],
+     "written": "that is not our recommendation, I think [under: so do not skip them.]",
+     "means": "The book should not tell founders they must not skip chapters.",
+     "theme": "reader-context"
+    },
+    {
+     "n": 80,
+     "region": [
+      0.41,
+      0.38,
+      0.21,
+      0.035
+     ],
+     "written": "not anymore :) [over: says developer]",
+     "means": "The title says founders now (decision 019).",
+     "theme": "voice"
+    },
+    {
+     "n": 81,
+     "region": [
+      0.62,
+      0.49,
+      0.25,
+      0.065
+     ],
+     "written": "Brian May story, Queen [beside: because the tools can be made to fit you]",
+     "means": "Craftspeople made their own tools: tell the story of Brian May, of Queen, who built his own guitar.",
+     "theme": "show"
+    },
+    {
+     "n": 82,
+     "region": [
+      0.15,
+      0.52,
+      0.72,
+      0.045
+     ],
+     "written": "✓ [beside: You are lucky to be here. Not because it will be easy ...]",
+     "means": "Keep the closing line.",
+     "theme": "works"
+    },
+    {
+     "n": 83,
+     "region": [
+      0.47,
+      0.71,
+      0.51,
+      0.24
+     ],
+     "written": "Actually I think we should expand & recommend here the workflow that I (right now) am having with you (Claude) where you are understanding & capturing my ideas as I read this RC & is something that I want to start doing the next time I read a book",
+     "means": "How to read this book should recommend this workflow: read on paper with a pen, photograph the pages, and let an agent capture the notes.",
+     "theme": "reader-context"
+    }
    ]
   }
- ]
+ ],
+ "article": "rc2-on-paper-pages-10-to-13"
 }

@@ -217,6 +217,11 @@
    "version": "v0.2.40",
    "date": "2026-10-19",
    "what": "Paper that talks both ways gains a section from Dinis's follow-up memo, A better way to get feedback: reviewing has three moments (consume, capture, package and send) and feedback collapses in the third; the pen-and-photograph workflow does the packaging, so reviewers can be asked for photographs of marked pages, comments on the site paragraph by paragraph, or a voice memo on a paragraph, carried through the book's vault. Two tasks added to the article (the editor asks reviewers this way; the publisher proposes a voice memo on a paragraph in the reader, exported into the vault, within the reader's rules) and a brief to the publisher."
+  },
+  {
+   "version": "v0.2.41",
+   "date": "2026-10-19",
+   "what": "RC2 on paper, part 4: Dinis's pen on pages 14 to 19 of the printed release candidate 2 (chapter 3, graphs, and the start of chapter 4), sixty notes, 84 to 143, as callouts on each photograph, with two new themes (Draw it; Answers to For Dinis) and his answers (the presentation is graphs.sgit.ai; Wardley maps before graphs). Dinis asked whether every page was tracked where all the comments can be seen; it was not, so this release adds RC2 on paper: every page, every note (/reviews/paper/), with each page mapped to its chapter, a chapters-by-theme table, and all 143 notes in one table with their own addresses, filterable by theme and chapter and searchable, plus notes.json; the build refuses a batch without its article and notes not numbered in order. A strip, A new land (note 142: explorers, villagers, town planners, as the population grows), and a brief to the editor."
   }
  ]
 }

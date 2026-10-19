@@ -27,7 +27,7 @@ FONTS = {"Caveat": ROOT / "admin/content/reviews/fonts/caveat/caveat-400-700.wof
 INK, DIM, PAPER, PEN = "#1f2937", "#9ca3af", "#ffffff", "#1d3a8a"
 THEME = {"first-page": "#dc2626", "show": "#2563eb", "doing": "#16a34a", "altitude": "#9333ea", "process-out": "#d97706",
          "voice": "#0891b2", "reader-context": "#db2777", "release": "#4f46e5",
-         "evidence": "#0f766e", "links": "#c026d3", "works": "#15803d"}
+         "evidence": "#0f766e", "links": "#c026d3", "works": "#15803d", "answers": "#475569", "visual": "#ea580c"}
 HAND, TYPE = "Caveat, cursive", "Plex, 'IBM Plex Sans', Arial, sans-serif"
 # which part each hands-on chapter would sit beside, if the hands-on part is spread across the book (note 11): a proposal
 SPREAD = {30: "working-with-agents", 31: "before-you-start", 32: "the-frame", 33: "the-frame", 34: "getting-the-job",
@@ -663,7 +663,106 @@ def build_paper_reviews(ctx):
             target = f"{page}-redrawn.svg" if page else "after-" + name.replace("after_", "").replace("_", "-") + ".svg"
             (out / target).write_text(DRAW[name](rv), encoding="utf-8")
         written.append(rv["id"])
+    if "page" in ctx:
+        build_hub(ctx)
     return written
+
+
+# ------------------------------------------------------------------ the hub: every page, every note, in one place
+def build_hub(ctx):
+    """reviews/paper/index.html and reviews/paper/notes.json: every page reviewed, mapped to its chapter, and every
+    note in one table, filterable by theme, chapter and batch. The chapter is the last one starting on or before the
+    page, from the contents in rc2-01; a page before chapter 1 is front matter."""
+    page, esc_, write = ctx["page"], ctx["esc"], ctx["write"]
+    reviews = [json.loads(f.read_text(encoding="utf-8")) for f in sorted(SRC.glob("*.json"))]
+    chapters = next(rv["contents"]["chapters"] for rv in reviews if "contents" in rv)
+    themes = {}
+    for rv in reviews:
+        themes.update(rv["themes"])
+
+    def chapter_of(num):
+        ch = [c for c in chapters if c["page"] <= num]
+        return (f'{ch[-1]["n"]}. {ch[-1]["title"]}', f'ch{ch[-1]["n"]}') if ch else ("Front matter", "front")
+
+    pages, notes = [], []
+    for rv in reviews:
+        if not rv.get("article"):
+            raise SystemExit(f"paper review {rv['id']}: no article")
+        for pg in rv["pages"]:
+            num = int(pg["id"].split("-")[1])
+            chap, ckey = chapter_of(num)
+            pages.append({"batch": rv["id"], "part": rv["part"], "page": num, "id": pg["id"], "name": pg["name"], "chapter": chap,
+                          "ckey": ckey, "article": rv["article"], "photo": f'{rv["id"]}/{pg["photo"]}',
+                          "callouts": f'{rv["id"]}/{pg["id"]}-callouts.svg', "notes": [n["n"] for n in pg["notes"]]})
+            for n in pg["notes"]:
+                notes.append({"n": n["n"], "batch": rv["id"], "page": num, "chapter": chap, "ckey": ckey, "theme": n["theme"],
+                              "theme_name": themes[n["theme"]]["name"], "written": n["written"], "means": n["means"],
+                              "article": rv["article"], "callouts": f'{rv["id"]}/{pg["id"]}-callouts.svg'})
+    nums = [n["n"] for n in notes]
+    if nums != list(range(1, len(nums) + 1)):
+        raise SystemExit("paper reviews: the notes are not numbered 1 to N in order across the batches")
+    count = lambda key, v: sum(1 for n in notes if n[key] == v)
+    used = [t for t in themes if count("theme", t)]
+    ckeys = list(dict.fromkeys(n["ckey"] for n in notes))
+    cname = {n["ckey"]: n["chapter"] for n in notes}
+    dot = lambda t: f'<span style="display:inline-block;width:.7em;height:.7em;border-radius:50%;background:{THEME[t]};margin-right:.35em"></span>'
+    art = lambda a, pid: f'../../agent-articles/{a}.html#{pid}'
+
+    cards = "".join(
+        f'<a class="pr-card" href="{esc_(p["callouts"])}" title="{esc_(p["name"])}: the photograph with the notes typed">'
+        f'<img src="{esc_(p["photo"])}" alt="Page {p["page"]} of the printed candidate, marked" loading="lazy" width="150" height="200">'
+        f'<b>Page {p["page"]}</b><span class="small">{esc_(p["chapter"])}</span>'
+        f'<span class="small dim">{f"notes {p['notes'][0]} to {p['notes'][-1]}" if len(p["notes"]) > 1 else f"note {p['notes'][0]}"} &middot; part {p["part"]}</span></a>'
+        for p in pages)
+    matrix_head = "".join(f'<th title="{esc_(themes[t]["name"])}">{dot(t)}</th>' for t in used)
+    matrix = "".join(
+        f'<tr><td class="small">{esc_(cname[k])}</td>' + "".join(
+            f'<td class="small">{sum(1 for n in notes if n["ckey"] == k and n["theme"] == t) or ""}</td>' for t in used)
+        + f'<td class="small"><b>{count("ckey", k)}</b></td></tr>' for k in ckeys)
+    legend = "".join(f'<li>{dot(t)}<b>{esc_(themes[t]["name"])}</b> ({count("theme", t)}): {esc_(themes[t]["principle"])}</li>' for t in used)
+    chips_t = '<button type="button" class="chip" data-k="theme" data-v="all" aria-pressed="true">all themes</button>' + "".join(
+        f'<button type="button" class="chip" data-k="theme" data-v="{t}" aria-pressed="false">{dot(t)}{esc_(themes[t]["name"])} {count("theme", t)}</button>' for t in used)
+    chips_c = '<button type="button" class="chip" data-k="ch" data-v="all" aria-pressed="true">all pages</button>' + "".join(
+        f'<button type="button" class="chip" data-k="ch" data-v="{k}" aria-pressed="false">{esc_(cname[k])} {count("ckey", k)}</button>' for k in ckeys)
+    rows = "".join(
+        f'<tr id="n{n["n"]}" data-theme="{n["theme"]}" data-ch="{n["ckey"]}"><td><a href="#n{n["n"]}"><b>{n["n"]}</b></a></td>'
+        f'<td class="small"><a href="{esc_(n["callouts"])}">p. {n["page"]}</a><br><span class="dim">{esc_(n["chapter"])}</span></td>'
+        f'<td class="small">{dot(n["theme"])}{esc_(n["theme_name"])}</td>'
+        f'<td><span class="pr-pen">{esc_(n["written"])}</span></td><td class="small">{esc_(n["means"])}</td>'
+        f'<td class="small"><a href="{art(n["article"], "page-" + str(n["page"]))}">article</a></td></tr>'
+        for n in notes)
+    style = ('<style>.pr-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.8rem;margin:1rem 0}'
+             '.pr-card{display:flex;flex-direction:column;gap:.15rem;text-decoration:none;color:inherit;border:1px solid var(--line2);border-radius:10px;padding:.5rem;background:var(--panel)}'
+             '.pr-card img{width:100%;height:auto;border-radius:6px}.pr-pen{font-family:Caveat,cursive;font-size:1.25rem;line-height:1.15;color:#1d3a8a}'
+             '#pr-notes td{vertical-align:top}#pr-search{font:inherit;padding:.3rem .6rem;border:1px solid var(--line2);border-radius:8px;min-width:16rem;max-width:100%}'
+             ':root[data-theme="dark"] .pr-pen{color:#93c5fd}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pr-pen{color:#93c5fd}}</style>\n'
+             '<style>@font-face{font-family:Caveat;src:url(../../admin/content/reviews/fonts/caveat/caveat-400-700.woff2) format("woff2")}</style>\n')
+    script = ('<script>(function(){var f={theme:"all",ch:"all",q:""};function go(){document.querySelectorAll("#pr-notes tbody tr").forEach(function(tr){'
+              'tr.hidden=!((f.theme==="all"||tr.dataset.theme===f.theme)&&(f.ch==="all"||tr.dataset.ch===f.ch)&&(!f.q||tr.textContent.toLowerCase().indexOf(f.q)>=0))});'
+              'var v=document.querySelectorAll("#pr-notes tbody tr:not([hidden])").length;document.getElementById("pr-shown").textContent=v}'
+              'document.getElementById("pr-filters").addEventListener("click",function(ev){var b=ev.target.closest(".chip");if(!b)return;f[b.dataset.k]=b.dataset.v;'
+              'document.querySelectorAll("#pr-filters .chip[data-k="+b.dataset.k+"]").forEach(function(x){x.setAttribute("aria-pressed",String(x===b))});go()});'
+              'document.getElementById("pr-search").addEventListener("input",function(e){f.q=e.target.value.toLowerCase();go()})})();</script>')
+    body = f"""<h1>RC2 on paper: every page, every note</h1>
+<p class="lede">Dinis is reading the printed release candidate 2 with a pen. Each batch of photographs is a record and an article; this page puts them together: {len(pages)} pages, {len(notes)} notes, {len(used)} themes, mapped to the chapter each page is in. Every note has its own address (<code>#n52</code>), the photograph it is on, its words as written and what they mean.</p>
+<h2 id="pages">The pages</h2>
+<p class="small dim">Each card opens the photograph with the notes boxed, numbered and typed.</p>
+<div class="pr-cards">{cards}</div>
+<h2 id="map">Chapters by theme</h2>
+<div class="tablewrap"><table><thead><tr><th>Chapter</th>{matrix_head}<th>Notes</th></tr></thead><tbody>{matrix}</tbody></table></div>
+<ul class="small">{legend}</ul>
+<h2 id="notes">Every note</h2>
+<div class="gr-filters" id="pr-filters"><p><span class="dim">Theme</span> {chips_t}</p><p><span class="dim">Chapter</span> {chips_c}</p>
+<p><input id="pr-search" type="search" placeholder="Search the notes" aria-label="Search the notes"> <span class="small dim"><span id="pr-shown">{len(notes)}</span> shown</span></p></div>
+<div class="tablewrap"><table id="pr-notes"><thead><tr><th>#</th><th>Page</th><th>Theme</th><th>Written</th><th>What it means</th><th></th></tr></thead><tbody>{rows}</tbody></table></div>
+<p class="small dim">Source: <code>admin/content/reviews/paper/rc2-*.json</code>, drawn by <code>admin/build/paper_reviews.py</code>; the same notes as data in <a href="notes.json">notes.json</a>. The articles: {" &middot; ".join(f'<a href="{art(rv["article"], "in-short")}">part {rv["part"]}</a>' for rv in reviews)}.</p>
+{script}"""
+    page("reviews/paper/index.html", "RC2 on paper: every page, every note", body,
+         f"Every page of Dinis's paper review of release candidate 2, and all {len(notes)} notes, mapped to chapter and theme.",
+         crumbs=(("RC2 on paper", "reviews/paper/index.html"),), extra_head=style, wide=True)
+    write("reviews/paper/notes.json", json.dumps({"what": "Every note of Dinis's paper review of release candidate 2, in order.",
+                                                  "themes": {t: themes[t] for t in used}, "pages": pages, "notes": notes},
+                                                 indent=1, ensure_ascii=False) + "\n")
 
 
 if __name__ == "__main__":

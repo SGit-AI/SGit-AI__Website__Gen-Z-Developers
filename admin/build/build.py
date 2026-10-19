@@ -1435,7 +1435,7 @@ def main():
         build_read_v2(v2)
     build_infographics({"page": page, "write": write, "esc": esc, "md": md, "graph": graph_model.load(), "version": VERSION})
     build_covers({"page": page, "esc": esc, "first_edition_lines": FIRST_EDITION["cover_lines"]})
-    build_paper_reviews({})
+    build_paper_reviews({"page": page, "esc": esc, "write": write})
     build_positioning({})
     build_qr_links({"page": page, "esc": esc})
     build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib, articles, v2)

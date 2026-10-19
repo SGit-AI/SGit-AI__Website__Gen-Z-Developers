@@ -1,0 +1,827 @@
+{
+ "id": "rc2-04",
+ "series": "RC2 on paper",
+ "part": 4,
+ "title": "Release candidate 2 on paper, batch 4: pages 14 to 19, chapter 3, Everything is connected: graphs, and the start of chapter 4, Where do you land?",
+ "candidate": "v2.0.0-rc2",
+ "pdf": "v2/generation-z-developers-v2.0.0-rc2.pdf",
+ "reviewer": "Dinis Cruz",
+ "date": "2026-10-19",
+ "how": "Six photographs of pages 14 to 19 of the printed candidate; notes 84 to 143, continuing the series. The handwriting was read by the journalist; four readings are uncertain and marked so.",
+ "drawings": [],
+ "themes": {
+  "first-page": {
+   "name": "The first pages sell the book",
+   "principle": "The opening is about the reader, and the reason to read comes first (Zoom in, not discover)."
+  },
+  "show": {
+   "name": "Show the book, do not list it",
+   "principle": "A story or a picture where an argument would do less."
+  },
+  "altitude": {
+   "name": "Topics first, details under them",
+   "principle": "Detail the point does not need is cut (Zoom in, not discover)."
+  },
+  "process-out": {
+   "name": "The making-of out of the reader's way",
+   "principle": "The 2018 book and its outlines go to the section at the end."
+  },
+  "voice": {
+   "name": "The voice is mine",
+   "principle": "Lines that sound odd, hedged or not like Dinis are rewritten."
+  },
+  "reader-context": {
+   "name": "Meet the reader where they are",
+   "principle": "Explain a term before using it, with a short analogy, and say it first, then link."
+  },
+  "evidence": {
+   "name": "Fact or opinion, visibly",
+   "principle": "The reader can see which claims are backed by data and which are Dinis's opinion, and the data is found (Follow the rabbit holes)."
+  },
+  "links": {
+   "name": "The website holds what the page cannot",
+   "principle": "Where the book needs more room, a QR code sends the reader to the site: the source, the explainer, the visualisation."
+  },
+  "works": {
+   "name": "What works, keep it",
+   "principle": "The ticks: what the pen approves is kept, and the format it likes is used again."
+  },
+  "answers": {
+   "name": "Answers to For Dinis",
+   "principle": "Where the candidate asked Dinis a question in a For Dinis box, the pen answers it, and the next candidate acts on the answer."
+  },
+  "visual": {
+   "name": "Draw it",
+   "principle": "Where an idea is a shape (a graph, a map, an evolution, a comparison), the book draws it instead of describing it."
+  },
+  "doing": {
+   "name": "Doing starts early, and runs through",
+   "principle": "A manual, not a journey: you learn by doing, so you start doing early (Zoom in, not discover)."
+  }
+ },
+ "pages": [
+  {
+   "id": "page-14",
+   "photo": "photos/page-14.jpg",
+   "name": "Page 14, chapter 3 begins: graphs",
+   "notes": [
+    {
+     "n": 84,
+     "region": [
+      0.2,
+      0.03,
+      0.68,
+      0.12
+     ],
+     "written": "Basically here we really need to make the (visual) case of \"why graphs\" & why they are so powerful & why they are everywhere",
+     "means": "Chapter 3 has one job: show, visually, why graphs, why they are so powerful and why they are everywhere.",
+     "theme": "visual"
+    },
+    {
+     "n": 85,
+     "region": [
+      0.05,
+      0.225,
+      0.83,
+      0.085
+     ],
+     "written": "it's not their fault, the industry terminology is all over the place [left: Reword, too harsh]",
+     "means": "'I have met people for whom a graph is a picture with boxes' blames the reader; the industry's words are the problem. Reword.",
+     "theme": "voice"
+    },
+    {
+     "n": 86,
+     "region": [
+      0.46,
+      0.31,
+      0.4,
+      0.035
+     ],
+     "written": "give more analogies of what is a node & an edge",
+     "means": "More analogies for a node and an edge, before the definition.",
+     "theme": "reader-context"
+    },
+    {
+     "n": 87,
+     "region": [
+      0.83,
+      0.365,
+      0.09,
+      0.15
+     ],
+     "written": "not relevant at this stage of the book",
+     "means": "The graphs book on graphs.sgit.ai is not for page 14.",
+     "theme": "altitude"
+    },
+    {
+     "n": 88,
+     "region": [
+      0.26,
+      0.405,
+      0.53,
+      0.04
+     ],
+     "written": "meaningless is too strong [and] each edge is a signal",
+     "means": "'A node connected to nothing is literally meaningless' overstates it; say instead that each edge is a signal.",
+     "theme": "voice"
+    },
+    {
+     "n": 89,
+     "region": [
+      0.12,
+      0.45,
+      0.7,
+      0.095
+     ],
+     "written": "needs rewrite",
+     "means": "The three things people mean by graph needs rewriting.",
+     "theme": "voice"
+    },
+    {
+     "n": 90,
+     "region": [
+      0.02,
+      0.415,
+      0.11,
+      0.53
+     ],
+     "written": "my use of graph [...] this is wrong ↓ a graph node can be anything ↓ since a chart is a graph too ↓ see the \"thinking in graphs\" or \"fractal semantic graphs\"",
+     "means": "'Never a chart, never a figure' is wrong: a node can be anything, and a chart is a graph too. Take the definition from thinking in graphs, or fractal semantic graphs. (The first words are partly uncertain.)",
+     "theme": "reader-context"
+    },
+    {
+     "n": 91,
+     "region": [
+      0.12,
+      0.55,
+      0.73,
+      0.09
+     ],
+     "written": "[struck with a wave: In 2018 I left an outline for a chapter called Graphs ...] see →",
+     "means": "Cut the 2018 outline.",
+     "theme": "process-out"
+    },
+    {
+     "n": 92,
+     "region": [
+      0.13,
+      0.66,
+      0.72,
+      0.07
+     ],
+     "written": "see graphs.sgit.ai",
+     "means": "The answer to For Dinis: the presentation on graphs is graphs.sgit.ai.",
+     "theme": "answers"
+    },
+    {
+     "n": 93,
+     "region": [
+      0.27,
+      0.75,
+      0.32,
+      0.03
+     ],
+     "written": "DEMEANING [circled: easier]",
+     "means": "That a Generation Z reader will find the chapter easier than Dinis's generation did is demeaning.",
+     "theme": "voice"
+    },
+    {
+     "n": 94,
+     "region": [
+      0.31,
+      0.875,
+      0.48,
+      0.04
+     ],
+     "written": "these kind of references are weird since the reader has not read them [beside: In Follow the rabbit holes]",
+     "means": "Do not cite a chapter the reader has not reached as if they had read it.",
+     "theme": "reader-context"
+    }
+   ]
+  },
+  {
+   "id": "page-15",
+   "photo": "photos/page-15.jpg",
+   "name": "Page 15, A map is a graph with positions",
+   "notes": [
+    {
+     "n": 95,
+     "region": [
+      0.2,
+      0.03,
+      0.63,
+      0.035
+     ],
+     "written": "see article and entire section in graphs.sgit.ai about \"thinking in graphs\"",
+     "means": "Draw on the article and the whole section on thinking in graphs at graphs.sgit.ai.",
+     "theme": "links"
+    },
+    {
+     "n": 96,
+     "region": [
+      0.53,
+      0.065,
+      0.33,
+      0.04
+     ],
+     "written": "reader doesn't know about this book",
+     "means": "'The graphs book has a line' assumes the reader knows the graphs book.",
+     "theme": "reader-context"
+    },
+    {
+     "n": 97,
+     "region": [
+      0.45,
+      0.15,
+      0.18,
+      0.03
+     ],
+     "written": "harsh [over: for you too]",
+     "means": "'If you are my age and twenty years inside a field, that line is for you too' is harsh.",
+     "theme": "voice"
+    },
+    {
+     "n": 98,
+     "region": [
+      0.8,
+      0.145,
+      0.13,
+      0.1
+     ],
+     "written": "we need to show lots of examples here",
+     "means": "Show a graph of a field in someone's head, with lots of examples.",
+     "theme": "show"
+    },
+    {
+     "n": 99,
+     "region": [
+      0.62,
+      0.27,
+      0.31,
+      0.085
+     ],
+     "written": "also show here why some of the biggest companies in the world are based on graphs",
+     "means": "Show why some of the biggest companies in the world are built on graphs.",
+     "theme": "evidence"
+    },
+    {
+     "n": 100,
+     "region": [
+      0.11,
+      0.28,
+      0.35,
+      0.045
+     ],
+     "written": "we need to qualify this better [over: A map is a graph with positions]",
+     "means": "'A map is a graph with positions' needs qualifying.",
+     "theme": "reader-context"
+    },
+    {
+     "n": 101,
+     "region": [
+      0.4,
+      0.34,
+      0.28,
+      0.04
+     ],
+     "written": "reader has no idea what a Wardley map is (by page 15)",
+     "means": "By page 15 the reader has not met a Wardley map.",
+     "theme": "reader-context"
+    },
+    {
+     "n": 102,
+     "region": [
+      0.1,
+      0.375,
+      0.06,
+      0.115
+     ],
+     "written": "not relevant to the reader",
+     "means": "The shifts in Dinis's talk on Wardley maps are not for the reader.",
+     "theme": "altitude"
+    },
+    {
+     "n": 103,
+     "region": [
+      0.84,
+      0.4,
+      0.09,
+      0.05
+     ],
+     "written": "show this visually",
+     "means": "Draw a Wardley map as a graph with two axes.",
+     "theme": "visual"
+    },
+    {
+     "n": 104,
+     "region": [
+      0.16,
+      0.475,
+      0.36,
+      0.02
+     ],
+     "written": "[struck: The 2018 book said the same thing from the other side, / That chapter was about]",
+     "means": "Trim the 2018 framing.",
+     "theme": "process-out"
+    },
+    {
+     "n": 105,
+     "region": [
+      0.45,
+      0.535,
+      0.49,
+      0.06
+     ],
+     "written": "yes, and show example [and] visualise this",
+     "means": "'Decisions based on shadows of reality' is right: show an example, and draw it.",
+     "theme": "visual"
+    },
+    {
+     "n": 106,
+     "region": [
+      0.55,
+      0.61,
+      0.4,
+      0.22
+     ],
+     "written": "First we need to show the Wardley maps & how to read them → then go into graphs",
+     "means": "The answer to For Dinis: Wardley maps first, and how to read them; then graphs.",
+     "theme": "answers"
+    },
+    {
+     "n": 107,
+     "region": [
+      0.46,
+      0.745,
+      0.2,
+      0.03
+     ],
+     "written": "weird [over: and that I now cannot unsee]",
+     "means": "'That I now cannot unsee' sounds odd.",
+     "theme": "voice"
+    },
+    {
+     "n": 108,
+     "region": [
+      0.13,
+      0.845,
+      0.37,
+      0.065
+     ],
+     "written": "First show example → reality, systems, nature",
+     "means": "Graphs nest: show it first, in reality, in systems and in nature, then say it.",
+     "theme": "show"
+    }
+   ]
+  },
+  {
+   "id": "page-16",
+   "photo": "photos/page-16.jpg",
+   "name": "Page 16, Code is already a graph",
+   "notes": [
+    {
+     "n": 109,
+     "region": [
+      0.3,
+      0.1,
+      0.62,
+      0.045
+     ],
+     "written": "this idea of \"fractal semantic graphs\" is a good example that should make the reader think & ideally make a paradigm shift [and] Focus here and explain it",
+     "means": "Fractal semantic graphs is the idea that can shift the reader's thinking: focus the chapter on it and explain it.",
+     "theme": "altitude"
+    },
+    {
+     "n": 110,
+     "region": [
+      0.13,
+      0.155,
+      0.07,
+      0.05
+     ],
+     "written": "visualise this",
+     "means": "Draw the layers: a law in a graph of laws, an article in a graph of terms.",
+     "theme": "visual"
+    },
+    {
+     "n": 111,
+     "region": [
+      0.2,
+      0.142,
+      0.22,
+      0.018
+     ],
+     "written": "[struck: The newsroom's introduction to what I call]",
+     "means": "Say the idea without its provenance.",
+     "theme": "process-out"
+    },
+    {
+     "n": 112,
+     "region": [
+      0.64,
+      0.28,
+      0.26,
+      0.1
+     ],
+     "written": "this is a good way to start explaining graphs → connections",
+     "means": "'The world is made of connections; groups of groups are how we think' is a good way into graphs.",
+     "theme": "works"
+    },
+    {
+     "n": 113,
+     "region": [
+      0.49,
+      0.345,
+      0.14,
+      0.04
+     ],
+     "written": "find better word [under: finding]",
+     "means": "'A chain that ends in a rumour is a finding too' needs a better word than finding.",
+     "theme": "voice"
+    },
+    {
+     "n": 114,
+     "region": [
+      0.56,
+      0.575,
+      0.33,
+      0.07
+     ],
+     "written": "define better [circled: A refactor is]",
+     "means": "Define refactor better, for a reader who has not met the word.",
+     "theme": "reader-context"
+    },
+    {
+     "n": 115,
+     "region": [
+      0.16,
+      0.73,
+      0.77,
+      0.1
+     ],
+     "written": "rewrite [the newsroom example struck]",
+     "means": "Rewrite the honest answer on AI-generated code; cut the newsroom's sgit example.",
+     "theme": "voice"
+    },
+    {
+     "n": 116,
+     "region": [
+      0.11,
+      0.85,
+      0.81,
+      0.11
+     ],
+     "written": "good but for later in the book since most ZX founders have no idea what we are talking about here ↳ on this topic see what we did at secrets.sgit.ai",
+     "means": "Code is already a graph is good, but it belongs later: most ZX founders will not follow it on page 16. See secrets.sgit.ai for the topic.",
+     "theme": "altitude"
+    }
+   ]
+  },
+  {
+   "id": "page-17",
+   "photo": "photos/page-17.jpg",
+   "name": "Page 17, Start anywhere",
+   "notes": [
+    {
+     "n": 117,
+     "region": [
+      0.84,
+      0.14,
+      0.1,
+      0.085
+     ],
+     "written": "show example of this working in practice",
+     "means": "Reading code at the altitude you need: show it working.",
+     "theme": "show"
+    },
+    {
+     "n": 118,
+     "region": [
+      0.6,
+      0.26,
+      0.35,
+      0.07
+     ],
+     "written": "this needs to be a common theme across the book [beside: It does not matter where you start; it matters that you start.]",
+     "means": "'It does not matter where you start; it matters that you start' runs through the whole book.",
+     "theme": "works"
+    },
+    {
+     "n": 119,
+     "region": [
+      0.84,
+      0.355,
+      0.11,
+      0.19
+     ],
+     "written": "yes but they need a place to put those nodes & edges",
+     "means": "Pick a node, follow an edge: and give the reader somewhere to put the nodes and edges.",
+     "theme": "doing"
+    },
+    {
+     "n": 120,
+     "region": [
+      0.47,
+      0.47,
+      0.4,
+      0.03
+     ],
+     "written": "what is the context (& audience) of these sections [over: From the register]",
+     "means": "What is the From the register box for, and for whom?",
+     "theme": "reader-context"
+    },
+    {
+     "n": 121,
+     "region": [
+      0.16,
+      0.645,
+      0.75,
+      0.055
+     ],
+     "written": "this should happen now & we should be using prompts & QR code to examples & the text of the prompt",
+     "means": "Your first graph should happen here, in chapter 3, with prompts, the prompt's text, and QR codes to examples.",
+     "theme": "links"
+    },
+    {
+     "n": 122,
+     "region": [
+      0.56,
+      0.72,
+      0.4,
+      0.175
+     ],
+     "written": "Question: what about if every page had a QR code to that page (& version) online? or section → whose visits to it will drive revenue",
+     "means": "Every page, or section, could carry a QR code to itself online, at its version, and the visits would drive revenue.",
+     "theme": "links"
+    }
+   ]
+  },
+  {
+   "id": "page-18",
+   "photo": "photos/page-18.jpg",
+   "name": "Page 18, chapter 4 begins: Where do you land?",
+   "notes": [
+    {
+     "n": 123,
+     "region": [
+      0.76,
+      0.04,
+      0.11,
+      0.035
+     ],
+     "written": "visualise this",
+     "means": "Draw the map the opening asks the reader to draw.",
+     "theme": "visual"
+    },
+    {
+     "n": 124,
+     "region": [
+      0.7,
+      0.205,
+      0.24,
+      0.15
+     ],
+     "written": "↳ first we got the reader to draw a graph, top down; then we [make it evolve?] with a storyboard, asking the question and the evolution → the reader will have a Wardley map",
+     "means": "Build the map in steps: the reader draws a graph top down, then a storyboard asks the question and adds evolution, and the reader has a Wardley map. (Two words uncertain.)",
+     "theme": "show"
+    },
+    {
+     "n": 125,
+     "region": [
+      0.1,
+      0.26,
+      0.07,
+      0.09
+     ],
+     "written": "this needs to be visual",
+     "means": "The models moving right, the way of working on the left: draw it.",
+     "theme": "visual"
+    },
+    {
+     "n": 126,
+     "region": [
+      0.6,
+      0.42,
+      0.27,
+      0.025
+     ],
+     "written": "??? what does this mean [over: gave you the graph]",
+     "means": "'Everything is connected: graphs gave you the graph' is unclear.",
+     "theme": "voice"
+    },
+    {
+     "n": 127,
+     "region": [
+      0.77,
+      0.52,
+      0.2,
+      0.035
+     ],
+     "written": "↳ show other types of evolution",
+     "means": "Not only the four stages of activities: show other kinds of evolution here.",
+     "theme": "show"
+    },
+    {
+     "n": 128,
+     "region": [
+      0.17,
+      0.555,
+      0.71,
+      0.035
+     ],
+     "written": "[struck: A map you cannot be wrong about is a diagram.]",
+     "means": "Cut.",
+     "theme": "voice"
+    },
+    {
+     "n": 129,
+     "region": [
+      0.09,
+      0.895,
+      0.35,
+      0.03
+     ],
+     "written": "Don't start with the [where?] [bracket on: Why do I care so much? In 2022 I gave a talk ...]",
+     "means": "Do not open the section with why Dinis cares and his 2022 talk. (The last word is uncertain.)",
+     "theme": "altitude"
+    },
+    {
+     "n": 130,
+     "region": [
+      0.71,
+      0.87,
+      0.19,
+      0.03
+     ],
+     "written": "start here [arrow from: The map also tells you what to build and what to buy ...]",
+     "means": "Start with what the map does for a founder: what to build, what to buy, where the market is.",
+     "theme": "first-page"
+    },
+    {
+     "n": 131,
+     "region": [
+      0.17,
+      0.648,
+      0.7,
+      0.028
+     ],
+     "written": "[struck: Once a thing is on a map, placed and connected, I stop carrying it in my head.]",
+     "means": "Cut.",
+     "theme": "voice"
+    },
+    {
+     "n": 132,
+     "region": [
+      0.23,
+      0.72,
+      0.45,
+      0.025
+     ],
+     "written": "↳ explain ILC, movements & attention",
+     "means": "Explain ILC (innovate, leverage, commoditise), movement and attention.",
+     "theme": "reader-context"
+    },
+    {
+     "n": 133,
+     "region": [
+      0.55,
+      0.788,
+      0.26,
+      0.018
+     ],
+     "written": "[struck: For that talk I made a table of it.]",
+     "means": "Cut.",
+     "theme": "process-out"
+    }
+   ]
+  },
+  {
+   "id": "page-19",
+   "photo": "photos/page-19.jpg",
+   "name": "Page 19, explorers, villagers and town planners",
+   "notes": [
+    {
+     "n": 134,
+     "region": [
+      0.68,
+      0.11,
+      0.16,
+      0.1
+     ],
+     "written": "visualise this",
+     "means": "Draw the rows of evolution.",
+     "theme": "visual"
+    },
+    {
+     "n": 135,
+     "region": [
+      0.29,
+      0.278,
+      0.15,
+      0.025
+     ],
+     "written": "[struck: Once you see it, you see; written over: experiment]",
+     "means": "'Experiment with it in your own work and your own career.'",
+     "theme": "voice"
+    },
+    {
+     "n": 136,
+     "region": [
+      0.16,
+      0.31,
+      0.17,
+      0.02
+     ],
+     "written": "[struck: Where do you fit?]",
+     "means": "The heading goes; see note 139.",
+     "theme": "voice"
+    },
+    {
+     "n": 137,
+     "region": [
+      0.34,
+      0.31,
+      0.24,
+      0.035
+     ],
+     "written": "harsh [circled: I most want this book to ask you]",
+     "means": "'The question I most want this book to ask you' is harsh.",
+     "theme": "voice"
+    },
+    {
+     "n": 138,
+     "region": [
+      0.75,
+      0.3,
+      0.16,
+      0.04
+     ],
+     "written": "this evolution is not relevant",
+     "means": "Wardley's names in 2015 and since 2023 are not for the reader.",
+     "theme": "altitude"
+    },
+    {
+     "n": 139,
+     "region": [
+      0.1,
+      0.39,
+      0.07,
+      0.2
+     ],
+     "written": "\"Let's meet the cast\" or \"players\" or \"personalities\"",
+     "means": "The new heading: Let's meet the cast, or the players, or the personalities. (Reading partly uncertain.)",
+     "theme": "show"
+    },
+    {
+     "n": 140,
+     "region": [
+      0.16,
+      0.36,
+      0.65,
+      0.09
+     ],
+     "written": "[struck: Wardley named them: pioneers, settlers and town planners in 2015, and since 2023 ... The 2018 book had this as an outline ...]",
+     "means": "Cut the naming history and the 2018 outline.",
+     "theme": "process-out"
+    },
+    {
+     "n": 141,
+     "region": [
+      0.41,
+      0.52,
+      0.41,
+      0.025
+     ],
+     "written": "[struck: What I can tell you is what I have seen.] visualise comparison",
+     "means": "Cut the line, and draw the three side by side.",
+     "theme": "visual"
+    },
+    {
+     "n": 142,
+     "region": [
+      0.82,
+      0.36,
+      0.14,
+      0.53
+     ],
+     "written": "visualise → the real world → explorers of a new land → followed by the villagers → followed by the town planners ↓ is a good one ↓ as population grows",
+     "means": "Draw it as the settling of a new land: explorers first, then villagers, then town planners, as the population grows.",
+     "theme": "visual"
+    },
+    {
+     "n": 143,
+     "region": [
+      0.1,
+      0.87,
+      0.11,
+      0.05
+     ],
+     "written": "these are great :)",
+     "means": "The three descriptions of the explorer, the villager and the town planner: keep them.",
+     "theme": "works"
+    }
+   ]
+  }
+ ],
+ "article": "rc2-on-paper-pages-14-to-19"
+}
