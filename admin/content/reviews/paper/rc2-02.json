@@ -7,11 +7,12 @@
  "pdf": "v2/generation-z-developers-v2.0.0-rc2.pdf",
  "reviewer": "Dinis Cruz",
  "date": "2026-10-19",
- "how": "Six photographs of pages 4 to 9 of the printed candidate, sent out of page order and put back in order here; the notes continue the numbering of batch 1 from 14. The handwriting was read by the journalist; four readings are uncertain and marked so.",
+ "how": "Six photographs of pages 4 to 9 of the printed candidate, sent out of page order and put back in order here; the notes continue the numbering of batch 1 from 14. The handwriting was read by the journalist; four readings were uncertain, and Dinis confirmed them the same day (notes 31, 36, 49, 51).",
  "drawings": [
   "after_before_you_read",
   "after_part_opener",
-  "after_chapter_one"
+  "after_chapter_one",
+  "after_reviewer_page"
  ],
  "themes": {
   "first-page": {
@@ -282,8 +283,8 @@
       0.14,
       0.06
      ],
-     "written": "I now [?] [circled: are not]",
-     "means": "Uncertain reading: a change to 'a lot of them are not looking for a job'; Dinis to confirm.",
+     "written": "now [circled: are not]",
+     "means": "Wrong as written: a lot of Generation Z are now looking for a job, not 'not looking'. (Dinis confirmed the reading.)",
      "theme": "voice"
     },
     {
@@ -342,8 +343,8 @@
       0.09,
       0.16
      ],
-     "written": "wrong story ... [the rest runs off the photograph]",
-     "means": "The mother-and-daughter line is the wrong story; Dinis to say what the rest of the note says.",
+     "written": "wrong story, since either could have built it",
+     "means": "The story goes both ways: Generation X can build it and impress Generation Z, or build a game or an app for them; not only the young one building what the older one described. (Dinis confirmed the reading.)",
      "theme": "voice"
     },
     {
@@ -512,8 +513,8 @@
       0.58,
       0.1
      ],
-     "written": "yes, point to our website (of this book) where ALL materials are public → first version of this site will have my own stand ups :)",
-     "means": "The measure: point to the book's website, where all the materials are public; the first version will carry Dinis's own stand-ups. (Reading of 'stand ups' uncertain.)",
+     "written": "yes, point to our website (of this book) where ALL materials are public → first version of this site will have my own startups :)",
+     "means": "The measure: point to the book's website, where all the materials are public; its first version will list Dinis's own startups as the first examples. (Dinis confirmed 'startups'.)",
      "theme": "reader-context"
     },
     {
@@ -536,8 +537,8 @@
       0.18,
       0.115
      ],
-     "written": "But I really like this kind of box, but it means we need two ... [the rest runs off the photograph]",
-     "means": "The For Dinis boxes work, but they imply two versions of the book (likely one for review and one for readers); Dinis to confirm.",
+     "written": "But I really like this kind of box, but it means we need two [PDFs, two views]",
+     "means": "Keep the boxes, in a second edition of each release candidate: the release edition, ready to sell with nothing draft in it, and a reviewer edition, for any reviewer, with notes, questions and places to answer. (Dinis confirmed and explained; decision 018.)",
      "theme": "release"
     }
    ]

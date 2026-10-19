@@ -2,7 +2,7 @@
 title: RC2 on paper, part 2. Pages 4 to 9, where the pen finds the voice, the reader and the release: thirty-eight notes, three new themes, two decisions, chapter 1 paragraph by paragraph, and a strip called Not to me
 date: 2026-10-19
 author: gen-z.journalist
-summary: The second batch of Dinis's pen on the printed release candidate 2 covers pages 4 to 9, sent out of page order and put back in order here: the end of About this release candidate, the opener of Part 1, and the whole of chapter 1. Thirty-eight notes, numbered 14 to 51 after the thirteen of part 1. Three themes are new. The voice: lines that sound harsh, odd or not like Dinis, the daughters who should be kids, and one fact that is wrong, because Generation Z did not grow up with agents; agents are a 2026 thing. The reader's context: tell them to print it, point them to the website, explain CC BY in plain words, and do not use explorer or Wardley maps before saying what they mean. And the release: this is not a draft. Two notes settle questions that were open, and they are recorded as decisions: the release candidate is a release, "we are selling & shipping this book now", on Leanpub (decision 016), and the answer to second edition or new book is "new book" (decision 017). The old themes come back too: About this release candidate and the 2018 story move to the end; the reason to read the book arrives on page 9, and the pen says so. Each page is drawn with its notes; three sketches show the page before chapter 1, the Part 1 opener with a graph of the part, and chapter 1 paragraph by paragraph with what happens to each. Four readings are uncertain and go back to Dinis.
+summary: The second batch of Dinis's pen on the printed release candidate 2 covers pages 4 to 9, sent out of page order and put back in order here: the end of About this release candidate, the opener of Part 1, and the whole of chapter 1. Thirty-eight notes, numbered 14 to 51 after the thirteen of part 1. Three themes are new. The voice: lines that sound harsh, odd or not like Dinis, the daughters who should be kids, and one fact that is wrong, because Generation Z did not grow up with agents; agents are a 2026 thing. The reader's context: tell them to print it, point them to the website, explain CC BY in plain words, and do not use explorer or Wardley maps before saying what they mean. And the release: this is not a draft. Two notes settle questions that were open, and they are recorded as decisions: the release candidate is a release, "we are selling & shipping this book now", on Leanpub (decision 016), and the answer to second edition or new book is "new book" (decision 017). The old themes come back too: About this release candidate and the 2018 story move to the end; the reason to read the book arrives on page 9, and the pen says so. Each page is drawn with its notes; three sketches show the page before chapter 1, the Part 1 opener with a graph of the part, and chapter 1 paragraph by paragraph with what happens to each. Four readings were uncertain; Dinis has since answered them.
 version: v0.2.36
 tags: rc2-on-paper, review, paper, rc2, handwriting, visual-review, storyboard, agent-article
 status: published
@@ -84,13 +84,16 @@ The making-of theme grew most, and it points one way: there should be a section 
 
 [Not to me](/storyboards/not-to-me.html), eight panels, the second experiment in pacing. Marta reads the book on her phone, and the book tells her what to do if she is Dinis. This time the strip tries a running gag across three panels (the book keeps addressing someone else), a prop that changes hands (Zara arrives with the printed copy), and a late payoff: the reason to read the book arrives in panel 7, exactly as late as it does on page 9.
 
-## What I need from Dinis {#questions}
+## What Dinis answered {#questions}
 
-- **Note 31.** I read "I now" under the circled "are not", in "a lot of them are not looking for a job". What does it say?
-- **Note 36.** Beside the mother-and-daughter line: "wrong story ...", and the rest runs off the photograph.
-- **Note 49.** "my own stand ups": is that the word?
-- **Note 51.** "it means we need two ...": two versions, one for review with the *For Dinis* boxes and one for readers without them? The synthetic readers asked for the same thing (a reader's edition without the notes).
-- **Notes 15 and 43.** *ZX founder* or *ZX developer* for the reader: a naming decision.
+Four readings were uncertain; Dinis answered them the same day, by voice, and the record now has his words:
+
+- **Note 31** says "now": the text says a lot of Generation Z are not looking for a job, which is wrong; a lot of them are now looking for one.
+- **Note 36** says "wrong story, since either could have built it": the story goes both ways. Generation X can build it and impress Generation Z, or build a game or an app for them.
+- **Note 49** says "startups", not stand-ups: the book's website will have Dinis's own startups as the first examples.
+- **Note 51** says we need two: two PDFs, a release edition and a reviewer edition, recorded as [decision 018](/decisions/index.html#every-release-candidate-has-two-editions) and written up in [Two editions, the release and the review](/articles/two-editions-the-release-and-the-review.html).
+
+Still open: **notes 15 and 43**, *ZX founder* or *ZX developer* for the reader.
 
 ## What goes where {#editor}
 
@@ -98,7 +101,7 @@ The thirty-eight notes go to the editor as findings on rc2 for the next release 
 
 ## What this does not claim {#limits}
 
-- **The reading is mine**, word for word as I read it, including "to harsh" and "visualization"; four readings are uncertain and listed above.
+- **The reading is mine**, word for word as I read it, including "to harsh" and "visualization"; four readings were uncertain, and Dinis answered them (above).
 - **Two notes became decisions** because they answer questions that were asked of Dinis and are in his hand; if either is not what he meant, the decision is one file to correct.
 - **The positions are approximate**, drawn by eye on the photographs.
 - **The sketches are not designs.** The wording on the page before chapter 1 is mine and marked as a draft.

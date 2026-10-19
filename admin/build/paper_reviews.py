@@ -518,9 +518,66 @@ def after_chapter_one(rv):
     return svg(W, H, "".join(page_frame(b, h=H)), "Sketch: chapter 1 of rc2, paragraph by paragraph, with what happens to each")
 
 
+def after_reviewer_page(rv):
+    """Note 51 and decision 018: a page of the reviewer edition, with boxes the reviewer answers in pen."""
+    pen = Pen(51)
+    b = ['<rect x="6" y="8" width="980" height="64" fill="#4f46e5"/>',
+         text(40, 50, "REVIEWER EDITION \u00b7 release candidate 3 \u00b7 not the edition for sale", 20, weight="bold", fill="#fff", extra='letter-spacing="1.5"'),
+         text(40, 130, "1  Gen ZX: who this book is for", 32, weight="bold")]
+    y = 180
+    for i in range(22):
+        if i in (6, 7, 8):
+            if i == 6:
+                b.append(f'<rect x="34" y="{y - 22}" width="590" height="96" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>')
+                b.append(badge(30, y - 20, "R8", "#4f46e5", 17))
+        w = 560 - (i * 37 % 120)
+        b.append(f'<rect x="50" y="{y - 12}" width="{w}" height="11" rx="5" fill="#d1d5db"/>')
+        y += 32
+        if i == 13:
+            y += 20
+    # the margin: review boxes
+    bx, bw = 660, 310
+    boxes = [
+        ("R7", "Page 7 named the author's daughters. Here it says:", ["keep 'kids'", "'children'", "cut the line"], 0),
+        ("R8", "Which story is this paragraph telling?", ["Gen X builds it for Gen Z", "Gen Z builds it for Gen X", "both ways (note 36)"], 0),
+        ("R9", "Too much detail for chapter 1?", ["yes, cut", "no, keep", "move to part 7"], 3),
+    ]
+    by = 110
+    for rid, q, opts, lines in boxes:
+        h = 64 + len(wrap(q, 30)) * 22 + len(opts) * 34 + 70
+        b.append(f'<rect x="{bx}" y="{by}" width="{bw}" height="{h}" rx="12" fill="#fff" stroke="#4f46e5" stroke-width="2.5"/>')
+        b.append(badge(bx + 26, by + 26, rid, "#4f46e5", 17))
+        b.append(text(bx + 54, by + 32, "for reviewers", 14, weight="bold", fill="#4f46e5", extra='letter-spacing="1"'))
+        qy = by + 62
+        b.append(text(bx + 18, qy, wrap(q, 30), 17, lh=1.3))
+        oy = qy + len(wrap(q, 30)) * 22 + 12
+        for k, o in enumerate(opts):
+            b.append(f'<rect x="{bx + 18}" y="{oy + k * 34 - 16}" width="20" height="20" rx="3" fill="#fff" stroke="#374151" stroke-width="2"/>')
+            b.append(text(bx + 48, oy + k * 34, o, 16, fill="#374151"))
+        ly = oy + len(opts) * 34 + 6
+        if rid == "R8":
+            tick_x, tick_y, ans_y = bx + 22, oy + 2 * 34 - 8, ly - 4
+        for k in range(2):
+            b.append(f'<line x1="{bx + 18}" y1="{ly + k * 26}" x2="{bx + bw - 18}" y2="{ly + k * 26}" stroke="#cbd5e1" stroke-width="1.5"/>')
+        by += h + 22
+    # a space to draw
+    b.append(f'<rect x="{bx}" y="{by}" width="{bw}" height="{1150 - by}" rx="12" fill="#fafafa" stroke="#4f46e5" stroke-width="2.5" stroke-dasharray="9 7"/>')
+    b.append(badge(bx + 26, by + 26, "R10", "#4f46e5", 19))
+    b.append(text(bx + 56, by + 32, "draw it here", 14, weight="bold", fill="#4f46e5"))
+    b.append(text(bx + 18, by + 62, ["The graph of this part, as you", "see it: the chapters, and how", "they connect."], 16, fill="#6b7280", lh=1.3))
+    # a reviewer's pen, answering
+    b.append(pen.line(tick_x, tick_y, tick_x + 9, tick_y + 10, PEN, 3.5) + pen.line(tick_x + 9, tick_y + 10, tick_x + 26, tick_y - 14, PEN, 3.5))
+    b.append(text(bx + 22, ans_y, "it goes both ways!", 26, font=HAND, fill=PEN))
+    b.append(f'<rect x="34" y="{1180}" width="930" height="120" rx="12" fill="#eef2ff" stroke="#4f46e5"/>')
+    b.append(text(60, 1222, "How to answer", 20, weight="bold", fill="#3730a3"))
+    b.append(text(60, 1254, ["Tick, write or draw in the boxes, then photograph the page. Every box has an id (R7, R8 ...),", "so each answer is read back to the question it answers, and recorded with the review."], 16, fill="#3730a3", lh=1.4))
+    return svg(1000, 1414, "".join(page_frame(b, foot="Generation ZX Developers, reviewer edition \u00b7 page 7")), "Sketch: a page of the reviewer edition, with boxes to tick, write and draw in")
+
+
 DRAW = {"redraw_title": redraw_title, "redraw_contents1": redraw_contents1, "redraw_contents2": redraw_contents2,
         "after_title_page": None, "after_contents_map": None, "after_contents_line": None,
-        "after_before_you_read": after_before_you_read, "after_part_opener": after_part_opener, "after_chapter_one": after_chapter_one}
+        "after_before_you_read": after_before_you_read, "after_part_opener": after_part_opener, "after_chapter_one": after_chapter_one,
+        "after_reviewer_page": after_reviewer_page}
 
 
 def build_paper_reviews(ctx):
