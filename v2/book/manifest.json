@@ -1,6 +1,6 @@
 {
  "version": "v2.0.0-rc1",
- "site": "v0.2.20",
+ "site": "v0.2.23",
  "what": "The hash of every chapter's markdown (v2/content/) and of the <main> it rendered; validate.js refuses a page that no longer matches its markdown. A candidate's text is frozen once at v2/versions/<version>.md.",
  "chapters": [
   {
@@ -463,7 +463,7 @@
     "the-book-as-a-graph"
    ],
    "markdown_sha256": "007210e067aba823b678c8992994ae86f9ababedfcc04712a3f1c68354bc4a7b",
-   "main_sha256": "0342a1d89ee825d1d6cc5187fd55db6d38dfed4c747b545449a0adba886752d0"
+   "main_sha256": "1b9bcebd901a3353cb50196dbe16a6f64c7cb094853ffad990910e70af94774a"
   },
   {
    "file": "v2/content/0-front/00__about-this-release-candidate.md",

@@ -79,7 +79,10 @@ admin/
                       PDF's table of contents, matched to the files), contributors.json, github/ (the raw record of
                       the 2018 repository), versions.json, vault.json
   index.html, versions.html   admin and the narrated release history
-assets/site.css       the one stylesheet
+assets/site.css       the layout and type, for every page
+assets/themes.css     the colour: five themes (Newsprint, Night, Paper, Blueprint, Ember, newsroom.sgit.ai's), every
+                      colour a token defined in all five; the picker's style
+assets/site.js        sets the reader's theme before the first paint, draws the picker, opens the menu on a narrow screen
 llms.txt, sitemap.xml, robots.txt, 404.html, CNAME
 .github/workflows/deploy-pages.yml   validate -> tag -> deploy, the same pipeline as the sibling sites
 ```

@@ -1,5 +1,5 @@
 /* v2/book/single.html: the whole release candidate on one page, laid out for reading and for print. */
-.printbook{max-width:46rem;margin:0 auto;font-family:var(--serif);font-size:1.05rem;line-height:1.7;color:#1f2328}
+.printbook{max-width:46rem;margin:0 auto;font-family:var(--serif);font-size:1.05rem;line-height:1.7;color:var(--fg)}
 .printbook h1,.printbook h2,.printbook h3{font-family:var(--sans)}
 .pr-title{text-align:center;padding:3rem 0 2rem;border-bottom:1px solid var(--line);margin-bottom:2rem}
 .pr-title h1{font-size:2.6rem;margin:.6rem 0 .2rem;letter-spacing:-.01em}
@@ -25,7 +25,7 @@
 .pr-chapter .body ul,.pr-chapter .body ol{padding-left:1.4rem}
 .pr-prov{font-family:var(--sans);font-size:.8rem;color:var(--dim);border-top:1px dotted var(--line2);padding-top:.5rem;margin-top:1.2rem}
 .pr-part.back ul{font-family:var(--sans);font-size:.92rem}
-.for-dinis{font-family:var(--sans);font-size:.92rem;background:#fff7ed;border:1px solid #f0c9a0;border-left:4px solid var(--warm);border-radius:0 8px 8px 0;padding:.6rem .9rem;margin:1rem 0;color:#7c3a0b}
+.for-dinis{font-family:var(--sans);font-size:.92rem;background:var(--c-orange-bg);border:1px solid var(--c-orange-line);border-left:4px solid var(--warm);border-radius:0 8px 8px 0;padding:.6rem .9rem;margin:1rem 0;color:var(--c-orange-deep)}
 .for-dinis b{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.15rem}
 @media print{
   @page{size:A4;margin:22mm 20mm 24mm 20mm}

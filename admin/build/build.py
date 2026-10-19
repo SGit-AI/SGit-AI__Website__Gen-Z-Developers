@@ -83,22 +83,19 @@ PARTS = [  # directory, slug, title, the Hugo weight that ordered it
     ("10.misc", "misc", "Misc"),
 ]
 
-NAV = [
-    ("The book", "v1/book/index.html"),
-    ("Second edition", "v2/book/index.html"),
-    ("Read & review", "read/index.html"),
-    ("Versions", "v1/versions/index.html"),
-    ("Contributors", "contributors/index.html"),
-    ("The map", "map/index.html"),
-    ("The graph", "graph/index.html"),
-    ("Articles", "articles/index.html"),
-    ("Decisions", "decisions/index.html"),
-    ("Storyboards", "storyboards/index.html"),
-    ("The briefs", "briefs/index.html"),
-    ("The team", "team/index.html"),
-    ("The vault", "vault/index.html"),
-    ("Admin", "admin/index.html"),
+# The top bar: five groups, each a link to its first page with the rest in a menu under it. It held thirteen links on
+# one row, which overflowed onto two lines on a laptop and three on a tablet. The flat list is NAV, for anything that
+# needs every section.
+NAV_GROUPS = [
+    ("The book", [("The first edition", "v1/book/index.html"), ("Second edition", "v2/book/index.html"), ("Read & review", "read/index.html"),
+                  ("Versions", "v1/versions/index.html"), ("Contributors", "contributors/index.html")]),
+    ("Storyboards", [("Storyboards", "storyboards/index.html"), ("Every panel", "storyboards/all.html"),
+                     ("The model sheet", "storyboards/model-sheet.html")]),
+    ("Articles", [("Articles", "articles/index.html"), ("Decisions", "decisions/index.html"), ("The briefs", "briefs/index.html")]),
+    ("The graph", [("The graph", "graph/index.html"), ("The map", "map/index.html")]),
+    ("The team", [("The team", "team/index.html"), ("The vault", "vault/index.html"), ("Admin", "admin/index.html")]),
 ]
+NAV = [item for _, items in NAV_GROUPS for item in items]
 
 written = []
 
@@ -137,9 +134,11 @@ def up_for(rel):
 def page(rel, title, body, description, crumbs=(), extra_head="", wide=False):
     up = up_for(rel)
     here = rel.split("/")[0] if "/" in rel else ""
+    ishere = lambda href: bool(here) and href.split("/")[0] == here and (here != "v1" or href.split("/")[1] == rel.split("/")[1])
     nav = "".join(
-        f'<a class="nl{" here" if (href.split("/")[0] == here and here) else ""}" href="{up}{href}">{esc(label)}</a>'
-        for label, href in NAV)
+        f'<div class="ni"><a class="nl{" here" if any(ishere(h) for _, h in items) else ""}" href="{up}{items[0][1]}">{esc(group)}<span class="caret" aria-hidden="true">&#9662;</span></a>'
+        f'<div class="sub">{"".join(f"""<a class="sl{' here' if h == rel else ''}" href="{up}{h}">{esc(label)}</a>""" for label, h in items)}</div></div>'
+        for group, items in NAV_GROUPS)
     crumb = ""
     if crumbs:
         items = [f'<a href="{up}index.html">{SITE}</a>']
@@ -163,13 +162,15 @@ def page(rel, title, body, description, crumbs=(), extra_head="", wide=False):
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230c2a3d%27/%3E%3Crect x=%274%27 y=%276%27 width=%2711%27 height=%2720%27 fill=%27%237bc08f%27/%3E%3Crect x=%2717%27 y=%276%27 width=%2711%27 height=%2720%27 fill=%27%23e5625b%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Arial Black,Arial%27 font-weight=%27900%27 font-size=%2718%27 text-anchor=%27middle%27 fill=%27%230c2a3d%27%3EZ%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="{up}assets/site.css">
 <link rel="stylesheet" href="{up}assets/graph.css">
-{extra_head}</head>
+{extra_head}<link rel="stylesheet" href="{up}assets/themes.css">
+<script src="{up}assets/site.js"></script>
+</head>
 <body>
 <nav class="site"><div class="row">
 <a class="brand" href="{up}index.html">gen-z-developers<span>.sgit.ai</span></a>
-<a class="parent" href="https://sgit.ai" title="sgit.ai, the parent project">&#8599; part of <b>sgit.ai</b></a>
-{nav}
-<span class="ver">site <a href="{up}admin/versions.html" title="Release history">{VERSION}</a></span>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+<div class="nav-items">{nav}</div>
+<div class="nav-tools"><div class="theme-pick"></div><span class="ver">site <a href="{up}admin/versions.html" title="Site release history">{VERSION}</a></span></div>
 </div></nav>
 <main><div class="inner{" wide" if wide else ""}">
 {crumb}
@@ -177,7 +178,7 @@ def page(rel, title, body, description, crumbs=(), extra_head="", wide=False):
 </div></main>
 <footer class="site"><div class="row">
 <span>Generation Z Developers, by Dinis Cruz. The 2018 text is Creative Commons BY 4.0, as Dinis decided on 18 October 2026: see <a href="{up}v1/versions/index.html#licence">the licence note</a>. Everything else on this site is CC BY 4.0; code under the repository licence.</span>
-<span><a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers">GitHub</a> &middot; <a href="{up}vault/index.html">the working vault</a> &middot; <a href="{up}admin/versions.html">release history</a> &middot; <a href="{up}llms.txt">llms.txt</a></span>
+<span>Part of <a href="https://sgit.ai">sgit.ai</a> &middot; <a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers">GitHub</a> &middot; <a href="{up}vault/index.html">the working vault</a> &middot; <a href="{up}admin/versions.html">release history</a> &middot; <a href="{up}llms.txt">llms.txt</a></span>
 </div></footer>
 </body>
 </html>

@@ -2994,6 +2994,10 @@
     {
      "ref": "book:4.life-patterns/content/be-a-founder.md",
      "where": "act like one of the founders: the 2018 advice"
+    },
+    {
+     "ref": "dec:015",
+     "where": "the proposal adopted as the frame of rc2"
     }
    ],
    "answers": [

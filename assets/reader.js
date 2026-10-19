@@ -257,10 +257,10 @@
       svg.appendChild(svgEl('line', { x1: e.a.x, y1: e.a.y, x2: e.b.x, y2: e.b.y, class: 'rd-edge ' + e.cls }));
       const t = svgEl('text', { x: (e.a.x + e.b.x) / 2, y: (e.a.y + e.b.y) / 2 - 3, class: 'rd-elabel', 'text-anchor': 'middle' }); t.textContent = e.label; svg.appendChild(t);
     }
-    const fill = { center: '#0c2a3d', part: '#e8b64a', seq: '#94a3b8', rel: '#3b9fb0', art: '#0f766e' };
+    const fill = { center: 'var(--solid)', part: '#e8b64a', seq: '#94a3b8', rel: '#3b9fb0', art: '#0f766e' };
     for (const n of nodes) {
       const gnode = svgEl('g', { class: 'rd-node ' + n.cls });
-      gnode.appendChild(svgEl('circle', { cx: n.x, cy: n.y, r: n.r, fill: fill[n.cls] || '#999' }));
+      gnode.appendChild(svgEl('circle', { cx: n.x, cy: n.y, r: n.r, style: `fill:${fill[n.cls] || '#999'}` })); // style: a theme token needs var()
       const t = svgEl('text', { x: n.x, y: n.y + n.r + 12, 'text-anchor': 'middle' });
       const words = n.label.split(' '); let line = '', lines = [];
       for (const w of words) { if ((line + ' ' + w).trim().length > 20) { lines.push(line.trim()); line = w; } else line += ' ' + w; }
@@ -278,14 +278,14 @@
     ch.blocks.forEach((b, k) => {
       const has = S.comments.some((c) => c.block === b.id);
       const h = Math.max(6, Math.min(40, 6 + b.words / 6));
-      const r = svgEl('rect', { x: bx + k * (bw + 2), y: H - 12 - h, width: bw, height: h, rx: 2, class: 'rd-bar', fill: has ? '#b45309' : (rb[b.id] ? '#94a3b8' : '#e5e1d5') });
+      const r = svgEl('rect', { x: bx + k * (bw + 2), y: H - 12 - h, width: bw, height: h, rx: 2, class: 'rd-bar', style: `fill:${has ? '#b45309' : (rb[b.id] ? '#94a3b8' : 'var(--line)')}` });
       const title = svgEl('title'); title.textContent = `Paragraph ${k + 1}, ${b.words} words${rb[b.id] ? ', read' : ''}${has ? ', commented' : ''}`; r.appendChild(title);
       r.onclick = () => { const e = document.querySelector(`[data-block="${b.id}"]`); if (e) e.scrollIntoView({ block: 'center', behavior: 'smooth' }); };
       svg.appendChild(r);
     });
     const lab = svgEl('text', { x: bx, y: H - 54, class: 'rd-elabel' }); lab.textContent = `${ch.blocks.length} paragraphs: grey read, orange commented`; svg.appendChild(lab);
     g.appendChild(svg);
-    g.appendChild(el('div', 'glegend', '<span><i style="background:#0c2a3d"></i>this chapter</span><span><i style="background:#e8b64a"></i>part</span><span><i style="background:#94a3b8"></i>before / after</span><span><i style="background:#3b9fb0"></i>shares terms</span><span><i style="background:#0f766e"></i>newsroom article</span>'));
+    g.appendChild(el('div', 'glegend', '<span><i style="background:var(--solid)"></i>this chapter</span><span><i style="background:#e8b64a"></i>part</span><span><i style="background:#94a3b8"></i>before / after</span><span><i style="background:#3b9fb0"></i>shares terms</span><span><i style="background:#0f766e"></i>newsroom article</span>'));
     if (rel.length) g.appendChild(el('ul', 'gedges', rel.map((r) => `<li><b>${esc((chapterOf(r.slug) || {}).title || r.slug)}</b>: ${r.shared.map(esc).join(', ')}</li>`).join('')));
     if (ch.terms && ch.terms.length) g.appendChild(el('p', 'small dim', 'Terms: ' + ch.terms.map(esc).join(', ')));
     if (ch.ideas && ch.ideas.length) g.appendChild(el('p', 'small', 'Written from: ' + ch.ideas.map((i) => `<a href="${esc(i.url)}">${esc(i.title)}</a> <span class="dim">(${esc(i.state)})</span>`).join('; ')));
@@ -309,7 +309,7 @@
       if (it.head) { const t = svgEl('text', { x: 8, y: it.y, class: 'rd-elabel', 'font-weight': '700' }); t.textContent = it.label; svg.appendChild(t); continue; }
       const c = it.c, st = stateOf(c.slug);
       const gnode = svgEl('g', { class: 'rd-node' + (c.slug === current ? ' center' : '') });
-      gnode.appendChild(svgEl('circle', { cx: 16, cy: it.y - 4, r: 4.5, fill: c.published ? col[st] : '#fff', stroke: c.published ? '#0c2a3d' : col[st] === '#e5e1d5' ? '#b45309' : col[st], 'stroke-width': c.published ? 0.5 : 1.5 }));
+      gnode.appendChild(svgEl('circle', { cx: 16, cy: it.y - 4, r: 4.5, style: `fill:${c.published ? col[st] : 'var(--panel)'};stroke:${c.published ? 'var(--solid)' : col[st] === '#e5e1d5' ? '#b45309' : col[st]}`, 'stroke-width': c.published ? 0.5 : 1.5 }));
       const t = svgEl('text', { x: 28, y: it.y }); t.textContent = (c.number ? c.number + '. ' : '') + c.title.slice(0, 40); gnode.appendChild(t);
       const n = S.comments.filter((x) => x.slug === c.slug).length;
       if (n) { const tc = svgEl('text', { x: W - 10, y: it.y, 'text-anchor': 'end', class: 'rd-elabel' }); tc.textContent = n + ' comment' + (n > 1 ? 's' : ''); gnode.appendChild(tc); }
