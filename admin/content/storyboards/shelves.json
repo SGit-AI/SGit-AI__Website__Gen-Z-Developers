@@ -5,17 +5,39 @@
   {
    "title": "Where it started",
    "note": "The 2018 book, and the first proposal for the second edition.",
-   "boards": ["the-2018-book", "a-first-storyline"]
+   "boards": [
+    "the-2018-book",
+    "a-first-storyline"
+   ]
   },
   {
    "title": "The second edition, part by part",
    "note": "One storyboard per co-written article, the Guide speaking Dinis's words.",
-   "boards": ["the-opening", "where-do-you-land", "connect-the-dots-backwards", "where-the-thinking-came-from", "generative-ai-not-ai", "follow-the-rabbit-holes", "everything-is-connected", "lenses-roles-and-loops"]
+   "boards": [
+    "the-opening",
+    "where-do-you-land",
+    "connect-the-dots-backwards",
+    "where-the-thinking-came-from",
+    "generative-ai-not-ai",
+    "follow-the-rabbit-holes",
+    "everything-is-connected",
+    "lenses-roles-and-loops"
+   ]
   },
   {
    "title": "How it is made, and what comes next",
    "note": "The book in release mode, and the startup edition that became the frame of the second release candidate.",
-   "boards": ["the-book-in-release-mode", "gen-zx-developers"]
+   "boards": [
+    "the-book-in-release-mode",
+    "gen-zx-developers"
+   ]
+  },
+  {
+   "title": "Strips from the review",
+   "note": "Short comic strips told from Dinis's review of the printed candidate: experiments in pacing, timing and flow, one beat per panel.",
+   "boards": [
+    "page-three"
+   ]
   }
  ]
 }

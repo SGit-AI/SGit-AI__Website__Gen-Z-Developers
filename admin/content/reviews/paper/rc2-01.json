@@ -1,0 +1,513 @@
+{
+ "id": "rc2-01",
+ "title": "Release candidate 2 on paper, batch 1: the first three pages",
+ "candidate": "v2.0.0-rc2",
+ "pdf": "v2/generation-z-developers-v2.0.0-rc2.pdf",
+ "reviewer": "Dinis Cruz",
+ "date": "2026-10-19",
+ "how": "Dinis printed the candidate's PDF (168 A4 pages, spiral bound) and marked it with a pen; photographs of the marked pages were sent to the journalist, who read the handwriting, confirmed the one uncertain note with Dinis, and drew each page three ways: the photograph with numbered callouts, a clean redraw with the marks in place for anyone to read, and a sketch of the page after the change.",
+ "themes": {
+  "first-page": {
+   "name": "The first pages sell the book",
+   "principle": "Every step of attention buys the next; by page 3 the reader is hooked (Zoom in, not discover: ten seconds buy twenty)."
+  },
+  "show": {
+   "name": "Show the book, do not list it",
+   "principle": "The opening is a best of; the first page shows the art of the possible (Zoom in, not discover: the first page)."
+  },
+  "doing": {
+   "name": "Doing starts early, and runs through",
+   "principle": "A manual, not a journey: you learn by doing, so you start doing early (Zoom in, not discover)."
+  },
+  "altitude": {
+   "name": "Topics first, details under them",
+   "principle": "The book zooms in: each level is the same picture closer up (Zoom in, not discover; Everything is connected)."
+  },
+  "process-out": {
+   "name": "The making-of out of the reader's way",
+   "principle": "How the book is made goes to the site; the book keeps one section on it (the first batch, sign-off 5)."
+  }
+ },
+ "pages": [
+  {
+   "id": "page-1",
+   "photo": "photos/page-1.jpg",
+   "name": "Page 1, the title page",
+   "notes": [
+    {
+     "n": 1,
+     "region": [
+      0.27,
+      0.12,
+      0.52,
+      0.18
+     ],
+     "written": "Graph representation of book",
+     "means": "Put a graph of the whole book on the title page, above the title.",
+     "theme": "show"
+    },
+    {
+     "n": 2,
+     "region": [
+      0.06,
+      0.765,
+      0.17,
+      0.09
+     ],
+     "written": "can also go here",
+     "means": "Or at the bottom: the graph can sit at the top or at the bottom of the page (Dinis confirmed the reading).",
+     "theme": "show"
+    },
+    {
+     "n": 3,
+     "region": [
+      0.14,
+      0.505,
+      0.71,
+      0.1
+     ],
+     "written": "[struck through] The first edition (2018) is the only official version. This candidate was written by the book's agents from the ideas register and is for reading and marking up. ... the title is Dinis's decision of 19 October 2026 (decision 014).",
+     "means": "Take the process notes off the first page; keep only what the reader needs (not signed off, the frozen file, the licence).",
+     "theme": "process-out"
+    },
+    {
+     "n": 4,
+     "region": [
+      0.8,
+      0.605,
+      0.17,
+      0.11
+     ],
+     "written": "should be what is the Book all about",
+     "means": "The paragraph under the title says what the book is about.",
+     "theme": "first-page"
+    },
+    {
+     "n": 5,
+     "region": [
+      0.57,
+      0.66,
+      0.22,
+      0.14
+     ],
+     "written": "this paragraph buys more time from the reader to continue reading",
+     "means": "That paragraph's job is to buy the next minute of attention.",
+     "theme": "first-page"
+    }
+   ]
+  },
+  {
+   "id": "page-2",
+   "photo": "photos/page-2.jpg",
+   "name": "Page 2, the contents",
+   "notes": [
+    {
+     "n": 6,
+     "region": [
+      0.3,
+      0.045,
+      0.58,
+      0.08
+     ],
+     "written": "try a couple visualizations of this contents (first)",
+     "means": "Before anything else, try showing the contents as a picture.",
+     "theme": "show"
+    },
+    {
+     "n": 7,
+     "region": [
+      0.835,
+      0.105,
+      0.11,
+      0.065
+     ],
+     "written": "page number",
+     "means": "Add the page numbers to the contents.",
+     "theme": "altitude"
+    },
+    {
+     "n": 8,
+     "region": [
+      0.08,
+      0.245,
+      0.13,
+      0.12
+     ],
+     "written": "start ... hands-on section",
+     "means": "The hands-on work starts here, straight after Before you start.",
+     "theme": "doing"
+    },
+    {
+     "n": 9,
+     "region": [
+      0.645,
+      0.25,
+      0.315,
+      0.31
+     ],
+     "written": "what about using this space / for infographics explaining this chapter / or graphs / or storyboards",
+     "means": "Use the empty margin of the contents for a picture beside each part: an infographic, a graph or a storyboard.",
+     "theme": "show"
+    },
+    {
+     "n": 10,
+     "region": [
+      0.765,
+      0.65,
+      0.215,
+      0.26
+     ],
+     "written": "ok but these are the details of this topics",
+     "means": "These chapters are fine, but they are the zoomed-in detail; the contents should lead with the topics.",
+     "theme": "altitude"
+    }
+   ]
+  },
+  {
+   "id": "page-3",
+   "photo": "photos/page-3.jpg",
+   "name": "Page 3, the end of the contents and About this release candidate",
+   "notes": [
+    {
+     "n": 11,
+     "region": [
+      0.655,
+      0.205,
+      0.25,
+      0.26
+     ],
+     "written": "these need to be spread across the book",
+     "means": "Each hands-on chapter moves beside the chapter it practises.",
+     "theme": "doing"
+    },
+    {
+     "n": 12,
+     "region": [
+      0.585,
+      0.725,
+      0.39,
+      0.215
+     ],
+     "written": "By now the reader should be very curious and excited to continue reading [arrow to page 3 of 168]",
+     "means": "Page 3 is the test: the reader should be hooked by now.",
+     "theme": "first-page"
+    },
+    {
+     "n": 13,
+     "region": [
+      0.265,
+      0.715,
+      0.29,
+      0.1
+     ],
+     "written": "with this current version I'm not",
+     "means": "It fails the test: page 3 is the contents and About this release candidate, which is about how the book was made.",
+     "theme": "process-out"
+    }
+   ]
+  }
+ ],
+ "contents": {
+  "what": "The candidate's parts, with each part's introduction as the candidate has it, and each chapter with the page it starts on, counted in the rc2 PDF (A4) on 19 October 2026.",
+  "parts": [
+   {
+    "id": "before-you-start",
+    "title": "Before you start",
+    "intro": "Five chapters before the argument starts. Who this book is for and what it is for, why I think you are lucky to be here, one chapter on graphs because everything after it is one, how to find out which kind of developer you are, and why the path only makes sense afterwards. Read these first; then go where your map says."
+   },
+   {
+    "id": "the-frame",
+    "title": "The frame",
+    "intro": "The frame the rest of the book hangs on. What generative AI is and is not, what happens between your prompt and the answer, why the word developer now means anyone who can brief an agent, and the founder's way of building: explore first, call it what it is, then hand it over."
+   },
+   {
+    "id": "getting-the-job",
+    "title": "Getting the job, or making it",
+    "intro": "The part the first edition called your CV, rewritten for 2026, for the reader going into a job. You are hired for a workflow now, not a language; the way to show it is to act as the job you want before anyone gives it to you; and the place to show it is a newsroom of your own. In 2018 I said act like a founder. Now you can be one, and the next parts say how."
+   },
+   {
+    "id": "working-with-agents",
+    "title": "Working with agents",
+    "intro": "How to work with the colleague that takes everything literally, whether it works for your employer or for your company. Where the agent runs and what it can reach, the brief as the unit of work, the mistakes that become rules, and why one focused session per job beats one long chat."
+   },
+   {
+    "id": "judgement",
+    "title": "Direction and judgement",
+    "intro": "The scarce skill. When the making is cheap, direction and judgement are what you are paid for, and what a founder lives or dies by: which doors can be reopened, who answers for a decision an agent made, and the chapter the first edition promised and never wrote, on facts, evidence and the record."
+   },
+   {
+    "id": "start-the-company",
+    "title": "Start the company",
+    "intro": "The centre of this edition. Execution just got cheap, so the person who knows the problem can build the first answer; then ship it and see if they miss it, price it and give it away, sell, decide whether to raise at all, and make the company itself real: the UK, Portugal, Lithuania, the European Union. From experience, mine and the people I work with; not legal or tax advice."
+   },
+   {
+    "id": "build-it-without-a-server",
+    "title": "Build it without a server",
+    "intro": "Build it so that there is nothing to run at three in the morning. Serverless, for real; privacy by design, with data encrypted on the user's device on a server that cannot read it; control of the agents your company runs on; open source and who pays for it; and the only definition of shipped that counts: the user has it."
+   },
+   {
+    "id": "the-long-game",
+    "title": "The long game",
+    "intro": "What lasts. Graphs as memory for the person you will be, and the civic responsibility that comes with knowing how the machines work, for a small country and for a continent."
+   },
+   {
+    "id": "hands-on-2026",
+    "title": "Hands on, 2026",
+    "intro": "The practical part, dated 2026 and renewed every year, inside the book. Eleven workflows you can follow this afternoon, from an agentic workflow from zero to forming your company, the credits and programmes as they stand this year, your first price and your first ten customers, and a serverless product shipped in a weekend."
+   },
+   {
+    "id": "how-this-book-was-made",
+    "title": "How this book was made, and what you made",
+    "intro": "The last part is the process, because the process is as much the product as the book: a repository for the official versions, a vault for the working ones, roles with folders, articles as briefs, decisions as files, a graph that says where every idea came from, release candidates and a review board. And the measure: the companies you create from it, and how to tell us."
+   }
+  ],
+  "chapters": [
+   {
+    "n": 1,
+    "title": "Gen ZX: who this book is for, and what it is for",
+    "part": "before-you-start",
+    "page": 7
+   },
+   {
+    "n": 2,
+    "title": "You are lucky to be here",
+    "part": "before-you-start",
+    "page": 10
+   },
+   {
+    "n": 3,
+    "title": "Everything is connected: graphs",
+    "part": "before-you-start",
+    "page": 14
+   },
+   {
+    "n": 4,
+    "title": "Where do you land?",
+    "part": "before-you-start",
+    "page": 18
+   },
+   {
+    "n": 5,
+    "title": "Connect the dots backwards",
+    "part": "before-you-start",
+    "page": 22
+   },
+   {
+    "n": 6,
+    "title": "What generative AI is",
+    "part": "the-frame",
+    "page": 28
+   },
+   {
+    "n": 7,
+    "title": "Lenses, roles and loops",
+    "part": "the-frame",
+    "page": 32
+   },
+   {
+    "n": 8,
+    "title": "Everyone who can brief an agent is a developer",
+    "part": "the-frame",
+    "page": 36
+   },
+   {
+    "n": 9,
+    "title": "Explorer coding, not vibe coding, and the handover",
+    "part": "the-frame",
+    "page": 39
+   },
+   {
+    "n": 10,
+    "title": "Hired for the workflow",
+    "part": "getting-the-job",
+    "page": 45
+   },
+   {
+    "n": 11,
+    "title": "Act as the job you want",
+    "part": "getting-the-job",
+    "page": 49
+   },
+   {
+    "n": 12,
+    "title": "Publish, publish, publish: your own newsroom",
+    "part": "getting-the-job",
+    "page": 53
+   },
+   {
+    "n": 13,
+    "title": "Your first workspace",
+    "part": "working-with-agents",
+    "page": 58
+   },
+   {
+    "n": 14,
+    "title": "How to work with agents",
+    "part": "working-with-agents",
+    "page": 62
+   },
+   {
+    "n": 15,
+    "title": "Direction is the scarce skill",
+    "part": "judgement",
+    "page": 67
+   },
+   {
+    "n": 16,
+    "title": "Facts, evidence and the record",
+    "part": "judgement",
+    "page": 71
+   },
+   {
+    "n": 17,
+    "title": "Be a founder: the expert founders",
+    "part": "start-the-company",
+    "page": 77
+   },
+   {
+    "n": 18,
+    "title": "Ship it, and see if they miss it",
+    "part": "start-the-company",
+    "page": 81
+   },
+   {
+    "n": 19,
+    "title": "Price it, then give it away",
+    "part": "start-the-company",
+    "page": 85
+   },
+   {
+    "n": 20,
+    "title": "Sell",
+    "part": "start-the-company",
+    "page": 89
+   },
+   {
+    "n": 21,
+    "title": "Fund it, or do not",
+    "part": "start-the-company",
+    "page": 93
+   },
+   {
+    "n": 22,
+    "title": "The company itself: the UK, Portugal, Lithuania, the European Union",
+    "part": "start-the-company",
+    "page": 97
+   },
+   {
+    "n": 23,
+    "title": "Serverless, for real",
+    "part": "build-it-without-a-server",
+    "page": 100
+   },
+   {
+    "n": 24,
+    "title": "Privacy by design: SG/Send, sgit, and the value of constraints",
+    "part": "build-it-without-a-server",
+    "page": 105
+   },
+   {
+    "n": 25,
+    "title": "Controlling your agent: RiskMandate",
+    "part": "build-it-without-a-server",
+    "page": 109
+   },
+   {
+    "n": 26,
+    "title": "Open source",
+    "part": "build-it-without-a-server",
+    "page": 114
+   },
+   {
+    "n": 27,
+    "title": "Shipped means the user has it",
+    "part": "build-it-without-a-server",
+    "page": 118
+   },
+   {
+    "n": 28,
+    "title": "Graphs, memory and your future self",
+    "part": "the-long-game",
+    "page": 123
+   },
+   {
+    "n": 29,
+    "title": "Civic responsibility",
+    "part": "the-long-game",
+    "page": 127
+   },
+   {
+    "n": 30,
+    "title": "An agentic workflow from zero",
+    "part": "hands-on-2026",
+    "page": 132
+   },
+   {
+    "n": 31,
+    "title": "Your first graph, built by hand",
+    "part": "hands-on-2026",
+    "page": 135
+   },
+   {
+    "n": 32,
+    "title": "One idea, five lenses",
+    "part": "hands-on-2026",
+    "page": 137
+   },
+   {
+    "n": 33,
+    "title": "A tiny agent loop",
+    "part": "hands-on-2026",
+    "page": 139
+   },
+   {
+    "n": 34,
+    "title": "Images, infographics and storyboards, drawn by code",
+    "part": "hands-on-2026",
+    "page": 142
+   },
+   {
+    "n": 35,
+    "title": "Meeting briefs and follow-ups",
+    "part": "hands-on-2026",
+    "page": 145
+   },
+   {
+    "n": 36,
+    "title": "Your own newsroom and inbox",
+    "part": "hands-on-2026",
+    "page": 147
+   },
+   {
+    "n": 37,
+    "title": "Form your company",
+    "part": "hands-on-2026",
+    "page": 149
+   },
+   {
+    "n": 38,
+    "title": "The credits and programmes, 2026",
+    "part": "hands-on-2026",
+    "page": 151
+   },
+   {
+    "n": 39,
+    "title": "Your first price and your first ten customers",
+    "part": "hands-on-2026",
+    "page": 154
+   },
+   {
+    "n": 40,
+    "title": "Ship a serverless product in a weekend",
+    "part": "hands-on-2026",
+    "page": 156
+   },
+   {
+    "n": 41,
+    "title": "How this book was made, and what you made",
+    "part": "how-this-book-was-made",
+    "page": 159
+   }
+  ]
+ }
+}

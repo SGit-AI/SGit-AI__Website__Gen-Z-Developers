@@ -187,6 +187,11 @@
    "version": "v0.2.34",
    "date": "2026-10-19",
    "what": "Article 18, Zoom in, not discover, from Dinis's memo of 19 October 2026, co-written in his voice: the guidance for how the book is written. Every step of attention buys the next (ten seconds buy twenty, a minute buys ten, ten buy the hour), so no punchline waits at the end; the book zooms in rather than making the reader discover. The opening is a best of, a narrative of the summary of every section; Dinis's story goes at the end of a chapter, for whoever wants it; every chapter in five parts (the point, what you will do, the zoom, do it now, how we got here). The graph test: the opening links to the ideas and the ideas to every chapter, and on rc2 it reaches one chapter of 42, with nine naming no ideas. A manual, not a journey: the reader starts doing early. Milestones mapped per part, with a first map, and asked of the readers. The first page should answer seven questions and show the art of the possible. Briefs to the editor (the writing contract for rc3, the opening, the milestones, the readers) and the librarian (the graph test as a build check)."
+  },
+  {
+   "version": "v0.2.35",
+   "date": "2026-10-19",
+   "what": "The first paper review: Dinis printed release candidate 2 and marked it with a pen, and asked for a visual way to show his notes, because in a list their positioning is lost. An agent article by the journalist, Dinis's pen, made readable: thirteen notes on the title page and the contents, read word for word (one confirmed by Dinis), each page drawn three ways (the photograph with numbered callouts; the page redrawn with the marks in place, readable by anyone; a sketch of the page after the change), five themes that each apply a principle of Zoom in, not discover, and two visualisations of the contents with the real page numbers of the printed candidate. A new record and drawer: admin/content/reviews/paper/rc2-01.json, drawn by admin/build/paper_reviews.py into standalone SVGs in reviews/paper/rc2-01/ (photographs and fonts embedded; Caveat added under the OFL). Storyboard 13, Page three, a ten-panel strip on a new shelf, Strips from the review, as an experiment in pacing. A brief to the editor with the findings."
   }
  ]
 }
