@@ -30,7 +30,7 @@ ROOT = Path(__file__).resolve().parents[2]
 G = ROOT / "admin/content/graph"
 NEWSROOM = "https://newsroom.sgit.ai/articles/"
 
-TASK_ROLES = ("editor", "publisher", "reviewer", "journalist", "dinis")
+TASK_ROLES = ("editor", "publisher", "reviewer", "journalist", "librarian", "board", "dinis")
 
 
 def _fm(text):

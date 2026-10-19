@@ -1181,7 +1181,7 @@ def build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib,
 <p class="sub">Key concepts and ideas for the next generation of developers.</p>
 <ul class="cover-lines">{lines}</ul>
 <p>The eight lines on the cover are what the book was for. They read more urgently now than in 2018, and the second edition keeps all eight: the manual for getting into development, and getting a job, now that everyone who can brief an agent is a developer.</p>
-<p class="ctas"><a class="btn primary" href="v1/book/index.html">Read the first edition here</a> <a class="btn" href="{fe["amazon"]["url"]}">Paperback on Amazon</a> <a class="btn" href="{fe["leanpub"]["url"]}">Free to read on Leanpub</a></p>
+<p class="ctas">{("<a class=\"btn primary\" href=\"v2/book/index.html\">Read the GenAI Edition, release candidate 1</a> " if v2 else "")}<a class="btn" href="v1/book/index.html">Read the first edition here</a> <a class="btn" href="{fe["amazon"]["url"]}">Paperback on Amazon</a> <a class="btn" href="{fe["leanpub"]["url"]}">Free to read on Leanpub</a></p>
 </div>
 </section>
 <h2 id="first-edition">The first edition, where it lives</h2>

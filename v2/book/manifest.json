@@ -1,0 +1,475 @@
+{
+ "version": "v2.0.0-rc1",
+ "site": "v0.2.18",
+ "what": "The hash of every chapter's markdown (v2/content/) and of the <main> it rendered; validate.js refuses a page that no longer matches its markdown. A candidate's text is frozen once at v2/versions/<version>.md.",
+ "chapters": [
+  {
+   "file": "v2/content/1-before-you-start/01__lucky-to-be-here.md",
+   "page": "v2/book/lucky-to-be-here.html",
+   "title": "You are lucky to be here",
+   "part": "Before you start",
+   "number": 1,
+   "words": 1871,
+   "ideas": [
+    "wonder-not-fear",
+    "lucky-to-be-here",
+    "nobody-knows",
+    "seven-transformations",
+    "technology-finally-works-for-you",
+    "read-it-on-paper",
+    "fear-of-ai",
+    "immediate-connection",
+    "start-with-why-sinek"
+   ],
+   "markdown_sha256": "ba5a25746938c66ac3145dacda284d19878f4e2ada84bd89c29f49ad96b7e7b1",
+   "main_sha256": "a75f44ee3a76bc9ba236119134df8d78a232e9bb99b847df0b4ba436f68c985f"
+  },
+  {
+   "file": "v2/content/1-before-you-start/02__everything-is-connected.md",
+   "page": "v2/book/everything-is-connected.html",
+   "title": "Everything is connected: graphs",
+   "part": "Before you start",
+   "number": 2,
+   "words": 1876,
+   "ideas": [
+    "a-graph-is-not-a-diagram",
+    "the-whodunit-board",
+    "a-map-is-a-graph-with-positions",
+    "graphs-of-graphs",
+    "start-anywhere",
+    "the-2018-graph-chapters",
+    "code-is-already-a-graph"
+   ],
+   "markdown_sha256": "69b9297ce05e5cc92412ba677b0adf6f3aa445a11212a7c63fcc7e6df6623d96",
+   "main_sha256": "5926f35212ea1c523b6639d8d3c40ba52161cd8af87b73b4d0f78656e9d11512"
+  },
+  {
+   "file": "v2/content/1-before-you-start/03__where-do-you-land.md",
+   "page": "v2/book/where-do-you-land.html",
+   "title": "Where do you land?",
+   "part": "Before you start",
+   "number": 3,
+   "words": 1874,
+   "ideas": [
+    "jobs-that-never-scaled",
+    "maps-before-names",
+    "four-stages-beyond-activities",
+    "centre-of-gravity",
+    "three-learning-paths"
+   ],
+   "markdown_sha256": "17f3800de3e263da4d8ed41d48d9369d014e7d95244c1acff684c0b1cf2c26b9",
+   "main_sha256": "bcb7c188574e9f35e818481997aa0d1bb683233f89537e5a2b2487e6218d4b3a"
+  },
+  {
+   "file": "v2/content/1-before-you-start/04__connect-the-dots-backwards.md",
+   "page": "v2/book/connect-the-dots-backwards.html",
+   "title": "Connect the dots backwards",
+   "part": "Before you start",
+   "number": 4,
+   "words": 1886,
+   "ideas": [
+    "learning-made-for-you",
+    "think-with-it",
+    "connect-the-dots-backwards",
+    "multidisciplinary-edge",
+    "maths-taught-to-be-hated",
+    "explore-again",
+    "small-minority",
+    "flow-and-deliberate-practice",
+    "know-where-your-ideas-come-from"
+   ],
+   "markdown_sha256": "89aa6e91c727a5f021e4a614cba81b4debcb5918ef578d0fed039bbacdcd3c93",
+   "main_sha256": "3072b21b0d179473cc1db18754165c19bffd87188f6a46f00e6a86b5770f9302"
+  },
+  {
+   "file": "v2/content/2-the-frame/05__what-generative-ai-is.md",
+   "page": "v2/book/what-generative-ai-is.html",
+   "title": "What generative AI is",
+   "part": "The frame",
+   "number": 5,
+   "words": 1816,
+   "ideas": [
+    "generative-ai-not-ai",
+    "better-prompt-richer-picture"
+   ],
+   "markdown_sha256": "cfc7f0c1f1a9377ac65a008e7863345fe7e7657c4c1eb4859f0998575a92150a",
+   "main_sha256": "58609b98afb0662495bc29748c0488efb6c2fa8612c0583648aef528fbd5eee2"
+  },
+  {
+   "file": "v2/content/2-the-frame/06__lenses-roles-and-loops.md",
+   "page": "v2/book/lenses-roles-and-loops.html",
+   "title": "Lenses, roles and loops",
+   "part": "The frame",
+   "number": 6,
+   "words": 1864,
+   "ideas": [
+    "a-prompt-is-a-lens",
+    "a-role-is-a-model-with-a-description",
+    "tools-changed-everything",
+    "the-model-remembers-nothing",
+    "long-chats-are-compressed"
+   ],
+   "markdown_sha256": "426565ee7096ef6b61d085a4a656ff698ead86851b39e2cc7df2829fedd1437c",
+   "main_sha256": "e97dde518ab5ad9e85128dfba21d78970d5f9dc56f7cd339fbb0d2037e66063c"
+  },
+  {
+   "file": "v2/content/2-the-frame/07__everyone-is-a-developer.md",
+   "page": "v2/book/everyone-is-a-developer.html",
+   "title": "Everyone who can brief an agent is a developer",
+   "part": "The frame",
+   "number": 7,
+   "words": 1495,
+   "ideas": [
+    "craftspeople-make-their-own-tools",
+    "everyone-is-a-developer"
+   ],
+   "markdown_sha256": "e2ffedeb98b713f6e9a00fd704b5034003f80fbc6878b418b6f4be7db80b2b20",
+   "main_sha256": "ebed203a4a8ed3df4b76ea96d0d4c01ab96f3434d2389471520ebd6e5a4dda2a"
+  },
+  {
+   "file": "v2/content/2-the-frame/08__explorer-coding-and-the-handover.md",
+   "page": "v2/book/explorer-coding-and-the-handover.html",
+   "title": "Explorer coding, and the handover",
+   "part": "The frame",
+   "number": 8,
+   "words": 1882,
+   "ideas": [
+    "explorer-coding",
+    "the-handover",
+    "the-villagers-craft"
+   ],
+   "markdown_sha256": "c940f9171290d53a211e127ef69498ce2f8fa53ecca5dfe4bcf89982cf9eb3e1",
+   "main_sha256": "4756edbdaa4ce671447e8ea604869aacd3a396951f2407f28d4d6fe318ce16c8"
+  },
+  {
+   "file": "v2/content/3-getting-the-job/09__hired-for-the-workflow.md",
+   "page": "v2/book/hired-for-the-workflow.html",
+   "title": "Hired for the workflow",
+   "part": "Getting the job",
+   "number": 9,
+   "words": 1860,
+   "ideas": [
+    "hired-for-the-workflow",
+    "you-are-more-technical-than-you-think",
+    "it-starts-with-the-application"
+   ],
+   "markdown_sha256": "2025210f52f7137df96612656f3017dc22d4396b4bc03949aa11109221144e86",
+   "main_sha256": "ac2e274a274264a07abc67cc5585ca5519f571de1a79457a81e2e617ae41b6b3"
+  },
+  {
+   "file": "v2/content/3-getting-the-job/10__act-as-the-job-you-want.md",
+   "page": "v2/book/act-as-the-job-you-want.html",
+   "title": "Act as the job you want",
+   "part": "Getting the job",
+   "number": 10,
+   "words": 1781,
+   "ideas": [
+    "act-as-the-job-you-want",
+    "your-cv-online",
+    "job-hunt-in-2026"
+   ],
+   "markdown_sha256": "1564cee98b92920babe668625d28bb424ff3d1be36f097847878e978101cbce1",
+   "main_sha256": "a0a42e3426ee0ccdb27eac3f0a5a7085e0726057e3499c0c3e5fc51d3fa96a54"
+  },
+  {
+   "file": "v2/content/3-getting-the-job/11__your-own-newsroom.md",
+   "page": "v2/book/your-own-newsroom.html",
+   "title": "Publish, publish, publish: your own newsroom",
+   "part": "Getting the job",
+   "number": 11,
+   "words": 1897,
+   "ideas": [
+    "publish-publish-publish",
+    "every-part-buys-the-next",
+    "the-voice-is-four-inputs",
+    "the-memo-is-the-thinking"
+   ],
+   "markdown_sha256": "0790954e58c94a6a7ca2bcd101b707a88d9f562c206bb42e231bdef07c3b16b2",
+   "main_sha256": "83af9bcb6cc788dca3f1722890ec6fdb3402d22aed83927daf0c48b241724b1c"
+  },
+  {
+   "file": "v2/content/4-working-with-agents/12__your-first-workspace.md",
+   "page": "v2/book/your-first-workspace.html",
+   "title": "Your first workspace",
+   "part": "Working with agents",
+   "number": 12,
+   "words": 1881,
+   "ideas": [
+    "first-workspace",
+    "not-on-your-laptop"
+   ],
+   "markdown_sha256": "d2cef860b3f67ffc7f310e646377d0719adbd7a220d623046b083fb6bde2b97a",
+   "main_sha256": "f17eb3c769573be691f9026b3aa3f0e9290105b3a81b469510a3b38df3aa9fc9"
+  },
+  {
+   "file": "v2/content/4-working-with-agents/13__how-to-work-with-agents.md",
+   "page": "v2/book/how-to-work-with-agents.html",
+   "title": "How to work with agents",
+   "part": "Working with agents",
+   "number": 13,
+   "words": 2153,
+   "ideas": [
+    "an-agent-is-a-session-with-a-focus",
+    "brief-is-the-unit-of-work",
+    "omnichannel-programming",
+    "every-mistake-added-a-rule",
+    "a-correction-becomes-a-rule"
+   ],
+   "markdown_sha256": "66cfbe02babcb0bcf53dc0fc6b964c378cd5dc17218cc288077ec9c8f7d21eae",
+   "main_sha256": "eb14e9f9467ef5da4e7b0c2d35c54cdbde81a6f55d6f57e9ce7ecf45b4b2ef1b"
+  },
+  {
+   "file": "v2/content/5-judgement/14__direction-and-judgement.md",
+   "page": "v2/book/direction-and-judgement.html",
+   "title": "Direction is the scarce skill",
+   "part": "Direction and judgement",
+   "number": 14,
+   "words": 2278,
+   "ideas": [
+    "direction-is-the-scarce-skill",
+    "knowing-when-to-stop",
+    "one-way-two-way-doors",
+    "agents-decide-people-answer"
+   ],
+   "markdown_sha256": "05a6a071415d2223429ddb66ece23f90c65e49bd42b96847565952e206408776",
+   "main_sha256": "556aef9930fdc338a14f955385a089c417fadc1fa31ad562aa797c5a0da18f43"
+  },
+  {
+   "file": "v2/content/5-judgement/15__facts-and-the-record.md",
+   "page": "v2/book/facts-and-the-record.html",
+   "title": "Facts, evidence and the record",
+   "part": "Direction and judgement",
+   "number": 15,
+   "words": 2281,
+   "ideas": [
+    "the-record-checks-you",
+    "asked-to-be-corrected",
+    "a-claim-earns-its-status-by-being-refutable",
+    "ask-for-the-evidence",
+    "privacy-aware-generation",
+    "a-rabbit-hole-is-a-prompt-away",
+    "disagree-rationally-with-provenance",
+    "managing-information-is-the-work",
+    "gen-ai-makes-the-checking-cheap",
+    "best-prepared-person-in-the-room",
+    "provenance-is-a-graph",
+    "reality-corrects-the-graph",
+    "stale-pages-become-false-memories"
+   ],
+   "markdown_sha256": "5d7b02dfdf97cecb1a5aec2e7bc94f968aac6a4e49f2bc0056955c3c4b4b099e",
+   "main_sha256": "969b94d6b5fba473ddb6e89d01657694c4aa5d94f134789b4783b88d6923c5ad"
+  },
+  {
+   "file": "v2/content/6-building-safely/16__controlling-your-agent.md",
+   "page": "v2/book/controlling-your-agent.html",
+   "title": "Controlling your agent, and security for the agent era",
+   "part": "Building, safely",
+   "number": 16,
+   "words": 1873,
+   "ideas": [
+    "mandate-reach-gap",
+    "code-is-a-liability",
+    "learn-to-hack",
+    "secrets-never-in-the-chat",
+    "security-as-a-business-tool"
+   ],
+   "markdown_sha256": "4bda290e64836852643c7003c0746eb8e755e03bcb795a830ecfce72932565a8",
+   "main_sha256": "aaff9180faa6ebf6f7333c3c37f7ed284fc6d9c2d5bcc6d055889fe193a3e9ec"
+  },
+  {
+   "file": "v2/content/6-building-safely/17__open-source.md",
+   "page": "v2/book/open-source.html",
+   "title": "Open source",
+   "part": "Building, safely",
+   "number": 17,
+   "words": 1822,
+   "ideas": [
+    "the-fork-next-door",
+    "first-pr",
+    "open-source-community-as-the-way-in",
+    "open-source-removes-the-moat-excuse"
+   ],
+   "markdown_sha256": "f34ad5200ffdde98e29b180f2507d7eac9d6d5da831d96acd3b876abe0e799c1",
+   "main_sha256": "4660cf048a9df40cd8866587375bd8652ec5113d37f21e6dd7d5f3c6d36120cf"
+  },
+  {
+   "file": "v2/content/6-building-safely/18__building-blocks.md",
+   "page": "v2/book/building-blocks.html",
+   "title": "Building blocks",
+   "part": "Building, safely",
+   "number": 18,
+   "words": 1864,
+   "ideas": [
+    "lego-blocks",
+    "the-file-system-is-the-database",
+    "no-server-by-design"
+   ],
+   "markdown_sha256": "c7130c10e98c76ecd7c605fa4b3b610b0a781dfb7ef2b47d080f45d6324a66f0",
+   "main_sha256": "4f2054b14a48f44f8a68547c2227908b538a1570a1e20e98cd0423bcc2d9d1a8"
+  },
+  {
+   "file": "v2/content/6-building-safely/19__shipped-means-the-user-has-it.md",
+   "page": "v2/book/shipped-means-the-user-has-it.html",
+   "title": "Shipped means the user has it",
+   "part": "Building, safely",
+   "number": 19,
+   "words": 1847,
+   "ideas": [
+    "green-does-not-mean-live"
+   ],
+   "markdown_sha256": "e71d5c61eaa37c16048b38caa4866b07851b64b17ebf0fdd9096d224da9bc055",
+   "main_sha256": "6af8f9f72920765c9b13f29ebf3abc9d68635cba6eda1043a2b7de249fea86c1"
+  },
+  {
+   "file": "v2/content/7-the-long-game/20__graphs-and-your-future-self.md",
+   "page": "v2/book/graphs-and-your-future-self.html",
+   "title": "Graphs, memory and your future self",
+   "part": "The long game",
+   "number": 20,
+   "words": 1925,
+   "ideas": [
+    "think-in-graphs",
+    "memory-is-context-management",
+    "the-site-becomes-the-memory"
+   ],
+   "markdown_sha256": "9478c8d8d6fabc7309f3f73bbede3d784eb9aad540e8bb8b93feab0b47c5d517",
+   "main_sha256": "3ef0720b55232756485c055f16ffab0987060911aa9aaeaa39a78cd9ed5c0568"
+  },
+  {
+   "file": "v2/content/7-the-long-game/21__be-a-founder.md",
+   "page": "v2/book/be-a-founder.html",
+   "title": "Be a founder",
+   "part": "The long game",
+   "number": 21,
+   "words": 2114,
+   "ideas": [
+    "expert-founders",
+    "a-company-in-the-review"
+   ],
+   "markdown_sha256": "09e22a8a32789f6134c8f38684b94a3318f958d17f36b81ede75d14496bcfe23",
+   "main_sha256": "21f28fedc23a7f571cfecb9ff86cbe0102fa6b66b6de84d027069b1c97ff3458"
+  },
+  {
+   "file": "v2/content/7-the-long-game/22__civic-responsibility.md",
+   "page": "v2/book/civic-responsibility.html",
+   "title": "Civic responsibility",
+   "part": "The long game",
+   "number": 22,
+   "words": 2287,
+   "ideas": [
+    "hack-your-country"
+   ],
+   "markdown_sha256": "a900ad445cce389460997312fbd919bce2bbf64b82f27fa9a6dc27d169955640",
+   "main_sha256": "4901a2cc7f7cf65f0ed56b4ab126d2e0aa70725ac9dc8a074fbdecab7ec3c7af"
+  },
+  {
+   "file": "v2/content/8-hands-on-2026/23__an-agentic-workflow-from-zero.md",
+   "page": "v2/book/an-agentic-workflow-from-zero.html",
+   "title": "An agentic workflow from zero",
+   "part": "Hands on, 2026",
+   "number": 23,
+   "words": 1064,
+   "ideas": [],
+   "markdown_sha256": "fa06f8dd6b1ac2698189444991e021aa8dd6ce2185a1808cde600059b4f3f948",
+   "main_sha256": "5cafba1769c4cd831ee3610470a707d3e2a0c8cc09b67307196eee1941555dd1"
+  },
+  {
+   "file": "v2/content/8-hands-on-2026/24__your-first-graph.md",
+   "page": "v2/book/your-first-graph.html",
+   "title": "Your first graph, built by hand",
+   "part": "Hands on, 2026",
+   "number": 24,
+   "words": 1098,
+   "ideas": [],
+   "markdown_sha256": "0636a623834cd4d7913514fda15065fc5d64a71c1811c374a059ba28b475601f",
+   "main_sha256": "912ccf3a5855ab52c66d880b83ae478d29a7c311a1ffe6e129bb0aab202587ff"
+  },
+  {
+   "file": "v2/content/8-hands-on-2026/25__five-lenses.md",
+   "page": "v2/book/five-lenses.html",
+   "title": "One idea, five lenses",
+   "part": "Hands on, 2026",
+   "number": 25,
+   "words": 925,
+   "ideas": [],
+   "markdown_sha256": "6c816ee69d088ac35ba0c14dcfef48907aa4a631de5f6dbacacea4a6c6003068",
+   "main_sha256": "2e47fbe07890b78bb53bc3664a75065cae17a77f7b1d579706e5d90e438e03eb"
+  },
+  {
+   "file": "v2/content/8-hands-on-2026/26__a-tiny-agent-loop.md",
+   "page": "v2/book/a-tiny-agent-loop.html",
+   "title": "A tiny agent loop",
+   "part": "Hands on, 2026",
+   "number": 26,
+   "words": 1055,
+   "ideas": [],
+   "markdown_sha256": "08317884c90e43c5b7480244c2e4418071baab907f87c6cc45f860ccb493d59b",
+   "main_sha256": "4af8283ad101f390f95b0b89d37f3cb84ef60a85b9adc884ea24178bc7d6e5e0"
+  },
+  {
+   "file": "v2/content/8-hands-on-2026/27__images-infographics-and-storyboards.md",
+   "page": "v2/book/images-infographics-and-storyboards.html",
+   "title": "Images, infographics and storyboards, drawn by code",
+   "part": "Hands on, 2026",
+   "number": 27,
+   "words": 1068,
+   "ideas": [],
+   "markdown_sha256": "025db5004ab233dc1edf53c214fed25b90e30f21d8267f5ff5c6e8efa8d9e264",
+   "main_sha256": "39ee1b4bb5ad187cf6f14015ca0cdec45c4da858ed6cc06642648ceacd621344"
+  },
+  {
+   "file": "v2/content/8-hands-on-2026/28__meeting-briefs-and-follow-ups.md",
+   "page": "v2/book/meeting-briefs-and-follow-ups.html",
+   "title": "Meeting briefs and follow-ups",
+   "part": "Hands on, 2026",
+   "number": 28,
+   "words": 722,
+   "ideas": [],
+   "markdown_sha256": "8a38fb60735fc344e01a59ccd023a57b5ea3f5dc0c83432d8240d50a59ca656f",
+   "main_sha256": "30945ae8c4661bf579b4a154411361b15131621f1f6d0061cd6106f4e87be818"
+  },
+  {
+   "file": "v2/content/8-hands-on-2026/29__your-own-publishing.md",
+   "page": "v2/book/your-own-publishing.html",
+   "title": "Your own newsroom and inbox",
+   "part": "Hands on, 2026",
+   "number": 29,
+   "words": 1089,
+   "ideas": [],
+   "markdown_sha256": "b317f333095fbe9960653906454ebf360ba4a15bb36302bdccb7a2310ee5e855",
+   "main_sha256": "df66b97d2d12d767f130722ac865cd48a0b3c01ecebc5f3365e74a7b0aceccb1"
+  },
+  {
+   "file": "v2/content/9-how-this-book-was-made/30__how-this-book-was-made.md",
+   "page": "v2/book/how-this-book-was-made.html",
+   "title": "How this book was made",
+   "part": "How this book was made",
+   "number": 30,
+   "words": 2421,
+   "ideas": [
+    "repository-official-vault-working",
+    "co-written-and-credited",
+    "a-book-for-one-reader",
+    "read-comment-decide",
+    "write-it-as-an-article",
+    "release-v1-again",
+    "one-board-and-one-inventory",
+    "start-from-the-storyline",
+    "the-book-as-a-graph"
+   ],
+   "markdown_sha256": "5a370b7d2692ed90159c2c3c77efb736ea7f718da8a55b68b65188ee16270f7d",
+   "main_sha256": "bdde3f0f7b0840dbd5066ed6e2339608b512ebabce58403bd9a874a72658487a"
+  },
+  {
+   "file": "v2/content/0-front/00__about-this-release-candidate.md",
+   "page": "v2/book/about-this-release-candidate.html",
+   "title": "About this release candidate",
+   "part": "Front matter",
+   "number": 0,
+   "words": 647,
+   "ideas": [],
+   "markdown_sha256": "9a79f3c6552450c7078dfa1dada7a831c908e8edcdc038c768ef4d3ca87e624d",
+   "main_sha256": "361202056935344bc7267f41f4ebeb95ee8dc491a82f4909c09e1434ab9e22ec"
+  }
+ ]
+}

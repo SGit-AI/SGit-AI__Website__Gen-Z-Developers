@@ -38,7 +38,7 @@ In the Claude app, connect Drive and Gmail, make one Project called Contacts, an
 
 Draft and never send; append and never rewrite; stay in the folder. The first three are the ones the newsroom learned the hard way. Most of this is told, not enforced; the rest is a rule the agent keeps, which is why line 6 exists. The one-line report is how you check.
 
-What you have built is, in the terms of *Lenses, roles and loops*, an agent: a role on a loop with a goal, and the Project's instructions are its role description. *How I work with Claude* says it more plainly: a session with a focus and a `role.md`. Keep one session per topic, and name it.
+What you have built is, in the terms of *Lenses, roles and loops*, an agent: a role on a loop with a goal, and the Project's instructions are its role description. *How I work with Claude* says it more plainly: a session with a focus and a `role.md`, one per topic, named.
 
 ## The afternoon, and the first week
 
@@ -49,7 +49,7 @@ Then five exercises, one a day for the first week, each a single message:
 1. **Ask.** Who have I not spoken to in more than a month, grouped by stage, with the last Ledger line for each?
 2. **Prepare.** I am meeting someone on Thursday: brief me from the folder, what we last agreed, the last three emails, what we promised.
 3. **Draft.** Draft my follow-up, in my voice, from Notes. Do not send. Add a Ledger line that says a draft exists. You change two words, send it, and tell the agent "sent".
-4. **Debrief.** Speak for two minutes into your phone after the meeting; the agent puts the notes in Notes, updates the next step, adds the Ledger line and regenerates the Summary. This is the one that changes the habit.
+4. **Debrief.** Speak for two minutes into your phone after the meeting; the agent puts the notes in Notes, updates the next step, adds the Ledger line and regenerates the Summary. This one changes the habit.
 5. **Campaign.** Find everyone whose Record says they care about X, show the list with the reason for each, then draft one note to each, and send none.
 
 It will get two things wrong, predictably: a fact in the Record without a source, or a stage inferred from tone, fixed by a stricter line 4; and a Summary rewritten so that it drops something you cared about, fixed by putting the thing in the Record and regenerating. Every mistake adds a line to the policy. That is how the newsroom's grew, and it is what *Follow the rabbit holes* means by a system that once cost "hundreds of thousands or millions of pounds" being now "a brief and a feedback loop".

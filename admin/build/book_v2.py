@@ -13,6 +13,7 @@ Called from build.py as build_v2(ctx) with the page/write/esc/md/sha helpers; pd
 """
 import hashlib
 import json
+import os
 import re
 import sys
 from collections import OrderedDict
@@ -141,7 +142,9 @@ def build_v2(ctx):
     text = frozen_markdown(book, cand)
     got = sha(text)
     snap = ROOT / "v2/versions" / (cand["version"] + ".md")
-    if cand.get("text_sha256") is None:
+    if os.environ.get("GENZ_NO_FREEZE"):
+        print(f"build: candidate {cand['version']} not frozen (GENZ_NO_FREEZE set); text sha {got[:12]}")
+    elif cand.get("text_sha256") is None:
         cand["text_sha256"] = got
         vfile.write_text(json.dumps(vdoc, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
         snap.parent.mkdir(parents=True, exist_ok=True)

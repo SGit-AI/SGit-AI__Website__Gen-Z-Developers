@@ -18,7 +18,7 @@
 <nav class="site"><div class="row">
 <a class="brand" href="../index.html">gen-z-developers<span>.sgit.ai</span></a>
 <a class="parent" href="https://sgit.ai" title="sgit.ai, the parent project">&#8599; part of <b>sgit.ai</b></a>
-<a class="nl" href="../v1/book/index.html">The book</a><a class="nl" href="../read/index.html">Read &amp; review</a><a class="nl" href="../v1/versions/index.html">Versions</a><a class="nl" href="../contributors/index.html">Contributors</a><a class="nl" href="../map/index.html">The map</a><a class="nl" href="../graph/index.html">The graph</a><a class="nl" href="../articles/index.html">Articles</a><a class="nl" href="../decisions/index.html">Decisions</a><a class="nl" href="../storyboards/index.html">Storyboards</a><a class="nl" href="../briefs/index.html">The briefs</a><a class="nl" href="../team/index.html">The team</a><a class="nl" href="../vault/index.html">The vault</a><a class="nl here" href="../admin/index.html">Admin</a>
+<a class="nl" href="../v1/book/index.html">The book</a><a class="nl" href="../v2/book/index.html">Second edition</a><a class="nl" href="../read/index.html">Read &amp; review</a><a class="nl" href="../v1/versions/index.html">Versions</a><a class="nl" href="../contributors/index.html">Contributors</a><a class="nl" href="../map/index.html">The map</a><a class="nl" href="../graph/index.html">The graph</a><a class="nl" href="../articles/index.html">Articles</a><a class="nl" href="../decisions/index.html">Decisions</a><a class="nl" href="../storyboards/index.html">Storyboards</a><a class="nl" href="../briefs/index.html">The briefs</a><a class="nl" href="../team/index.html">The team</a><a class="nl" href="../vault/index.html">The vault</a><a class="nl here" href="../admin/index.html">Admin</a>
 <span class="ver">site <a href="../admin/versions.html" title="Release history">v0.2.18</a></span>
 </div></nav>
 <main><div class="inner">
@@ -29,6 +29,7 @@
 <pre>python3 admin/build/gen_map.py           # admin/content/map.json from v1/content/ and the authored reading
 python3 admin/build/gen_contributors.py  # admin/content/contributors.json from admin/content/github/
 python3 admin/build/graph_model.py       # checks the graph (ideas, chapters, sources, tasks) and prints its counts
+node admin/build/print_pdf.js v2/book/single.html v2/generation-z-developers-<candidate>.pdf   # the candidate as a PDF, after build.py (Playwright)
 python3 admin/build/build.py       # every page, the manifest, the frozen markdown, llms.txt, the sitemap
 node admin/build/validate.js       # the gate: version, links, canonical, key leak, manifest, sitemap, map</pre>
 <h2>The rules</h2>

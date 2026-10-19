@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>An agentic workflow from zero &mdash; gen-z-developers.sgit.ai</title>
+<meta name="description" content="An agentic workflow from zero: chapter 23 of Gen Z Developers (GenAI Edition), release candidate v2.0.0-rc1.">
+<link rel="canonical" href="https://gen-z-developers.sgit.ai/v2/book/an-agentic-workflow-from-zero.html">
+<meta property="og:title" content="An agentic workflow from zero">
+<meta property="og:description" content="An agentic workflow from zero: chapter 23 of Gen Z Developers (GenAI Edition), release candidate v2.0.0-rc1.">
+<meta property="og:url" content="https://gen-z-developers.sgit.ai/v2/book/an-agentic-workflow-from-zero.html">
+<meta property="og:type" content="article">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230c2a3d%27/%3E%3Crect x=%274%27 y=%276%27 width=%2711%27 height=%2720%27 fill=%27%237bc08f%27/%3E%3Crect x=%2717%27 y=%276%27 width=%2711%27 height=%2720%27 fill=%27%23e5625b%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Arial Black,Arial%27 font-weight=%27900%27 font-size=%2718%27 text-anchor=%27middle%27 fill=%27%230c2a3d%27%3EZ%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/graph.css">
+</head>
+<body>
+<nav class="site"><div class="row">
+<a class="brand" href="../../index.html">gen-z-developers<span>.sgit.ai</span></a>
+<a class="parent" href="https://sgit.ai" title="sgit.ai, the parent project">&#8599; part of <b>sgit.ai</b></a>
+<a class="nl" href="../../v1/book/index.html">The book</a><a class="nl here" href="../../v2/book/index.html">Second edition</a><a class="nl" href="../../read/index.html">Read &amp; review</a><a class="nl" href="../../v1/versions/index.html">Versions</a><a class="nl" href="../../contributors/index.html">Contributors</a><a class="nl" href="../../map/index.html">The map</a><a class="nl" href="../../graph/index.html">The graph</a><a class="nl" href="../../articles/index.html">Articles</a><a class="nl" href="../../decisions/index.html">Decisions</a><a class="nl" href="../../storyboards/index.html">Storyboards</a><a class="nl" href="../../briefs/index.html">The briefs</a><a class="nl" href="../../team/index.html">The team</a><a class="nl" href="../../vault/index.html">The vault</a><a class="nl" href="../../admin/index.html">Admin</a>
+<span class="ver">site <a href="../../admin/versions.html" title="Release history">v0.2.18</a></span>
+</div></nav>
+<main><div class="inner">
+<div class="crumbs"><a href="../../index.html">gen-z-developers.sgit.ai</a> &rarr; <a href="../../v2/book/index.html">The second edition</a> &rarr; <a href="../../v2/book/index.html#hands-on-2026">Hands on, 2026</a> &rarr; <b>An agentic workflow from zero</b></div>
+<article class="chapter v2"><p class="small dim">Hands on, 2026 &middot; chapter 23 of 30 &middot; <span class="badge draft">release candidate v2.0.0-rc1</span> &middot; 1,064 words &middot; <a href="../../read/v2.html#an-agentic-workflow-from-zero">read and review</a></p><h1>An agentic workflow from zero</h1><div class="body"><p>By the end of this chapter you will have a folder for every person you deal with, an agent that reads those folders and drafts for you, and six lines of rules that make it safe. One afternoon, no developer, no vault, no new tool: a Google Workspace account and a Claude seat are enough. The steps are the newsroom's, from <em>From a spreadsheet to a folder per person</em>. The tools move, and the article dates its description of the Claude app to October 2026; the shape is what to learn.</p>
+<h2 id="what-a-spreadsheet-cannot-hold">What a spreadsheet cannot hold</h2>
+<p>If you are in touch with people, you probably have a spreadsheet: one row per person, a stage, a date, a next step, and a notes column. The person the article was written with ran their customer relationships that way, and ran them well. What the row cannot hold is what happened: the emails, word for word, the call last Tuesday, what was promised. "The difference is not the tool. It is what counts as the record." In a spreadsheet the record is a summary you typed. In a folder the record is everything that happened, kept as it happened, and the summary is derived from it. That reversal gives an agent something to work with.</p>
+<h2 id="the-folder-and-the-policy">The folder, and the policy</h2>
+<p>Make a folder called Contacts. Inside it, one folder per person. Inside each, five documents, with these names so that you and the agent mean the same thing:</p>
+<ul>
+<li><strong>Record</strong>: role, company, how you met, stage, the next step and its date, what they care about, every fact with where it came from in brackets. The row, promoted.</li>
+<li><strong>Ledger</strong>: one line per event: the date, in or out, the channel, one sentence. Only ever added to. A correction is a new line.</li>
+<li><strong>Messages</strong>: every email and note exchanged, pasted word for word, newest at the bottom.</li>
+<li><strong>Notes</strong>: calls and meetings, dated, including what you said into your phone afterwards.</li>
+<li><strong>Summary</strong>: written by the agent from the four above, rewritten when you ask, never edited by hand. If it is wrong, fix the Record or the Ledger and regenerate.</li>
+</ul>
+<p>In the Claude app, connect Drive and Gmail, make one Project called Contacts, and put the behaviour policy in its instructions. Six lines, from the article, which I will not shorten:</p>
+<ol>
+<li>You work for me. Every email you write is a draft that I read and send. You never send.</li>
+<li>You read the Contacts folder in my Drive and my Gmail. You write only into a person's folder in Contacts, and only into their Ledger, Messages, Notes and Summary. You never change the Record without showing me the change first.</li>
+<li>You add to the Ledger and the Messages. You never rewrite or delete a line. A correction is a new line.</li>
+<li>Every fact you put in a Record or a Summary names where it came from.</li>
+<li>If a person has no folder, you ask before making one. If a request would reach outside the folder, you ask.</li>
+<li>At the end of every task you say, in one line, what you read and what you wrote.</li>
+</ol>
+<p>Draft and never send; append and never rewrite; stay in the folder. The first three are the ones the newsroom learned the hard way. Most of this is told, not enforced; the rest is a rule the agent keeps, which is why line 6 exists. The one-line report is how you check.</p>
+<p>What you have built is, in the terms of <em>Lenses, roles and loops</em>, an agent: a role on a loop with a goal, and the Project's instructions are its role description. <em>How I work with Claude</em> says it more plainly: a session with a focus and a <code>role.md</code>, one per topic, named.</p>
+<h2 id="the-afternoon-and-the-first-week">The afternoon, and the first week</h2>
+<p>The migration is four steps. Export the sheet as CSV, drop it in the folder, and ask the agent to say, for each row, the folder it would make and the Record it would write, without making anything yet. Make the folders from a template; twenty people is twenty minutes by hand. Per person, ask it to read a year of your mail with that person and write the Record and the first Ledger lines, each fact with its source; read the Record and correct it once. Then ask for the Summaries, read three, and where one is wrong fix the source document, not the summary. From then on nothing is retyped.</p>
+<p>Then five exercises, one a day for the first week, each a single message:</p>
+<ol>
+<li><strong>Ask.</strong> Who have I not spoken to in more than a month, grouped by stage, with the last Ledger line for each?</li>
+<li><strong>Prepare.</strong> I am meeting someone on Thursday: brief me from the folder, what we last agreed, the last three emails, what we promised.</li>
+<li><strong>Draft.</strong> Draft my follow-up, in my voice, from Notes. Do not send. Add a Ledger line that says a draft exists. You change two words, send it, and tell the agent "sent".</li>
+<li><strong>Debrief.</strong> Speak for two minutes into your phone after the meeting; the agent puts the notes in Notes, updates the next step, adds the Ledger line and regenerates the Summary. This one changes the habit.</li>
+<li><strong>Campaign.</strong> Find everyone whose Record says they care about X, show the list with the reason for each, then draft one note to each, and send none.</li>
+</ol>
+<p>It will get two things wrong, predictably: a fact in the Record without a source, or a stage inferred from tone, fixed by a stricter line 4; and a Summary rewritten so that it drops something you cared about, fixed by putting the thing in the Record and regenerating. Every mistake adds a line to the policy. That is how the newsroom's grew, and it is what <em>Follow the rabbit holes</em> means by a system that once cost "hundreds of thousands or millions of pounds" being now "a brief and a feedback loop".</p>
+<aside class="for-dinis"><b>For Dinis</b> the walkthrough is written for someone with customers, and asks for three real contacts and the topic the person sells to be substituted. For a reader looking for a first job, should the exercises be rewritten around their own contacts?</aside>
+<p>The folders move into a vault when one of three signals appears: a second agent needs to read them, the files should not be readable by whoever runs the drive, or the record has to carry between tools. Until then the folders are enough, and when the day comes the move is a copy; the policy does not change.</p></div><div class="prov-box"><h3>Where this chapter comes from</h3><p class="small">Written from 0 ideas in <a href="../../graph/ideas/index.html">the register</a>. The hands-on part has no ideas placed yet; its sources are the articles below.</p><p class="small">Sources drawn on: <a href="https://newsroom.sgit.ai/articles/from-a-spreadsheet-to-a-folder-per-person.html">From a spreadsheet to a folder per person</a>; <a href="https://newsroom.sgit.ai/articles/how-i-work-with-claude.html">How I work with Claude</a>; <a href="../../articles/follow-the-rabbit-holes.html">Follow the rabbit holes</a>; <a href="../../articles/lenses-roles-and-loops.html">Lenses, roles and loops</a>.</p><p class="small dim">Centre of gravity: explorer &middot; written first for zara &middot; 1,064 words &middot; <a href="../../graph/chapters.html#an-agentic-workflow-from-zero">the chapter on the map</a> &middot; <a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers/blob/dev/v2/content/8-hands-on-2026/23__an-agentic-workflow-from-zero.md">the markdown</a></p></div><div class="prevnext"><a href="civic-responsibility.html">&larr; Civic responsibility</a><a href="your-first-graph.html">Your first graph, built by hand &rarr;</a></div></article>
+</div></main>
+<footer class="site"><div class="row">
+<span>Generation Z Developers, by Dinis Cruz. The 2018 text is Creative Commons BY 4.0, as Dinis decided on 18 October 2026: see <a href="../../v1/versions/index.html#licence">the licence note</a>. Everything else on this site is CC BY 4.0; code under the repository licence.</span>
+<span><a href="https://github.com/SGit-AI/SGit-AI__Website__Gen-Z-Developers">GitHub</a> &middot; <a href="../../vault/index.html">the working vault</a> &middot; <a href="../../admin/versions.html">release history</a> &middot; <a href="../../llms.txt">llms.txt</a></span>
+</div></footer>
+</body>
+</html>

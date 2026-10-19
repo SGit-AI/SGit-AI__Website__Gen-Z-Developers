@@ -27,7 +27,7 @@ So make a folder in Google Drive called Contacts. Inside it, one folder per pers
 - **Notes.** Calls and meetings, dated, including what you said into your phone afterwards.
 - **Summary.** Written by the agent from the four above, rewritten whenever you ask, never edited by hand. If it is wrong, the fix goes in the Record or the Ledger, and the Summary is regenerated.
 
-That is the whole structure. It is the one my agents run in encrypted vaults, minus the hashes and the graph. A person with no interest in software can keep it, and a person who leaves can hand it over. The 2018 chapter on Slack had a smaller version of the same habit, which I called talking to yourself: write down what you are about to try, do it, paste the screenshot, repeat. The point then was that the raw record of your own thinking is useful to your future self. The Ledger is that habit, kept for every person you work with.
+That is the whole structure. It is the one my agents run in encrypted vaults, minus the hashes and the graph. A person with no interest in software can keep it, and a person who leaves can hand it over. The 2018 chapter on Slack had a smaller version of the same habit, which I called talking to yourself: write down what you are about to try, do it, paste the screenshot, repeat, because the raw record of your own thinking is useful to your future self. The Ledger is that habit, kept for every person you work with.
 
 ## The agent, and six lines
 
@@ -42,11 +42,11 @@ In the Claude app, connect Google Drive and Gmail. Make one Project, call it Con
 
 The first three are the ones my team learned the hard way: draft and never send; append and never rewrite; stay in the folder. The sixth exists because most of the policy is told, not enforced. In the Claude app today, "draft, never send" holds as far as Gmail drafting goes; the rest is a rule the agent is asked to keep, and the one-line report is how you check that it did.
 
-Draft, never send is the rule that never changes. It is the reason the agentic email workflow I run is the first one that made me feel more in control, not less. Every reply an agent writes lands in Drafts; I read it, change what I want changed, and press send. Trust is built from a record of drafts I did not have to change. When the day comes to let an agent send, it will be one agent, one kind of message, with a policy row that says so.
+Draft, never send is the rule that never changes. It is why the agentic email workflow I run is the first one that made me feel more in control, not less: every reply lands in Drafts, I read it, change what I want changed, and press send. When the day comes to let an agent send, it will be one agent, one kind of message, with a policy row that says so.
 
 ## One afternoon, then five exercises
 
-The migration is one afternoon, in four steps. Export the sheet as a CSV and drop it in the folder; ask the agent what folders and Records it would make, and do not let it make anything yet. Make the folders, from a template you made once. Then, person by person: read everything in my Gmail with this person from the last year, write the Record and the first Ledger lines from it, each fact with its source. Read the Record and correct it once; that is the only retyping you will ever do. Last, ask for the Summaries, read three, and where one is wrong fix the source document, not the Summary.
+The migration is one afternoon, in four steps. Export the sheet as a CSV and drop it in the folder; ask the agent what folders and Records it would make, and do not let it make anything yet. Make the folders, from a template you made once. Then, person by person: read everything in my Gmail with this person from the last year, write the Record and the first Ledger lines from it, each fact with its source. Read the Record and correct it once; that is the only retyping you will ever do. Last, ask for the Summaries.
 
 Then five exercises over the first week, each one message to the agent, each using the folder in a way the one before did not:
 
@@ -56,7 +56,7 @@ Then five exercises over the first week, each one message to the agent, each usi
 4. **Debrief.** Here is my voice note after the meeting. Put it in Notes, update the next step in the Record and show me the change, add the Ledger line, regenerate the Summary.
 5. **Campaign.** Find everyone whose Record says they care about X. Show me the list with the reason for each. Then draft one note to each, and do not send any.
 
-The fourth is the one that changes the habit, because the record is now kept at the moment the thing happens. The fifth is what my agents do for outreach; with vaults it took eight days to build, with folders it is one message.
+The fourth is the one that changes the habit, because the record is now kept at the moment the thing happens.
 
 It will get two things wrong at first. It will put a fact in the Record without a source, or infer a stage from tone; the fix is a stricter line 4. And it will rewrite the Summary in a way that drops something you cared about; the fix is not to edit the Summary but to put the thing in the Record, where it is a fact with a source. The Summary is a view; the Record is the truth. One thing that is not a mistake: it will sometimes ask when you did not expect it to. That is line 5 working.
 
@@ -68,15 +68,15 @@ Three habits turn a week's exercise into a way of working.
 
 One session per topic. A thread is the model's frame of reference, and everything in it is context for the next answer. Put three projects in one thread and the model starts to borrow a name from one and a decision from another. It is not being careless; it is doing exactly what you asked. When the topic changes, open a new session.
 
-Name every session. "Contacts | this week's follow-ups." An agent session gets an @ in front: @contacts. The @ tells you at a glance that you are talking to something with a defined job. An agent, in the end, is a session with a focus: a few documents that say what the project is, a short file that says what the agent does and does not do, and a session that reads them before anything else. *How to work with agents* takes this further.
+Name every session: "Contacts | this week's follow-ups". An agent session gets an @ in front: @contacts. An agent, in the end, is a session with a focus: a few documents that say what the project is, a short file that says what the agent does and does not do, and a session that reads them before anything else. *How to work with agents* takes this further.
 
 Give the agent a mailbox of its own. When you want it to handle mail rather than read yours, buy it a Workspace seat on a domain you own and a Claude seat of its own, and connect Gmail and Drive from that account, not yours. Your inbox has years of secrets in it. The agent's is empty on day one, so what it can leak is nothing, and what it can reach is exactly what you forward to it. That isolation is not a limitation. It is what lets you give the agent more as you learn to trust it.
 
 ## Why your agents should not run on your laptop
 
-People ask me most weeks why I do not run a model on my Mac. The reason is not the models. It is a fact about operating systems: they have two hard walls, the kernel and the user account, and inside the user account there is no third wall. A process you start runs as you. The file system does not know the difference between you opening your SSH key and a process you started opening it. An agent on your laptop can read everything you can read: your cloud credentials, the password manager while it is unlocked, every site your browser is signed into. The permission prompts the desktop agents add are settings, enforced by the process they constrain.
+People ask me most weeks why I do not run a model on my Mac. The reason is not the models. It is a fact about operating systems: they have two hard walls, the kernel and the user account, and inside the user account there is no third wall. A process you start runs as you. The file system does not know the difference between you opening your SSH key and a process you started opening it. An agent on your laptop can read everything you can read: your cloud credentials, the password manager while it is unlocked, every site your browser is signed into.
 
-The 2018 book had a draft on this, *Don't touch production*, written for developers: teams and individuals should be "allergic to being given access to data and systems", because the more you can reach, the more a compromise of your machine costs. It told the story of a BI team whose compromised S3 keys turned out to open data the team never needed. The same rule now applies to the agent you have just set up, and to you as its operator. A mistake inside a boundary is a bad afternoon. The same mistake inside your account is an incident.
+The 2018 book had a draft on this, *Don't touch production*, written for developers: teams and individuals should be "allergic to being given access to data and systems", because the more you can reach, the more a compromise of your machine costs. The same rule now applies to the agent you have just set up, and to you as its operator. A mistake inside a boundary is a bad afternoon. The same mistake inside your account is an incident.
 
 So pick the surface by reach. My agents run in places that are not my laptop: a chat with nothing connected, for thinking; Cowork in the cloud, with no repositories, for most of the agentic work; Claude Code on the web, with one repository per session, when code has to change. The surface with the repositories has no mailbox, the surface with the mailbox has no repositories, and the surface with neither does the thinking. Your Contacts Project is the first of these: it reaches one folder and one mailbox, and nothing else of yours.
 
