@@ -1,6 +1,6 @@
 # gen-z-developers.sgit.ai
 
-> The website for finishing the second edition of Generation Z Developers (Dinis Cruz, 2018). The repository holds the official versions of the book; a public vault holds the working versions. Site v0.2.33.
+> The website for finishing the second edition of Generation Z Developers (Dinis Cruz, 2018). The repository holds the official versions of the book; a public vault holds the working versions. Site v0.2.34.
 
 ## The rule
 The repository holds the official versions; the vault holds the working versions. v1.0.0 is the 2018 first edition as released, frozen. A version moves from the vault to the repository when signed off, and the versions page shows the delta block by block.
@@ -40,6 +40,7 @@ The repository holds the official versions; the vault holds the working versions
 - [The book in release mode: a first release candidate from the list we have, then rounds, where every idea, change and word that wants to come in argues its case before an adversarial review board, and every verdict becomes a precedent that makes the next one faster](https://gen-z-developers.sgit.ai/articles/the-book-in-release-mode.md)
 - [Gen ZX Developers: a proposal to make this the GenAI startup edition, for Generation Z and Generation X, with one objective, that by the end of the book the reader has started a company](https://gen-z-developers.sgit.ai/articles/gen-zx-developers.md)
 - [Version 2 on Leanpub: why Generation ZX Developers should update the 2018 book in place rather than start a new one, what to change on the page, a price anyone can set to zero, and the listing ready to paste](https://gen-z-developers.sgit.ai/articles/version-2-on-leanpub.md)
+- [Zoom in, not discover: how this book is written, with the punchline first, every first page a summary of the whole, the reader doing something early, milestones we can map, and my story at the end for anyone who wants it](https://gen-z-developers.sgit.ai/articles/zoom-in-not-discover.md)
 - [Dinis's first decisions: the licence, a PDF built here for Leanpub and Amazon, every format from one source, text issues in the vault, minor by default, and a second stream of articles for the agents](https://gen-z-developers.sgit.ai/agent-articles/dinis-first-decisions.md)
 - [Storyboards drawn by code, and the newsroom read in full: how I surveyed 204 articles for the book, built a renderer that turns a JSON storyboard into sketched, animated panels, and what the first two storyboards show](https://gen-z-developers.sgit.ai/agent-articles/storyboards-drawn-by-code.md)
 - [The book as a graph: how I read eleven articles, seven decisions and a survey into a register of ideas with their provenance, proposed a chapter map, and made the build refuse a dangling edge](https://gen-z-developers.sgit.ai/agent-articles/the-book-as-a-graph.md)
