@@ -54,15 +54,33 @@
   function draw(g, node, cls) { node.classList.add(cls || 'ink'); g.appendChild(node); return node; }
 
   // ------------------------------------------------------------ the people
+  // Faces. Brows are [inner, outer] offsets in px (negative is up), mirrored on the two eyes so a face is symmetric
+  // unless a mood says otherwise (thinking and confused lift one brow on purpose). arch bends the brow; happy faces arch.
   const MOUTH = {
     neutral: (x, y) => `M${x - 9},${y} L${x + 9},${y}`,
-    happy: (x, y) => `M${x - 12},${y - 3} Q${x},${y + 12} ${x + 12},${y - 3}`,
-    worried: (x, y) => `M${x - 11},${y + 5} Q${x},${y - 6} ${x + 11},${y + 5}`,
+    happy: (x, y) => `M${x - 13},${y - 3} Q${x},${y + 12} ${x + 13},${y - 3}`,
+    excited: null,
+    calm: (x, y) => `M${x - 10},${y - 1} Q${x},${y + 7} ${x + 10},${y - 1}`,
+    worried: (x, y) => `M${x - 10},${y + 4} Q${x - 3},${y - 3} ${x + 1},${y + 1} Q${x + 5},${y + 4} ${x + 10},${y}`,
+    sad: (x, y) => `M${x - 11},${y + 6} Q${x},${y - 5} ${x + 11},${y + 6}`,
     surprised: null,
-    thinking: (x, y) => `M${x - 8},${y + 2} Q${x + 2},${y - 2} ${x + 10},${y + 3}`,
-    determined: (x, y) => `M${x - 11},${y + 1} Q${x},${y + 5} ${x + 11},${y - 2}`,
+    thinking: (x, y) => `M${x - 4},${y + 2} L${x + 9},${y}`,
+    confused: (x, y) => `M${x - 11},${y + 2} Q${x - 5},${y - 4} ${x},${y + 1} Q${x + 5},${y + 6} ${x + 11},${y}`,
+    determined: (x, y) => `M${x - 12},${y} Q${x},${y + 7} ${x + 12},${y}`,
   };
-  const BROWS = { neutral: [0, 0], happy: [-3, -3], worried: [6, -6], surprised: [-8, -8], thinking: [-6, 4], determined: [7, -7] };
+  const BROWS = {
+    neutral: { both: [0, 0] },
+    happy: { both: [-3, -1], arch: 3 },
+    excited: { both: [-7, -5], arch: 4 },
+    calm: { both: [-1, 0], arch: 2 },
+    worried: { both: [-7, 2], arch: 1 },
+    sad: { both: [-6, 3], arch: 0 },
+    surprised: { both: [-10, -9], arch: 4 },
+    thinking: { near: [-1, -1], far: [-8, -6], arch: 2 },
+    confused: { near: [2, 0], far: [-9, -7], arch: 2 },
+    determined: { both: [2, -1], arch: 1 },
+  };
+  const MOODS = Object.keys(BROWS);
 
   function arms(pose, sx, sy, len, dir) {
     // returns [[elbow, hand], [elbow, hand]] for the near arm and the far arm, in the figure's local frame
@@ -97,16 +115,19 @@
   }
 
   function face(g, rc, mood, hx, hy, r, dir) {
-    const ex = hx + dir * 6, eo = r * 0.36, [bi, bo] = BROWS[mood] || BROWS.neutral;
+    const ex = hx + dir * 6, eo = r * 0.36, b = BROWS[mood] || BROWS.neutral;
     const ink = { stroke: INK, strokeWidth: 2.4, roughness: 0.6 };
     for (const s of [-1, 1]) {
-      const x = ex + s * eo;
-      el('circle', { cx: x, cy: hy - 2, r: mood === 'surprised' ? 5 : 4, fill: INK, class: 'ink-solid' }, g);
-      const inner = s === -dir ? bi : bo; // brows tilt by mood
-      draw(g, rc.line(x - 9, hy - 16 + (s < 0 ? inner : -inner) * 0.6, x + 9, hy - 16 + (s < 0 ? -inner : inner) * 0.6, ink));
+      const x = ex + s * eo, near = s === dir; // the eye on the side the figure faces
+      if (mood === 'calm') draw(g, rc.path(`M${x - 6},${hy} Q${x},${hy - 7} ${x + 6},${hy}`, ink)); // eyes closed, content
+      else el('circle', { cx: x + (mood === 'thinking' ? dir * 2 : 0), cy: hy - 2 - (mood === 'thinking' ? 2 : 0), r: mood === 'surprised' || mood === 'excited' ? 5 : 4, fill: INK, class: 'ink-solid' }, g);
+      const [inner, outer] = b.both || (near ? b.near : b.far);
+      const yi = hy - 16 + inner, yo = hy - 16 + outer, xi = x - s * 9, xo = x + s * 9, arch = b.arch || 0;
+      draw(g, rc.path(`M${xo},${yo} Q${x},${Math.min(yi, yo) - arch} ${xi},${yi}`, ink));
     }
     const mx = ex, my = hy + r * 0.45;
     if (mood === 'surprised') draw(g, rc.ellipse(mx, my + 2, 14, 18, Object.assign({ fill: '#7a2e2e', fillStyle: 'solid' }, ink)));
+    else if (mood === 'excited') draw(g, rc.path(`M${mx - 15},${my - 4} Q${mx},${my - 1} ${mx + 15},${my - 4} Q${mx + 12},${my + 16} ${mx},${my + 16} Q${mx - 12},${my + 16} ${mx - 15},${my - 4} Z`, Object.assign({ fill: '#7a2e2e', fillStyle: 'solid' }, ink)));
     else draw(g, rc.path((MOUTH[mood] || MOUTH.neutral)(mx, my), ink));
   }
 
@@ -134,7 +155,7 @@
     draw(g, rc.line(hx, hy - 60 * s, hx + dir * 12 * s, hy - 100 * s, { stroke: INK, strokeWidth: 2.6 }));
     draw(g, rc.circle(hx + dir * 12 * s, hy - 104 * s, 16 * s, { fill: '#f59e0b', fillStyle: 'solid', stroke: INK }));
     const mood = o.mood || 'happy';
-    for (const sx of [-1, 1]) el('rect', { x: hx + sx * 34 * s - 9 * s + dir * 6, y: hy - 24 * s, width: 18 * s, height: mood === 'thinking' ? 8 * s : 26 * s, rx: 4, fill: c, class: 'ink-solid' }, g);
+    for (const sx of [-1, 1]) el('rect', { x: hx + sx * 34 * s - 9 * s + dir * 6, y: hy - 24 * s, width: 18 * s, height: mood === 'thinking' || mood === 'calm' ? 8 * s : 26 * s, rx: 4, fill: c, class: 'ink-solid' }, g);
     draw(g, rc.path((MOUTH[mood] || MOUTH.happy)(hx + dir * 6, hy + 28 * s), { stroke: c, strokeWidth: 3.2, roughness: 0.5 }));
     const prompt = el('text', { x: hx - 70 * s, y: hy + 50 * s, 'font-family': 'ui-monospace, Menlo, monospace', 'font-size': 14 * s, fill: c }, g);
     prompt.textContent = '>_';
@@ -375,8 +396,12 @@
     } else if (name === 'street') {
       for (let i = 0; i < 5; i++) draw(g, rc.rectangle(60 + i * 310, 300 + (i % 2) * 80, 220, FLOOR - 300 - (i % 2) * 80, { fill: ['#fde2e4', '#e2ece9', '#fff1e6', '#dfe7fd', '#f0efeb'][i], fillStyle: 'hachure', hachureGap: 12, stroke: '#9ca3af', strokeWidth: 2 }), 'scenery');
     } else if (name === 'night') {
-      el('rect', { x: 0, y: 0, width: W, height: FLOOR, fill: '#e8ecf6', class: 'scenery' }, g);
-      draw(g, rc.circle(1420, 150, 90, { fill: '#fef9c3', fillStyle: 'solid', stroke: INK }), 'scenery');
+      // a dusk-blue sky dark enough to read as night, light enough that the people's outlines still show
+      el('rect', { x: 0, y: 0, width: W, height: FLOOR, fill: '#3f4a78', class: 'scenery' }, g);
+      el('circle', { cx: 1430, cy: 160, r: 70, fill: '#fef3c7', class: 'scenery' }, g); // a crescent: the moon, and the sky over most of it
+      el('circle', { cx: 1462, cy: 138, r: 62, fill: '#3f4a78', class: 'scenery' }, g);
+      [[180, 110], [420, 70], [640, 160], [900, 90], [1120, 180], [1250, 60], [300, 230], [1540, 300]].forEach(([sx, sy]) =>
+        draw(g, rc.path(`M${sx - 9},${sy} L${sx + 9},${sy} M${sx},${sy - 9} L${sx},${sy + 9}`, { stroke: '#fef3c7', strokeWidth: 2.4, roughness: 0.4 }), 'scenery'));
     } else if (name === 'classroom') {
       draw(g, rc.rectangle(500, 110, 600, 300, { fill: '#14532d', fillStyle: 'solid', stroke: INK, strokeWidth: 3 }), 'scenery');
     }
@@ -489,42 +514,164 @@
     return svg;
   }
 
+  // ------------------------------------------------------------ preferences: per viewer, in this browser only
+  // How you like to look at panels (animation, view, panels per row, text under panels) is remembered here and nowhere
+  // else; a private window or blocked storage just gets the defaults. ?view=deck|grid|script overrides it for one visit.
+  const PREFS_KEY = 'genz.storyboards.v1';
+  const VIEWS = ['deck', 'grid', 'script'];
+  const POSES = ['stand', 'point', 'wave', 'arms-up', 'shrug', 'think', 'sit'];
+  const reducedMotion = () => { try { return matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { return false; } };
+  function loadPrefs() {
+    const d = { anim: !reducedMotion(), view: 'deck', cols: 3, text: false };
+    try { return Object.assign(d, JSON.parse(localStorage.getItem(PREFS_KEY) || '{}')); } catch (e) { return d; }
+  }
+  function savePrefs(p) { try { localStorage.setItem(PREFS_KEY, JSON.stringify(p)); } catch (e) { /* the defaults hold */ } }
+  // keys are ignored while typing in a field, and Space and Enter are left to a focused button
+  const typing = (e) => e.metaKey || e.ctrlKey || e.altKey || /^(INPUT|SELECT|TEXTAREA)$/.test((e.target && e.target.tagName) || '') ||
+    ((e.key === ' ' || e.key === 'Enter') && e.target && e.target.tagName === 'BUTTON');
+
+  // ------------------------------------------------------------ playing a panel
+  // A panel is drawn and still unless it is waiting to play ('wait' hides it until it arrives). play() runs the arrival
+  // once, for as long as its last element takes, and leaves the panel drawn; calling it again replays it.
+  function playLength(panel) {
+    if (panel._len) return panel._len;
+    let max = 0;
+    panel.querySelectorAll('[style*="--d"]').forEach(e => { const m = /--d:\s*([\d.]+)s/.exec(e.getAttribute('style')); if (m) max = Math.max(max, parseFloat(m[1])); });
+    return (panel._len = Math.max(1.2, max + 0.7) * 1000);
+  }
+  function play(panel) {
+    clearTimeout(panel._t);
+    panel.classList.remove('wait', 'play');
+    void panel.getBoundingClientRect(); // restart the animations
+    panel.classList.add('play');
+    panel._t = setTimeout(() => panel.classList.remove('play'), playLength(panel));
+    return playLength(panel);
+  }
+
+  // ------------------------------------------------------------ a panel as text
+  // Who is in it, in what pose and mood, what they say or think, the evidence, the stops, the note and the source: the
+  // script view is this for every panel, and the grid shows it under each panel when Text is on.
+  const sceneLabel = (sc) => sc.caption || sc.punchline || sc.title || '';
+  function sceneText(sc, cast) {
+    const box = document.createElement('div'); box.className = 'sb-text';
+    const add = (cls, text) => { if (!text) return; const e = document.createElement('p'); e.className = cls; e.textContent = text; box.appendChild(e); };
+    if (sc.kind === 'cover') add('sb-t-sub', sc.subtitle);
+    if (sc.punchline && sc.caption) add('sb-t-punch', '“' + sc.punchline + '”');
+    (sc.cast || []).forEach(c => {
+      const who = (cast.characters || []).find(x => x.id === c.who), p = document.createElement('p');
+      p.className = 'sb-t-line';
+      const b = document.createElement('b'); b.textContent = who ? who.name : c.who; p.appendChild(b);
+      const meta = document.createElement('span'); meta.className = 'sb-t-meta'; meta.textContent = ` ${c.pose || 'stand'}, ${c.mood || 'neutral'}`; p.appendChild(meta);
+      if (c.says) p.appendChild(document.createTextNode((c.thinks ? ' thinks: ' : ': ') + '“' + c.says + '”'));
+      box.appendChild(p);
+    });
+    const ev = sc.evidence;
+    if (ev && ev.quote) add('sb-t-quote', '“' + ev.quote + '”' + (ev.source ? ', ' + ev.source : ''));
+    if (ev && ev.bars) add('sb-t-quote', (ev.title ? ev.title + ': ' : '') + ev.bars.map(b => `${b.label} ${b.shown || b.value}`).join(' · '));
+    if (sc.stops) add('sb-t-quote', sc.stops.map(s => s.label + (s.note ? ` (${s.note})` : '')).join(' → '));
+    const m = sc.map || sc.graph;
+    if (m && m.nodes) add('sb-t-quote', (sc.kind === 'map' ? 'Map: ' : 'Graph: ') + m.nodes.map(n => n.label).join(', '));
+    const props = (sc.props || []).map(p => p.kind + (p.lines ? ` (${p.lines.join(' / ')})` : p.label ? ` (${p.label})` : ''));
+    if (props.length || (sc.setting && sc.setting !== 'none')) add('sb-t-meta', [sc.setting && sc.setting !== 'none' ? 'Setting: ' + sc.setting : '', props.length ? 'Props: ' + props.join(', ') : ''].filter(Boolean).join(' · '));
+    add('sb-t-note', sc.note);
+    add('sb-t-src', sc.source ? 'Source: ' + sc.source + (sc.not_a_quote ? ' (not a quote)' : '') : '');
+    return box;
+  }
+  function numLink(i, opts) {
+    const a = document.createElement('a'); a.className = 'sb-num'; a.textContent = i + 1; a.title = 'Open this panel in the deck';
+    a.href = opts.openHref(i);
+    if (opts.onOpen) a.addEventListener('click', (e) => { e.preventDefault(); opts.onOpen(i); });
+    return a;
+  }
+
+  // ------------------------------------------------------------ the grid: every panel on one page
+  // Panels are drawn as they near the screen. Still by default; with Animation on, each plays once as it scrolls in.
+  // A click on a panel plays it; its number opens it in the deck.
+  function grid(container, data, opts) {
+    const sb = data.storyboard, n = sb.scenes.length;
+    const cells = sb.scenes.map((sc, i) => {
+      const fig = document.createElement('figure'); fig.className = 'sb-cell'; fig.id = (opts.idPrefix || 'panel-') + (i + 1);
+      const panel = document.createElement('div'); panel.className = 'sb-panel'; panel.title = 'Click to play this panel'; fig.appendChild(panel);
+      const svg = document.createElementNS(NS, 'svg'); svg.setAttribute('viewBox', `0 0 ${W} ${H}`); panel.appendChild(svg);
+      const cap = document.createElement('figcaption');
+      cap.appendChild(numLink(i, opts));
+      const label = document.createElement('span'); label.className = 'sb-label'; label.textContent = sceneLabel(sc); cap.appendChild(label);
+      const kind = document.createElement('span'); kind.className = 'sb-kind'; kind.textContent = sc.kind || 'scene'; cap.appendChild(kind);
+      const text = sceneText(sc, data.cast); cap.appendChild(text);
+      fig.appendChild(cap);
+      fig.dataset.q = (sceneLabel(sc) + ' ' + (sc.kind || 'scene') + ' ' + text.textContent).toLowerCase();
+      fig._panel = panel;
+      fig._draw = () => {
+        if (fig._drawn) return;
+        fig._drawn = true;
+        drawScene(svg, sc, data.cast, { seed: 11 + i, footer: `${sb.title} · ${i + 1}/${n}` });
+        if (opts.anim()) panel.classList.add('wait');
+      };
+      panel.addEventListener('click', () => { fig._draw(); play(panel); });
+      container.appendChild(fig);
+      return fig;
+    });
+    const near = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) e.target._draw(); }), { rootMargin: '600px 0px' });
+    const seen = new IntersectionObserver((es) => es.forEach(e => {
+      if (e.isIntersecting && e.target._panel.classList.contains('wait')) play(e.target._panel);
+    }), { threshold: 0.5 });
+    cells.forEach(c => { near.observe(c); seen.observe(c); });
+    return cells;
+  }
+
+  // ------------------------------------------------------------ the script: every panel as text
+  function script(container, data, opts) {
+    return data.storyboard.scenes.map((sc, i) => {
+      const art = document.createElement('article'); art.className = 'sb-script-item'; art.id = 'line-' + (i + 1);
+      const h = document.createElement('h3');
+      h.appendChild(numLink(i, opts));
+      const label = document.createElement('span'); label.textContent = sceneLabel(sc); h.appendChild(label);
+      const kind = document.createElement('span'); kind.className = 'sb-kind'; kind.textContent = sc.kind || 'scene'; h.appendChild(kind);
+      art.appendChild(h);
+      const text = sceneText(sc, data.cast); art.appendChild(text);
+      art.dataset.q = (sceneLabel(sc) + ' ' + (sc.kind || 'scene') + ' ' + text.textContent).toLowerCase();
+      container.appendChild(art);
+      return art;
+    });
+  }
+
   // ------------------------------------------------------------ the deck
-  function deck(root) {
-    const data = JSON.parse(root.querySelector('script[type="application/json"]').textContent);
+  // One panel at a time, swiped. With Animation on, a panel plays the first time it arrives and then stays drawn;
+  // with it off, every panel is simply there, and Play (or p) plays the current one on demand.
+  function deck(root, data, opts) {
+    data = data || JSON.parse(root.querySelector('script[type="application/json"]').textContent);
+    opts = opts || {};
+    const anim = opts.anim || (() => !reducedMotion()), active = opts.active || (() => true);
     const track = root.querySelector('.sb-track'), count = root.querySelector('.sb-count'), notes = root.querySelector('.sb-notes');
     const slides = data.storyboard.scenes.map((scene, i) => {
-      const sec = document.createElement('section'); sec.className = 'sb-slide'; sec.id = 'scene-' + (i + 1);
+      const sec = document.createElement('section'); sec.className = 'sb-slide sb-panel'; sec.id = 'scene-' + (i + 1);
       const svg = document.createElementNS(NS, 'svg'); sec.appendChild(svg); track.appendChild(sec);
       drawScene(svg, scene, data.cast, { seed: 11 + i, footer: `${data.storyboard.title} · ${i + 1}/${data.storyboard.scenes.length}` });
+      if (anim()) sec.classList.add('wait');
       return sec;
     });
     let current = 0;
-    const show = (i) => {
+    const show = (i, instant) => {
       current = Math.max(0, Math.min(slides.length - 1, i));
-      slides[current].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+      // scroll the track itself, never the page: the deck may sit below the fold
+      track.scrollTo({ left: current * track.clientWidth, behavior: instant ? 'auto' : 'smooth' });
+      if (instant) mark(current);
     };
     const mark = (i) => {
       current = i; count.textContent = `${i + 1} / ${slides.length}`;
-      // a panel plays once, the first time it arrives; after that it stays drawn, so moving on or back never
-      // shows a drawn panel blanking and redrawing (the flick)
-      slides.forEach((s, j) => {
-        if (j !== i) { if (s.classList.contains('play')) { s.classList.remove('play'); s.classList.add('played'); } return; }
-        if (!s.classList.contains('played') && !s.classList.contains('play')) {
-          s.classList.add('play');
-          setTimeout(() => { s.classList.add('played'); s.classList.remove('play'); }, 2200);
-        }
-      });
+      if (active() && anim() && slides[i].classList.contains('wait')) play(slides[i]);
       const sc = data.storyboard.scenes[i];
       notes.innerHTML = '';
       const p = document.createElement('p'); p.textContent = sc.note || ''; notes.appendChild(p);
       if (sc.source) { const a = document.createElement('p'); a.className = 'dim'; a.textContent = 'Source: ' + sc.source; notes.appendChild(a); }
-      if (history.replaceState) history.replaceState(null, '', '#scene-' + (i + 1));
+      if (active() && history.replaceState) history.replaceState(null, '', location.pathname + location.search + '#scene-' + (i + 1));
     };
     const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting && e.intersectionRatio > 0.6) mark(slides.indexOf(e.target)); }), { root: track, threshold: [0.6] });
     slides.forEach(s => io.observe(s));
     root.querySelector('.sb-prev').onclick = () => show(current - 1);
     root.querySelector('.sb-next').onclick = () => show(current + 1);
+    const replay = root.querySelector('.sb-replay');
+    if (replay) replay.onclick = () => play(slides[current]);
     // full screen: the Fullscreen API where it exists (prefixed on Safari); where it does not, or fails silently
     // (iPad), the deck is pinned to the viewport with a class and the same button leaves it
     const fullBtn = root.querySelector('.sb-full');
@@ -542,16 +689,182 @@
       if (pinned()) return unpin();
       if (document.exitFullscreen) document.exitFullscreen(); else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
     };
-    fullBtn.onclick = () => (fsEl() === root || pinned()) ? exitFull() : enterFull();
+    const toggleFull = () => (fsEl() === root || pinned()) ? exitFull() : enterFull();
+    fullBtn.onclick = toggleFull;
     ['fullscreenchange', 'webkitfullscreenchange'].forEach(ev => document.addEventListener(ev, () => { fullBtn.textContent = fsEl() === root ? 'Exit full screen' : 'Full screen'; }));
-    root.querySelector('.sb-notes-toggle').onclick = () => root.classList.toggle('with-notes');
+    const toggleNotes = () => root.classList.toggle('with-notes');
+    root.querySelector('.sb-notes-toggle').onclick = toggleNotes;
     document.addEventListener('keydown', (e) => {
+      if (!active() || typing(e)) return;
       if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); show(current + 1); }
-      if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(current - 1); }
-      if (e.key === 'Escape' && pinned()) unpin();
+      else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(current - 1); }
+      else if (e.key === 'Home') { e.preventDefault(); show(0); }
+      else if (e.key === 'End') { e.preventDefault(); show(slides.length - 1); }
+      else if (e.key === 'p') play(slides[current]);
+      else if (e.key === 'n') toggleNotes();
+      else if (e.key === 'f') toggleFull();
+      else if (e.key === 'Escape' && pinned()) unpin();
     });
+    const api = {
+      go: (i) => requestAnimationFrame(() => show(i, true)),
+      current: () => current,
+      still: () => slides.forEach(s => s.classList.remove('wait')),
+    };
+    if (!opts.manual) {
+      const start = parseInt((location.hash.match(/scene-(\d+)/) || [])[1] || '1', 10) - 1;
+      api.go(Math.max(0, start));
+    }
+    return api;
+  }
+
+  // ------------------------------------------------------------ the toolbar, shared by a board's page and the all-panels page
+  function tools(root, prefs, hooks) {
+    const $ = (s) => root.querySelector(s);
+    const cols = $('.sb-cols'), animBox = $('.sb-anim'), textBox = $('.sb-showtext'), filter = $('.sb-filter'), playAll = $('.sb-playall');
+    const apply = () => {
+      root.style.setProperty('--cols', prefs.cols); root.dataset.cols = prefs.cols;
+      root.classList.toggle('with-text', !!prefs.text);
+      if (cols) cols.value = String(prefs.cols);
+      if (animBox) animBox.checked = !!prefs.anim;
+      if (textBox) textBox.checked = !!prefs.text;
+    };
+    const set = (k, v) => { prefs[k] = v; savePrefs(prefs); apply(); if (k === 'anim' && !v) hooks.still(); };
+    if (cols) cols.onchange = () => set('cols', +cols.value);
+    if (animBox) animBox.onchange = () => set('anim', animBox.checked);
+    if (textBox) textBox.onchange = () => set('text', textBox.checked);
+    const runFilter = () => {
+      const q = (filter && filter.value || '').trim().toLowerCase();
+      hooks.items().forEach(it => { it.hidden = !!q && !it.dataset.q.includes(q); });
+    };
+    if (filter) filter.addEventListener('input', runFilter);
+    // play in order: the panels left after the filter, from the first one on screen, one after another
+    let run = 0;
+    const stopAll = () => { run++; if (playAll) playAll.textContent = 'Play in order'; };
+    const playInOrder = async () => {
+      if (playAll.textContent !== 'Play in order') return stopAll();
+      const me = ++run; playAll.textContent = 'Stop';
+      const cells = hooks.cells().filter(c => !c.hidden);
+      let from = cells.findIndex(c => c.getBoundingClientRect().bottom > 80);
+      for (const c of cells.slice(Math.max(0, from))) {
+        if (me !== run) return;
+        c._draw(); c.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        await new Promise(r => setTimeout(r, play(c._panel) + 350));
+      }
+      if (me === run) stopAll();
+    };
+    if (playAll) playAll.onclick = playInOrder;
+    document.addEventListener('keydown', (e) => {
+      if (typing(e)) return;
+      if (e.key === 'a') set('anim', !prefs.anim);
+      else if (e.key === 'x') set('text', !prefs.text);
+      else if ((e.key === '+' || e.key === '=') && prefs.cols < 6) set('cols', prefs.cols + 1);
+      else if ((e.key === '-' || e.key === '_') && prefs.cols > 1) set('cols', prefs.cols - 1);
+      else if (e.key === '/' && filter) { e.preventDefault(); filter.focus(); }
+      else if (e.key === 'p' && playAll && hooks.view() === 'grid') playInOrder();
+      else if (hooks.key) hooks.key(e);
+    });
+    if (filter) filter.addEventListener('keydown', (e) => { if (e.key === 'Escape') { filter.value = ''; runFilter(); filter.blur(); } });
+    apply();
+    return { runFilter, stopAll };
+  }
+
+  // ------------------------------------------------------------ a board's page: deck, grid and script over one storyboard
+  function viewer(root) {
+    const data = JSON.parse(root.querySelector('script.sb-data').textContent);
+    const prefs = loadPrefs(), asked = new URLSearchParams(location.search).get('view');
+    if (VIEWS.includes(asked)) prefs.view = asked;
+    if (!VIEWS.includes(prefs.view)) prefs.view = 'deck';
+    const deckEl = root.querySelector('.sb-deck'), gridEl = root.querySelector('.sb-grid'), scriptEl = root.querySelector('.sb-script');
+    let cells = [], items = [];
+    const open = (i) => { setView('deck', true); d.go(i); };
+    const linkOpts = { anim: () => prefs.anim, openHref: (i) => '?view=deck#scene-' + (i + 1), onOpen: open };
+    const d = deck(deckEl, data, { anim: () => prefs.anim, active: () => prefs.view === 'deck', manual: true });
+    const t = tools(root, prefs, {
+      still: () => { d.still(); cells.forEach(c => c._panel.classList.remove('wait')); },
+      items: () => prefs.view === 'script' ? items : cells,
+      cells: () => cells,
+      view: () => prefs.view,
+      key: (e) => { const v = { d: 'deck', g: 'grid', t: 'script' }[e.key]; if (v) setView(v, true); },
+    });
+    function setView(v, keep) {
+      if (prefs.view === v && deckEl.dataset.ready) return;
+      const from = prefs.view === 'deck' ? d.current() : null;
+      prefs.view = v; if (keep) savePrefs(prefs);
+      deckEl.dataset.ready = '1';
+      t.stopAll();
+      root.dataset.view = v;
+      deckEl.hidden = v !== 'deck'; gridEl.hidden = v !== 'grid'; scriptEl.hidden = v !== 'script';
+      root.querySelectorAll('.sb-views button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
+      if (v === 'grid' && !cells.length) cells = grid(gridEl, data, linkOpts);
+      if (v === 'script' && !items.length) items = script(scriptEl, data, linkOpts);
+      t.runFilter();
+      if (v === 'deck') d.go(d.current());
+      else if (from != null) { const target = (v === 'grid' ? cells : items)[from]; if (target && from > 0) requestAnimationFrame(() => target.scrollIntoView({ block: 'center' })); }
+    }
+    root.querySelectorAll('.sb-views button').forEach(b => { b.onclick = () => setView(b.dataset.view, true); });
     const start = parseInt((location.hash.match(/scene-(\d+)/) || [])[1] || '1', 10) - 1;
-    requestAnimationFrame(() => { slides[start] && slides[start].scrollIntoView({ inline: 'start', block: 'nearest' }); mark(Math.max(0, start)); });
+    setView(prefs.view, false);
+    if (prefs.view === 'deck') d.go(Math.max(0, start));
+    else if (start > 0) { const target = (prefs.view === 'grid' ? cells : items)[start]; if (target) requestAnimationFrame(() => target.scrollIntoView({ block: 'center' })); }
+  }
+
+  // ------------------------------------------------------------ every board's panels on one page
+  function contact(root) {
+    const data = JSON.parse(root.querySelector('script.sb-data').textContent);
+    const prefs = loadPrefs();
+    let cells = [];
+    root.dataset.view = 'grid';
+    data.boards.forEach((b, bi) => {
+      const sec = document.createElement('section'); sec.className = 'sb-board'; sec.id = b.storyboard.slug;
+      const h = document.createElement('h2'); const a = document.createElement('a'); a.href = b.href; a.textContent = b.storyboard.title; h.appendChild(a);
+      const k = document.createElement('span'); k.className = 'sb-kind'; k.textContent = `${b.storyboard.scenes.length} panels, ${b.storyboard.status}`; h.appendChild(k);
+      sec.appendChild(h);
+      const g = document.createElement('div'); g.className = 'sb-grid'; sec.appendChild(g);
+      root.appendChild(sec);
+      cells = cells.concat(grid(g, { storyboard: b.storyboard, cast: data.cast },
+        { anim: () => prefs.anim, idPrefix: `${b.storyboard.slug}-`, openHref: (i) => `${b.href}?view=deck#scene-${i + 1}` }));
+    });
+    const t = tools(root, prefs, { still: () => cells.forEach(c => c._panel.classList.remove('wait')), items: () => cells, cells: () => cells, view: () => 'grid' });
+    // a board with nothing left after the filter folds away
+    const filter = root.querySelector('.sb-filter');
+    if (filter) filter.addEventListener('input', () => root.querySelectorAll('.sb-board').forEach(s => { s.hidden = ![...s.querySelectorAll('.sb-cell')].some(c => !c.hidden); }));
+    return t;
+  }
+
+  // ------------------------------------------------------------ the model sheet: every character, every mood and pose
+  // How animators check a character is on model: the same face in every mood side by side, the same body in every pose.
+  function modelSheet(root) {
+    const data = JSON.parse(root.querySelector('script.sb-data').textContent);
+    const figure = (row, label, draw) => {
+      const fig = document.createElement('figure'), svg = document.createElementNS(NS, 'svg');
+      fig.appendChild(svg); const c = document.createElement('figcaption'); c.textContent = label; fig.appendChild(c); row.appendChild(fig);
+      fig._draw = () => draw(svg);
+      return fig;
+    };
+    const figs = [];
+    data.cast.characters.forEach((who, ci) => {
+      const sec = document.createElement('section'); sec.className = 'sb-sheet-row'; sec.id = 'model-' + who.id;
+      const h = document.createElement('h3'); h.textContent = who.name + ' '; const r = document.createElement('span'); r.className = 'small dim'; r.textContent = who.role; h.appendChild(r);
+      sec.appendChild(h);
+      const faces = document.createElement('div'); faces.className = 'sb-sheet-faces'; sec.appendChild(faces);
+      const bodies = document.createElement('div'); bodies.className = 'sb-sheet-poses'; sec.appendChild(bodies);
+      const stage = (svg, seed) => { const rc = rough.svg(svg, { options: { seed, roughness: 1, bowing: 1.2 } }); el('rect', { x: -400, y: -400, width: W + 800, height: H + 800, fill: PAPER }, svg); return [rc, el('g', {}, svg)]; };
+      MOODS.forEach((m, j) => figs.push(figure(faces, m, (svg) => {
+        const [rc, g] = stage(svg, 5 + ci * 31 + j);
+        const head = drawCharacter(g, rc, who, 300, FLOOR, { pose: 'stand', mood: m });
+        const top = who.kind === 'agent' ? head.headTop - 10 : head.headTop - 25;
+        svg.setAttribute('viewBox', `${head.headX - 135} ${top} 270 250`);
+      })));
+      POSES.forEach((p, j) => figs.push(figure(bodies, p, (svg) => {
+        const [rc, g] = stage(svg, 9 + ci * 17 + j);
+        const head = drawCharacter(g, rc, who, 300, FLOOR, { pose: p, mood: 'happy' });
+        const top = Math.min(head.headTop, FLOOR - 560) - 50;
+        svg.setAttribute('viewBox', `${300 - 240} ${top} 480 ${FLOOR + 20 - top}`);
+      })));
+      root.appendChild(sec);
+    });
+    const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting && !e.target._done) { e.target._done = true; e.target._draw(); } }), { rootMargin: '400px 0px' });
+    figs.forEach(f => io.observe(f));
   }
 
   function castSheet(root) {
@@ -564,9 +877,12 @@
     });
   }
 
-  window.StoryboardKit = { drawScene, drawCharacter, drawMap, drawGraph, badge, deck, castSheet, W, H };
+  window.StoryboardKit = { drawScene, drawCharacter, drawMap, drawGraph, badge, deck, grid, script, viewer, contact, modelSheet, castSheet, sceneText, play, MOODS, POSES, W, H };
   document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.sb-deck').forEach(deck);
+    document.querySelectorAll('.sb-viewer').forEach(viewer);
+    document.querySelectorAll('.sb-deck').forEach(d => { if (!d.closest('.sb-viewer')) deck(d); });
+    document.querySelectorAll('.sb-contact').forEach(contact);
+    document.querySelectorAll('.sb-sheet').forEach(modelSheet);
     document.querySelectorAll('.sb-cast').forEach(castSheet);
   });
 })();

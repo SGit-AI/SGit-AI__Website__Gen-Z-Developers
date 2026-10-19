@@ -16,17 +16,66 @@ html.sb-lock,html.sb-lock body{overflow:hidden}
 .sb-notes{display:none;background:#fff;border-radius:6px;padding:.6rem .9rem;margin-top:.5rem;font-size:.92rem}
 .sb-notes p{margin:.2rem 0}.sb-notes .dim{color:#6b7280}
 .sb-deck.with-notes .sb-notes{display:block}
-/* the play: a panel arrives as blank paper, plays once (strokes draw themselves, people and bubbles arrive in order) and then stays drawn */
-.sb-slide:not(.play):not(.played) svg>g{opacity:0}
-.sb-slide .ink,.sb-slide .scenery{stroke-dasharray:1;stroke-dashoffset:0}
-.sb-slide.play path[pathLength]{animation:sb-draw 1.1s ease-out both}
-.sb-slide.played path[pathLength]{stroke-dasharray:none}
-.sb-slide.play .actor{animation:sb-in .6s ease-out both;animation-delay:var(--d,0s)}
-.sb-slide.play .pop{animation:sb-pop .45s cubic-bezier(.2,1.4,.5,1) both;animation-delay:var(--d,.5s);transform-box:fill-box;transform-origin:center}
+/* the play. A panel (.sb-panel: a deck slide or a grid cell) is drawn and still by default. 'wait' hides it until it
+   arrives; 'play' runs the arrival once (strokes draw themselves, people and bubbles arrive in order), then it stays drawn. */
+.sb-panel.wait svg>g{opacity:0}
+.sb-panel.play path[pathLength]{stroke-dasharray:1;animation:sb-draw 1.1s ease-out both}
+.sb-panel.play .actor{animation:sb-in .6s ease-out both;animation-delay:var(--d,0s)}
+.sb-panel.play .pop{animation:sb-pop .45s cubic-bezier(.2,1.4,.5,1) both;animation-delay:var(--d,.5s);transform-box:fill-box;transform-origin:center}
 @keyframes sb-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
 @keyframes sb-in{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
 @keyframes sb-pop{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){.sb-slide.play *{animation:none!important}}
+@media (prefers-reduced-motion:reduce){.sb-panel.play *{animation:none!important}}
+/* the toolbar: views, panels per row, animation, text, play in order, filter */
+.sb-tools{display:flex;flex-wrap:wrap;gap:.45rem .9rem;align-items:center;margin:1rem 0 .5rem;padding:.5rem .7rem;background:#f3f1ea;border:1px solid var(--line,#e5e2d8);border-radius:10px;font-size:.9rem}
+.sb-tools label{display:inline-flex;align-items:center;gap:.3rem;cursor:pointer;white-space:nowrap}
+.sb-tools select,.sb-tools input[type=search]{font:inherit;padding:.25rem .45rem;border:1px solid #cfcabd;border-radius:6px;background:#fff}
+.sb-tools input[type=search]{flex:1 1 14rem;min-width:10rem}
+.sb-tools button{font:inherit;padding:.3rem .7rem;border:1px solid #cfcabd;border-radius:6px;background:#fff;cursor:pointer}
+.sb-views{display:inline-flex}
+.sb-views button{border-radius:0;margin-left:-1px}
+.sb-views button:first-child{border-radius:6px 0 0 6px;margin-left:0}.sb-views button:last-child{border-radius:0 6px 6px 0}
+.sb-views button[aria-pressed=true]{background:#1f2328;color:#fff;border-color:#1f2328}
+.sb-keys{color:#6b7280;font-size:.8rem}
+.sb-keys kbd{font-family:var(--mono,monospace);font-size:.75rem;border:1px solid #cfcabd;border-bottom-width:2px;border-radius:4px;padding:0 .3em;background:#fff}
+[data-view=deck] .sb-for-grid,[data-view=deck] .sb-for-list,[data-view=script] .sb-for-grid{display:none}
+/* the grid: every panel on one page, --cols per row; with-text shows each panel's script under it (beside it at one per row) */
+.sb-grid{display:grid;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));gap:1rem;margin:.5rem 0 1.5rem}
+.sb-cell{margin:0;background:#fff;border:1px solid var(--line,#e5e2d8);border-radius:10px;padding:.45rem;display:flex;flex-direction:column;gap:.35rem;min-width:0}
+.sb-deck[hidden],.sb-grid[hidden],.sb-script[hidden],.sb-cell[hidden],.sb-script-item[hidden],.sb-board[hidden]{display:none}
+.sb-cell .sb-panel{cursor:pointer;position:relative}
+.sb-cell svg{display:block;width:100%;height:auto;aspect-ratio:16/10;background:#fbf7ee;border-radius:6px}
+.sb-cell figcaption{font-size:.86rem;line-height:1.35}
+.sb-num{display:inline-block;min-width:1.7em;text-align:center;font-weight:700;background:#1f2328;color:#fff!important;border-radius:5px;padding:0 .3em;margin-right:.4em;text-decoration:none}
+.sb-kind{font-size:.75rem;color:#6b7280;margin-left:.45em;text-transform:uppercase;letter-spacing:.04em}
+.sb-cell .sb-text{display:none}
+.with-text .sb-cell .sb-text{display:block}
+@media (min-width:760px){
+  .with-text[data-cols="1"] .sb-cell{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);align-items:start;gap:1rem}
+}
+@media (max-width:700px){.sb-grid{grid-template-columns:repeat(min(var(--cols,3),2),minmax(0,1fr))}}
+.sb-text p{margin:.18rem 0}
+.sb-t-line b{font-weight:700}.sb-t-meta{color:#6b7280;font-size:.85em}
+.sb-t-quote{background:#fffbea;border-left:3px solid #f59e0b;padding:.1rem .45rem}
+.sb-t-punch{font-weight:700}
+.sb-t-note{color:#374151;font-style:italic}.sb-t-src{color:#6b7280;font-size:.85em}
+/* the script: the storyboard as text */
+.sb-script{max-width:52rem}
+.sb-script-item{border-bottom:1px solid var(--line,#e5e2d8);padding:.6rem 0}
+.sb-script-item h3{margin:0 0 .3rem;font-size:1rem}
+.sb-script-item .sb-text{font-size:.93rem}
+/* the all-panels page */
+.sb-board h2{display:flex;align-items:baseline;gap:.3rem;margin-top:1.6rem}
+/* the model sheet */
+.sb-sheet-row{margin:1.2rem 0 2rem}
+.sb-sheet-row h3 span{font-weight:400}
+.sb-sheet-faces,.sb-sheet-poses{display:grid;gap:.5rem;margin:.4rem 0}
+.sb-sheet-faces{grid-template-columns:repeat(auto-fill,minmax(110px,1fr))}
+.sb-sheet-poses{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
+.sb-sheet-row figure{margin:0;background:#fff;border:1px solid var(--line,#e5e2d8);border-radius:8px;padding:.25rem;text-align:center}
+.sb-sheet-row svg{display:block;width:100%;height:auto;border-radius:5px;background:#fbf7ee}
+.sb-sheet-faces svg{aspect-ratio:27/25}.sb-sheet-poses svg{aspect-ratio:3/4}
+.sb-sheet-row figcaption{font-size:.8rem;color:#4b5563}
 .sb-cast-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1rem}
 .sb-cast-grid .card svg{width:100%;height:auto;aspect-ratio:16/10;border-radius:6px;background:#fbf7ee}
 .sb-cast-grid .card dl{margin:.4rem 0 0;font-size:.88rem}.sb-cast-grid dt{font-weight:600;margin-top:.3rem}.sb-cast-grid dd{margin:0}
