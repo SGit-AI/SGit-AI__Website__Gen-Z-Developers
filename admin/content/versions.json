@@ -202,6 +202,11 @@
    "version": "v0.2.37",
    "date": "2026-10-19",
    "what": "Article 19, Two editions, the release and the review, from Dinis's voice memo answering the questions of RC2 on paper, part 2: every release candidate is built twice, a release edition ready to sell with nothing draft in it (better to take weak material out and add it back later) and a reviewer edition for any reviewer, with notes, flagged sections, decisions to make and places to answer in pen (checkboxes, lines, space to draw, each box with an id, like the agentic email workflow's drafts with a place to answer); release candidates go on Leanpub as they come, Amazon when stable. Decision 018 records it. A sketch of a reviewer-edition page, drawn from the review record. Dinis's answers to the four uncertain readings (note 31 'now', note 36 'wrong story, since either could have built it', note 49 'startups', note 51 'two') are in the record, the drawings and part 2's article. Briefs to the publisher (two PDFs, Leanpub now) and the editor (the review boxes; take out what is not ready)."
+  },
+  {
+   "version": "v0.2.38",
+   "date": "2026-10-19",
+   "what": "Article 20, Generation ZX Founders, from Dinis's voice memos after the newsroom's You are a developer: the book is for the founder who is already motivated and already building at three in the morning, of any generation (Generation ZX as a mindset, seen most in Generation Z and X); the title becomes Generation ZX Founders (GenAI Edition) (decision 019, replacing 014), named by the word founders use, with 'you are a developer' as the turn in the frame rather than a twist at the end; the two generations in the same position for different reasons (time and scrappiness, experience and the problem), the best partnership being both, building for each other both ways, and roughing it as what makes you; the measure becomes the companies helped along the way, created or not (decision 020); the book opens with Apple's 1997 'Here's to the crazy ones', credited and with its story, and explains early what CC BY covers (what Dinis created) and what it does not (what the book quotes stays its owner's). Two drawings from data (admin/content/positioning/reader.json, drawn by admin/build/positioning.py): the reader card and the partnership. Briefs to the editor, the publisher and the librarian."
   }
  ]
 }

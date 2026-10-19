@@ -45,6 +45,7 @@ import markdown  # noqa: E402
 from page_versions import Versions, blocks, sha, words  # noqa: E402
 from graph_pages import build_graph
 from paper_reviews import build_paper_reviews
+from positioning import build_positioning
 from readers_pages import build_readers  # noqa: E402
 import graph_model  # noqa: E402
 from book_v2 import build_v2  # noqa: E402  # noqa: E402
@@ -1434,6 +1435,7 @@ def main():
     build_infographics({"page": page, "write": write, "esc": esc, "md": md, "graph": graph_model.load(), "version": VERSION})
     build_covers({"page": page, "esc": esc, "first_edition_lines": FIRST_EDITION["cover_lines"]})
     build_paper_reviews({})
+    build_positioning({})
     build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib, articles, v2)
     print(f"build: {VERSION}, {len(flat)} chapters, {len([w for w in written if w.endswith('.html')])} pages, {len(written)} files written")
 

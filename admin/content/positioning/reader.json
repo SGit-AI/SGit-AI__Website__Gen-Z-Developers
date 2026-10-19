@@ -1,0 +1,20 @@
+{
+ "what": "Who the book is for, as data: the reader card and the partnership drawn by admin/build/positioning.py into positioning/*.svg. From Dinis's voice memos of 19 October 2026 (Generation ZX Founders); decisions 019 and 020.",
+ "title": "Generation ZX Founders (GenAI Edition)",
+ "reader": {
+  "name": "The ZX founder",
+  "line": "Already up at three in the morning, building, because finally they can.",
+  "already": ["motivated: nobody has to sell them the opportunity", "a minority, and a different one", "building with agents, explorer coding at 3am", "excited, because finally they can create"],
+  "any_generation": "Any generation; seen most in Generation Z and Generation X",
+  "wants": ["a path, from someone who has been through it", "ideas and thoughts, not motivation", "the lessons, including the rough ones"],
+  "does_not_need": "to be persuaded",
+  "turn": "Chapter 8, the turn: you are a developer, you just do not call it that",
+  "measure": "companies helped along the way, some created, some not"
+ },
+ "partnership": {
+  "z": {"label": "Generation Z founder", "has": ["time, a lot of it", "focus", "freedom to be scrappy"], "lacks": "experience"},
+  "x": {"label": "Generation X founder", "has": ["experience", "the problem, twenty years deep", "a network"], "lacks": "time"},
+  "edges": [["z", "x", "builds the app for"], ["x", "z", "builds the game for"], ["x", "z", "brings the problem and the experience"], ["z", "x", "brings the time and the scrappiness"]],
+  "line": "Either could have built it. Together is the best partnership."
+ }
+}
