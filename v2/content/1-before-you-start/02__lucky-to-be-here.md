@@ -1,0 +1,88 @@
+---
+title: You are lucky to be here
+slug: lucky-to-be-here
+part: before-you-start
+number: 2
+ideas: [wonder-not-fear, lucky-to-be-here, nobody-knows, seven-transformations, technology-finally-works-for-you, read-it-on-paper, fear-of-ai, immediate-connection, start-with-why-sinek]
+answers_2018: [1.introduction/_index.md, 1.introduction/generation-z.md, 4.life-patterns/the-zone.md, 4.life-patterns/BBS-and-modems.md, 3.technologies/draft/dopamine.md]
+sources: [art:lucky-to-be-here, sb:the-opening, news:two-years-in-the-opposite, news:custom-uis-are-not-the-exception, art:connect-the-dots-backwards, survey:gaps, news:generation-z-developers-again, art:where-the-thinking-came-from, book:3.technologies/content/ml-ai.md, book:1.introduction/_index.md, book:1.introduction/generation-z.md, book:4.life-patterns/BBS-and-modems.md, book:3.technologies/draft/dopamine.md, art:gen-zx-developers]
+character: zara
+gravity: all
+status: draft
+---
+
+I discover things I can do. That is the sentence I keep coming back to when someone asks what it is like to work the way I work now. I discover workflows. I follow an idea, and I can execute it, often the same afternoon. The feeling is not relief, and it is not fear. It is closer to wonder, and now that you know who this book is for, I want it to be the first thing in it, because it is the first thing I would want you to feel.
+
+I heard a woman on a podcast describe the same thing: the wonder that happens with generative AI, the feeling of discovering what you can do. I recognised it at once. I cannot now say who she was, so I will not put a name to it.
+
+> **For Dinis:** who was the podcast? If you can find it, the book should credit her here; the article left her unnamed.
+
+## How the first edition started
+
+The 2018 book did not start with wonder. It started with a slide I had shown to a room of young people in 2017, and a question the book repeats on its first page: "Here is the slide that started it all in 2017, how many logos do you recognize?" Very few recognised them, and nobody had told them the story behind each one.
+
+The history still matters. But the book that followed went too technical, too deep, too soon. Parts 2 and 3 were nineteen chapters of technologies to know. The argument was at the two ends, and the middle was a list.
+
+What I had actually wanted is in that book's introduction, under the heading "Overwhelming curiosity": moments when you "follow link after link about a particular topic" and think it is awesome. The 2018 book called that place the zone: "If you are lucky enough to find yourself in this place, congratulations! You just found 'the zone'." The second edition starts there. Not with what you should know, but with what you can now do, and the wonder of discovering it.
+
+In 2018 I also asked, of those logos, "Why is the **why** important?", and I had an outline for a chapter called *Start with why*, after Simon Sinek's golden circle: why before how before what. It was never written. So let me start with the why of this book, in one sentence.
+
+## You are lucky to be here
+
+Whoever is reading this in 2026 or 2027 is ridiculously privileged to be living at this moment in time, in the middle of a huge transition in society, while the pieces are still landing.
+
+I know that is not what you hear. If you are starting out, what you hear is that AI took the jobs before you got there. If you are my age, what you hear is that it is too late for you. I tried to read one of the first kind of essays this month, in Business Insider, under the headline "I thought working in AI would put me ahead of the curve. Two years in, I've never felt more behind and tired of the topic." I could not get past the paywall, so I cannot tell you what it argued. In Europe in particular, I think young people are being fed a lot of fear about AI, and are not embracing it the way they should. That is my reading, not a measurement, and this edition still owes you a proper answer to it.
+
+I am not going to tell you that none of the fear is right. Projects will be cancelled and money will be lost; every transition has had that. But the fear is what you hear. It is not where this book starts, and I do not think it is where you should start either.
+
+Here is my position, not a forecast: ignore the doom, because nobody knows what is going to happen. Every time we had one of these technological transformations, people said the same things, and they always said this time is going to be different. And each time the paths evolved: industries changed completely, jobs disappeared and appeared, and the people who learned the new tools early did well out of it.
+
+## The transformations I have lived through
+
+I have seen several in my own lifetime, each a revolution that changed whole industries, and if you are my generation you have seen most of them too. The dates are the commonly recorded ones.
+
+- The home computer, my ZX Spectrum, in the early 1980s. A computer became something you could own, open and program.
+- The BBS, in the 1980s and early 1990s. Text messages and chat between strangers, over a phone line.
+- The internet, in the 1990s. Everything published, linked and searchable.
+- The mobile phone, in the late 1990s, and the smartphone from 2007. The network in your pocket.
+- The cloud, from the mid 2000s. Servers you rent by the hour instead of buy.
+- The apps, from 2008, with the app stores. Software delivered to everyone, instantly.
+- Generative AI, from November 2022. Software you can talk to, and that can build software.
+
+The 2018 book had an outline for the second of those, *BBS and modems*, with a story I still have to tell properly: blowing up my home's telephone system trying to connect to one.
+
+The only difference this time, I sometimes joke, is that this one is televised: far more visible, because of the money, the players, and how much of the stack it touches at once. It will also take longer to land than the headlines say; it just feels as if it is happening all at once.
+
+I lived through the dot-com crash: enormous hype, then a crash. The Nasdaq peaked in March 2000 and had lost roughly four fifths of its value by October 2002, and the internet still changed everything. We might have a crash or a correction this time too; nobody can say when, or whether. None of that makes the transformation less real. A crash would change who makes money; it would not undo what people can now do.
+
+> **For Dinis:** does the dot-com crash belong here, on the first pages, or later in the book? The article left it as your question. It is here for now because part of the reader's fear is a fear of exactly this crash.
+
+My own last two years are the counter-story to the burnout essay. In *Two years in, the opposite* I put it this way: "I have been doing AI for the last two years and a bit, and I have never felt more productive." I have never felt happier at work, or more empowered. There is an anti-AI mood at the moment, and stories of burnout feed it; stories like mine should be told too. It is one person's account, not a study.
+
+A couple of years ago I wondered whether we had missed the boat; it felt as if all the big things had been done. Now the pieces of the puzzle are landing again. This is the biggest opportunity of your career, whether that career is starting or is twenty years in: the moment when you can still be a player, before things stabilise, as they always do, until the next big thing.
+
+## Technology that finally works for you
+
+For a long time technology has not worked for you. If you are Generation Z, you in particular were handed a technology stack designed to hook you, and to make you a passive user. There was some creating, but mostly you were a consumer, living in a world of advertising, attention and dopamine. I believe that will one day be treated the way tobacco is today; that is my belief, and the evidence is still being gathered. The 2018 book had a draft chapter on dopamine that already called phones' attention-grabbing activities "the new smoking".
+
+My generation was privileged in a different way: we could build things. A whole generation grew up programming, building computers, mixing parts. A computer was not something that just arrived; you could take it apart. And then, somewhere along the way, most of us stopped, and became users of software that other people made for our fields, and not very happy ones. One of you was handed technology to use, not technology to build; the other put the building down. Now you can both build again.
+
+Here is what that looks like in practice. For twenty years the instinct in software was that a custom interface is expensive, so everyone gets the generic one: the inbox, the ticket, the form. In *Custom UIs are not the exception* I argued that this is now backwards: "a custom interface per message, per thread, per topic, per question is not an exception. It is how interfaces get made." When an interface costs an afternoon, you stop asking whether it is worth building and start asking which moment it is for.
+
+The wonder underneath that has a name in my influences. Bret Victor's talk *Inventing on Principle*, from 2012, says that a creator needs to see what they are making, as they make it. Every step between you and the thing you are making, a compile, a deploy, a refresh, is a place where an idea can die. Generative AI removes a lot of those steps. The 2018 book had an outline for that talk too, with a note that is very much me: "print this and read it".
+
+None of this is only for the creative ones. It is not that you have to be creative, and if you are not, you are left out. It is that you can now scale the things you are not good at. You can have technology work for you.
+
+And it is why I am an optimist about where technology goes. In 2018 I recommended Kevin Kelly's *The Inevitable*, because of the way he maps what is likely to happen next: technology evolves with tendencies of its own. Which of his books I would hand you first is a question I have not settled. The frame of this book, which *Where do you land?* introduces, is built on that kind of seeing: things move in a direction, and the people who can see it can be early.
+
+## How to read this book
+
+Read it on paper, with a pen. Books, and narratives, are still the best way we have to take in information, and your brain takes it in much better from a page you can mark. If you are reading this as a PDF, print it. The 2018 book had a chapter called *Pen and Paper* that said "analogue techniques like the pen and paper are actually better technologies for creating and capturing ideas." I still think so, though that is my experience rather than a finding.
+
+Read it somewhere you can give it your undivided attention. That is a skill, and the best professionals in the world have it. The phone you were handed was designed to take it from you.
+
+Then use the rest of the book the way *Where do you land?* describes: find your centre of gravity first, and read the chapters marked for it before the others. If you are here to start a company, know where you are heading: the centre of the book is the part called *Start the company*, and the hands-on part at the end is where you form it, price it and ship it. The chapters before them are the ground those stand on, so do not skip them. *Connect the dots backwards* is about how to learn, and its first lesson is that your path will only make sense looking back, so you do not have to see it now. You have to start.
+
+That, in the end, is why the title says developer. Craftspeople made their own tools. In the past they did it out of necessity; now you can do it again, because the tools can be made to fit you, and because, as *Everyone who can brief an agent is a developer* argues, the bar has dropped. The person who has spent twenty years inside a problem is the craftsperson here, and the first tool they make may be the first version of their company. It is still your name on the work, and it is still your thinking. You think with the AI; you do not delegate your thinking to it.
+
+You are lucky to be here. Not because it will be easy, but because the pieces are still landing, and you can still be the one who places some of them.
