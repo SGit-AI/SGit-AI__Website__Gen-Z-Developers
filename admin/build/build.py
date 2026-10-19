@@ -726,8 +726,8 @@ def build_versions(frozen_md, parts, pub):
     changelog_html = md(frontmatter(changelog)[1])
     rows = "".join(f"<tr><td>{esc(e['version'])}</td><td>{esc(e['date'])}</td><td>{esc(e.get('where', ''))}</td><td>{esc(e['why'])}</td></tr>" for e in reversed(v.entries))
     cands = v.data.get("candidates") or []
-    cand_html = ("</p><ul>" + "".join(f'<li><a href="../../v2/book/index.html"><b>{esc(c["version"])}</b></a>, {esc(c["date"])}: {esc(c["what"])} Frozen at <a href="../../{esc(c["frozen"])}">{esc(c["frozen"])}</a>'
-                                        + (f', sha256 {c["text_sha256"][:12]}&hellip;' if c.get("text_sha256") else "") + "</li>" for c in cands) + "</ul><p class=\"small\">") if cands else "None yet."
+    cand_html = ("</p><ul>" + "".join(f'<li><a href="../../v2/book/index.html"><b>{esc(c["version"])}</b></a>, {esc(c["date"])}, {esc(c.get("title", ""))}: {esc(c["what"])} '
+                                        + (f'Frozen at <a href="../../{esc(c["frozen"])}">{esc(c["frozen"])}</a>, sha256 {c["text_sha256"][:12]}&hellip;' if c.get("text_sha256") else '<span class="st in-progress">being written</span>') + "</li>" for c in cands) + "</ul><p class=\"small\">") if cands else "None yet."
     body = f"""<h1>The versions of the book</h1>
 <p class="lede">The rule this site is built on: <b>the repository holds the official versions; the vault holds the working versions.</b> A version moves from <a href="../../vault/index.html">the vault</a> into the repository when it is signed off, on top of the one before, and this page shows the delta between every two versions, block by block and word by word. There is one version so far.</p>
 {table}

@@ -130,6 +130,11 @@
    "version": "v0.2.23",
    "date": "2026-10-19",
    "what": "The frame of release candidate 2, before its text. Dinis told the librarian to run with the Gen ZX proposal (decision 015, completing decision 014 on the title): the chapter map is rewritten for Generation ZX Developers (GenAI Startup Edition), 41 chapters in 10 parts, with a new first chapter, a new part Start the company at the centre, Building, safely rebuilt as Build it without a server, and four more hands-on chapters; the rc1 map is kept as chapters-rc1.json. The Gen ZX article and decisions 011 to 015 are processed into ideas (nine, the first of the rc2 batch); a candidate now carries its own title and chapter map, and while rc2 is being written the build renders rc1, the last finished candidate, and lists rc2 as in progress. New at /v2/book/: the rounds page (each round by size, the ideas that came in) and, once rc2 is frozen, the block-by-block diff Dinis reads (decision 011). The task parser knows the librarian and board roles. The rc2 text follows in the next release."
+  },
+  {
+   "version": "v0.2.24",
+   "date": "2026-10-19",
+   "what": "The gate learns about a candidate in progress. v0.2.23 shipped with the gate red: the versions page linked the frozen text of rc2, which is being written and has none yet, and the gate asked for its hash. A candidate marked in_progress now has no frozen text or hash to check, and the versions page says 'being written' for it instead of linking a file that does not exist. The release chain also stops on a red gate from now on rather than reading the last command's exit code."
   }
  ]
 }

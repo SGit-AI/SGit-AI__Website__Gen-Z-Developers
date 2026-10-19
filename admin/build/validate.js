@@ -131,8 +131,10 @@ for (const v of bookDoc.versions) {
   if (!v.text_sha256) errors.push(`admin/content/book/versions.json: ${v.version} has no text_sha256`);
 }
 for (const c of (bookDoc.candidates || [])) {
-  // a candidate is frozen once; its text is checked by build.py against text_sha256, the gate checks the file is there and matches
+  // a candidate is frozen once; its text is checked by build.py against text_sha256, the gate checks the file is there and matches.
+  // a candidate marked in_progress is being written: no text, no hash yet, and the build renders the last finished one
   const fz = path.join(ROOT, c.frozen || ('v2/versions/' + c.version + '.md'));
+  if (c.in_progress && !c.text_sha256) continue;
   if (!c.text_sha256) errors.push(`admin/content/book/versions.json: candidate ${c.version} has no text_sha256 (run build.py)`);
   else if (!fs.existsSync(fz)) errors.push(`${c.frozen}: the frozen candidate is missing`);
   else if (sha(read(fz)) !== c.text_sha256) errors.push(`${c.frozen}: the frozen candidate no longer matches its recorded hash`);
