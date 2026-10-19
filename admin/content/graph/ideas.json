@@ -280,6 +280,10 @@
     {
      "ref": "sb:connect-the-dots-backwards",
      "where": "panels 1 to 3"
+    },
+    {
+     "ref": "news:from-send-to-sgit",
+     "where": "Users, payments, and a feature in 22 minutes; What the market said"
     }
    ],
    "answers": [
@@ -291,7 +295,8 @@
    "destination": "this-edition",
    "state": "accepted",
    "decided_by": "Dinis, in Connect the dots backwards; his own three dots are still his to name",
-   "gravity": "all"
+   "gravity": "all",
+   "notes": "Taking SG/Send to market end to end is where Dinis learnt Stripe, pricing and everything else a real product needs, so that by the newsroom he already knew how; 'a good example of how exploring something early pays off later, in a way nobody plans'. And the same technology that did not land as a file-sending service is used now because the newsroom, RiskMandate and the vaults need it: explorers find things early; the use case decides when they matter."
   },
   {
    "id": "multidisciplinary-edge",
@@ -502,6 +507,10 @@
     {
      "ref": "news:a-browser-for-one",
      "where": "frustration plus the power to build"
+    },
+    {
+     "ref": "news:saas-apocalypse-decided-by-inertia-not-by-ai",
+     "where": "Everybody was already vibe coding, just very slowly"
     }
    ],
    "answers": [
@@ -513,7 +522,8 @@
    "destination": "this-edition",
    "state": "candidate",
    "decided_by": null,
-   "gravity": "explorer"
+   "gravity": "explorer",
+   "notes": "What vibe coding describes is people writing very good briefs, which product owners and users who knew what they wanted always did, in a loop of weeks or months on somebody else's terms. The brief was fine; the execution was the bottleneck. Now the loop is minutes, and very few products let you strip out the 90% you do not want and keep the 10% you do, which is exactly what you can now build. The word's history: Andrej Karpathy's post of February 2025 ('forget that the code even exists'), describing throwaway weekend projects; Collins Dictionary's word of the year by November 2025; Andrew Ng in May 2025 calling it 'unfortunate' and coding with AI 'a deeply intellectual exercise'. Exploratory programming is the research ancestor; Dinis found no established use of 'explorer coding'. The HR conversation ('Amazing! When can I start?') is one conversation, an illustration and not a survey. Spreadsheets won because of the feedback loop, a REPL for people who would never call it that."
   },
   {
    "id": "the-handover",
@@ -532,6 +542,10 @@
     {
      "ref": "news:explorer-to-villager-newsroom",
      "where": "a worked handover with real numbers"
+    },
+    {
+     "ref": "news:saas-apocalypse-decided-by-inertia-not-by-ai",
+     "where": "The mistake, and where the money actually is"
     }
    ],
    "answers": [
@@ -543,7 +557,8 @@
    "destination": "this-edition",
    "state": "candidate",
    "decided_by": null,
-   "gravity": "villager"
+   "gravity": "villager",
+   "notes": "The mistake is to confuse the brief with a product: the reason SaaS was bought was never the features, it was that the thing is maintained, and every non-functional requirement the vendor partly paid for now lands on an application a non-engineer built in an afternoon. People want to build it and hand it over. The future is village and town-planner companies that take the finished brief and run it, paid by consumption, not by the seat; the handover with agents becomes a file move plus a version bump, logged and reviewable. The case: a European bank piloted a Swiss AI startup's tool, decided to build its own, had a basic prototype six months later that could not handle regulation, data management and daily use, and went back to the startup after a year. Not a weak team, but an explorer team asked to be villagers and town planners as well, on a regulated, data-heavy, daily-use tool; the startup had already done that work many times for many clients. McKinsey's State of AI in 2026: 32 percent of respondents had decided against buying at least one software product or feature because they could build it in-house with coding agents. Dinis read the public summary and Olivier Laplace's post, not the paywalled article."
   },
   {
    "id": "everyone-is-a-developer",
@@ -998,6 +1013,10 @@
     {
      "ref": "art:connect-the-dots-backwards",
      "where": "doors, fast iteration, constraints, leverage"
+    },
+    {
+     "ref": "news:i-miss-it",
+     "where": "Direction is the scarce part"
     }
    ],
    "answers": [
@@ -1009,7 +1028,8 @@
    "destination": "this-edition",
    "state": "candidate",
    "decided_by": null,
-   "gravity": "explorer"
+   "gravity": "explorer",
+   "notes": "With agents we can develop just about anything; what we cannot generate is the sense of what to build next, for whom, and when to stop. Context and focus come from using the thing, which is why a founder who misses a feature is the product telling them where it wants to go. The rule behind the two days against six months: always follow the users, even when the user is you, and follow the feedback loops, doing the thing that gets a reaction straight away. A problem solved before anybody needs it is solved in the abstract, and abstract solutions are where the complexity creeps in; the earlier attempts at the master vault's key failed a simplicity test, 'because complicated is how security designs fail'. The measure is one question: am I getting better? Focus is undivided attention on the place of highest leverage, not working on only one product."
   },
   {
    "id": "knowing-when-to-stop",
@@ -1058,6 +1078,10 @@
     {
      "ref": "news:agency-is-not-a-yes",
      "where": "the seven-level scale"
+    },
+    {
+     "ref": "news:who-will-fix-your-mess",
+     "where": "Build where it is cheap to undo"
     }
    ],
    "answers": [
@@ -1070,7 +1094,8 @@
    "destination": "this-edition",
    "state": "candidate",
    "decided_by": null,
-   "gravity": "town-planner"
+   "gravity": "town-planner",
+   "notes": "Build or buy becomes how much it costs to undo and how mature the controls are: a narrow internal tool that a few people use and that can be switched off is a two-way door, so build it, explore, learn; a tool that touches regulated data every day is a one-way door until the controls are mature, which is where the villagers have to be in place first, yours or a partner's."
   },
   {
    "id": "agents-decide-people-answer",
@@ -1085,6 +1110,10 @@
     {
      "ref": "news:the-policy-draws-the-liability-line",
      "where": "the prohibitions list"
+    },
+    {
+     "ref": "news:riskmandate-ten-questions",
+     "where": "4. How are we insuring or assuring agent behaviour?, Liability"
     }
    ],
    "answers": [
@@ -1095,7 +1124,8 @@
    "destination": "this-edition",
    "state": "candidate",
    "decided_by": null,
-   "gravity": "town-planner"
+   "gravity": "town-planner",
+   "notes": "The reframe in one line: 'the moment of authorisation is the moment you granted the reach, not the moment you wrote the mandate.' Exposure exists the instant the grant exists; accountability sits with whoever runs the system; and each risk is routed up the management chain to the executive who owns it, never held by the operator. The article's three firebreaks for a vendor that stays out of the path: not in the request path, the customer's agent executes, and every prompt or policy handed over is reviewed and put into production by someone on the customer's side."
   },
   {
    "id": "the-record-checks-you",
@@ -1118,6 +1148,10 @@
     {
      "ref": "book:5.concepts/facts.md",
      "where": "the 2018 outline"
+    },
+    {
+     "ref": "news:from-send-to-sgit",
+     "where": "The data room I had already built; Copy Git; What this does not claim"
     }
    ],
    "answers": [
@@ -1130,7 +1164,8 @@
    "destination": "this-edition",
    "state": "candidate",
    "decided_by": null,
-   "gravity": "villager"
+   "gravity": "villager",
+   "notes": "Dinis's memory and the record part ways in an instructive direction: he remembered the data room and the vault as things the zip led to, and the record shows both were named in February, before the features; he remembered a week of Git briefs and the record shows about two weeks and some 48 brief files; 'nine months' was eight. The ideas came first and the features caught up. A second worked example for 'count rather than remember'."
   },
   {
    "id": "mandate-reach-gap",
@@ -1153,6 +1188,22 @@
     {
      "ref": "news:three-policies-for-an-agent",
      "where": "the three-policy split"
+    },
+    {
+     "ref": "news:agentics-ready-to-sell",
+     "where": "What we showed"
+    },
+    {
+     "ref": "news:an-agent-desktop-by-the-minute",
+     "where": "What locked down means; What we would build from what exists"
+    },
+    {
+     "ref": "news:riskmandate-ten-questions",
+     "where": "If you have not met RiskMandate; The answers, in brief; 1. What happens when an agent bypasses its behaviour policy?, The important nuance; 3., Reality is the calibrator"
+    },
+    {
+     "ref": "news:a-policy-beside-the-prompt",
+     "where": "Where the policy goes today, in each mode"
     }
    ],
    "answers": [
@@ -1164,7 +1215,8 @@
    "destination": "this-edition",
    "state": "candidate",
    "decided_by": null,
-   "gravity": "town-planner"
+   "gravity": "town-planner",
+   "notes": "The product in three words: a hive, a memory and a mandate. Ruflo gives the many hands, an sgit vault the memory the client keeps, an Agent Behaviour Policy each role's mandate. In the first proof of concept the same eleven actions went through the policy engine in enforce mode and six were stopped: four denied, two sent to a person. Read through the Agent Behaviour Policy, a desktop is the agent's grant (everything it can reach) and the task is its mandate; the desktop's job is to keep the first close to the second and leave a footprint that can be read afterwards. That gives nine properties, and the design that follows writes one mandate per task before the desktop exists (what it is for, the hosts it may reach, the secrets it may use and for which hosts, the identity, how long), configures the desktop from it so the grant cannot drift past it by accident, and keeps a vault outside every desktop that it can append to and cannot rewrite. The four objects as the article tables them: mandate (elicited from business and user stories, locked under change control), grant or reach (measured, calibrated against logs), delta (reach minus mandate, derived and never authored) and barriers (none, expectation, setting, boundary; only a boundary is a control). The goal of every engagement is the smallest mandate, the smallest reach, the smallest gap. Self-policing is the fallback, not the goal: the value is in the act of creating the policy, which discovers what is actually possible. Reality is the calibrator: the documentation said an agent could not attach a file to an email, and Claude found a way. Anthropic's own words for why a rule in a prompt is hope: CLAUDE.md files are treated 'as context, not enforced configuration. To block an action regardless of what Claude decides, use a PreToolUse hook instead', and Claude Code's permission rules 'are enforced by Claude Code, not by the model'. Both modes of reaching a model (the API, where we write the whole system prompt, and the apps and Claude Code, where the vendor's prompt comes first) carry the policy as text the model is asked to keep. Hope or enforcement measured the share of a policy resting on hope falling from 97% to 23% with the right design. The one-sentence test for the barrier column: 'A control bounds a grant only if it is enforced by something the grant does not include.' Atlassian's Rovo walked through as the shape of enterprise oversharing: nobody's permissions changed, what changed is that everything they already allowed is now one question away, and who the agent runs as (the person asking, the automation's connection account, or the agent's own account) decides the grant. The Northstar refund as why a behaviour policy is not enough: allowed to refund up to $200, owed $120, paid $150, and every control passes; a decision policy and a workflow policy answer 'who decides' and 'in what order'. The Northstar figures are a scripted simulation, no model called."
   },
   {
    "id": "code-is-a-liability",
@@ -1241,6 +1293,10 @@
     {
      "ref": "news:skill-behaviour-policy",
      "where": "the lethal trifecta"
+    },
+    {
+     "ref": "news:where-the-vault-keys-live",
+     "where": "How a new key reaches the registry; The prompt, in full"
     }
    ],
    "answers": [
@@ -1252,7 +1308,8 @@
    "destination": "this-edition",
    "state": "candidate",
    "decided_by": null,
-   "gravity": "villager"
+   "gravity": "villager",
+   "notes": "The worked case for vault keys: a transcript is a durable artefact that is retained, can be exported and outlives the session, and two keys in the estate were rotated because they were displayed and the display was captured. The handover that replaced pasting: the agent seals the key to the registry's public key after checking its fingerprint, sends it with one POST on a write-only lane whose token cannot read back, and replies with only the vault id and the HTTP response, so no transcript holds the key. The prompt gives the agent the reason before the instruction, and a way out (seal the file and hand it over, or hand over the key for relay), because a careful agent asked to send a secret to an endpoint it has never seen should hesitate."
   },
   {
    "id": "the-fork-next-door",
@@ -1275,6 +1332,18 @@
     {
      "ref": "book:2.mvp-for-gen-z-dev/content/open-source.md",
      "where": "the 2018 chapter"
+    },
+    {
+     "ref": "news:sell-dont-issue",
+     "where": "The open source safety valve"
+    },
+    {
+     "ref": "news:open-source-is-not-free",
+     "where": "Why not just charge?"
+    },
+    {
+     "ref": "news:who-will-fix-your-mess",
+     "where": "And who will fix your mess?"
     }
    ],
    "answers": [
@@ -1286,7 +1355,8 @@
    "destination": "this-edition",
    "state": "candidate",
    "decided_by": null,
-   "gravity": "all"
+   "gravity": "all",
+   "notes": "The fork as the investor's insurance in place of control: 'A competitor who forks our code today gets our position as of today. They do not get our velocity.' Two conditions make it real: a genuinely open licence, not open core, and a copyright structure not gathered in one corporate holder (every catalogued relicensing between 2018 and 2024 was by a single corporate copyright holder). The fork disciplines the founder because it is possible and protects the founder because it is slow. Relicensing has a pattern: HashiCorp, Elastic and Redis each moved from an open licence to a source-available one, each produced a well-funded fork backed by the cloud providers it targeted (OpenTofu, OpenSearch, Valkey), and two of the three have since added an open licence back. Docker Desktop's paid tier for larger companies (August 2021) worked commercially, with annual recurring revenue past $50 million within months, and the alternatives grew: OrbStack, Colima, Podman Desktop and Rancher Desktop together are about 47% of the five tools' installs through Homebrew over the past year, a figure the article says overstates them. The buyer's side of the same protection: if the only people who can fix a tool are one partner's engineers, the company has swapped a deployment gap for a dependency. With the code open and the record kept, 'who will fix it?' has many answers: your team, the partner, another partner, or the agents, under a mandate, reading the record. Dinis declares a stake: his companies sell open source."
   },
   {
    "id": "first-pr",
@@ -1353,7 +1423,7 @@
    "destination": "this-edition",
    "state": "candidate",
    "decided_by": null,
-   "notes": "Costs for a newcomer is still a gap.",
+   "notes": "Costs for a newcomer is still a gap. The four properties serverless always meant to Dinis: it scales to zero, it costs little or nothing when it is not there, it starts fast, and it turns a capability into a commodity. The three words of the name each cover a part the others miss: ephemeral (comes and goes with use, costs nothing when gone), town planner (Wardley's word: mature, industrialised, a commodity, not a prototype held together behind the scenes), services (exposed for others to use, usually through the web). Lambda is an ephemeral town planner service sitting on town planner services like S3, which are always there. The name is a proposal; Dinis does not expect it to replace serverless. The free limits as Cloudflare's pages gave them on 18 October 2026 (they change): static assets free and unlimited on every plan; Workers 100,000 requests a day and 10 ms of CPU each, $5 a month for 10 million; R2 10 GB, a million writes and ten million reads a month, no egress fees, buckets pinnable to the EU; D1 5 GB; KV 100,000 reads and 1,000 writes a day; Durable Objects 100,000 requests a day and 5 GB; Workers AI 10,000 neurons a day then $0.011 per 1,000, 71 models on Cloudflare's own GPUs with a promise not to train on what you send; Email Routing free and unlimited; Access free to 50 users; domains at the registry's price. If staying inside is the point, the model name is the control: a @cf/ model stays on Cloudflare's GPUs, anything else leaves through AI Gateway. The catch for a non-specialist is setup, because Cloudflare's API cannot be called from a web page: a Deploy to Cloudflare button, a temporary account (live for an hour, since June), or an agent with the command line, once. Five packages, each the smallest set for one job and each on the free plan: a site on my domain; my vault, hosted; an assistant over my documents; an inbox that does things; a form or a small API. Each is a repository with a button, a skill and a page saying exactly what it can reach, which is its behaviour policy. The command line is changing: cf entered open beta on 28 September and will replace Wrangler, maintained for 18 months after the beta ends.",
    "gravity": "villager"
   },
   {
@@ -1373,6 +1443,14 @@
     {
      "ref": "news:how-to-run-synthetic-users",
      "where": "five people who do not exist"
+    },
+    {
+     "ref": "news:the-question-is-whether-they-miss-it",
+     "where": "Pillar one: ship something somebody can use"
+    },
+    {
+     "ref": "news:no-server-by-design",
+     "where": "It ships fast"
     }
    ],
    "answers": [
@@ -1386,7 +1464,8 @@
    "destination": "this-edition",
    "state": "candidate",
    "decided_by": null,
-   "gravity": "villager"
+   "gravity": "villager",
+   "notes": "The founder's definition of shipped, which is the same as the chapter's: not a proof of concept, a demo, a video of a demo or a prototype walked through on a call, but 'a thing somebody else can go and use, on their own, and get value from'. It can be held together with tape; nobody using it cares how it was built. Getting it into a stranger's hands is still genuinely hard in 2026, and solving that is the first real product you build. The cost of speed, stated: when the newsroom moved to its own domain, 51 of the 527 figures in its articles did not come with it, and nothing failed in a way a server would have noticed, because the pages were files and they served. The synthetic readers found it. Files make releases cheap and also make it easy to ship something incomplete, which is why every release ends by checking what is actually live."
   },
   {
    "id": "think-in-graphs",
@@ -1450,6 +1529,10 @@
     {
      "ref": "book:4.life-patterns/content/be-a-founder.md",
      "where": "the 2018 chapter"
+    },
+    {
+     "ref": "news:the-controllable-founder",
+     "where": "What this means for strong-minded founders"
     }
    ],
    "answers": [
@@ -1460,7 +1543,8 @@
    "destination": "this-edition",
    "state": "candidate",
    "decided_by": null,
-   "gravity": "explorer"
+   "gravity": "explorer",
+   "notes": "The chapter's three worked examples: Dinis in security (sgit.ai and RiskMandate, after The Cyber Boardroom paused), Chinmay Gupte, a consultant knee surgeon, building OmKneeHealth and My Knee Score, and Kate Curtis-Evans, a transcriber, building Audio Genius for legal transcription; none is a hundred-call outsider, each has the contacts and one focus. The article is careful: the outsider playbook worked and is not a criticism, outsiders are not finished, and two of the three founders are people Dinis helps. The numbers now stand in their own idea, the-expert-founders-in-numbers; the miss-it loop and the pricing rule in do-they-miss-it and pay-after-the-value. The people who know the problem best are often the hardest to steer, because they know better; the article connects this to the expert founders as the profile investor selection filters out."
   },
   {
    "id": "hack-your-country",
@@ -1483,6 +1567,10 @@
     {
      "ref": "news:sovereignty-is-the-ability-to-move",
      "where": "the test"
+    },
+    {
+     "ref": "news:move-the-cloud-not-the-code",
+     "where": "Why workloads do not move; Why this has to be open source; The business model"
     }
    ],
    "answers": [
@@ -1493,7 +1581,7 @@
    "destination": "this-edition",
    "state": "candidate",
    "decided_by": null,
-   "notes": "Portuguese edition or both languages is Dinis's open question.",
+   "notes": "Portuguese edition or both languages is Dinis's open question. Sovereignty as the ability to move, in its practical form: what stops workloads moving is code, not policy or price, and a twin that the application cannot tell from the real service makes the destination a setting. AWS's European Sovereign Cloud went live on 15 January 2026 (first region in Brandenburg, operated by EU residents, 'zero operational control outside of EU borders'), and the article's reading is that sovereignty which depends on one company's API is sovereignty by permission. There is no sovereignty without open source and open schemas, because sovereignty means you can leave; the judo move for an operator in Romania, Portugal or the UK is to use the customer's existing code, the hyperscaler's own API and open source as the weight rather than fight them. The word is facilitate, an embassy's job, and the SGraph Send Ambassador role was written to work the way an embassy works: represent, promote trade, build relationships, never hard sales, 'to create the conditions for that organic growth'. The judo playbook in five moves: map the attrition, commoditise the plumbing, create the demand, put the money where the market is still genesis, regulate what settled, then map again, each move using the weight of the larger players rather than matching it. Europe's advantage is strongest in its smaller countries, which can change faster. The article says it is not a national strategy but a map and a set of moves from one person's experience.",
    "gravity": "all"
   },
   {
@@ -1559,6 +1647,10 @@
     {
      "ref": "news:a-book-for-one-reader",
      "where": "the whole argument"
+    },
+    {
+     "ref": "news:paying-after-the-value",
+     "where": "The newsroom's version; The experiment"
     }
    ],
    "answers": [],
@@ -1567,7 +1659,8 @@
    "destination": "next-version",
    "state": "deferred",
    "decided_by": "The brief: nothing of it is built; it waits for the book's graph (this register is the first step)",
-   "gravity": "explorer"
+   "gravity": "explorer",
+   "notes": "The rules the newsroom's meter runs by, which 'paid for as it is read' would inherit: £5.00 of credit to start, 10p for a new article read to the end and 5p for an older one, charged only as far as read, a rating that moves the price from free to double, a refusal with a reason that returns the charge, a balance that goes below zero with nothing blocked, one £5 top-up link and nothing that renews. Seven hypotheses were written before the first payment; the review is on 6 December 2026."
   },
   {
    "id": "read-comment-decide",
@@ -2464,6 +2557,10 @@
     {
      "ref": "news:knowledge-that-maintains-itself",
      "where": "maintain, do not perfect"
+    },
+    {
+     "ref": "news:if-somebody-built-a-company-on-code-review",
+     "where": "Replicate reality first; Build the graph from the top, before the code exists"
     }
    ],
    "answers": [
@@ -2475,7 +2572,8 @@
    "destination": "this-edition",
    "state": "candidate",
    "decided_by": null,
-   "gravity": "villager"
+   "gravity": "villager",
+   "notes": "'Replicate reality first, then have a fact-based conversation': derive what a parser can derive, deterministically, with a file and a line for every node; let a model propose what a parser cannot see and mark every proposal as proposed; then confront the graph with users, experts and tests. The order for anything built now: brief, plan, architecture, review of the architecture, simulation with synthetic users, code last; the review is the join between the projected graph and the derived one, with three outcomes (match, derived not projected, projected not derived)."
   },
   {
    "id": "a-company-in-the-review",
@@ -2486,6 +2584,14 @@
     {
      "ref": "news:code-review-as-a-fractal-semantic-graph",
      "where": "For somebody to build"
+    },
+    {
+     "ref": "news:if-somebody-built-a-company-on-code-review",
+     "where": "The company; The grammar is fractal, the layers are yours"
+    },
+    {
+     "ref": "news:send-an-agent-not-a-spreadsheet",
+     "where": "The twist on the last article"
     }
    ],
    "answers": [],
@@ -2495,7 +2601,7 @@
    "state": "candidate",
    "decided_by": null,
    "gravity": "explorer",
-   "notes": "One of the business plans published for founders on sgit.ai; an example of the book's advice to start a company from a published plan."
+   "notes": "One of the business plans published for founders on sgit.ai; an example of the book's advice to start a company from a published plan. The business model settled by the layers: they are the customer's, so the loop runs where the code is, and a company that locked customers into its layers would be selling the one thing it has no right to own. Sell the customised deployment, the running of the loop and the versioned record; give away the grammar, the parser (a commodity) and the model (somebody else's). The offer in one line, from open-source.sgit.ai: 'You can take it. It will cost you that. Or you can pay me, and have it next week.' Who to sell it to: not developers, who have just been told they do not need review, but the people who buy, invest in and acquire software, as due diligence; every vendor that receives the agent has a reason to run it on itself first, which is how review gets back to the developers. 'What differs is the first customer, and the first customer decides whether a company exists.'"
   },
   {
    "id": "the-voice-is-four-inputs",
@@ -2690,6 +2796,18 @@
     {
      "ref": "news:no-server-by-design",
      "where": "How far can it be pushed?"
+    },
+    {
+     "ref": "news:chat-on-a-static-site",
+     "where": "The constraint nobody can design around"
+    },
+    {
+     "ref": "news:the-key-is-the-billing-system",
+     "where": "The four routes"
+    },
+    {
+     "ref": "news:the-value-of-constraints",
+     "where": "The biggest gain: nothing on the server"
     }
    ],
    "answers": [
@@ -2701,7 +2819,7 @@
    "state": "candidate",
    "decided_by": null,
    "gravity": "town-planner",
-   "notes": "Answers the 2018 outline Serverless ('the path to Serverless', 'important to understand the limitations') from the other side: not Lambda, no back end at all. Not a claim that servers are bad: a trading system or a bank's ledger needs shared, live, authoritative state."
+   "notes": "Answers the 2018 outline Serverless ('the path to Serverless', 'important to understand the limitations') from the other side: not Lambda, no back end at all. Not a claim that servers are bad: a trading system or a bank's ledger needs shared, live, authoritative state. The August 2026 precedent for the pattern, on sgit.ai: a static site on GitHub Pages has no server, no session and no place to keep a secret, so a chat box could not hold an API key; the answer was three tiers (a local matcher, the reader's own key, a vault bridge), with only the first free. The one real limit (a secret the reader must not hold cannot live in their browser) was met first here. The one real limit met by a product: a capped key per paying user is a secret the user may hold, and the provider's terms, not the architecture, are what stop it. Route 4, a metering proxy, is the smallest possible backend and still a backend: the audio passes through it, so custody, governance, scaling and on-call return and the privacy sentence on the home page has to change. It is also the only route that needs nobody's permission. The same constraint seen from sgit's side: a server that cannot read the data cannot do anything with it, so there is no server code, no deployment and nothing to patch; sgit's server is 'a dumb key-value blob store' and the deployment is the client. Features came from solving the problems the constraint created: clone --path holds only the folders you ask for and carries the rest by id, and with immutable encrypted objects a read is a plain GET, so any static host can serve a vault. Dinis names the temptation he has fallen for himself: a developer makes a change in the cheapest place with the fewest moving parts, which looks like the server until you have to maintain it. The list is the argument: a content site for several audiences where each part runs in the browser (personas opened from a published read key, a meter that charges by the share read and never blocks, a rating that sets the price, a newsroom of your own, SQL and SPARQL over the site's own data), with a 5 pound Stripe payment link and sign-in rented from companies whose product they are, and no account database, no session store, no API server. The lineage is local-first software (Ink and Switch, 2019: you should own your data in spite of the cloud); what vaults add is shared, persistent storage the operator cannot read, so client-side does not have to mean single-device. Next: a model in the client with the reader's own key, personas that follow the reader to every device, a signed receipt for payments, and the architecture packaged as a template another content site can start from. This last is what the weekend chapter would hand a founder."
   },
   {
    "id": "security-as-a-business-tool",
@@ -2739,6 +2857,10 @@
     {
      "ref": "news:no-server-by-design",
      "where": "Why it is easy to throw technology away"
+    },
+    {
+     "ref": "news:the-question-is-whether-they-miss-it",
+     "where": "Pillar three: open source everything"
     }
    ],
    "answers": [
@@ -2749,7 +2871,8 @@
    "destination": "this-edition",
    "state": "candidate",
    "decided_by": null,
-   "gravity": "all"
+   "gravity": "all",
+   "notes": "Five reasons that each stand alone: the technology is not the moat, and treating it as open forces you to find what is; code written to be read by strangers has cleaner boundaries; you stay comfortable throwing things away, because a team that has never deleted a component will defend one too long; it is better for the customer, who can read the thing instead of trusting a promise; and it is a better exit for the founder, who leaves with their tools instead of a pile of technology they cannot take. 'Open source is a strategy, not a charity.'"
   },
   {
    "id": "a-prompt-is-a-lens",
@@ -3093,6 +3216,10 @@
     {
      "ref": "news:the-question-is-whether-they-miss-it",
      "where": "'Not to plan, not to pitch, not to architect. Ship.'"
+    },
+    {
+     "ref": "news:the-key-is-the-billing-system",
+     "where": "Why no server is the product"
     }
    ],
    "answers": [
@@ -3104,7 +3231,8 @@
    "state": "accepted",
    "decided_by": "Dinis, in Gen ZX Developers, adopted as the frame of rc2 (decision 015)",
    "gravity": "explorer",
-   "batch": "rc2"
+   "batch": "rc2",
+   "notes": "No server is the product, not a preference: with no server the company never sees the audio, which removes at a stroke data custody and its governance, a place for a breach, a shared key an abuser could drain, key management, a billing system, a database of users, a thing that has to scale, a single point of failure, and a thing that has to be up at three in the morning with a person to wake. Add a server and every item comes back at once, not gradually: 'a different company, with a different cost base and a different risk register'. The commit history (239 commits and 27 releases in three weeks) is what moving fast looks like, and 'the complexity of the moving parts is what decides how fast you can move'."
   },
   {
    "id": "measured-by-the-companies-it-creates",
@@ -3222,6 +3350,1889 @@
    "state": "accepted",
    "decided_by": "Dinis (decision 013)",
    "gravity": "explorer",
+   "batch": "rc2"
+  },
+  {
+   "id": "do-they-miss-it",
+   "title": "Ship it, give it away briefly, take it away, and ask whether they miss it",
+   "kind": "method",
+   "statement": "The operating model in three pillars, in order: be profitable, have the investors call you, open source everything. The first pillar is a loop: ship a thing somebody else can go and use on their own (not a demo, not a prototype walked through on a call); hand it to people free for a short window; take it away with no apology; ask whether they miss it. A shrug means there is no why now and nothing to sell yet; a yes is the only thing that earns the right to charge. If you cannot get revenue at all, that is the problem to solve, and it is not a marketing problem.",
+   "sources": [
+    {
+     "ref": "news:the-question-is-whether-they-miss-it",
+     "where": "Pillar one: ship something somebody can use; Then give it away, and then take it away; Can you charge, and can you charge at a profit?"
+    },
+    {
+     "ref": "news:i-miss-it",
+     "where": "In short: 'When you do not have it, you miss it'"
+    },
+    {
+     "ref": "news:price-it-then-give-it-away",
+     "where": "The step after 'do they miss it'"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/content/be-a-founder.md",
+    "5.concepts/feedback-loops.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "ship-it-and-see-if-they-miss-it",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer",
+   "notes": "The register folds this into expert-founders ('do they miss it'); Dinis has made it a chapter of its own, and no idea in the register pointed at that chapter, so this is the chapter's centre. Quote worth keeping, word for word: 'Not to plan, not to pitch, not to architect. Ship.' The article also says getting a working thing into a stranger's hands is 'not overhead, it is the first real product you build'.",
+   "batch": "rc2"
+  },
+  {
+   "id": "the-roadmap-deciders-must-use-it",
+   "title": "The miss-it test applies to the builders: if you can change it and still do not use it, something is missing",
+   "kind": "claim",
+   "statement": "The most important users of a product are the people who decide its roadmap. If the developers, the product owner and the founder have access, can change it, and still do not use it, something is missing, and it is not the code. Dinis says he failed this test with The Cyber Boardroom, MyFeeds and early on sgit as a startup, good ideas he was not using; the vaults pass it now, 54 of them published, because they are used every day and the next release fixes what was hit. A team that uses something else, or uses its product only for the demo, is a signal nothing in the code gives.",
+   "sources": [
+    {
+     "ref": "news:i-miss-it",
+     "where": "The people who decide the roadmap have to use it; The brutal part"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/content/be-a-founder.md",
+    "5.concepts/feedback-loops.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "ship-it-and-see-if-they-miss-it",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "The article says 'one user is not a market' and that why the earlier startups did not take off has more than one reason; not using them is the one Dinis can see and act on. The Apple comparison is 'as far as I can see from the outside'. The second half of the article, the brief for the reader's own vault, is a product brief and not for the book.",
+   "batch": "rc2"
+  },
+  {
+   "id": "the-loop-is-the-moat",
+   "title": "The speed of the loop from a comment to a feature is the moat, not the technology",
+   "kind": "claim",
+   "statement": "What is defensible is not the technology but the data, the relationships, the distribution, or the speed at which you ship. The loop (a user comments, an article is written, a feature ships, the founder uses it) is what is hard to copy: a reading list made for one person went from brief to live in 81 minutes, a link to a persona in 17 hours. Usage is also what gives a product its direction when agents can build in any direction.",
+   "sources": [
+    {
+     "ref": "news:i-miss-it",
+     "where": "The loop is the moat; Direction is the scarce part"
+    },
+    {
+     "ref": "news:the-question-is-whether-they-miss-it",
+     "where": "Pillar three: 'The technology is not the moat'"
+    }
+   ],
+   "answers": [
+    "5.concepts/feedback-loops.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "ship-it-and-see-if-they-miss-it",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer",
+   "notes": "The times are from the git logs of sgit.ai and the newsroom, as the article says. a-company-in-the-review already says 'what is defensible is the record and the loop' for one company; this is the general claim for the chapter.",
+   "batch": "rc2"
+  },
+  {
+   "id": "price-it-before-you-give-it-away",
+   "title": "The four moves after 'do they miss it': define it, price it, deliver it at a flat marginal cost, offer it free to the people who know you",
+   "kind": "method",
+   "statement": "Something is not a product until it has a shape, a price and a way of being delivered that does not break you on the tenth customer. Define the thing somebody receives, not the technology. Price it at a number you would be content to be paid, not one from a competitor's page: RiskMandate's ladder is £10 for the pack, £50 for a working vault, £500 for the vault corrected for your situation, £1,500 with two sessions and a professional's signature. Deliver it at a cost that grows a step at a time, which the agentic workflow now allows (the twentieth customer costs close to the second). Then give the £500 tier away, twenty of them, to early adopters, power users and past customers, and watch whether they take it at zero. If friendlies will not take it free, a bigger audience will not take it either.",
+   "sources": [
+    {
+     "ref": "news:price-it-then-give-it-away",
+     "where": "The step after 'do they miss it'; What the programme is, as published; What brutal means"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/content/be-a-founder.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "price-it-then-give-it-away",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "Prices as published on 2 October 2026; the early access page went live on 30 September 2026, invite only, and does not say the price. The two outcomes are both in the article: take it and ask for more, and the question becomes price; interesting but no time, does not fit the team, hard to deploy, and the problem is not the price, back to the drawing board.",
+   "batch": "rc2"
+  },
+  {
+   "id": "free-is-never-free-for-the-other-side",
+   "title": "Free is never free for the other side: measure the cost you place on them, then cut it",
+   "kind": "advice",
+   "statement": "Giving something away is not a zero-cost offer. The other side still has to read the message, think about whether it applies, weigh it against their list, find twenty minutes for the prompts and half an hour for a call, and fit a new thing into a team. A price can even help, because it says you are serious. Either way the attrition you place on them is the first thing to measure (time to first reply, who never replied, who started and stopped, what they asked that the message should have answered) and then the thing to cut, until the service costs you the least to provide and costs them the least to receive: no second tool, no account, no overhead on deployment. A commercial product is one people take when the only cost is their own attention.",
+   "sources": [
+    {
+     "ref": "news:price-it-then-give-it-away",
+     "where": "Free is not zero; What brutal means"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/content/be-a-founder.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "price-it-then-give-it-away",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "Dinis's headline line for this article in Gen ZX Developers. The memo was careful not to make it sound like a lecture, and the book should keep that.",
+   "batch": "rc2"
+  },
+  {
+   "id": "do-not-make-them-apply",
+   "title": "Do not make them apply: 'we have twenty, would you like one, or shall I give it to someone else'",
+   "kind": "advice",
+   "statement": "'Apply for a chance to be considered' asks for work before there is anything in hand and inverts the relationship: they are doing you a favour by using the thing. Say what it is in one sentence, that there are twenty in this round, that they are getting one because they were early, and ask yes or no. Give the first round to the people who paid for something before it was finished; it is a thank-you that is also the best test group, because they know enough to say where it is wrong, and their silence means the most.",
+   "sources": [
+    {
+     "ref": "news:price-it-then-give-it-away",
+     "where": "How to offer it; For the agents running this, steps 1 and 2"
+    }
+   ],
+   "answers": [],
+   "topic": "be-a-founder",
+   "chapter": "your-first-price-and-first-ten-customers",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "batch": "rc2"
+  },
+  {
+   "id": "count-created-customised-used",
+   "title": "Count what matters: created, customised, used, and the minutes it cost the other side; set the stop rule first",
+   "kind": "method",
+   "statement": "For an early access programme the numbers are: how many were created, how many customised, how many used, how many runs; a thing created and never customised is a download, customised and never used is a document, and the commercial value is in the third number. Add corrections received, the strongest sign someone read it, and the minutes each step cost the person on the other side and where they stopped. Every stop is a product change to make, not a reason the customer gave. Set the stop rule before the first message goes out: if, after the first twenty, fewer than a handful ran it and sent a correction, the programme stops and the drawing board starts.",
+   "sources": [
+    {
+     "ref": "news:price-it-then-give-it-away",
+     "where": "What we count; For the agents running this, steps 3 to 6"
+    }
+   ],
+   "answers": [
+    "5.concepts/facts.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "your-first-price-and-first-ten-customers",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "In the article the counts are RiskMandate's (Agent Behaviour Policies created, customised, used, scenarios run); the book generalises the shape. The programme records timestamps and steps only, no message content.",
+   "batch": "rc2"
+  },
+  {
+   "id": "pay-after-the-value",
+   "title": "Pay after the value: credit first, a meter, a balance that can go below zero, and no subscription by default",
+   "kind": "advice",
+   "statement": "Most purchases are bets on future value, and the bet is often lost: gym members on a flat fee of over $70 attended 4.3 times a month and paid more than $17 a visit when a $10-a-visit pass was on offer. Turn it round where you can: start the user with credit, charge for the share they actually use, let the balance go negative, and ask for payment when the value is in view. A subscription is a discount for regular use, not rent on something somebody ignores; do not reach for one by default. The condition is a very large gap between the cost of serving and what you can charge, which a static site on a CDN has in the extreme and a business with a real cost per unit does not. Make it fair by country, visible in where the money goes, and chosen at more than one level.",
+   "sources": [
+    {
+     "ref": "news:paying-after-the-value",
+     "where": "Buying the future; The newsroom's version; Where it works; Fair, visible, chosen"
+    },
+    {
+     "ref": "news:the-question-is-whether-they-miss-it",
+     "where": "Can you charge, and can you charge at a profit?: 'do not reach for a subscription by default'"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/content/be-a-founder.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "price-it-then-give-it-away",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "The newsroom's meter: everyone starts with £5.00 of credit; 10p for a new article read to the end, 5p for an older one, only as far as read; the balance can go below zero and nothing is blocked. The article says there are no results yet and the review is on 6 December 2026; the gym, theatre and photo studies explain the psychology, not the newsroom's results. The reader (read/) on this site runs by the same rules.",
+   "batch": "rc2"
+  },
+  {
+   "id": "profitable-before-raising",
+   "title": "Fund it, or do not: the worst time to raise is before you are profitable, and the best is when they call you",
+   "kind": "advice",
+   "statement": "Raising before the product, before the fit and before profit means bargaining from weakness with a clock running, and the worst terms are not about money but control: a say in the business handed to people whose job is a return, not the mission. Profitability means time, and being able to wait is most of a negotiating position. Do not get signed before you have the album. With agents making execution cheap, getting to that position before you need anyone's money is more possible than it has ever been; then the choice of investor is yours. Not never raise: raise from strength, on terms you set, from people who came to you because the thing already works.",
+   "sources": [
+    {
+     "ref": "news:the-question-is-whether-they-miss-it",
+     "where": "Pillar two: the investors should be calling you"
+    },
+    {
+     "ref": "news:the-controllable-founder",
+     "where": "What this means for strong-minded founders: 'get to the big stick before you need their money'"
+    },
+    {
+     "ref": "news:sell-dont-issue",
+     "where": "The starting point: a founder who has already won"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/content/be-a-founder.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "fund-it-or-do-not",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all",
+   "notes": "The chapter's centre, which the register lacked as its own node. The article's caveat on price: it might not be profitable today and still be right if the economics improve with scale, but keep the gap small enough to self-fund.",
+   "batch": "rc2"
+  },
+  {
+   "id": "we-study-survivors",
+   "title": "We study survivors: a risky practice can look like the cause of success when only winners are counted",
+   "kind": "frame",
+   "statement": "Business writing looks at the winners, lists what they did, and says do the same; it almost never counts the people who did exactly the same and failed, or were never funded. Denrell showed in 2003 that risky practices unrelated to performance across everyone can look positively related to it in a sample of survivors. So the question is not what the winners did but why that one was chosen, funded and backed when others who did the same were not. Timing and place matter too: in MusicLab, showing popularity made success more unequal and less predictable, and the ten largest computer-science clusters hold 69% of US inventors in the field.",
+   "sources": [
+    {
+     "ref": "news:the-controllable-founder",
+     "where": "The survivors we study; Luck, place and timing"
+    }
+   ],
+   "answers": [
+    "5.concepts/facts.md",
+    "4.life-patterns/content/be-a-founder.md"
+   ],
+   "topic": "facts-and-the-record",
+   "chapter": "fund-it-or-do-not",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all",
+   "notes": "Also the reader's defence against the book's own founder stories. Denrell, Vicarious Learning, Undersampling of Failure, and the Myths of Management, Organization Science, 2003; Salganik, Dodds and Watts, Science, 2006; Moretti, AER, 2021.",
+   "batch": "rc2"
+  },
+  {
+   "id": "investors-select-for-control",
+   "title": "Investors select for the founder they can steer; control is written into the contract, and founders get replaced",
+   "kind": "claim",
+   "statement": "Dinis's hypothesis: between two founders with the same idea, drive and talent, one deciding factor is which one the investor believes they can control. The nearest tested trait is coachability, which investors openly prefer though 'being coachable doesn't necessarily make your firm more successful'. Control is in the paperwork: Kaplan and Strömberg found that when a firm performs poorly the investors obtain full control, and only when it performs very well do they give most of it back; non-compete and vesting terms make leaving expensive. Wasserman found 50% of founders no longer CEO by year three and fewer than 25% leading the IPO. The investors' answer is that control creates value (each level of founder control cut pre-money valuation by 17.1 to 22.0 percent), but that measures exits, not the mission; founder-led companies in the S&P 500 performed 3.1 times better in shareholder returns from 1990 to 2014. In Wardley terms the investor moves the founder towards commodity, as record labels did to performers once the songs, the producers and the distribution were the assets.",
+   "sources": [
+    {
+     "ref": "news:the-controllable-founder",
+     "where": "Who is the commodity; Why one and not the other; Control is written into the contract; Founders get replaced; The investors' answer, and the long run"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/content/be-a-founder.md",
+    "4.life-patterns/pionners-settlers-town-planners.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "fund-it-or-do-not",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all",
+   "notes": "The article's own limits: no study tests controllability directly; the value evidence cuts against the argument; Bain's figures are not peer-reviewed; the founder-tenure figures are from the late 1990s and early 2000s; not that investors are villains; and Dinis has a stake. The profile it says is filtered out is the founder with a strong vision and strong ethics, which it says is close to many European founders.",
+   "batch": "rc2"
+  },
+  {
+   "id": "sell-dont-issue",
+   "title": "Sell, don't issue: the investor buys the founder's shares, the founder lends the company what it needs, and nobody buys the steering wheel",
+   "kind": "method",
+   "statement": "For a founder who has already won (paying customers, profit, growth, more than one investor who wants in): instead of the company issuing new shares, the investor buys ordinary shares the founder already owns, in a private sale, so the founder is paid now for years of underpaid work, the company is not diluted, and no board seat, veto or liquidation preference comes with the money. If the company needs cash, the founder lends part of the proceeds back, subordinated by contract to every other creditor, at a modest fixed rate or none, repaid if the company succeeds. A founder lending their own money watches every penny, and 74% of high-growth internet startups fail from premature scaling. The investor's insurance is not control but the fork: with everything open source, if the founder goes wrong they can take the code and back a better service.",
+   "sources": [
+    {
+     "ref": "news:sell-dont-issue",
+     "where": "Sell, don't issue; Lend, don't dilute; The open source safety valve; Why it could raise the odds; A worked example"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/content/be-a-founder.md",
+    "2.mvp-for-gen-z-dev/content/open-source.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "fund-it-or-do-not",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "notes": "The worked example, illustrative: a UK company worth £10 million, £2 million invested, the founder keeps 80% either way; in the sale the founder pays about £420,000 in tax (18% on the first £1 million under Business Asset Disposal Relief from 6 April 2026, 24% above) and has about £1.58 million, lends £0.75 million and keeps about £0.83 million; the buyer pays 0.5% stamp duty. The article says no study tests the model, the fork as insurance is an argument not a tested mechanism, it is not tax or legal advice, and Dinis has a stake. The fork is slow both ways: three months at best, closer to a year, for an established company to reach where the original team is.",
+   "batch": "rc2"
+  },
+  {
+   "id": "what-breaks-when-you-sell-not-issue",
+   "title": "What breaks: EIS is lost on bought shares, a big early sale reads as doubt, the founder-lender is a creditor, and a broad non-compete closes the fork",
+   "kind": "claim",
+   "statement": "The model has costs a founder should know before the term sheet does. UK angels get EIS relief of 30% and SEIS of 50% only on newly issued shares, so bought shares are that much dearer to them; expect a lower price or a hybrid with some new shares. Common stock is often priced 10% to 30% below the last round. Balderton says it would not expect a founder to sell more than 10% at growth stage and has walked away over the size of a secondary. A founder who sells and lends back has moved part of their risk ahead of the new investors unless the loan is subordinated in writing. Control can return through a shareholders' agreement, and the model only holds if the founder refuses those terms. And refuse a broad non-compete: it keeps the fork for the investors and takes it from the founder; offer confidentiality, no poaching and no use of the brand instead.",
+   "sources": [
+    {
+     "ref": "news:sell-dont-issue",
+     "where": "What breaks; When it works and when it does not"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/content/be-a-founder.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "fund-it-or-do-not",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "notes": "Fits badly: deep tech, hardware, a land grab against funded rivals, proprietary code (no fork), investors whose model needs control rights. The UK figures are for 2026/27; the EY secondary pricing data is from Indian deals; the UK's 2023 plan to cap non-competes at three months was never legislated. Four fine-print points for a lawyer are in the article: transfer restrictions, selling above market value as employment income, success-linked interest treated as a distribution, and the order of issue and sale in a hybrid.",
+   "batch": "rc2"
+  },
+  {
+   "id": "the-expert-founders-in-numbers",
+   "title": "The expert founders, in numbers: 45 is the mean age, experience doubles the odds, a third of US startups have one founder",
+   "kind": "evidence",
+   "statement": "In a study of 2.7 million US founders the mean age at founding of the 1-in-1,000 fastest-growing new ventures is 45.0, and founders with three or more years in the same industry reached top-tier growth at twice the rate of those with none. Carta: solo founders rose from 23.7% of new US startups in 2019 to 36.3% in the first half of 2025. Stripe: its top 100 AI companies reached $1 million in annualised revenue in a median of 11.5 months. The venture model behind the outsider playbook: in Horsley Bridge's data on just over 7,000 investments from 1985 to 2014, about half returned less than the original investment and 6% of deals produced 60% of total returns. The experts were never held back by knowledge; they were held back by access to capital, engineers and the long build before anything could be shown, which is the part that got cheap.",
+   "sources": [
+    {
+     "ref": "news:the-expert-founders",
+     "where": "The playbook that worked; Execution just got cheap; The experts were always the better bet"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/content/be-a-founder.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "be-a-founder",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all",
+   "notes": "The article says the AI growth figures are the fastest, not the typical, and some are the promoter's own. Azoulay, Jones, Kim and Miranda, Age and High-Growth Entrepreneurship, AER: Insights, 2020. Dinis's Gen ZX article repeats the 45 and the one-third in its 'Precisely' section.",
+   "batch": "rc2"
+  },
+  {
+   "id": "europe-suits-the-expert-founder",
+   "title": "Europe's slower, sceptical money suits a founder who can build first",
+   "kind": "claim",
+   "statement": "European investors are said to want to see it working, and the data has a version of it: European companies raise at higher revenue (a median band of $1 million to $5 million against $100,000 to $1 million in the US), at lower pre-money valuations ($6.54 million against $14.64 million), with funding targets 46% smaller. That scepticism is what an expert founder now needs, because money too soon is one of the worst things that can happen: 74% of high-growth internet startups fail from premature scaling and investors put in 2 to 3 times more than needed in the discovery phase. Europe is weak at scaling (5% of global VC funds raised against 52% in the US; close to 30% of unicorns founded in Europe 2008 to 2021 moved abroad), and strong at the first part, which is the part that now matters most. Its values fit too: an open source strategy in the Commission's June 2026 sovereignty package, and impact at 15% of European VC against 7% in North America.",
+   "sources": [
+    {
+     "ref": "news:the-expert-founders",
+     "where": "Why this favours Europe"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/civic-responsibility.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "fund-it-or-do-not",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "notes": "The article calls the Europe and US comparison weakly evidenced: one vendor's aggregated data (Equidam), no clean Series A study. Could also serve the-company-itself (the EU) or civic-responsibility (judo for small countries); placed with funding because the argument is about when money arrives.",
+   "batch": "rc2"
+  },
+  {
+   "id": "sg-send-live-in-five-days",
+   "title": "SG/Send: first commit on 8 February, live on 13 February, Stripe on 1 March, ten paying customers on 2 March, a feature request shipped in 90 minutes",
+   "kind": "story",
+   "statement": "The first commit was on 8 February 2026, with a spec that set the rule everything since has followed: files encrypted on the client, the key never sent. send.sgraph.ai was live on 13 February. The Stripe checkout went live on 1 March; on 2 March there were ten paying customers, recruited with an offer of £5 of credits and a £5 Amazon voucher, which several declined. The first feature request, a folder not a file, came the same day and was proposed at 20:26, implemented at 20:48 and given a viewer at 22:15. Taking it to market end to end is where Dinis learnt Stripe, pricing and the rest a real product needs, which paid off later in the newsroom.",
+   "sources": [
+    {
+     "ref": "news:from-send-to-sgit",
+     "where": "A service where the server holds nothing; Live in five days; Users, payments, and a feature in 22 minutes"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/content/be-a-founder.md",
+    "5.concepts/serverless.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "ship-it-and-see-if-they-miss-it",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer",
+   "notes": "Dated story for the chapter and for your-first-price-and-first-ten-customers. The article says '30 paying customers' appears only in an investor one-pager and could not be verified; ten is the recorded number. Every date and quote was checked in the repositories by two research agents.",
+   "batch": "rc2"
+  },
+  {
+   "id": "silence-is-a-signal",
+   "title": "The technology worked and the use case did not: 'users buy credits, test once, and don't come back'",
+   "kind": "claim",
+   "statement": "SG/Send's briefs said it on 5 March 2026, three days after the first ten customers: paying customers but not enough usage, credits sitting unused. Nobody ran out of credits and came back for more, and nobody came back asking for the next feature; that silence was the signal. It was a platform without a workflow that needed it. The same features are used now because the newsroom, RiskMandate and the vaults need them: explorers find things early, and the use case decides when they matter. The miss-it test, failed, in numbers.",
+   "sources": [
+    {
+     "ref": "news:from-send-to-sgit",
+     "where": "What the market said"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/content/be-a-founder.md",
+    "5.concepts/feedback-loops.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "ship-it-and-see-if-they-miss-it",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer",
+   "notes": "Usage is described, not counted: the article found no usage figures. The pace behind it: 4,476 commits on 246 of the first 249 days, 739 release tags from v0.1.0 to v0.34.0; the command line's unit tests grew from 237 on 5 March to 4,232 on 14 October.",
+   "batch": "rc2"
+  },
+  {
+   "id": "the-agents-wrote-the-code-i-wrote-the-briefs",
+   "title": "The agents wrote the code, Dinis wrote the briefs and merged: 38% of commits in February, over 85% from September",
+   "kind": "evidence",
+   "statement": "Of the 1,671 commits under Dinis's name on the SG/Send app, 1,298 are merges of the agents' branches and most of the rest are brief files. The agents' share of the app's commits rose from 38% in February 2026 to over 85% from September. The way of working was written down on the day the site went live: voice memos become briefs, briefs flow down, debriefs flow up; explorers and villagers from 14 February, no town planners yet.",
+   "sources": [
+    {
+     "ref": "news:from-send-to-sgit",
+     "where": "The pace; Live in five days"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/workflows.md",
+    "1.introduction/how-this -book-was-created.md"
+   ],
+   "topic": "working-with-agents",
+   "chapter": "how-to-work-with-agents",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "Commit counts include automation (release tags and some commits by CI), as the article says. Counts from git logs of all branches on 15 October 2026.",
+   "batch": "rc2"
+  },
+  {
+   "id": "decided-by-inertia-not-by-ai",
+   "title": "The SaaS apocalypse will be decided by inertia, not by AI, because AI is available to both sides",
+   "kind": "claim",
+   "statement": "The incumbents have the same models the newcomers have, plus more data, more engineers and more money; if the technology decided this they would already have won, and two and a half years in they have not. What decides it is where a company sits on the evolution axis and how much past success it has to protect: Nokia met the mobile phone with nothing to protect and became the category, met the iPhone with fifteen years of success to protect and was gone from it within seven. Past success breeds inertia; new entrants, unencumbered by it, initiate the change. The newcomer was never on the rails, which is why the newcomers, not the incumbents, are the ones to watch.",
+   "sources": [
+    {
+     "ref": "news:saas-apocalypse-decided-by-inertia-not-by-ai",
+     "where": "the opening claim; Why it got this way, in one line from Wardley; And the reason the incumbents cannot simply do this themselves"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/pionners-settlers-town-planners.md",
+    "4.life-patterns/content/be-a-founder.md"
+   ],
+   "topic": "explorers-villagers-town-planners",
+   "chapter": "be-a-founder",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer",
+   "notes": "The February 2026 'SaaSpocalypse': roughly $285 billion left the sector in about 48 hours after Anthropic shipped Cowork plug-ins, and the market recovered by September with the argument that the database is the moat; the article reads that recovery as 'the apocalypse, priced'. The claim is stated 'so it can be wrong'.",
+   "batch": "rc2"
+  },
+  {
+   "id": "users-were-never-happy",
+   "title": "Users were never happy: 91% frustrated, 80% of features rarely or never used, $21 million a year in idle licences",
+   "kind": "evidence",
+   "statement": "Business software did 80% of what you needed and the remaining 20% was as painful as before you bought it, and it is measured: Freshworks found 91% of 8,698 people frustrated by inadequate workplace technology; Pendo found 80% of features in the average product rarely or never used, across 615 products; Zylo puts the average organisation's waste on unused licences at $21 million a year. 73% of companies prepare VAT returns in Excel and 78% of British companies say spreadsheets support key financial decisions: the persistence of Excel is the clearest evidence that SaaS failed them, because it is the one tool where they control the shape of the thing. You pay 100% for the 10% of features you actually wanted.",
+   "sources": [
+    {
+     "ref": "news:saas-apocalypse-decided-by-inertia-not-by-ai",
+     "where": "First, the part nobody likes to say: users were never happy"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/content/be-a-founder.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "be-a-founder",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer",
+   "notes": "The article rejects the famous Standish 64% (a 2002 keynote based on four internal applications) in favour of Pendo's sample. Why a founder's opening is in old, unloved software.",
+   "batch": "rc2"
+  },
+  {
+   "id": "what-they-refused-to-build-is-what-the-agent-needs",
+   "title": "What SaaS refused to build to protect its moat is exactly what a customer's agent needs",
+   "kind": "claim",
+   "statement": "Portability, open schemas, a real API at the centre, data you can take out, capabilities you can call from outside: for twenty years these were treated as churn risks and starved. Now the customer's agent turns up wanting exactly that list and finds a product built to prevent it; the moat has become the thing the water cannot get past in either direction. Strip the interface and most of these companies are a database, a messaging system and a state machine, and that can be built, though it is hard to build well. A founder builds the list from the start.",
+   "sources": [
+    {
+     "ref": "news:saas-apocalypse-decided-by-inertia-not-by-ai",
+     "where": "The irony, which is the whole article in one paragraph; Strip the UI and see what is left"
+    }
+   ],
+   "answers": [
+    "2.mvp-for-gen-z-dev/content/open-source.md",
+    "5.concepts/legacy-applications.md"
+   ],
+   "topic": "open-source",
+   "chapter": "be-a-founder",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "Pairs with the-fork-next-door and open-source-removes-the-moat-excuse: the newcomer's version of not having a moat to protect.",
+   "batch": "rc2"
+  },
+  {
+   "id": "the-company-sits-in-the-two-moves",
+   "title": "A company sits in the two moves on the map: a guess becoming a product, and a product becoming a commodity",
+   "kind": "frame",
+   "statement": "Who reads the code depends on where it is on the map: explorer code is read for intent, mostly by agents; villager code is read line by line, because this is where changes land and the blast radius lives; town planner code is read by deterministic checks at the boundary, with a person for the exceptions. The company sits in the two moves between them: from explorer to villager, when a guess becomes a product and needs the review it never had; from villager to town planner, when a product becomes a commodity and the review becomes checks that run without anyone. The trap on both sides is not knowing which stage the code is at: teams find a model's mistakes too risky and swing to reviewing everything by hand.",
+   "sources": [
+    {
+     "ref": "news:if-somebody-built-a-company-on-code-review",
+     "where": "Who reads the code; The company"
+    },
+    {
+     "ref": "news:saas-apocalypse-decided-by-inertia-not-by-ai",
+     "where": "The mistake, and where the money actually is: village and town-planner companies"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/pionners-settlers-town-planners.md",
+    "4.life-patterns/content/be-a-founder.md"
+   ],
+   "topic": "explorers-villagers-town-planners",
+   "chapter": "be-a-founder",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "Quote, word for word, from the March 2026 article the newsroom cites: 'Before AI agents started writing code, you could argue that 90% of the code running in production was not being read by anyone.' The SaaS article's version: businesses that take the finished brief and run it, paid by consumption and by the fact that it keeps working, not by the seat; and 'more engineers, not fewer'. Extends the-handover from a frame about prototypes to a frame about where a company's value is.",
+   "batch": "rc2"
+  },
+  {
+   "id": "a-budget-per-step-is-the-objective-good-enough",
+   "title": "A budget per step, declared before anything runs, is the objective way to say good enough; the five whys move it",
+   "kind": "method",
+   "statement": "Agents keep going, that is what they do, and one agent handing work to another looks efficient while it spends. The way to stay on the right side of diminishing returns is a budget per altitude and per change, decided in advance, so a workflow's maximum cost is knowable before it runs rather than discovered afterwards; work handed from agent to agent carries its budget and never widens it. Being able to tell a team the budget is spent was one of the most useful controls Dinis ever had, because teams are very good at keeping going. Then the five whys: every finding at one layer is a question about the layer below, and the fix goes there as a rule, so the next change like it is caught for the price of a query. Onboard by starting at one point and continuing, never by analysing everything.",
+   "sources": [
+    {
+     "ref": "news:if-somebody-built-a-company-on-code-review",
+     "where": "From art to science; Constraints keep it in control, the five whys make it cheaper"
+    }
+   ],
+   "answers": [
+    "5.concepts/deadlines.md",
+    "4.life-patterns/one-way-two-way-doors.md"
+   ],
+   "topic": "working-with-agents",
+   "chapter": "direction-and-judgement",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "notes": "The junior's version of knowing-when-to-stop, as a mechanism rather than an experience. Every agent doing the work runs under a behaviour policy written before its first run.",
+   "batch": "rc2"
+  },
+  {
+   "id": "due-diligence-becomes-an-agent",
+   "title": "Send an agent, not a spreadsheet: due diligence derived from the code, not composed by the vendor",
+   "kind": "claim",
+   "statement": "Due diligence was a form because the alternative did not exist: the standard questionnaire has 627 questions, vendors answer 37.3 requests a month and spend 179 hours on them, and the answers are written by the people being asked. Now a buyer can send a prompt, or a small agent under a behaviour policy, to run inside the vendor's environment and come back with a graph of what is there: what reaches production that no person reviewed, whether the documentation matches the code, whether there is a threat model, what the last fifty bugs touched, which agents touch the pipeline and under what policy. The vendor reads what leaves and can redact but not rewrite, because the answer is derived, and companies will not put a false map on a record. A buyer asking costs nothing; a supplier not answering looks worse than one answering badly. Investors and acquirers get the same visibility in the same month.",
+   "sources": [
+    {
+     "ref": "news:send-an-agent-not-a-spreadsheet",
+     "where": "The form that never connected to anything; What changed; The consequence that has been missing"
+    }
+   ],
+   "answers": [
+    "6.security/threat-modeling.md",
+    "6.security/3rd-party-modules.md"
+   ],
+   "topic": "security-agent-era",
+   "chapter": "sell",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "notes": "The agent does not exist yet; the article is the case for it. The regulation arrives before the visibility: the EU Product Liability Directive applies to products placed on the market from 9 December 2026 and presumes a product defective where the manufacturer fails to disclose relevant evidence. Placed in sell because it is what the founder's buyers will do to them.",
+   "batch": "rc2"
+  },
+  {
+   "id": "double-down-on-understandability",
+   "title": "A startup should double down on understandability: less code, the same tools, and it can be checked and pass",
+   "kind": "advice",
+   "statement": "The test is risk-based, not pure. A startup that says it generated most of its code fast, that the product is not mission-critical and here are the mitigations has passed; what fails is not knowing. So build the graph of your own repository, keep the threat model with the code, write a behaviour policy for every agent, trace bugs to changes, and answer the buyer's questions in the buyer's format before being asked. The startup can play the same game as the biggest buyer, with open source tools, and it has less code: understanding ten thousand lines is a week, ten million that nobody still at the company wrote is a programme. The incumbent's advantage was that nobody could check; the startup's is that it can be checked and pass.",
+   "sources": [
+    {
+     "ref": "news:send-an-agent-not-a-spreadsheet",
+     "where": "Risk-based, not pure; The consequence that has been missing: 'if I were a startup I would double down on understandability'"
+    }
+   ],
+   "answers": [
+    "6.security/threat-modeling.md",
+    "6.security/security-better-developers.md",
+    "4.life-patterns/content/be-a-founder.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "sell",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "A threat model is the fastest read of a team's understanding: one that says 'we have a weakness here, exploiting it needs a nation-state, we will not defend against it' is a good one. The evidence that review is being skipped is dated in the article: AI accounts for 42% of committed code and only 48% always verify it (Sonar, January 2026); 80% of PRs have no human comment when an AI review tool is on (Qodo, 2025).",
+   "batch": "rc2"
+  },
+  {
+   "id": "the-behaviour-policy-is-the-due-diligence-document",
+   "title": "The agent behaviour policy is the due diligence document: a buyer reads the blast radius off it, and its absence says the most",
+   "kind": "claim",
+   "statement": "A behaviour policy, written before an agent's first run, says what the agent is, which identity it uses, what it may read, write, not do and spend, who approves what, which risks were accepted by whom and for how long, and where its actions are recorded. Read by a buyer it says something else: the worst case (a deploy agent whose identity has no merge right and no production credential can at most break staging), which controls are enforced by the identity and which are only instructions, and which risks the vendor accepted on the buyer's behalf. A vendor with agents in its pipeline and no policy to show has agents whose blast radius nobody has written down, which is a finding before any code is read.",
+   "sources": [
+    {
+     "ref": "news:send-an-agent-not-a-spreadsheet",
+     "where": "The behaviour policy is the due diligence document"
+    }
+   ],
+   "answers": [
+    "6.security/threat-modeling.md"
+   ],
+   "topic": "controlling-your-agent",
+   "chapter": "controlling-your-agent",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "notes": "Quote worth keeping: 'the moment of authorisation is not when you allow the agent to do something, it is the moment you give them the permissions.' A buyer reads the permissions, not the promises. Extends mandate-reach-gap from the operator's view to the buyer's.",
+   "batch": "rc2"
+  },
+  {
+   "id": "the-engagement-path-starts-small",
+   "title": "Selling a service: each step small enough to say yes to, and each ends with something they keep",
+   "kind": "method",
+   "statement": "The path for selling an agentic service: a free conversation about what the client wants agents to do and must never do; a first run on a real problem for £10 to £50 that leaves a vault; £500 for about two hours or £1,500 for a day to steer it or write the behaviour policy for one team; a four-day pilot in their own environment for £5,000; then a maintained setup from £149 a month so they run it themselves. The boutique benchmarks are the same shape everywhere: a free call, a paid discovery (a one-week audit at £2,500, a 14-day sprint at €2,900, a two-week assessment at $4,999), a fixed-price pilot (from £8,000), a build, a retainer. The prices are hypotheses to test with the first ten customers, and the plan says so: no paid run yet.",
+   "sources": [
+    {
+     "ref": "news:agentics-ready-to-sell",
+     "where": "Who else is selling this; The engagement path"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/content/be-a-founder.md",
+    "7.your-cv/upwork.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "sell",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "Prices from ruv.sgit.ai's published offers and the boutiques' public pages, read on 16 October 2026. The market map's positions are a judgement, as the article says.",
+   "batch": "rc2"
+  },
+  {
+   "id": "evidence-first-is-the-position",
+   "title": "The market is crowded at the top and thin on evidence: sell the record the client keeps",
+   "kind": "claim",
+   "statement": "The large consultancies each have an agent platform, the model vendors sell through partners and their own engineers, and boutiques sell fixed-price pilots; what the people in between lack is not another platform but evidence they can inspect. Gartner expects over 40% of agentic AI projects to be cancelled by the end of 2027, citing escalating costs, unclear value and inadequate risk controls, and warns of agent washing. The position for a small seller is evidence first: every engagement leaves a vault the client keeps, with the work, the history and a ledger of what each agent did and was allowed to do. The demonstration is the sales process, and the demonstration is checkable.",
+   "sources": [
+    {
+     "ref": "news:agentics-ready-to-sell",
+     "where": "Where the gap is; What we showed"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/content/be-a-founder.md",
+    "5.concepts/facts.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "sell",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "The demonstration: a talk built and run by a governed agent hive in about a day, 28 workers, 57 vault commits, no plaintext in anything the server stored, every vault deleted at the end; the runs were not gated by a compiled behaviour policy, which was shown separately. Dinis proposes 'agentics' as the word for what is sold: the practice, not one workflow.",
+   "batch": "rc2"
+  },
+  {
+   "id": "a-marketplace-of-people",
+   "title": "A service only scales with people: a curated marketplace of consultants, joined by proof of work",
+   "kind": "method",
+   "statement": "Agentic engagements need someone who knows the client's world and can steer a hive in it, and there are more of those people in a community than hours in a founder's week. So alongside the offers, a small curated list of consultants who deliver on the same stack, where the client picks the kind of project first and then the people. Joining copies the markets that work: apply, show proof of work (a public vault or repository of a real run with its ledger), peer review by two members, a thirty to forty-five minute interview with a scenario, a first engagement shadowed, and standards including a behaviour policy for consultants, the same idea applied to agents. The consultant sets the price within the band and keeps most of it; markets sit between 5% and 20% in total (Malt charges freelancers 5%, Upwork 0% to 15%, Braintrust 15% to the client).",
+   "sources": [
+    {
+     "ref": "news:agentics-ready-to-sell",
+     "where": "A marketplace for the people who deliver it; A brief for the marketplace page"
+    }
+   ],
+   "answers": [
+    "7.your-cv/upwork.md",
+    "4.life-patterns/mentors.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "sell",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "notes": "Nothing is built; the platform share is a proposal; the first two consultants (Mondweep Chakravorty and Dinis) are not taking bookings. Toptal says fewer than 3% of applicants pass its five stages. Also a door for the reader going into a job: join as the person who delivers.",
+   "batch": "rc2"
+  },
+  {
+   "id": "three-tiers-for-a-model-on-a-static-site",
+   "title": "Three honest tiers for a model on a site with no server: a local matcher, your own key, or a vault bridge",
+   "kind": "method",
+   "statement": "A static site has no server, no session and no place to keep a secret, so the usual chat box (a backend holding the API key) is not an option. The honest choices are three: a deterministic matcher in the browser that is free, private, works offline and shows which words it matched on (the default, because a reader should never have to hold a credential to use an index); the reader's own key, opt-in and labelled, which lives in the page's origin and is a trust decision presented as one; and a vault bridge where the host holds the key below the permission floor and the app never sees it. When the model call fails, fall back to the first tier and say so.",
+   "sources": [
+    {
+     "ref": "news:chat-on-a-static-site",
+     "where": "The constraint nobody can design around; The three tiers"
+    }
+   ],
+   "answers": [],
+   "topic": "building-blocks",
+   "chapter": "ship-a-serverless-product-in-a-weekend",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer",
+   "notes": "Dated 27 August 2026, with an addendum of 7 September: the pane on every page was given seven tools over the site's own index, and shows every call it made. The bridge's own qualification travels with it, quoted: 'The bridge protects your key; it is not yet a boundary that prevents all egress.' Only the first tier is free; the third was not built (on the board as T11).",
+   "batch": "rc2"
+  },
+  {
+   "id": "route-do-not-teach",
+   "title": "Scope the feature to one question, and quote rather than paraphrase",
+   "kind": "advice",
+   "statement": "The directory chat answers one question (which of the nineteen sites is mine) and refuses to teach the subjects: the sites already contain the arguments, and a summary that drifts from them is worse than a link that does not. It knows only the catalogue, nineteen theses and summaries quoted from each site's own words. For a founder shipping in a weekend, that is the discipline: the narrow thing that is right over the wide thing that drifts.",
+   "sources": [
+    {
+     "ref": "news:chat-on-a-static-site",
+     "where": "What it does not do"
+    }
+   ],
+   "answers": [],
+   "topic": "facts-and-the-record",
+   "chapter": "ship-a-serverless-product-in-a-weekend",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer",
+   "notes": "Sits next to stale-pages-become-false-memories and disagree-rationally-with-provenance: the same rule (every item carries its source, nothing paraphrased) applied to a product feature. The catalogue is generated from the same data as the cards and the table, which is why it can be trusted.",
+   "batch": "rc2"
+  },
+  {
+   "id": "billing-by-not-building-billing",
+   "title": "Billing by not building billing: the commercial model is a property of the key",
+   "kind": "method",
+   "statement": "A user pays five pounds through a payment link; the company keeps its cut at the moment of payment; the rest becomes the credit limit on a key handed to the user; the provider meters it and the key stops when it is spent. Against a billing system (a meter on every call, a ledger per user, disputes, refunds, fraud, custody of the data while it meters) that is a payment, a cut, a key with a ceiling and nothing else, and it is more profitable per pound because the margin is taken once, up front. The minimum top-up is five pounds because a card fee with a fixed component makes a one-pound purchase return about 59 pence of inference.",
+   "sources": [
+    {
+     "ref": "news:the-key-is-the-billing-system",
+     "where": "The commercial model that was never a billing system"
+    }
+   ],
+   "answers": [],
+   "topic": "be-a-founder",
+   "chapter": "ship-a-serverless-product-in-a-weekend",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "Could also sit in price-it-then-give-it-away. The model was written down on 28 July 2026, the day the product started, in a brief headed 'Billing by not building billing'. It is why a router like OpenRouter does well: it sells credit, keeps a margin and meters for everyone else. The user owns the ceiling: a key with a limit cannot cost more than the limit, and the user can revoke it at the provider in one click.",
+   "batch": "rc2"
+  },
+  {
+   "id": "the-licence-is-the-blocker",
+   "title": "Twice now the product was possible and the licence was the blocker: read the terms, not only the docs",
+   "kind": "claim",
+   "statement": "Every technical piece for renting a Mac to an agent by the minute exists, and Apple's macOS licence forbids leasing a Mac for less than twenty-four consecutive hours, and only for developer services. OpenRouter's Management API documents 'unique API keys for each customer instance' with credit limits, and section 7(4) of its terms (31 August 2026) forbids 'reselling API access to Models', so a plan built against the docs was dead on the page that documented it. Before a founder builds the commercial model on a provider, the terms are the thing to read, and an enterprise or OEM agreement is a door to ask about, not a feature to assume.",
+   "sources": [
+    {
+     "ref": "news:the-key-is-the-billing-system",
+     "where": "the opening; The commercial model that was never a billing system; The four routes"
+    },
+    {
+     "ref": "news:an-agent-desktop-by-the-minute",
+     "where": "macOS has a one-day minimum, and a purpose clause"
+    }
+   ],
+   "answers": [],
+   "topic": "be-a-founder",
+   "chapter": "ship-a-serverless-product-in-a-weekend",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "The cost of the licence, from the desktop article, at prices read on 7 October 2026: 44 hours of work a month costs about $7.29 on an E2B or Daytona Linux sandbox, $17.60 on Windows 365 for Agents, 116.16 euros on a Scaleway Mac mini M4, $649.44 on an AWS M4 and $1,040.16 on an M4 Pro, because each day is a 24-hour lease. Quote: 'The Mac is not expensive per hour; it is expensive because the hour you can buy is a day.' Both articles say they are read, not interpreted, and are not legal advice; the book should say the same. The nearest fit found for the capped key was ElevenLabs: per-key credit limits, OEM terms under which a business sets its own price for its end users, and a grants programme (twelve months, for companies under 25 people with a monetised use).",
+   "batch": "rc2"
+  },
+  {
+   "id": "voicedebrief-stopped-at-the-billing-system",
+   "title": "VoiceDebrief: a product with no server that shipped in three weeks and stopped at the one thing it could not sell",
+   "kind": "story",
+   "statement": "VoiceDebrief.ai turns a voice note into a transcript, a translation and a debrief in the browser, on the user's own OpenRouter key, with no account, no server and nothing stored; a 42-second note costs about a third of a penny. Built in the open from 28 July 2026: 239 commits and 27 releases in the first three weeks, then eleven commits the week after, then three, and a last commit on 7 September. What stopped it was not a server but the lack of one: the capped key per user that the model needed is forbidden by the provider's terms, and the alternative, a metering proxy, is the backend the product exists to avoid.",
+   "sources": [
+    {
+     "ref": "news:the-key-is-the-billing-system",
+     "where": "What VoiceDebrief is; Why no server is the product; The four routes"
+    }
+   ],
+   "answers": [],
+   "topic": "be-a-founder",
+   "chapter": "ship-a-serverless-product-in-a-weekend",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer",
+   "notes": "Dated 12 October 2026; Dinis says he is involved in VoiceDebrief and that the commit counts show when the work stopped, not why. The four routes: buy a capped OpenRouter key per user (forbidden by the standard terms); a provider that sells the capped key itself or lets it be issued under its terms (ElevenLabs the nearest fit, the gap is one sentence); bring your own key, kept (what runs today, honest, no margin, and the five minutes it takes to get a key is where most people stop); a metering proxy (the smallest backend, and a backend, custody and on-call return). The one part of the product with a server is the WhatsApp path, an n8n workflow behind a Cloudflare Worker. The method at the end is worth the book's attention: agents draft the letters to providers, Dinis sends, the ask is one sentence, and every answer is recorded as an issue with its date so the map is updated as a version rather than a new article.",
+   "batch": "rc2"
+  },
+  {
+   "id": "git-for-things-you-cannot-put-on-github",
+   "title": "Git for things you cannot put on GitHub: what an encrypted vault is",
+   "kind": "frame",
+   "statement": "There is a category of file with nowhere good to live: a risk register with real system names, an analysis still being argued about, the working memory of an agent that has read your codebase for a month, client material under NDA. It wants history, branches, diffs and a link, and it is the reason people say 'we can't put that in GitHub', so it ends up in a shared drive or a thread nobody can diff. sgit is git for those files: encrypted before they leave your machine, versioned like git, stored on a server that holds ciphertext and nothing else, not filenames, not directory structure, not commit messages. There is no key escrow, no admin override and no support engineer who can recover it, which is a feature with a real cost.",
+   "sources": [
+    {
+     "ref": "news:what-sgit-is",
+     "where": "the opening; The part that is easy to say and hard to build"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/content/backup-your-life.md"
+   ],
+   "topic": "building-blocks",
+   "chapter": "privacy-by-design",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all",
+   "notes": "Dated 25 August 2026. The evidence in the article: an object is 786 bytes of AES-256-GCM ciphertext named by the SHA-256 of the encrypted bytes, so the host can deduplicate it, cache it and serve it from a CDN without knowing what it is; all nineteen published vaults cloned from their published keys, 1,389 files, no failures. Underneath it is real version control (multi-parent commits, a tree per directory, merge-base, three-way merge), not a sync folder. Status, plainly: sgit is beta and says so on every page; pip install sgit-ai, pure Python, two runtime dependencies, Apache-2.0. The then-and-now for the 2018 Backup your life: back up into a vault whose key you hold.",
+   "batch": "rc2"
+  },
+  {
+   "id": "the-read-key-is-the-sharing-model",
+   "title": "One string is address, authorisation and key; the read key derived from it is safe to publish",
+   "kind": "claim",
+   "statement": "A vault key is a passphrase and a vault id in one string, and it is three things at once: the address of the vault, the authorisation to write to it, and the key that decrypts it. Lose it and the data is gone; leak it and someone can rewrite your history. From it, one way, comes a read key: same vault, read-only, safe to publish, and the read key is the entire credential, with no account, no login and no access request. That asymmetry is the whole sharing model: every vault linked from sgit.ai is published as a read key, and no vault key has ever been published, a rule enforced by a tripwire in the release pipeline.",
+   "sources": [
+    {
+     "ref": "news:what-sgit-is",
+     "where": "The part that is easy to say and hard to build; Ten seconds of proof; Try it"
+    },
+    {
+     "ref": "news:where-the-vault-keys-live",
+     "where": "One secret, and the keys derived from it"
+    }
+   ],
+   "answers": [],
+   "topic": "building-blocks",
+   "chapter": "privacy-by-design",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "This site runs on the same rule: the public read key in admin/content/vault.json is the only key that belongs in the repository, and the gate refuses the private prefix (CLAUDE.md). The second article adds the other credentials that sit beside the vault key, each made for one job: a write key the server checks as a hash, an append token that writes one message to one lane and nothing else, and a PKI key pair (RSA-OAEP 4096 for encryption, ECDSA P-256 for signing). In the browser the key sits after the # in the URL, which browsers do not send to the server.",
+   "batch": "rc2"
+  },
+  {
+   "id": "capability-without-credential",
+   "title": "An app in a vault runs against the vault without ever being handed a key",
+   "kind": "claim",
+   "statement": "A vault can contain an application, not only documents, and the application runs against the vault without ever holding a credential: it declares permissions of nothing, the host reads the vault and passes results in, and the app never sees a key. Capability without credential means you can run code you did not write against data you care about, with the blast radius set by a config file you can read in one screen. The same shape holds for a model: the key lives below the permission floor, the host makes the call, and the app never sees it.",
+   "sources": [
+    {
+     "ref": "news:what-sgit-is",
+     "where": "The part that surprises people"
+    },
+    {
+     "ref": "news:chat-on-a-static-site",
+     "where": "Tier 2, the bridge"
+    }
+   ],
+   "answers": [],
+   "topic": "controlling-your-agent",
+   "chapter": "privacy-by-design",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "notes": "Belongs beside mandate-reach-gap: the config file is the written reach, enforced by the host rather than hoped for in a prompt. The chat article's qualification applies: the bridge protects the key it was trusted with; it does not yet stop a malicious app calling a provider with a credential of its own.",
+   "batch": "rc2"
+  },
+  {
+   "id": "protect-the-keys-not-the-data",
+   "title": "Encryption on the client moves the problem from the data to the keys, and the sovereignty line to whoever holds them",
+   "kind": "frame",
+   "statement": "When the server can read what it stores, all of it has to be protected: every copy, backup, log and replica, and every person and process with access. When the server holds ciphertext named by the hash of that ciphertext, the problem moves to protecting the keys, which is much smaller, and the key becomes the whole question: where it is kept and how it travels decides who can read, who can write and what a leak costs. The sovereignty line stops being where the data is stored and becomes who holds the keys, so data can sit with a provider or in a country with sovereignty gaps and you remain sovereign over it and able to move it; the European Data Protection Board treats strong encryption with the keys retained solely by the exporter as an effective supplementary measure for transfers.",
+   "sources": [
+    {
+     "ref": "news:the-value-of-constraints",
+     "where": "From the data to the keys"
+    },
+    {
+     "ref": "news:where-the-vault-keys-live",
+     "where": "In short; Where everything lives"
+    }
+   ],
+   "answers": [],
+   "topic": "building-blocks",
+   "chapter": "privacy-by-design",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all",
+   "notes": "The EDPB source is Recommendations 01/2020, version 2.0, 18 June 2021, use case 1, quoted in the article: 'the EDPB considers that the encryption performed provides an effective supplementary measure.' The same idea as sovereignty as the ability to move (hack-your-country). The cost of the design, from the keys article: everything that matters is in the key, which is why key management is where the effort goes now.",
+   "batch": "rc2"
+  },
+  {
+   "id": "a-password-manager-and-a-registry",
+   "title": "Where the keys live: a password manager for the keys a person holds, a registry vault for the keys agents make",
+   "kind": "method",
+   "statement": "Once agents create vaults several times a day, keeping the keys by hand stops working. The keys a person holds go in a password manager, which is and will stay the preferred home; everything the agents create goes to a registry, a private vault run by its own isolated Claude session with no other access, the vault of vaults, so a key is never lost and never has to live in a browser tab or a chat. Remembering keys under aliases on one machine is a convenience, not a management system. The weakest step is giving a key to another agent, because the agent platforms have no secrets per session.",
+   "sources": [
+    {
+     "ref": "news:where-the-vault-keys-live",
+     "where": "Where the vault keys are kept today; The weakest step: giving a key to an agent; What comes next"
+    }
+   ],
+   "answers": [],
+   "topic": "security-agent-era",
+   "chapter": "privacy-by-design",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "State at sgit-ai v0.20.0, 10 October 2026. The gap, quoted from the platform's docs: on Claude Code on the web an environment variable is one 'any command Claude runs can read' and 'Anyone who uses the environment can read the values'; a network secret keeps the key outside the VM but is per environment and cannot help with a vault key, because decryption happens inside the session; Codex removes its secrets before the agent phase starts. So a key for another agent travels in the prompt (a transcript), in an environment variable (every session reads it), or not at all, with the agent making its own vault and sending the key back on a lane, the pattern used most. The four tracks next: password manager integrations (an open call published, not followed up yet), secrets.sgit.ai (a keyring unlocked by a passkey's PRF output, a 128-bit recovery code shown once, at v0.1.13 the design and a lab shipped and the app proposed), PKI (RFC 0001), and decryption out of band (an idea, not a design).",
+   "batch": "rc2"
+  },
+  {
+   "id": "small-vaults-for-small-jobs",
+   "title": "A vault per conversation and per job: a leaked key exposes one small thing, not an inbox",
+   "kind": "method",
+   "statement": "Working this way you start making very small vaults for very specific things: a communication vault for the two or three agents on a job, in which they talk and work through versioned, encrypted files. What an agent needs to join one is small: the vault key, sgit and network access to one host, or a server inside its own network. This is the right shape for security: a leaked key exposes one small vault and one conversation, not an inbox, a drive or an account, and every word is on the record for the person who holds the keys. It is also why the number of keys grew faster than one person could manage by hand.",
+   "sources": [
+    {
+     "ref": "news:where-the-vault-keys-live",
+     "where": "Small vaults for small jobs"
+    }
+   ],
+   "answers": [],
+   "topic": "controlling-your-agent",
+   "chapter": "controlling-your-agent",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "Pairs with an-agent-is-a-session-with-a-focus (one session per topic) and with the main workflow the article describes: give Claude no permissions and no access to anything, only the vault it uses to communicate, or a vault it creates and the person then captures. Inside the vaults the agents use EmailFS and IssuesFS, file-based protocols for mail and issues.",
+   "batch": "rc2"
+  },
+  {
+   "id": "write-only-lanes",
+   "title": "Append lanes: one POST from anywhere, readable only by the vault's owner",
+   "kind": "method",
+   "statement": "A lane is a write-only channel attached to a vault. A sender holds a token for one lane and the owner's public key, seals its message to that key and sends it with a single POST; the owner decrypts with a private key that never leaves them, and the server keeps only hashes and ciphertext, so compromising it yields hashes and ciphertext. One lane per sender, so one can be revoked without touching the others. It is used for key handover, for logs and observations from sessions that hold no vault key, for what a reader fills in on a web page, and for messages between agents on different platforms with different owners. A little like email, and the token is still a secret: it cannot read, but with the vault id it authorises writes.",
+   "sources": [
+    {
+     "ref": "news:where-the-vault-keys-live",
+     "where": "Append lanes, the transport behind most of this"
+    }
+   ],
+   "answers": [],
+   "topic": "building-blocks",
+   "chapter": "privacy-by-design",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "notes": "This is the piece that lets a site with no server take input: the newsroom's newsletter sign-ups and shared reading go through the same encrypted, write-only inbox (no-server-by-design), and the agent desktop design sends outputs and the footprint to a vault the desktop can append to and cannot rewrite. The no-server article notes it is the one part of the vault server that needs a small piece of server logic.",
+   "batch": "rc2"
+  },
+  {
+   "id": "nobody-buys-it-for-the-encryption",
+   "title": "Nobody buys it for the encryption: the features came from the constraint",
+   "kind": "claim",
+   "statement": "Encryption is an important property, not a reason to choose a tool, and leading with it was a mistake Dinis made himself: if sgit succeeds it will be because it has better features and better workflows. Many of those came from the encryption as a constraint, because innovation needs constraints and the loop of trying, failing and shipping; the research is more careful than the slogan, an inverted U-shaped effect, some constraint helps and too much hurts. The same applies to design: take things away until it hurts, and stop there; the best product is not the one you use because you have to but the one that hurts when you stop.",
+   "sources": [
+    {
+     "ref": "news:the-value-of-constraints",
+     "where": "The mistake I made first; Open source, as a constraint"
+    }
+   ],
+   "answers": [],
+   "topic": "be-a-founder",
+   "chapter": "privacy-by-design",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all",
+   "notes": "The research named is Acar, Tarakci and van Knippenberg, Creativity and innovation under constraints, Journal of Management, 2019, quoted: 'an inverted U-shaped effect of constraints on creativity and innovation'. Dinis declares a stake: sgit is his, and the article says the market will decide. A line for the cutter too: 'take things away until it hurts, and stop there, because past that point it gets worse.' Tension to watch with ship-now-ship-serverless, which presents SG/Send and sgit by their privacy property: the book should sell them by the workflow and name the privacy as the property.",
+   "batch": "rc2"
+  },
+  {
+   "id": "encryption-does-not-remove-gdpr",
+   "title": "Client-side encryption reduces the exposure under GDPR; it does not take you out of it",
+   "kind": "claim",
+   "statement": "Dinis's memo said that with the data encrypted you do not have to worry about GDPR, and the article corrects it: for whoever holds the keys, encrypted personal data is still personal data, storing it is still processing, and the controller's duties stay (the UK regulator says not to think encrypted data is outside the UK GDPR). What encryption does is reduce the exposure, and the law recognises it: Article 32 lists encryption as a security measure, and under Article 34(3)(a) a breach need not be communicated to the people affected if the data was made unintelligible to anyone not authorised, provided the key was not lost with it. The Court of Justice held in September 2025 that pseudonymised data is not personal data in all cases and for every person, which may help a store that never has the keys. Much less to worry about, not nothing.",
+   "sources": [
+    {
+     "ref": "news:the-value-of-constraints",
+     "where": "What it does not do: GDPR"
+    }
+   ],
+   "answers": [
+    "5.concepts/gdpr.md"
+   ],
+   "topic": "security-agent-era",
+   "chapter": "privacy-by-design",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "An instance of asked-to-be-corrected: the memo's claim stands corrected in the article, and the book must not repeat the memo. Sources named in the article: GDPR Articles 32 and 34; ICO encryption guidance; Court of Justice case C-413/23 P, press release of 4 September 2025. Not legal advice. Answers the 2018 outline GDPR, which the map says no article covered for developers.",
+   "batch": "rc2"
+  },
+  {
+   "id": "open-source-all-of-it-or-it-is-an-evaluation-version",
+   "title": "Open source as a constraint: all of it, or it is an evaluation version with a better name",
+   "kind": "claim",
+   "statement": "The constraint is that there is no private code. It makes the code easy to deploy, run and change, including by the customer, which solves many sovereignty problems on its own, and it removes two temptations: to lock the customer in, and the curse of most startups, building every feature and integration one customer wants until the roadmap belongs to everyone but the startup. With open source the answer is: here is the code, integrate it yourself or pay us to do that specific thing. That is why you cannot open source half of it: a community edition that turns proprietary when you use it for real is an evaluation version, and Elastic, HashiCorp and Redis each moved to a non-open licence and each produced a well-funded fork (OpenSearch, OpenTofu, Valkey). The business model that follows is selling customisation and keeping it working.",
+   "sources": [
+    {
+     "ref": "news:the-value-of-constraints",
+     "where": "Open source, as a constraint; All of it, or it is an evaluation version; The business model that follows"
+    }
+   ],
+   "answers": [
+    "2.mvp-for-gen-z-dev/content/open-source.md"
+   ],
+   "topic": "open-source",
+   "chapter": "open-source",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all",
+   "notes": "Distinct from the-fork-next-door (the fork as protection) and open-source-removes-the-moat-excuse (why it is easy to throw your own technology away): this is the founder's business reason for all of it. Elastic (29 August 2024) and Redis (1 May 2025) have since added an open licence back; the Open Source Initiative said the SSPL is not an open source licence (19 January 2021). The article's own limit: that small teams win this way is Dinis's view from what he sees, not a study. The constraints remove bad business decisions and leave the good one: if the code is open and the server holds nothing, you cannot sell access to the code or rent the data back.",
+   "batch": "rc2"
+  },
+  {
+   "id": "what-serverless-costs-when-idle",
+   "title": "What serverless costs when nobody is using it, product by product, 18 October 2026",
+   "kind": "evidence",
+   "statement": "From the products' own pricing pages on 18 October 2026, excluding storage, at 730 hours and US East rates: Lambda event functions, Cloud Run, Cosmos DB serverless, Neon and Redshift Serverless cost zero idle; Aurora Serverless v2 zero since November 2024 and OpenSearch's next-generation collections zero since May 2026. MSK Serverless bills $0.75 per cluster-hour, about $550 a month idle; OpenSearch classic collections have a floor of two capacity units, about $350 a month; Neptune Serverless a floor of one capacity unit, about $80 a month; ElastiCache Serverless a minimum of storage metered hourly, from $6 a month. The definitions were clear: the CNCF's whitepaper says 'there is no charge when code is not running', and the Berkeley paper warned in 2019 that few so-called elastic services could scale to zero.",
+   "sources": [
+    {
+     "ref": "news:ephemeral-town-planner-services",
+     "where": "What it means now (the table); What serverless meant"
+    }
+   ],
+   "answers": [
+    "5.concepts/serverless.md"
+   ],
+   "topic": "building-blocks",
+   "chapter": "building-blocks",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "The monthly figures are Dinis's arithmetic and move with region and configuration; the article says so. Some floors have fallen over time: Aurora Serverless v2 had a floor of half a capacity unit, priced in 2022 at 'just shy of $45' a month, until scale to zero arrived in November 2024; OpenSearch Serverless started at four units, halved in June 2024, reached zero in May 2026. For the hands-on chapter the table is a dated figure to renew each year; the test it supports (ship-now-ship-serverless) does not date.",
+   "batch": "rc2"
+  },
+  {
+   "id": "the-glue-behind-the-commodity",
+   "title": "The name shows the glue: a first version is often a villager's work dressed as a town planner's",
+   "kind": "claim",
+   "statement": "Naming a service as ephemeral, town planner and a service makes you ask whether it is really a commodity or only looks like one, and plenty of things sold as commodities are a large amount of custom technology glued together behind the scenes. Lambda, the definition of serverless for most people, ran on Linux containers inside EC2 instances for its first four years, until Firecracker replaced them from 2018, in its builders' own words. A per-hour bill for a 'serverless' product usually means the provider cannot yet spin the thing up and down fast and safely enough to bill by use: an engineering gap on their side, passed to you as a cost. Not a criticism, that is how services become commodities, and the floors that halve and the scale-to-zero that arrives are the record of it maturing in public.",
+   "sources": [
+    {
+     "ref": "news:ephemeral-town-planner-services",
+     "where": "The test; The glue behind the commodity"
+    }
+   ],
+   "answers": [
+    "5.concepts/serverless.md",
+    "4.life-patterns/pionners-settlers-town-planners.md"
+   ],
+   "topic": "explorers-villagers-town-planners",
+   "chapter": "building-blocks",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "notes": "Could also serve where-do-you-land as a worked example of a Wardley map showing what sits behind a commodity. Werner Vogels is quoted: AWS delivers 'new services often with a minimal feature set' and lets customers 'help drive the roadmap'. The Firecracker account is AWS's own (NSDI 2020). Wardley in 2016: 'It's not really serverless but more I don't care what a server is.'",
+   "batch": "rc2"
+  },
+  {
+   "id": "the-code-must-not-know-it-moved",
+   "title": "Move the cloud, not the code: a twin the application cannot tell from the real service",
+   "kind": "frame",
+   "statement": "Workloads stay on hyperscalers because moving means changing code: every call to S3, EC2 and IAM is written into applications that work today and nobody wants to touch. So the requirement is that the application must not know it has moved. The same calls land on a twin, an open source interface to a real system valued for one thing, that the client cannot tell the difference, and the twin decides where the bytes go: real S3, an sgit vault, a European operator's data centre, a laptop. Switching a mock costs a code path; switching a twin costs an endpoint, so migration becomes a configuration decision rather than a project, and projects get cancelled. The S3 twin exists as open source; EC2 and IAM do not yet.",
+   "sources": [
+    {
+     "ref": "news:move-the-cloud-not-the-code",
+     "where": "Why workloads do not move; The criterion: the code must not know; This is not theoretical: the S3 twin"
+    }
+   ],
+   "answers": [
+    "2.mvp-for-gen-z-dev/draft/aws.md",
+    "5.concepts/legacy-applications.md"
+   ],
+   "topic": "building-blocks",
+   "chapter": "building-blocks",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "notes": "Dated 12 October 2026, from a digital sovereignty event; the chief executive is not named and did not review it. AWS's European Sovereign Cloud went live on 15 January 2026, a separate cloud with its first region in Brandenburg, operated by EU residents; the article's reading: 'Sovereignty that depends on one company's API is sovereignty by permission.' None of it works if the twin layer is closed: swap one vendor's API for another vendor's proprietary wrapper and the lock-in has moved, not gone.",
+   "batch": "rc2"
+  },
+  {
+   "id": "sovereignty-never-signs-a-migration",
+   "title": "The reason to move is never sovereignty or cost: sell value that lands the day they switch",
+   "kind": "claim",
+   "statement": "Sovereignty and cost reduction are important and never urgent; they sit on the risk register under important, not urgent, and nobody signs the risk of a migration for a principle or for a return that depends on a future event. The person signing needs value that lands the day they switch and gives them cover if it goes wrong: backups that exist, every object version controlled, encryption the operator cannot read with the key held by the customer, a journal of every call, behaviour policies the agents cannot skip, cost per workload visible before the invoice, and an item taken off the top of the register. 'It is in Europe now' is not a decision somebody can defend. For an operator in Romania, Portugal or the UK, 'move to us' sells risk; 'keep your code, point it at us, and come out with versions, encryption, a journal and policies' sells value with the risk removed.",
+   "sources": [
+    {
+     "ref": "news:move-the-cloud-not-the-code",
+     "where": "The reason to move is never sovereignty; The business model"
+    }
+   ],
+   "answers": [],
+   "topic": "be-a-founder",
+   "chapter": "sell",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "A selling lesson in general form: find the return that closes before the risk does, and the buyer who owns that register line rather than the cloud bill. The article says its value list is 'still a little invisible to a signer' and needs sharpening; the business model's numbers are labelled assumptions, shapes not quotes, for somebody else to run. The margin is in the twin layer (journal, policy enforcement, reports a regulator or insurer accepts), not in storage and compute, which are commodities: the same reading as why-i-love-wardley-maps.",
+   "batch": "rc2"
+  },
+  {
+   "id": "no-new-features-during-the-move",
+   "title": "A villager move: no new features while you move, or nobody can tell which change broke what",
+   "kind": "advice",
+   "statement": "A migration is a pure villager move, from explorer to town planner: take something that works and make it boring, reliable and cheap, without changing what it does. The temptation to add features during it is the moment everything derails, because the migration is now also a product change and nobody can tell which of the two broke what. The argument that the move is what allows the features is right, and it is exactly why the two must not be mixed: move first, with the code unmodified and the twin adding its value underneath, then add the features the move made possible.",
+   "sources": [
+    {
+     "ref": "news:move-the-cloud-not-the-code",
+     "where": "A villager move: no new features"
+    }
+   ],
+   "answers": [
+    "5.concepts/legacy-applications.md"
+   ],
+   "topic": "explorers-villagers-town-planners",
+   "chapter": "explorer-coding-and-the-handover",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "The same rule the newsroom used for its own explorer-to-villager move (green-does-not-mean-live cites it): same bytes and same bugs first, features after. Could sit in shipped-means-the-user-has-it instead.",
+   "batch": "rc2"
+  },
+  {
+   "id": "run-unmodified-against-a-twin",
+   "title": "Every piece of software should run, unmodified, against a twin of every service it depends on",
+   "kind": "advice",
+   "statement": "If the application cannot tell a twin from the real service, the same unmodified code can run against an in-memory twin in milliseconds on a laptop, against a twin replaying last week's production journal, against a twin injecting the failures staging never shows (a timeout, a throttle, a permission that disappears halfway through a job), and against the real service for the final check. Most teams test against mocks they wrote themselves and hope production behaves the same; with twins the environment becomes a setting rather than a guess. Software that can only run against one provider's live API is software you cannot test properly, cannot move, and cannot put a policy in front of.",
+   "sources": [
+    {
+     "ref": "news:move-the-cloud-not-the-code",
+     "where": "Testing goes to another level"
+    }
+   ],
+   "answers": [
+    "5.concepts/CI-Testing.md",
+    "5.concepts/chaos-engineering.md",
+    "6.security/dont-touch-production.md"
+   ],
+   "topic": "shipped-means-the-user-has-it",
+   "chapter": "shipped-means-the-user-has-it",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "A side effect the article says 'may end up mattering more than sovereignty'. The twin is also where the journal and the behaviour policy live, because every call passes through it (mandate-reach-gap, one-way-two-way-doors). The 2018 Chaos Engineering outline is the failure-injection half of this.",
+   "batch": "rc2"
+  },
+  {
+   "id": "startup-credits-october-2026",
+   "title": "The startup credit programmes, as their pages read on 7 October 2026",
+   "kind": "evidence",
+   "statement": "All amounts and criteria read from each programme's own page on 7 October 2026. AWS Activate Founders: $1,000, up to $5,000, for self-funded, pre-Series B companies founded in the last 10 years on the Paid Tier plan; AWS Activate Portfolio: up to $200,000, through an Activate Provider (an investor or accelerator), pre-Series B. Microsoft for Startups: up to $150K over time, for a for-profit software company before Series C with under $350K lifetime Azure credits. Google for Startups Cloud: $2,000 pre-funding, up to $350,000 for AI startups, seed to Series A, founded in the last 5 years, under $5K prior credits. Anthropic's startup programme: $1,000 API credits, a year of Claude Team and up to $45K in partner offers, for companies founded in the last 5 years or funded in the last 2. Also: E2B $20,000 one-time plus the Pro tier; Daytona $10K immediately, up to $100K; Scaleway Founders up to 1,000 euros over 12 months and Early Stage 9,000 euros (1,500 a month for 6 months); Cloudflare for Startups $10K, $100K or $350K by tier; Modal unspecified thousands. Programmes change; check before applying.",
+   "sources": [
+    {
+     "ref": "news:an-agent-desktop-by-the-minute",
+     "where": "The programmes that would pay for finding out (the table)"
+    }
+   ],
+   "answers": [
+    "2.mvp-for-gen-z-dev/draft/aws.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "the-credits-and-programmes-2026",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all",
+   "notes": "The full table, as the article prints it. E2B, E2B for Startups: $20,000 one-time, plus the Pro tier; under 3 years old, raised under $5M, first-time E2B user, building AI agents; e2b.dev/startups/apply. Daytona, Startup Grid: $10K immediately, up to $100K; eligibility not published, the form asks for funding stage and VC partner; daytona.io/startups. Scaleway, Founders: up to 1,000 euros over 12 months; under 5 years old, under 50 staff, not yet a Scaleway customer; form on the Founders page, startup-program@scaleway.com. Scaleway, Early Stage: 9,000 euros (1,500 euros a month for 6 months); as Founders, with at least 500 euros a month of consumption; form on the Early Stage page. AWS, Activate Founders: $1,000, up to $5,000; self-funded, pre-Series B, founded in the last 10 years, account on the Paid Tier plan; aws.amazon.com/startups. AWS, Activate Portfolio: up to $200,000; through an Activate Provider (an investor or accelerator), pre-Series B; same link, with the provider's Org ID. Microsoft, Microsoft for Startups: up to $150K over time; for-profit software company, before Series C, under $350K lifetime Azure credits; startups.microsoft.com. Google Cloud, Google for Startups Cloud: $2,000 pre-funding; up to $350,000 for AI startups; seed to Series A, founded in the last 5 years, under $5K prior credits; cloud.google.com/startup/apply. Cloudflare, Cloudflare for Startups: $10K, $100K or $350K by tier; by funding tier, first-time applicants, business email; cloudflare.com/lp/startups. Modal, Modal for Startups: unspecified 'thousands' in credits; new to Modal, VC-funded through a partner or over $1M raised; modal.com/startups. Anthropic, Startup programme: $1,000 API credits, a year of Claude Team, up to $45K in partner offers; founded in the last 5 years or funded in the last 2; platform.claude.com/offers/startups-application. Two that look like startup programmes are not, for this purpose: MacStadium's open-source programme (a free Mac mini for unpaid maintainers; a commercial product does not qualify and should not be dressed up as one) and Hetzner's referral credit, which could not be confirmed from an official page on the day. Dinis's gen-zx article calls this 'the only table of startup cloud credits (AWS, Microsoft, Google, Anthropic)'; the table also carries E2B, Daytona, Scaleway, Cloudflare and Modal. The ElevenLabs grants programme (twelve months, 33 million characters, companies under 25 people with a monetised use; characters cannot be exchanged or resold) and AssemblyAI's twelve months of recurring credits are in the-key-is-the-billing-system, read on 12 October 2026, and belong in the same chapter.",
+   "batch": "rc2"
+  },
+  {
+   "id": "apply-with-the-work-as-the-application",
+   "title": "Apply only where you meet the criteria, with the page that says what you would do, and publish the results",
+   "kind": "advice",
+   "statement": "Before applying to a credit programme, check each criterion against your own age, funding and customer status, and apply only where they are met; do not dress a commercial product up as an open-source project to fit a programme that is not for it. Apply with the published page that describes what you would do with the credits, and offer the provider the result: the same tasks run on their product next to the others, measured rather than read, published with the gaps. Ask the questions the programme pages do not answer before relying on them (what the credits cover, when they expire, whether a monthly fee is paid from them).",
+   "sources": [
+    {
+     "ref": "news:an-agent-desktop-by-the-minute",
+     "where": "The programmes that would pay for finding out; If you run one of these programmes"
+    },
+    {
+     "ref": "news:the-key-is-the-billing-system",
+     "where": "The brief for the agents that will write to them"
+    }
+   ],
+   "answers": [],
+   "topic": "be-a-founder",
+   "chapter": "the-credits-and-programmes-2026",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer",
+   "notes": "The billing article adds the method for writing to providers: principles first, one sentence as the ask, send the research already done ('a provider that can see the research already done tends to answer the question that was actually asked'), agents draft and the founder sends, and every answer recorded as an issue with its date.",
+   "batch": "rc2"
+  },
+  {
+   "id": "the-model-cannot-be-the-barrier",
+   "title": "The desktop is the barrier, not the model: prompt injection is not solved, so the box has to hold",
+   "kind": "claim",
+   "statement": "Anthropic's own measurements of prompt injection in browser use went from a 23.6% attack success rate without mitigations to 11.2% in August 2025 and to about 1% in November 2025, a rate that in their words 'still represents meaningful risk'; Brave showed in October 2025 that nearly invisible text in screenshots could hijack agentic browsers; OpenAI wrote that it is unlikely ever to be fully solved. A desktop shows an agent pages, documents and emails written by other people, so over a working month the question is not whether a page will try but what the agent can do when one succeeds. An egress allowlist limits where it can send, a box without secrets limits what it can send, a revocable identity limits for how long, a recording says what happened; the model's defences reduce how often that matters and do not replace it. One mandate per task, written before the desktop exists, and the desktop configured from it.",
+   "sources": [
+    {
+     "ref": "news:an-agent-desktop-by-the-minute",
+     "where": "The model cannot be the barrier; What locked down means; What we would build from what exists"
+    }
+   ],
+   "answers": [
+    "6.security/dont-touch-production.md",
+    "6.security/threat-modeling.md"
+   ],
+   "topic": "controlling-your-agent",
+   "chapter": "controlling-your-agent",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "The nine properties of a locked-down agent desktop: isolation, an egress allowlist, secrets kept outside, an identity of its own, a live view and takeover, a record, a clean reset, billing that follows the work, the right desktop. On 7 October 2026 every one could be bought somewhere and no single product had all nine; the three that stop a hijacked agent doing damage (allowlist, secrets outside, own identity) were documented on one product, with two of them in private beta there. The OpenAI quote is from news coverage. Extends mandate-reach-gap and not-on-your-laptop with the desktop case.",
+   "batch": "rc2"
+  },
+  {
+   "id": "a-vault-server-in-83-lines",
+   "title": "A read-only vault needs no code; a read-write vault server is 83 lines on a free plan",
+   "kind": "evidence",
+   "statement": "Because the sgit server never sees a key or a plaintext byte, it has almost nothing to do, and that is what the test showed on 18 October 2026. Read-only: no code at all; sgit publish writes a folder any static host can serve, and the real client cloned it back identically. Read-write: one Worker of 83 lines, one R2 bucket and one Durable Object per vault, all on Cloudflare's free plan, run in Cloudflare's own runtime locally with the real client: create, push, clone; a stale push that merged; two pushes at once where one was told nothing was overwritten; a read-only clone that refused to write; a wrong write key answered 403; and no plaintext anywhere in what the server stored. It has not yet run on a real account, does not do files over 4 MB, and has one shared access token.",
+   "sources": [
+    {
+     "ref": "news:cloudflare-as-lego-blocks",
+     "where": "An sgit vault on Cloudflare"
+    }
+   ],
+   "answers": [
+    "5.concepts/serverless.md"
+   ],
+   "topic": "building-blocks",
+   "chapter": "ship-a-serverless-product-in-a-weekend",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer",
+   "notes": "The value of constraints in practice, in the article's own words: 'because the server can read nothing, it has almost nothing to do.' A nuance for the book's 'no servers of mine with logic in them': the 83 lines are logic of yours, the small commodity function the no-server article allows for the one real limit (writes that must be checked). The Worker and its wrangler configuration are printed in full in the article, so the weekend chapter can point at them rather than reprint them.",
+   "batch": "rc2"
+  },
+  {
+   "id": "reach-is-a-computed-value",
+   "title": "Reach is a computed value, and new capability lands as excess, never as new authority",
+   "kind": "method",
+   "statement": "What an agent can reach is not a document but the output of a calculation, so the question to answer is what calculates it and whether that is a one-time snapshot or wired to the pipeline. When a connector or integration is added the reach grows, the gap recomputes and a re-review follows; the mandate is locked business logic that changes only through change control, so a new capability can only land in the gap as excess, never as new authority. Unbounded includes volume: an agent permitted £10k per action that can perform a thousand actions carries a £10m exposure.",
+   "sources": [
+    {
+     "ref": "news:riskmandate-ten-questions",
+     "where": "2. How do we keep behaviour policies current as agents gain new powers?; 1. What happens when an agent bypasses its behaviour policy?"
+    }
+   ],
+   "answers": [
+    "5.concepts/changes.md",
+    "6.security/3rd-party-modules.md"
+   ],
+   "topic": "controlling-your-agent",
+   "chapter": "controlling-your-agent",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "notes": "Status in the article: MVPs and proofs of concept, complete for simple single-agent deployments. The question's example is in dollars ($25k cap, $75k order) and the answer's in pounds (£10k mandate, £100k reach); the book should pick one currency.",
+   "batch": "rc2"
+  },
+  {
+   "id": "who-can-pull-the-plug",
+   "title": "Who can pull the plug: an agent that cannot be stopped is riskier than one that can",
+   "kind": "claim",
+   "statement": "Most AI projects do not fail technically; they stall when the business finally asks the good questions: can you stop it, what if it issues ten thousand of something, who is liable. Every board asks the same question about an agent in one sentence, who can pull the plug, how fast, what breaks and what cannot be undone, and a deployed agent's risk cannot be denied, only accepted by a named owner for an interval with an expiry. An agent that cannot be stopped is far riskier than one that can; containment (terminate, revoke, block, quarantine, ticket) is designed in advance and executed by the company's own stack.",
+   "sources": [
+    {
+     "ref": "news:riskmandate-ten-questions",
+     "where": "4. How are we insuring or assuring agent behaviour?, 'An audit trail is not a guarantee'; 8. Remediation when a policy is bypassed; 10. Measurable business and technical outcomes, Getting to production"
+    },
+    {
+     "ref": "news:what-can-your-agent-reach",
+     "where": "How does it get into the room?, the board's risk appetite"
+    }
+   ],
+   "answers": [
+    "6.security/dont-touch-production.md",
+    "5.concepts/chaos-engineering.md"
+   ],
+   "topic": "controlling-your-agent",
+   "chapter": "controlling-your-agent",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "notes": "RiskMandate's position as the article states it: not inline, not an insurer, not a one-button solution; it 'makes agents insurable' and does not insure them; no risk transfer exists today.",
+   "batch": "rc2"
+  },
+  {
+   "id": "sell-the-build-not-the-code",
+   "title": "Open source everything, and sell the customised, tested, maintained build",
+   "kind": "advice",
+   "statement": "Everything the company builds is open source, with no proprietary layer; what the customer buys is a build for them, sometimes with fewer features and so less attack surface, tested on their target, maintained as models, connectors and threats change, with someone accountable for it, and cheaper through you than doing it themselves. Not a donation, and not a licence that gives you a reason to make the free version worse. In the article's simulation, customised builds for companies cover one project's long-tail cost in 94% of draws, donations in 24%, and about £1.80 a machine a year from individuals covers it in half the draws with typical conversion; no price reaches nine in ten.",
+   "sources": [
+    {
+     "ref": "news:open-source-is-not-free",
+     "where": "What this says; Five ways to pay for the long tail, simulated; What price pays for the long tail?"
+    },
+    {
+     "ref": "news:riskmandate-ten-questions",
+     "where": "3. Can policies be tailored to my stack, and what am I paying for?, What you pay for"
+    }
+   ],
+   "answers": [
+    "2.mvp-for-gen-z-dev/content/open-source.md",
+    "4.life-patterns/content/be-a-founder.md"
+   ],
+   "topic": "open-source",
+   "chapter": "open-source",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "The article says the model is a model, not a forecast, and that the three assumptions that move it most (how many machines are out there, willingness to pay, the share on the long tail) are not well measured in public data. Quote worth keeping: 'The value is the support, not the code, so the code can stay open.' The ten-questions article calls the moat 'delivery, maintenance and trust', not lock-in.",
+   "batch": "rc2"
+  },
+  {
+   "id": "answer-the-hard-questions-and-check-your-own-site",
+   "title": "Answer the hard questions in full, publish what is live and what is design, and check your own site against the answers",
+   "kind": "method",
+   "statement": "When a buyer's, investor's or competitor's hard questions come back from a conference, answer them in one structured interview with an agent acting as a journalist that challenges every answer until the set holds together; publish an honest maturity table of what is live and what is design; and check the answers against what the company has already published. The exercise found three contradictions on RiskMandate's own site: a homepage saying 'enforced in real time', an insurance page in the present tense for things that were design, and a Level 1 price of £10 on two pages and £5 on a third.",
+   "sources": [
+    {
+     "ref": "news:riskmandate-ten-questions",
+     "where": "Where this comes from; Honest maturity, across all ten; Three things this exercise showed we must fix on our own site"
+    }
+   ],
+   "answers": [
+    "5.concepts/facts.md",
+    "5.concepts/amazon-press-releases.md"
+   ],
+   "topic": "facts-and-the-record",
+   "chapter": "sell",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "Could also sit in facts-and-the-record; placed in sell because the questions are a buyer's. The line that closes the set: 'Where we are early, we say so.'",
+   "batch": "rc2"
+  },
+  {
+   "id": "a-policy-beside-the-prompt",
+   "title": "A third input: a behaviour policy beside the system prompt and the prompt, which the vendor acknowledges, enforces where it can and answers for",
+   "kind": "claim",
+   "statement": "An agent today gets a system prompt from its vendor and a prompt from us; it should also take an Agent Behaviour Policy, written to a published standard, which the vendor accepts as part of the deployment, enforces as far as the platform can see, reports every breach against the same day and, eventually, carries liability for the rows it accepted. The user answers for what is outside the policy and the vendor for what is inside it, which is a better model than the user being liable for everything because they clicked allow. Most agents already run a hidden policy of their own (Claude in Chrome will not type a password), and a system prompt is a light behaviour policy not written as one; the layering is the vendor's published policy, then the deployer's, with the business logic only the deployer can write.",
+   "sources": [
+    {
+     "ref": "news:a-policy-beside-the-prompt",
+     "where": "The idea: a policy beside the prompt; The user answers outside the policy, the vendor inside it; A system prompt is a light behaviour policy; Most agents already run a policy"
+    }
+   ],
+   "answers": [
+    "6.security/threat-modeling.md"
+   ],
+   "topic": "controlling-your-agent",
+   "chapter": "controlling-your-agent",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "notes": "A proposal: the article says no vendor accepts a behaviour policy as an input today in this sense; Claude Code's permission rules and managed settings are the nearest thing and cover settings, not business rules. Liability per row is the end state, not the start; acknowledgement and breach reporting can come first.",
+   "batch": "rc2"
+  },
+  {
+   "id": "code-and-data-in-one-channel",
+   "title": "Models do not separate code from data, so a rule in the prompt can be argued with by an email",
+   "kind": "claim",
+   "statement": "In a computer the instructions and the data they operate on are kept apart, and most of the worst security bugs in history, from buffer overflows to SQL injection, are what happens when that separation breaks; in a language model there is no separation to break, every instruction and every piece of content arrives in the same channel, and the UK's National Cyber Security Centre said in December 2025 that prompt injection may never be mitigated the way SQL injection was. A behaviour policy does not fix this; it moves the most important instructions, what the agent may do, into a channel the content cannot reach, loaded by the platform, versioned, signed and checked outside the model where it can be.",
+   "sources": [
+    {
+     "ref": "news:a-policy-beside-the-prompt",
+     "where": "The old problem: code and data in one channel; What this does not claim"
+    }
+   ],
+   "answers": [
+    "6.security/strings-should-be-banned.md",
+    "6.security/pointers.md"
+   ],
+   "topic": "security-agent-era",
+   "chapter": "controlling-your-agent",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all",
+   "notes": "Sits beside secrets-never-in-the-chat (the lethal trifecta) and is the reason mandate-reach-gap calls a rule in a prompt hope. Quote worth keeping, Simon Willison's: 'LLMs follow instructions in content'.",
+   "batch": "rc2"
+  },
+  {
+   "id": "aviation-and-payments-got-safe-when-liability-landed",
+   "title": "Aviation and payments got safe when the rule, the liability and the business model pointed the same way",
+   "kind": "evidence",
+   "statement": "Aviation did not get safe out of altruism but because every crash became news: at 1995's rate of 2.72 fatal airliner accidents per million flights, 2025's 38.7 million flights would have meant about 105 fatal accidents; there were 12. Payments got some of the best security teams anywhere because the liability was moved onto the companies: a US cardholder liable for at most $50 since 1970, £35 in the UK, the 2015 liability shift onto whoever had not adopted chip cards, the PCI council founded by the card brands in 2006, and UK banks reimbursing scam victims up to £85,000 since October 2024, after which losses fell by around 21%. Regulation alone does not do it (Meta's €1.2 billion GDPR fine in 2023, €200 million in 2025); the improvement comes where a rule, a liability that lands on the company and a systemic risk to the business model line up, and agents can be that case.",
+   "sources": [
+    {
+     "ref": "news:a-policy-beside-the-prompt",
+     "where": "Aviation did not get safe out of altruism; Payments got safe because liability moved; Regulation alone does not do it"
+    }
+   ],
+   "answers": [
+    "6.security/bug-bounties.md",
+    "5.concepts/gdpr.md"
+   ],
+   "topic": "controlling-your-agent",
+   "chapter": "controlling-your-agent",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "notes": "The article's own caveats: the aviation numbers mix sources (Aviation Safety Network via Our World in Data, the Flight Safety Foundation, IATA); the 21% fall is one evaluation's estimate; 'it does not take many users' to lose trust in agents is Dinis's judgement with no number behind it.",
+   "batch": "rc2"
+  },
+  {
+   "id": "the-policy-is-the-business-logic",
+   "title": "Zoom into an agent's behaviour policy and you find the business logic, which only the business can write",
+   "kind": "claim",
+   "statement": "The first rules anybody writes for an agent are mechanical and the same in every company: do not send, only draft; do not delete; use your own account. A few questions in (which drafts may it send, can it mention a price, can it chase an invoice finance has not approved, can it write to a client in dispute) you are describing the business, in layers with different owners: the function, the process, the relationship, and what the company is for. Vendors stop at the mechanics by the shape of the problem, since a vendor that models each customer's business becomes a consultancy; the business layers are the customer's to write, and written together with skills (a skill says how, a policy layer says what is allowed, who owns the rule and what stands in the way) they are the business codified for an agent, which is what lets a company hand it real work and scale.",
+   "sources": [
+    {
+     "ref": "news:the-behaviour-policy-is-the-business-logic",
+     "where": "Above the mechanics is the business; Why the vendors stop at the mechanics; It looks a lot like a skill"
+    }
+   ],
+   "answers": [
+    "5.concepts/design.md",
+    "4.life-patterns/workflows.md"
+   ],
+   "topic": "controlling-your-agent",
+   "chapter": "controlling-your-agent",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "The article's own five readers flag that its front matter overstates the body: 'the only way to describe agent behaviour at the granularity a business actually runs at' is unsupported; the body says only that a fractal structure is the one Dinis found that can hold it. The register should not say 'only way'. The firm, its rules and its counts are fictional on purpose.",
+   "batch": "rc2"
+  },
+  {
+   "id": "software-was-the-law",
+   "title": "Software was the law: the rule the screen enforced by omission is no longer enforced once an agent calls the API",
+   "kind": "claim",
+   "statement": "Companies never wrote their business logic down because they did not need to: a clerk could not send an unapproved invoice because the finance system had no button for it until the approval was recorded, and a support agent could not see payment details because their role did not include the screen. An agent works through APIs, not screens, and can call the endpoint the button would have called, so the rule the user interface enforced by omission is no longer enforced unless somebody writes it down and something enforces it; the behaviour policy is where it gets written down.",
+   "sources": [
+    {
+     "ref": "news:the-behaviour-policy-is-the-business-logic",
+     "where": "Software was the law"
+    }
+   ],
+   "answers": [
+    "5.concepts/legacy-applications.md",
+    "5.concepts/gdpr.md"
+   ],
+   "topic": "controlling-your-agent",
+   "chapter": "controlling-your-agent",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all",
+   "notes": "The Historian's reading of the article calls this its nugget: 'every later article is about the \"something enforces it\" half.' Approval chains, RBAC, field-level permissions and workflow engines are where privacy decisions and much of practical governance live.",
+   "batch": "rc2"
+  },
+  {
+   "id": "control-accepted-risk-or-hope",
+   "title": "Every rule lands in one of three states: backed by a control, governed by an accepted risk, or resting on hope",
+   "kind": "method",
+   "statement": "For each rule the policy records what stands in the way: nothing, an expectation (a rule in prose, enforced by nobody), a setting the agent's own account can flip, or a boundary enforced above it, and only the boundary is a control. Add one more fact, whether a named person has accepted the risk of the rule not being enforced, with an expiry, and every rule is a control, an accepted risk or hope, which can be counted. In the article's fictional firm 5 of 17 rules are backed by a control, 6 by an accepted risk and 6 by hope; the platform layer is all control, the organisation layer all hope, and each existing product (a send gateway, an outbound content check, a blocked-recipients list) moves one row.",
+   "sources": [
+    {
+     "ref": "news:the-behaviour-policy-is-the-business-logic",
+     "where": "How much of it is hope?; Where the vendors plug in"
+    }
+   ],
+   "answers": [
+    "6.security/threat-modeling.md"
+   ],
+   "topic": "controlling-your-agent",
+   "chapter": "controlling-your-agent",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "Adds the third state, accepted risk, to mandate-reach-gap's hope versus enforcement. The proportions are illustrative; the article says the shape is the point. Resting on hope is not a failure, most of a business has always run on people behaving as asked, but with an agent it can be counted.",
+   "batch": "rc2"
+  },
+  {
+   "id": "open-source-is-not-free",
+   "title": "Open source is not free: somebody pays, and the people who get the value have no easy way to",
+   "kind": "claim",
+   "statement": "Somebody is paying for open source, even if only with their time. The long tail is measurable and not small: 6.99% of Homebrew's macOS install events in the last 30 days, and 16.66% over a year, came from versions older than the newest three, and 18.55% of pip downloads run on end-of-life Python. Money flows to old versions when a vendor owns them (Oracle earned $19.8 billion from support last year; Red Hat's subscriptions ran at about 93% gross margin) and not when a community does: open source receives about 0.09% of its estimated value in investment, and 60% of maintainers describe themselves as unpaid hobbyists. The question was never whether somebody pays; it is whether the people who get the value have an easy way to pay for it.",
+   "sources": [
+    {
+     "ref": "news:open-source-is-not-free",
+     "where": "In short; The long tail, measured; Where the money flows"
+    }
+   ],
+   "answers": [
+    "2.mvp-for-gen-z-dev/content/open-source.md",
+    "6.security/3rd-party-modules.md"
+   ],
+   "topic": "open-source",
+   "chapter": "open-source",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all",
+   "notes": "The case that started it: an Intel iMac clean-installed with macOS 13 for Dinis's agents could not run Homebrew or Docker Desktop and needed Python by hand; the research corrected the story (only the 2017 iMacs stop at Ventura; Homebrew now refuses the CPU, not just the OS). The xz maintainer wrote 'this is an unpaid hobby project' two years before the backdoor.",
+   "batch": "rc2"
+  },
+  {
+   "id": "pence-only-work-aggregated",
+   "title": "Below about five pounds the card fee is the price, so pence payments only work aggregated",
+   "kind": "evidence",
+   "statement": "Stripe's standard UK rate is 1.5% plus 20p: on a £20 payment that is 2.5%, on £5 it is 5.5%, on 50p it is 41.5%, and on 10p it is more than the payment. So payments of pence only work aggregated: one charge a year that covers many projects, or a platform that already holds a balance and settles in bulk, which is how the newsroom's reading meter prices a page at a few pence against £5 of credit settled as one balance. Payment also has to be tied to a verified user who receives something, not to a count: when tea.xyz rewarded package popularity with tokens, one developer published nearly 14,000 packages.",
+   "sources": [
+    {
+     "ref": "news:open-source-is-not-free",
+     "where": "The pence problem; Why not just charge?, Per-install rewards get gamed"
+    }
+   ],
+   "answers": [
+    "5.concepts/karma-points.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "price-it-then-give-it-away",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "The article finds the card-versus-platform difference smaller than expected at £2 to £3, where the 20p fee is under 10%; aggregation matters below about £1.",
+   "batch": "rc2"
+  },
+  {
+   "id": "the-agents-leave-a-record",
+   "title": "'Nobody knows how it is built' is fixable: make the agents leave a record, a mandate, a memory and a graph",
+   "kind": "advice",
+   "statement": "HBR's warning that the AI designs the architecture so nobody in-house knows how the tool is built is true of most agent-built software today and does not have to be. If the agents work under a written mandate, keep their memory in a versioned store the company owns, and describe what they built as a graph, the architecture is a record the next team can read, not a mystery. A prototype ready for the villagers looks like Mondweep Chakravorty's SGit and Ruflo run: versions pinned, sixteen tests, a folder of evidence, a written behaviour policy, and a README that says plainly what it does not do yet.",
+   "sources": [
+    {
+     "ref": "news:who-will-fix-your-mess",
+     "where": "'Nobody knows how it is built' can be fixed"
+    }
+   ],
+   "answers": [
+    "5.concepts/legacy-applications.md",
+    "7.your-cv/future-self.md"
+   ],
+   "topic": "working-with-agents",
+   "chapter": "explorer-coding-and-the-handover",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "The article says the record is a proposal, not a standard: this site runs it; few organisations do yet. Dinis declares a stake: his companies sell open source and this kind of record.",
+   "batch": "rc2"
+  },
+  {
+   "id": "the-bonus-test-is-accountability",
+   "title": "The bonus test: if nobody will put their name or their bonus on it in production, it is not ready to be in line",
+   "kind": "claim",
+   "statement": "HBR's test for a chief executive, would your team accept a bonus tied to how this tool performs in production, is the town planner's accountability by another name: the moment someone takes the code and answers for it. The industry already says whoever ships code is responsible for it however it was written: the Linux kernel's rules say AI agents must not add Signed-off-by tags and only humans can certify the Developer Certificate of Origin, and Fedora's proposal says the contributor is always the author and fully accountable. An explorer cannot be made accountable for code they never read; the team the work is handed to can, and the town planners above all.",
+   "sources": [
+    {
+     "ref": "news:who-will-fix-your-mess",
+     "where": "The bonus test is accountability"
+    },
+    {
+     "ref": "news:explorer-coding",
+     "where": "Villagers and town planners"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/pionners-settlers-town-planners.md",
+    "6.security/dont-touch-production.md"
+   ],
+   "topic": "explorers-villagers-town-planners",
+   "chapter": "explorer-coding-and-the-handover",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "batch": "rc2"
+  },
+  {
+   "id": "lithuania-two-lines",
+   "title": "What the newsroom says about Lithuania and the Portuguese company, as of 12 October 2026: two lines",
+   "kind": "evidence",
+   "statement": "The company Dinis created in Portugal for MyFeeds is being closed, because running a company with little revenue in Portugal is expensive in a way it is not in England; he is looking at Lithuania for the next one, for its digital advantages. The article's own limit: the company move is a consideration, not a decision; Lithuania is being looked at and nothing has been registered.",
+   "sources": [
+    {
+     "ref": "news:not-a-straight-line",
+     "where": "The line that runs back, last paragraph; What this does not claim, 'The company move is a consideration, not a decision'"
+    }
+   ],
+   "answers": [],
+   "topic": "be-a-founder",
+   "chapter": "the-company-itself",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "notes": "This is all the newsroom has on Lithuania and on the Portuguese company. It is the evidence behind the Lithuania and Portugal lines of the-company-itself-for-real until the journalist's gap articles arrive; the book should not say more than this from this source.",
+   "batch": "rc2"
+  },
+  {
+   "id": "the-thinking-is-never-wasted",
+   "title": "The thinking is never wasted: pause in the open and pick up when the moment comes",
+   "kind": "story",
+   "statement": "The Cyber Boardroom, a GenAI platform for boards with an advisor called Athena, taught Dinis what personas and customised output are worth and paused because nobody wants confidential board material in an environment somebody else runs; what it needed is what he later built as sgit. MyFeeds built personalised feeds on semantic graphs, found the industry silent on graphs, micropayments and paying the people who write, and paused. The 2025 writing on monetising trust, fact provenance and micro and nano payments is what the newsroom now stands on, and he is going back to the publishers with an end-to-end example; if it does not land in 2026 he will try in 2027. Because it was open and written down, it was there when the moment came.",
+   "sources": [
+    {
+     "ref": "news:not-a-straight-line",
+     "where": "The line that runs back; Going back, with something that works; The thinking is never wasted"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/content/talking-to-yourself.md",
+    "4.life-patterns/content/backup-your-life.md",
+    "7.your-cv/future-self.md"
+   ],
+   "topic": "publish-in-public",
+   "chapter": "connect-the-dots-backwards",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer",
+   "notes": "The Cyber Boardroom and MyFeeds are summarised from memory in the article, and the proofs of concept are not all published. For the founder it illustrates connect-the-dots-backwards: a pivot leaves assets when it is done in the open.",
+   "batch": "rc2"
+  },
+  {
+   "id": "your-newsroom-is-your-demo-and-your-crm",
+   "title": "Your own newsroom is the public example of your product, and underneath it a CRM and a publishing workflow",
+   "kind": "claim",
+   "statement": "The hardest part of selling behaviour policies and licences to operate is showing them in action, because customer work cannot be shared; the ecosystem around the newsroom, its agents, their behaviour policy, the status report every few answers, the leak scan before every commit, the releases with their logs, is the best public example RiskMandate has of a policy under real load every day. And a very effective newsroom is, underneath, a very effective CRM and publishing workflow: agents that follow up people and threads, draft, publish and keep a record, matured by readers in a way the product's own volumes could not yet force. Follow the users and the feedback loops, even when the user is you.",
+   "sources": [
+    {
+     "ref": "news:not-a-straight-line",
+     "where": "The newsroom is RiskMandate's workflow, and its example; Why the newsroom could solve it and RiskMandate could not"
+    }
+   ],
+   "answers": [
+    "7.your-cv/blogs.md",
+    "4.life-patterns/publish-publish-publish.md"
+   ],
+   "topic": "publish-in-public",
+   "chapter": "your-own-newsroom",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer",
+   "notes": "RiskMandate's traction is described, not measured, in the article.",
+   "batch": "rc2"
+  },
+  {
+   "id": "not-ready-to-be-in-line",
+   "title": "An explorer-coded app is a brief, not a product: not ready to be in line, and the further towards commodity the fewer agents in line",
+   "kind": "claim",
+   "statement": "An explorer-coded app may look and feel like an application, but nobody has read the code or validated the architecture, so it is not ready to be in line, in the path of work other people depend on. Dependence comes quickly: once something is used it is mission critical, even for one person if it replaced how they work, and from then on new versions cannot break it. The direction is set by where the code sits on the map: the further towards commodity, the fewer agents in line and the more deterministic the code; a model has no place in line on a mission-critical path.",
+   "sources": [
+    {
+     "ref": "news:explorer-coding",
+     "where": "Not ready to be in line; Villagers and town planners"
+    }
+   ],
+   "answers": [
+    "5.concepts/legacy-applications.md",
+    "6.security/dont-touch-production.md"
+   ],
+   "topic": "explorers-villagers-town-planners",
+   "chapter": "explorer-coding-and-the-handover",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "Pairs with the-handover (the move itself) and the-bonus-test-is-accountability (who answers for it). 'A model has no place in line on a mission-critical path' is quoted in the article from Dinis's code review piece.",
+   "batch": "rc2"
+  },
+  {
+   "id": "an-explorer-version-of-every-product",
+   "title": "Every product needs an explorer version, with paid conversions to a villager product and a town planner one",
+   "kind": "advice",
+   "statement": "Products need an explorer version in which users talk to the product with a model, reshape it, move things around and keep their own version, the product treated as primitives. When a user has something they want to keep they submit it, which is the brief, and pay to convert it into a villager product maintained across releases and, if it matters enough, a town planner product built properly or kept as a maintained fork. Each step is a revenue stream and each submission tells the vendor exactly what its users want; the same path should exist inside companies, between a department and its engineers, and around open-source projects, between users and maintainers.",
+   "sources": [
+    {
+     "ref": "news:explorer-coding",
+     "where": "An explorer version of every product"
+    }
+   ],
+   "answers": [
+    "5.concepts/feedback-loops.md",
+    "5.concepts/karma-points.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "explorer-coding-and-the-handover",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "explorer",
+   "notes": "A proposal: the article knows of no vendor selling it. Could also sit in price-it-then-give-it-away as a pricing model; placed in the handover chapter because it is the handover, sold.",
+   "batch": "rc2"
+  },
+  {
+   "id": "twenty-minutes-with-your-own-assistant",
+   "title": "Write down what your agent can reach in twenty minutes: list its tools, say what you wanted it for, write the gap",
+   "kind": "method",
+   "statement": "Few people have seen the list for their own agents. Paste the thirteen prompts from RiskMandate's try-it page into the assistant you already have connected to your mail: the first asks it to list its own tools ('the list is longer than the tile that sold it'), the second asks it to draft what you actually wanted it for in three lists, wanted, refused, never mentioned ('the correction is almost always downward'), the third writes the gap down. About twenty minutes, and nothing is collected. It is a self-report, the cheapest evidence there is and the weakest; a measured policy marks each row as measured, documented or inferred.",
+   "sources": [
+    {
+     "ref": "news:what-can-your-agent-reach",
+     "where": "Yes, it reports what an agent can actually do; How does it get into the room?, Twenty minutes"
+    }
+   ],
+   "answers": [
+    "6.security/threat-modeling.md"
+   ],
+   "topic": "controlling-your-agent",
+   "chapter": "controlling-your-agent",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all",
+   "notes": "A candidate for the hands-on part if a chapter on a first behaviour policy is added; none of the hands-on chapters covers it today. The paid levels are offerings, not a track record: the pricing page marks the £500 and £1,500 levels 'specified, never run' as of 15 September 2026.",
+   "batch": "rc2"
+  },
+  {
+   "id": "answer-the-question-already-in-the-room",
+   "title": "Do not sell the need; answer a question somebody already has to answer, with a deadline",
+   "kind": "advice",
+   "statement": "There are two groups, the people who see how fast agents are moving and the much larger group who do not, and the second group will not ask for an agent risk tool because they do not see the risk. The way in is a question somebody already has, with a deadline, in the language of the room: a contract, where legal and procurement ask what a vendor's agent will do with the data; a security questionnaire, where a startup's first serious enterprise customer asks which agents touch their data and how they are bounded; an insurance renewal, where the question is whether AI is excluded from cover; the board's risk appetite; and twenty minutes with the assistant you already run. None of these asks anyone to understand agents first.",
+   "sources": [
+    {
+     "ref": "news:what-can-your-agent-reach",
+     "where": "How does it get into the room?"
+    }
+   ],
+   "answers": [],
+   "topic": "be-a-founder",
+   "chapter": "sell",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "villager",
+   "notes": "A founder is on both sides: as the seller, and as the startup that, in the article's words, will be diligenced on its agents before long. The insurance argument is RiskMandate's, summarised from its pages, not independently surveyed.",
+   "batch": "rc2"
+  },
+  {
+   "id": "the-plumbing-is-the-states-road",
+   "title": "The opportunity for a small country is the plumbing, built once by the state like a road, not the race for GPUs",
+   "kind": "claim",
+   "statement": "Frontier models, GPUs and data centres sit at the commodity end of the map with a lead a small country cannot buy back, so it should not enter that race. What stops a talented person in Braga or Cluj selling a service to the world is not talent, energy or price but forming a company, hiring across a border, being paid across Europe, working in another language, a contract, an invoice, a tax form, each custom built every time in most of Europe when it should be infrastructure the state built once, like the road the shop did not pay for. In 2021, 18.5% of EU enterprises sold online to customers in their own country, 8.1% to other EU countries and 4.6% to the rest of the world. Estonia built the road: more than 142,000 e-residents and more than 43,000 companies, over 4,200 of them founded in 2026 by mid-September, on X-Road, open source under the MIT licence and connecting around a thousand organisations.",
+   "sources": [
+    {
+     "ref": "news:judo-for-small-countries",
+     "where": "The race you cannot win, and should not enter; The opportunity is the plumbing; Infrastructure is the state's job"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/civic-responsibility.md"
+   ],
+   "topic": "civic-and-history",
+   "chapter": "civic-responsibility",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "notes": "Sharpens hack-your-country's 'judo for small countries' into the claim itself. The article says it is not a national strategy, the Eurostat figure is for 2021, and Estonia is a case study, not a template. For the founder it is the other side of the-company-itself: the plumbing a founder in the EU still builds alone.",
+   "batch": "rc2"
+  },
+  {
+   "id": "what-the-state-pays-for-belongs-to-the-commons",
+   "title": "No sovereignty without open source and open schemas; what the state pays for belongs to the commons; buy the alternative before the day you need it",
+   "kind": "claim",
+   "statement": "Sovereignty means you can leave: a road with a toll gate owned by one company is lock-in with tarmac, and independence is the ability to run a parallel service, move the data and keep going, which exists only if the code and the schemas are open. What the public paid for should be available to the public, not so everyone changes the production system but so everyone can see it, run it and leave with their data, which is also how the local industry around it comes into being. And a market for the alternative does not appear on the day the single point of failure fails: run parallel services, buy the local or open alternative for part of the estate now and accept fewer features, and use procurement, the lever a state already holds, to prefer open schemas and data mobility.",
+   "sources": [
+    {
+     "ref": "news:judo-for-small-countries",
+     "where": "Why it has to be open source; Create the demand before the day you need it; The playbook"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/civic-responsibility.md",
+    "2.mvp-for-gen-z-dev/content/creative-commons.md"
+   ],
+   "topic": "civic-and-history",
+   "chapter": "civic-responsibility",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "notes": "The five-move playbook: map the attrition, commoditise the plumbing, create the demand, put the money where the market is genesis, regulate what settled, then map again. hack-your-country already cites sovereignty-is-the-ability-to-move for the test; this is the civic argument behind it, and the resilience case rather than an ideological one.",
+   "batch": "rc2"
+  },
+  {
+   "id": "smaller-models-more-of-them",
+   "title": "Smaller models, more of them, with the least agency: a public model is a public road, and constraints are the input",
+   "kind": "claim",
+   "statement": "Most work does not need a frontier model and should not use one: frontier models are for finding the art of the possible, and for things that have to work every day at a price they are too expensive, too much power for the task and dangerous in proportion; the right end state uses the model once to build the tool, and production is plain files and plain code with no prompt in the path, with agents given the least agency that does the job. The market still at genesis is small open models for each language and culture, the Portuguese of Portugal, Brazil, Angola, Cape Verde and Mozambique, not one Portuguese; Portugal released Amalia on 1 July 2026, built by a consortium of universities with 5.5 million euros of EU recovery money and published with its dataset and code under an open licence. Constraints are the input: DeepSeek's V3 was trained in 2.788 million GPU hours on export-restricted H800 chips, and the constraint produced the innovation.",
+   "sources": [
+    {
+     "ref": "news:judo-for-small-countries",
+     "where": "Smaller models, more of them; Constraints are the input"
+    }
+   ],
+   "answers": [
+    "3.technologies/content/ml-ai.md",
+    "4.life-patterns/civic-responsibility.md"
+   ],
+   "topic": "civic-and-history",
+   "chapter": "civic-responsibility",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "all",
+   "notes": "'The model is used once to build the tool, and production is plain files and plain code' is also a building principle for ship-now-ship-serverless and not-ready-to-be-in-line. The DeepSeek example is about constraint, not cost: the dollar figure is disputed and the article does not rely on it.",
+   "batch": "rc2"
+  },
+  {
+   "id": "millions-on-a-distributed-workforce",
+   "title": "What spending millions on Upwork taught: build the infrastructure first, and the jobs can go back to where people came from",
+   "kind": "story",
+   "statement": "As a CISO and CTO Dinis spent millions on Upwork across the open source projects and the teams he ran, and it was one of the most successful things they did: distributed teams, people as good as or better than those hired the ordinary way, delivered faster and more efficiently. It worked because they invested first in the infrastructure around it, a project management team, a structure team and an onboarding team, and then used Upwork to manage Upwork, so the internal teams carried no overhead. It was never buying the cheapest: it was the right talent at a price fair where they lived, good value for both sides and a real career for the person. A small country that builds the plumbing makes the jobs available everywhere inside it, so people can go back to where the family and the lifestyle are; Romania's technology sector is close to 8% of GDP with more than 250,000 professionals and over ten billion euros a year of service exports.",
+   "sources": [
+    {
+     "ref": "news:judo-for-small-countries",
+     "where": "What I learned spending millions on a distributed workforce"
+    }
+   ],
+   "answers": [
+    "7.your-cv/upwork.md",
+    "4.life-patterns/why-diversity-matters.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "the-company-itself",
+   "destination": "this-edition",
+   "state": "candidate",
+   "decided_by": null,
+   "gravity": "town-planner",
+   "notes": "The Upwork spend and outcomes are Dinis's own and not independently verifiable from the article. Answers the 2018 Upwork outline from the hiring side rather than the freelancer's.",
    "batch": "rc2"
   }
  ]

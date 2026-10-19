@@ -45,7 +45,18 @@
   "dec:012": "processed",
   "dec:013": "processed",
   "dec:014": "processed",
-  "dec:015": "processed"
+  "dec:015": "processed",
+  "news:an-agent-desktop-by-the-minute": "processed",
+  "news:if-somebody-built-a-company-on-code-review": "processed",
+  "news:move-the-cloud-not-the-code": "processed",
+  "news:riskmandate-ten-questions": "processed",
+  "news:sell-dont-issue": "processed",
+  "news:send-an-agent-not-a-spreadsheet": "processed",
+  "news:the-behaviour-policy-is-the-business-logic": "processed",
+  "news:the-key-is-the-billing-system": "processed",
+  "news:what-sgit-is": "processed",
+  "news:where-the-vault-keys-live": "processed"
  },
- "rule": "A newsroom 'bring' article becomes 'processed' automatically when an idea cites it; a 'content' article becomes 'mined' the same way. The librarian adds an override only to say something the citations cannot: that an article was read and has nothing more to give (background), or that Dinis has placed everything from it (placed)."
+ "rule": "A newsroom 'bring' article becomes 'processed' automatically when an idea cites it; a 'content' article becomes 'mined' the same way. The librarian adds an override only to say something the citations cannot: that an article was read and has nothing more to give (background), or that Dinis has placed everything from it (placed).",
+ "rounds_note": "Round 1 (rc2): the newsroom articles Gen ZX Developers brought in were surveyed as context or skip on 18 October; Dinis's proposal reclassified them for the startup edition, so the ones an idea cites are overridden to processed here, and the survey keeps its original reading."
 }

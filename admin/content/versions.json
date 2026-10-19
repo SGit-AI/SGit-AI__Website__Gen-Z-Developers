@@ -135,6 +135,11 @@
    "version": "v0.2.24",
    "date": "2026-10-19",
    "what": "The gate learns about a candidate in progress. v0.2.23 shipped with the gate red: the versions page linked the frozen text of rc2, which is being written and has none yet, and the gate asked for its hash. A candidate marked in_progress now has no frozen text or hash to check, and the versions page says 'being written' for it instead of linking a file that does not exist. The release chain also stops on a red gate from now on rather than reading the last command's exit code."
+  },
+  {
+   "version": "v0.2.25",
+   "date": "2026-10-19",
+   "what": "The round-1 batch in the register. The newsroom articles Gen ZX Developers brought into scope for the startup edition (pricing, the miss-it test, selling shares rather than issuing them, the controllable founder, due diligence by agent, the company on code review, agentics ready to sell, eight months of SG/Send, the SaaS buyer's inertia, chat on a static site, the billing system, what sgit is and where the keys live, the value of constraints, ephemeral services, moving the cloud not the code, the startup credits table, RiskMandate's ten questions, the policy beside the prompt, the behaviour policy as business logic, open source is not free, who will fix your mess, the two lines on Lithuania, judo for small countries) were read in full by three readers and processed into 88 ideas marked batch rc2, with 37 existing ideas extended by a new source; the register now holds 198. Ten articles the survey had as context or skip are overridden to processed with a note that the proposal reclassified them. Every new idea is a candidate: Dinis brought the pile in, nobody has decided them. The rc2 chapters are being written from them."
   }
  ]
 }
