@@ -580,7 +580,7 @@ def build_read_v2(doc):
 <noscript><p class="note warn">The reader needs JavaScript. The candidate itself does not: <a href="../v2/book/index.html">the contents</a>, <a href="../v2/book/single.html">on one page</a>.</p></noscript>
 <div class="rd-strip" id="rd-strip">
   <div class="rd-strip-left">
-    <a class="rd-brand" href="../v2/book/index.html" title="The contents">Gen ZX Developers, the GenAI Startup Edition <span class="badge draft">{esc(doc["version"])}</span></a>
+    <a class="rd-brand" href="../v2/book/index.html" title="The contents">Generation ZX Developers (GenAI Startup Edition) <span class="badge draft">{esc(doc["version"])}</span></a>
     <span class="rd-progress" id="rd-progress" title="Chapters read, of the candidate"></span>
   </div>
   <div class="rd-strip-right">
@@ -604,7 +604,7 @@ def build_read_v2(doc):
 </div>
 """
     page("read/v2.html", f"Read and review the second edition, {doc['version']}", body,
-         f"Read release candidate {doc['version']} of Gen ZX Developers, the GenAI Startup Edition, with the editor's desk: states, comments, folds, export.",
+         f"Read release candidate {doc['version']} of Generation ZX Developers (GenAI Startup Edition), with the editor's desk: states, comments, folds, export.",
          crumbs=(("Read and review", "read/index.html"), ("The second edition", "read/v2.html")),
          extra_head='<link rel="stylesheet" href="../assets/reader.css">\n<script defer src="../assets/reader.js"></script>\n', wide=True)
 
@@ -1162,7 +1162,7 @@ def build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib,
     v2card = ""
     if v2:
         v2card = (f'<div class="card big v2"><span class="k">The second edition &middot; {esc(v2["version"])} &middot; release candidate, not a version</span>'
-                  f'<h3><a href="v2/book/index.html">Gen ZX Developers, the GenAI Startup Edition: the first end-to-end draft</a></h3>'
+                  f'<h3><a href="v2/book/index.html">Generation ZX Developers (GenAI Startup Edition): the first end-to-end draft</a></h3>'
                   f'<p>{v2["chapters"]} chapters in {v2["parts"]} parts, {v2["words"]:,} words, written by the book\'s agents from {v2["ideas"]} ideas in the register and the articles behind them, for Dinis to read, print and mark up. Every chapter ends with where it came from; {v2["callouts"]} notes say what only Dinis can fill in.</p>'
                   f'<p class="stats"><span class="stat"><b>{v2["chapters"]}</b><span>chapters</span></span><span class="stat"><b>{v2["words"]:,}</b><span>words</span></span><span class="stat"><b>{v2["ideas"]}</b><span>ideas written in</span></span><span class="stat"><b>{v2["callouts"]}</b><span>for Dinis</span></span></p>'
                   f'<span class="more"><a href="v2/book/index.html">The contents &rarr;</a> &nbsp; <a href="read/v2.html">Read and review &rarr;</a> &nbsp; <a href="v2/book/single.html">On one page &rarr;</a>'

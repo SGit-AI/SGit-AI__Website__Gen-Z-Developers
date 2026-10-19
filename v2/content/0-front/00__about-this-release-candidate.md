@@ -5,12 +5,12 @@ part: front
 number: 0
 ideas: []
 answers_2018: []
-sources: [agent:the-book-as-a-graph, dec:008, dec:009, dec:014, art:read-comment-decide, art:gen-zx-developers]
+sources: [agent:the-book-as-a-graph, dec:008, dec:009, dec:014, dec:015, art:read-comment-decide, art:gen-zx-developers]
 character: guide
 gravity: all
 status: draft
 ---
-This is release candidate 2 of *Gen ZX Developers, the GenAI Startup Edition*, the second edition of *Generation Z Developers* (2018). It was not written the way the first edition was, and it is not the same book that release candidate 1 was, a few hours earlier.
+This is release candidate 2 of *Generation ZX Developers (GenAI Startup Edition)*, the second edition of *Generation Z Developers* (2018). It was not written the way the first edition was, and it is not the same book that release candidate 1 was, a few hours earlier.
 
 In 2018 Dinis wrote the chapters himself, in a public repository, and readers sent fixes as GitHub issues. In 2026 the book is talked into existence: voice memos, written up with a journalist agent as articles in his voice, each ending with a brief for the roles that finish a book. A librarian reads every article, every decision and every one of the 2018 chapters and outlines, and writes one idea per thing the book would say: a sentence the book stands behind, with where it came from, down to the section of the article, and the 2018 file it answers. The ideas are placed on a chapter map, and each chapter is written from the ideas placed in it, by an agent that reads the articles and the 2018 text behind them and nothing else. The rule is simple: every number, every quotation and every story has to be in a source the chapter names. Where the sources run out, the chapter says so, in a note addressed to Dinis.
 

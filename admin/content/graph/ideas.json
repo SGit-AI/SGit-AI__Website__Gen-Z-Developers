@@ -1804,9 +1804,9 @@
   },
   {
    "id": "gen-ai-edition-name",
-   "title": "The name: Gen ZX Developers, the GenAI Startup Edition",
+   "title": "The name: Generation ZX Developers (GenAI Startup Edition)",
    "kind": "process",
-   "statement": "The edition carries its name in the title: Gen ZX Developers, the GenAI Startup Edition, for two generations, replacing Gen Z Developers (GenAI Edition), which stood for one release candidate. Whether Gen Alpha is a future reader stays for the title interview.",
+   "statement": "The edition carries its name in the title: Generation ZX Developers (GenAI Startup Edition), for two generations, the full form of the 2018 title with the second generation in it and the edition in brackets. It replaced Gen Z Developers (GenAI Edition), which stood for one release candidate, and the short form Gen ZX Developers, which stood for a few hours. Whether Gen Alpha is a future reader stays for the title interview.",
    "sources": [
     {
      "ref": "art:generative-ai-not-ai",
@@ -1827,6 +1827,10 @@
     {
      "ref": "art:gen-zx-developers",
      "where": "the proposal: the tagline and Generation ZX"
+    },
+    {
+     "ref": "dec:015",
+     "where": "the title"
     }
    ],
    "answers": [],
@@ -1834,7 +1838,7 @@
    "chapter": "how-this-book-was-made",
    "destination": "this-edition",
    "state": "accepted",
-   "decided_by": "Dinis, 19 October 2026: decision 010 (Gen Z Developers (GenAI Edition)), superseded the same day by decision 014 (Gen ZX Developers, the GenAI Startup Edition)",
+   "decided_by": "Dinis, 19 October 2026: decision 010, then 014, then 015 (Generation ZX Developers (GenAI Startup Edition))",
    "notes": "Decided twice in one day; the second decision supersedes the first and the record keeps both.",
    "gravity": "all"
   },
@@ -3020,6 +3024,10 @@
     {
      "ref": "news:the-expert-founders",
      "where": "'Execution just got cheap'"
+    },
+    {
+     "ref": "dec:015",
+     "where": "Generation ZX in the title"
     }
    ],
    "answers": [

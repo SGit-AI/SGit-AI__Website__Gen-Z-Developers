@@ -44,7 +44,8 @@
   "dec:011": "processed",
   "dec:012": "processed",
   "dec:013": "processed",
-  "dec:014": "processed"
+  "dec:014": "processed",
+  "dec:015": "processed"
  },
  "rule": "A newsroom 'bring' article becomes 'processed' automatically when an idea cites it; a 'content' article becomes 'mined' the same way. The librarian adds an override only to say something the citations cannot: that an article was read and has nothing more to give (background), or that Dinis has placed everything from it (placed)."
 }
