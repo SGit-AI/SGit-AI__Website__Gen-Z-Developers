@@ -63,7 +63,7 @@ for (const f of htmlFiles) {
   const re = /(?:href|src)="([^"#]*)(?:#[^"]*)?"/g;
   let m;
   while ((m = re.exec(t))) {
-    const url = m[1];
+    const url = m[1].split('?')[0]; // a query (a storyboard's ?view=grid) picks a view of the same page; the page must exist
     if (!url || /^(https?:|mailto:|data:|\/\/)/.test(url)) continue;
     const target = url.startsWith('/') ? path.join(ROOT, url) : path.resolve(path.dirname(f), url);
     const ok = fs.existsSync(target) && (fs.statSync(target).isFile() || fs.existsSync(path.join(target, 'index.html')));

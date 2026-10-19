@@ -1,9 +1,9 @@
 {
  "slug": "gen-zx-developers",
  "title": "Gen ZX Developers",
- "subtitle": "A proposal: the GenAI Startup Edition, for Generation Z and Generation X, with one objective, a company by the end of the book. 14 panels.",
+ "subtitle": "The GenAI Startup Edition, for Generation Z and Generation X, with one objective, a company by the end of the book: proposed on 19 October 2026 and adopted by Dinis as the frame of the second release candidate (decisions 014 and 015). 14 panels.",
  "status": "draft",
- "book_version": "v1.0.0 (the second edition does not exist yet)",
+ "book_version": "v1.0.0 is the only official version; the second edition is in release candidates (rc1 frozen, rc2 in progress)",
  "by": "gen-z.journalist, 19 October 2026, from Dinis's memo proposing Gen ZX",
  "quote_source": "admin/content/articles/16__gen-zx-developers.md",
  "rule": "Every line the Guide says, and every quote card, is from the article 'Gen ZX Developers', word for word; the build checks it. Marta, the BASIC on the board, the path and the serverless graph are the storyboard's illustrations.",
@@ -11,7 +11,7 @@
   {
    "kind": "cover",
    "title": "Gen ZX Developers",
-   "subtitle": "The GenAI Startup Edition: a proposal.",
+   "subtitle": "The GenAI Startup Edition: the frame of rc2.",
    "cast": [
     {
      "who": "marta",
@@ -34,7 +34,7 @@
      "mood": "happy"
     }
    ],
-   "note": "A proposal, the first change set for the board: the founder as the reader, two generations, one objective.",
+   "note": "Proposed as the first change set for the board, and adopted by Dinis as the frame of rc2 (decision 015): the founder as the reader, two generations, one objective.",
    "source": "Gen ZX Developers"
   },
   {
@@ -549,7 +549,7 @@
      "x": 0.57
     }
    ],
-   "note": "A proposal; Dinis decides after the board's hearing.",
+   "note": "Proposed here; Dinis decided after the board's hearing: the title is Generation ZX Developers (GenAI Startup Edition), decision 014, and the proposal is the frame of rc2, decision 015.",
    "source": "Gen ZX Developers"
   }
  ]

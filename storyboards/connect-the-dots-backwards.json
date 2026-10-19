@@ -3,7 +3,7 @@
  "title": "Connect the dots backwards",
  "subtitle": "Paths, mixing disciplines, learning as a lifelong skill, and why to read this on paper. 14 panels.",
  "status": "draft",
- "book_version": "v1.0.0 (the second edition does not exist yet)",
+ "book_version": "v1.0.0 is the only official version; the second edition is in release candidates (rc1 frozen, rc2 in progress)",
  "by": "gen-z.journalist, 18 October 2026, from Dinis's memo on paths and learning",
  "quote_source": "admin/content/articles/09__connect-the-dots-backwards.md",
  "rule": "Every line the Guide says, and every quote card, is Dinis's words from the article 'Connect the dots backwards', word for word, including the Jobs quote as the article gives it; the build checks it.",

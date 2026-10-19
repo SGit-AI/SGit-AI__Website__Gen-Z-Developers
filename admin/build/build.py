@@ -1058,35 +1058,109 @@ def build_storyboards():
 """
     page("storyboards/model-sheet.html", "The model sheet", body, "Every storyboard character in every mood and pose, to check the drawing.",
          crumbs=(("Storyboards", "storyboards/index.html"), ("The model sheet", "storyboards/model-sheet.html")), extra_head=sb_head, wide=True)
-    payload = json.dumps({"cast": cast}, ensure_ascii=False).replace("</", "<\\/")
-    poses = {"agent": ("wave,point,think", "happy,happy,thinking")}
-    cards = "".join(
-        f'<div class="card"><svg data-who="{esc(c["id"])}" data-poses="{poses.get(c["id"], ("stand,point,think",))[0]}" '
-        f'data-moods="{poses.get(c["id"], ("", "happy,determined,thinking"))[1]}"></svg>'
-        f'<h3>{esc(c["name"])} <span class="small dim">{esc(c["pronouns"])}{", " + str(c["age"]) if c.get("age") else ""}</span></h3>'
-        f'<p class="small"><i>&ldquo;{esc(c["line"])}&rdquo;</i></p><dl><dt>Role</dt><dd>{esc(c["role"])}</dd><dt>Stands for</dt><dd>{esc(c["stands_for"])}</dd>'
-        f'<dt>Personality</dt><dd>{esc(c["personality"])}</dd><dt>Wants / fears</dt><dd>{esc(c["wants"])} / {esc(c["fears"])}</dd></dl></div>'
+    # ---- the index: the comic shelf. Text is written here; every panel, face and figure on it is drawn in the browser
+    # from the same data as the decks (assets/storyboard.js, shelf()), so nothing on it is an image file and a corrected
+    # panel corrects its thumbnail too. The grouping is data: admin/content/storyboards/shelves.json.
+    shelves = json.loads((src / "shelves.json").read_text(encoding="utf-8"))
+    by_slug = {sb["slug"]: (rel, sb) for rel, sb in boards}
+    placed = [slug for sh in shelves["shelves"] for slug in sh["boards"]]
+    for slug in placed:
+        if slug not in by_slug:
+            sys.exit(f"build: shelves.json names {slug}, which is not a storyboard")
+    for slug in by_slug:
+        if placed.count(slug) != 1:
+            sys.exit(f"build: storyboard {slug} is on {placed.count(slug)} shelves in shelves.json; it must be on exactly one")
+    if shelves["start"] not in by_slug:
+        sys.exit(f"build: shelves.json starts with {shelves['start']}, which is not a storyboard")
+    names = {c["id"]: c["name"] for c in cast["characters"]}
+    number = {sb["slug"]: f.name[:2] for f in sorted(src.glob("[0-9][0-9]__*.json")) for sb in [json.loads(f.read_text(encoding="utf-8"))]}
+
+    def faces_of(sb, k=4):
+        count = {}
+        for sc in sb["scenes"]:
+            for c in sc.get("cast", []):
+                count[c["who"]] = count.get(c["who"], 0) + 1
+        return [w for w, _ in sorted(count.items(), key=lambda x: (-x[1], x[0]))[:k]]
+
+    def faces_html(sb, cls="sbx-face"):
+        return "".join(f'<svg class="{cls}" data-who="{esc(w)}" role="img" aria-label="{esc(names[w])}"><title>{esc(names[w])}</title></svg>' for w in faces_of(sb))
+
+    def thumb(slug, i, cls="sbx-thumb"):
+        return f'<svg class="{cls}" data-board="{esc(slug)}" data-scene="{i}" viewBox="0 0 1600 1000" role="img" aria-label="Panel {i + 1}"></svg>'
+
+    def source_title(sb):
+        q = sb.get("quote_source") or ""
+        if q.startswith("admin/content/articles/") and (ROOT / q).exists():
+            return fm_get(frontmatter((ROOT / q).read_text(encoding="utf-8"))[0], "title").split(":")[0]
+        return ""
+
+    def card(slug):
+        rel, sb = by_slug[slug]
+        href = rel[12:]
+        strip = "".join(thumb(slug, i) for i in range(1, min(4, len(sb["scenes"]))))
+        return (f'<article class="sbx-card"><a class="sbx-cover" href="{href}" aria-label="{esc(sb["title"])}: open the deck">{thumb(slug, 0)}'
+                f'<span class="sbx-tag">{number[slug]}</span></a>'
+                f'<a class="sbx-strip" href="{href}?view=grid" aria-label="{esc(sb["title"])}: every panel">{strip}</a>'
+                f'<div class="sbx-body"><h3><a href="{href}">{esc(sb["title"])}</a></h3><p>{esc(sb["subtitle"])}</p>'
+                f'<div class="sbx-meta"><span class="sbx-faces">{faces_html(sb)}</span><span>{len(sb["scenes"])} panels</span>'
+                f'<span class="sbx-status sbx-{esc(sb["status"])}">{esc(sb["status"])}</span></div></div></article>')
+
+    srel, ssb = by_slug[shelves["start"]]
+    shref, sn = srel[12:], len(ssb["scenes"])
+    st = source_title(ssb)
+    start = (f'<section class="sbx-start" aria-labelledby="sbx-start-h"><p class="sbx-kicker">Start here</p><div class="sbx-start-grid">'
+             f'<div><a class="sbx-cover sbx-big" href="{shref}" aria-label="{esc(ssb["title"])}: open the deck">{thumb(ssb["slug"], 0)}</a>'
+             f'<div class="sbx-start-strip">{"".join(thumb(ssb["slug"], i) for i in range(1, min(4, sn)))}'
+             f'<a class="sbx-more" href="{shref}?view=grid">+{max(0, sn - 4)} more</a></div></div>'
+             f'<div class="sbx-start-text"><span class="sbx-tag sbx-tag-big">{number[ssb["slug"]]}</span>'
+             f'<h2 id="sbx-start-h">{esc(ssb["title"])}</h2><p>{esc(ssb["subtitle"])}</p>'
+             f'<div class="sbx-meta"><span class="sbx-faces">{faces_html(ssb, "sbx-face sbx-face-big")}</span>'
+             f'<span>{sn} panels &middot; {esc(ssb["status"])}{" &middot; from the article &ldquo;" + esc(st) + "&rdquo;" if st else ""}</span></div>'
+             f'<div class="sbx-actions"><a class="sbx-btn sbx-btn-go" href="{shref}?view=deck">&#9654; Play the deck</a>'
+             f'<a class="sbx-btn" href="{shref}?view=grid">See all {sn}</a><a class="sbx-btn" href="{shref}?view=script">Read the script</a></div>'
+             f'</div></div></section>')
+    shelf_html = "".join(
+        f'<section class="sbx-shelf" aria-labelledby="sbx-shelf-{k}"><div class="sbx-head"><h2 id="sbx-shelf-{k}">{esc(sh["title"])}</h2><p>{esc(sh["note"])}</p></div>'
+        f'<div class="sbx-cards">{"".join(card(slug) for slug in sh["boards"])}</div></section>'
+        for k, sh in enumerate(shelves["shelves"], 1))
+    # how each character stands on the page: presentation only, the cast file says who they are
+    stance = {"zara": ("wave", "happy"), "tomas": ("stand", "happy"), "priya": ("point", "happy"), "sam": ("stand", "calm"),
+              "marta": ("arms-up", "excited"), "guide": ("wave", "happy"), "agent": ("wave", "happy")}
+    cast_html = "".join(
+        f'<figure class="sbx-person"><div class="sbx-bubble">&ldquo;{esc(c["line"])}&rdquo;</div>'
+        f'<svg class="sbx-figure" data-who="{esc(c["id"])}" data-pose="{stance.get(c["id"], ("stand", "happy"))[0]}" data-mood="{stance.get(c["id"], ("stand", "happy"))[1]}" role="img" aria-label="{esc(c["name"])}"></svg>'
+        f'<figcaption><b>{esc(c["name"])}</b><span>{esc(c["role"])}</span>'
+        f'<details><summary>More</summary><dl><dt>Stands for</dt><dd>{esc(c["stands_for"])}</dd><dt>Personality</dt><dd>{esc(c["personality"])}</dd>'
+        f'<dt>Wants</dt><dd>{esc(c["wants"])}</dd><dt>Fears</dt><dd>{esc(c["fears"])}</dd></dl></details></figcaption></figure>'
         for c in cast["characters"])
-    items = "".join(f'<li><a href="{rel[12:]}"><b>{esc(sb["title"])}</b></a>: {esc(sb["subtitle"])} <span class="small dim">({len(sb["scenes"])} panels, {esc(sb["status"])})</span></li>' for rel, sb in boards)
-    body = f"""<h1>Storyboards</h1>
-<p class="lede">The book as a sequence of panels: the punchline, the concepts, the evidence and the people they are for, one panel at a time, to flick through on a tablet before a word of a chapter is written. A storyboard is data and the panels are drawn from it by code, so a panel is corrected by changing a line, not by redrawing a picture.</p>
-<h2>The storyboards</h2>
-<p>Each opens as a deck, a grid of every panel, or a script; the toolbar switches between them and turns the animation off or on. Or see <a href="all.html"><b>every panel</b></a> of every storyboard on one page, and <a href="model-sheet.html"><b>the model sheet</b></a>: every character in every mood and pose.</p>
-<ol class="articles">{items}</ol>
-<h2 id="cast">The cast</h2>
-<p class="small dim">{esc(cast["what"])}</p>
-<div class="sb-cast sb-cast-grid"><script type="application/json">{payload}</script>{cards}</div>
-<h2 id="how">How it works</h2>
-<ul class="small">
-<li><b>The data.</b> <code>admin/content/storyboards/cast.json</code>, and one <code>NN__&lt;slug&gt;.json</code> per storyboard: scenes of kind cover, scene, evidence (a quote card or a bar chart), punchline or spectrum; each with a caption, the people in it (who, where, pose, mood, what they say or think), props, a note on what the panel is for, and its source.</li>
-<li><b>The drawing.</b> <code>assets/storyboard.js</code> draws people, bubbles, captions, props and charts as SVG with <a href="https://roughjs.com">Rough.js</a> (MIT, vendored in <code>assets/vendor/</code>), so everything looks sketched; a fixed seed per panel keeps the wobble the same on every load. In the deck the strokes draw themselves and the people and bubbles arrive in order.</li>
-<li><b>The views.</b> A deck (one panel at a time, swiped), a grid (every panel on one page, one to six per row, with each panel's text under it if you want it, played one by one or in order), and a script (the storyboard as text). The animation is a setting; what you choose is kept in your browser and nowhere else.</li>
-<li><b>The checks.</b> The build refuses a scene whose character is not in the cast, an unknown pose, mood, kind, setting or prop, or an evidence panel with nothing in it.</li>
-<li><b>No generated images.</b> Nothing here is drawn by an image model; that keeps every panel correctable, versioned and free of licence questions. Image models can still be given a storyboard as a brief, the way riskmandate.ai's stories do.</li>
-</ul>
+    total = sum(len(sb["scenes"]) for _, sb in boards)
+    lineup_names = "".join(f"<span>{esc(c['name'])}</span>" for c in cast["characters"])
+    payload = json.dumps({"cast": cast, "boards": {sb["slug"]: {"title": sb["title"], "scenes": sb["scenes"][:4]} for _, sb in boards},
+                          "stance": stance}, ensure_ascii=False).replace("</", "<\\/")
+    body = f"""<div class="sbx">
+<section class="sbx-hero" aria-labelledby="sbx-h1">
+<p class="sbx-count">{len(boards)} storyboards &middot; {total} panels &middot; {len(cast["characters"])} characters &middot; all drawn from data</p>
+<h1 id="sbx-h1">The book, one panel at a time</h1>
+<svg class="sbx-underline" aria-hidden="true" viewBox="0 0 620 22" preserveAspectRatio="none"><path d="M4 14 Q 160 4 310 12 T 616 8"></path></svg>
+<p class="sbx-lede">Before a chapter is written, it is a storyboard: the punchline, the idea, the evidence and the people it is for. Flick through them on a tablet, see them all at once, or read them as a script.</p>
+<div class="sbx-actions"><a class="sbx-btn sbx-btn-ink" href="{shref}">Start with {esc(ssb["title"].split(":")[0])} &rarr;</a><a class="sbx-btn sbx-btn-marker" href="all.html">Every panel on one page</a><a class="sbx-btn sbx-btn-line" href="#cast">Meet the cast</a></div>
+<svg class="sbx-lineup" role="img" aria-label="The cast in a row: {esc(", ".join(names.values()))}"></svg>
+<div class="sbx-names" style="--n:{len(cast["characters"])}">{lineup_names}</div>
+</section>
+{start}
+{shelf_html}
+<section class="sbx-cast" id="cast" aria-labelledby="sbx-cast-h"><div class="sbx-head"><h2 id="sbx-cast-h">The cast</h2><p>Each one stands for a reader the book is for, or a role in the story. All drawn by code; none of it is settled.</p><a href="model-sheet.html">The model sheet: every mood and pose &rarr;</a></div>
+<div class="sbx-people">{cast_html}</div></section>
+<section class="sbx-how" aria-labelledby="sbx-how-h"><div class="sbx-how-head"><h2 id="sbx-how-h">No picture to redraw</h2><p>A panel is corrected by changing a line, not by drawing it again.</p></div>
+<div><b>1. Write it as data</b><span>Each storyboard is one JSON file, <code>admin/content/storyboards/NN__&lt;slug&gt;.json</code>: who is in each panel, their pose and mood, what they say, the evidence and its source. The cast is <code>cast.json</code>; these shelves are <code>shelves.json</code>.</span></div>
+<div><b>2. The build checks it</b><span>An unknown character, pose, mood, setting or prop stops the release, and so does a Guide line or quote card that is not in its source word for word.</span></div>
+<div><b>3. Your browser draws it</b><span>Sketched with <a href="https://roughjs.com">Rough.js</a> (MIT, vendored), the same wobble on every load; as a deck, a grid or a script, animated or still. No image model draws any of it.</span></div>
+</section>
+<script type="application/json" class="sb-data">{payload}</script>
+</div>
 <script src="../assets/vendor/rough-4.6.6.js"></script><script src="../assets/storyboard.js"></script>
 """
-    page("storyboards/index.html", "Storyboards", body, "The book as storyboards, drawn from data: the cast, and a deck per part.",
+    page("storyboards/index.html", "Storyboards", body, "The book as storyboards, drawn from data: every storyboard on its shelf, with a preview of its panels, and the cast.",
          crumbs=(("Storyboards", "storyboards/index.html"),), extra_head=SB_HEAD + '<link rel="stylesheet" href="../assets/storyboard.css">\n', wide=True)
     return boards
 

@@ -3,7 +3,7 @@
  "title": "Where the thinking came from",
  "subtitle": "The influences behind the book, as claims you can check, and where each one lands. 10 panels.",
  "status": "draft",
- "book_version": "v1.0.0 (the second edition does not exist yet)",
+ "book_version": "v1.0.0 is the only official version; the second edition is in release candidates (rc1 frozen, rc2 in progress)",
  "by": "gen-z.journalist, 18 October 2026, from the review of influences.sgit.ai",
  "quote_source": "admin/content/articles/10__where-the-thinking-came-from.md",
  "rule": "Every line the Guide says, and every quote card, is from the article 'Where the thinking came from', word for word; the build checks it. Real people appear as quote cards and dates, never as cast members.",

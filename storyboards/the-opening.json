@@ -3,7 +3,7 @@
  "title": "The opening: you are lucky to be here",
  "subtitle": "The first pages of the second edition as Dinis described them, in 16 panels: wonder, not fear; the history; technology that finally works for you; learning made for you; and why that makes you a developer.",
  "status": "draft",
- "book_version": "v1.0.0 (the second edition does not exist yet)",
+ "book_version": "v1.0.0 is the only official version; the second edition is in release candidates (rc1 frozen, rc2 in progress)",
  "by": "gen-z.journalist, 18 October 2026, from Dinis's memo on the core idea",
  "quote_source": "admin/content/articles/07__lucky-to-be-here.md",
  "rule": "Every line the Guide says, and every quote card, is Dinis's words from the article 'You are lucky to be here', word for word; the build checks it. The other characters' lines are the storyboard's.",

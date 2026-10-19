@@ -3,7 +3,7 @@
  "title": "Everything is connected",
  "subtitle": "What a graph is (not a diagram), the whodunit, a graph becoming a map, groups of groups, provenance, and starting anywhere. 12 panels.",
  "status": "draft",
- "book_version": "v1.0.0 (the second edition does not exist yet)",
+ "book_version": "v1.0.0 is the only official version; the second edition is in release candidates (rc1 frozen, rc2 in progress)",
  "by": "gen-z.journalist, 18 October 2026, from Dinis's memo on graphs",
  "quote_source": "admin/content/articles/13__everything-is-connected.md",
  "rule": "Every line the Guide says, and every quote card, is from the article 'Everything is connected', word for word; the build checks it. The whodunit, the forest and the provenance chain are the storyboard's illustrations.",

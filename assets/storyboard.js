@@ -867,6 +867,57 @@
     figs.forEach(f => io.observe(f));
   }
 
+  // ------------------------------------------------------------ the index: the comic shelf
+  // build.py writes the text and an empty <svg> for every picture; this draws them from the storyboards' own data as
+  // they near the screen: thumbnails (a board's first panels, the same seeds as its deck), faces (a character's head and
+  // shoulders), figures (a whole character, on no background) and the line-up of the whole cast.
+  function figure(svg, who, pose, mood, crop, seed) {
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    const rc = rough.svg(svg, { options: { seed: seed || 7, roughness: 1, bowing: 1.2 } });
+    const g = el('g', {}, svg);
+    const head = drawCharacter(g, rc, who, 300, FLOOR, { pose: pose || 'stand', mood: mood || 'happy' });
+    if (crop === 'face') {
+      const top = who.kind === 'agent' ? head.headTop + 20 : head.headTop - 6, size = who.kind === 'agent' ? 210 : 180;
+      svg.setAttribute('viewBox', `${head.headX - size / 2} ${top} ${size} ${size}`);
+    } else {
+      const top = Math.min(head.headTop, FLOOR - 560) - 30;
+      svg.setAttribute('viewBox', `60 ${top} 480 ${FLOOR + 24 - top}`);
+    }
+  }
+  function lineup(svg, cast, stance) {
+    const ppl = cast.characters, n = ppl.length, w = 343 * n, rc = rough.svg(svg, { options: { seed: 5, roughness: 1, bowing: 1.2 } });
+    const g = el('g', {}, svg);
+    ppl.forEach((c, k) => {
+      const st = stance[c.id] || ['stand', 'happy'];
+      drawCharacter(g, rc, c, 171 + 343 * k, 1180, { pose: st[0], mood: st[1], flip: k >= n / 2 });
+    });
+    svg.setAttribute('viewBox', `0 640 ${w} 560`);
+  }
+  function shelf(root) {
+    const data = JSON.parse(root.querySelector('script.sb-data').textContent), cast = data.cast;
+    const who = (id) => cast.characters.find(c => c.id === id);
+    const draw = (svg) => {
+      if (svg._drawn) return; svg._drawn = true;
+      if (svg.dataset.board) {
+        const b = data.boards[svg.dataset.board], i = +svg.dataset.scene, sc = b && b.scenes[i];
+        if (sc) drawScene(svg, sc, cast, { seed: 11 + i });
+      } else if (svg.classList.contains('sbx-face')) figure(svg, who(svg.dataset.who), 'stand', 'happy', 'face', 3);
+      else if (svg.classList.contains('sbx-figure')) figure(svg, who(svg.dataset.who), svg.dataset.pose, svg.dataset.mood, 'body', 9);
+      else if (svg.classList.contains('sbx-lineup')) lineup(svg, cast, data.stance || {});
+    };
+    const svgs = root.querySelectorAll('svg[data-board], svg.sbx-face, svg.sbx-figure, svg.sbx-lineup');
+    const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { draw(e.target); io.unobserve(e.target); } }), { rootMargin: '500px 0px' });
+    svgs.forEach(s => io.observe(s));
+    // what is near the screen draws first; the rest draws a few at a time while the browser is idle, so a fast scroll
+    // (or a print, or a screenshot of the whole page) never meets an empty frame
+    const rest = [...svgs], idle = window.requestIdleCallback || ((f) => setTimeout(() => f({ timeRemaining: () => 8 }), 60));
+    const drain = (dl) => {
+      while (rest.length && dl.timeRemaining() > 4) { const s = rest.shift(); if (!s._drawn) { draw(s); io.unobserve(s); } }
+      if (rest.length) idle(drain);
+    };
+    idle(drain);
+  }
+
   function castSheet(root) {
     const data = JSON.parse(root.querySelector('script[type="application/json"]').textContent);
     root.querySelectorAll('svg[data-who]').forEach((svg, i) => {
@@ -877,12 +928,13 @@
     });
   }
 
-  window.StoryboardKit = { drawScene, drawCharacter, drawMap, drawGraph, badge, deck, grid, script, viewer, contact, modelSheet, castSheet, sceneText, play, MOODS, POSES, W, H };
+  window.StoryboardKit = { drawScene, drawCharacter, drawMap, drawGraph, badge, deck, grid, script, viewer, contact, modelSheet, castSheet, shelf, figure, sceneText, play, MOODS, POSES, W, H };
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.sb-viewer').forEach(viewer);
     document.querySelectorAll('.sb-deck').forEach(d => { if (!d.closest('.sb-viewer')) deck(d); });
     document.querySelectorAll('.sb-contact').forEach(contact);
     document.querySelectorAll('.sb-sheet').forEach(modelSheet);
     document.querySelectorAll('.sb-cast').forEach(castSheet);
+    document.querySelectorAll('.sbx').forEach(shelf);
   });
 })();

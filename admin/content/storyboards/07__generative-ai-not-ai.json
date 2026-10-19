@@ -3,7 +3,7 @@
  "title": "Generative AI, not AI",
  "subtitle": "What the book means by generative AI, how a language model works in plain words, where hallucinations come from, and where Dinis was corrected. 12 panels.",
  "status": "draft",
- "book_version": "v1.0.0 (the second edition does not exist yet)",
+ "book_version": "v1.0.0 is the only official version; the second edition is in release candidates (rc1 frozen, rc2 in progress)",
  "by": "gen-z.journalist, 18 October 2026, from Dinis's memo on generative AI",
  "quote_source": "admin/content/articles/11__generative-ai-not-ai.md",
  "rule": "Every line the Guide says, and every quote card, is from the article 'Generative AI, not AI', word for word; the build checks it. The next-word probabilities in panel 4 are illustrative.",
@@ -323,8 +323,8 @@
      "colour": "#ddd6fe"
     },
     {
-     "label": "Gen AI",
-     "note": "the edition?",
+     "label": "GenAI",
+     "note": "the edition's subtitle",
      "colour": "#fde68a"
     },
     {
@@ -353,7 +353,7 @@
      "flip": true
     }
    ],
-   "note": "Gen Z as the 2018 book defined it; Alpha and Beta as Mark McCrindle names them. A question for the title interview, not a decision.",
+   "note": "Gen Z as the 2018 book defined it; Alpha and Beta as Mark McCrindle names them. This was a question for the title interview; Dinis has since decided it: Gen Z Developers (GenAI Edition) in decision 010, then Generation ZX Developers (GenAI Startup Edition) in decision 014, GenAI as one word.",
    "source": "Generative AI, not AI, A note on the name"
   }
  ]

@@ -1,0 +1,21 @@
+{
+ "what": "How the storyboards index groups the storyboards: the board to start with, then the shelves in order, each naming its boards by slug. Every storyboard is on exactly one shelf; the build refuses a board on none, on two, or a slug that is not a storyboard. Proposed by the storyboards agent on 19 October 2026; the grouping is an editorial choice, Dinis's to change.",
+ "start": "the-opening",
+ "shelves": [
+  {
+   "title": "Where it started",
+   "note": "The 2018 book, and the first proposal for the second edition.",
+   "boards": ["the-2018-book", "a-first-storyline"]
+  },
+  {
+   "title": "The second edition, part by part",
+   "note": "One storyboard per co-written article, the Guide speaking Dinis's words.",
+   "boards": ["the-opening", "where-do-you-land", "connect-the-dots-backwards", "where-the-thinking-came-from", "generative-ai-not-ai", "follow-the-rabbit-holes", "everything-is-connected", "lenses-roles-and-loops"]
+  },
+  {
+   "title": "How it is made, and what comes next",
+   "note": "The book in release mode, and the startup edition that became the frame of the second release candidate.",
+   "boards": ["the-book-in-release-mode", "gen-zx-developers"]
+  }
+ ]
+}

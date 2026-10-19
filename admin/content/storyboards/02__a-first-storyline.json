@@ -1,9 +1,9 @@
 {
  "slug": "a-first-storyline",
  "title": "A first storyline for the second edition",
- "subtitle": "A proposal in 15 panels: the order the second edition could tell its argument in, built from the topics the newsroom's articles already cover. For Dinis to tear apart.",
- "status": "proposal",
- "book_version": "v1.0.0 (the second edition does not exist yet)",
+ "subtitle": "A proposal in 15 panels: the order the second edition could tell its argument in, built from the topics the newsroom's articles already cover. For Dinis to tear apart. Superseded: the second release candidate follows the Gen ZX frame (decision 015, storyboard 12).",
+ "status": "superseded",
+ "book_version": "v1.0.0 is the only official version; the second edition is in release candidates (rc1 frozen, rc2 in progress)",
  "by": "gen-z.journalist, 18 October 2026, from the survey of the newsroom's articles",
  "rule": "The Guide's lines and every quote card are Dinis's published words, from the newsroom article named in the panel's note, word for word, unless the note says otherwise. The other characters' lines are the storyboard's.",
  "scenes": [
