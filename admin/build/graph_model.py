@@ -213,7 +213,7 @@ def load():
     for i in ideas_doc["ideas"]:
         nid = "idea:" + i["id"]
         add({"id": nid, "kind": "idea", "title": i["title"], "statement": i["statement"], "idea_kind": i["kind"], "state": i["state"], "destination": i["destination"],
-             "decided_by": i.get("decided_by"), "notes": i.get("notes"), "gravity": i.get("gravity", "all"), "topic": i.get("topic"), "chapter": i.get("chapter"),
+             "decided_by": i.get("decided_by"), "notes": i.get("notes"), "gravity": i.get("gravity", "all"), "topic": i.get("topic"), "chapter": i.get("chapter"), "batch": i.get("batch"),
              "url": f"graph/ideas/{i['id']}.html", "sources": i["sources"], "answers": i.get("answers", [])})
         for s in i["sources"]:
             if s["ref"] not in nodes:

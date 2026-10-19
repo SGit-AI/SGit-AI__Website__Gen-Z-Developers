@@ -22,6 +22,16 @@
    "frozen": "v2/versions/v2.0.0-rc1.md",
    "decided_by": "Dinis, 19 October 2026 (decisions 008 and 009)",
    "title": "Gen Z Developers (GenAI Edition)"
+  },
+  {
+   "version": "v2.0.0-rc2",
+   "date": "2026-10-19",
+   "title": "Gen ZX Developers, the GenAI Startup Edition",
+   "status": "Release candidate 2 of the second edition: not signed off, not an official version.",
+   "what": "The book rewritten under the Gen ZX frame Dinis chose (decision 014): two generations, the founder as the reader, the objective that by the end the reader has started a company, a new part Start the company at the centre, Building, safely rebuilt as Build it without a server, a new first chapter and four more hands-on chapters, the measure in the last chapter; the round-1 batch of newsroom articles processed into ideas and written in. Where the newsroom has no article yet (the UK company, Lithuania, Portugal, the EU, the first customers, the community), the chapter stands as its title, its ideas and what is missing.",
+   "text_sha256": null,
+   "frozen": "v2/versions/v2.0.0-rc2.md",
+   "decided_by": "Dinis, 19 October 2026 (decision 014)"
   }
  ]
 }

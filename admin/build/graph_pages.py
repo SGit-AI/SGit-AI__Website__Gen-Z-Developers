@@ -230,6 +230,7 @@ def build_graph(ctx):
 <div class="card"><span class="k">target</span><h3><a href="chapters.html">The chapter map</a></h3><p>{c["chapters"]} proposed chapters in {c["parts"]} parts, with the ideas and the 2018 files under each and a centre of gravity per chapter.</p><a class="more" href="chapters.html">The map &rarr;</a></div>
 <div class="card"><span class="k">work</span><h3><a href="tasks.html">The tasks</a></h3><p>Every task the articles' briefs ask for, by role, with its state and the evidence in the repository.</p><a class="more" href="tasks.html">What is done &rarr;</a></div>
 <div class="card"><span class="k">drawn</span><h3><a href="view.html">The graph</a></h3><p>{c["nodes"]} nodes and {c["edges"]} edges, in four columns; click a node to see what it connects to.</p><a class="more" href="view.html">Open it &rarr;</a></div>
+<div class="card"><span class="k">rounds</span><h3><a href="../v2/book/rounds.html">The rounds</a></h3><p>Release candidate by release candidate: what each round added, changed and removed, by size, which ideas came in, and the diff Dinis reads.</p><a class="more" href="../v2/book/rounds.html">rc1 to rc2 &rarr;</a></div>
 <div class="card"><span class="k">process</span><h3><a href="plan.html">The plan</a></h3><p>How an article becomes a chapter: the pipeline, the states, who does what, the rules, and the order of work from here.</p><a class="more" href="plan.html">Read it &rarr;</a></div>
 </div>
 <h2>What waits on Dinis</h2>

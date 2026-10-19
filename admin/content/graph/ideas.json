@@ -1804,9 +1804,9 @@
   },
   {
    "id": "gen-ai-edition-name",
-   "title": "Gen Z, Gen AI, and Gen Alpha after them: whether the edition carries the name",
+   "title": "The name: Gen ZX Developers, the GenAI Startup Edition",
    "kind": "process",
-   "statement": "A note on the name: the Gen AI edition, or not, as a subtitle or nothing; and whether Gen Alpha is a future reader. Goes into the title interview.",
+   "statement": "The edition carries its name in the title: Gen ZX Developers, the GenAI Startup Edition, for two generations, replacing Gen Z Developers (GenAI Edition), which stood for one release candidate. Whether Gen Alpha is a future reader stays for the title interview.",
    "sources": [
     {
      "ref": "art:generative-ai-not-ai",
@@ -1819,6 +1819,14 @@
     {
      "ref": "dec:010",
      "where": "the decision: the title is Gen Z Developers (GenAI Edition)"
+    },
+    {
+     "ref": "dec:014",
+     "where": "the title and the tagline"
+    },
+    {
+     "ref": "art:gen-zx-developers",
+     "where": "the proposal: the tagline and Generation ZX"
     }
    ],
    "answers": [],
@@ -1826,8 +1834,8 @@
    "chapter": "how-this-book-was-made",
    "destination": "this-edition",
    "state": "accepted",
-   "decided_by": "Dinis, 19 October 2026, in the session that wrote release candidate 1: the title is Gen Z Developers (GenAI Edition) (decision 010)",
-   "notes": "Decided: the edition carries the name GenAI Edition in its title. Whether Gen Alpha is a future reader stays open for the title interview.",
+   "decided_by": "Dinis, 19 October 2026: decision 010 (Gen Z Developers (GenAI Edition)), superseded the same day by decision 014 (Gen ZX Developers, the GenAI Startup Edition)",
+   "notes": "Decided twice in one day; the second decision supersedes the first and the record keeps both.",
    "gravity": "all"
   },
   {
@@ -2205,12 +2213,12 @@
    ],
    "answers": [],
    "topic": "your-first-workspace",
-   "chapter": null,
-   "destination": "undecided",
-   "state": "candidate",
-   "decided_by": null,
+   "chapter": "how-this-book-was-made",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis (decision 013): inside the book, dated",
    "gravity": "explorer",
-   "notes": "Dinis's question, kept apart in the article: inside the book, or a companion renewed every year? The chapter map gains the part as proposed (hands-on-2026) so the workflows have somewhere to point; the editor's task 2."
+   "notes": "Decided: inside the book, in the candidate, dated 2026 and renewed each year (decision 013). The part has eleven chapters in rc2."
   },
   {
    "id": "a-graph-is-not-a-diagram",
@@ -2972,6 +2980,241 @@
    "state": "accepted",
    "decided_by": "Dinis, 19 October 2026 (decision 009), from his request for a fully built first release candidate he could read and print",
    "gravity": "town-planner"
+  },
+  {
+   "id": "the-reader-is-the-founder",
+   "title": "The reader this book is for is the founder, and its objective is that by the end you have started a company",
+   "kind": "frame",
+   "statement": "Not founder as an attitude, as the 2018 Be a founder meant it, but literally: in 2026 you can be the founder. The book is the one you give someone who wants to start a GenAI company, and it says how to actually do it, for real: the company, the cloud, the programmes, the first sale.",
+   "sources": [
+    {
+     "ref": "art:gen-zx-developers",
+     "where": "Who I want to give it to; The objective: start a company"
+    },
+    {
+     "ref": "book:4.life-patterns/content/be-a-founder.md",
+     "where": "act like one of the founders: the 2018 advice"
+    }
+   ],
+   "answers": [
+    "4.life-patterns/content/be-a-founder.md"
+   ],
+   "topic": "be-a-founder",
+   "chapter": "gen-zx",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Gen ZX Developers, adopted as the frame of rc2 (decision 014)",
+   "gravity": "all",
+   "batch": "rc2"
+  },
+  {
+   "id": "two-generations-gen-zx",
+   "title": "Two generations, Z and X, together Gen ZX: back to the ZX Spectrum",
+   "kind": "frame",
+   "statement": "Generation Z, entering the workforce and becoming the entrepreneurs, and Generation X, the subject-matter experts starting companies, often their parents; the millennials in the middle may read it but theirs is a different story. Together they are Generation ZX, which goes back to Dinis's origins, the ZX Spectrum (Sinclair, UK, April 1982). It is Gen ZX, not XZ: XZ is the compression library with the 2024 backdoor, and in a book that covers security the order of the letters matters.",
+   "sources": [
+    {
+     "ref": "art:gen-zx-developers",
+     "where": "Generation X, too; Generation ZX; Precisely"
+    },
+    {
+     "ref": "news:the-expert-founders",
+     "where": "'Execution just got cheap'"
+    }
+   ],
+   "answers": [
+    "1.introduction/generation-z.md"
+   ],
+   "topic": "everyone-is-a-developer",
+   "chapter": "gen-zx",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Gen ZX Developers, adopted as the frame of rc2 (decision 014)",
+   "gravity": "all",
+   "batch": "rc2",
+   "notes": "Generation boundaries by the Pew Research Center's dates (X 1965 to 1980, millennials 1981 to 1996, Z 1997 to 2012); the book says which it uses. Whether the book says why it is not for millennials first is Dinis's question; decision 014 says it does, briefly."
+  },
+  {
+   "id": "explorer-coding-not-vibe-coding",
+   "title": "Gen ZX are developers: coding with agents the explorer coding way, which is what vibe coding should be called",
+   "kind": "claim",
+   "statement": "The entrepreneurs the book is for are developers: they code with agents. What people call vibe coding is exploration, and the word should say so; the explorer builds to find out, and what the exploration produces is the brief for the version other people rely on. A founder needs both halves: the exploring and the handover.",
+   "sources": [
+    {
+     "ref": "art:gen-zx-developers",
+     "where": "Explorer coding, not vibe coding"
+    },
+    {
+     "ref": "news:explorer-coding",
+     "where": "'What people call vibe coding is exploration, and the word should say so'"
+    },
+    {
+     "ref": "news:who-will-fix-your-mess",
+     "where": "the handover"
+    }
+   ],
+   "answers": [
+    "5.concepts/repl.md"
+   ],
+   "topic": "explorers-villagers-town-planners",
+   "chapter": "explorer-coding-and-the-handover",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Gen ZX Developers, adopted as the frame of rc2 (decision 014)",
+   "gravity": "explorer",
+   "batch": "rc2"
+  },
+  {
+   "id": "ship-now-ship-serverless",
+   "title": "Ship now, and ship your startup serverless: no servers of yours, no database, client side, with privacy by design and control of your agents",
+   "kind": "advice",
+   "statement": "A founder with no servers has nothing to run at three in the morning and nothing to pay for when nobody is using it; 'if it bills you by the hour when nobody is using it, it is not serverless'. SG/Send and sgit give data encrypted on the user's device on a server that cannot read it; RiskMandate's techniques control the agents the company runs on. You ship, it is painful, and if they do not miss it you try again.",
+   "sources": [
+    {
+     "ref": "art:gen-zx-developers",
+     "where": "Ship serverless; The objective: start a company"
+    },
+    {
+     "ref": "news:no-server-by-design",
+     "where": "'It is no servers of mine with logic in them'"
+    },
+    {
+     "ref": "news:ephemeral-town-planner-services",
+     "where": "the by-the-hour test"
+    },
+    {
+     "ref": "news:the-question-is-whether-they-miss-it",
+     "where": "'Not to plan, not to pitch, not to architect. Ship.'"
+    }
+   ],
+   "answers": [
+    "5.concepts/serverless.md"
+   ],
+   "topic": "building-blocks",
+   "chapter": "building-blocks",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Gen ZX Developers, adopted as the frame of rc2 (decision 014)",
+   "gravity": "explorer",
+   "batch": "rc2"
+  },
+  {
+   "id": "measured-by-the-companies-it-creates",
+   "title": "The book is measured by how many companies are created from it, and builds a community of the people who tell us",
+   "kind": "process",
+   "statement": "A book to read is fine; a book with an objective is a different thing. The measure is the companies created from it, which means asking readers to say what they are doing, and a community around them. How a reader tells us, and whether the list is public, is still Dinis's question.",
+   "sources": [
+    {
+     "ref": "art:gen-zx-developers",
+     "where": "Measured by the companies it creates"
+    }
+   ],
+   "answers": [],
+   "topic": "making-of",
+   "chapter": "how-this-book-was-made",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Gen ZX Developers, adopted as the frame of rc2 (decision 014)",
+   "gravity": "all",
+   "batch": "rc2",
+   "notes": "The first entry in the measure is the article's own last line: write to agent@riskmandate.ai if you started a company because of something you read here."
+  },
+  {
+   "id": "the-company-itself-for-real",
+   "title": "How to actually do it: a limited company in the UK, Lithuania, Portugal, the European Union, the cloud providers and the programmes",
+   "kind": "advice",
+   "statement": "The book should say the steps, for real, from experience and not as legal or tax advice: creating a limited company in the UK; the case for Lithuania; Portugal, where running a company with little revenue is expensive in a way it is not in England; the EU and what exists for a founder; the cloud providers, the startup funds and programmes as they stand this year. The newsroom has none of this yet: six gap articles, one memo each.",
+   "sources": [
+    {
+     "ref": "art:gen-zx-developers",
+     "where": "The objective: start a company; What the newsroom does not have"
+    },
+    {
+     "ref": "news:not-a-straight-line",
+     "where": "Lithuania, 'for its digital advantages'"
+    }
+   ],
+   "answers": [],
+   "topic": "be-a-founder",
+   "chapter": "the-company-itself",
+   "destination": "this-edition",
+   "state": "accepted",
+   "decided_by": "Dinis, in Gen ZX Developers, adopted as the frame of rc2 (decision 014)",
+   "gravity": "town-planner",
+   "batch": "rc2",
+   "notes": "Article first: the chapters stand in rc2 as their titles, their ideas and what is missing until the journalist's gap articles arrive."
+  },
+  {
+   "id": "the-book-is-200-pages-or-more",
+   "title": "The book is 200 printed pages or more; short and punchy stays the rule for chapters, not for the book",
+   "kind": "process",
+   "statement": "The 2018 paperback was 139 pages and, Dinis says, quite thin; the target is 200 pages or more. The cutter still argues against every addition and the default is still no, but its budget is a book of 200 pages and more: the question for a proposal is whether it earns its place.",
+   "sources": [
+    {
+     "ref": "dec:012",
+     "where": "the decision"
+    },
+    {
+     "ref": "art:gen-zx-developers",
+     "where": "Where this comes from: the same memo decided three things"
+    }
+   ],
+   "answers": [],
+   "topic": "making-of",
+   "chapter": "how-this-book-was-made",
+   "destination": "the-process",
+   "state": "accepted",
+   "decided_by": "Dinis (decision 012)",
+   "gravity": "town-planner",
+   "batch": "rc2"
+  },
+  {
+   "id": "precedents-and-the-diffs",
+   "title": "A change decided by precedent goes on a list Dinis can overturn, and Dinis reads the diffs of the book",
+   "kind": "process",
+   "statement": "Two safeguards instead of a yes on everything: the list of changes decided by precedent, which Dinis can overturn (overturning makes a new precedent), and the diff, because every release candidate is a diff against the one before and Dinis reads them, so nothing changes unseen. The editor makes each candidate's diff readable on its own: what changed, which hearing or precedent changed it.",
+   "sources": [
+    {
+     "ref": "dec:011",
+     "where": "the decision"
+    },
+    {
+     "ref": "art:the-book-in-release-mode",
+     "where": "the question kept apart"
+    }
+   ],
+   "answers": [],
+   "topic": "making-of",
+   "chapter": "how-this-book-was-made",
+   "destination": "the-process",
+   "state": "accepted",
+   "decided_by": "Dinis (decision 011)",
+   "gravity": "town-planner",
+   "batch": "rc2"
+  },
+  {
+   "id": "hands-on-inside-the-book",
+   "title": "The hands-on part is inside the book, dated, in the release candidate",
+   "kind": "process",
+   "statement": "The practical workflows, dated 2026 and renewed each year, are inside the book and go into the candidate with the rest: each as written as its sources allow, the others as their titles, ideas and what is missing. It closes the question Follow the rabbit holes kept apart.",
+   "sources": [
+    {
+     "ref": "dec:013",
+     "where": "the decision"
+    },
+    {
+     "ref": "art:follow-the-rabbit-holes",
+     "where": "A hands-on part, for 2026"
+    }
+   ],
+   "answers": [],
+   "topic": "making-of",
+   "chapter": "how-this-book-was-made",
+   "destination": "the-process",
+   "state": "accepted",
+   "decided_by": "Dinis (decision 013)",
+   "gravity": "explorer",
+   "batch": "rc2"
   }
  ]
 }

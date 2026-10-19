@@ -28,7 +28,7 @@ try { chromium = require('playwright').chromium; } catch (e) {
   await page.emulateMedia({ media: 'print' });
   await page.pdf({ path: path.join(ROOT, pdfRel), format: 'A4', printBackground: true, preferCSSPageSize: true,
     displayHeaderFooter: true, headerTemplate: '<span></span>',
-    footerTemplate: '<div style="width:100%;font-size:8pt;color:#666;font-family:sans-serif;text-align:center;padding:0 20mm">Gen Z Developers (GenAI Edition), release candidate &middot; page <span class="pageNumber"></span> of <span class="totalPages"></span></div>' });
+    footerTemplate: '<div style="width:100%;font-size:8pt;color:#666;font-family:sans-serif;text-align:center;padding:0 20mm">Gen ZX Developers, the GenAI Startup Edition, release candidate &middot; page <span class="pageNumber"></span> of <span class="totalPages"></span></div>' });
   await browser.close();
   serve.close();
   const kb = Math.round(fs.statSync(path.join(ROOT, pdfRel)).size / 1024);

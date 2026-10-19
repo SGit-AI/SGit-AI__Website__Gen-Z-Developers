@@ -346,6 +346,22 @@
   "the-book-in-release-mode:publisher:7": {
    "state": "open",
    "evidence": "team/publisher/briefs/ has the brief; no answer yet"
+  },
+  "gen-zx-developers:editor:1": {
+   "state": "done",
+   "evidence": "Dinis adopted the proposal himself on 19 October 2026 and told the librarian to rewrite the book under it (decision 014); the change set did not need a hearing. The board hears what comes after rc2."
+  },
+  "gen-zx-developers:librarian:2": {
+   "state": "in-progress",
+   "evidence": "chapters.json is the rc2 map and chapters-rc1.json the rc1 map, compared on graph/rounds.html; the newsroom articles of the proposal's table are processed into ideas (batch rc2) in the same release"
+  },
+  "gen-zx-developers:journalist:3": {
+   "state": "open",
+   "evidence": "team/journalist/issues/open/002 lists the six gap articles; none written yet; the chapters that wait on them stand in rc2 as their titles, ideas and what is missing"
+  },
+  "gen-zx-developers:publisher:4": {
+   "state": "open",
+   "evidence": "no answer in team/publisher/briefs/ yet"
   }
  }
 }

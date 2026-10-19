@@ -1,10 +1,10 @@
 {
- "what": "A proposed chapter map for the second edition: the target nodes the ideas go to. Proposed by the librarian on 18 October 2026 from the survey's 18 topics, Dinis's three storyline articles (the opening, where do you land, connect the dots backwards) and the first storyline storyboard. It is the first answer to the editor's blocked issue 003 (the chapter map) and to task 1 of Start from the storyline; the editor owns the chapter map and Dinis decides it. Every chapter is 'proposed' until then. gravity: the centre of gravity the chapter leans to (explorer, villager, town-planner, all); character: the cast member it is written for first.",
+ "what": "The chapter map of Gen ZX Developers, the GenAI Startup Edition, as rewritten for release candidate 2 from Dinis's proposal Gen ZX Developers (19 October 2026), which he told the librarian to run with: two generations (Z and X), the founder as the reader, the objective that by the end the reader has started a company, a new part Start the company at the centre, Building safely rebuilt as Build it without a server, four more hands-on chapters, and a measure. The rc1 map is kept as chapters-rc1.json so the two can be compared on the rounds page. gravity: the centre of gravity the chapter leans to; character: the cast member it is written for first; since: the candidate that first had the chapter; draft: its page in the current candidate.",
  "states": {
   "proposed": "the librarian's reading",
   "mapped": "in the editor's chapter map",
   "storyboarded": "a storyboard exists for its part",
-  "drafting": "a chapter of it exists in the release candidate (v2/content/), written from its ideas; the editor's map and Dinis's reading decide what happens next",
+  "drafting": "a chapter of it exists in the release candidate (v2/content/), written from its ideas; the board and Dinis decide what happens next",
   "reviewed": "the reviewer and synthetic readers have had a round",
   "signed-off": "Dinis signed the part off",
   "published": "in a released version"
@@ -16,9 +16,28 @@
    "storyboard": "the-opening",
    "chapters": [
     {
+     "id": "gen-zx",
+     "title": "Gen ZX: who this book is for, and what it is for",
+     "punchline": "Two generations, Z entering the workforce and X the subject-matter experts starting companies, often their parents; together Gen ZX, back to the ZX Spectrum; one objective, that by the end you have started a company; and the measure, the companies created.",
+     "topics": [
+      "be-a-founder",
+      "everyone-is-a-developer"
+     ],
+     "gravity": "all",
+     "character": "marta",
+     "state": "drafting",
+     "answers_2018": [
+      "1.introduction/generation-z.md",
+      "1.introduction/_index.md"
+     ],
+     "since": "rc2",
+     "draft": "v2/book/gen-zx.html",
+     "note": "New in rc2, from Gen ZX Developers."
+    },
+    {
      "id": "lucky-to-be-here",
      "title": "You are lucky to be here",
-     "punchline": "Wonder, not fear: you are starting out in the biggest change of your career, while the pieces are still landing.",
+     "punchline": "Wonder, not fear: you are starting out in the biggest change of your career, while the pieces are still landing. Spoken to both generations.",
      "topics": [
       "everyone-is-a-developer"
      ],
@@ -32,7 +51,8 @@
       "4.life-patterns/BBS-and-modems.md",
       "3.technologies/draft/dopamine.md"
      ],
-     "draft": "v2/book/lucky-to-be-here.html"
+     "draft": "v2/book/lucky-to-be-here.html",
+     "since": "rc1"
     },
     {
      "id": "everything-is-connected",
@@ -50,7 +70,8 @@
       "3.technologies/content/AST.md"
      ],
      "note": "Placed just before Where do you land because a map is a graph with positions; whether graphs come before Wardley maps or after is Dinis's question (Everything is connected, task 1). Dot Language and AST are examples inside it (task 3).",
-     "draft": "v2/book/everything-is-connected.html"
+     "draft": "v2/book/everything-is-connected.html",
+     "since": "rc1"
     },
     {
      "id": "where-do-you-land",
@@ -65,7 +86,8 @@
      "answers_2018": [
       "4.life-patterns/pionners-settlers-town-planners.md"
      ],
-     "draft": "v2/book/where-do-you-land.html"
+     "draft": "v2/book/where-do-you-land.html",
+     "since": "rc1"
     },
     {
      "id": "connect-the-dots-backwards",
@@ -85,7 +107,8 @@
       "4.life-patterns/love-maths.md",
       "4.life-patterns/thinking-as-programmer.md"
      ],
-     "draft": "v2/book/connect-the-dots-backwards.html"
+     "draft": "v2/book/connect-the-dots-backwards.html",
+     "since": "rc1"
     }
    ]
   },
@@ -107,7 +130,8 @@
      "answers_2018": [
       "3.technologies/content/ml-ai.md"
      ],
-     "draft": "v2/book/what-generative-ai-is.html"
+     "draft": "v2/book/what-generative-ai-is.html",
+     "since": "rc1"
     },
     {
      "id": "lenses-roles-and-loops",
@@ -124,7 +148,8 @@
       "3.technologies/content/ml-ai.md"
      ],
      "note": "Placed right after What generative AI is, as the article asks (task 1).",
-     "draft": "v2/book/lenses-roles-and-loops.html"
+     "draft": "v2/book/lenses-roles-and-loops.html",
+     "since": "rc1"
     },
     {
      "id": "everyone-is-a-developer",
@@ -141,30 +166,32 @@
       "3.technologies/draft/scratch.md",
       "4.life-patterns/thinking-as-programmer.md"
      ],
-     "draft": "v2/book/everyone-is-a-developer.html"
+     "draft": "v2/book/everyone-is-a-developer.html",
+     "since": "rc1"
     },
     {
      "id": "explorer-coding-and-the-handover",
-     "title": "Explorer coding, and the handover",
-     "punchline": "Build to find out; then hand it to the people who will make it something others rely on; the prototype is the best brief.",
+     "title": "Explorer coding, not vibe coding, and the handover",
+     "punchline": "What people call vibe coding is exploration, and the word should say so: build to find out, then hand it to the people who will make it something others rely on; the founder's way of building, and both halves.",
      "topics": [
       "explorers-villagers-town-planners"
      ],
      "gravity": "explorer",
-     "character": "zara",
+     "character": "marta",
      "state": "drafting",
      "answers_2018": [
       "5.concepts/repl.md",
       "5.concepts/legacy-applications.md",
       "4.life-patterns/refactoring.md"
      ],
-     "draft": "v2/book/explorer-coding-and-the-handover.html"
+     "draft": "v2/book/explorer-coding-and-the-handover.html",
+     "since": "rc1"
     }
    ]
   },
   {
    "id": "getting-the-job",
-   "title": "Getting the job",
+   "title": "Getting the job, or making it",
    "storyboard": null,
    "chapters": [
     {
@@ -182,12 +209,13 @@
       "3.technologies/content/ml-ai.md",
       "4.life-patterns/impostor-syndrome.md"
      ],
-     "draft": "v2/book/hired-for-the-workflow.html"
+     "draft": "v2/book/hired-for-the-workflow.html",
+     "since": "rc1"
     },
     {
      "id": "act-as-the-job-you-want",
      "title": "Act as the job you want",
-     "punchline": "If you are looking for a job you have time: do the job in public before you have it, make it linkable, put your CV online.",
+     "punchline": "If you are looking for a job you have time: do the job in public before you have it, make it linkable, put your CV online. The 2018 Be a founder as then and now: act like a founder then, be one now.",
      "topics": [
       "getting-the-job",
       "publish-in-public"
@@ -204,7 +232,8 @@
       "7.your-cv/upwork.md",
       "6.security/bug-bounties.md"
      ],
-     "draft": "v2/book/act-as-the-job-you-want.html"
+     "draft": "v2/book/act-as-the-job-you-want.html",
+     "since": "rc1"
     },
     {
      "id": "your-own-newsroom",
@@ -222,7 +251,8 @@
       "7.your-cv/leanpub.md",
       "5.concepts/amazon-press-releases.md"
      ],
-     "draft": "v2/book/your-own-newsroom.html"
+     "draft": "v2/book/your-own-newsroom.html",
+     "since": "rc1"
     }
    ]
   },
@@ -248,7 +278,8 @@
       "4.life-patterns/automate-your-workflows.md",
       "6.security/dont-touch-production.md"
      ],
-     "draft": "v2/book/your-first-workspace.html"
+     "draft": "v2/book/your-first-workspace.html",
+     "since": "rc1"
     },
     {
      "id": "how-to-work-with-agents",
@@ -267,7 +298,8 @@
       "5.concepts/design.md",
       "5.concepts/changes.md"
      ],
-     "draft": "v2/book/how-to-work-with-agents.html"
+     "draft": "v2/book/how-to-work-with-agents.html",
+     "since": "rc1"
     }
    ]
   },
@@ -295,7 +327,8 @@
       "5.concepts/chaos-engineering.md",
       "4.life-patterns/civic-responsibility.md"
      ],
-     "draft": "v2/book/direction-and-judgement.html"
+     "draft": "v2/book/direction-and-judgement.html",
+     "since": "rc1"
     },
     {
      "id": "facts-and-the-record",
@@ -312,19 +345,157 @@
       "5.concepts/feedback-loops.md",
       "4.life-patterns/content/being-criticized-is-a-privilege.md"
      ],
-     "draft": "v2/book/facts-and-the-record.html"
+     "draft": "v2/book/facts-and-the-record.html",
+     "since": "rc1"
     }
    ]
   },
   {
-   "id": "building-safely",
-   "title": "Building, safely",
-   "storyboard": null,
+   "id": "start-the-company",
+   "title": "Start the company",
+   "storyboard": "gen-zx-developers",
+   "note": "New in rc2: the centre of the startup edition. Six chapters from the founder to the company itself; the company chapters are from experience, not legal or tax advice, and three of them wait on Dinis's gap articles (the UK company, Lithuania, Portugal, the EU, the first customers).",
    "chapters": [
     {
+     "id": "be-a-founder",
+     "title": "Be a founder: the expert founders",
+     "punchline": "Execution just got cheap: the person who spent twenty years inside a problem can now build the first version of the answer themselves, with agents; a third of new US startups have a single founder, and the fastest-growing founders average 45.",
+     "topics": [
+      "be-a-founder"
+     ],
+     "gravity": "explorer",
+     "character": "marta",
+     "state": "drafting",
+     "answers_2018": [
+      "4.life-patterns/content/be-a-founder.md"
+     ],
+     "draft": "v2/book/be-a-founder.html",
+     "since": "rc1"
+    },
+    {
+     "id": "ship-it-and-see-if-they-miss-it",
+     "title": "Ship it, and see if they miss it",
+     "punchline": "Not to plan, not to pitch, not to architect: ship; give it away, and if they do not miss it, try again; the miss-it test applied to your users and to yourself.",
+     "topics": [
+      "be-a-founder",
+      "shipped-means-the-user-has-it"
+     ],
+     "gravity": "explorer",
+     "character": "marta",
+     "state": "drafting",
+     "answers_2018": [
+      "4.life-patterns/content/be-a-founder.md"
+     ],
+     "since": "rc2",
+     "draft": "v2/book/ship-it-and-see-if-they-miss-it.html"
+    },
+    {
+     "id": "price-it-then-give-it-away",
+     "title": "Price it, then give it away",
+     "punchline": "Free is never free for the other side: set the price first, then the early-access offer; pay after the value, and let what a page was worth set its price.",
+     "topics": [
+      "be-a-founder"
+     ],
+     "gravity": "villager",
+     "character": "marta",
+     "state": "drafting",
+     "answers_2018": [],
+     "since": "rc2",
+     "draft": "v2/book/price-it-then-give-it-away.html"
+    },
+    {
+     "id": "sell",
+     "title": "Sell",
+     "punchline": "Selling a service before the product, a marketplace of people, the SaaS buyer's inertia, and due diligence done by sending an agent rather than a spreadsheet.",
+     "topics": [
+      "be-a-founder"
+     ],
+     "gravity": "villager",
+     "character": "sam",
+     "state": "drafting",
+     "answers_2018": [],
+     "since": "rc2",
+     "draft": "v2/book/sell.html"
+    },
+    {
+     "id": "fund-it-or-do-not",
+     "title": "Fund it, or do not",
+     "punchline": "Profitable before raising; sell founder shares or lend rather than issue; the controllable founder and what investors buy; the company you keep control of.",
+     "topics": [
+      "be-a-founder"
+     ],
+     "gravity": "town-planner",
+     "character": "marta",
+     "state": "drafting",
+     "answers_2018": [],
+     "since": "rc2",
+     "draft": "v2/book/fund-it-or-do-not.html"
+    },
+    {
+     "id": "the-company-itself",
+     "title": "The company itself: the UK, Portugal, Lithuania, the European Union",
+     "punchline": "How to actually do it, for real: a limited company in the UK, the case for Lithuania, Portugal and what it costs to run a small company there, the EU and its programmes, the cloud providers and the startup programmes that exist right now; from experience, not advice.",
+     "topics": [
+      "be-a-founder",
+      "civic-and-history"
+     ],
+     "gravity": "town-planner",
+     "character": "marta",
+     "state": "drafting",
+     "answers_2018": [],
+     "since": "rc2",
+     "draft": "v2/book/the-company-itself.html",
+     "note": "Waits on the journalist's gap articles; written in rc2 as its title, its ideas and what is missing."
+    }
+   ]
+  },
+  {
+   "id": "build-it-without-a-server",
+   "title": "Build it without a server",
+   "storyboard": null,
+   "note": "Was Building, safely in rc1; rebuilt around shipping serverless, from Gen ZX Developers.",
+   "chapters": [
+    {
+     "id": "building-blocks",
+     "title": "Serverless, for real",
+     "punchline": "If it bills you by the hour when nobody is using it, it is not serverless: no servers of yours with logic in them, no database, the file system as the database, a client-side product on static hosting, and a billing model to match; a founder with no servers has nothing to run at three in the morning.",
+     "topics": [
+      "building-blocks"
+     ],
+     "gravity": "villager",
+     "character": "marta",
+     "state": "drafting",
+     "answers_2018": [
+      "2.mvp-for-gen-z-dev/draft/aws.md",
+      "5.concepts/serverless.md",
+      "5.concepts/micro-services.md",
+      "7.your-cv/git.md",
+      "2.mvp-for-gen-z-dev/content/docker.md"
+     ],
+     "draft": "v2/book/building-blocks.html",
+     "since": "rc1"
+    },
+    {
+     "id": "privacy-by-design",
+     "title": "Privacy by design: SG/Send, sgit, and the value of constraints",
+     "punchline": "Data encrypted on the user's device, on a server that cannot read it; zero-knowledge vaults and where the keys live; the constraint that designs the product and what it does not remove (GDPR); European sovereignty as moving the cloud, not the code.",
+     "topics": [
+      "security-agent-era",
+      "building-blocks"
+     ],
+     "gravity": "town-planner",
+     "character": "marta",
+     "state": "drafting",
+     "answers_2018": [
+      "6.security/_index.md"
+     ],
+     "since": "rc2",
+     "draft": "v2/book/privacy-by-design.html"
+    },
+    {
      "id": "controlling-your-agent",
-     "title": "Controlling your agent, and security for the agent era",
-     "punchline": "Mandate, reach and the gap; hope versus enforcement; code is a liability; secrets never in the chat; learning to hack is still how you learn.",
+     "title": "Controlling your agent: RiskMandate",
+     "punchline": "Mandate, reach and the gap; hope versus enforcement; code is a liability; secrets never in the chat; learning to hack is still how you learn. A policy beside the prompt; the behaviour policy is the business logic; the ten questions.",
      "topics": [
       "controlling-your-agent",
       "security-agent-era"
@@ -341,12 +512,13 @@
       "6.security/strings-should-be-banned.md",
       "4.life-patterns/content/future-needs-you.md"
      ],
-     "draft": "v2/book/controlling-your-agent.html"
+     "draft": "v2/book/controlling-your-agent.html",
+     "since": "rc1"
     },
     {
      "id": "open-source",
      "title": "Open source",
-     "punchline": "Nobody can lock you in; the fork next door; your first pull request.",
+     "punchline": "Nobody can lock you in; the fork next door; your first pull request. Open source is not free: who pays for what your startup runs on.",
      "topics": [
       "open-source"
      ],
@@ -358,26 +530,8 @@
       "2.mvp-for-gen-z-dev/content/creative-commons.md",
       "2.mvp-for-gen-z-dev/draft/github-flow.md"
      ],
-     "draft": "v2/book/open-source.html"
-    },
-    {
-     "id": "building-blocks",
-     "title": "Building blocks",
-     "punchline": "Cloud as Lego, free models with your own key, git as a standard, serverless as ephemeral town planner services, what tokens cost.",
-     "topics": [
-      "building-blocks"
-     ],
-     "gravity": "villager",
-     "character": "priya",
-     "state": "drafting",
-     "answers_2018": [
-      "2.mvp-for-gen-z-dev/draft/aws.md",
-      "5.concepts/serverless.md",
-      "5.concepts/micro-services.md",
-      "7.your-cv/git.md",
-      "2.mvp-for-gen-z-dev/content/docker.md"
-     ],
-     "draft": "v2/book/building-blocks.html"
+     "draft": "v2/book/open-source.html",
+     "since": "rc1"
     },
     {
      "id": "shipped-means-the-user-has-it",
@@ -395,7 +549,8 @@
       "2.mvp-for-gen-z-dev/draft/tdd.md",
       "5.concepts/devops.md"
      ],
-     "draft": "v2/book/shipped-means-the-user-has-it.html"
+     "draft": "v2/book/shipped-means-the-user-has-it.html",
+     "since": "rc1"
     }
    ]
   },
@@ -420,27 +575,13 @@
       "2.mvp-for-gen-z-dev/content/dot-language.md",
       "5.concepts/recursive-functions.md"
      ],
-     "draft": "v2/book/graphs-and-your-future-self.html"
-    },
-    {
-     "id": "be-a-founder",
-     "title": "Be a founder",
-     "punchline": "The expert can build first now; the test is whether they miss it; pay after the value.",
-     "topics": [
-      "be-a-founder"
-     ],
-     "gravity": "explorer",
-     "character": "tomas",
-     "state": "drafting",
-     "answers_2018": [
-      "4.life-patterns/content/be-a-founder.md"
-     ],
-     "draft": "v2/book/be-a-founder.html"
+     "draft": "v2/book/graphs-and-your-future-self.html",
+     "since": "rc1"
     },
     {
      "id": "civic-responsibility",
      "title": "Civic responsibility",
-     "punchline": "To hack means to solve problems; small countries can lead now that everyone can build; sovereignty is the ability to move.",
+     "punchline": "To hack means to solve problems; small countries can lead now that everyone can build; sovereignty is the ability to move. The EU and judo for small countries.",
      "topics": [
       "civic-and-history"
      ],
@@ -450,7 +591,8 @@
      "answers_2018": [
       "4.life-patterns/civic-responsibility.md"
      ],
-     "draft": "v2/book/civic-responsibility.html"
+     "draft": "v2/book/civic-responsibility.html",
+     "since": "rc1"
     }
    ]
   },
@@ -458,7 +600,7 @@
    "id": "hands-on-2026",
    "title": "Hands on, 2026",
    "storyboard": null,
-   "note": "Proposed from Follow the rabbit holes: the practical workflows, dated 2026 and renewed each year. Whether this part is inside the book or a companion is Dinis's open question; the editor's task 2 of that article.",
+   "note": "Inside the book (decision 013), dated 2026 and renewed each year. Four chapters new in rc2 from Gen ZX Developers.",
    "chapters": [
     {
      "id": "an-agentic-workflow-from-zero",
@@ -471,7 +613,8 @@
      "character": "zara",
      "state": "drafting",
      "answers_2018": [],
-     "draft": "v2/book/an-agentic-workflow-from-zero.html"
+     "draft": "v2/book/an-agentic-workflow-from-zero.html",
+     "since": "rc1"
     },
     {
      "id": "your-first-graph",
@@ -484,7 +627,8 @@
      "character": "zara",
      "state": "drafting",
      "answers_2018": [],
-     "draft": "v2/book/your-first-graph.html"
+     "draft": "v2/book/your-first-graph.html",
+     "since": "rc1"
     },
     {
      "id": "five-lenses",
@@ -497,7 +641,8 @@
      "character": "zara",
      "state": "drafting",
      "answers_2018": [],
-     "draft": "v2/book/five-lenses.html"
+     "draft": "v2/book/five-lenses.html",
+     "since": "rc1"
     },
     {
      "id": "a-tiny-agent-loop",
@@ -510,7 +655,8 @@
      "character": "zara",
      "state": "drafting",
      "answers_2018": [],
-     "draft": "v2/book/a-tiny-agent-loop.html"
+     "draft": "v2/book/a-tiny-agent-loop.html",
+     "since": "rc1"
     },
     {
      "id": "images-infographics-and-storyboards",
@@ -523,7 +669,8 @@
      "character": "zara",
      "state": "drafting",
      "answers_2018": [],
-     "draft": "v2/book/images-infographics-and-storyboards.html"
+     "draft": "v2/book/images-infographics-and-storyboards.html",
+     "since": "rc1"
     },
     {
      "id": "meeting-briefs-and-follow-ups",
@@ -536,7 +683,8 @@
      "character": "sam",
      "state": "drafting",
      "answers_2018": [],
-     "draft": "v2/book/meeting-briefs-and-follow-ups.html"
+     "draft": "v2/book/meeting-briefs-and-follow-ups.html",
+     "since": "rc1"
     },
     {
      "id": "your-own-publishing",
@@ -550,19 +698,79 @@
      "character": "priya",
      "state": "drafting",
      "answers_2018": [],
-     "draft": "v2/book/your-own-publishing.html"
+     "draft": "v2/book/your-own-publishing.html",
+     "since": "rc1"
+    },
+    {
+     "id": "form-your-company",
+     "title": "Form your company",
+     "punchline": "The steps to a limited company in the UK, and the first look at Lithuania and Portugal; what to decide before you register.",
+     "topics": [
+      "be-a-founder"
+     ],
+     "gravity": "explorer",
+     "character": "marta",
+     "state": "drafting",
+     "answers_2018": [],
+     "since": "rc2",
+     "draft": "v2/book/form-your-company.html",
+     "note": "Waits on the gap article; written as what is known and what is missing."
+    },
+    {
+     "id": "the-credits-and-programmes-2026",
+     "title": "The credits and programmes, 2026",
+     "punchline": "The startup cloud credits and programmes as they stand this year (AWS, Microsoft, Google, Anthropic), what each asks for, and how long they last.",
+     "topics": [
+      "be-a-founder",
+      "building-blocks"
+     ],
+     "gravity": "explorer",
+     "character": "marta",
+     "state": "drafting",
+     "answers_2018": [],
+     "since": "rc2",
+     "draft": "v2/book/the-credits-and-programmes-2026.html"
+    },
+    {
+     "id": "your-first-price-and-first-ten-customers",
+     "title": "Your first price and your first ten customers",
+     "punchline": "Set the price, make the early-access offer, ask after the value, and find ten people who would miss it.",
+     "topics": [
+      "be-a-founder"
+     ],
+     "gravity": "villager",
+     "character": "marta",
+     "state": "drafting",
+     "answers_2018": [],
+     "since": "rc2",
+     "draft": "v2/book/your-first-price-and-first-ten-customers.html"
+    },
+    {
+     "id": "ship-a-serverless-product-in-a-weekend",
+     "title": "Ship a serverless product in a weekend",
+     "punchline": "Static hosting, a vault for the data, chat on a static site, a payment link and no server of yours: the smallest product that a stranger can pay for.",
+     "topics": [
+      "building-blocks",
+      "shipped-means-the-user-has-it"
+     ],
+     "gravity": "explorer",
+     "character": "zara",
+     "state": "drafting",
+     "answers_2018": [],
+     "since": "rc2",
+     "draft": "v2/book/ship-a-serverless-product-in-a-weekend.html"
     }
    ]
   },
   {
    "id": "how-this-book-was-made",
-   "title": "How this book was made",
+   "title": "How this book was made, and what you made",
    "storyboard": "the-2018-book",
    "chapters": [
     {
      "id": "how-this-book-was-made",
-     "title": "How this book was made",
-     "punchline": "The repository and the vault, the roles, the articles as briefs, the decisions, the graph, the loop; co-written with Claude, and the ratio shown.",
+     "title": "How this book was made, and what you made",
+     "punchline": "The repository and the vault, the roles, the articles as briefs, the decisions, the graph, the loop; co-written with Claude, and the ratio shown. The measure: the companies created from it, and how to tell us.",
      "topics": [
       "making-of"
      ],
@@ -573,7 +781,8 @@
       "1.introduction/how-this -book-was-created.md",
       "_manuscript/github-issues.md"
      ],
-     "draft": "v2/book/how-this-book-was-made.html"
+     "draft": "v2/book/how-this-book-was-made.html",
+     "since": "rc1"
     }
    ]
   }
