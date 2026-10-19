@@ -409,7 +409,8 @@ def build_study(s, protocol, page, esc, md, head, costs, manifest, chip, cost_ch
         grid += f'<tr{rowcls}><td class="u">{ulink(uid)}</td><td class="small dim">{u["words"]:,}</td>{cells}<td>{avg}</td><td class="small">{pc}</td></tr>'
     heads = "".join(f'<th class="rot"><a href="{esc(pid)}.html">{esc(p["name"].split()[0])}</a></th>' for pid, p in personas.items())
     recs = "".join(
-        f'<li>{cost_chip(r["cost"])} <b>{esc(r["what"])}</b><br>{esc(r["why"])} <span class="small dim">From {", ".join(f"""<a href="findings.html">{esc(k)}</a>""" for k in r.get("from", []))}.</span></li>'
+        f'<li>{cost_chip(r["cost"])}{" <span class=\"st blocked\">for Dinis</span>" if r.get("for_dinis") else ""} <b>{esc(r["what"])}</b><br>{esc(r["why"])}'
+        + (f' <span class="small dim">From {", ".join(f"""<a href="findings.html">{esc(k)}</a>""" for k in r["from"])}.</span>' if r.get("from") else ' <span class="small dim">From the interviews.</span>') + '</li>'
         for r in syn.get("recommendations", []))
     body = f"""<h1>{esc(st['title'])}</h1>
 <p class="lede">{esc(syn.get('summary') or st['asked_by'])}</p>
@@ -422,7 +423,7 @@ def build_study(s, protocol, page, esc, md, head, costs, manifest, chip, cost_ch
     if syn.get("expected_vs_actual"):
         body += '<h2 id="expected">What we expected, and what happened</h2>' + md(syn["expected_vs_actual"])
     if recs:
-        body += f'<h2 id="recommendations">What would make it better, by what it costs</h2><ol class="recs">{recs}</ol>'
+        body += f'<h2 id="recommendations">What would make it better, by what it costs</h2><p class="small">Marked <span class="st blocked">for Dinis</span>: a decision only Dinis can take, or material only he can supply. The rest is the editor&rsquo;s to propose to the board.</p><ol class="recs">{recs}</ol>'
     if syn.get("strengths"):
         body += '<h2 id="strengths">What is strong</h2><ul>' + "".join(f"<li>{esc(x)}</li>" for x in syn["strengths"]) + "</ul>"
     body += f"""<h2 id="map">The book, unit by unit</h2>

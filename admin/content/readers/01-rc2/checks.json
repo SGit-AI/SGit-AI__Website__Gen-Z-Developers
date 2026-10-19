@@ -1,0 +1,165 @@
+{
+ "what": "What was checked after the runs, against the frozen candidate (v2/versions/v2.0.0-rc2.md, sha256 5ed44504...), by Claude Opus in the site's session on 19 October 2026: every finding that would change the book, by search and by measurement where it could be measured. Findings that do not hold are kept and labelled, not deleted. Findings not listed here are judgements of taste, kept as the reader's.",
+ "checks": [
+  {
+   "finding": "aisha-1",
+   "verdict": "holds",
+   "how": "Placeholder confirmed: ch:22 says \"The material is not written yet\" and ch:37 says \"in this candidate it is not written yet\"; both hand over to notes for Dinis (the UK, Lithuania, Portugal and EU memos). A known gap, waiting on Dinis's memos; what the study adds is that it is the gap every reader names."
+  },
+  {
+   "finding": "catherine-1",
+   "verdict": "holds",
+   "how": "Placeholder confirmed: ch:22 says \"The material is not written yet\" and ch:37 says \"in this candidate it is not written yet\"; both hand over to notes for Dinis (the UK, Lithuania, Portugal and EU memos). A known gap, waiting on Dinis's memos; what the study adds is that it is the gap every reader names."
+  },
+  {
+   "finding": "catherine-2",
+   "verdict": "holds",
+   "how": "Placeholder confirmed: ch:22 says \"The material is not written yet\" and ch:37 says \"in this candidate it is not written yet\"; both hand over to notes for Dinis (the UK, Lithuania, Portugal and EU memos). A known gap, waiting on Dinis's memos; what the study adds is that it is the gap every reader names."
+  },
+  {
+   "finding": "ellie-1",
+   "verdict": "holds",
+   "how": "Placeholder confirmed: ch:22 says \"The material is not written yet\" and ch:37 says \"in this candidate it is not written yet\"; both hand over to notes for Dinis (the UK, Lithuania, Portugal and EU memos). A known gap, waiting on Dinis's memos; what the study adds is that it is the gap every reader names."
+  },
+  {
+   "finding": "martin-1",
+   "verdict": "holds",
+   "how": "Placeholder confirmed: ch:22 says \"The material is not written yet\" and ch:37 says \"in this candidate it is not written yet\"; both hand over to notes for Dinis (the UK, Lithuania, Portugal and EU memos). A known gap, waiting on Dinis's memos; what the study adds is that it is the gap every reader names."
+  },
+  {
+   "finding": "nadia-1",
+   "verdict": "holds",
+   "how": "Placeholder confirmed: ch:22 says \"The material is not written yet\" and ch:37 says \"in this candidate it is not written yet\"; both hand over to notes for Dinis (the UK, Lithuania, Portugal and EU memos). A known gap, waiting on Dinis's memos; what the study adds is that it is the gap every reader names."
+  },
+  {
+   "finding": "aisha-2",
+   "verdict": "holds",
+   "how": "Measured: 8-word runs shared between chapters, as a share of the smaller chapter: ch:13 and ch:30 319 (29%), ch:19 and ch:39 169 (15%), ch:7 and ch:32 113 (11%), ch:7 and ch:33 107 (10%), ch:16 and ch:35 56 (7%), ch:12 and ch:36 48 (4%). The hands-on part restates the argument chapters it follows."
+  },
+  {
+   "finding": "catherine-3",
+   "verdict": "holds",
+   "how": "Measured: 8-word runs shared between chapters, as a share of the smaller chapter: ch:13 and ch:30 319 (29%), ch:19 and ch:39 169 (15%), ch:7 and ch:32 113 (11%), ch:7 and ch:33 107 (10%), ch:16 and ch:35 56 (7%), ch:12 and ch:36 48 (4%). The hands-on part restates the argument chapters it follows."
+  },
+  {
+   "finding": "ellie-5",
+   "verdict": "holds",
+   "how": "Measured: 8-word runs shared between chapters, as a share of the smaller chapter: ch:13 and ch:30 319 (29%), ch:19 and ch:39 169 (15%), ch:7 and ch:32 113 (11%), ch:7 and ch:33 107 (10%), ch:16 and ch:35 56 (7%), ch:12 and ch:36 48 (4%). The hands-on part restates the argument chapters it follows."
+  },
+  {
+   "finding": "martin-2",
+   "verdict": "holds",
+   "how": "Measured: 8-word runs shared between chapters, as a share of the smaller chapter: ch:13 and ch:30 319 (29%), ch:19 and ch:39 169 (15%), ch:7 and ch:32 113 (11%), ch:7 and ch:33 107 (10%), ch:16 and ch:35 56 (7%), ch:12 and ch:36 48 (4%). The hands-on part restates the argument chapters it follows."
+  },
+  {
+   "finding": "nadia-6",
+   "verdict": "holds",
+   "how": "Measured: 8-word runs shared between chapters, as a share of the smaller chapter: ch:13 and ch:30 319 (29%), ch:19 and ch:39 169 (15%), ch:7 and ch:32 113 (11%), ch:7 and ch:33 107 (10%), ch:16 and ch:35 56 (7%), ch:12 and ch:36 48 (4%). The hands-on part restates the argument chapters it follows."
+  },
+  {
+   "finding": "aisha-4",
+   "verdict": "partly",
+   "how": "Partly. Counted: sgit 38 mentions in 16 units, RiskMandate 26 in 15, SG/Send 12 in 5, \"the newsroom\" 112 in 36. RiskMandate is the worked example in ch:19, 20, 25 and 39 (three mentions each), sgit dominates ch:24 (12). There are outside examples too (Stripe's fee, the 2.7 million founder study, Nokia), so \"always\" is too strong; \"the main worked example is usually the author's own\" holds."
+  },
+  {
+   "finding": "catherine-4",
+   "verdict": "partly",
+   "how": "Partly. Counted: sgit 38 mentions in 16 units, RiskMandate 26 in 15, SG/Send 12 in 5, \"the newsroom\" 112 in 36. RiskMandate is the worked example in ch:19, 20, 25 and 39 (three mentions each), sgit dominates ch:24 (12). There are outside examples too (Stripe's fee, the 2.7 million founder study, Nokia), so \"always\" is too strong; \"the main worked example is usually the author's own\" holds."
+  },
+  {
+   "finding": "ellie-4",
+   "verdict": "partly",
+   "how": "Partly. Counted: sgit 38 mentions in 16 units, RiskMandate 26 in 15, SG/Send 12 in 5, \"the newsroom\" 112 in 36. RiskMandate is the worked example in ch:19, 20, 25 and 39 (three mentions each), sgit dominates ch:24 (12). There are outside examples too (Stripe's fee, the 2.7 million founder study, Nokia), so \"always\" is too strong; \"the main worked example is usually the author's own\" holds."
+  },
+  {
+   "finding": "martin-3",
+   "verdict": "partly",
+   "how": "Partly. Counted: sgit 38 mentions in 16 units, RiskMandate 26 in 15, SG/Send 12 in 5, \"the newsroom\" 112 in 36. RiskMandate is the worked example in ch:19, 20, 25 and 39 (three mentions each), sgit dominates ch:24 (12). There are outside examples too (Stripe's fee, the 2.7 million founder study, Nokia), so \"always\" is too strong; \"the main worked example is usually the author's own\" holds."
+  },
+  {
+   "finding": "nadia-5",
+   "verdict": "partly",
+   "how": "Partly. Counted: sgit 38 mentions in 16 units, RiskMandate 26 in 15, SG/Send 12 in 5, \"the newsroom\" 112 in 36. RiskMandate is the worked example in ch:19, 20, 25 and 39 (three mentions each), sgit dominates ch:24 (12). There are outside examples too (Stripe's fee, the 2.7 million founder study, Nokia), so \"always\" is too strong; \"the main worked example is usually the author's own\" holds."
+  },
+  {
+   "finding": "catherine-6",
+   "verdict": "holds",
+   "how": "Holds for the candidate: 47 notes marked For Dinis in 36 of 52 units. Expected in a release candidate (decision 009) and not in a sold book; the readers say so themselves. What it adds: the notes interrupt the reading for every reader, so a reader's edition without them is worth having before the next study."
+  },
+  {
+   "finding": "ellie-6",
+   "verdict": "holds",
+   "how": "Holds for the candidate: 47 notes marked For Dinis in 36 of 52 units. Expected in a release candidate (decision 009) and not in a sold book; the readers say so themselves. What it adds: the notes interrupt the reading for every reader, so a reader's edition without them is worth having before the next study."
+  },
+  {
+   "finding": "martin-6",
+   "verdict": "holds",
+   "how": "Holds for the candidate: 47 notes marked For Dinis in 36 of 52 units. Expected in a release candidate (decision 009) and not in a sold book; the readers say so themselves. What it adds: the notes interrupt the reading for every reader, so a reader's edition without them is worth having before the next study."
+  },
+  {
+   "finding": "nadia-7",
+   "verdict": "holds",
+   "how": "Holds: ch:2 says of the Business Insider essay it opens on, \"I could not get past the paywall, so I cannot tell you what it argued.\" Honest, and still the first argument after the introduction rests on it."
+  },
+  {
+   "finding": "martin-7",
+   "verdict": "holds",
+   "how": "Same passage as nadia-7: the paywall admission is in ch:2."
+  },
+  {
+   "finding": "nadia-2",
+   "verdict": "holds",
+   "how": "Searched the whole candidate: no mention of runway, salary, mortgage or savings, and nothing on leaving a job to found. The expert founder the frame is written for is the reader who would have to."
+  },
+  {
+   "finding": "nadia-3",
+   "verdict": "holds",
+   "how": "Measured: ch:2 to ch:5 are 8,751 words; the first hands-on afternoon is ch:13, about 26,000 words in."
+  },
+  {
+   "finding": "aisha-3",
+   "verdict": "holds",
+   "how": "Ch:1's sections are Two generations, Generation ZX, What it is for and The measure: the objective is in the third section, the company list in its fourth paragraph."
+  },
+  {
+   "finding": "ellie-2",
+   "verdict": "holds",
+   "how": "Ch:40's core step is \"a vault server of 83 lines, one Worker, one R2 bucket and one Durable Object per vault\"; none of the four terms is defined in the chapter."
+  },
+  {
+   "finding": "nadia-4",
+   "verdict": "holds",
+   "how": "As ellie-2 for ch:40; the terms are used in part 7 without a glossary."
+  },
+  {
+   "finding": "catherine-5",
+   "verdict": "holds",
+   "how": "Searched: the word Claude appears only in ch:41 (\"Co-written with Claude, and credited\"); the About note describes agents but does not name the model or say co-written."
+  },
+  {
+   "finding": "martin-4",
+   "verdict": "holds",
+   "how": "The worked example in ch:21 is labelled illustrative and the counter-evidence is stated; the closing line \"Do not get signed before you have the album\" appears twice in the chapter. A judgement on tone, kept as the reader's."
+  },
+  {
+   "finding": "nadia-8",
+   "verdict": "partly",
+   "how": "The worked example is a UK company worth £10 million; the chapter's argument (profitable before raising) does speak to the pre-revenue founder, but there is no section on what to do before revenue."
+  },
+  {
+   "finding": "catherine-7",
+   "verdict": "partly",
+   "how": "Holds on the facts (ch:38 is dated 2026), but the dating is a decision (013): the hands-on part is in the candidate, dated and renewed each year. The publisher's point is about format: on a web page, not in print. For Dinis."
+  },
+  {
+   "finding": "aisha-8",
+   "verdict": "holds",
+   "how": "Ch:2's How to read this book opens \"Read it on paper, with a pen.\""
+  },
+  {
+   "finding": "catherine-8",
+   "verdict": "holds",
+   "how": "Ch:34 mentions storyboards 12 times; it is a workflow for drawing images by code, of the kind this site uses."
+  }
+ ]
+}

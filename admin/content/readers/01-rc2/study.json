@@ -9,5 +9,5 @@
  "protocol": "admin/content/readers/protocol.json",
  "disclosure": "Everybody in this study is invented. The readers, their names and every word attributed to them were written by a language model (Claude Sonnet, one agent per reader) reading the candidate's text. It is not reader research, and no sentence in it is evidence about a real person or a real market. What is evidence is the candidate's own text: every quote a reader cites is checked by the build, word for word, against the unit it cites, in the frozen file whose hash is recorded here.",
  "date": "2026-10-19",
- "state": "frame"
+ "state": "run"
 }
