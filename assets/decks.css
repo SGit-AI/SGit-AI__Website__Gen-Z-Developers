@@ -1,0 +1,6 @@
+/* decks/: presentations. Colours are theme tokens; the slides keep their own, as printed pages do. */
+.dk-deck{border-top:1px solid var(--line);padding-top:1rem;margin-top:1.5rem}
+.dk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:1.1rem;margin:1rem 0}
+.dk-slide{margin:0;display:flex;flex-direction:column;gap:.5rem}
+.dk-slide img{display:block;width:100%;height:auto;border-radius:6px;border:1px solid var(--line);box-shadow:var(--shadow)}
+.dk-slide figcaption{display:flex;flex-direction:column;gap:.25rem;font-size:.92rem}

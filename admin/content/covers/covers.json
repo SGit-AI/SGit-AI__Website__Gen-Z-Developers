@@ -1,22 +1,22 @@
 {
- "what": "The cover system for Generation ZX Developers (GenAI Startup Edition): the book's words, the formats Amazon and Leanpub take, the shared rules, and three designs. Drawn by admin/build/covers.py into covers/<design>/ as SVG (the master, live text with its fonts embedded), the Kindle and Leanpub images and the paperback's print-ready PDF. Proposals, made at Dinis's request of 19 October 2026; decision 004 (the cover waits) holds until he picks one.",
+ "what": "The cover system for Generation ZX Founders (GenAI Edition): the book's words, the formats Amazon and Leanpub take, the shared rules, and three designs. Drawn by admin/build/covers.py into covers/<design>/ as SVG (the master, live text with its fonts embedded), the Kindle and Leanpub images and the paperback's print-ready PDF. Proposals, made at Dinis's request of 19 October 2026; decision 004 (the cover waits) holds until he picks one. Retitled on 20 October 2026 to carry decision 019 (Generation ZX Founders, GenAI Edition), 017 (a new book, not an edition) and 020 (the companies helped along the way), as task 5 of the article Generation ZX Founders asks.",
  "book": {
-  "title": "Generation ZX Developers",
-  "edition": "GenAI Startup Edition",
-  "cover_line": "For Generation Z and Generation X: start a GenAI company by the end of the book",
+  "title": "Generation ZX Founders",
+  "edition": "GenAI Edition",
+  "cover_line": "For the ones already up at three in the morning building",
   "author": "Dinis Cruz",
   "site": "gen-z-developers.sgit.ai",
   "licence": "CC BY 4.0",
   "year": "2026",
-  "title_source": "decision 014",
-  "cover_line_source": "admin/content/articles/17__version-2-on-leanpub.md (the subtitle, proposed for Leanpub)",
-  "back_source": "admin/content/articles/17__version-2-on-leanpub.md",
+  "title_source": "decision 019",
+  "cover_line_source": "admin/content/articles/20__generation-zx-founders.md (its title: the book is for the ones already up at three in the morning building)",
+  "back_source": "admin/content/articles/20__generation-zx-founders.md",
   "back": [
-   "In 2018 I wrote Generation Z Developers for one reader: the generation entering the job market. Eight years later that generation is not only looking for jobs. They are starting companies. And so is mine.",
-   "This is version 2, and it is written for two generations. Generation Z, entering the workforce and becoming the new entrepreneurs. And Generation X: the subject-matter experts, twenty years inside a problem, who can now build the first version of the answer themselves, with agents, instead of explaining it to a team they could never afford. Often they are in the same family. Put the two letters together and you get Generation ZX, which takes me back to where I started: the ZX Spectrum.",
-   "The book has one objective: that by the end of it, you have started a company."
+   "I keep coming back to the same question: who am I talking to? The answer is the founder, the person who is already motivated, already a minority, already up at three in the morning building because finally they can, and it does not matter what generation they are.",
+   "So Generation ZX is not a range of birth years. It is the people building because finally they can. We see it most in Generation Z and Generation X, which is why the two letters are on the cover, but a millennial who builds at three in the morning is one of them too.",
+   "We should say how many companies we helped along the way. Some got created and some did not."
   ],
-  "back_close": "I measure this book by how many companies are created from it. If you start one, tell me.",
+  "back_close": "",
   "back_footer": [
    "The book is built in public at gen-z-developers.sgit.ai",
    "Everything is Creative Commons (CC BY 4.0)."
@@ -30,7 +30,13 @@
    "Develop intellectual curiosity",
    "Look under the hood",
    "Shake things up"
-  ]
+  ],
+  "sources": {
+   "title": "admin/content/decisions/019__the-title-is-generation-zx-founders-genai-edition.md",
+   "cover_line": "admin/content/articles/20__generation-zx-founders.md",
+   "back": "admin/content/articles/20__generation-zx-founders.md",
+   "back_footer": "admin/content/articles/17__version-2-on-leanpub.md"
+  }
  },
  "formats": {
   "paperback": {
@@ -113,7 +119,7 @@
     "display": "Space Grotesk",
     "mono": "Space Mono"
    },
-   "idea": "Generation ZX goes back to where Dinis started: the ZX Spectrum. A near-black ground, GENERATION, ZX and DEVELOPERS stacked so the full title reads at a thumbnail, a prompt with a cursor for the edition, and four bars in the book's mark colours, green, yellow, teal and red, rising across the front and over the spine. A homage, not a copy: no Sinclair name, logo or keyboard, and the bars in the book's order, not the Spectrum's.",
+   "idea": "Generation ZX goes back to where Dinis started: the ZX Spectrum. A near-black ground, GENERATION, ZX and FOUNDERS stacked so the full title reads at a thumbnail, a prompt with a cursor for the edition, and four bars in the book's mark colours, green, yellow, teal and red, rising across the front and over the spine. A homage, not a copy: no Sinclair name, logo or keyboard, and the bars in the book's order, not the Spectrum's.",
    "risk": "Four bright diagonal bars on black under a large ZX still recall Sinclair's machines; worth a trade-mark look before print. Large areas of black print as four-colour black on KDP and show scuffs: a gloss finish."
   },
   {
@@ -134,8 +140,8 @@
     "condensed": "Big Shoulders Display",
     "stencil": "Big Shoulders Stencil Display"
    },
-   "idea": "The 2018 cover, kept, with one letter added. Its blocks spelled GEN, a space, Z; now the space stays and an X joins after the Z, in ivory, the new letter. The eight 2018 lines stay: the home page says the second edition keeps all eight. For the reader of the first edition, it is the same book, grown.",
-   "risk": "The cover spells GEN ZX, as 2018 spelled GEN Z; KDP checks that the cover's title matches the book's metadata, so the full title is on the cover too, smaller, and a stricter reading may want it larger."
+   "idea": "The 2018 cover, kept, with one letter added. Its blocks spelled GEN, a space, Z; now the space stays and an X joins after the Z, in ivory, the new letter, and FOUNDERS stands where DEVELOPERS stood. The eight 2018 lines stay, quieter.",
+   "risk": "Decision 017 makes this a new book that says less about the 2018 one, and this design leans on 2018 the most; it also looks like 2018, not like a book for founders. KDP checks the cover's title against the metadata: the full title is the first line."
   }
  ],
  "review": {

@@ -285,7 +285,7 @@ def build_infographics(ctx):
 <div class="ig-filters">{filters}<button type="button" class="btn" id="ig-clear">Show all</button> <span class="small dim" id="ig-shown"></span></div>
 <div class="ig-cards">{''.join(card(p) for p in order)}</div>
 <script src="../assets/infographics.js"></script>"""
-    page("infographics/plan.html", "The infographics plan", body, f"{counts['proposals']} infographics proposed for Generation ZX Developers, by altitude and chapter, with a review: accept, change, decline or later.",
+    page("infographics/plan.html", "The infographics plan", body, f"{counts['proposals']} infographics proposed for Generation ZX Founders, by altitude and chapter, with a review: accept, change, decline or later.",
          crumbs=(("Infographics", "infographics/index.html"), ("The plan", "infographics/plan.html")), extra_head=head.format(up="../"), wide=True)
 
     # ---- the drawn ones, a page each

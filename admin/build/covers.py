@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""The covers: three designs for Generation ZX Developers, drawn from admin/content/covers/covers.json into covers/.
+"""The covers: three designs for Generation ZX Founders (GenAI Edition), drawn from admin/content/covers/covers.json into covers/.
 
     python3 admin/build/covers.py            # every design, every format, and the exports
     python3 admin/build/covers.py --svg      # the SVGs only (no browser)
@@ -38,6 +38,7 @@ DOC = json.loads((SRC / "covers.json").read_text(encoding="utf-8"))
 BOOK, SYS, FMT = DOC["book"], DOC["system"], DOC["formats"]
 P = SYS["palette"]
 MARK = [P["green"], P["yellow"], P["teal"], P["red"]]
+NOUN = BOOK["title"].split()[-1]  # the title's last word, the reader's name for themself: Founders (decision 019)
 IN = 72.0  # the drawing is in points
 SAFE = SYS["safe_in"] * IN
 
@@ -199,9 +200,9 @@ def front_one(c, X, Y, W, H):
         c.add("</g>")
         bx += w + gap
     y += bh + 14
-    # DEVELOPERS fitted by its size and spacing, never by stretching the glyphs
-    dev_size = fit("DEVELOPERS", ST, iw, 900, spacing_em=0.06)
-    c.text(x, y + dev_size * 0.74, "DEVELOPERS", ST, dev_size, sky, weight=900, spacing=dev_size * 0.06)
+    # the title's noun fitted by its size and spacing, never by stretching the glyphs
+    dev_size = fit(NOUN.upper(), ST, iw, 900, spacing_em=0.06)
+    c.text(x, y + dev_size * 0.74, NOUN.upper(), ST, dev_size, sky, weight=900, spacing=dev_size * 0.06)
     y += dev_size * 0.74 + 16
     c.text(x, y + 14, BOOK["edition"].upper(), CD, 16, P["yellow"], weight=800, spacing=1.8)
     y += 24
@@ -220,7 +221,7 @@ def front_one(c, X, Y, W, H):
     c.add(f'<path id="{pid}" d="M{bx - rr:.2f},{by:.2f} a{rr},{rr} 0 1,1 {2 * rr},0 a{rr},{rr} 0 1,1 -{2 * rr},0" fill="none"/>')
     c.faces.add((CD, "normal", 800))
     # the ring text is set to the circle's length, so it closes the circle
-    c.add(f'<text font-family="\'{CD}\'" font-size="9.5" font-weight="800" fill="{ivory}"><textPath xlink:href="#{pid}" href="#{pid}" textLength="{2 * math.pi * rr - 3:.2f}" lengthAdjust="spacing">VERSION 2 · {BOOK["year"]} · GEN ZX ·</textPath></text>')
+    c.add(f'<text font-family="\'{CD}\'" font-size="9.5" font-weight="800" fill="{ivory}"><textPath xlink:href="#{pid}" href="#{pid}" textLength="{2 * math.pi * rr - 3:.2f}" lengthAdjust="spacing">{BOOK["edition"].upper()} · {BOOK["year"]} · GEN ZX ·</textPath></text>')
     c.mark(bx - 13, by - 3, 5.5, 1.5)
     lines = [l.upper() for l in BOOK["cover_lines_2018"]]
     room_top, room_bot = y + 12, author_top - 14
@@ -261,8 +262,10 @@ def front_zx(c, X, Y, W, H, band_from=None):
     zx = fit("ZX", G, iw * 0.92, 700, spacing_em=-0.04)
     c.text(x - zx * 0.03, y + zx * 0.72, "ZX", G, zx, ivory, weight=700, spacing=-zx * 0.04)
     y += zx * 0.72 + 12
-    dv = fit("DEVELOPERS", G, iw, 700, spacing_em=0.01)
-    c.text(x, y + dv * 0.72, "DEVELOPERS", G, dv, ivory, weight=700, spacing=dv * 0.01)
+    # the noun at the size DEVELOPERS had, tracked out to the full width: a shorter word must not grow taller
+    dv = min(fit(NOUN.upper(), G, iw, 700, spacing_em=0.01), fit("DEVELOPERS", G, iw, 700, spacing_em=0.01))
+    sp = (iw - width(NOUN.upper(), G, dv, 700)) / max(len(NOUN) - 1, 1)
+    c.text(x, y + dv * 0.72, NOUN.upper(), G, dv, ivory, weight=700, spacing=sp)
     y += dv * 0.72 + 24
     prompt = "> " + BOOK["edition"]
     c.text(x, y + 13, prompt, MO, 15, P["yellow"], weight=700)
@@ -372,7 +375,7 @@ def front_graph(c, X, Y, W, H):
     c.text(x, y + t1 * 0.78, "Generation", F, t1, ink, weight=900)
     c.text(x + width("Generation ", F, t1, 900), y + t1 * 0.78, "ZX", F, t1, P["red"], weight=900)
     y += t1 * 0.92
-    c.text(x, y + t1 * 0.72, "Developers", F, t1, ink, weight=900)
+    c.text(x, y + t1 * 0.72, NOUN, F, t1, ink, weight=900)
     y += t1 * 0.72 + 20
     c.text(x, y + 16, BOOK["edition"], F, 20, ink, weight=500, style="italic")
     y += 30
@@ -447,6 +450,9 @@ def back_text(c, X, Y, W, H, fg, accent_fg, body, head, body_w=400, head_w=700, 
             w8, size = (strong if last else body_w), (body_size * (1.12 if last else 1))
             y += cc.lines(x, y + size, wrap(para, body, size, iw, w8), body, size, accent_fg if last else fg, lh=lh, weight=w8) + size * 0.7
         italic = "italic" if any(f["family"] == body and f["style"] == "italic" for f in FONTS) else "normal"
+        if not BOOK.get("back_close"):
+            cc.text(x, y + body_size + 6, BOOK["author"], body, body_size, fg, weight=strong)
+            return y + body_size + 10
         y += cc.lines(x, y + body_size, wrap(BOOK["back_close"], body, body_size, iw * 0.9, body_w, italic), body, body_size, fg, lh=lh, weight=body_w, style=italic, opacity=0.9)
         cc.text(x, y + body_size + 6, BOOK["author"], body, body_size, fg, weight=strong)
         return y + body_size + 10

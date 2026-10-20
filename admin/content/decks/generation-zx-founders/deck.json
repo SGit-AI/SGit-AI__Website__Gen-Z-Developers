@@ -1,0 +1,11 @@
+{
+ "slug": "generation-zx-founders",
+ "title": "Generation ZX Founders (GenAI Edition): the book in twelve slides",
+ "date": "2026-10-20",
+ "by": "gen-z.illustrator",
+ "what": "A horizontal deck about the book, to post and to present: who it is for, what is in it, the infographics, how it is made in public, the storyboards, the three cover proposals, and where to read it. Every number is the release candidate's and the site's own; every quoted line is Dinis's, from the book and the articles. Made at Dinis's request of 19 October 2026, and retitled before release for decisions 017, 019 and 020.",
+ "candidate": "v2.0.0-rc2",
+ "size_px": [1920, 1080],
+ "fonts": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&family=Space+Mono:wght@700&display=swap",
+ "order": ["cover", "readers", "why-now", "parts", "one-page", "the-tests", "no-server", "hands-on", "in-public", "storyboards", "covers", "read-it"]
+}

@@ -2,8 +2,8 @@
 """covers/: the cover proposals and the cover system, rendered from admin/content/covers/covers.json and the files
 admin/build/covers.py drew into covers/<design>/. Called by build.py with its helpers (page, esc).
 
-The build refuses: a word on the covers that is not in its source (the title and edition in decision 014, the cover
-line and the back in article 17, the eight 2018 lines in the first edition's record), and a design whose files are
+The build refuses: a word on the covers that is not in its source (each field's source is named in covers.json: the
+title's decision, the articles the cover line and the back are from; the eight 2018 lines in the first edition's record), and a design whose files are
 missing (run admin/build/covers.py).
 """
 import json
@@ -19,13 +19,14 @@ FILES = ("front.svg", "kindle.svg", "wrap.svg", "wrap-guides.svg", "kindle.jpg",
 def check(doc, first_edition_lines):
     E = []
     b = doc["book"]
-    d014 = next((ROOT / "admin/content/decisions").glob("014__*.md")).read_text(encoding="utf-8")
-    if f'{b["title"]} ({b["edition"]})' not in d014:
-        E.append(f"covers.json: the title and edition are not decision 014's: {b['title']} ({b['edition']})")
-    a17 = (ROOT / "admin/content/articles/17__version-2-on-leanpub.md").read_text(encoding="utf-8")
-    for s in [b["cover_line"], b["back_close"]] + b["back"] + b["back_footer"]:
-        if not quote_in(s, a17):
-            E.append(f"covers.json: not word for word in article 17: {s[:70]}")
+    # every word on the covers against the file it is from: the title's decision, the articles; covers.json names them
+    src = {k: (ROOT / v).read_text(encoding="utf-8") for k, v in b["sources"].items()}
+    if f'{b["title"]} ({b["edition"]})' not in src["title"]:
+        E.append(f"covers.json: the title and edition are not in {b['sources']['title']}: {b['title']} ({b['edition']})")
+    for field, items in (("cover_line", [b["cover_line"]]), ("back", b["back"] + ([b["back_close"]] if b.get("back_close") else [])), ("back_footer", b["back_footer"])):
+        for s in items:
+            if not quote_in(s, src[field]):
+                E.append(f"covers.json: not word for word in {b['sources'][field]}: {s[:70]}")
     if [l.lower() for l in b["cover_lines_2018"]] != [l.lower() for l in first_edition_lines]:
         E.append("covers.json: the eight 2018 lines are not the first edition's cover lines")
     for d in doc["designs"]:
@@ -71,7 +72,7 @@ def build_covers(ctx):
     sw = "".join(f'<span class="cv-sw" style="background:{v}"></span><code>{esc(k)} {v}</code> ' for k, v in s["palette"].items())
     rules = "".join(f"<li>{esc(r)}</li>" for r in s["rules"])
     hier = "".join(f"<li>{esc(h)}</li>" for h in s["hierarchy"])
-    back = "".join(f"<p>{esc(p)}</p>" for p in b["back"]) + f"<p><i>{esc(b['back_close'])}</i></p>"
+    back = "".join(f"<p>{esc(p)}</p>" for p in b["back"]) + (f"<p><i>{esc(b['back_close'])}</i></p>" if b.get("back_close") else "")
     body = f"""<h1>Covers</h1>
 <p class="lede">Three cover designs for <i>{esc(b['title'])} ({esc(b['edition'])})</i>, ready for Amazon and Leanpub, each drawn from data by code into SVG, so any of them can be resized, recoloured or reworded and drawn again. Proposals: the cover waits on Dinis (<a href="../decisions/index.html#the-cover-waits">decision 004</a>), and these are the options he asked for on 19 October 2026.</p>
 <p class="stats"><span class="stat"><b>3</b><span>designs</span></span><span class="stat"><b>3</b><span>formats each</span></span><span class="stat"><b>{spine:.3f} in</b><span>spine, {pb['pages']} pages</span></span><span class="stat"><b>{wrap_w:.3f} &times; {wrap_h:.3f}</b><span>inches, the wrap</span></span></p>
@@ -86,13 +87,13 @@ def build_covers(ctx):
 <div class="twocol"><div>
 <h3>The words</h3>
 <ul>
-<li><b>Title:</b> {esc(b['title'])} ({esc(b['edition'])}), as Dinis decided it (decision 014).</li>
-<li><b>Cover line:</b> {esc(b['cover_line'])}: the subtitle proposed for Leanpub in <a href="../articles/version-2-on-leanpub.html">article 17</a>; decision 014 says the two generations are said in full on the cover line.</li>
+<li><b>Title:</b> {esc(b['title'])} ({esc(b['edition'])}), as Dinis decided it (<a href="../decisions/index.html#the-title-is-generation-zx-founders-genai-edition">decision 019</a>, which replaced 014; decision 017 makes it a new book, not an edition).</li>
+<li><b>Cover line:</b> {esc(b['cover_line'])}: from the title of <a href="../articles/generation-zx-founders.html">Generation ZX Founders</a>, the article behind decision 019; a proposal until the publisher's listing (task 5 there) settles the subtitle.</li>
 <li><b>Author:</b> {esc(b['author'])}. <b>Licence:</b> {esc(b['licence'])}. <b>Where it is built:</b> {esc(b['site'])}.</li>
 </ul>
 <h3>The hierarchy</h3><ol>{hier}</ol>
 <h3>The back</h3><div class="cv-back small">{back}</div>
-<p class="small dim">Dinis's words, from the book's description in article 17; the build checks each one is there, word for word.</p>
+<p class="small dim">Dinis's words, from <a href="../articles/generation-zx-founders.html">Generation ZX Founders</a> (the footer from <a href="../articles/version-2-on-leanpub.html">Version 2 on Leanpub</a>); the build checks each one is there, word for word. The measure is the companies helped along the way (decision 020).</p>
 </div><div>
 <h3>The formats</h3>
 <div class="tablewrap"><table><thead><tr><th>For</th><th>What</th><th>Size</th></tr></thead><tbody>
@@ -112,5 +113,5 @@ def build_covers(ctx):
 <li>When the interior is final, set its page count and paper and run it again: the spine and the wrap follow. Then compare with KDP's cover calculator before upload.</li>
 <li>The fonts are in <code>admin/content/covers/fonts/</code>, each with its SIL Open Font License; <code>admin/build/cover_fonts.py</code> fetched them from Google Fonts.</li>
 </ol>"""
-    page("covers/index.html", "Covers", body, "Three cover designs for Generation ZX Developers, in SVG, with the Kindle, Leanpub and KDP paperback files, and the cover system.",
+    page("covers/index.html", "Covers", body, "Three cover designs for Generation ZX Founders, in SVG, with the Kindle, Leanpub and KDP paperback files, and the cover system.",
          crumbs=(("Covers", "covers/index.html"),), extra_head='<link rel="stylesheet" href="../assets/covers.css">\n', wide=True)
