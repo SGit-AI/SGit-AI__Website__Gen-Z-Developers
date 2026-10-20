@@ -1,6 +1,6 @@
 # Generation Z Developers: the drafts
 
-*What the 2018 repository held but the published book left out: 6 draft chapters and 89 outlines, as they were left, from https://github.com/DinisCruz/Book_Generation_Z_Developer at 61886444f. Not part of v1.0.0; the second edition's raw material.*
+*What the 2018 repository held but the published book left out: 6 draft chapters and 89 outlines, as they were left, from https://github.com/DinisCruz/Book_Generation_Z_Developer at 61886444f. Not part of v1.0.0; raw material for the new book.*
 
 
 # Introduction

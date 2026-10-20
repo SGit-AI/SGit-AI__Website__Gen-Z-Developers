@@ -1,0 +1,11 @@
+{
+ "what": "The book's title now, as Dinis decided it: the site shows it wherever it names the book. A release candidate keeps the title it was frozen under (its text is hashed), and the site says so beside it. Change this file when a decision changes the title, and the build checks the new one is in that decision.",
+ "title": "Generation ZX Founders",
+ "edition": "GenAI Edition",
+ "short": "Gen ZX Founders",
+ "decision": "admin/content/decisions/019__the-title-is-generation-zx-founders-genai-edition.md",
+ "anchor": "the-title-is-generation-zx-founders-genai-edition",
+ "grew_out_of": "Generation Z Developers (2018)",
+ "new_book": "decision 017: a new book that grew out of Generation Z Developers, not its second edition",
+ "cover_line": "For the ones already up at three in the morning building"
+}

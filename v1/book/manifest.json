@@ -1,6 +1,6 @@
 {
  "version": "v1.0.0",
- "site": "v0.2.44",
+ "site": "v0.2.45",
  "source": {
   "repository": "https://github.com/DinisCruz/Book_Generation_Z_Developer",
   "commit": "61886444fe5ab118ab18726147826ab05f794edc"
@@ -365,7 +365,7 @@
    "print_page": null,
    "words": 318,
    "markdown_sha256": "372da7873502c2a15e37f176b51512e9b39b17ae058a6a93f3049601079f69de",
-   "main_sha256": "74c9040e1189f4ae221d80564ff10ef000ccc0b2ede200d3d68854d0a37893c7"
+   "main_sha256": "60e176c32ec9fc2014f3035018080b9411eda37673ab6f227bfb0476aa405de0"
   },
   {
    "file": "2.mvp-for-gen-z-dev/draft/aws.md",
@@ -377,7 +377,7 @@
    "print_page": null,
    "words": 320,
    "markdown_sha256": "b21ae0216b49377c7b55a6b3471cd32cf8666483ed7850491312e97ef6a58e0b",
-   "main_sha256": "e7bbfe244e40a9e85dbf6545039919527df92888107c7b14af3d0a5d9a0aee36"
+   "main_sha256": "72bccea17514323aedfa14d50040d4500422c7f5752ed117f4788a823c35dd94"
   },
   {
    "file": "2.mvp-for-gen-z-dev/draft/continuous-integration.md",
@@ -389,7 +389,7 @@
    "print_page": null,
    "words": 79,
    "markdown_sha256": "9abc87f62ab6c6235d517cf3d680c8322f149bc19a4afeff65a2c23c9cc2af22",
-   "main_sha256": "f4b5c5a051d51ec4484f1b1ae6f8fd921efec612b0ee14eb5ce020e9adbe58f7"
+   "main_sha256": "3ceb843a42134e186b40b8b4f878dddd4f3f1fb709b09feb0fea234a594074bf"
   },
   {
    "file": "2.mvp-for-gen-z-dev/draft/electron.md",
@@ -401,7 +401,7 @@
    "print_page": null,
    "words": 37,
    "markdown_sha256": "c8b37036aac596b24ecefa0eda4d1a0330cbdbae24cc4a507d79ce98ca2d75bd",
-   "main_sha256": "78e320ed39300f93bfc38f895576f4f08b8592f317fa99b1fe70aa472d1b5e9c"
+   "main_sha256": "860b6c3ec7e4083a7a56bea0ee1ba84fec03c50215486cf2ac4ab24e2f97de5c"
   },
   {
    "file": "2.mvp-for-gen-z-dev/draft/github-flow.md",
@@ -413,7 +413,7 @@
    "print_page": null,
    "words": 30,
    "markdown_sha256": "46a4659ade89c49ee24650091e8a59a3d8f68dab79bb6fc8525669df29bb2179",
-   "main_sha256": "15d2dc0f148ed324459ec2ca5baeb010adbeef47eaf5ae89436164ccdcae1441"
+   "main_sha256": "cbb3d9609ebd00d0f3e123a07b857496c6a804b29cc120990b177eb170c0a1a9"
   },
   {
    "file": "2.mvp-for-gen-z-dev/draft/iot.md",
@@ -425,7 +425,7 @@
    "print_page": null,
    "words": 228,
    "markdown_sha256": "af9d99ce1b15ac9e39822d2216645f4bf8b6eef983b2756627dc3fe2826f8da3",
-   "main_sha256": "365bbd05dbd6d41cbc857ff8d27f163fdb0e198d84c8abab8ee824952e475327"
+   "main_sha256": "5896f7d4598273cec31102f668bd742390f77227aa33f7d0f591ce4293c5eb53"
   },
   {
    "file": "2.mvp-for-gen-z-dev/draft/linux.md",
@@ -437,7 +437,7 @@
    "print_page": null,
    "words": 138,
    "markdown_sha256": "017260ed4fe8b1081c93c970b5527820806fcc39377505f1e64aba996a4eac71",
-   "main_sha256": "2da0d5809154e68b2cee40a25cd34110ccedd1e1c72635549576b5bef1f48cda"
+   "main_sha256": "bafd949a0b3842167485a9994d1ee30ed899743bb7b970968708d26194f1ab22"
   },
   {
    "file": "2.mvp-for-gen-z-dev/draft/minecraft.md",
@@ -449,7 +449,7 @@
    "print_page": null,
    "words": 13,
    "markdown_sha256": "d96e26caf9c924dc1d57a1244846d98e4df0e71086e0033e8800d0dce9cf29d9",
-   "main_sha256": "c2b395138614534502025a840a1ca5d81ea040eafae1c90c49cb16baff6573a3"
+   "main_sha256": "961f5fa5c108e3c2433d87b203121d3e3e0b2217b611425cb74f15da923ea150"
   },
   {
    "file": "2.mvp-for-gen-z-dev/draft/raspberry-pi.md",
@@ -461,7 +461,7 @@
    "print_page": null,
    "words": 112,
    "markdown_sha256": "1bd9e1e3ba645dea26b7a545d3d1ab4354b13db4bdf74bda4628665b6bbb7f6b",
-   "main_sha256": "985235d0ea9cda6b08f2b0a143b6fdd214cf886ac87e7cd2b896728520b93dec"
+   "main_sha256": "3bdc997a5b94844c46c3d13b2f7137468095d7db5dcf4b1e7f4c2af4925bc643"
   },
   {
    "file": "2.mvp-for-gen-z-dev/draft/stack-overflow.md",
@@ -473,7 +473,7 @@
    "print_page": null,
    "words": 59,
    "markdown_sha256": "bc8ba335ea6ad590f0398e482593334f92227bb1da2c4d1c44198854d9d606a0",
-   "main_sha256": "61a63400a1f8ed107db699a3d2fa7c24dc4c9eadf89ae8ac1644b5abfcdd7085"
+   "main_sha256": "72440d6f972f63ed575e10a787dab386be2d05c3a1dad395eac07ce06b73ae2c"
   },
   {
    "file": "2.mvp-for-gen-z-dev/draft/wikipedia.md",
@@ -485,7 +485,7 @@
    "print_page": null,
    "words": 70,
    "markdown_sha256": "591c892d7ffac60ae59cf5900edcca9749ae69bd6bbc22f0f2158a412beeaf3e",
-   "main_sha256": "27bf618b349aeab449e1ccc77561c4ea207b6e2f717c8e0f73437796a4cece88"
+   "main_sha256": "542ea5f2c71047079e3f800e15ea79ebe01b39e8c86980ebb2c6d2bdd908098e"
   },
   {
    "file": "3.technologies/draft/blockchain.md",
@@ -497,7 +497,7 @@
    "print_page": null,
    "words": 53,
    "markdown_sha256": "988f8ba76c5f6a5a58ab1efa34429259e89bc65d5c25b3572abb5bb107452b63",
-   "main_sha256": "4a49960843875bc05ce65a95e3fa496b8523de4cb8bc3edadf1de5b9146a24a8"
+   "main_sha256": "146f869b57062fa75654241af94e16b30e53059da6d0c3ee78abfabdfc0015c9"
   },
   {
    "file": "3.technologies/draft/browser-automation.md",
@@ -509,7 +509,7 @@
    "print_page": null,
    "words": 82,
    "markdown_sha256": "4234a6eb30068622f38c45c31b2dfb65953b7c8da7e8d2069eeb14fbf957f92d",
-   "main_sha256": "2b2127d9c278dc977d1384021787da9b178e63f946aa0c666a6df540d293dd07"
+   "main_sha256": "ef2614432d7ce9779d071ecef8fc5d6fa2a8182e237fbb0e5d1b7817307ab811"
   },
   {
    "file": "3.technologies/draft/dopamine.md",
@@ -521,7 +521,7 @@
    "print_page": null,
    "words": 184,
    "markdown_sha256": "53311360ca3ee7675d065694c35dd10caf8b6f4ef27f5fe961539efbcd30fce7",
-   "main_sha256": "ebcc941035383f3d3d98797d9c3db49fd2c2d6aeebfa1947b063809bd7b8ea36"
+   "main_sha256": "4d808d45ae0964e1922202e9a542d735e016b349c351198f147ce72855639c75"
   },
   {
    "file": "3.technologies/draft/dsl.md",
@@ -533,7 +533,7 @@
    "print_page": null,
    "words": 73,
    "markdown_sha256": "d6f98014376a15b15955011a035dc782919cd56184d37c522fc47d841617321f",
-   "main_sha256": "426b7d39bb717e3283726f53a6569b133c963e0ae1e68806c7da1147a0158707"
+   "main_sha256": "dfba7a0cce3dd8d65e41b751549fb3b59455dd1ce3557eb1bd1a5425decf6af7"
   },
   {
    "file": "3.technologies/draft/ngrok.md",
@@ -545,7 +545,7 @@
    "print_page": null,
    "words": 75,
    "markdown_sha256": "b2485d9b2afdba1494444b2822b8582d487be9a665d2f60f9c8733bbdb9251fd",
-   "main_sha256": "17db97b304f31e40c5f55922f5be1c6b5533bf71321b38ff7b49cd4b97a84cb4"
+   "main_sha256": "42ef99116acf3153282f327f495417e43f50320343fdfbb9fce0d052bb90e76e"
   },
   {
    "file": "3.technologies/draft/node-js.md",
@@ -557,7 +557,7 @@
    "print_page": null,
    "words": 62,
    "markdown_sha256": "758a37494e7a6d337cd052a3e7c86aace6f3e55130cae939f5bb3793122991f5",
-   "main_sha256": "f3084004d3612f785e72794b5a2e1bb8c1f3c62e65b91e663243cfcc9311ac0c"
+   "main_sha256": "c46d9bc8003cf47d2955a96a9b7b9faf5ac105c002cf0e42ed0a5c968dc876d8"
   },
   {
    "file": "3.technologies/draft/r-language.md",
@@ -569,7 +569,7 @@
    "print_page": null,
    "words": 26,
    "markdown_sha256": "29a7552ea8268ea7db372d780d337c02fc610d4752c67ccef800cfbc829c48c1",
-   "main_sha256": "647d3e16cad1edef5729928c2febf7fe1264616c64f93a0d1501d839428cd41d"
+   "main_sha256": "25e1e0cea6021e00059eee8c88e78faf99696036e139b65d979a8d127d892a02"
   },
   {
    "file": "3.technologies/draft/scratch.md",
@@ -581,7 +581,7 @@
    "print_page": null,
    "words": 29,
    "markdown_sha256": "d2b765072c931d51f79460058831da417799a24311e5887e4176e26be1eb5778",
-   "main_sha256": "f85f3a5f29a8101ada0342fd32573fb39f5ce38f75ba42f032bcdd68ea7a11dc"
+   "main_sha256": "51bc9d72d51060ed89b92bb8506491a75c02150512bdbbeff3d3b1828f7d266f"
   },
   {
    "file": "3.technologies/draft/streams.md",
@@ -593,7 +593,7 @@
    "print_page": null,
    "words": 50,
    "markdown_sha256": "1e2ad0ab766c570277cd137c37570906ad270308886bac37a0c07dd1d72740db",
-   "main_sha256": "adfac6c8152add93de95e8e935a9517a138c96815a08bf1114c89eeafd720994"
+   "main_sha256": "057b4095dc975e208910ab43f179918afc3a293b39c178d492bf141f45159764"
   },
   {
    "file": "3.technologies/draft/web-proxies.md",
@@ -605,7 +605,7 @@
    "print_page": null,
    "words": 25,
    "markdown_sha256": "6e942d8d255956acd3a3191a5f0f542dcfa686c2cc2e5a63f82b3d64ffd1a763",
-   "main_sha256": "256175f2e45c17ebcb4c97735fea951e0e4910e99db7578b098ec895989d107b"
+   "main_sha256": "a1a87ad741de180eb868af94c1815f0bfe6425e32cf623d391a988ed23bd5ce7"
   },
   {
    "file": "5.concepts/gamification.md",
@@ -629,7 +629,7 @@
    "print_page": null,
    "words": 159,
    "markdown_sha256": "08480e1c263e1ffc7af18355954821b42b097e62221966f16b4279c9ead50da0",
-   "main_sha256": "db3b40e8e92aba418c22d0405b1112aeb98666349aee3fa863e86a9d556e7149"
+   "main_sha256": "a3dd106371574bc2ec6a4746568da1e001c1f0be174511dee0fad3d285f91c19"
   },
   {
    "file": "5.concepts/amazon-press-releases.md",
@@ -641,7 +641,7 @@
    "print_page": null,
    "words": 26,
    "markdown_sha256": "f9a0735ed9612e4e5afbb98aaf8b9c63c902efb94ff75a81e14d48a2f4a77301",
-   "main_sha256": "03ce8408d57612c811e3c88017d98fdcb349a42aa8579bd681025183f4577be1"
+   "main_sha256": "173d1fdd5cfa601cb16bbef33b0d45c93b4dc23fb2e667c144c0dfd239051b2b"
   },
   {
    "file": "5.concepts/change-engineering.md",
@@ -653,7 +653,7 @@
    "print_page": null,
    "words": 12,
    "markdown_sha256": "2417ae6c8eed7455e92995a0a6e53182f1dc3a7bef21b873ec97d10cebcbcdd5",
-   "main_sha256": "31ffb588c2c377793ba6d7f392bfc73dc45dfc4db2c5ae7ff6afb126989a39af"
+   "main_sha256": "5aa4eebc942d45aa715bb84d0cc1f1d78e84fdb66f5ffd34d34471660a923947"
   },
   {
    "file": "5.concepts/changes.md",
@@ -665,7 +665,7 @@
    "print_page": null,
    "words": 120,
    "markdown_sha256": "b76b6331f1a91835abf34e5b8aaa2f3928635bdb0dd16d60c33153036f5db79b",
-   "main_sha256": "4dc3fc33a07f33e945d17c3dfffefcce58fbdde459e67ddf764935ff37f50741"
+   "main_sha256": "7088824eed6a7b1f197d0fd3829a77dfcb517f4f2e77a9705881a394c5967fbc"
   },
   {
    "file": "5.concepts/chaos-engineering.md",
@@ -677,7 +677,7 @@
    "print_page": null,
    "words": 645,
    "markdown_sha256": "80c5ed93d5a19e27933ae8498fdfe71e18117b9d1737e5c351a6f4e83454f580",
-   "main_sha256": "f98273ea2af517c1e1df61b1093a4ee0ad36142abaa0a66a26c2357b43e79443"
+   "main_sha256": "e0c2c7bb1ee9ebc0075a24d7defdefe3dac507613515779073e7acb050f6fb7b"
   },
   {
    "file": "5.concepts/CI-Testing.md",
@@ -689,7 +689,7 @@
    "print_page": null,
    "words": 97,
    "markdown_sha256": "f11ca8553ecb4b73597a445af86353c289630c71959da0c88b9339dee5fef14f",
-   "main_sha256": "53e4d5a87e145f60944362f4e40c66a4a6c8c57882f6900254d696b0abb56880"
+   "main_sha256": "ddcb30eae0efbd6101c01eded0cea667a1e43d8e122899e6ffb831c8136f710f"
   },
   {
    "file": "5.concepts/deadlines.md",
@@ -701,7 +701,7 @@
    "print_page": null,
    "words": 243,
    "markdown_sha256": "03d316d9f8a9d2f79ed2bb2ad22efefba2da27f25a0a1f3bb2ce3f011ec10f79",
-   "main_sha256": "2dd9261c5deb1d797458ffd9176a8954846b22c3d6fc6c629e1dad1b17ce10a1"
+   "main_sha256": "d7eff022bee38d64927e80d129eac421c2d314050c49dd8753350b6080990e7d"
   },
   {
    "file": "5.concepts/design.md",
@@ -713,7 +713,7 @@
    "print_page": null,
    "words": 153,
    "markdown_sha256": "d5a89184c57905c29d07db6cccb9341a5915b925906963259bd1aa24d33eb5db",
-   "main_sha256": "8d73016f03d1b2afe58525370c148e1bbd15f0a821a22379f184127f27f2ba98"
+   "main_sha256": "0cba15e1d58c5a00bee2c2b63b34bd809dbb5ffd1928f92cfe506b866df50c46"
   },
   {
    "file": "5.concepts/devops.md",
@@ -725,7 +725,7 @@
    "print_page": null,
    "words": 47,
    "markdown_sha256": "06456244b7f89d1e58796cb27c019128d5874831f9e706ac1f6e93c67f6f25db",
-   "main_sha256": "77225e12077d8dc2756b13b099967128b859319ac966dcc926bbf4721365c641"
+   "main_sha256": "1ceb4f7b7040ebea68228b1860f25a364468c7389d8fe5e6ca2c53f85e988ad3"
   },
   {
    "file": "5.concepts/facts.md",
@@ -737,7 +737,7 @@
    "print_page": null,
    "words": 134,
    "markdown_sha256": "d617815a4271e9d90787aa2f2c6ab38beb898f4e158db27ce89aa48fefd1e288",
-   "main_sha256": "8cce08e781426f8d3a2ea659d245d4bbd8c3822178b092dfdf17964b9bac4d11"
+   "main_sha256": "e7b433aebc17bf4495dddd66399017ffc731c38462ee0f35285e9cc2112743fa"
   },
   {
    "file": "5.concepts/feedback-loops.md",
@@ -749,7 +749,7 @@
    "print_page": null,
    "words": 130,
    "markdown_sha256": "9db4e534b053d19e4fc4eb64b5e28bf7f7b86c1e32612eea22c418fc7cd99818",
-   "main_sha256": "15dfd460be55282235b8a506a21f6ad0a1d9e048fcea2f33dfb385aad943ec47"
+   "main_sha256": "9642bb8b005a771e5b98c21787eb0555dff41bc50da7a17835e5296950256321"
   },
   {
    "file": "5.concepts/funtional-programming.md",
@@ -761,7 +761,7 @@
    "print_page": null,
    "words": 150,
    "markdown_sha256": "0326aca31f008ec52c56be686142113102fadc9dd0f94e5ffec6e65b6a5508aa",
-   "main_sha256": "74345d7ced05752b530a53cf2bc85966332b4883ceac21e3a0353d98f2e754df"
+   "main_sha256": "2d3a4a8b1565f11879c2ca5a2a932a958a61194a922f6fafe0c7c8129f67b9a4"
   },
   {
    "file": "5.concepts/gdpr.md",
@@ -773,7 +773,7 @@
    "print_page": null,
    "words": 38,
    "markdown_sha256": "3d29f7ea5d210fa466d264d98b91dcb7e28ff1d1cd83921f3692ccb758e1d125",
-   "main_sha256": "c7e72fa466bfbec9d71c9f07931238048065939386716c5446c8d0eb11224d7f"
+   "main_sha256": "d76e3701f4e07102f33b9b3353705cbb2f4aac285a4970b973a3262986f9bd78"
   },
   {
    "file": "5.concepts/graphs.md",
@@ -785,7 +785,7 @@
    "print_page": null,
    "words": 36,
    "markdown_sha256": "0732df8e22199f931f7e446820010f1b832272f1cf2bd5d7be2b6442f7b7c965",
-   "main_sha256": "7c49b41b49a0f9e08c1221dd5fd928c53db93eabab61434cba6e7014aa0bdeff"
+   "main_sha256": "24977edfb86c6cf05ba350570cc3313b84c2b74b3cc609ee8dbb9074cdfdd85d"
   },
   {
    "file": "5.concepts/inventing-on-principle.md",
@@ -797,7 +797,7 @@
    "print_page": null,
    "words": 38,
    "markdown_sha256": "9ed9caa9573b4e8f6a85c98f11873cf8b017eed1f4fae689d1cc62887bc1a7f9",
-   "main_sha256": "25a8f850d2a98d33195ed85b3a5f8b05bd0bc70f72857d545bbc24127b9a3672"
+   "main_sha256": "58404fdcea9d501730c1f5eb4533b22a75c9537ea1c012cf89587cddddb97b3c"
   },
   {
    "file": "5.concepts/karma-points.md",
@@ -809,7 +809,7 @@
    "print_page": null,
    "words": 38,
    "markdown_sha256": "18125d82fd02c55d750986e5be7f1e1831910d21d766be1aebfc0147ecc6f757",
-   "main_sha256": "da224d082cd7294bffc669b3475be199fb63254d2f8410c65dbe54fb61a55bd7"
+   "main_sha256": "3d97a70c00a77eb87fef26f868e88ee10be6d321ef76cef1840e2e8071806b80"
   },
   {
    "file": "5.concepts/legacy-applications.md",
@@ -821,7 +821,7 @@
    "print_page": null,
    "words": 68,
    "markdown_sha256": "4f3a9fcadc45213933219cd6b934546606d7345c64591d90255f92b873ea44d0",
-   "main_sha256": "043884f296a1f4723001e7a205e754abcd0596cd4a1c9cee3db785adb3b6b6fb"
+   "main_sha256": "f081c19a3bb2af138acb8dd419185bd87099e969be27212c98241784d30c5446"
   },
   {
    "file": "5.concepts/micro-services.md",
@@ -833,7 +833,7 @@
    "print_page": null,
    "words": 65,
    "markdown_sha256": "f76f258ac169ac8f04d69c96a108067ef3a41fe90f0edddc2bf6fa99608b4245",
-   "main_sha256": "306858646baa45f3d7ce1c34ddd850ad6846c8362e8c02e5b5a199579d54e8b5"
+   "main_sha256": "93d8f6908dc9b8a41d234f806f6149df75d553ef7d7c311579beb61ac235937d"
   },
   {
    "file": "5.concepts/netflix-culture.md",
@@ -845,7 +845,7 @@
    "print_page": null,
    "words": 69,
    "markdown_sha256": "7fcd730c99f9cf99b788f3027d1618c5de2d7c2ceae2af083690be38c5202048",
-   "main_sha256": "0a7d84ef8450a362d84943915bac5c29b25d5ec63e810e2c947666871d343424"
+   "main_sha256": "a0039ee09a2bc306403995f7719b11c55f4eebd382464e08eb1a61844797a107"
   },
   {
    "file": "5.concepts/pair-programming.md",
@@ -857,7 +857,7 @@
    "print_page": null,
    "words": 136,
    "markdown_sha256": "a428e0bdaaf16c5a81051d473f401d726d3952d38f2d67735df4361319a8cbf7",
-   "main_sha256": "17d97a703501418a0a32f71b5e057bce389d716b6ee311c334f86688a92fb840"
+   "main_sha256": "0de6589421a2dc0dade1d72faa1b60aa6b42c26eb7eee5dae39ad8772967388d"
   },
   {
    "file": "5.concepts/recursive-functions.md",
@@ -869,7 +869,7 @@
    "print_page": null,
    "words": 31,
    "markdown_sha256": "9c7e1c67a8d6bd2d78e5d89aaeca3c8a0fef66bc3e474e1f7f2eb067ce37e015",
-   "main_sha256": "4d02770bee0d733dde1bb04d8f5913c154d18b2bd884b9392f1ea5bf22d1709d"
+   "main_sha256": "609c76e28ccab8dce801bbbeef858e9fbf67cbd884b1d055ce1a53629af5c208"
   },
   {
    "file": "5.concepts/repl.md",
@@ -881,7 +881,7 @@
    "print_page": null,
    "words": 38,
    "markdown_sha256": "34a234acd6226e1d84c1a41b9dccb40c9c167a99b782fe11ca54f54bd1aaee90",
-   "main_sha256": "a6145824ac182478334b890dd9001f29489cfa24903ecdde4faf21e004afe97b"
+   "main_sha256": "671c75d202b90034ffdb70f827f8ad248eb823bc53117fc330e0618374813deb"
   },
   {
    "file": "5.concepts/serverless.md",
@@ -893,7 +893,7 @@
    "print_page": null,
    "words": 219,
    "markdown_sha256": "41319fb018d470fd17762c991ec34fbb21f4f53a447c67a8f80ad818cc18a413",
-   "main_sha256": "e21aeb3fbcaf86669a06c4e1e4e9a565fa71677567272898100b63777fda64ab"
+   "main_sha256": "7caa407ac2c2755b7389f6039dc039fbe56cae9cec0a9e18f281d79c8459df29"
   },
   {
    "file": "5.concepts/draft/spotify-model.md",
@@ -905,7 +905,7 @@
    "print_page": null,
    "words": 46,
    "markdown_sha256": "d29affb7e5513495d0a2988d4560bbab47657ae180932376487d21ab513dc842",
-   "main_sha256": "1cae8715fb70962fb630b68dbd6c21f74801bb09f268809f10835352e3971820"
+   "main_sha256": "ec96a0815dce9f7090c8ed7a8c2f77b82a9bda49e7cb8924430789bd7965d566"
   },
   {
    "file": "5.concepts/sre.md",
@@ -917,7 +917,7 @@
    "print_page": null,
    "words": 44,
    "markdown_sha256": "9a5b572869b01354cfa26db5c887ea1abb87194e50864424c3b25a9e9a8072fb",
-   "main_sha256": "fda33fc5f29003eb373291d77b1ba611fb54978068684eaaa2c58542d757d20c"
+   "main_sha256": "0db6d8b83371d60eda4dd352cfe1ae1d65fb1d32de8453e455956f984e20b072"
   },
   {
    "file": "5.concepts/strong-vs-weak-types.md",
@@ -929,7 +929,7 @@
    "print_page": null,
    "words": 34,
    "markdown_sha256": "93a14d8410d8d59b794c0d141cd37d1b8ab1bd3d6d48dbe074dc1a52647405c7",
-   "main_sha256": "8aea5a06aad574c24c0642a91524b1b72374a1612f15cc8c736ed860dee509ef"
+   "main_sha256": "ab5b03931a534ed3f8ac64b7e4bc64e6461ba1dc5219c15cb6bfb25ac241665c"
   },
   {
    "file": "7.your-cv/leanpub.md",
@@ -953,7 +953,7 @@
    "print_page": null,
    "words": 92,
    "markdown_sha256": "8852b8b614a859eebd502abb1b9240aa3aa0d751f1820656c66b670ebcdbbd7d",
-   "main_sha256": "538f6fa4b996fdfe608a0819f8384c2930fab6b0a40e8d6b8c22a5bbcfb73040"
+   "main_sha256": "ab2eea4bf8c24497c79094089f03586bdefe889308e970d7ac18156fd47c0d95"
   },
   {
    "file": "7.your-cv/blogs.md",
@@ -965,7 +965,7 @@
    "print_page": null,
    "words": 202,
    "markdown_sha256": "bdc3d17ae18e4d14aff47d83f3a39e827da59af6f873f0578798d3533f4a487b",
-   "main_sha256": "ddf9084e42f90520de3d786820ab79535ed69da21a696fa88d701508fdcdf96e"
+   "main_sha256": "00a1118679069cb55a57664abc06b0cd68beab48e9f976963574d00aa755d514"
   },
   {
    "file": "7.your-cv/future-self.md",
@@ -977,7 +977,7 @@
    "print_page": null,
    "words": 82,
    "markdown_sha256": "0ebafcc11ca4201874e91b55dc654f19b584689eee0b4f65499aef392262448f",
-   "main_sha256": "43c725fa1b766b549297db58c4dcd5cea42b7cfd603863f2aaa6d8465a20701f"
+   "main_sha256": "63adfc268d3d0bc800db1d80f4b8b4576388362d3566df12c260faac56a759bc"
   },
   {
    "file": "7.your-cv/git.md",
@@ -989,7 +989,7 @@
    "print_page": null,
    "words": 361,
    "markdown_sha256": "fa7d0ae83aee73d0094c89a7d84726a67efc79a701b928eb8448eb932ff90758",
-   "main_sha256": "74ab4d18334abb77f150b7ee733b6af2d71212680d42f830fddfa8091c1e91ca"
+   "main_sha256": "910fa09b4971bb4cac2e5c794d5c85f88f6fa2b473f22f91af41c46811593a6d"
   },
   {
    "file": "7.your-cv/github.md",
@@ -1001,7 +1001,7 @@
    "print_page": null,
    "words": 229,
    "markdown_sha256": "f042bc996fbe2998bb70941a345c155eb00250f13c602a21ea4c96c4dbfb5fdf",
-   "main_sha256": "eee089683edc5fb9931a91610378f89f457869b39fe974a8915cc41767a93bca"
+   "main_sha256": "0e8e1b9a65aa46b881d75a5a8fa1784da407053c829331f99e5d6742ce54ff15"
   },
   {
    "file": "7.your-cv/linkedin.md",
@@ -1013,7 +1013,7 @@
    "print_page": null,
    "words": 39,
    "markdown_sha256": "4893321f8201577887d7a6362f68145708657ab17f69d73bf8a2198a2f1b4e0a",
-   "main_sha256": "f411455abaa5565a540683122ea174812a34ee6de26ab5141043075d8048fc6a"
+   "main_sha256": "0886c706e3f1a163fee79802981042d75d369e13d7e43a114bd1e0fe617aa4a6"
   },
   {
    "file": "7.your-cv/twitter.md",
@@ -1025,7 +1025,7 @@
    "print_page": null,
    "words": 55,
    "markdown_sha256": "93426bad6397406a387bbbc833a4e01841bcb75fc522eca09f6536a04261ff66",
-   "main_sha256": "beaf9ee68ce09260f3360fb36aa4b88cffbfcb704b3794fd636b321a24a0ec94"
+   "main_sha256": "093d7ad9def220c10b083a3cd77a7d6c7281ae9ed45e6d86317e37a13791104e"
   },
   {
    "file": "7.your-cv/upwork.md",
@@ -1037,7 +1037,7 @@
    "print_page": null,
    "words": 87,
    "markdown_sha256": "69ad6bdb9465bc0debd7cf7f8ccbe8fb55e58efa0350cb03ddd45502d05e6bd0",
-   "main_sha256": "1f9591acad52d39b7fab779bdd7696d1436d23a9f2940b882f722fafe7d5d3af"
+   "main_sha256": "ace46e9ee9718a8330dde4628a6b48555a929cbd8aeeeade06e305d539b0fbf8"
   },
   {
    "file": "6.security/3rd-party-modules.md",
@@ -1049,7 +1049,7 @@
    "print_page": null,
    "words": 392,
    "markdown_sha256": "8b9d54e873ff9c4e87332525db17a6c2a1dfed7a7cce3854ef617ee17b8b4f5d",
-   "main_sha256": "e72a8c334403e29316bc1a5690ae3a743045f623c12e4762832d65287461843f"
+   "main_sha256": "2ea7ce55d393a1bbb7630c090abee26362f98930a10f131f01701716bcc554f0"
   },
   {
    "file": "6.security/bug-bounties.md",
@@ -1061,7 +1061,7 @@
    "print_page": null,
    "words": 14,
    "markdown_sha256": "c4e78dab11e398f31ee6a22de4850109e86c039067d7b8c2f72dec196929bce8",
-   "main_sha256": "1905638299e2c61d638a02f8b0d22d2d809ff0498cd612ec18a83730c96375d0"
+   "main_sha256": "f651517037ab4a4fc709d1ae82bdda0902cbaacde72152dcfa1666ebb4e193b2"
   },
   {
    "file": "6.security/defcon.md",
@@ -1073,7 +1073,7 @@
    "print_page": null,
    "words": 60,
    "markdown_sha256": "e426b1ec454adf6a0dcc9f736de0dfa4f7d22f6ef7a1fdb31811cd2fcab50d1a",
-   "main_sha256": "abd5d7c1d27a49930069acebeaaf345c9828b18afa2b59672c41a33cd8d72365"
+   "main_sha256": "dca52cf7e7977691424e28fc60c304032a6ea33b6fb8d845bc88a0607bc600c4"
   },
   {
    "file": "6.security/dont-touch-production.md",
@@ -1085,7 +1085,7 @@
    "print_page": null,
    "words": 296,
    "markdown_sha256": "39c00e00053eada9cb8c0b1b2d75ca5687bc64c0d3ac6dd46ca201b21775ed71",
-   "main_sha256": "b4927d93cf1d25a0b60625b7cbc75dd289957e5ea7c6f0d876fbc2b68aa69b07"
+   "main_sha256": "3bb45bb051841ac42bd5847ec12190c561fac89007d0e227ba355593237e85d2"
   },
   {
    "file": "6.security/pointers.md",
@@ -1097,7 +1097,7 @@
    "print_page": null,
    "words": 81,
    "markdown_sha256": "c5d29bae091c6ca0ca48419e8df19adc06389801235a710d8bf073972342c676",
-   "main_sha256": "2595ff58162383271735f96a9dc4177c6464e0978a3b1823636c37b11a700d4d"
+   "main_sha256": "3d87b26015e0e266f8f2b0deeb69a2e58fd0e498faf4f713660b7958da1ae3e2"
   },
   {
    "file": "6.security/security-better-developers.md",
@@ -1109,7 +1109,7 @@
    "print_page": null,
    "words": 30,
    "markdown_sha256": "30c9cc405c18fc6ace7ac60c0b893f409a9c2c71a4760c6a48221e17c65e8908",
-   "main_sha256": "1a277fb3a02c54272eecb0734743211bd6dbee4dd3349015a1ee9cd4e231768d"
+   "main_sha256": "21e92b5ff27d95d2a7ffc39d4375a2fe1cb6e031164bf70b5b7d18300533c60e"
   },
   {
    "file": "6.security/strings-should-be-banned.md",
@@ -1121,7 +1121,7 @@
    "print_page": null,
    "words": 66,
    "markdown_sha256": "84d0ece7ca7f8ba68648f8de0c566282ac2a9a03596fee5628f158fe2a757fff",
-   "main_sha256": "8a24bee1fed18ca8c474dee7b0c6d2183dafc707631a7731f4c44b5b4ff72675"
+   "main_sha256": "abe61319957d6d184e6c31bdf992726935dacebba03eb48ec98f63316d0bb39c"
   },
   {
    "file": "6.security/threat-modeling.md",
@@ -1133,7 +1133,7 @@
    "print_page": null,
    "words": 110,
    "markdown_sha256": "41d7e7deda2194ca86d7652c5db7e163a9d4e657b16d42d2ad36780bdce8596b",
-   "main_sha256": "e82c11786ef520e03140f8f8ae78c620da39c10c0ffbeddee32147af0db5c8c1"
+   "main_sha256": "57d96f163b3269ab6285ede3e88d05c992c574501479c06f7aff557605e73997"
   },
   {
    "file": "4.life-patterns/pionners-settlers-town-planners.md",
@@ -1145,7 +1145,7 @@
    "print_page": null,
    "words": 22,
    "markdown_sha256": "5b62b93366da6757aff51f2565deb9b9c1575dd02b1ffe93e53c9758f3899f45",
-   "main_sha256": "c9047a9da2081050b623d4612d5ca941f38c4e14941f0c2a106d6d83f09996d4"
+   "main_sha256": "c20b90cd8751b11561033f84ea2383a11665b640cb7ebe3861880630f4d4bcb5"
   },
   {
    "file": "4.life-patterns/automate-your-workflows.md",
@@ -1157,7 +1157,7 @@
    "print_page": null,
    "words": 48,
    "markdown_sha256": "d31678bbabe4505245801bbaf415f615e04549df11fcb476dd87568a11b16e02",
-   "main_sha256": "9995867f1b7cb06fc5cc181f349366b47921950b647a44ac94776fa95b8ebc1f"
+   "main_sha256": "707869db62c0bae50a01c95c50518c01ffb1ef7f604189a197aed487755e8df0"
   },
   {
    "file": "4.life-patterns/BBS-and-modems.md",
@@ -1169,7 +1169,7 @@
    "print_page": null,
    "words": 167,
    "markdown_sha256": "81e0128e7e473101c6731f8ed42840f8d393081483b7db26187b8a62e92dba3f",
-   "main_sha256": "3ceebdb8fb617380c0866a8d56c2ca6e968e1078986d8e225046caedc1ae8f8a"
+   "main_sha256": "483fb440b0e1f331f6b386c0c9d6a5a52b357454ee81b3935b42620f98187df3"
   },
   {
    "file": "4.life-patterns/civic-responsibility.md",
@@ -1181,7 +1181,7 @@
    "print_page": null,
    "words": 89,
    "markdown_sha256": "9236fd46cec30e7ecbaec9e299b3b32dc49675bed437da70d05c880544117025",
-   "main_sha256": "467027db86dfc527439199eb73d1a0d7cedce84a1b235c643721aef9d364858d"
+   "main_sha256": "995a48798ba644510b10a61ad63b9adf414e9079ca47e3f1138719069151f642"
   },
   {
    "file": "4.life-patterns/curse-of-knowledge.md",
@@ -1193,7 +1193,7 @@
    "print_page": null,
    "words": 48,
    "markdown_sha256": "09fc4881c6ee5701e110453f8b076d456e1746d80105dba7ff746028663c6db3",
-   "main_sha256": "4a7e24f88e3cdd42e9f44d417a46e3e843c24442182dd8ac8e522dad23fa8fb5"
+   "main_sha256": "adb1eaa0f3fb1a0f9311b92706edc44cd7cc6d035afe341036f6d3b703d9f28e"
   },
   {
    "file": "4.life-patterns/ideas.md",
@@ -1205,7 +1205,7 @@
    "print_page": null,
    "words": 99,
    "markdown_sha256": "534692d919bf90dd2cb2cb9862dfd00f9dc0c8c9919c355427ba4574c2c86441",
-   "main_sha256": "4cb9c8265a0c3f459007f688f474bfc4d8a3b3fbd4da8501e4d68d1aea7fa2e8"
+   "main_sha256": "1adfff1603c258a6d818ae41e2d5b542f2d993d69055a9fccdc9ec660d58a851"
   },
   {
    "file": "4.life-patterns/impostor-syndrome.md",
@@ -1217,7 +1217,7 @@
    "print_page": null,
    "words": 144,
    "markdown_sha256": "449c1ba5d04b798d5f100de80c9b581397e6d2f826a2c68c84535f3585f3019c",
-   "main_sha256": "452a0a7a3e6b5efc8b91f3c915d5a67795e5aa09e7807222203ff1813a4e148c"
+   "main_sha256": "84ee329fb169bb3447679be99f8f4d46b8cb1390057a5da4d7187b03526822e7"
   },
   {
    "file": "4.life-patterns/king-is-naked.md",
@@ -1229,7 +1229,7 @@
    "print_page": null,
    "words": 105,
    "markdown_sha256": "86ba4edba5900bfc2af1421b879de691efbea944ae9fa9bef47c4a577aa29251",
-   "main_sha256": "ad11f1dba9b32065059d7c22374298d4ac3ecc6069fa27d34e30ccdd6e3b6d3f"
+   "main_sha256": "409aab441bb5e4421002c1f9f8ee4a2b9cb33a396007d92fe4170a5931f276dd"
   },
   {
    "file": "4.life-patterns/learn-to-hack.md",
@@ -1241,7 +1241,7 @@
    "print_page": null,
    "words": 55,
    "markdown_sha256": "687dc71d0f229276f74dc4a079ec4483f2a64dcfe6126f658d71a4dcfb2b5068",
-   "main_sha256": "5ff43e74eda55ad6a9348db1914f9e44080880e8a5d7dc71688fa1adb01aeee6"
+   "main_sha256": "2dc4d71da8b0ab49dab0ad3585c95d33b4a52ae9acef0afbd863a82e5cd8fba2"
   },
   {
    "file": "4.life-patterns/love-maths.md",
@@ -1253,7 +1253,7 @@
    "print_page": null,
    "words": 47,
    "markdown_sha256": "714a825fd130f6354dbb0b83f79fde4801b06368072a039cdeec04a7311f9603",
-   "main_sha256": "3e9bfc8fa90f5f00ec0d8992a56b5673920cf93562e431dd7e5dba99b824942c"
+   "main_sha256": "fa69862446bde1d59ab607f860004742923c63468e12bd3aa0e00fa1443ebc31"
   },
   {
    "file": "4.life-patterns/mentors.md",
@@ -1265,7 +1265,7 @@
    "print_page": null,
    "words": 114,
    "markdown_sha256": "657199b6f461e5d0029aca83c98a2c64b04ad50ce3345cb865e78697eb2311a0",
-   "main_sha256": "e0fbe6473778665866ef820893edba795c46990cb33670aea425dff04fdbf8c3"
+   "main_sha256": "af1ebaebf95406edeb4c24a153acf83fdc7d99710a503e91d186e30385c203a0"
   },
   {
    "file": "4.life-patterns/nudge.md",
@@ -1277,7 +1277,7 @@
    "print_page": null,
    "words": 33,
    "markdown_sha256": "e961963a7dcb9bb14d20af6e7185182747c0b4b501c6bb59d1d5d7de59b6dca9",
-   "main_sha256": "0d2b02d20fbcb11c47e1f37b73debd37a96bad228c1c0520ecaf69f410aa0476"
+   "main_sha256": "66d8d9c5c1a361f922e63be10f4448688b16a992e6c4887db4710e55efe374a3"
   },
   {
    "file": "4.life-patterns/one-way-two-way-doors.md",
@@ -1289,7 +1289,7 @@
    "print_page": null,
    "words": 148,
    "markdown_sha256": "2d2a6274bba5ba3eb037f4c70f20b7084f81ffa3d7c40d018edb01429d045f1a",
-   "main_sha256": "6b664f84cf8044eabdf0bb4b162c5c41a8865f303e163b3474ef51aed34cdd9f"
+   "main_sha256": "04fbfcfed487c6872cdb3663f9a74f8e77665abe5ca6ba1b655a07519d6d4c4e"
   },
   {
    "file": "4.life-patterns/power-of-habits.md",
@@ -1301,7 +1301,7 @@
    "print_page": null,
    "words": 203,
    "markdown_sha256": "7708379745f2dcf31e8786e2edc0e8df1c9d159537af06a70e9273022ae4d69f",
-   "main_sha256": "bbd8fa3e66e3bfa74b8e509b7b13e2a8d27fbb0741e9a4f81fea4a1e6f2b0116"
+   "main_sha256": "95672917c1a1fe40f93af3f28dc9eab193b06c03b9872ff068f0a4f93111ecc5"
   },
   {
    "file": "4.life-patterns/publish-publish-publish.md",
@@ -1313,7 +1313,7 @@
    "print_page": null,
    "words": 59,
    "markdown_sha256": "c8481bdcbdea0fb0d4f2c332aa830458d35e832b6ca0f7b59159445815694889",
-   "main_sha256": "c2b6e45ca48426d2ebfd8a7b6a16d7cb5dcc56b4cd33bbca026e68664ff743dd"
+   "main_sha256": "96187cc35720c5946c443d6556b6c80cb3c28466bddf732d5034a9788e020f5a"
   },
   {
    "file": "4.life-patterns/refactoring.md",
@@ -1325,7 +1325,7 @@
    "print_page": null,
    "words": 14,
    "markdown_sha256": "4fe5dac7ee6b54bf7927ee89e8030f3e96f8a2a43cc6a04385f7fab40dc3e2f5",
-   "main_sha256": "66b55c2e1d3c9e6a21353ae64018ff5fb41985fce4dabf937fe5ffa5b4e0da35"
+   "main_sha256": "ac81d3c5e8cbcf11f685488f10fd5a3d1480325f78b2f2c25a8f85e690c99c10"
   },
   {
    "file": "4.life-patterns/start-with-why.md",
@@ -1337,7 +1337,7 @@
    "print_page": null,
    "words": 33,
    "markdown_sha256": "04a9352a6f10ec2ecea35648b4e848b3c4ca28ed45a5bd83ee90ae8814cd434a",
-   "main_sha256": "82d3c711ccaa02b982c5ee16c39a92c7cbf78b3844446754aa664c8f46cf8df8"
+   "main_sha256": "68ac4fdf777cd0e30bc6f4548b7223ed497b5eb2b9bf335483e9f4ed0ffb40ed"
   },
   {
    "file": "4.life-patterns/the-zone.md",
@@ -1349,7 +1349,7 @@
    "print_page": null,
    "words": 139,
    "markdown_sha256": "fd906553cf37990d4fd032577b5dce839ad81482d504550f443b5f1b40ebef55",
-   "main_sha256": "701c3b6f3fda5bb5cbcd8ab68f1d2e9920b3da3bf607533ca1127e620e0bf60f"
+   "main_sha256": "cf6baeb3ce14a5ec98a58ad532c24b933702d6eaf09738b9234f990d98df3af9"
   },
   {
    "file": "4.life-patterns/thinking-as-programmer.md",
@@ -1361,7 +1361,7 @@
    "print_page": null,
    "words": 12,
    "markdown_sha256": "a37e1b9a7f7df6552274e9d951c7d9fbe528124bf2800ef6476a626b7cbd3cf4",
-   "main_sha256": "423f6b71aa6643ffcc746ee7ec87f7322183e29b7c4ec9d25581ddbaae7648cb"
+   "main_sha256": "c598b223a435e92e7cdf40f43a57799c9fc4011ccd601ef360356367d8b69a6f"
   },
   {
    "file": "4.life-patterns/why-diversity-matters.md",
@@ -1373,7 +1373,7 @@
    "print_page": null,
    "words": 280,
    "markdown_sha256": "8d667a440b406e77faa351d9fc7292520e72ccb97694450c8b43cf27b2438494",
-   "main_sha256": "f5538514408ab2f559753eec318612d71b77257f29dc2857a25ce622a822a1e4"
+   "main_sha256": "d91653da9c4723a646c77888aebed8ae19e0507586402b2ae1696b39394316ac"
   },
   {
    "file": "4.life-patterns/workflows.md",
@@ -1385,7 +1385,7 @@
    "print_page": null,
    "words": 69,
    "markdown_sha256": "a42d8834f4bd18729f4f6523b67d4598de5df45e3d1cff3adb9bdd56ca7ef1b3",
-   "main_sha256": "b2113a669a5dec5617b440eae2bc0f576652836690a82a55b22966d7a247b175"
+   "main_sha256": "c0c988459fb41a2669284225e03cfd37a0a1dc246634501c9fdf330efbadc32f"
   },
   {
    "file": "10.misc/books-to-read.md",
@@ -1433,7 +1433,7 @@
    "print_page": null,
    "words": 54,
    "markdown_sha256": "94809bc44e3a847d1d9f68a95eda17f3c26c570354a243238dcc8122fbd86f6f",
-   "main_sha256": "952722792fd69726072c11fe598fa026a87a5a9088fcdd3e3ada8f46c0fc6398"
+   "main_sha256": "6c1b4c9e0de05759018412b471d59c73911a2f61e44e0eb11af56ae4af6b9b8a"
   },
   {
    "file": "10.misc/o2-platform.md",
@@ -1445,7 +1445,7 @@
    "print_page": null,
    "words": 43,
    "markdown_sha256": "3619729faf54c031a11fe65b8eb497c5f56cf13a343aa4ab33dc4e1a328fd7ad",
-   "main_sha256": "477a3b9fba19c403af30de72ec7bf092dbdc855b606d3d3383d7db84268b05ad"
+   "main_sha256": "e1f5ef889717cd81762b7cd3377e42c7eb71396feade2a564d0df447f09716a1"
   },
   {
    "file": "10.misc/stories-to-tell.md",
@@ -1457,7 +1457,7 @@
    "print_page": null,
    "words": 91,
    "markdown_sha256": "fdfb72d4af2c20a203b66993b80d991d6632f110c3316f36041412bda32f4964",
-   "main_sha256": "0adbacf1770a1c09f14864e9dcb32fed21211117a4d4d0a820f2608e249ff9dc"
+   "main_sha256": "c11f46439f5d316d2c5273dde274f7ff31681834b74aa437ec2339921a2c2c69"
   },
   {
    "file": "10.misc/technium.md",
@@ -1469,7 +1469,7 @@
    "print_page": null,
    "words": 51,
    "markdown_sha256": "25d4c9a0c057fc0fc2f3c0eca0627330921637297e364ecfae2723299663006a",
-   "main_sha256": "1e8398a06b0c38448c5cf258525175baa038b7b80776b302bc9639de87b2483e"
+   "main_sha256": "fc8ef656aefec9e909182e115c1119610bc2a388bc83d9de9454566945c614a0"
   },
   {
    "file": "10.misc/wait-but-why.md",
@@ -1481,7 +1481,7 @@
    "print_page": null,
    "words": 27,
    "markdown_sha256": "10160c4ce20802515ec415867fae2d9d7106155769a582103e8d7aba5b8229bb",
-   "main_sha256": "8b4c29ada03842a23b7cc5f4df47b7807f181b1d5242124fe2ca4d6d95ae9ccf"
+   "main_sha256": "a1a506d60f44354cca945d4ca9337eb59fc58861553dbf3da2bdb84db5278358"
   },
   {
    "file": "_manuscript/github-issues.md",

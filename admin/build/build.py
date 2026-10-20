@@ -79,6 +79,11 @@ FIRST_EDITION = {
                ("This book teaches young developers how to become a developer. I wish I had this type of book when I started my career.", "Matt Parsons, on the Amazon listing")],
 }
 
+# The book's title now (decision 019): one file, checked against its decision by book_v2.py. Generation ZX Founders is a
+# new book that grew out of Generation Z Developers (decision 017), which is v1/ here.
+TITLE = json.loads((ROOT / "admin/content/book/title.json").read_text(encoding="utf-8"))
+TITLE["full"] = f'{TITLE["title"]} ({TITLE["edition"]})'
+
 PARTS = [  # directory, slug, title, the Hugo weight that ordered it
     ("1.introduction", "introduction", "Introduction"),
     ("2.mvp-for-gen-z-dev", "mvp-for-gen-z-dev", "MVP for Gen Z Dev"),
@@ -94,7 +99,7 @@ PARTS = [  # directory, slug, title, the Hugo weight that ordered it
 # one row, which overflowed onto two lines on a laptop and three on a tablet. The flat list is NAV, for anything that
 # needs every section.
 NAV_GROUPS = [
-    ("The book", [("The first edition", "v1/book/index.html"), ("Second edition", "v2/book/index.html"), ("Read & review", "read/index.html"), ("Synthetic readers", "readers/index.html"), ("Covers", "covers/index.html"), ("Presentations", "decks/index.html"),
+    ("The book", [("The first edition", "v1/book/index.html"), (TITLE["short"], "v2/book/index.html"), ("Read & review", "read/index.html"), ("Synthetic readers", "readers/index.html"), ("Covers", "covers/index.html"), ("Presentations", "decks/index.html"),
                   ("Versions", "v1/versions/index.html"), ("Contributors", "contributors/index.html")]),
     ("Storyboards", [("Storyboards", "storyboards/index.html"), ("Every panel", "storyboards/all.html"),
                      ("The model sheet", "storyboards/model-sheet.html")]),
@@ -434,7 +439,7 @@ def build_book(parts, front, map_rows):
             note = ""
             if c["kind"] == "outline":
                 note = ('<div class="outline-note">In 2018 this was an outline: a title and "Topics to cover and ideas". It was never in the published book, '
-                        'and it is shown exactly as it was left. The second edition fills it from the articles the map names.</div>')
+                        'and it is shown exactly as it was left. The new book fills it from the articles the map names.</div>')
             elif c["kind"] == "draft":
                 note = ('<div class="outline-note">A draft: text that was in the repository but not in the published book (the 2018 build took only '
                         'chapters marked <code>status: content</code>). Shown exactly as it was left.</div>')
@@ -508,7 +513,7 @@ def build_book(parts, front, map_rows):
               f'<p class="lede">The book as published, on one page, in the print edition\'s order. <a href="index.html">The table of contents</a> &middot; <a href="drafts.html">the drafts</a>.</p>'
               f'<h3 class="ch" id="github-issues">{esc(front["title"])}</h3><p class="meta">front matter, p. {front["print_page"]}</p><div class="body">{md(front["body"])}</div>']
     draft_md = [f"# Generation Z Developers: the drafts\n\n*What the 2018 repository held but the published book left out: {n_draft} draft chapters and {n_outline} outlines, "
-                f"as they were left, from {SOURCE_REPO} at {SOURCE_COMMIT[:9]}. Not part of v1.0.0; the second edition's raw material.*\n"]
+                f"as they were left, from {SOURCE_REPO} at {SOURCE_COMMIT[:9]}. Not part of v1.0.0; raw material for the new book.*\n"]
     dsingle = [f'<h1>The drafts <span class="badge draft">not in the published book</span></h1><p class="lede">{n_draft} draft chapters and {n_outline} outlines, as they were left in the 2018 repository, part by part. <a href="index.html">The table of contents</a> &middot; <a href="single.html">the published book</a>.</p>']
     pn = 0
     for p in parts:
@@ -600,7 +605,7 @@ def build_read_v2(doc):
   </div>
 </div>
 <div class="rd-helpbox" id="rd-helpbox" hidden>
-  <p><b>What this is.</b> Release candidate {esc(doc["version"])} of the second edition: {doc["chapters"]} chapters written from the ideas register, for Dinis to read and mark up. Not an official version. Keys: <kbd>j</kbd>/<kbd>k</kbd> next and previous chapter, <kbd>g</kbd> the graph, <kbd>f</kbd> focus.</p>
+  <p><b>What this is.</b> Release candidate {esc(doc["version"])} of {esc(TITLE["full"])}: {doc["chapters"]} chapters written from the ideas register, for Dinis to read and mark up. Not an official version. Keys: <kbd>j</kbd>/<kbd>k</kbd> next and previous chapter, <kbd>g</kbd> the graph, <kbd>f</kbd> focus.</p>
   <p><b>Review mode.</b> Each chapter has a state: unread, reading, read, to review, continue, signed off. Comment on any paragraph. Export the review as markdown or JSON for the vault's <code>reviews/</code> folder. Nothing here is sent anywhere unless you export it; this reader keeps its own store (<code>genz.reader.v2</code>), apart from the 2018 book's.</p>
   <p><b>The graph.</b> The open chapter in the middle, its part and neighbours, and the articles it was written from; the ideas it carries are listed under it, each a link to the register.</p>
 </div>
@@ -613,9 +618,9 @@ def build_read_v2(doc):
 <div class="rd-export" id="rd-export" hidden></div>
 </div>
 """
-    page("read/v2.html", f"Read and review the second edition, {doc['version']}", body,
+    page("read/v2.html", f"Read and review {TITLE['title']}, {doc['version']}", body,
          f"Read release candidate {doc['version']} of {doc["title"]}, with the editor's desk: states, comments, folds, export.",
-         crumbs=(("Read and review", "read/index.html"), ("The second edition", "read/v2.html")),
+         crumbs=(("Read and review", "read/index.html"), (TITLE["short"], "read/v2.html")),
          extra_head='<link rel="stylesheet" href="../assets/reader.css">\n<script defer src="../assets/reader.js"></script>\n', wide=True)
 
 
@@ -695,7 +700,7 @@ def build_contributors():
     iss = "".join(f'<tr><td><a href="{esc(i["url"])}">#{i["number"]}</a></td><td>{esc(i["title"])}</td><td>{esc(i["by"])}</td><td>{", ".join(esc(l) for l in i["labels"])}</td><td>{i["state"]}</td><td>{i["date"]}</td><td>{i["comments"]}</td></tr>' for i in d["issues"])
     r = d["repository"]
     body = f"""<h1>The contributors to the first edition</h1>
-<p class="lede">The first edition asked for help through GitHub issues and pull requests, and got it: before any second edition, {t["contributors"]} people besides the author had committed fixes, opened pull requests, raised issues or commented, on a repository that {r["stars"]} people starred and {r["forks"]} forked. This page is the record, from the repository's git history and its GitHub issues, read on 18 October 2026. The second edition credits them, with their permission.</p>
+<p class="lede">The first edition asked for help through GitHub issues and pull requests, and got it: before any new book, {t["contributors"]} people besides the author had committed fixes, opened pull requests, raised issues or commented, on a repository that {r["stars"]} people starred and {r["forks"]} forked. This page is the record, from the repository's git history and its GitHub issues, read on 18 October 2026. The second edition credits them, with their permission.</p>
 <p><span class="stat"><b>{t["contributors"]}</b><span>contributors</span></span> <span class="stat"><b>{t["commits"]}</b><span>commits</span></span> <span class="stat"><b>{t["commits_by_contributors"]}</b><span>by contributors</span></span> <span class="stat"><b>{t["pull_requests_merged"]}</b><span>of {t["pull_requests"]} PRs merged</span></span> <span class="stat"><b>{t["issues"]}</b><span>issues ({t["issues_open"]} open)</span></span> <span class="stat"><b>{t["comments"]}</b><span>comments</span></span> <span class="stat"><b>{t["chapters_touched_by_contributors"]}</b><span>chapter files touched by others</span></span></p>
 <h2>When</h2>
 <p class="small dim">Commits from {t["first_commit"]} to {t["last_commit"]}; issues and pull requests from {t["first_issue"]} to {t["last_issue"]}. By year: {", ".join(f"{y}: {n}" for y, n in d["by_year"].items())}. The book was written in 2018; the contributions came in from September 2018, the month it was released early, through 2020.</p>
@@ -742,7 +747,7 @@ def build_versions(frozen_md, parts, pub):
 {table}
 <p class="small dim">The table and the deltas are computed by the newsroom's <code>page_versions.py</code> (newsroom v0.12.113), copied into <code>admin/build/</code> as the brief asked rather than rewritten. Each version is frozen as one markdown file by the release that made it and never rewritten; the frozen file for v1.0.0 is <a href="v1.0.0.md">v1.0.0.md</a>, {words(chr(10).join(blocks(frozen_md))):,} words in {len(blocks(frozen_md)):,} blocks: the book as published, the {len(pub)} chapters of <a href="../generation-z-print-ready.pdf">the print PDF</a> (139 pages, sha256 {PDF_SHA[:12]}…) and the Leanpub build. The drafts the build left out are not part of any version; they are kept as <a href="../book/drafts.md">v1/book/drafts.md</a> and shown <a href="../book/drafts.html">on their own page</a>.</p>
 {diffs}
-<h2 id="candidates">Release candidates of the second edition</h2>
+<h2 id="candidates">Release candidates of {esc(TITLE["full"])}</h2>
 <p class="small">A candidate is a draft of the next edition written in this repository for Dinis to read and mark up (<a href="../../decisions/index.html#a-candidate-is-read-on-the-site-from-a-frozen-snapshot">decision 009</a>). It is frozen once, like a version, so that what was read cannot change; it is not official and nothing is published from it outside this site. {cand_html}</p>
 <h2 id="record">The record</h2>
 <div class="tablewrap"><table><thead><tr><th>Version</th><th>Date</th><th>Where</th><th>What it is</th></tr></thead><tbody>{rows}</tbody></table></div>
@@ -754,7 +759,7 @@ def build_versions(frozen_md, parts, pub):
 <li>Amazon: <a href="{FIRST_EDITION["amazon"]["url"]}">Gen Z Developers</a>, the paperback: {FIRST_EDITION["amazon"]["pages"]} pages, published {FIRST_EDITION["amazon"]["published"]}, ISBN-10 {FIRST_EDITION["amazon"]["isbn10"]}, the early-release cover of September 2018 with its eight lines. That publication date is the date of v1.0.0; 8 October 2018 is the last change to the text, on Leanpub and in the repository.</li>
 </ul>
 <h2 id="leanpub">The 2018 change log, v0.30 to v0.60</h2>
-<p class="small dim">As the book's own <code>_manuscript/change-log.md</code> records it. The contributors it names are to be credited in the second edition, with their permission.</p>
+<p class="small dim">As the book's own <code>_manuscript/change-log.md</code> records it. The contributors it names are to be credited in the new book, with their permission.</p>
 <div class="body">{changelog_html}</div>
 <h2 id="licence">The licence</h2>
 <p>The repository's licence file is Apache 2.0 (kept as <a href="../LICENSE-2018-repository.txt">v1/LICENSE-2018-repository.txt</a>). The book's Introduction says Creative Commons Attribution 4.0; its footer says Attribution-ShareAlike 4.0; the printed cover carries the CC BY mark. On 18 October 2026 Dinis decided the text is CC BY 4.0, as the cover and the Introduction say (<a href="../../decisions/index.html#the-2018-text-is-cc-by">decision 001</a>): the BY-SA line in the footer and the Apache 2.0 file in the 2018 repository are the exceptions, recorded here, not followed.</p>
@@ -789,7 +794,7 @@ def build_map(parts, map_doc):
                         f'<div class="tablewrap"><table class="map"><thead><tr><th>Chapter</th><th>Kind</th><th>Newsroom articles that answer it</th><th>The gap, or what to do</th></tr></thead><tbody>{"".join(trs)}</tbody></table></div>')
     c = map_doc["counts"]
     body = f"""<h1>The map: every 2018 file, and the article that answers it</h1>
-<p class="lede">The second edition's first deliverable, as the build brief asked: one row per file of the 2018 book, whether it was written or an outline, the newsroom articles that have since answered it, and the gap. The reading is a first one; the reviewer's records and the editor's interviews decide what each chapter becomes.</p>
+<p class="lede">The new book's first deliverable, as the build brief asked: one row per file of the 2018 book, whether it was written or an outline, the newsroom articles that have since answered it, and the gap. The reading is a first one; the reviewer's records and the editor's interviews decide what each chapter becomes.</p>
 <p><span class="stat"><b>{c["files"]}</b><span>files</span></span> <span class="stat"><b>{c["written"]}</b><span>written</span></span> <span class="stat"><b>{c["outline"]}</b><span>outlines</span></span> <span class="stat"><b>{c["apparatus"]}</b><span>apparatus</span></span> <span class="stat"><b>{c["answered_by_articles"]}</b><span>answered</span></span> <span class="stat"><b>{c["articles_cited"]}</b><span>articles cited</span></span></p>
 <div class="legend"><span><span class="badge written">written</span> a chapter with text in 2018</span><span><span class="badge outline">outline</span> a title and "Topics to cover and ideas"</span><span><span class="badge">apparatus</span> a Hugo file, not a chapter</span></div>
 <p class="small dim">The data is <a href="../admin/content/map.json">admin/content/map.json</a>, written by <code>admin/build/gen_map.py</code>, where the reading is authored file by file. A row says "answered" when the articles cover the outline; "no article yet" when none does; otherwise what is missing, or a then-and-now note for a written chapter whose 2018 claims dated. Source: {esc(map_doc["source"])}.</p>
@@ -1245,8 +1250,8 @@ def build_vault():
 def build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib, articles, v2=None):
     v2card = ""
     if v2:
-        v2card = (f'<div class="card big v2"><span class="k">The second edition &middot; {esc(v2["version"])} &middot; release candidate, not a version</span>'
-                  f'<h3><a href="v2/book/index.html">{esc(v2["title"])}: the end-to-end draft, {esc(v2["version"])}</a></h3>'
+        v2card = (f'<div class="card big v2"><span class="k">{esc(TITLE["short"])} &middot; {esc(v2["version"])} &middot; release candidate</span>'
+                  f'<h3><a href="v2/book/index.html">{esc(v2["title"])}: release candidate {esc(v2["version"])}</a></h3>'
                   f'<p>{v2["chapters"]} chapters in {v2["parts"]} parts, {v2["words"]:,} words, written by the book\'s agents from {v2["ideas"]} ideas in the register and the articles behind them, for Dinis to read, print and mark up. Every chapter ends with where it came from; {v2["callouts"]} notes say what only Dinis can fill in.</p>'
                   f'<p class="stats"><span class="stat"><b>{v2["chapters"]}</b><span>chapters</span></span><span class="stat"><b>{v2["words"]:,}</b><span>words</span></span><span class="stat"><b>{v2["ideas"]}</b><span>ideas written in</span></span><span class="stat"><b>{v2["callouts"]}</b><span>for Dinis</span></span></p>'
                   f'<span class="more"><a href="v2/book/index.html">The contents &rarr;</a> &nbsp; <a href="read/v2.html">Read and review &rarr;</a> &nbsp; <a href="v2/book/single.html">On one page &rarr;</a>'
@@ -1258,17 +1263,21 @@ def build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib,
     lines = "".join(f"<li>{esc(l)}</li>" for l in fe["cover_lines"])
     quotes = "".join(f'<blockquote class="quote">&ldquo;{esc(q)}&rdquo;<span>{esc(w)}</span></blockquote>' for q, w in fe["quotes"])
     body = f"""<section class="hero">
-<a class="cover" href="v1/book/index.html"><img src="v1/images/title_page.png" alt="The cover of Gen Z Developers, early release, September 2018: navy, four colour blocks spelling GEN Z, and eight lines from Question everything to Shake things up" width="300" height="454"></a>
+<a class="cover" href="covers/index.html"><img src="covers/zx/preview.png" alt="A cover proposal for Generation ZX Founders: GENERATION ZX FOUNDERS on near-black, a prompt reading GenAI Edition, four bars in green, yellow, teal and red" width="300" height="450"></a>
 <div class="hero-text">
-<p class="kicker"><span class="sw g"></span><span class="sw y"></span><span class="sw t"></span><span class="sw r"></span> a book by Dinis Cruz &middot; first edition September 2018 &middot; second edition in the making, dated October 2026</p>
-<h1>Generation Z Developers</h1>
-<p class="sub">Key concepts and ideas for the next generation of developers.</p>
-<ul class="cover-lines">{lines}</ul>
-<p>The eight lines on the cover are what the book was for. They read more urgently now than in 2018, and the second edition keeps all eight: the manual for getting into development, and getting a job, now that everyone who can brief an agent is a developer.</p>
-<p class="ctas">{("<a class=\"btn primary\" href=\"v2/book/index.html\">Read the second edition, " + esc(v2["version"]) + "</a> " if v2 else "")}<a class="btn" href="v1/book/index.html">Read the first edition here</a> <a class="btn" href="{fe["amazon"]["url"]}">Paperback on Amazon</a> <a class="btn" href="{fe["leanpub"]["url"]}">Free to read on Leanpub</a></p>
+<p class="kicker"><span class="sw g"></span><span class="sw y"></span><span class="sw t"></span><span class="sw r"></span> a new book by Dinis Cruz &middot; grown out of {esc(TITLE["grew_out_of"])} &middot; October 2026</p>
+<h1>{esc(TITLE["title"])}</h1>
+<p class="sub">{esc(TITLE["edition"])} &middot; {esc(TITLE["cover_line"])}</p>
+<p>So Generation ZX is not a range of birth years. It is the people building because finally they can. We see it most in Generation Z and Generation X, which is why the two letters are on the cover, but a millennial who builds at three in the morning is one of them too.</p>
+<p class="small dim">The title is Dinis's (<a href="decisions/index.html#{esc(TITLE["anchor"])}">decision 019</a>); the words above are his, from <a href="articles/generation-zx-founders.html">Generation ZX Founders</a>. The cover shown is <a href="covers/index.html">a proposal</a>: the cover waits on him (decision 004).</p>
+<p class="ctas">{("<a class=\"btn primary\" href=\"v2/book/index.html\">Read release candidate " + esc(v2["version"]) + "</a> " if v2 else "")}<a class="btn" href="decks/index.html">The book in twelve slides</a> <a class="btn" href="#first-edition">The 2018 book it grew out of</a></p>
 </div>
 </section>
-<h2 id="first-edition">The first edition, where it lives</h2>
+{v2card and ('<div class="cards rc-card">' + v2card + '</div>')}
+<h2 id="first-edition">The 2018 book it grew out of: Generation Z Developers</h2>
+<div class="hero hero-2018"><a class="cover" href="v1/book/index.html"><img src="v1/images/title_page.png" alt="The cover of Gen Z Developers, early release, September 2018: navy, four colour blocks spelling GEN Z, and eight lines from Question everything to Shake things up" width="200" height="303"></a>
+<div class="hero-text"><p class="sub">Key concepts and ideas for the next generation of developers.</p><ul class="cover-lines">{lines}</ul>
+<p class="ctas"><a class="btn" href="v1/book/index.html">Read the 2018 book here</a> <a class="btn" href="{fe["amazon"]["url"]}">Paperback on Amazon</a> <a class="btn" href="{fe["leanpub"]["url"]}">Free to read on Leanpub</a></p></div></div>
 <p class="lede">Released early and in public, the way the book told its readers to work: on Leanpub at 60% complete, as a paperback, and as Markdown in a Git repository. Those three are the record of v1.0.0, and this site shows that text exactly as released.</p>
 <div class="cards editions">
 <a class="card amazon" href="{fe["amazon"]["url"]}"><span class="k">Paperback &middot; Amazon</span><h3>{esc(fe["amazon"]["title"])}</h3><p>{fe["amazon"]["pages"]} pages &middot; published {fe["amazon"]["published"]} &middot; ISBN-10 {fe["amazon"]["isbn10"]} &middot; {fe["amazon"]["size"]} &middot; {fe["amazon"]["rating"]}</p><span class="more">amazon.co.uk &rarr;</span></a>
@@ -1276,13 +1285,13 @@ def build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib,
 <a class="card github" href="{fe["github"]["url"]}"><span class="k">The source &middot; GitHub</span><h3>Book_Generation_Z_Developer</h3><p>{fe["github"]["files"]} Markdown files, {fe["github"]["outlines"]} of them outlines &middot; Creative Commons BY on the cover &middot; feedback by GitHub issues &middot; imported here as v1.0.0, frozen</p><span class="more">github.com/DinisCruz &rarr;</span></a>
 </div>
 <div class="quotes">{quotes}</div>
-<h2 id="second-edition">The second edition, in the making</h2>
+<h2 id="second-edition">How the book is made</h2>
 <p class="lede"><b>The repository holds the official versions; the vault holds the working versions.</b> The first edition is here exactly as released. Everything after it is worked on in a public vault and moves here when signed off, with a delta between every two versions.</p>
 <div class="making">
 <div class="card big"><span class="k">The book &middot; v1.0.0 &middot; 2018 &middot; frozen</span><h3><a href="v1/book/index.html">The book as published, and the drafts kept apart</a></h3><p>The {n_pub} chapters the 2018 build published, in the print edition's order with its page numbers; and, kept apart, the {n_draft} drafts and {n_outline} outlines it left out, which the second edition starts from.</p>
 <p class="stats"><span class="stat"><b>{n_pub}</b><span>published chapters</span></span><span class="stat"><b>{pub_words:,}</b><span>words published</span></span><span class="stat"><b>139</b><span>print pages</span></span><span class="stat"><b>{n_draft + n_outline}</b><span>drafts and outlines</span></span></p>
 <span class="more"><a href="v1/book/index.html">The table of contents &rarr;</a> &nbsp; <a href="read/index.html">Read and review &rarr;</a> &nbsp; <a href="v1/generation-z-print-ready.pdf">The print PDF &rarr;</a></span></div>
-{v2card}<a class="card" href="v1/versions/index.html"><span class="k">Versions</span><h3>One version so far</h3><p>Where v1.0.0 comes from, the 2018 change log, and the page that will carry the block-by-block delta to v2.</p></a>
+<a class="card" href="v1/versions/index.html"><span class="k">Versions</span><h3>One version so far</h3><p>Where v1.0.0 comes from, the 2018 change log, and the page that will carry the block-by-block delta to v2.</p></a>
 <a class="card" href="map/index.html"><span class="k">The map</span><h3>{c["files"]} files, {c["answered_by_articles"]} answered</h3><p>Every 2018 chapter and outline, the newsroom articles that have since answered it, and the gap.</p></a>
 <a class="card" href="team/index.html"><span class="k">The team</span><h3>Reviewer, editor, publisher</h3><p>Each reads, challenges, interviews Dinis and signs off. The first interview script is written.</p></a>
 <a class="card" href="vault/index.html"><span class="k">The vault</span><h3>Read along</h3><p>The public working vault, its read key published: the working copy of v1, the board, the reviews, the roles.</p></a>
@@ -1303,16 +1312,16 @@ def build_home(parts, flat, pub, drafts, map_doc, briefs, roles, vault, contrib,
 </ol></div>
 <div><h2>What this site does not claim</h2>
 <ul>
-<li><b>The second edition is not written.</b> This release has the first edition, the map, the roles, the vault and the versions machinery.</li>
+<li><b>The book is not finished.</b> {esc(v2["version"]) if v2 else "The release candidate"} is a release candidate; the next is being made from Dinis's review of it on paper.</li>
 <li><b>The map is a first reading.</b> Not every outline has an article, and not every article fits; the reviewer and the editor decide.</li>
-<li><b>The address is the one proposed</b>, matching the printed cover's <i>Gen Z Developers</i>; to confirm.</li>
+<li><b>The address is the 2018 book's.</b> Whether {esc(TITLE["title"])} gets its own is a question Dinis has kept open (<a href="articles/generation-zx-founders.html">Generation ZX Founders</a>).</li>
 <li><b>The licence of the 2018 text is CC BY 4.0</b>, decided by Dinis on 18 October 2026 (<a href="decisions/index.html#the-2018-text-is-cc-by">decision 001</a>); the 2018 footer's BY-SA and the 2018 repository's Apache 2.0 file are the exceptions.</li>
 </ul></div>
 </div>
 <p class="small dim">Built as the build brief <a href="briefs/08__note-a-website-to-finish-the-book.html">a website to finish the book</a> asked: the new repository with v1 imported as released, a static site showing it chapter by chapter, and a versions page reusing the newsroom's <code>page_versions.py</code>. The agent surface is <a href="llms.txt">llms.txt</a>.</p>
 """
-    page("index.html", "Generation Z Developers, the second edition", body,
-         "The website for finishing the second edition of Generation Z Developers: the 2018 book as released, the map to the newsroom's articles, the roles, and the working vault.", wide=True)
+    page("index.html", TITLE["full"], body,
+         f"{TITLE['full']}, a new book by Dinis Cruz that grew out of Generation Z Developers (2018), built in public: the release candidate, the covers, the presentation, the 2018 book as released, the roles and the working vault.", wide=True)
 
     # admin
     vs = json.loads((ROOT / "admin/content/versions.json").read_text(encoding="utf-8"))
@@ -1358,14 +1367,14 @@ node admin/build/validate.js       # the gate: version, links, canonical, key le
     chapters = "\n".join(f"- [{c['title']}]({BASE}{chapter_url(c, p)}): {c['kind']}{', p. ' + str(c['print_page']) if c.get('print_page') else ''}, {c['words']} words, part {p['title']}" for p in parts for c in p["chapters"])
     write("llms.txt", f"""# gen-z-developers.sgit.ai
 
-> The website for finishing the second edition of Generation Z Developers (Dinis Cruz, 2018). The repository holds the official versions of the book; a public vault holds the working versions. Site {VERSION}.
+> The website of {TITLE["full"]}, a new book by Dinis Cruz that grew out of Generation Z Developers (2018), built in public. The repository holds the official versions of the book; a public vault holds the working versions. Site {VERSION}.
 
 ## The rule
 The repository holds the official versions; the vault holds the working versions. v1.0.0 is the 2018 first edition as released, frozen. A version moves from the vault to the repository when signed off, and the versions page shows the delta block by block.
 
 ## Sections
 - [The book, v1.0.0]({BASE}v1/book/index.html): the 2018 first edition as published, 28 chapters in the print edition's order, then the drafts and outlines it left out; [on one page]({BASE}v1/book/single.html); [the drafts]({BASE}v1/book/drafts.html); [frozen markdown]({BASE}v1/versions/v1.0.0.md); [the print PDF, 139 pages]({BASE}v1/generation-z-print-ready.pdf)
-- [The second edition, release candidate]({BASE}v2/book/index.html): the first end-to-end draft of the second edition, written from the ideas register, not an official version; [on one page]({BASE}v2/book/single.html); [read and review]({BASE}read/v2.html); [what waits on Dinis]({BASE}v2/book/for-dinis.html); data at [book.json]({BASE}v2/book/book.json); source v2/content/, one markdown file per chapter naming its ideas and sources
+- [{TITLE["full"]}, release candidate]({BASE}v2/book/index.html): the book now (decision 019), a new book that grew out of the 2018 one (decision 017), written from the ideas register; [on one page]({BASE}v2/book/single.html); [read and review]({BASE}read/v2.html); [what waits on Dinis]({BASE}v2/book/for-dinis.html); data at [book.json]({BASE}v2/book/book.json); source v2/content/, one markdown file per chapter naming its ideas and sources
 - [Read and review]({BASE}read/index.html): the reader with the graph beside it and the editor's desk (states, comments, folds, export); the book as data at [book.json]({BASE}v1/book/book.json)
 - [Synthetic readers]({BASE}readers/index.html): invented readers who read a release candidate the way they would, say where they would put it down and whether they would buy it, and are interviewed; the newsroom's synthetic-users method adapted to a book ([the protocol]({BASE}readers/protocol.html)); data under admin/content/readers/
 - [The graph]({BASE}graph/index.html): the admin area of the publishing process: [the ideas register]({BASE}graph/ideas/index.html), [the sources and their states]({BASE}graph/sources.html), [the chapter map, proposed]({BASE}graph/chapters.html), [the tasks]({BASE}graph/tasks.html), [the plan]({BASE}graph/plan.html), [the graph drawn]({BASE}graph/view.html); data at [graph.json]({BASE}graph/graph.json)

@@ -1,4 +1,4 @@
-"""The second edition as a release candidate: v2/content/ -> v2/book/ (one page per chapter, the contents, the whole
+"""The book as a release candidate (Generation ZX Founders, a new book that grew out of the 2018 one): v2/content/ -> v2/book/ (one page per chapter, the contents, the whole
 book on one page for print, book.json for the reader), v2/versions/<candidate>.md frozen once, and the manifest the
 gate checks.
 
@@ -111,6 +111,16 @@ def load(graph_nodes, chapters_doc, ideas_doc):
             "words": sum(c["words"] for c in chapters) + (front["words"] if front else 0)}
 
 
+def current_title():
+    """The book's title now (admin/content/book/title.json), checked against the decision it names. A candidate's frozen
+    text keeps the title it was written under; the pages show this one, and say so when the two differ."""
+    doc = json.loads((ROOT / "admin/content/book/title.json").read_text(encoding="utf-8"))
+    full = f'{doc["title"]} ({doc["edition"]})'
+    if full not in (ROOT / doc["decision"]).read_text(encoding="utf-8"):
+        sys.exit(f"book_v2: the title in admin/content/book/title.json, {full}, is not in {doc['decision']}")
+    return dict(doc, full=full)
+
+
 def frozen_markdown(book, cand):
     out = [f"# {cand.get('title', 'Generation ZX Developers (GenAI Startup Edition)')}\n\n*{cand['version']}, {cand['date']}. {cand['status']}*\n"]
     if book["front"]:
@@ -148,8 +158,13 @@ def build_v2(ctx):
     cand = finished[-1]
     if cands[-1] is not cand:
         print(f"build: candidate {cands[-1]['version']} is in progress; rendering {cand['version']}")
-    title = cand.get("title", "Generation ZX Developers (GenAI Startup Edition)")
-    name, _, sub = title.partition(" (")
+    written_as = cand.get("title", "Generation ZX Developers (GenAI Startup Edition)")  # what the frozen text says
+    cur = current_title()
+    title, name, sub, short = cur["full"], cur["title"], cur["edition"] + ")", cur["short"]
+    retitled = ("" if written_as == title else
+                f'<p class="small dim">Release candidate {esc(cand["version"])} was written and frozen as <i>{esc(written_as)}</i>. '
+                f'The book is now <i>{esc(title)}</i> (<a href="{{up}}decisions/index.html#{esc(cur["anchor"])}">decision 019</a>), a new book that grew out of '
+                f'{esc(cur["grew_out_of"])} (decision 017); the next candidate carries the title.</p>')
     text = frozen_markdown(book, cand)
     got = sha(text)
     snap = ROOT / "v2/versions" / (cand["version"] + ".md")
@@ -215,7 +230,7 @@ def build_v2(ctx):
         return ('<div class="prevnext">' + (f'<a href="{prev["slug"]}.html">&larr; {esc(prev["title"])}</a>' if prev else (f'<a href="{book["front"]["slug"]}.html">&larr; {esc(book["front"]["title"])}</a>' if book["front"] else "<span></span>"))
                 + (f'<a href="{nxt["slug"]}.html">{esc(nxt["title"])} &rarr;</a>' if nxt else '<a href="index.html">The contents &rarr;</a>') + "</div>")
 
-    notice = (f'<div class="rc-note"><b>A release candidate, not a version.</b> This is {esc(ver)} of the second edition: every chapter written by the book\'s agents '
+    notice = (f'<div class="rc-note"><b>A release candidate.</b> This is {esc(ver)} of {esc(name)}: every chapter written by the book\'s agents '
               f'from <a href="../../graph/ideas/index.html">the ideas register</a>, for Dinis to read, print and mark up. Nothing in it is signed off. '
               f'The first edition, <a href="../../v1/book/index.html">v1.0.0</a>, is the only official version; the candidate\'s text is frozen at '
               f'<a href="../versions/{esc(ver)}.md">v2/versions/{esc(ver)}.md</a> so that what was read cannot change behind the reader (<a href="../../decisions/index.html#a-candidate-is-read-on-the-site-from-a-frozen-snapshot">decision 009</a>).</div>')
@@ -227,7 +242,7 @@ def build_v2(ctx):
         main = (f'<article class="chapter v2"><p class="small dim">{esc(p["title"])} &middot; chapter {c["number"]} of {n} &middot; {badge()} &middot; {c["words"]:,} words &middot; '
                 f'<a href="{up}read/v2.html#{esc(c["slug"])}">read and review</a></p><h1>{esc(c["title"])}</h1><div class="body">{body_html}</div>{provenance(c, up)}{nav(i)}</article>')
         page(rel, c["title"], main, f"{c['title']}: chapter {c['number']} of {title}, release candidate {ver}.",
-             crumbs=(("The second edition", OUT + "index.html"), (p["title"], f"{OUT}index.html#{p['id']}"), (c["title"], rel)))
+             crumbs=((short, OUT + "index.html"), (p["title"], f"{OUT}index.html#{p['id']}"), (c["title"], rel)))
         manifest["chapters"].append({"file": c["file"], "page": rel, "title": c["title"], "part": p["title"], "number": c["number"], "words": c["words"],
                                      "ideas": c["ideas"], "markdown_sha256": c["sha"], "main_sha256": sha(main)})
     if book["front"]:
@@ -236,7 +251,7 @@ def build_v2(ctx):
         main = (f'<article class="chapter v2"><p class="small dim">Front matter &middot; {badge()} &middot; {f["words"]:,} words</p><h1>{esc(f["title"])}</h1>'
                 f'<div class="body">{callout_html(md(f["body"]))}</div><div class="prevnext"><a href="index.html">&larr; The contents</a><a href="{flat[0][1]["slug"]}.html">{esc(flat[0][1]["title"])} &rarr;</a></div></article>')
         page(rel, f["title"], main, f"{f['title']}: the front matter of {title}, release candidate {ver}.",
-             crumbs=(("The second edition", OUT + "index.html"), (f["title"], rel)))
+             crumbs=((short, OUT + "index.html"), (f["title"], rel)))
         manifest["chapters"].append({"file": f["file"], "page": rel, "title": f["title"], "part": "Front matter", "number": 0, "words": f["words"], "ideas": [],
                                      "markdown_sha256": f["sha"], "main_sha256": sha(main)})
     write(f"{OUT}manifest.json", json.dumps(manifest, indent=1, ensure_ascii=False) + "\n")
@@ -250,6 +265,7 @@ def build_v2(ctx):
     front_li = f'<li><a href="{book["front"]["slug"]}.html">{esc(book["front"]["title"])}</a> <span class="w">front matter</span></li>' if book["front"] else ""
     n_ideas = len({i for c in book["chapters"] for i in c["ideas"]})
     body = f"""<h1>{esc(title)}</h1>
+{retitled.replace("{up}", "../../")}
 <p class="lede">Release candidate {esc(ver)}, {esc(cand["date"])}: {n} chapters in {len(book["parts"])} parts, {book["words"]:,} words, written from {n_ideas} of the {len(ideas)} ideas in the register, with {len(all_callouts)} places where only Dinis can fill in what is missing. {esc(cand.get("what", ""))}</p>
 {notice}
 <p class="stats"><span class="stat"><b>{n}</b><span>chapters</span></span><span class="stat"><b>{book["words"]:,}</b><span>words</span></span><span class="stat"><b>{n_ideas}</b><span>ideas written in</span></span><span class="stat"><b>{len(all_callouts)}</b><span>for Dinis</span></span></p>
@@ -259,9 +275,9 @@ def build_v2(ctx):
 <ol class="toc v2">{front_li}{"".join(toc)}</ol>
 <p class="small dim">Source: <code>v2/content/</code>, one markdown file per chapter with the ideas, sources and 2018 files it was written from in its front matter; <code>admin/build/book_v2.py</code> renders these pages and refuses a chapter that cites an idea, source, part or file that does not exist. Manifest: <a href="manifest.json">manifest.json</a>.</p>
 """
-    page(OUT + "index.html", f"The second edition, release candidate {ver}", body,
+    page(OUT + "index.html", f"{name}, release candidate {ver}", body,
          f"{title}, release candidate {ver}: {n} chapters written from the ideas register, for Dinis to read and mark up.",
-         crumbs=(("The second edition", OUT + "index.html"),))
+         crumbs=((short, OUT + "index.html"),))
     # what waits on Dinis
     rows = "".join(f'<li><a href="{esc(c["slug"])}.html">{esc(c["title"])}</a>: {esc(x)}</li>' for c, x in all_callouts)
     unplaced = [i for i in ideas.values() if not i.get("chapter")]
@@ -276,8 +292,8 @@ def build_v2(ctx):
 <h2>The questions the articles keep apart</h2>
 <p class="small">Each co-written article ends with questions for Dinis; <a href="../../graph/index.html">the graph's hub</a> lists them, and the chapters that depend on an answer carry a note above.</p>
 """
-    page(OUT + "for-dinis.html", "Everything that waits on Dinis", body, "Every note for Dinis in the release candidate of the second edition, and the ideas with no chapter.",
-         crumbs=(("The second edition", OUT + "index.html"), ("For Dinis", OUT + "for-dinis.html")))
+    page(OUT + "for-dinis.html", "Everything that waits on Dinis", body, f"Every note for Dinis in release candidate {ver} of {name}, and the ideas with no chapter.",
+         crumbs=((short, OUT + "index.html"), ("For Dinis", OUT + "for-dinis.html")))
     # the whole book on one page, for print
     parts_html = []
     for pi, p in enumerate(book["parts"], 1):
@@ -288,7 +304,7 @@ def build_v2(ctx):
     front_html = f'<section class="pr-chapter front" id="{esc(book["front"]["slug"])}"><h2>{esc(book["front"]["title"])}</h2><div class="body">{callout_html(md(book["front"]["body"]))}</div></section>' if book["front"] else ""
     back = "".join(f'<li><b>{esc(c["title"])}:</b> {esc(x)}</li>' for c, x in all_callouts)
     single = f"""<article class="printbook">
-<section class="pr-title"><p class="pr-k">Second edition &middot; release candidate {esc(ver)} &middot; {esc(cand["date"])}</p><h1>{esc(name)}</h1><p class="pr-sub">{esc(sub.rstrip(")"))}</p><p class="pr-by">Dinis Cruz</p>
+<section class="pr-title"><p class="pr-k">Release candidate {esc(ver)} &middot; {esc(cand["date"])}</p><h1>{esc(name)}</h1><p class="pr-sub">{esc(sub.rstrip(")"))}</p><p class="pr-by">Dinis Cruz</p>{retitled.replace("{up}", "../../")}
 <p class="pr-note">{esc(cand["status"])} The first edition (2018) is the only official version. This candidate was written by the book's agents from the ideas register and is for reading and marking up. Its text is frozen as v2/versions/{esc(ver)}.md; the title is Dinis's decision of 19 October 2026 (decision 014). Text: CC BY 4.0.</p></section>
 <section class="pr-toc"><h1>Contents</h1><ol>{toc_print}</ol></section>
 {front_html}
@@ -296,8 +312,8 @@ def build_v2(ctx):
 <section class="pr-part back" id="for-dinis"><p class="pr-partn">Back matter</p><h1>What only Dinis can fill in</h1><p>The {len(all_callouts)} notes left in the chapters, collected.</p><ul>{back}</ul></section>
 </article>"""
     page(OUT + "single.html", f"{title}, {ver}, on one page", single,
-         f"The whole release candidate {ver} of the second edition on one page, for reading and printing.",
-         crumbs=(("The second edition", OUT + "index.html"), ("On one page", OUT + "single.html")),
+         f"The whole release candidate {ver} of {name} on one page, for reading and printing.",
+         crumbs=((short, OUT + "index.html"), ("On one page", OUT + "single.html")),
          extra_head='<link rel="stylesheet" href="../../assets/print-book.css">\n')
     # book.json for the reader
     chapters = []
@@ -348,6 +364,7 @@ def build_rounds(ctx, book, cands, cand, text, ideas, notice):
     the librarian's count of the rounds converging (The book in release mode, task 5). The differ is the newsroom's
     page_versions.diff, not a second one."""
     page, write, esc, md = (ctx[k] for k in ("page", "write", "esc", "md"))
+    short = current_title()["short"]
     sys.path.insert(0, str(ROOT / "admin/build"))
     from page_versions import diff as pv_diff  # noqa: E402
     finished = [x for x in cands if not x.get("in_progress")]
@@ -417,7 +434,7 @@ def build_rounds(ctx, book, cands, cand, text, ideas, notice):
 <p class="small dim">Chapter maps: the current one is <code>admin/content/graph/chapters.json</code>, the rc1 one is kept as <code>chapters-rc1.json</code>. The block diff uses the newsroom's <code>page_versions.diff</code>, the same differ as the versions page.</p>
 """
     page(OUT + "rounds.html", "The rounds", body, "Release candidate by release candidate: what each round added, changed and removed, by size, the ideas that came in, and the diff.",
-         crumbs=(("The second edition", OUT + "index.html"), ("The rounds", OUT + "rounds.html")))
+         crumbs=((short, OUT + "index.html"), ("The rounds", OUT + "rounds.html")))
     if prev:
         dbody = f"""<h1>The diff: {esc(prev["version"])} to {esc(cand["version"])}</h1>
 <p class="lede">Every block of the candidate that changed, was added or was removed since the one before, as the newsroom's differ reads it. {"".join(f"{v:,} {esc(k)}; " for k, v in sizes.items() if k.startswith("blocks"))}</p>
@@ -425,4 +442,4 @@ def build_rounds(ctx, book, cands, cand, text, ideas, notice):
 <div class="pv-diff">{diff_html}</div>
 """
         page(OUT + "diff.html", f"The diff, {prev['version']} to {cand['version']}", dbody, "The block-by-block diff between the last two release candidates, for Dinis to read.",
-             crumbs=(("The second edition", OUT + "index.html"), ("The rounds", OUT + "rounds.html"), ("The diff", OUT + "diff.html")))
+             crumbs=((short, OUT + "index.html"), ("The rounds", OUT + "rounds.html"), ("The diff", OUT + "diff.html")))
